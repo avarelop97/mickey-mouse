@@ -1,0 +1,22 @@
+# Default-deny policy: ignore everything unless explicitly allowed.
+*
+
+# Keep this file tracked.
+!.gitignore
+
+# Keep only the documentation/agent system assets.
+!copilot-instructions.md
+!instructions/
+!instructions/**
+!prompts/
+!prompts/**
+
+# Safety net for common local artifacts.
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.tmp
+*.log
+.env
+.env.*
