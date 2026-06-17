@@ -17,6 +17,11 @@ Pasos obligatorios:
 5. Proponer queries de validacion y auditoria post-carga.
 6. Marcar resultado para `pending_human_review`.
 
+Regla de evidencia de lineas:
+- `evidenceLines` debe usar linea fisica real (1-based) del archivo fuente.
+- No usar la secuencia COBOL de columnas 73-80 (ej. `00028800`) como numero de linea.
+- Si se detecta desfase entre ambos valores, incluirlo explicitamente en "Riesgos y gaps".
+
 Reglas de estado en escritura (modo commit):
 - No usar `reviewed_human` para datos generados por agente.
 - Toda creacion/actualizacion debe incluir:
@@ -47,3 +52,4 @@ Formato de salida:
 ## 5. Riesgos y gaps
 - Solo hechos verificables.
 - Dudas explicitadas, sin suposiciones.
+- Incluir como riesgo cualquier desalineacion entre `evidenceLines` y la numeracion COBOL de secuencia.

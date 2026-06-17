@@ -113,6 +113,15 @@ Para impedir conocimiento no verificable:
    - `evidenceLines` array con al menos 1 linea
 4. Si no existe evidencia, el dato debe quedar fuera del grafo o marcado para revision, pero nunca consolidado como hecho.
 
+## Regla de numeracion de evidencia
+
+Para evitar desviaciones de trazabilidad en COBOL de formato fijo:
+
+- `evidenceLines` debe usar siempre numero de linea fisica del archivo (1-based), no el correlativo impreso en columnas finales del codigo fuente.
+- Cuando el archivo incluya numeracion COBOL en columnas 73-80 (ej. `00028800`), esa numeracion no debe almacenarse en `evidenceLines`.
+- Si se desea conservar ese valor para auditoria, debe registrarse como metadata adicional (por ejemplo `evidenceSequence`), pero nunca sustituyendo `evidenceLines`.
+- Si se detecta una diferencia entre linea fisica y secuencia COBOL, debe notificarse como hallazgo de calidad en el reporte de ingesta.
+
 ## Consultas de validacion de contrato
 
 ### 1) Labels no permitidos

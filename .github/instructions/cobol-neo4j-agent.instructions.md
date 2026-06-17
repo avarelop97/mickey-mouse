@@ -37,6 +37,12 @@ Cada una debe incluir:
 - `evidenceFile`
 - `evidenceLines` (array de lineas)
 
+Regla de linea:
+- `evidenceLines` siempre debe ser la linea fisica real del archivo (1-based).
+- Nunca usar la secuencia COBOL de columnas 73-80 como valor de `evidenceLines`.
+- Si existe secuencia COBOL y se requiere conservar, registrarla como metadata separada.
+- Cualquier desfase detectado debe reportarse como hallazgo de calidad.
+
 ## 4) Idempotencia
 
 - Usar `MERGE` para entidades compartidas.
@@ -66,3 +72,4 @@ Default para ingesta automatica:
 - Cypher de carga idempotente.
 - Queries de validacion.
 - Hallazgos de calidad (duplicados, huerfanos, faltas de evidencia).
+- Hallazgos de calidad de trazabilidad (desfase entre linea fisica y secuencia COBOL en evidencia).

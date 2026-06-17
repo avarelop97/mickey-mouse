@@ -229,6 +229,13 @@ CREATE (para)-[:USES_COPYBOOK {
 - USES_COPYBOOK
 - CALLS_ROUTINE
 
+Regla de numeracion:
+
+- `evidenceLines` debe representar la linea fisica real del archivo fuente (1-based).
+- No usar la numeracion de secuencia COBOL en columnas 73-80 (por ejemplo `00028800`) como `evidenceLines`.
+- Si existe ese numero de secuencia y es util para auditoria, guardarlo por separado (ej. `evidenceSequence`).
+- Si se detecta desfase entre linea fisica y secuencia COBOL, registrar el hallazgo en "Riesgos y gaps".
+
 ### 3.3 Validación Pre-Carga
 
 Ejecutar validación antes de cargar en Neo4j:
@@ -257,6 +264,9 @@ docker exec neo4j-local cypher-shell -u neo4j -p 'CambiaEstaClave123!' \
 ### 4.2 Validación Post-Carga
 
 Ejecutar queries de validación según [docs/graph-ontology.md](graph-ontology.md):
+
+- Verificar que `evidenceLines` corresponda a la linea fisica real del archivo.
+- Reportar cualquier desalineacion entre `evidenceLines` y la secuencia COBOL impresa en columnas finales.
 
 **Query 1: Verificar nodos inválidos**
 ```cypher
