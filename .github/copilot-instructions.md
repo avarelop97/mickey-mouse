@@ -35,6 +35,18 @@ Si hay conflicto, priorizar este orden.
 - Documentacion: lenguaje claro, secciones cortas, evidencia explicita.
 - Cambios incrementales: primero `dry-run`, luego `commit`.
 
+## Skill obligatoria para Cypher
+
+Cuando el usuario solicite generar o corregir queries Cypher, cargar y seguir siempre:
+
+- `.github/skills/cypher-safe-query-generator/SKILL.md`
+
+Objetivo de la skill:
+
+- Evitar pitfalls comunes (scope en `UNION`, type errors, merges ambiguos, omisiones de gobernanza/evidencia).
+- Estandarizar salida tabular para auditorias.
+- Mantener compatibilidad con ontologia y reglas del repositorio.
+
 ## Definicion minima de entrega por programa
 
 - Inventario de nodos y relaciones con evidencia.

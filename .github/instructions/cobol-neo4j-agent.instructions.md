@@ -74,3 +74,10 @@ Default para ingesta automatica:
 - Queries de validacion.
 - Hallazgos de calidad (duplicados, huerfanos, faltas de evidencia).
 - Hallazgos de calidad de trazabilidad (desfase entre linea fisica y secuencia COBOL en evidencia).
+
+## 8) Regla para generacion de Cypher sin errores
+
+- Para cualquier solicitud de generacion/correccion de Cypher, usar la skill:
+	- `.github/skills/cypher-safe-query-generator/SKILL.md`
+- Aplicar su checklist antes de entregar la query.
+- Si hay conflicto de reglas, prevalece este archivo y luego `docs/graph-ontology.md`.
