@@ -46,7 +46,8 @@ Regla de linea:
 ## 4) Idempotencia
 
 - Usar `MERGE` para entidades compartidas.
-- Usar `name` como clave natural para todas las tipologias, incluyendo `Paragraph`.
+- Usar `name` como clave natural para entidades compartidas (`Program`, `Copybook`, `DBTable`, `ParamType`, `ExternalRoutine`, `OutputFile`).
+- Usar clave natural compuesta para `Paragraph`: `programName` + `name`.
 - Evitar `CREATE` ciego en tipos reutilizables.
 
 ## 5) Completitud obligatoria

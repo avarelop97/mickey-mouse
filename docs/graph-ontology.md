@@ -23,7 +23,7 @@ El contrato se deriva del seed vigente en `infra/neo4j/manual-seed-cib005d.cyphe
 | Label | Clave natural | Descripcion | Capa |
 |---|---|---|---|
 | Program | name | Programa COBOL analizado | program |
-| Paragraph | name | Paso/parrafo de ejecucion | execution |
+| Paragraph | programName + name | Paso/parrafo de ejecucion en contexto de programa | execution |
 | Copybook | name | Dependencia de datos o codigo | dependency |
 | DBTable | name | Tabla fisica (DB2) | data-access |
 | ParamType | name | Tipo logico dentro de tabla (ej. TA0/TA1) | data-access |
@@ -38,11 +38,15 @@ Las siguientes restricciones deben existir en Neo4j:
 
 - `Program.name` unico
 - `Copybook.name` unico
-- `Paragraph.name` unico
+- `Paragraph(programName, name)` unico (constraint compuesto)
 - `DBTable.name` unico
 - `ParamType.name` unico
 - `ExternalRoutine.name` unico
 - `OutputFile.name` unico
+
+Propiedad obligatoria adicional para `Paragraph`:
+
+- `programName` no vacio y consistente con el `Program.name` que lo contiene via `HAS_PARAGRAPH`.
 
 ## Relaciones validas (catalogo)
 

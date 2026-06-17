@@ -190,6 +190,7 @@ CREATE (prog:Program {
 
 // --- PARAGRAPH NODES ---
 CREATE (p1:Paragraph {
+  programName: '{NOMBRE_PROGRAMA}',
   name: '000-INICIO',
   executionOrder: 100,
   executionPhase: 'INITIALIZATION',
@@ -204,7 +205,7 @@ CREATE (p1:Paragraph {
 // ... más paragraphs ...
 
 // --- RELATIONSHIPS ---
-MATCH (prog:Program {name: '{NOMBRE_PROGRAMA}'}), (p1:Paragraph {name: '000-INICIO'})
+MATCH (prog:Program {name: '{NOMBRE_PROGRAMA}'}), (p1:Paragraph {programName: '{NOMBRE_PROGRAMA}', name: '000-INICIO'})
 CREATE (prog)-[:HAS_PARAGRAPH]->(p1);
 ```
 
@@ -213,7 +214,7 @@ CREATE (prog)-[:HAS_PARAGRAPH]->(p1);
 **OBLIGATORIO para relaciones de datos/dependencias**:
 
 ```cypher
-MATCH (para:Paragraph {name: '000-INICIO'}), (cpy:Copybook {name: 'SICPATA0'})
+MATCH (para:Paragraph {programName: 'CIB005D', name: '000-INICIO'}), (cpy:Copybook {name: 'SICPATA0'})
 CREATE (para)-[:USES_COPYBOOK {
   evidenceFile: 'src/CIB005D.cbl',
   evidenceLines: [2356, 2357, 2358],
@@ -320,7 +321,8 @@ reviewedAt: timestamp('...')
 **Regla de completitud**:
 - Todos los campos definidos por tipologia son imprescindibles.
 - Si falta algun campo, el nodo queda en `pending_human_review` con `reviewSource = 'auto-ingestion'` y debe notificarse.
-- La clave natural operativa para todas las tipologias es `name`.
+- La clave natural operativa para `Paragraph` es compuesta: `programName + name`.
+- Para el resto de tipologias, la clave natural operativa es `name`.
 
 ### 5.2 Queries de Auditoría
 

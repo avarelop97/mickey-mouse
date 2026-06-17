@@ -29,6 +29,10 @@ Reglas de estado en escritura (modo commit):
   - `reviewSource: auto-ingestion`
   - `runId`
 
+Regla de clave natural para Paragraph:
+- `Paragraph` debe resolverse por clave compuesta: `programName` + `name`.
+- No usar `MERGE (p:Paragraph {name: ...})` sin `programName`.
+
 Formato de salida:
 
 ## 1. Inventario

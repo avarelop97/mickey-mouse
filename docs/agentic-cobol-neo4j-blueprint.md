@@ -270,7 +270,7 @@ Campos mínimos:
 ## 6.1 Claves Naturales
 
 - Program: name
-- Paragraph: name
+- Paragraph: programName + name
 - Copybook: name
 - DBTable: name
 - ParamType: name
@@ -286,7 +286,7 @@ Usar MERGE para entidades compartibles:
 - `ExternalRoutine`
 
 Usar MERGE por clave natural en entidades contextuales:
-- `Paragraph` por `name`
+- `Paragraph` por `programName + name`
 
 `Program` puede usar `MERGE` por `name` para evitar reingestas duplicadas.
 
@@ -301,7 +301,7 @@ Definir constraints de unicidad:
 - `ParamType(name)`
 - `ExternalRoutine(name)`
 - `OutputFile(name)`
-- `Paragraph(name)`
+- `Paragraph(programName, name)`
 
 ---
 

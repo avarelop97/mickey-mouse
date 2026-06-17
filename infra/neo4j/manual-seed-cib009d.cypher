@@ -4,8 +4,8 @@ FOR (n:Program) REQUIRE n.name IS UNIQUE;
 CREATE CONSTRAINT copybook_name_unique IF NOT EXISTS
 FOR (n:Copybook) REQUIRE n.name IS UNIQUE;
 
-CREATE CONSTRAINT paragraph_name_unique IF NOT EXISTS
-FOR (n:Paragraph) REQUIRE n.name IS UNIQUE;
+CREATE CONSTRAINT paragraph_program_name_unique IF NOT EXISTS
+FOR (n:Paragraph) REQUIRE (n.programName, n.name) IS UNIQUE;
 
 CREATE CONSTRAINT table_name_unique IF NOT EXISTS
 FOR (n:DBTable) REQUIRE n.name IS UNIQUE;
@@ -67,8 +67,9 @@ UNWIND [
   {name: '980-ABORTA', kind: 'error-handling', summary: 'Hace rollback y termina el programa con codigo 16.', executionOrder: 910, phase: 'error-path', orderSource: 'manual-call-tree'},
   {name: '990-CIF-CTL', kind: 'utility', summary: 'Rutina auxiliar de control de impresion para terminacion anormal.', executionOrder: 920, phase: 'error-path', orderSource: 'manual-call-tree'}
 ] AS paragraphData
-MERGE (paragraph:Paragraph {name: paragraphData.name})
+MERGE (paragraph:Paragraph {programName: program.name, name: paragraphData.name})
 SET paragraph.name = paragraphData.name,
+  paragraph.programName = program.name,
     paragraph.kind = paragraphData.kind,
     paragraph.summary = paragraphData.summary,
     paragraph.executionOrder = paragraphData.executionOrder,
@@ -192,14 +193,14 @@ SET report.ddname = 'UT-S-CIB009R1',
 MERGE (program)-[:WRITES_FILE]->(report);
 
 MATCH (program:Program {name: 'CIB009D'})
-MATCH (p000:Paragraph {name: '000-INICIO'})
-MATCH (p030:Paragraph {name: '030-PROCESO-DESGLOZADO'})
-MATCH (p050:Paragraph {name: '050-VERIFICA-SALDO'})
-MATCH (p510:Paragraph {name: '510-SELECCIONA-PARAM'})
-MATCH (p700:Paragraph {name: '700-ENCABEZADO'})
-MATCH (p800:Paragraph {name: '800-IMPRIME-TOTALES'})
-MATCH (p970:Paragraph {name: '970-SQL-ERROR'})
-MATCH (p999:Paragraph {name: '999-CONST-ENCA'})
+MATCH (p000:Paragraph {programName: 'CIB009D', name: '000-INICIO'})
+MATCH (p030:Paragraph {programName: 'CIB009D', name: '030-PROCESO-DESGLOZADO'})
+MATCH (p050:Paragraph {programName: 'CIB009D', name: '050-VERIFICA-SALDO'})
+MATCH (p510:Paragraph {programName: 'CIB009D', name: '510-SELECCIONA-PARAM'})
+MATCH (p700:Paragraph {programName: 'CIB009D', name: '700-ENCABEZADO'})
+MATCH (p800:Paragraph {programName: 'CIB009D', name: '800-IMPRIME-TOTALES'})
+MATCH (p970:Paragraph {programName: 'CIB009D', name: '970-SQL-ERROR'})
+MATCH (p999:Paragraph {programName: 'CIB009D', name: '999-CONST-ENCA'})
 MATCH (ta0:ParamType {name: 'TA0'})
 MATCH (ta1:ParamType {name: 'TA1'})
 MATCH (ta5:ParamType {name: 'TA5'})

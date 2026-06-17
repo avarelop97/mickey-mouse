@@ -10,7 +10,7 @@ Chequeos minimos:
 2. Tipos de relacion fuera de ontologia.
 3. Pares origen-destino invalidos.
 4. Relaciones criticas sin `evidenceFile`/`evidenceLines`.
-5. Duplicados por clave natural (`Copybook`, `DBTable`, `ParamType`, `ExternalRoutine`, `OutputFile`, `Program`, `Paragraph`).
+5. Duplicados por clave natural (`Copybook`, `DBTable`, `ParamType`, `ExternalRoutine`, `OutputFile`, `Program`) y por clave compuesta en `Paragraph` (`programName`, `name`).
 6. Nodos huerfanos.
 7. Inconsistencias de `reviewStatus`.
 

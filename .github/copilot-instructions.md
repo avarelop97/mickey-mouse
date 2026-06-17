@@ -27,7 +27,7 @@ Si hay conflicto, priorizar este orden.
 5. Mantener trazabilidad con `runId`, `reviewStatus`, `reviewSource`.
 6. Todo resultado automatico debe quedar en `pending_human_review` con `reviewSource = auto-ingestion` hasta aprobacion humana.
 7. Todos los campos definidos por tipologia de nodo son obligatorios; si falta al menos uno, el nodo debe marcarse para revision y notificarse.
-8. La clave natural operativa para todas las tipologias, incluyendo `Paragraph`, es `name`.
+8. La clave natural operativa para `Paragraph` es compuesta (`programName` + `name`); para el resto de tipologias es `name`.
 
 ## Convenciones
 

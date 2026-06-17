@@ -4,8 +4,8 @@ FOR (n:Program) REQUIRE n.name IS UNIQUE;
 CREATE CONSTRAINT copybook_name_unique IF NOT EXISTS
 FOR (n:Copybook) REQUIRE n.name IS UNIQUE;
 
-CREATE CONSTRAINT paragraph_name_unique IF NOT EXISTS
-FOR (n:Paragraph) REQUIRE n.name IS UNIQUE;
+CREATE CONSTRAINT paragraph_program_name_unique IF NOT EXISTS
+FOR (n:Paragraph) REQUIRE (n.programName, n.name) IS UNIQUE;
 
 CREATE CONSTRAINT table_name_unique IF NOT EXISTS
 FOR (n:DBTable) REQUIRE n.name IS UNIQUE;
@@ -60,8 +60,9 @@ UNWIND [
   {name: '970-SQL-ERROR', kind: 'error-handling', summary: 'Formatea SQLCA y deriva el aborto del proceso.', executionOrder: 900, phase: 'error-path', orderSource: 'manual-call-tree'},
   {name: '980-ABORTA', kind: 'error-handling', summary: 'Hace rollback y termina el programa con codigo 16.', executionOrder: 910, phase: 'error-path', orderSource: 'manual-call-tree'}
 ] AS paragraphData
-MERGE (paragraph:Paragraph {name: paragraphData.name})
+MERGE (paragraph:Paragraph {programName: program.name, name: paragraphData.name})
 SET paragraph.name = paragraphData.name,
+  paragraph.programName = program.name,
     paragraph.kind = paragraphData.kind,
     paragraph.summary = paragraphData.summary,
     paragraph.executionOrder = paragraphData.executionOrder,
@@ -181,15 +182,15 @@ SET report.ddname = 'UT-S-CIB005R1',
 MERGE (program)-[:WRITES_FILE]->(report);
 
 MATCH (program:Program {name: 'CIB005D'})
-MATCH (generaReporte:Paragraph {name: 'GENERA-REPORTE'})
-MATCH (calcCompras:Paragraph {name: 'CALCLA-SALDO-COMPRAS'})
-MATCH (calcVentas:Paragraph {name: 'CALCLA-SALDO-VENTAS'})
-MATCH (calculos:Paragraph {name: '010-CALCULOS'})
-MATCH (actualizaTA0:Paragraph {name: '040-ACTUALIZA-PARAM-TA0'})
-MATCH (sqlError:Paragraph {name: '970-SQL-ERROR'})
-MATCH (aborta:Paragraph {name: '980-ABORTA'})
-MATCH (mueveFechas:Paragraph {name: '999-MUEVE-FECHAS'})
-MATCH (construye:Paragraph {name: '999-0100-CONSTRUYE'})
+MATCH (generaReporte:Paragraph {programName: 'CIB005D', name: 'GENERA-REPORTE'})
+MATCH (calcCompras:Paragraph {programName: 'CIB005D', name: 'CALCLA-SALDO-COMPRAS'})
+MATCH (calcVentas:Paragraph {programName: 'CIB005D', name: 'CALCLA-SALDO-VENTAS'})
+MATCH (calculos:Paragraph {programName: 'CIB005D', name: '010-CALCULOS'})
+MATCH (actualizaTA0:Paragraph {programName: 'CIB005D', name: '040-ACTUALIZA-PARAM-TA0'})
+MATCH (sqlError:Paragraph {programName: 'CIB005D', name: '970-SQL-ERROR'})
+MATCH (aborta:Paragraph {programName: 'CIB005D', name: '980-ABORTA'})
+MATCH (mueveFechas:Paragraph {programName: 'CIB005D', name: '999-MUEVE-FECHAS'})
+MATCH (construye:Paragraph {programName: 'CIB005D', name: '999-0100-CONSTRUYE'})
 MATCH (ta0:ParamType {name: 'TA0'})
 MATCH (ta1:ParamType {name: 'TA1'})
 MATCH (cbSql:Copybook {name: 'SIC004'})
