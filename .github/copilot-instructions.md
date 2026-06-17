@@ -35,6 +35,23 @@ Si hay conflicto, priorizar este orden.
 - Documentacion: lenguaje claro, secciones cortas, evidencia explicita.
 - Cambios incrementales: primero `dry-run`, luego `commit`.
 
+## Arquitectura operativa actual
+
+El flujo vigente se ejecuta con orquestacion y especialistas:
+
+1. `cobol-neo4j-explorer` (orquestador)
+2. `cobol-evidence-extractor` (extraccion)
+3. `neo4j-ontology-auditor` (auditoria determinista pre/post)
+4. `cypher-expert` (escritura idempotente autorizada)
+
+Secuencia operativa actual:
+
+1. Orquestador -> Evidence Extractor
+2. Orquestador -> Auditor (pre)
+3. Orquestador -> Cypher Expert (solo si pre valida)
+4. Orquestador -> Auditor (post)
+5. Orquestador -> Decision final
+
 ## Skill obligatoria para Cypher
 
 Cuando el usuario solicite generar o corregir queries Cypher, cargar y seguir siempre:

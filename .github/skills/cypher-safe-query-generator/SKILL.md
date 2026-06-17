@@ -54,7 +54,7 @@ If there is a conflict, follow this order.
 - Include required fields in checks: `ingestion`, `layer`, `nodeType`, `viewTag`, `reviewStatus`, `reviewRequired`, `reviewSource`
 - For semantic relations (`USES_COPYBOOK`, `READS_DATA`, `UPDATES_DATA`, `DERIVES_FROM`, `DEPENDS_ON_EXTERNAL`), require `evidenceFile` and non-empty `evidenceLines`
 
-5. Run pre-delivery checklist from [Cypher Safety Checklist](./references/cypher-safety-checklist.md).
+5. Run the embedded pre-delivery checklist in this file.
 
 6. Deliver query with:
 - Brief purpose comment
@@ -121,3 +121,43 @@ ORDER BY source, name
   - Fix: guard required key fields before `MERGE`.
 - Unexpected duplicates in `Paragraph`:
   - Fix: use composite key `(programName, name)` consistently.
+
+## Pre-Delivery Checklist
+
+1) Ontology compliance
+- Labels are only: Program, Paragraph, Copybook, DBTable, ParamType, ExternalRoutine, OutputFile.
+- Relationship types are only those defined in `docs/graph-ontology.md`.
+- Paragraph key usage is composite: programName + name.
+
+2) Scope and UNION safety
+- Every UNION branch redeclares variables it uses.
+- Every UNION branch returns same number/order/type of columns.
+- ORDER BY is applied only to columns returned by all branches.
+
+3) Null/empty handling
+- Missing property checks use `n[prop] IS NULL`.
+- Empty value checks use `trim(toString(n[prop])) = ''` after null guard.
+- Display fields use `coalesce(...)` when concatenating potential nulls.
+
+4) Type safety
+- No node/relationship-only operations on scalar values.
+- No unsupported type predicates for target Neo4j version.
+- Dynamic property access `n[prop]` only where scalar expression is expected.
+
+5) Governance and evidence
+- Audit queries include mandatory governance checks:
+  - ingestion, layer, nodeType, viewTag
+  - reviewStatus, reviewRequired, reviewSource
+- Semantic relationship checks require:
+  - evidenceFile non-empty
+  - evidenceLines non-empty array
+
+6) Determinism and readability
+- Output columns are stable and named.
+- Query has deterministic ORDER BY when result order matters.
+- Query includes a short purpose comment.
+
+7) Dry validation
+- Re-read query for WITH/UNION/CALL scope transitions.
+- Confirm key fields used in MERGE are never null.
+- Confirm syntax aligns with repository Neo4j usage patterns.
