@@ -1,0 +1,150 @@
+node {
+  diameter: 50px;
+  color: #F4F4F4;
+  border-color: #BDBDBD;
+  border-width: 2px;
+  text-color-internal: #121212;
+  font-size: 10px;
+}
+
+relationship {
+  color: #B8C2CC;
+  shaft-width: 1px;
+  font-size: 7px;
+  padding: 3px;
+  text-color-external: #5F6C7B;
+  text-color-internal: #5F6C7B;
+}
+
+node.Program {
+  caption: '{name}';
+  color: #004481;
+  border-color: #072146;
+  text-color-internal: #FFFFFF;
+  diameter: 72px;
+}
+
+node.ProgramFacet {
+  caption: '{kind}';
+  color: #1464A5;
+  border-color: #5BBEFF;
+  text-color-internal: #FFFFFF;
+  diameter: 58px;
+}
+
+node.Paragraph {
+  caption: '{name}';
+  color: #5BBEFF;
+  border-color: #1464A5;
+  text-color-internal: #3A3A3A;
+}
+
+node.Copybook {
+  caption: '{name}';
+  color: #B2EAF5;
+  border-color: #009BDE;
+  text-color-internal: #3A3A3A;
+}
+
+node.DBTable {
+  caption: '{name}';
+  color: #1464A5;
+  border-color: #5BBEFF;
+  text-color-internal: #FFFFFF;
+}
+
+node.ParamType {
+  caption: '{name}';
+  color: #1DB7E4;
+  border-color: #009BDE;
+  text-color-internal: #3A3A3A;
+}
+
+node.ExternalRoutine {
+  caption: '{name}';
+  color: #F9ECD3;
+  border-color: #F5A623;
+  text-color-internal: #3A3A3A;
+}
+
+node.OutputFile {
+  caption: '{name}';
+  color: #D4EDFC;
+  border-color: #5BBEFF;
+  text-color-internal: #3A3A3A;
+}
+
+relationship.HAS_FACET {
+  color: #89A9C4;
+  shaft-width: 1px;
+}
+
+relationship.HAS_PARAGRAPH {
+  color: #7FB7D6;
+  shaft-width: 2px;
+}
+
+relationship.INCLUDES_COPYBOOK {
+  color: #A9D8E5;
+  shaft-width: 1px;
+}
+
+relationship.USES_COPYBOOK {
+  color: #8FC9D8;
+  shaft-width: 2px;
+}
+
+relationship.IMPLEMENTED_BY {
+  color: #7FB8C9;
+  shaft-width: 2px;
+}
+
+relationship.READS_TABLE {
+  color: #7AA3C4;
+  shaft-width: 1px;
+}
+
+relationship.UPDATES_TABLE {
+  color: #5F89AE;
+  shaft-width: 2px;
+}
+
+relationship.USES_PARAM_TYPE {
+  color: #8BC3CF;
+  shaft-width: 1px;
+}
+
+relationship.READS_DATA {
+  color: #7FBBC9;
+  shaft-width: 1px;
+}
+
+relationship.UPDATES_DATA {
+  color: #5FA0AF;
+  shaft-width: 2px;
+}
+
+relationship.DERIVES_FROM {
+  color: #99CBD5;
+  shaft-width: 1px;
+}
+
+relationship.CALLS_ROUTINE {
+  color: #D6C3A3;
+  shaft-width: 1px;
+}
+
+relationship.DEPENDS_ON_EXTERNAL {
+  color: #C4AE8C;
+  shaft-width: 2px;
+}
+
+relationship.WRITES_FILE {
+  color: #A8CCE5;
+  shaft-width: 2px;
+}
+
+relationship.STORES {
+  color: #73AEBB;
+  shaft-width: 2px;
+}

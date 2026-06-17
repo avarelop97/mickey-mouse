@@ -1,0 +1,30 @@
+# Tracking policy (allowlist):
+# Only these folders are enabled for tracking in this project:
+# - .github
+# - docs
+# - infra
+
+# Default deny
+*
+
+# Keep this policy file tracked
+!.gitignore
+
+# Allow only approved folders
+!.github/
+!.github/**
+!docs/
+!docs/**
+!infra/
+!infra/**
+
+# Safety net for local artifacts
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.tmp
+*.log
+.env
+.env.*

@@ -1,0 +1,29 @@
+neo4j:
+  name: neo4j
+  password: "CHANGE_ME_DEV_PASSWORD"
+
+# Persistencia para no perder datos al reiniciar el pod
+volumes:
+  data:
+    mode: defaultStorageClass
+    defaultStorageClass:
+      requests:
+        storage: 20Gi
+
+services:
+  neo4j:
+    enabled: true
+
+# Browser y Bolt
+config:
+  server.default_listen_address: "0.0.0.0"
+
+resources:
+  requests:
+    cpu: "500m"
+    memory: "1Gi"
+  limits:
+    cpu: "2"
+    memory: "4Gi"
+
+# Neo4j Community por defecto en chart; ajustar si usan Enterprise

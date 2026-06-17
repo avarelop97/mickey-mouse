@@ -40,22 +40,27 @@ Cada una debe incluir:
 ## 4) Idempotencia
 
 - Usar `MERGE` para entidades compartidas.
-- Usar clave compuesta para `Paragraph` (`programName`, `name`).
+- Usar `name` como clave natural para todas las tipologias, incluyendo `Paragraph`.
 - Evitar `CREATE` ciego en tipos reutilizables.
 
-## 5) Gobernanza
+## 5) Completitud obligatoria
+
+- Todos los campos definidos para la tipologia del nodo son imprescindibles.
+- Si un nodo queda incompleto, marcar `reviewStatus = pending_human_review`.
+- Si un nodo queda incompleto, marcar `reviewSource = auto-ingestion` y notificar hallazgo.
+
+## 6) Gobernanza
 
 Estados validos:
-- `pending_agent_review`
 - `pending_human_review`
 - `reviewed_human`
 - `rejected_human`
 
 Default para ingesta automatica:
-- `reviewStatus = pending_agent_review`
-- `reviewSource = user-agent-request`
+- `reviewStatus = pending_human_review`
+- `reviewSource = auto-ingestion`
 
-## 6) Resultado esperado por tarea de ingesta
+## 7) Resultado esperado por tarea de ingesta
 
 - Resumen de evidencias encontradas.
 - Cypher de carga idempotente.

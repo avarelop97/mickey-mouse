@@ -15,13 +15,13 @@ Pasos obligatorios:
 3. Capturar evidencia (`evidenceFile`, `evidenceLines`) para relaciones criticas.
 4. Construir Cypher idempotente (`MERGE`/`MERGE compuesto`).
 5. Proponer queries de validacion y auditoria post-carga.
-6. Marcar resultado para `pending_agent_review`.
+6. Marcar resultado para `pending_human_review`.
 
 Reglas de estado en escritura (modo commit):
 - No usar `reviewed_human` para datos generados por agente.
 - Toda creacion/actualizacion debe incluir:
-  - `reviewStatus: pending_agent_review`
-  - `reviewSource: user-agent-request`
+  - `reviewStatus: pending_human_review`
+  - `reviewSource: auto-ingestion`
   - `runId`
 
 Formato de salida:

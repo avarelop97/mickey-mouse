@@ -1,0 +1,33 @@
+neo4j:
+  name: neo4j
+  password: "CHANGE_ME_STRONG_PASSWORD"
+  acceptLicenseAgreement: "yes"
+
+volumes:
+  data:
+    mode: defaultStorageClass
+    defaultStorageClass:
+      requests:
+        storage: 100Gi
+
+services:
+  neo4j:
+    enabled: true
+
+config:
+  server.default_listen_address: "0.0.0.0"
+  dbms.security.auth_enabled: "true"
+
+resources:
+  requests:
+    cpu: "2"
+    memory: "8Gi"
+  limits:
+    cpu: "4"
+    memory: "16Gi"
+
+# Endurece acceso en producción
+podSecurityContext:
+  runAsNonRoot: true
+
+# Nota: Para TLS y políticas de red, completar con estándares del entorno

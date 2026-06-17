@@ -26,8 +26,8 @@ Reglas:
 - No continuar a `commit` sin evidencia en relaciones criticas.
 - Mantener trazabilidad con `runId` por programa y por corrida.
 - En `commit`, toda entidad creada o actualizada por agente debe quedar con:
-   - `reviewStatus = pending_agent_review`
-   - `reviewSource = user-agent-request`
+   - `reviewStatus = pending_human_review`
+   - `reviewSource = auto-ingestion`
 - No se permite marcar `reviewed_human` en procesos automaticos.
 
 Salida esperada:
@@ -49,5 +49,5 @@ Salida esperada:
 - reviewSource aplicado
 
 ## Next Actions
-- lista de elementos en `pending_agent_review`
+- lista de elementos en `pending_human_review`
 - recomendaciones de ajuste

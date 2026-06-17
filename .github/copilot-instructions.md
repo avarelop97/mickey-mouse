@@ -25,7 +25,9 @@ Si hay conflicto, priorizar este orden.
 3. Exigir `evidenceFile` y `evidenceLines` en relaciones criticas de datos/dependencias.
 4. Priorizar `MERGE` para entidades compartidas (`Copybook`, `DBTable`, `ParamType`, `ExternalRoutine`).
 5. Mantener trazabilidad con `runId`, `reviewStatus`, `reviewSource`.
-6. Todo resultado automatico debe quedar en `pending_agent_review` hasta aprobacion humana.
+6. Todo resultado automatico debe quedar en `pending_human_review` con `reviewSource = auto-ingestion` hasta aprobacion humana.
+7. Todos los campos definidos por tipologia de nodo son obligatorios; si falta al menos uno, el nodo debe marcarse para revision y notificarse.
+8. La clave natural operativa para todas las tipologias, incluyendo `Paragraph`, es `name`.
 
 ## Convenciones
 

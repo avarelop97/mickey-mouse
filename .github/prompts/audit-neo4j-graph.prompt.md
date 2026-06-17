@@ -29,7 +29,7 @@ Salida obligatoria:
 
 ## Governance Status
 - conteo por estado de revision
-- backlog en `pending_agent_review`
+- backlog en `pending_human_review`
 
 ## Decision
 - `PASS` o `FAIL` con justificacion
