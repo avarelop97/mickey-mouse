@@ -34,6 +34,7 @@ Your mission is to orchestrate the full pipeline by deciding what to do, who exe
 - Do not run destructive commands.
 - Do not execute write Cypher by default.
 - If user explicitly asks for commit-mode actions, first produce pre-check findings and explicit risk notes.
+- For operational commit-mode runs, execution through infra/neo4j/scripts/e2e_ingest_pipeline.py is mandatory unless the user explicitly authorizes a documented exception.
 
 ## Orchestration Responsibilities
 
@@ -105,6 +106,7 @@ Steps:
 
 ## Delegation Flow (Current)
 
+0. Orchestrator executes infra/neo4j/scripts/e2e_ingest_pipeline.py as the mandatory reproducible envelope for operational runs.
 1. Orchestrator -> cobol-evidence-extractor
 2. Orchestrator quality gate on `ExtractionProposal`
 3. Orchestrator enriches proposal into `WritePayload`

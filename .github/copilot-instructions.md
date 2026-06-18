@@ -37,6 +37,16 @@ Si hay conflicto, priorizar este orden.
 - Documentacion: lenguaje claro, secciones cortas, evidencia explicita.
 - Cambios incrementales: primero `dry-run`, luego `commit`.
 
+## Ejecucion Reproducible Obligatoria
+
+Para corridas operativas de ingestion en modo commit, la ejecucion debe realizarse mediante infra/neo4j/scripts/e2e_ingest_pipeline.py y no por flujos ad-hoc.
+
+Reglas:
+1. En modo commit, el uso de infra/neo4j/scripts/e2e_ingest_pipeline.py es obligatorio.
+2. Deben conservarse artefactos de corrida en infra/neo4j/reports/ y infra/neo4j/queries/ (extraction, writepayload, precheck, final-report y cypher aplicado).
+3. Solo se permite excepcion si el usuario autoriza explicitamente desviar el flujo y se documenta el riesgo en la salida final.
+4. Si no se puede ejecutar el script obligatorio, la decision debe ser BLOCKED hasta remediacion o aprobacion humana explicita.
+
 ## Arquitectura operativa actual
 
 El flujo vigente se ejecuta con orquestacion y especialistas:
