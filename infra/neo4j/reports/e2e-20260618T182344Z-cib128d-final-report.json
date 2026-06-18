@@ -1,0 +1,52 @@
+{
+  "runId": "e2e-20260618T182344Z-cib128d",
+  "programs": [
+    "CIB128D"
+  ],
+  "artifacts": {
+    "extraction": "infra/neo4j/reports/e2e-20260618T182344Z-cib128d-extraction.json",
+    "writePayload": "infra/neo4j/reports/e2e-20260618T182344Z-cib128d-writepayload.json",
+    "precheck": "infra/neo4j/reports/e2e-20260618T182344Z-cib128d-precheck.json",
+    "cypher": "infra/neo4j/queries/ingest-e2e-20260618T182344Z-cib128d.cypher"
+  },
+  "precheck": {
+    "findings": [],
+    "blockers": [],
+    "qualityGateResult": "pass"
+  },
+  "commitExecuted": true,
+  "inventory": {
+    "programNodes": 1,
+    "paragraphNodes": 9,
+    "copybookNodesSeenByRun": 14,
+    "dbTableNodesSeenByRun": 2,
+    "externalRoutineNodesSeenByRun": 2,
+    "includesCopybookRels": 14,
+    "hasParagraphRels": 9,
+    "callsRoutineRels": 2,
+    "readsTableRels": 2,
+    "updatesTableRels": 0
+  },
+  "postAudit": {
+    "missingMandatoryProperties": 0,
+    "invalidReviewStateMetadata": 0,
+    "invalidParagraphSummary": 0,
+    "missingCriticalRelationEvidence": 0,
+    "ontologyViolations": 0
+  },
+  "postAuditAfterRemediation": {
+    "missingMandatoryProperties": 0,
+    "invalidReviewStateMetadata": 0,
+    "invalidParagraphSummary": 0,
+    "missingCriticalRelationEvidence": 0,
+    "ontologyViolations": 0
+  },
+  "remediationApplied": [
+    "Enforced review metadata consistency for ingested scope"
+  ],
+  "integralBacklog": {
+    "invalidLabelsGlobal": 0,
+    "criticalRelWithoutEvidenceGlobal": 50
+  },
+  "decision": "PASS"
+}

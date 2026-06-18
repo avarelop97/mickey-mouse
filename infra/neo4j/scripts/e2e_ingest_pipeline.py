@@ -14,6 +14,7 @@ from datetime import datetime, timezone
 
 REPO_ROOT = pathlib.Path(__file__).resolve().parents[3]
 SRC_DIR = REPO_ROOT / "src"
+CPY_DIR = REPO_ROOT / "cpy"
 REPORT_DIR = REPO_ROOT / "infra" / "neo4j" / "reports"
 QUERY_DIR = REPO_ROOT / "infra" / "neo4j" / "queries"
 
@@ -54,7 +55,10 @@ INVALID_SUMMARY_TOKENS = [
     "todo",
 ]
 
-PARAGRAPH_RE = re.compile(r"^\s*([0-9A-Z][0-9A-Z-]{1,70})\.\s*$")
+# Accept both COBOL styles for paragraph headers:
+# - "010-INIT."
+# - "010-INIT SECTION."
+PARAGRAPH_RE = re.compile(r"^\s*([0-9A-Z][0-9A-Z-]{1,70})(?:\s+SECTION)?\.\s*$", re.IGNORECASE)
 COPY_RE = re.compile(r"^\s*COPY\s+([A-Z0-9-]+)\b", re.IGNORECASE)
 CALL_RE = re.compile(r"\bCALL\s+'([A-Z0-9-]+)'", re.IGNORECASE)
 PERFORM_RE = re.compile(r"\bPERFORM\s+([A-Z0-9-]+)\b", re.IGNORECASE)
@@ -135,6 +139,48 @@ def infer_summary(program: str, paragraph: str) -> str:
     return f"Orquesta una fase funcional de {program}, encadenando validaciones y transformaciones del proceso principal."
 
 
+
+def resolve_copybook_file(copybook_name: str) -> tuple[str, pathlib.Path] | tuple[None, None]:
+    name = copybook_name.upper().strip()
+    candidates = [name]
+    # Some estates reference SIC* while physical copybook is SI2* (and vice versa).
+    if name.startswith("SIC") and len(name) > 3:
+        candidates.append("SI2" + name[3:])
+    if name.startswith("SI2") and len(name) > 3:
+        candidates.append("SIC" + name[3:])
+
+    for candidate in candidates:
+        path = CPY_DIR / f"{candidate}.cpy"
+        if path.exists():
+            return candidate, path
+
+    return None, None
+
+
+def extract_copybook_paragraph_names(copybook_name: str) -> set[str]:
+    _, path = resolve_copybook_file(copybook_name)
+    if not path:
+        return set()
+
+    names: set[str] = set()
+    for raw in path.read_text(encoding="utf-8", errors="ignore").splitlines():
+        logical = normalize_fixed_line(raw)
+        pm = PARAGRAPH_RE.match(logical)
+        if not pm:
+            continue
+        paragraph_name = pm.group(1).upper()
+        is_candidate_paragraph = (
+            paragraph_name not in PARAGRAPH_EXCLUDE
+            and (
+                re.match(r"^\d{3,4}-", paragraph_name)
+                or paragraph_name.startswith("P-")
+                or paragraph_name.startswith("R-")
+            )
+        )
+        if is_candidate_paragraph:
+            names.add(paragraph_name)
+
+    return names
 def parse_program(program: str) -> dict:
     src = SRC_DIR / f"{program}.cbl"
     if not src.exists():
@@ -212,10 +258,26 @@ def parse_program(program: str) -> dict:
                 sql_lines = []
                 sql_evidence = []
 
-    paragraph_names = [p["name"] for p in paragraphs]
-    paragraph_name_set = set(paragraph_names)
+    paragraph_name_set = {p["name"] for p in paragraphs}
     perform_set = set(perform_targets.keys())
-    missing_perform_targets = sorted(t for t in perform_set if t not in paragraph_name_set)
+
+    # Strictly resolve missing PERFORM targets against included copybooks.
+    copybook_paragraph_index: dict[str, set[str]] = defaultdict(set)
+    for copybook_name in copybooks.keys():
+        for paragraph_name in extract_copybook_paragraph_names(copybook_name):
+            copybook_paragraph_index[paragraph_name].add(copybook_name)
+
+    resolved_perform_targets_via_copybook = {
+        target: sorted(copybook_paragraph_index[target])
+        for target in sorted(perform_set)
+        if target not in paragraph_name_set and target in copybook_paragraph_index
+    }
+
+    missing_perform_targets = sorted(
+        target
+        for target in perform_set
+        if target not in paragraph_name_set and target not in resolved_perform_targets_via_copybook
+    )
 
     read_tables: dict[str, list[int]] = defaultdict(list)
     update_tables: dict[str, list[int]] = defaultdict(list)
@@ -252,6 +314,7 @@ def parse_program(program: str) -> dict:
             "performTargetCount": len(perform_set),
             "paragraphCount": len(extracted_paragraphs),
             "missingPerformTargets": missing_perform_targets,
+            "resolvedPerformTargetsViaCopybook": resolved_perform_targets_via_copybook,
         },
     }
 

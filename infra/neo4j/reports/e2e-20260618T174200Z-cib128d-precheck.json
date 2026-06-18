@@ -1,0 +1,43 @@
+{
+  "findings": [
+    {
+      "severity": "critical",
+      "type": "PARAGRAPH_EXTRACTION_COVERAGE_GAP",
+      "evidence": {
+        "program": "CIB128D",
+        "missingPerformTargets": [
+          "010-INICIO",
+          "020-PROCESO",
+          "100-ARMA-CONTRATO",
+          "200-ESCRIBE-CONTRATO",
+          "300-DEFINE-MES",
+          "500-DEFINE-CURSOR",
+          "550-LEE-VENCIMIENTOS-CAS",
+          "970-SQL-ERROR",
+          "999-MUEVE-FECHAS"
+        ]
+      }
+    }
+  ],
+  "blockers": [
+    {
+      "severity": "critical",
+      "type": "PARAGRAPH_EXTRACTION_COVERAGE_GAP",
+      "evidence": {
+        "program": "CIB128D",
+        "missingPerformTargets": [
+          "010-INICIO",
+          "020-PROCESO",
+          "100-ARMA-CONTRATO",
+          "200-ESCRIBE-CONTRATO",
+          "300-DEFINE-MES",
+          "500-DEFINE-CURSOR",
+          "550-LEE-VENCIMIENTOS-CAS",
+          "970-SQL-ERROR",
+          "999-MUEVE-FECHAS"
+        ]
+      }
+    }
+  ],
+  "qualityGateResult": "fail"
+}

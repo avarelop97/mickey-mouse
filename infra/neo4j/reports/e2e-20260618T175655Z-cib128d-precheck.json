@@ -1,0 +1,29 @@
+{
+  "findings": [
+    {
+      "severity": "critical",
+      "type": "PARAGRAPH_EXTRACTION_COVERAGE_GAP",
+      "evidence": {
+        "program": "CIB128D",
+        "missingPerformTargets": [
+          "970-SQL-ERROR",
+          "999-MUEVE-FECHAS"
+        ]
+      }
+    }
+  ],
+  "blockers": [
+    {
+      "severity": "critical",
+      "type": "PARAGRAPH_EXTRACTION_COVERAGE_GAP",
+      "evidence": {
+        "program": "CIB128D",
+        "missingPerformTargets": [
+          "970-SQL-ERROR",
+          "999-MUEVE-FECHAS"
+        ]
+      }
+    }
+  ],
+  "qualityGateResult": "fail"
+}
