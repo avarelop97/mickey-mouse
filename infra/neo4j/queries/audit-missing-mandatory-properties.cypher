@@ -19,166 +19,62 @@
 // - OutputFile: name (clave natural)
 // ============================================================================
 
-// 1. PROGRAM NODES
+// Regla de valor faltante:
+// - NULL
+// - string vacío o solo espacios
+// - lista vacía ([])
 WITH [
   'ingestion', 'layer', 'nodeType', 'viewTag',
   'reviewStatus', 'reviewRequired', 'reviewSource'
-] AS mandatoryCommon
-MATCH (n:Program)
-WITH n, mandatoryCommon + ['name'] AS mandatoryFields
-WITH n, mandatoryFields,
-     [f IN mandatoryFields WHERE CASE
-       WHEN n[f] IS NULL THEN true
-  WHEN trim(toString(n[f])) = '' THEN true
-       ELSE false
-     END] AS missingFields
+] AS mandatoryCommon,
+[
+  {label: 'Program', keyFields: ['name']},
+  {label: 'Paragraph', keyFields: ['programName', 'name', 'summary']},
+  {label: 'Copybook', keyFields: ['name']},
+  {label: 'DBTable', keyFields: ['name']},
+  {label: 'ParamType', keyFields: ['name']},
+  {label: 'ExternalRoutine', keyFields: ['name']},
+  {label: 'OutputFile', keyFields: ['name']}
+] AS config
+UNWIND config AS cfg
+MATCH (n)
+WHERE cfg.label IN labels(n)
+WITH cfg, n, mandatoryCommon + cfg.keyFields AS mandatoryFields
+WITH cfg, n, mandatoryFields,
+     [f IN mandatoryFields WHERE
+       n[f] IS NULL
+       OR n[f] = []
+       OR trim(toString(n[f])) = ''
+     ] AS missingFields
 WHERE size(missingFields) > 0
-RETURN 
-  'Program' AS nodeType,
-  coalesce(n.name, '(sin name)') AS nodeName,
+RETURN
+  cfg.label AS nodeType,
+  CASE
+    WHEN cfg.label = 'Paragraph'
+      THEN coalesce(n.programName, '(sin programName)') + ':' + coalesce(n.name, '(sin name)')
+    ELSE coalesce(n.name, '(sin name)')
+  END AS nodeName,
   missingFields AS missingProperties,
   size(missingFields) AS missingCount,
   'MISSING_PROPERTIES' AS issueType
-
 UNION
-
-// 2. PARAGRAPH NODES
 WITH [
-  'ingestion', 'layer', 'nodeType', 'viewTag',
-  'reviewStatus', 'reviewRequired', 'reviewSource'
-] AS mandatoryCommon
+  'limpieza pendiente',
+  'nodo tecnico no funcional',
+  'requiere limpieza',
+  'placeholder',
+  'todo'
+] AS invalidSummaryTokens
 MATCH (n:Paragraph)
-WITH n, mandatoryCommon + ['programName', 'name'] AS mandatoryFields
-WITH n, mandatoryFields,
-     [f IN mandatoryFields WHERE CASE
-       WHEN n[f] IS NULL THEN true
-  WHEN trim(toString(n[f])) = '' THEN true
-       ELSE false
-     END] AS missingFields
-WHERE size(missingFields) > 0
-RETURN 
+WHERE n.summary IS NOT NULL
+  AND (
+    any(token IN invalidSummaryTokens WHERE toLower(toString(n.summary)) CONTAINS token)
+    OR toLower(trim(toString(n.summary))) =~ '^parrafo .+ del programa .+\\.$'
+  )
+RETURN
   'Paragraph' AS nodeType,
-  (coalesce(n.programName, '(sin programName)') + ':' + coalesce(n.name, '(sin name)')) AS nodeName,
-  missingFields AS missingProperties,
-  size(missingFields) AS missingCount,
-  'MISSING_PROPERTIES' AS issueType
-
-UNION
-
-// 3. COPYBOOK NODES
-WITH [
-  'ingestion', 'layer', 'nodeType', 'viewTag',
-  'reviewStatus', 'reviewRequired', 'reviewSource'
-] AS mandatoryCommon
-MATCH (n:Copybook)
-WITH n, mandatoryCommon + ['name'] AS mandatoryFields
-WITH n, mandatoryFields,
-     [f IN mandatoryFields WHERE CASE
-       WHEN n[f] IS NULL THEN true
-  WHEN trim(toString(n[f])) = '' THEN true
-       ELSE false
-     END] AS missingFields
-WHERE size(missingFields) > 0
-RETURN 
-  'Copybook' AS nodeType,
-  coalesce(n.name, '(sin name)') AS nodeName,
-  missingFields AS missingProperties,
-  size(missingFields) AS missingCount,
-  'MISSING_PROPERTIES' AS issueType
-
-UNION
-
-// 4. DBTABLE NODES
-WITH [
-  'ingestion', 'layer', 'nodeType', 'viewTag',
-  'reviewStatus', 'reviewRequired', 'reviewSource'
-] AS mandatoryCommon
-MATCH (n:DBTable)
-WITH n, mandatoryCommon + ['name'] AS mandatoryFields
-WITH n, mandatoryFields,
-     [f IN mandatoryFields WHERE CASE
-       WHEN n[f] IS NULL THEN true
-  WHEN trim(toString(n[f])) = '' THEN true
-       ELSE false
-     END] AS missingFields
-WHERE size(missingFields) > 0
-RETURN 
-  'DBTable' AS nodeType,
-  coalesce(n.name, '(sin name)') AS nodeName,
-  missingFields AS missingProperties,
-  size(missingFields) AS missingCount,
-  'MISSING_PROPERTIES' AS issueType
-
-UNION
-
-// 5. PARAMTYPE NODES
-WITH [
-  'ingestion', 'layer', 'nodeType', 'viewTag',
-  'reviewStatus', 'reviewRequired', 'reviewSource'
-] AS mandatoryCommon
-MATCH (n:ParamType)
-WITH n, mandatoryCommon + ['name'] AS mandatoryFields
-WITH n, mandatoryFields,
-     [f IN mandatoryFields WHERE CASE
-       WHEN n[f] IS NULL THEN true
-  WHEN trim(toString(n[f])) = '' THEN true
-       ELSE false
-     END] AS missingFields
-WHERE size(missingFields) > 0
-RETURN 
-  'ParamType' AS nodeType,
-  coalesce(n.name, '(sin name)') AS nodeName,
-  missingFields AS missingProperties,
-  size(missingFields) AS missingCount,
-  'MISSING_PROPERTIES' AS issueType
-
-UNION
-
-// 6. EXTERNALROUTINE NODES
-WITH [
-  'ingestion', 'layer', 'nodeType', 'viewTag',
-  'reviewStatus', 'reviewRequired', 'reviewSource'
-] AS mandatoryCommon
-MATCH (n:ExternalRoutine)
-WITH n, mandatoryCommon + ['name'] AS mandatoryFields
-WITH n, mandatoryFields,
-     [f IN mandatoryFields WHERE CASE
-       WHEN n[f] IS NULL THEN true
-  WHEN trim(toString(n[f])) = '' THEN true
-       ELSE false
-     END] AS missingFields
-WHERE size(missingFields) > 0
-RETURN 
-  'ExternalRoutine' AS nodeType,
-  coalesce(n.name, '(sin name)') AS nodeName,
-  missingFields AS missingProperties,
-  size(missingFields) AS missingCount,
-  'MISSING_PROPERTIES' AS issueType
-
-UNION
-
-// 7. OUTPUTFILE NODES
-WITH [
-  'ingestion', 'layer', 'nodeType', 'viewTag',
-  'reviewStatus', 'reviewRequired', 'reviewSource'
-] AS mandatoryCommon
-MATCH (n:OutputFile)
-WITH n, mandatoryCommon + ['name'] AS mandatoryFields
-WITH n, mandatoryFields,
-     [f IN mandatoryFields WHERE CASE
-       WHEN n[f] IS NULL THEN true
-  WHEN trim(toString(n[f])) = '' THEN true
-       ELSE false
-     END] AS missingFields
-WHERE size(missingFields) > 0
-RETURN 
-  'OutputFile' AS nodeType,
-  coalesce(n.name, '(sin name)') AS nodeName,
-  missingFields AS missingProperties,
-  size(missingFields) AS missingCount,
-  'MISSING_PROPERTIES' AS issueType
-
-// ============================================================================
-// Ordenar resultados por tipo de nodo y cantidad de propiedades faltantes
-// ============================================================================
+  coalesce(n.programName, '(sin programName)') + ':' + coalesce(n.name, '(sin name)') AS nodeName,
+  ['summary'] AS missingProperties,
+  1 AS missingCount,
+  'INVALID_SUMMARY_CONTENT' AS issueType
 ORDER BY nodeType ASC, missingCount DESC;

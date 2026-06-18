@@ -1,6 +1,6 @@
 ---
 name: cobol-evidence-extractor
-description: "Especialista en extraer evidencia COBOL de un programa objetivo, proponiendo nodos y relaciones verificables para el sistema COBOL->Neo4j."
+description: "Especialista en extraer evidencia COBOL de un programa objetivo, proponiendo nodos y relaciones verificables para COBOL->Neo4j con resumenes de parrafo semanticamente informativos."
 tools: [read, search, execute]
 argument-hint: "Indica PROGRAM_NAME, SOURCE_FILE y alcance de extraccion."
 user-invocable: true
@@ -82,6 +82,7 @@ If PROGRAM_NAME or SOURCE_FILE is missing, stop and request them.
 - Do not create `OutputFile` for CICS TSQ/TDQ patterns such as `WRITEQ TS`, `READQ TS`, or `DELETEQ TS`.
 - If a technical pattern exists but has no current ontological label, report it as an extraction observation and do not create graph entities for it.
 - Keep SQL includes/copybooks separated from physical tables even when names are lexically similar.
+- Every `Paragraph` proposal must include an informative `summary` (not generic template, not placeholder).
 
 ## Negative Rules
 
@@ -97,6 +98,10 @@ If PROGRAM_NAME or SOURCE_FILE is missing, stop and request them.
 - Every node proposal includes required key fields.
 - Any mismatch between physical lines and COBOL sequence numbers is reported as a quality finding.
 - Mandatory write-time metadata may be missing at this stage; that is not a blocker for `ExtractionProposal`.
+- `Paragraph.summary` quality is validated:
+	- non-empty
+	- not placeholder text (`limpieza pendiente`, `nodo tecnico no funcional`, etc.)
+	- not generic template (`Parrafo ... del programa ...`)
 
 ## Output
 

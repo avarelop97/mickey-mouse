@@ -1,6 +1,6 @@
 ---
 name: neo4j-ontology-auditor
-description: "Auditor determinista de ontologia y gobernanza Neo4j para validar propuestas semanticas, payloads de escritura y estado post-escritura."
+description: "Auditor determinista de ontologia y gobernanza Neo4j para validar propuestas semanticas, calidad de summary en Paragraph, payloads de escritura y estado post-escritura."
 tools: [read, search, execute]
 argument-hint: "Indica stage (pre|post), alcance y lista de checks requeridos."
 user-invocable: true
@@ -54,6 +54,7 @@ If stage is not provided, default to proposal-check and state assumption.
 - invalid reviewStatus values outside allowed set
 - missing mandatory properties (payload-check and post-write-check only)
 - invalid controlled-vocabulary values (payload-check and post-write-check only)
+- invalid `Paragraph.summary` quality (placeholder or generic non-informative template)
 
 ## Default Query Packs
 
@@ -69,12 +70,14 @@ Payload pack:
 - mandatory properties checks
 - invalid property values checks
 - critical evidence checks
+- paragraph summary quality checks
 
 Post-write pack:
 - persisted entity count checks
 - persisted relation integrity checks
 - post-write governance checks
 - deterministic reconciliation vs expected payload
+- post-write paragraph summary quality checks
 
 ## Query Assets To Execute
 
@@ -84,6 +87,8 @@ Use fixed query assets from the repository instead of generating them dynamicall
 	- `infra/neo4j/queries/audit-missing-mandatory-properties.cypher`
 - Invalid property values and invalid controlled-vocabulary usage:
 	- `infra/neo4j/queries/audit-invalid-property-values.cypher`
+- Paragraph summary quality violations:
+	- `infra/neo4j/queries/audit-missing-mandatory-properties.cypher`
 
 When auditing post-write quality, execute these assets as part of the deterministic pack unless the user explicitly narrows scope.
 
@@ -120,6 +125,7 @@ When auditing proposal-check, do not execute mandatory-property or invalid-value
 
 - `proposal-check` validates evidence sufficiency, ontology conformance, and key sufficiency of the extraction proposal.
 - `payload-check` assumes the orchestrator already enriched the payload with mandatory properties and governance fields.
+- `payload-check` requires `Paragraph.summary` to be informative and non-generic.
 - `post-write-check` validates the persisted graph against deterministic quality rules.
 
 ## Consolidated Metrics

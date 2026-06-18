@@ -1,6 +1,6 @@
 ---
 name: cobol-neo4j-orchestrator
-description: "Orquestador COBOL->Neo4j para discovery, auditoria y precheck con evidencia verificable, validacion ontologica y control de riesgos; coordina especialistas y evita escrituras peligrosas."
+description: "Orquestador COBOL->Neo4j para discovery, auditoria y precheck con evidencia verificable, validacion ontologica, calidad semantica de summaries y control de riesgos; coordina especialistas y evita escrituras peligrosas."
 tools: [read, search, execute, todo]
 argument-hint: "Indica objetivo, alcance (programa/rango), modo (discovery|audit|precheck), si requiere delegacion a especialistas y salida esperada."
 user-invocable: true
@@ -127,11 +127,13 @@ Steps:
 - payload contains mandatory governance and transversal fields
 - payload preserves evidence extracted in the previous stage
 - no unresolvable collisions remain after normalization
+- every `Paragraph` has informative `summary` content (not placeholder, not generic auto-template)
 
 3) After payload audit
 - audit returns deterministic results
 - no blocking ontology violations
 - mandatory property and key checks pass on `WritePayload`
+- summary quality checks pass for `Paragraph`
 
 4) Before write authorization
 - explicit authorization condition satisfied

@@ -53,6 +53,7 @@ If there is a conflict, follow this order.
 4. Enforce governance and evidence:
 - Include required fields in checks: `ingestion`, `layer`, `nodeType`, `viewTag`, `reviewStatus`, `reviewRequired`, `reviewSource`
 - For semantic relations (`USES_COPYBOOK`, `READS_DATA`, `UPDATES_DATA`, `DERIVES_FROM`, `DEPENDS_ON_EXTERNAL`), require `evidenceFile` and non-empty `evidenceLines`
+- For `Paragraph` quality checks, treat `summary` as required and reject generic placeholder text.
 
 5. Run the embedded pre-delivery checklist in this file.
 
@@ -76,6 +77,7 @@ Prefer these columns unless user requests otherwise:
 - Do not generate `MERGE (p:Paragraph {name: ...})` without `programName`.
 - Do not mark auto-generated data as reviewed by default.
 - Do not omit evidence fields on semantic relationships.
+- Do not accept generic `Paragraph.summary` values such as `Parrafo ... del programa ...` as valid semantic documentation.
 
 ## Quick Templates
 
@@ -152,12 +154,19 @@ ORDER BY source, name
   - evidenceFile non-empty
   - evidenceLines non-empty array
 
-6) Determinism and readability
+6) Summary semantic quality
+- `Paragraph.summary` must be non-empty and informative.
+- Treat these as invalid summary content:
+  - placeholders (`limpieza pendiente`, `nodo tecnico no funcional`, `requiere limpieza`, `placeholder`, `todo`)
+  - generic auto-template (`Parrafo <X> del programa <Y>.`)
+- Prefer summary text that expresses function (validation, query, persistence, orchestration, closure) and optional dependency context.
+
+7) Determinism and readability
 - Output columns are stable and named.
 - Query has deterministic ORDER BY when result order matters.
 - Query includes a short purpose comment.
 
-7) Dry validation
+8) Dry validation
 - Re-read query for WITH/UNION/CALL scope transitions.
 - Confirm key fields used in MERGE are never null.
 - Confirm syntax aligns with repository Neo4j usage patterns.
