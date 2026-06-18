@@ -198,6 +198,34 @@ docker compose -f infra/neo4j/docker-compose.yml down -v
 docker compose -f infra/neo4j/docker-compose.yml up -d
 ```
 
+## Exportar el estado actual a Git
+
+Para guardar en el repositorio el contenido logico que hoy vive dentro del contenedor Neo4j, usa el exportador incluido en `infra/neo4j/scripts/`.
+
+```bash
+python3 infra/neo4j/scripts/export_live_graph.py
+```
+
+El comando genera un snapshot Cypher reproducible en `infra/neo4j/snapshots/` con:
+
+- nodos y propiedades actuales
+- relaciones y propiedades actuales
+- metadatos de generacion en comentarios
+
+Esto versiona el grafo logico, no el volumen Docker bruto.
+
+## Restaurar el snapshot
+
+Si necesitas reconstruir el grafo desde Git en un contenedor vacio:
+
+```bash
+infra/neo4j/scripts/restore_from_snapshot.sh infra/neo4j/snapshots/<snapshot>.cypher
+```
+
+Si no pasas ruta, el script usa el snapshot mas reciente de `infra/neo4j/snapshots/`.
+
+Antes de restaurar, el script borra el contenido actual del database Neo4j del contenedor local y luego carga el snapshot con `cypher-shell`.
+
 ## Alternativa sin Compose (docker run)
 
 ```bash
