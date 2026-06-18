@@ -226,6 +226,25 @@ Si no pasas ruta, el script usa el snapshot mas reciente de `infra/neo4j/snapsho
 
 Antes de restaurar, el script borra el contenido actual del database Neo4j del contenedor local y luego carga el snapshot con `cypher-shell`.
 
+## Descubrir nodos faltantes en el grafo
+
+Para ampliar analisis a nodos que todavia no existen en Neo4j, ejecuta:
+
+```bash
+python3 infra/neo4j/scripts/discover_missing_nodes.py
+```
+
+El script compara:
+
+- `src/*.cbl` vs nodos `Program`
+- `cpy/*.cpy` vs nodos `Copybook`
+- sentencias `COPY` detectadas en COBOL (normalizando formato fijo 1-6 y 73-80) vs relaciones `INCLUDES_COPYBOOK`
+
+Salida:
+
+- reporte JSON en `infra/neo4j/reports/discovery-missing-nodes-*.json`
+- resumen por consola con conteos de backlog pendiente
+
 ## Alternativa sin Compose (docker run)
 
 ```bash
