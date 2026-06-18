@@ -1,0 +1,170 @@
+{
+  "stage": "discovery-extraction",
+  "runId": "e2e-20260618T205849Z-zm9rus01",
+  "programs": [
+    "ZM9RUS01"
+  ],
+  "extractions": [
+    {
+      "program": "ZM9RUS01",
+      "sourceFile": "src/ZM9RUS01.cbl",
+      "procedureLine": 330,
+      "copybooks": [
+        {
+          "name": "AJW0ALRT",
+          "evidenceLines": [
+            292
+          ]
+        },
+        {
+          "name": "AJWALRT1",
+          "evidenceLines": [
+            326
+          ]
+        },
+        {
+          "name": "KZDEC101",
+          "evidenceLines": [
+            295
+          ]
+        },
+        {
+          "name": "SQLCA",
+          "evidenceLines": [
+            272
+          ]
+        },
+        {
+          "name": "ZORDENES",
+          "evidenceLines": [
+            284
+          ]
+        },
+        {
+          "name": "ZPARAM",
+          "evidenceLines": [
+            280
+          ]
+        },
+        {
+          "name": "ZUSUARIO",
+          "evidenceLines": [
+            288
+          ]
+        },
+        {
+          "name": "ZZMDT800",
+          "evidenceLines": [
+            276
+          ]
+        }
+      ],
+      "calls": [],
+      "readTables": [
+        {
+          "name": "ORDENES",
+          "evidenceLines": [
+            599,
+            600,
+            601,
+            602,
+            603,
+            604,
+            605,
+            606
+          ]
+        },
+        {
+          "name": "PARAM",
+          "evidenceLines": [
+            375,
+            376,
+            377,
+            378,
+            379,
+            380,
+            381
+          ]
+        }
+      ],
+      "updateTables": [
+        {
+          "name": "PARAM",
+          "evidenceLines": [
+            687,
+            688,
+            689,
+            690,
+            691,
+            692,
+            693,
+            694,
+            695
+          ]
+        },
+        {
+          "name": "ZMDT800",
+          "evidenceLines": [
+            634,
+            635,
+            636,
+            637,
+            638,
+            639,
+            640,
+            641,
+            642,
+            643,
+            644,
+            645,
+            646,
+            647,
+            648,
+            649,
+            650,
+            651,
+            652,
+            653,
+            654,
+            655,
+            656,
+            657,
+            658,
+            659,
+            660
+          ]
+        }
+      ],
+      "paragraphs": [
+        {
+          "name": "9000-ESCRIBE-QUEUE",
+          "evidenceLines": [
+            734
+          ],
+          "executionOrder": 100,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM9RUS01, encadenando validaciones y transformaciones del proceso principal."
+        }
+      ],
+      "paragraphCalls": [],
+      "paragraphCopybooks": [],
+      "coverage": {
+        "sequenceColumnsNormalized": true,
+        "performTargetCount": 10,
+        "paragraphCount": 1,
+        "missingPerformTargets": [
+          "100000-INICIO-PROGRAMA",
+          "100100-VALIDA-PARAM",
+          "200000-PROCESO-PROGRAMA",
+          "200100-ARMA-EMAIL-PROMOTOR",
+          "200100-CONSULTA-PROMOTOR",
+          "200200-INSERTA-ALERTA-ZMDT800",
+          "200300-INSERTA-PARAM",
+          "300000-FINAL-PROGRAMA",
+          "9600-VALIDA-SQL"
+        ],
+        "resolvedPerformTargetsViaCopybook": {}
+      }
+    }
+  ]
+}

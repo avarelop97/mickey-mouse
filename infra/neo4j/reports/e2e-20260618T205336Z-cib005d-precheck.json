@@ -1,0 +1,37 @@
+{
+  "findings": [
+    {
+      "severity": "critical",
+      "type": "PARAGRAPH_EXTRACTION_COVERAGE_GAP",
+      "evidence": {
+        "program": "CIB005D",
+        "missingPerformTargets": [
+          "CALCLA-SALDO-COMPRAS",
+          "CALCLA-SALDO-VENTAS",
+          "GENERA-REPORTE",
+          "INCLZA-ACMLDOS",
+          "PROCESA-REPORTE",
+          "PROLGO-PROCESO"
+        ]
+      }
+    }
+  ],
+  "blockers": [
+    {
+      "severity": "critical",
+      "type": "PARAGRAPH_EXTRACTION_COVERAGE_GAP",
+      "evidence": {
+        "program": "CIB005D",
+        "missingPerformTargets": [
+          "CALCLA-SALDO-COMPRAS",
+          "CALCLA-SALDO-VENTAS",
+          "GENERA-REPORTE",
+          "INCLZA-ACMLDOS",
+          "PROCESA-REPORTE",
+          "PROLGO-PROCESO"
+        ]
+      }
+    }
+  ],
+  "qualityGateResult": "fail"
+}

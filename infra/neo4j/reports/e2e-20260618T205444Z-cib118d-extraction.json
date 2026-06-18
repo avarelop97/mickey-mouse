@@ -1,0 +1,454 @@
+{
+  "stage": "discovery-extraction",
+  "runId": "e2e-20260618T205444Z-cib118d",
+  "programs": [
+    "CIB118D"
+  ],
+  "extractions": [
+    {
+      "program": "CIB118D",
+      "sourceFile": "src/CIB118D.cbl",
+      "procedureLine": 242,
+      "copybooks": [
+        {
+          "name": "DOPECORI",
+          "evidenceLines": [
+            239
+          ]
+        },
+        {
+          "name": "SI2CE028",
+          "evidenceLines": [
+            621
+          ]
+        },
+        {
+          "name": "SI2CM026",
+          "evidenceLines": [
+            654
+          ]
+        },
+        {
+          "name": "SI2FH027",
+          "evidenceLines": [
+            99
+          ]
+        },
+        {
+          "name": "SI2R1025",
+          "evidenceLines": [
+            141
+          ]
+        },
+        {
+          "name": "SIC004",
+          "evidenceLines": [
+            605
+          ]
+        },
+        {
+          "name": "SIC005",
+          "evidenceLines": [
+            113
+          ]
+        },
+        {
+          "name": "SICAM029",
+          "evidenceLines": [
+            134
+          ]
+        },
+        {
+          "name": "SICVS011",
+          "evidenceLines": [
+            127
+          ]
+        },
+        {
+          "name": "SIXAB001",
+          "evidenceLines": [
+            120
+          ]
+        },
+        {
+          "name": "SIXAB002",
+          "evidenceLines": [
+            614
+          ]
+        },
+        {
+          "name": "SQLCA",
+          "evidenceLines": [
+            106
+          ]
+        }
+      ],
+      "calls": [
+        {
+          "name": "ADR003",
+          "evidenceLines": [
+            640
+          ]
+        },
+        {
+          "name": "ADR009",
+          "evidenceLines": [
+            642,
+            646
+          ]
+        },
+        {
+          "name": "MDB403O",
+          "evidenceLines": [
+            645
+          ]
+        },
+        {
+          "name": "VTB415O",
+          "evidenceLines": [
+            252
+          ]
+        }
+      ],
+      "readTables": [
+        {
+          "name": "OPECORI",
+          "evidenceLines": [
+            418,
+            419,
+            420,
+            421,
+            422,
+            423,
+            424,
+            425,
+            426,
+            427,
+            428,
+            429,
+            430,
+            431,
+            432,
+            433,
+            434,
+            435,
+            436,
+            455,
+            456,
+            457,
+            458,
+            459,
+            460,
+            461,
+            462,
+            463,
+            464,
+            465,
+            466,
+            467,
+            468,
+            469,
+            470,
+            471,
+            472,
+            473
+          ]
+        }
+      ],
+      "updateTables": [],
+      "paragraphs": [
+        {
+          "name": "000-CONTROL",
+          "evidenceLines": [
+            246
+          ],
+          "executionOrder": 100,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB118D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "010-INICIO",
+          "evidenceLines": [
+            266
+          ],
+          "executionOrder": 200,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de CIB118D, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "015-INICIO",
+          "evidenceLines": [
+            294
+          ],
+          "executionOrder": 300,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de CIB118D, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "020-INICIALIZA-WAREAS",
+          "evidenceLines": [
+            313
+          ],
+          "executionOrder": 400,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de CIB118D, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "030-PROCESA-INFORMACION",
+          "evidenceLines": [
+            326
+          ],
+          "executionOrder": 500,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB118D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "040-DECIDE-IOPERA",
+          "evidenceLines": [
+            341
+          ],
+          "executionOrder": 600,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB118D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "050-GENERA-REGISTRO-IMPRESION",
+          "evidenceLines": [
+            363
+          ],
+          "executionOrder": 700,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB118D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "060-PROCESA-CORTE",
+          "evidenceLines": [
+            405
+          ],
+          "executionOrder": 800,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB118D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "510-DEFINE-CURSOR-VENCIM-CASA",
+          "evidenceLines": [
+            417
+          ],
+          "executionOrder": 900,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de CIB118D, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "515-DEFINE-CURSOR-VENCIM-BANCO",
+          "evidenceLines": [
+            454
+          ],
+          "executionOrder": 1000,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de CIB118D, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "520-LEE-VENCIMIENTOS-CASA",
+          "evidenceLines": [
+            490
+          ],
+          "executionOrder": 1100,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por CIB118D y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "530-LEE-VENCIMIENTOS-BANCO",
+          "evidenceLines": [
+            527
+          ],
+          "executionOrder": 1200,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por CIB118D y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "700-FIN",
+          "evidenceLines": [
+            563
+          ],
+          "executionOrder": 1300,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de CIB118D, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "705-ENCABEZADO",
+          "evidenceLines": [
+            573
+          ],
+          "executionOrder": 1400,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB118D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "720-REP-CONCEPTOS",
+          "evidenceLines": [
+            594
+          ],
+          "executionOrder": 1500,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB118D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "980-ABORTA",
+          "evidenceLines": [
+            611
+          ],
+          "executionOrder": 1600,
+          "executionPhase": "PROCESSING",
+          "summary": "Gestiona contingencias en CIB118D, concentrando el manejo de error y salida controlada."
+        },
+        {
+          "name": "999-CONST-ENCA-BANCO",
+          "evidenceLines": [
+            627
+          ],
+          "executionOrder": 1700,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB118D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "999-0100-CONTRUYE",
+          "evidenceLines": [
+            628
+          ],
+          "executionOrder": 1800,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB118D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "999-9900-FIN",
+          "evidenceLines": [
+            648
+          ],
+          "executionOrder": 1900,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de CIB118D, consolidando trazas y terminacion funcional del proceso."
+        }
+      ],
+      "paragraphCalls": [
+        {
+          "paragraph": "000-CONTROL",
+          "routine": "VTB415O",
+          "evidenceLines": [
+            252
+          ]
+        },
+        {
+          "paragraph": "999-0100-CONTRUYE",
+          "routine": "ADR003",
+          "evidenceLines": [
+            640
+          ]
+        },
+        {
+          "paragraph": "999-0100-CONTRUYE",
+          "routine": "ADR009",
+          "evidenceLines": [
+            642,
+            646
+          ]
+        },
+        {
+          "paragraph": "999-0100-CONTRUYE",
+          "routine": "MDB403O",
+          "evidenceLines": [
+            645
+          ]
+        }
+      ],
+      "paragraphCopybooks": [
+        {
+          "paragraph": "000-CONTROL",
+          "copybook": "SI2CM026",
+          "evidenceLines": [
+            247
+          ]
+        },
+        {
+          "paragraph": "015-INICIO",
+          "copybook": "SI2CE028",
+          "evidenceLines": [
+            298
+          ]
+        },
+        {
+          "paragraph": "510-DEFINE-CURSOR-VENCIM-CASA",
+          "copybook": "SIC004",
+          "evidenceLines": [
+            445
+          ]
+        },
+        {
+          "paragraph": "515-DEFINE-CURSOR-VENCIM-BANCO",
+          "copybook": "SIC004",
+          "evidenceLines": [
+            482
+          ]
+        },
+        {
+          "paragraph": "520-LEE-VENCIMIENTOS-CASA",
+          "copybook": "SIC004",
+          "evidenceLines": [
+            520
+          ]
+        },
+        {
+          "paragraph": "530-LEE-VENCIMIENTOS-BANCO",
+          "copybook": "SIC004",
+          "evidenceLines": [
+            557
+          ]
+        },
+        {
+          "paragraph": "720-REP-CONCEPTOS",
+          "copybook": "SIC004",
+          "evidenceLines": [
+            605
+          ]
+        },
+        {
+          "paragraph": "980-ABORTA",
+          "copybook": "SI2CE028",
+          "evidenceLines": [
+            621
+          ]
+        },
+        {
+          "paragraph": "980-ABORTA",
+          "copybook": "SIXAB002",
+          "evidenceLines": [
+            614
+          ]
+        },
+        {
+          "paragraph": "999-9900-FIN",
+          "copybook": "SI2CM026",
+          "evidenceLines": [
+            654
+          ]
+        }
+      ],
+      "coverage": {
+        "sequenceColumnsNormalized": true,
+        "performTargetCount": 18,
+        "paragraphCount": 19,
+        "missingPerformTargets": [],
+        "resolvedPerformTargetsViaCopybook": {
+          "970-SQL-ERROR": [
+            "SIC004"
+          ],
+          "999-CONST-ENCA": [
+            "SI2CE028"
+          ],
+          "999-MUEVE-FECHAS": [
+            "SI2CM026"
+          ]
+        }
+      }
+    }
+  ]
+}

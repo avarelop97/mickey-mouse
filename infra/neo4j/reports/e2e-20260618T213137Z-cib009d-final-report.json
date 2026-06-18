@@ -1,0 +1,51 @@
+{
+  "runId": "e2e-20260618T213137Z-cib009d",
+  "programs": [
+    "CIB009D"
+  ],
+  "artifacts": {
+    "extraction": "infra/neo4j/reports/e2e-20260618T213137Z-cib009d-extraction.json",
+    "writePayload": "infra/neo4j/reports/e2e-20260618T213137Z-cib009d-writepayload.json",
+    "precheck": "infra/neo4j/reports/e2e-20260618T213137Z-cib009d-precheck.json",
+    "cypher": "infra/neo4j/queries/ingest-e2e-20260618T213137Z-cib009d.cypher"
+  },
+  "precheck": {
+    "findings": [
+      {
+        "severity": "critical",
+        "type": "PARAGRAPH_EXTRACTION_COVERAGE_GAP",
+        "evidence": {
+          "program": "CIB009D",
+          "missingPerformTargets": [
+            "PROCESA-REPORTE",
+            "PROCESA-SALDO"
+          ]
+        }
+      }
+    ],
+    "blockers": [
+      {
+        "severity": "critical",
+        "type": "PARAGRAPH_EXTRACTION_COVERAGE_GAP",
+        "evidence": {
+          "program": "CIB009D",
+          "missingPerformTargets": [
+            "PROCESA-REPORTE",
+            "PROCESA-SALDO"
+          ]
+        }
+      }
+    ],
+    "qualityGateResult": "fail"
+  },
+  "commitExecuted": false,
+  "inventory": {},
+  "postAudit": {},
+  "postAuditAfterRemediation": {},
+  "remediationApplied": [],
+  "integralBacklog": {
+    "invalidLabelsGlobal": 0,
+    "criticalRelWithoutEvidenceGlobal": 50
+  },
+  "decision": "BLOCKED"
+}

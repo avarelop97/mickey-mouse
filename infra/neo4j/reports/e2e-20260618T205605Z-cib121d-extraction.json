@@ -1,0 +1,565 @@
+{
+  "stage": "discovery-extraction",
+  "runId": "e2e-20260618T205605Z-cib121d",
+  "programs": [
+    "CIB121D"
+  ],
+  "extractions": [
+    {
+      "program": "CIB121D",
+      "sourceFile": "src/CIB121D.cbl",
+      "procedureLine": 188,
+      "copybooks": [
+        {
+          "name": "DDEFOPER",
+          "evidenceLines": [
+            184
+          ]
+        },
+        {
+          "name": "DOPECORI",
+          "evidenceLines": [
+            179
+          ]
+        },
+        {
+          "name": "SI2CE028",
+          "evidenceLines": [
+            561
+          ]
+        },
+        {
+          "name": "SI2CM026",
+          "evidenceLines": [
+            595
+          ]
+        },
+        {
+          "name": "SI2FH027",
+          "evidenceLines": [
+            75
+          ]
+        },
+        {
+          "name": "SI2R1025",
+          "evidenceLines": [
+            125
+          ]
+        },
+        {
+          "name": "SIC000",
+          "evidenceLines": [
+            89
+          ]
+        },
+        {
+          "name": "SIC004",
+          "evidenceLines": [
+            545
+          ]
+        },
+        {
+          "name": "SIC005",
+          "evidenceLines": [
+            82
+          ]
+        },
+        {
+          "name": "SICAM029",
+          "evidenceLines": [
+            118
+          ]
+        },
+        {
+          "name": "SICPT104",
+          "evidenceLines": [
+            111
+          ]
+        },
+        {
+          "name": "SICVS011",
+          "evidenceLines": [
+            103
+          ]
+        },
+        {
+          "name": "SIXAB001",
+          "evidenceLines": [
+            96
+          ]
+        },
+        {
+          "name": "SIXAB002",
+          "evidenceLines": [
+            554
+          ]
+        },
+        {
+          "name": "SQLCA",
+          "evidenceLines": [
+            68
+          ]
+        }
+      ],
+      "calls": [
+        {
+          "name": "ADR003",
+          "evidenceLines": [
+            580
+          ]
+        },
+        {
+          "name": "ADR009",
+          "evidenceLines": [
+            582,
+            586
+          ]
+        },
+        {
+          "name": "MDB403O",
+          "evidenceLines": [
+            585
+          ]
+        },
+        {
+          "name": "VDB080O",
+          "evidenceLines": [
+            233
+          ]
+        },
+        {
+          "name": "VTB415O",
+          "evidenceLines": [
+            200
+          ]
+        }
+      ],
+      "readTables": [
+        {
+          "name": "DEFOPER",
+          "evidenceLines": [
+            274,
+            275,
+            276,
+            277,
+            278,
+            279,
+            280
+          ]
+        },
+        {
+          "name": "OPECORI",
+          "evidenceLines": [
+            298,
+            299,
+            300,
+            301,
+            302,
+            303,
+            304,
+            305,
+            306,
+            307,
+            330,
+            331,
+            332,
+            333,
+            334,
+            335,
+            336,
+            337,
+            338,
+            339,
+            366,
+            367,
+            368,
+            369,
+            370,
+            371,
+            372,
+            373,
+            374,
+            375
+          ]
+        }
+      ],
+      "updateTables": [
+        {
+          "name": "OPECORI",
+          "evidenceLines": [
+            404,
+            405,
+            406,
+            407,
+            408,
+            409,
+            410,
+            411,
+            412,
+            425,
+            426,
+            427,
+            428,
+            429,
+            430,
+            431,
+            432,
+            433,
+            434,
+            435,
+            436,
+            437,
+            438,
+            439,
+            440,
+            441,
+            442,
+            443,
+            444,
+            445,
+            446,
+            447,
+            448,
+            449,
+            450,
+            451,
+            452,
+            453,
+            454,
+            455,
+            456,
+            457,
+            458,
+            459,
+            460,
+            461,
+            462,
+            463,
+            464,
+            465,
+            466,
+            467,
+            468,
+            469,
+            470,
+            471,
+            472,
+            473,
+            474,
+            475,
+            476,
+            477,
+            478,
+            479,
+            480
+          ]
+        }
+      ],
+      "paragraphs": [
+        {
+          "name": "000-CONTROL",
+          "evidenceLines": [
+            192
+          ],
+          "executionOrder": 100,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB121D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "010-PROCESO",
+          "evidenceLines": [
+            207
+          ],
+          "executionOrder": 200,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB121D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "015-INICIO",
+          "evidenceLines": [
+            218
+          ],
+          "executionOrder": 300,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de CIB121D, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "050-BUSCA-IREF",
+          "evidenceLines": [
+            230
+          ],
+          "executionOrder": 400,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por CIB121D y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "100-INSERTA-PLUS-MINUS",
+          "evidenceLines": [
+            239
+          ],
+          "executionOrder": 500,
+          "executionPhase": "PROCESSING",
+          "summary": "Persiste actualizaciones de negocio en CIB121D, aplicando reglas de escritura y control de estado."
+        },
+        {
+          "name": "500-BUSCA-EOPERA",
+          "evidenceLines": [
+            273
+          ],
+          "executionOrder": 600,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por CIB121D y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "551-BUSCA-PLUS-MINUS",
+          "evidenceLines": [
+            297
+          ],
+          "executionOrder": 700,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por CIB121D y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "552-BUSCA-PLUS-MINUS",
+          "evidenceLines": [
+            329
+          ],
+          "executionOrder": 800,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por CIB121D y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "553-BUSCA-PLUS-MINUS",
+          "evidenceLines": [
+            365
+          ],
+          "executionOrder": 900,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por CIB121D y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "600-ACTUALIZA-OPECORI",
+          "evidenceLines": [
+            403
+          ],
+          "executionOrder": 1000,
+          "executionPhase": "PROCESSING",
+          "summary": "Persiste actualizaciones de negocio en CIB121D, aplicando reglas de escritura y control de estado."
+        },
+        {
+          "name": "630-INSERTA-EN-OPECORI",
+          "evidenceLines": [
+            424
+          ],
+          "executionOrder": 1100,
+          "executionPhase": "PROCESSING",
+          "summary": "Persiste actualizaciones de negocio en CIB121D, aplicando reglas de escritura y control de estado."
+        },
+        {
+          "name": "700-FIN",
+          "evidenceLines": [
+            499
+          ],
+          "executionOrder": 1200,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de CIB121D, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "705-ENCABEZADO",
+          "evidenceLines": [
+            509
+          ],
+          "executionOrder": 1300,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB121D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "720-REP-CONCEPTOS",
+          "evidenceLines": [
+            526
+          ],
+          "executionOrder": 1400,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB121D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "980-ABORTA",
+          "evidenceLines": [
+            551
+          ],
+          "executionOrder": 1500,
+          "executionPhase": "PROCESSING",
+          "summary": "Gestiona contingencias en CIB121D, concentrando el manejo de error y salida controlada."
+        },
+        {
+          "name": "999-CONST-ENCA-BANCO",
+          "evidenceLines": [
+            567
+          ],
+          "executionOrder": 1600,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB121D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "999-0100-CONSTRUYE",
+          "evidenceLines": [
+            568
+          ],
+          "executionOrder": 1700,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB121D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "999-9900-FIN",
+          "evidenceLines": [
+            588
+          ],
+          "executionOrder": 1800,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de CIB121D, consolidando trazas y terminacion funcional del proceso."
+        }
+      ],
+      "paragraphCalls": [
+        {
+          "paragraph": "000-CONTROL",
+          "routine": "VTB415O",
+          "evidenceLines": [
+            200
+          ]
+        },
+        {
+          "paragraph": "050-BUSCA-IREF",
+          "routine": "VDB080O",
+          "evidenceLines": [
+            233
+          ]
+        },
+        {
+          "paragraph": "999-0100-CONSTRUYE",
+          "routine": "ADR003",
+          "evidenceLines": [
+            580
+          ]
+        },
+        {
+          "paragraph": "999-0100-CONSTRUYE",
+          "routine": "ADR009",
+          "evidenceLines": [
+            582,
+            586
+          ]
+        },
+        {
+          "paragraph": "999-0100-CONSTRUYE",
+          "routine": "MDB403O",
+          "evidenceLines": [
+            585
+          ]
+        }
+      ],
+      "paragraphCopybooks": [
+        {
+          "paragraph": "000-CONTROL",
+          "copybook": "SI2CM026",
+          "evidenceLines": [
+            193
+          ]
+        },
+        {
+          "paragraph": "015-INICIO",
+          "copybook": "SI2CE028",
+          "evidenceLines": [
+            224
+          ]
+        },
+        {
+          "paragraph": "500-BUSCA-EOPERA",
+          "copybook": "SIC004",
+          "evidenceLines": [
+            291
+          ]
+        },
+        {
+          "paragraph": "551-BUSCA-PLUS-MINUS",
+          "copybook": "SIC004",
+          "evidenceLines": [
+            322
+          ]
+        },
+        {
+          "paragraph": "552-BUSCA-PLUS-MINUS",
+          "copybook": "SIC004",
+          "evidenceLines": [
+            355
+          ]
+        },
+        {
+          "paragraph": "553-BUSCA-PLUS-MINUS",
+          "copybook": "SIC004",
+          "evidenceLines": [
+            392
+          ]
+        },
+        {
+          "paragraph": "600-ACTUALIZA-OPECORI",
+          "copybook": "SIC004",
+          "evidenceLines": [
+            418
+          ]
+        },
+        {
+          "paragraph": "630-INSERTA-EN-OPECORI",
+          "copybook": "SIC004",
+          "evidenceLines": [
+            492
+          ]
+        },
+        {
+          "paragraph": "720-REP-CONCEPTOS",
+          "copybook": "SIC004",
+          "evidenceLines": [
+            545
+          ]
+        },
+        {
+          "paragraph": "980-ABORTA",
+          "copybook": "SI2CE028",
+          "evidenceLines": [
+            561
+          ]
+        },
+        {
+          "paragraph": "980-ABORTA",
+          "copybook": "SIXAB002",
+          "evidenceLines": [
+            554
+          ]
+        },
+        {
+          "paragraph": "999-9900-FIN",
+          "copybook": "SI2CM026",
+          "evidenceLines": [
+            595
+          ]
+        }
+      ],
+      "coverage": {
+        "sequenceColumnsNormalized": true,
+        "performTargetCount": 17,
+        "paragraphCount": 18,
+        "missingPerformTargets": [],
+        "resolvedPerformTargetsViaCopybook": {
+          "970-SQL-ERROR": [
+            "SIC004"
+          ],
+          "999-CONST-ENCA": [
+            "SI2CE028"
+          ],
+          "999-MUEVE-FECHAS": [
+            "SI2CM026"
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,2323 @@
+{
+  "runId": "e2e-20260618T205753Z-cib125d",
+  "nodes": [
+    {
+      "label": "Program",
+      "key": [
+        "CIB125D"
+      ],
+      "properties": {
+        "name": "CIB125D",
+        "ingestion": "auto",
+        "layer": "program",
+        "nodeType": "program",
+        "viewTag": "program",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB125D.cbl",
+        "runId": "e2e-20260618T205753Z-cib125d"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB125D",
+        "000-CONTROL"
+      ],
+      "properties": {
+        "programName": "CIB125D",
+        "name": "000-CONTROL",
+        "summary": "Orquesta una fase funcional de CIB125D, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 100,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB125D.cbl",
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          124
+        ],
+        "runId": "e2e-20260618T205753Z-cib125d"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB125D",
+        "010-PROCESA-INFORMACION"
+      ],
+      "properties": {
+        "programName": "CIB125D",
+        "name": "010-PROCESA-INFORMACION",
+        "summary": "Orquesta una fase funcional de CIB125D, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 200,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB125D.cbl",
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          147
+        ],
+        "runId": "e2e-20260618T205753Z-cib125d"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB125D",
+        "020-PROC-OPECORI-OPERA"
+      ],
+      "properties": {
+        "programName": "CIB125D",
+        "name": "020-PROC-OPECORI-OPERA",
+        "summary": "Orquesta una fase funcional de CIB125D, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 300,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB125D.cbl",
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          155
+        ],
+        "runId": "e2e-20260618T205753Z-cib125d"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB125D",
+        "500-FECHA-DIA-OPERACION"
+      ],
+      "properties": {
+        "programName": "CIB125D",
+        "name": "500-FECHA-DIA-OPERACION",
+        "summary": "Orquesta una fase funcional de CIB125D, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 400,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB125D.cbl",
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          211
+        ],
+        "runId": "e2e-20260618T205753Z-cib125d"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB125D",
+        "510-DEFINE-CURSOR-FUTUROS"
+      ],
+      "properties": {
+        "programName": "CIB125D",
+        "name": "510-DEFINE-CURSOR-FUTUROS",
+        "summary": "Cierra la ejecucion de CIB125D, consolidando trazas y terminacion funcional del proceso.",
+        "executionOrder": 500,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB125D.cbl",
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          238
+        ],
+        "runId": "e2e-20260618T205753Z-cib125d"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB125D",
+        "520-LEE-FUTUROS"
+      ],
+      "properties": {
+        "programName": "CIB125D",
+        "name": "520-LEE-FUTUROS",
+        "summary": "Ejecuta lectura/consulta de datos requeridos por CIB125D y deja resultados listos para el siguiente tramo.",
+        "executionOrder": 600,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB125D.cbl",
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          287
+        ],
+        "runId": "e2e-20260618T205753Z-cib125d"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB125D",
+        "530-BUSCA-OPER-TASA"
+      ],
+      "properties": {
+        "programName": "CIB125D",
+        "name": "530-BUSCA-OPER-TASA",
+        "summary": "Ejecuta lectura/consulta de datos requeridos por CIB125D y deja resultados listos para el siguiente tramo.",
+        "executionOrder": 700,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB125D.cbl",
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          338
+        ],
+        "runId": "e2e-20260618T205753Z-cib125d"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB125D",
+        "535-BUSCA-OPER-INPC"
+      ],
+      "properties": {
+        "programName": "CIB125D",
+        "name": "535-BUSCA-OPER-INPC",
+        "summary": "Ejecuta lectura/consulta de datos requeridos por CIB125D y deja resultados listos para el siguiente tramo.",
+        "executionOrder": 800,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB125D.cbl",
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          360
+        ],
+        "runId": "e2e-20260618T205753Z-cib125d"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB125D",
+        "540-INSERTA-OPERA"
+      ],
+      "properties": {
+        "programName": "CIB125D",
+        "name": "540-INSERTA-OPERA",
+        "summary": "Persiste actualizaciones de negocio en CIB125D, aplicando reglas de escritura y control de estado.",
+        "executionOrder": 900,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB125D.cbl",
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          382
+        ],
+        "runId": "e2e-20260618T205753Z-cib125d"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB125D",
+        "550-TASA-PARAMETRO"
+      ],
+      "properties": {
+        "programName": "CIB125D",
+        "name": "550-TASA-PARAMETRO",
+        "summary": "Orquesta una fase funcional de CIB125D, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 1000,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB125D.cbl",
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          443
+        ],
+        "runId": "e2e-20260618T205753Z-cib125d"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB125D",
+        "560-INPC-PARAMETRO"
+      ],
+      "properties": {
+        "programName": "CIB125D",
+        "name": "560-INPC-PARAMETRO",
+        "summary": "Orquesta una fase funcional de CIB125D, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 1100,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB125D.cbl",
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          473
+        ],
+        "runId": "e2e-20260618T205753Z-cib125d"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB125D",
+        "700-FIN"
+      ],
+      "properties": {
+        "programName": "CIB125D",
+        "name": "700-FIN",
+        "summary": "Cierra la ejecucion de CIB125D, consolidando trazas y terminacion funcional del proceso.",
+        "executionOrder": 1200,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB125D.cbl",
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          509
+        ],
+        "runId": "e2e-20260618T205753Z-cib125d"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB125D",
+        "980-ABORTA"
+      ],
+      "properties": {
+        "programName": "CIB125D",
+        "name": "980-ABORTA",
+        "summary": "Gestiona contingencias en CIB125D, concentrando el manejo de error y salida controlada.",
+        "executionOrder": 1300,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB125D.cbl",
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          525
+        ],
+        "runId": "e2e-20260618T205753Z-cib125d"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "DCUENTA"
+      ],
+      "properties": {
+        "name": "DCUENTA",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB125D.cbl",
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          116
+        ],
+        "runId": "e2e-20260618T205753Z-cib125d"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "DOPECORI"
+      ],
+      "properties": {
+        "name": "DOPECORI",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB125D.cbl",
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          104
+        ],
+        "runId": "e2e-20260618T205753Z-cib125d"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "DOPERA"
+      ],
+      "properties": {
+        "name": "DOPERA",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB125D.cbl",
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          112
+        ],
+        "runId": "e2e-20260618T205753Z-cib125d"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "DPARAM"
+      ],
+      "properties": {
+        "name": "DPARAM",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB125D.cbl",
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          108
+        ],
+        "runId": "e2e-20260618T205753Z-cib125d"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "SIC004"
+      ],
+      "properties": {
+        "name": "SIC004",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB125D.cbl",
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          519
+        ],
+        "runId": "e2e-20260618T205753Z-cib125d"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "SIC005"
+      ],
+      "properties": {
+        "name": "SIC005",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB125D.cbl",
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          76
+        ],
+        "runId": "e2e-20260618T205753Z-cib125d"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "SICAM029"
+      ],
+      "properties": {
+        "name": "SICAM029",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB125D.cbl",
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          97
+        ],
+        "runId": "e2e-20260618T205753Z-cib125d"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "SICCM026"
+      ],
+      "properties": {
+        "name": "SICCM026",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB125D.cbl",
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          535
+        ],
+        "runId": "e2e-20260618T205753Z-cib125d"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "SICFH027"
+      ],
+      "properties": {
+        "name": "SICFH027",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB125D.cbl",
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          62
+        ],
+        "runId": "e2e-20260618T205753Z-cib125d"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "SICVS011"
+      ],
+      "properties": {
+        "name": "SICVS011",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB125D.cbl",
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          90
+        ],
+        "runId": "e2e-20260618T205753Z-cib125d"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "SIXAB001"
+      ],
+      "properties": {
+        "name": "SIXAB001",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB125D.cbl",
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          83
+        ],
+        "runId": "e2e-20260618T205753Z-cib125d"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "SIXAB002"
+      ],
+      "properties": {
+        "name": "SIXAB002",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB125D.cbl",
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          528
+        ],
+        "runId": "e2e-20260618T205753Z-cib125d"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "SQLCA"
+      ],
+      "properties": {
+        "name": "SQLCA",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB125D.cbl",
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          69
+        ],
+        "runId": "e2e-20260618T205753Z-cib125d"
+      }
+    },
+    {
+      "label": "DBTable",
+      "key": [
+        "OPECORI"
+      ],
+      "properties": {
+        "name": "OPECORI",
+        "ingestion": "auto",
+        "layer": "data-access",
+        "nodeType": "physical-table",
+        "viewTag": "data-access",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB125D.cbl",
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          239,
+          240,
+          241,
+          242,
+          243,
+          244,
+          245,
+          246,
+          247,
+          248,
+          249,
+          250,
+          251,
+          252,
+          253,
+          254,
+          255,
+          256,
+          257,
+          258,
+          259,
+          260,
+          261,
+          262,
+          263,
+          264,
+          265,
+          266,
+          267,
+          268,
+          269,
+          270,
+          339,
+          340,
+          341,
+          342,
+          343,
+          344,
+          345,
+          361,
+          362,
+          363,
+          364,
+          365,
+          366,
+          367
+        ],
+        "runId": "e2e-20260618T205753Z-cib125d"
+      }
+    },
+    {
+      "label": "DBTable",
+      "key": [
+        "PARAM"
+      ],
+      "properties": {
+        "name": "PARAM",
+        "ingestion": "auto",
+        "layer": "data-access",
+        "nodeType": "physical-table",
+        "viewTag": "data-access",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB125D.cbl",
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          212,
+          213,
+          214,
+          215,
+          216,
+          217,
+          444,
+          445,
+          446,
+          447,
+          448,
+          449,
+          450,
+          451,
+          452,
+          474,
+          475,
+          476,
+          477,
+          478,
+          479,
+          480,
+          481,
+          482,
+          483,
+          484,
+          485,
+          486,
+          487,
+          488
+        ],
+        "runId": "e2e-20260618T205753Z-cib125d"
+      }
+    },
+    {
+      "label": "DBTable",
+      "key": [
+        "OPERA"
+      ],
+      "properties": {
+        "name": "OPERA",
+        "ingestion": "auto",
+        "layer": "data-access",
+        "nodeType": "physical-table",
+        "viewTag": "data-access",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB125D.cbl",
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          383,
+          384,
+          385,
+          386,
+          387,
+          388,
+          389,
+          390,
+          391,
+          392,
+          393,
+          394,
+          395,
+          396,
+          397,
+          398,
+          399,
+          400,
+          401,
+          402,
+          403,
+          404,
+          405,
+          406,
+          407,
+          408,
+          409,
+          410,
+          411,
+          412,
+          413,
+          414,
+          415,
+          416,
+          417,
+          418,
+          419,
+          420,
+          421
+        ],
+        "runId": "e2e-20260618T205753Z-cib125d"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB125D"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB125D",
+          "000-CONTROL"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205753Z-cib125d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          124
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB125D"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB125D",
+          "010-PROCESA-INFORMACION"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205753Z-cib125d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          147
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB125D"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB125D",
+          "020-PROC-OPECORI-OPERA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205753Z-cib125d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          155
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB125D"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB125D",
+          "500-FECHA-DIA-OPERACION"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205753Z-cib125d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          211
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB125D"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB125D",
+          "510-DEFINE-CURSOR-FUTUROS"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205753Z-cib125d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          238
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB125D"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB125D",
+          "520-LEE-FUTUROS"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205753Z-cib125d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          287
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB125D"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB125D",
+          "530-BUSCA-OPER-TASA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205753Z-cib125d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          338
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB125D"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB125D",
+          "535-BUSCA-OPER-INPC"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205753Z-cib125d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          360
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB125D"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB125D",
+          "540-INSERTA-OPERA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205753Z-cib125d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          382
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB125D"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB125D",
+          "550-TASA-PARAMETRO"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205753Z-cib125d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          443
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB125D"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB125D",
+          "560-INPC-PARAMETRO"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205753Z-cib125d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          473
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB125D"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB125D",
+          "700-FIN"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205753Z-cib125d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          509
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB125D"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB125D",
+          "980-ABORTA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205753Z-cib125d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          525
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "CIB125D"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "DCUENTA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205753Z-cib125d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          116
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "CIB125D"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "DOPECORI"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205753Z-cib125d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          104
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "CIB125D"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "DOPERA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205753Z-cib125d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          112
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "CIB125D"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "DPARAM"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205753Z-cib125d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          108
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "CIB125D"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205753Z-cib125d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          519
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "CIB125D"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC005"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205753Z-cib125d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          76
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "CIB125D"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SICAM029"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205753Z-cib125d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          97
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "CIB125D"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SICCM026"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205753Z-cib125d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          535
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "CIB125D"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SICFH027"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205753Z-cib125d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          62
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "CIB125D"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SICVS011"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205753Z-cib125d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          90
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "CIB125D"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIXAB001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205753Z-cib125d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          83
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "CIB125D"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIXAB002"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205753Z-cib125d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          528
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "CIB125D"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SQLCA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205753Z-cib125d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          69
+        ]
+      }
+    },
+    {
+      "type": "READS_TABLE",
+      "from": [
+        "Program",
+        [
+          "CIB125D"
+        ]
+      ],
+      "to": [
+        "DBTable",
+        [
+          "OPECORI"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205753Z-cib125d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          239,
+          240,
+          241,
+          242,
+          243,
+          244,
+          245,
+          246,
+          247,
+          248,
+          249,
+          250,
+          251,
+          252,
+          253,
+          254,
+          255,
+          256,
+          257,
+          258,
+          259,
+          260,
+          261,
+          262,
+          263,
+          264,
+          265,
+          266,
+          267,
+          268,
+          269,
+          270,
+          339,
+          340,
+          341,
+          342,
+          343,
+          344,
+          345,
+          361,
+          362,
+          363,
+          364,
+          365,
+          366,
+          367
+        ]
+      }
+    },
+    {
+      "type": "READS_TABLE",
+      "from": [
+        "Program",
+        [
+          "CIB125D"
+        ]
+      ],
+      "to": [
+        "DBTable",
+        [
+          "PARAM"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205753Z-cib125d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          212,
+          213,
+          214,
+          215,
+          216,
+          217,
+          444,
+          445,
+          446,
+          447,
+          448,
+          449,
+          450,
+          451,
+          452,
+          474,
+          475,
+          476,
+          477,
+          478,
+          479,
+          480,
+          481,
+          482,
+          483,
+          484,
+          485,
+          486,
+          487,
+          488
+        ]
+      }
+    },
+    {
+      "type": "UPDATES_TABLE",
+      "from": [
+        "Program",
+        [
+          "CIB125D"
+        ]
+      ],
+      "to": [
+        "DBTable",
+        [
+          "OPERA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205753Z-cib125d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          383,
+          384,
+          385,
+          386,
+          387,
+          388,
+          389,
+          390,
+          391,
+          392,
+          393,
+          394,
+          395,
+          396,
+          397,
+          398,
+          399,
+          400,
+          401,
+          402,
+          403,
+          404,
+          405,
+          406,
+          407,
+          408,
+          409,
+          410,
+          411,
+          412,
+          413,
+          414,
+          415,
+          416,
+          417,
+          418,
+          419,
+          420,
+          421
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "CIB125D",
+          "000-CONTROL"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SICCM026"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205753Z-cib125d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          125
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "CIB125D",
+          "000-CONTROL"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SICCM026"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205753Z-cib125d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          125
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "CIB125D",
+          "500-FECHA-DIA-OPERACION"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205753Z-cib125d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          230
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "CIB125D",
+          "500-FECHA-DIA-OPERACION"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205753Z-cib125d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          230
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "CIB125D",
+          "510-DEFINE-CURSOR-FUTUROS"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205753Z-cib125d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          279
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "CIB125D",
+          "510-DEFINE-CURSOR-FUTUROS"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205753Z-cib125d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          279
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "CIB125D",
+          "520-LEE-FUTUROS"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205753Z-cib125d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          331
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "CIB125D",
+          "520-LEE-FUTUROS"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205753Z-cib125d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          331
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "CIB125D",
+          "530-BUSCA-OPER-TASA"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205753Z-cib125d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          350
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "CIB125D",
+          "530-BUSCA-OPER-TASA"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205753Z-cib125d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          350
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "CIB125D",
+          "535-BUSCA-OPER-INPC"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205753Z-cib125d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          372
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "CIB125D",
+          "535-BUSCA-OPER-INPC"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205753Z-cib125d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          372
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "CIB125D",
+          "540-INSERTA-OPERA"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205753Z-cib125d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          437
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "CIB125D",
+          "540-INSERTA-OPERA"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205753Z-cib125d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          437
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "CIB125D",
+          "550-TASA-PARAMETRO"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205753Z-cib125d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          464
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "CIB125D",
+          "550-TASA-PARAMETRO"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205753Z-cib125d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          464
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "CIB125D",
+          "560-INPC-PARAMETRO"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205753Z-cib125d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          500
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "CIB125D",
+          "560-INPC-PARAMETRO"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205753Z-cib125d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          500
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "CIB125D",
+          "700-FIN"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205753Z-cib125d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          519
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "CIB125D",
+          "700-FIN"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205753Z-cib125d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          519
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "CIB125D",
+          "980-ABORTA"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SICCM026"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205753Z-cib125d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          535
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "CIB125D",
+          "980-ABORTA"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SICCM026"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205753Z-cib125d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          535
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "CIB125D",
+          "980-ABORTA"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIXAB002"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205753Z-cib125d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          528
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "CIB125D",
+          "980-ABORTA"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIXAB002"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205753Z-cib125d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB125D.cbl",
+        "evidenceLines": [
+          528
+        ]
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "program": "CIB125D",
+      "sequenceColumnsNormalized": true,
+      "performTargetCount": 13,
+      "paragraphCount": 13,
+      "missingPerformTargets": []
+    }
+  ]
+}

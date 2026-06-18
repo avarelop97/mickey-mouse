@@ -1,0 +1,2007 @@
+{
+  "runId": "e2e-20260618T205727Z-cib124d",
+  "nodes": [
+    {
+      "label": "Program",
+      "key": [
+        "CIB124D"
+      ],
+      "properties": {
+        "name": "CIB124D",
+        "ingestion": "auto",
+        "layer": "program",
+        "nodeType": "program",
+        "viewTag": "program",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB124D.cbl",
+        "runId": "e2e-20260618T205727Z-cib124d"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB124D",
+        "000-CONTROL"
+      ],
+      "properties": {
+        "programName": "CIB124D",
+        "name": "000-CONTROL",
+        "summary": "Orquesta una fase funcional de CIB124D, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 100,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB124D.cbl",
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          351
+        ],
+        "runId": "e2e-20260618T205727Z-cib124d"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB124D",
+        "010-INICIO"
+      ],
+      "properties": {
+        "programName": "CIB124D",
+        "name": "010-INICIO",
+        "summary": "Inicializa el flujo operativo de CIB124D, preparando contexto y validaciones de arranque.",
+        "executionOrder": 200,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB124D.cbl",
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          367
+        ],
+        "runId": "e2e-20260618T205727Z-cib124d"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB124D",
+        "020-PROCESO"
+      ],
+      "properties": {
+        "programName": "CIB124D",
+        "name": "020-PROCESO",
+        "summary": "Orquesta una fase funcional de CIB124D, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 300,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB124D.cbl",
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          382
+        ],
+        "runId": "e2e-20260618T205727Z-cib124d"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB124D",
+        "100-ARMA-CONTRATO"
+      ],
+      "properties": {
+        "programName": "CIB124D",
+        "name": "100-ARMA-CONTRATO",
+        "summary": "Orquesta una fase funcional de CIB124D, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 400,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB124D.cbl",
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          393
+        ],
+        "runId": "e2e-20260618T205727Z-cib124d"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB124D",
+        "200-ESCRIBE-CONTRATO"
+      ],
+      "properties": {
+        "programName": "CIB124D",
+        "name": "200-ESCRIBE-CONTRATO",
+        "summary": "Orquesta una fase funcional de CIB124D, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 500,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB124D.cbl",
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          453
+        ],
+        "runId": "e2e-20260618T205727Z-cib124d"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB124D",
+        "300-DEFINE-MES"
+      ],
+      "properties": {
+        "programName": "CIB124D",
+        "name": "300-DEFINE-MES",
+        "summary": "Cierra la ejecucion de CIB124D, consolidando trazas y terminacion funcional del proceso.",
+        "executionOrder": 600,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB124D.cbl",
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          545
+        ],
+        "runId": "e2e-20260618T205727Z-cib124d"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB124D",
+        "305-OBTEN-CUENTA-BANCO"
+      ],
+      "properties": {
+        "programName": "CIB124D",
+        "name": "305-OBTEN-CUENTA-BANCO",
+        "summary": "Ejecuta lectura/consulta de datos requeridos por CIB124D y deja resultados listos para el siguiente tramo.",
+        "executionOrder": 700,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB124D.cbl",
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          576
+        ],
+        "runId": "e2e-20260618T205727Z-cib124d"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB124D",
+        "500-DEFINE-CURSOR"
+      ],
+      "properties": {
+        "programName": "CIB124D",
+        "name": "500-DEFINE-CURSOR",
+        "summary": "Cierra la ejecucion de CIB124D, consolidando trazas y terminacion funcional del proceso.",
+        "executionOrder": 800,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB124D.cbl",
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          595
+        ],
+        "runId": "e2e-20260618T205727Z-cib124d"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB124D",
+        "550-LEE-VENCIMIENTOS-CAS"
+      ],
+      "properties": {
+        "programName": "CIB124D",
+        "name": "550-LEE-VENCIMIENTOS-CAS",
+        "summary": "Ejecuta lectura/consulta de datos requeridos por CIB124D y deja resultados listos para el siguiente tramo.",
+        "executionOrder": 900,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB124D.cbl",
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          659
+        ],
+        "runId": "e2e-20260618T205727Z-cib124d"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB124D",
+        "980-ABORTA"
+      ],
+      "properties": {
+        "programName": "CIB124D",
+        "name": "980-ABORTA",
+        "summary": "Gestiona contingencias en CIB124D, concentrando el manejo de error y salida controlada.",
+        "executionOrder": 1000,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB124D.cbl",
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          712
+        ],
+        "runId": "e2e-20260618T205727Z-cib124d"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "DCONGTIA"
+      ],
+      "properties": {
+        "name": "DCONGTIA",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB124D.cbl",
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          118
+        ],
+        "runId": "e2e-20260618T205727Z-cib124d"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "DCUENTA"
+      ],
+      "properties": {
+        "name": "DCUENTA",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB124D.cbl",
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          122
+        ],
+        "runId": "e2e-20260618T205727Z-cib124d"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "DOPECORI"
+      ],
+      "properties": {
+        "name": "DOPECORI",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB124D.cbl",
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          110
+        ],
+        "runId": "e2e-20260618T205727Z-cib124d"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "DPARAM"
+      ],
+      "properties": {
+        "name": "DPARAM",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB124D.cbl",
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          114
+        ],
+        "runId": "e2e-20260618T205727Z-cib124d"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "SI2CM026"
+      ],
+      "properties": {
+        "name": "SI2CM026",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB124D.cbl",
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          722
+        ],
+        "runId": "e2e-20260618T205727Z-cib124d"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "SI2FH027"
+      ],
+      "properties": {
+        "name": "SI2FH027",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB124D.cbl",
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          89
+        ],
+        "runId": "e2e-20260618T205727Z-cib124d"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "SIC000"
+      ],
+      "properties": {
+        "name": "SIC000",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB124D.cbl",
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          103
+        ],
+        "runId": "e2e-20260618T205727Z-cib124d"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "SIC004"
+      ],
+      "properties": {
+        "name": "SIC004",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB124D.cbl",
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          706
+        ],
+        "runId": "e2e-20260618T205727Z-cib124d"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "SIC005"
+      ],
+      "properties": {
+        "name": "SIC005",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB124D.cbl",
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          96
+        ],
+        "runId": "e2e-20260618T205727Z-cib124d"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "SICAM029"
+      ],
+      "properties": {
+        "name": "SICAM029",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB124D.cbl",
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          143
+        ],
+        "runId": "e2e-20260618T205727Z-cib124d"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "SICVS011"
+      ],
+      "properties": {
+        "name": "SICVS011",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB124D.cbl",
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          136
+        ],
+        "runId": "e2e-20260618T205727Z-cib124d"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "SIXAB001"
+      ],
+      "properties": {
+        "name": "SIXAB001",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB124D.cbl",
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          129
+        ],
+        "runId": "e2e-20260618T205727Z-cib124d"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "SIXAB002"
+      ],
+      "properties": {
+        "name": "SIXAB002",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB124D.cbl",
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          715
+        ],
+        "runId": "e2e-20260618T205727Z-cib124d"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "SQLCA"
+      ],
+      "properties": {
+        "name": "SQLCA",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB124D.cbl",
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          82
+        ],
+        "runId": "e2e-20260618T205727Z-cib124d"
+      }
+    },
+    {
+      "label": "ExternalRoutine",
+      "key": [
+        "CIB114O"
+      ],
+      "properties": {
+        "name": "CIB114O",
+        "ingestion": "auto",
+        "layer": "integration",
+        "nodeType": "external-service-call",
+        "viewTag": "integration",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB124D.cbl",
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          362
+        ],
+        "runId": "e2e-20260618T205727Z-cib124d"
+      }
+    },
+    {
+      "label": "ExternalRoutine",
+      "key": [
+        "VTB415O"
+      ],
+      "properties": {
+        "name": "VTB415O",
+        "ingestion": "auto",
+        "layer": "integration",
+        "nodeType": "external-service-call",
+        "viewTag": "integration",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB124D.cbl",
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          359
+        ],
+        "runId": "e2e-20260618T205727Z-cib124d"
+      }
+    },
+    {
+      "label": "DBTable",
+      "key": [
+        "CONGTIA"
+      ],
+      "properties": {
+        "name": "CONGTIA",
+        "ingestion": "auto",
+        "layer": "data-access",
+        "nodeType": "physical-table",
+        "viewTag": "data-access",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB124D.cbl",
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          596,
+          597,
+          598,
+          599,
+          600,
+          601,
+          602,
+          603,
+          604,
+          605,
+          606,
+          607,
+          608,
+          609,
+          610,
+          611,
+          612,
+          613,
+          614,
+          615,
+          616,
+          617,
+          618,
+          619,
+          620,
+          621,
+          622,
+          623,
+          624,
+          625,
+          626,
+          627,
+          628,
+          629,
+          630,
+          631,
+          632,
+          633,
+          634,
+          635,
+          636,
+          637,
+          638,
+          639
+        ],
+        "runId": "e2e-20260618T205727Z-cib124d"
+      }
+    },
+    {
+      "label": "DBTable",
+      "key": [
+        "OPECORI"
+      ],
+      "properties": {
+        "name": "OPECORI",
+        "ingestion": "auto",
+        "layer": "data-access",
+        "nodeType": "physical-table",
+        "viewTag": "data-access",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB124D.cbl",
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          596,
+          597,
+          598,
+          599,
+          600,
+          601,
+          602,
+          603,
+          604,
+          605,
+          606,
+          607,
+          608,
+          609,
+          610,
+          611,
+          612,
+          613,
+          614,
+          615,
+          616,
+          617,
+          618,
+          619,
+          620,
+          621,
+          622,
+          623,
+          624,
+          625,
+          626,
+          627,
+          628,
+          629,
+          630,
+          631,
+          632,
+          633,
+          634,
+          635,
+          636,
+          637,
+          638,
+          639
+        ],
+        "runId": "e2e-20260618T205727Z-cib124d"
+      }
+    },
+    {
+      "label": "DBTable",
+      "key": [
+        "PARAM"
+      ],
+      "properties": {
+        "name": "PARAM",
+        "ingestion": "auto",
+        "layer": "data-access",
+        "nodeType": "physical-table",
+        "viewTag": "data-access",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB124D.cbl",
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          577,
+          578,
+          579,
+          580,
+          581,
+          582,
+          583
+        ],
+        "runId": "e2e-20260618T205727Z-cib124d"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB124D"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB124D",
+          "000-CONTROL"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205727Z-cib124d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          351
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB124D"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB124D",
+          "010-INICIO"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205727Z-cib124d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          367
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB124D"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB124D",
+          "020-PROCESO"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205727Z-cib124d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          382
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB124D"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB124D",
+          "100-ARMA-CONTRATO"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205727Z-cib124d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          393
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB124D"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB124D",
+          "200-ESCRIBE-CONTRATO"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205727Z-cib124d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          453
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB124D"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB124D",
+          "300-DEFINE-MES"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205727Z-cib124d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          545
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB124D"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB124D",
+          "305-OBTEN-CUENTA-BANCO"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205727Z-cib124d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          576
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB124D"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB124D",
+          "500-DEFINE-CURSOR"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205727Z-cib124d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          595
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB124D"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB124D",
+          "550-LEE-VENCIMIENTOS-CAS"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205727Z-cib124d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          659
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB124D"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB124D",
+          "980-ABORTA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205727Z-cib124d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          712
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "CIB124D"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "DCONGTIA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205727Z-cib124d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          118
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "CIB124D"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "DCUENTA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205727Z-cib124d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          122
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "CIB124D"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "DOPECORI"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205727Z-cib124d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          110
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "CIB124D"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "DPARAM"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205727Z-cib124d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          114
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "CIB124D"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SI2CM026"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205727Z-cib124d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          722
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "CIB124D"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SI2FH027"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205727Z-cib124d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          89
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "CIB124D"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC000"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205727Z-cib124d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          103
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "CIB124D"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205727Z-cib124d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          706
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "CIB124D"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC005"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205727Z-cib124d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          96
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "CIB124D"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SICAM029"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205727Z-cib124d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          143
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "CIB124D"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SICVS011"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205727Z-cib124d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          136
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "CIB124D"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIXAB001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205727Z-cib124d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          129
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "CIB124D"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIXAB002"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205727Z-cib124d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          715
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "CIB124D"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SQLCA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205727Z-cib124d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          82
+        ]
+      }
+    },
+    {
+      "type": "CALLS_ROUTINE",
+      "from": [
+        "Program",
+        [
+          "CIB124D"
+        ]
+      ],
+      "to": [
+        "ExternalRoutine",
+        [
+          "CIB114O"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205727Z-cib124d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          362
+        ]
+      }
+    },
+    {
+      "type": "CALLS_ROUTINE",
+      "from": [
+        "Program",
+        [
+          "CIB124D"
+        ]
+      ],
+      "to": [
+        "ExternalRoutine",
+        [
+          "VTB415O"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205727Z-cib124d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          359
+        ]
+      }
+    },
+    {
+      "type": "READS_TABLE",
+      "from": [
+        "Program",
+        [
+          "CIB124D"
+        ]
+      ],
+      "to": [
+        "DBTable",
+        [
+          "CONGTIA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205727Z-cib124d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          596,
+          597,
+          598,
+          599,
+          600,
+          601,
+          602,
+          603,
+          604,
+          605,
+          606,
+          607,
+          608,
+          609,
+          610,
+          611,
+          612,
+          613,
+          614,
+          615,
+          616,
+          617,
+          618,
+          619,
+          620,
+          621,
+          622,
+          623,
+          624,
+          625,
+          626,
+          627,
+          628,
+          629,
+          630,
+          631,
+          632,
+          633,
+          634,
+          635,
+          636,
+          637,
+          638,
+          639
+        ]
+      }
+    },
+    {
+      "type": "READS_TABLE",
+      "from": [
+        "Program",
+        [
+          "CIB124D"
+        ]
+      ],
+      "to": [
+        "DBTable",
+        [
+          "OPECORI"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205727Z-cib124d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          596,
+          597,
+          598,
+          599,
+          600,
+          601,
+          602,
+          603,
+          604,
+          605,
+          606,
+          607,
+          608,
+          609,
+          610,
+          611,
+          612,
+          613,
+          614,
+          615,
+          616,
+          617,
+          618,
+          619,
+          620,
+          621,
+          622,
+          623,
+          624,
+          625,
+          626,
+          627,
+          628,
+          629,
+          630,
+          631,
+          632,
+          633,
+          634,
+          635,
+          636,
+          637,
+          638,
+          639
+        ]
+      }
+    },
+    {
+      "type": "READS_TABLE",
+      "from": [
+        "Program",
+        [
+          "CIB124D"
+        ]
+      ],
+      "to": [
+        "DBTable",
+        [
+          "PARAM"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205727Z-cib124d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          577,
+          578,
+          579,
+          580,
+          581,
+          582,
+          583
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "CIB124D",
+          "000-CONTROL"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SI2CM026"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205727Z-cib124d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          352
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "CIB124D",
+          "000-CONTROL"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SI2CM026"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205727Z-cib124d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          352
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "CIB124D",
+          "305-OBTEN-CUENTA-BANCO"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205727Z-cib124d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          589
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "CIB124D",
+          "305-OBTEN-CUENTA-BANCO"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205727Z-cib124d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          589
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "CIB124D",
+          "500-DEFINE-CURSOR"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205727Z-cib124d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          649
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "CIB124D",
+          "500-DEFINE-CURSOR"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205727Z-cib124d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          649
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "CIB124D",
+          "550-LEE-VENCIMIENTOS-CAS"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205727Z-cib124d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          696,
+          706
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "CIB124D",
+          "550-LEE-VENCIMIENTOS-CAS"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205727Z-cib124d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          696,
+          706
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "CIB124D",
+          "980-ABORTA"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SI2CM026"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205727Z-cib124d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          722
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "CIB124D",
+          "980-ABORTA"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SI2CM026"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205727Z-cib124d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          722
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "CIB124D",
+          "980-ABORTA"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIXAB002"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205727Z-cib124d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          715
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "CIB124D",
+          "980-ABORTA"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIXAB002"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205727Z-cib124d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          715
+        ]
+      }
+    },
+    {
+      "type": "DEPENDS_ON_EXTERNAL",
+      "from": [
+        "Paragraph",
+        [
+          "CIB124D",
+          "000-CONTROL"
+        ]
+      ],
+      "to": [
+        "ExternalRoutine",
+        [
+          "CIB114O"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205727Z-cib124d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          362
+        ]
+      }
+    },
+    {
+      "type": "DEPENDS_ON_EXTERNAL",
+      "from": [
+        "Paragraph",
+        [
+          "CIB124D",
+          "000-CONTROL"
+        ]
+      ],
+      "to": [
+        "ExternalRoutine",
+        [
+          "VTB415O"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205727Z-cib124d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB124D.cbl",
+        "evidenceLines": [
+          359
+        ]
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "program": "CIB124D",
+      "sequenceColumnsNormalized": true,
+      "performTargetCount": 10,
+      "paragraphCount": 10,
+      "missingPerformTargets": []
+    }
+  ]
+}

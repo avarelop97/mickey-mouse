@@ -1,0 +1,49 @@
+{
+  "runId": "e2e-20260618T205340Z-cib026b",
+  "programs": [
+    "CIB026B"
+  ],
+  "artifacts": {
+    "extraction": "infra/neo4j/reports/e2e-20260618T205340Z-cib026b-extraction.json",
+    "writePayload": "infra/neo4j/reports/e2e-20260618T205340Z-cib026b-writepayload.json",
+    "precheck": "infra/neo4j/reports/e2e-20260618T205340Z-cib026b-precheck.json",
+    "cypher": "infra/neo4j/queries/ingest-e2e-20260618T205340Z-cib026b.cypher"
+  },
+  "precheck": {
+    "findings": [
+      {
+        "severity": "critical",
+        "type": "PARAGRAPH_EXTRACTION_COVERAGE_GAP",
+        "evidence": {
+          "program": "CIB026B",
+          "missingPerformTargets": [
+            "CHECA-DECREMENTO"
+          ]
+        }
+      }
+    ],
+    "blockers": [
+      {
+        "severity": "critical",
+        "type": "PARAGRAPH_EXTRACTION_COVERAGE_GAP",
+        "evidence": {
+          "program": "CIB026B",
+          "missingPerformTargets": [
+            "CHECA-DECREMENTO"
+          ]
+        }
+      }
+    ],
+    "qualityGateResult": "fail"
+  },
+  "commitExecuted": false,
+  "inventory": {},
+  "postAudit": {},
+  "postAuditAfterRemediation": {},
+  "remediationApplied": [],
+  "integralBacklog": {
+    "invalidLabelsGlobal": 0,
+    "criticalRelWithoutEvidenceGlobal": 50
+  },
+  "decision": "BLOCKED"
+}

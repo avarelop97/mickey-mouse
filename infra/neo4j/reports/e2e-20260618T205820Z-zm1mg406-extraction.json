@@ -1,0 +1,375 @@
+{
+  "stage": "discovery-extraction",
+  "runId": "e2e-20260618T205820Z-zm1mg406",
+  "programs": [
+    "ZM1MG406"
+  ],
+  "extractions": [
+    {
+      "program": "ZM1MG406",
+      "sourceFile": "src/ZM1MG406.cbl",
+      "procedureLine": 152,
+      "copybooks": [
+        {
+          "name": "DFHAID",
+          "evidenceLines": [
+            83
+          ]
+        },
+        {
+          "name": "DFHBMSCA",
+          "evidenceLines": [
+            87
+          ]
+        },
+        {
+          "name": "SQLCA",
+          "evidenceLines": [
+            141
+          ]
+        },
+        {
+          "name": "ZMG4061",
+          "evidenceLines": [
+            91
+          ]
+        },
+        {
+          "name": "ZMWCOM11",
+          "evidenceLines": [
+            137
+          ]
+        },
+        {
+          "name": "ZMWSC002",
+          "evidenceLines": [
+            278
+          ]
+        },
+        {
+          "name": "ZMWSC003",
+          "evidenceLines": [
+            285
+          ]
+        },
+        {
+          "name": "ZMWSC004",
+          "evidenceLines": [
+            292
+          ]
+        },
+        {
+          "name": "ZMWSC005",
+          "evidenceLines": [
+            299
+          ]
+        },
+        {
+          "name": "ZMWSC008",
+          "evidenceLines": [
+            306
+          ]
+        },
+        {
+          "name": "ZMWSC009",
+          "evidenceLines": [
+            322
+          ]
+        },
+        {
+          "name": "ZMWSC010",
+          "evidenceLines": [
+            95
+          ]
+        },
+        {
+          "name": "ZMWSC011",
+          "evidenceLines": [
+            99
+          ]
+        },
+        {
+          "name": "ZMWSC012",
+          "evidenceLines": [
+            103
+          ]
+        },
+        {
+          "name": "ZMWSC013",
+          "evidenceLines": [
+            107
+          ]
+        },
+        {
+          "name": "ZMWSC014",
+          "evidenceLines": [
+            79
+          ]
+        },
+        {
+          "name": "ZMWSC015",
+          "evidenceLines": [
+            315
+          ]
+        },
+        {
+          "name": "ZMWSCOM0",
+          "evidenceLines": [
+            264
+          ]
+        },
+        {
+          "name": "ZMWSCOM1",
+          "evidenceLines": [
+            271
+          ]
+        },
+        {
+          "name": "ZMWSG532",
+          "evidenceLines": [
+            127
+          ]
+        },
+        {
+          "name": "ZMWSR009",
+          "evidenceLines": [
+            112
+          ]
+        },
+        {
+          "name": "ZMWSR432",
+          "evidenceLines": [
+            122
+          ]
+        },
+        {
+          "name": "ZMWSZ403",
+          "evidenceLines": [
+            117
+          ]
+        },
+        {
+          "name": "ZPARAM",
+          "evidenceLines": [
+            144
+          ]
+        }
+      ],
+      "calls": [],
+      "readTables": [
+        {
+          "name": "PARAM",
+          "evidenceLines": [
+            248,
+            249,
+            250,
+            251,
+            252,
+            253
+          ]
+        }
+      ],
+      "updateTables": [],
+      "paragraphs": [
+        {
+          "name": "0000-INICIO",
+          "evidenceLines": [
+            157
+          ],
+          "executionOrder": 100,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM1MG406, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "8000-TRANSFIERE",
+          "evidenceLines": [
+            193
+          ],
+          "executionOrder": 200,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM1MG406, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "8100-RECIBE-PANTALLA",
+          "evidenceLines": [
+            200
+          ],
+          "executionOrder": 300,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM1MG406, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "8110-ENVIA-PANTALLA",
+          "evidenceLines": [
+            215
+          ],
+          "executionOrder": 400,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM1MG406, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "8120-ENCABEZADO",
+          "evidenceLines": [
+            237
+          ],
+          "executionOrder": 500,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM1MG406, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "8900-FECHA",
+          "evidenceLines": [
+            247
+          ],
+          "executionOrder": 600,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM1MG406, encadenando validaciones y transformaciones del proceso principal."
+        }
+      ],
+      "paragraphCalls": [],
+      "paragraphCopybooks": [
+        {
+          "paragraph": "0000-INICIO",
+          "copybook": "ZMWSC004",
+          "evidenceLines": [
+            191
+          ]
+        },
+        {
+          "paragraph": "0000-INICIO",
+          "copybook": "ZMWSCOM0",
+          "evidenceLines": [
+            158
+          ]
+        },
+        {
+          "paragraph": "8000-TRANSFIERE",
+          "copybook": "ZMWSC009",
+          "evidenceLines": [
+            197
+          ]
+        },
+        {
+          "paragraph": "8100-RECIBE-PANTALLA",
+          "copybook": "ZMWSC015",
+          "evidenceLines": [
+            211
+          ]
+        },
+        {
+          "paragraph": "8110-ENVIA-PANTALLA",
+          "copybook": "ZMWSC002",
+          "evidenceLines": [
+            222
+          ]
+        },
+        {
+          "paragraph": "8110-ENVIA-PANTALLA",
+          "copybook": "ZMWSCOM0",
+          "evidenceLines": [
+            235
+          ]
+        },
+        {
+          "paragraph": "8120-ENCABEZADO",
+          "copybook": "ZMWSC003",
+          "evidenceLines": [
+            241
+          ]
+        },
+        {
+          "paragraph": "8900-FECHA",
+          "copybook": "ZMWSC002",
+          "evidenceLines": [
+            278
+          ]
+        },
+        {
+          "paragraph": "8900-FECHA",
+          "copybook": "ZMWSC003",
+          "evidenceLines": [
+            285
+          ]
+        },
+        {
+          "paragraph": "8900-FECHA",
+          "copybook": "ZMWSC004",
+          "evidenceLines": [
+            292
+          ]
+        },
+        {
+          "paragraph": "8900-FECHA",
+          "copybook": "ZMWSC005",
+          "evidenceLines": [
+            299
+          ]
+        },
+        {
+          "paragraph": "8900-FECHA",
+          "copybook": "ZMWSC008",
+          "evidenceLines": [
+            306
+          ]
+        },
+        {
+          "paragraph": "8900-FECHA",
+          "copybook": "ZMWSC009",
+          "evidenceLines": [
+            322
+          ]
+        },
+        {
+          "paragraph": "8900-FECHA",
+          "copybook": "ZMWSC015",
+          "evidenceLines": [
+            315
+          ]
+        },
+        {
+          "paragraph": "8900-FECHA",
+          "copybook": "ZMWSCOM0",
+          "evidenceLines": [
+            264
+          ]
+        },
+        {
+          "paragraph": "8900-FECHA",
+          "copybook": "ZMWSCOM1",
+          "evidenceLines": [
+            271
+          ]
+        }
+      ],
+      "coverage": {
+        "sequenceColumnsNormalized": true,
+        "performTargetCount": 11,
+        "paragraphCount": 6,
+        "missingPerformTargets": [],
+        "resolvedPerformTargetsViaCopybook": {
+          "9000-INICIO": [
+            "ZMWSCOM0"
+          ],
+          "9000-REINICIO": [
+            "ZMWSCOM0"
+          ],
+          "9200-MENSAJE-ERROR": [
+            "ZMWSC002"
+          ],
+          "9300-USER-FECHA-HORA": [
+            "ZMWSC003"
+          ],
+          "9400-RETURN": [
+            "ZMWSC004"
+          ],
+          "9886-ALINEA-STRING-IZQ": [
+            "ZMWSC015"
+          ],
+          "9900-TRANSFIERE": [
+            "ZMWSC009"
+          ]
+        }
+      }
+    }
+  ]
+}

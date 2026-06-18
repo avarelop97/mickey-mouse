@@ -1,0 +1,65 @@
+{
+  "runId": "e2e-20260618T205849Z-zm9rus01",
+  "programs": [
+    "ZM9RUS01"
+  ],
+  "artifacts": {
+    "extraction": "infra/neo4j/reports/e2e-20260618T205849Z-zm9rus01-extraction.json",
+    "writePayload": "infra/neo4j/reports/e2e-20260618T205849Z-zm9rus01-writepayload.json",
+    "precheck": "infra/neo4j/reports/e2e-20260618T205849Z-zm9rus01-precheck.json",
+    "cypher": "infra/neo4j/queries/ingest-e2e-20260618T205849Z-zm9rus01.cypher"
+  },
+  "precheck": {
+    "findings": [
+      {
+        "severity": "critical",
+        "type": "PARAGRAPH_EXTRACTION_COVERAGE_GAP",
+        "evidence": {
+          "program": "ZM9RUS01",
+          "missingPerformTargets": [
+            "100000-INICIO-PROGRAMA",
+            "100100-VALIDA-PARAM",
+            "200000-PROCESO-PROGRAMA",
+            "200100-ARMA-EMAIL-PROMOTOR",
+            "200100-CONSULTA-PROMOTOR",
+            "200200-INSERTA-ALERTA-ZMDT800",
+            "200300-INSERTA-PARAM",
+            "300000-FINAL-PROGRAMA",
+            "9600-VALIDA-SQL"
+          ]
+        }
+      }
+    ],
+    "blockers": [
+      {
+        "severity": "critical",
+        "type": "PARAGRAPH_EXTRACTION_COVERAGE_GAP",
+        "evidence": {
+          "program": "ZM9RUS01",
+          "missingPerformTargets": [
+            "100000-INICIO-PROGRAMA",
+            "100100-VALIDA-PARAM",
+            "200000-PROCESO-PROGRAMA",
+            "200100-ARMA-EMAIL-PROMOTOR",
+            "200100-CONSULTA-PROMOTOR",
+            "200200-INSERTA-ALERTA-ZMDT800",
+            "200300-INSERTA-PARAM",
+            "300000-FINAL-PROGRAMA",
+            "9600-VALIDA-SQL"
+          ]
+        }
+      }
+    ],
+    "qualityGateResult": "fail"
+  },
+  "commitExecuted": false,
+  "inventory": {},
+  "postAudit": {},
+  "postAuditAfterRemediation": {},
+  "remediationApplied": [],
+  "integralBacklog": {
+    "invalidLabelsGlobal": 0,
+    "criticalRelWithoutEvidenceGlobal": 50
+  },
+  "decision": "BLOCKED"
+}

@@ -1,0 +1,31 @@
+{
+  "findings": [
+    {
+      "severity": "critical",
+      "type": "PARAGRAPH_EXTRACTION_COVERAGE_GAP",
+      "evidence": {
+        "program": "CIB017D",
+        "missingPerformTargets": [
+          "ABRE-ARCHIVOS",
+          "DECLRA-CURSR",
+          "OBTN-FECHA-PROCSO"
+        ]
+      }
+    }
+  ],
+  "blockers": [
+    {
+      "severity": "critical",
+      "type": "PARAGRAPH_EXTRACTION_COVERAGE_GAP",
+      "evidence": {
+        "program": "CIB017D",
+        "missingPerformTargets": [
+          "ABRE-ARCHIVOS",
+          "DECLRA-CURSR",
+          "OBTN-FECHA-PROCSO"
+        ]
+      }
+    }
+  ],
+  "qualityGateResult": "fail"
+}

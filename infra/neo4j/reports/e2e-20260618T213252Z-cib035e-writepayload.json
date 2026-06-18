@@ -1,0 +1,2862 @@
+{
+  "runId": "e2e-20260618T213252Z-cib035e",
+  "nodes": [
+    {
+      "label": "Program",
+      "key": [
+        "CIB035E"
+      ],
+      "properties": {
+        "name": "CIB035E",
+        "ingestion": "auto",
+        "layer": "program",
+        "nodeType": "program",
+        "viewTag": "program",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB035E.cbl",
+        "runId": "e2e-20260618T213252Z-cib035e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB035E",
+        "000-INICIO"
+      ],
+      "properties": {
+        "programName": "CIB035E",
+        "name": "000-INICIO",
+        "summary": "Inicializa el flujo operativo de CIB035E, preparando contexto y validaciones de arranque.",
+        "executionOrder": 100,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB035E.cbl",
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          283
+        ],
+        "runId": "e2e-20260618T213252Z-cib035e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB035E",
+        "010-INICIALIZA-1"
+      ],
+      "properties": {
+        "programName": "CIB035E",
+        "name": "010-INICIALIZA-1",
+        "summary": "Inicializa el flujo operativo de CIB035E, preparando contexto y validaciones de arranque.",
+        "executionOrder": 200,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB035E.cbl",
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          312
+        ],
+        "runId": "e2e-20260618T213252Z-cib035e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB035E",
+        "020-PROCESO-1"
+      ],
+      "properties": {
+        "programName": "CIB035E",
+        "name": "020-PROCESO-1",
+        "summary": "Orquesta una fase funcional de CIB035E, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 300,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB035E.cbl",
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          343
+        ],
+        "runId": "e2e-20260618T213252Z-cib035e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB035E",
+        "030-DIAS-POR-CUBRIR"
+      ],
+      "properties": {
+        "programName": "CIB035E",
+        "name": "030-DIAS-POR-CUBRIR",
+        "summary": "Orquesta una fase funcional de CIB035E, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 400,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB035E.cbl",
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          364
+        ],
+        "runId": "e2e-20260618T213252Z-cib035e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB035E",
+        "040-CLASIFICACION"
+      ],
+      "properties": {
+        "programName": "CIB035E",
+        "name": "040-CLASIFICACION",
+        "summary": "Orquesta una fase funcional de CIB035E, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 500,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB035E.cbl",
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          404
+        ],
+        "runId": "e2e-20260618T213252Z-cib035e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB035E",
+        "050-INICIALIZA-2"
+      ],
+      "properties": {
+        "programName": "CIB035E",
+        "name": "050-INICIALIZA-2",
+        "summary": "Inicializa el flujo operativo de CIB035E, preparando contexto y validaciones de arranque.",
+        "executionOrder": 600,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB035E.cbl",
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          414
+        ],
+        "runId": "e2e-20260618T213252Z-cib035e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB035E",
+        "060-PROCESO-2"
+      ],
+      "properties": {
+        "programName": "CIB035E",
+        "name": "060-PROCESO-2",
+        "summary": "Orquesta una fase funcional de CIB035E, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 700,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB035E.cbl",
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          450
+        ],
+        "runId": "e2e-20260618T213252Z-cib035e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB035E",
+        "070-CORTE"
+      ],
+      "properties": {
+        "programName": "CIB035E",
+        "name": "070-CORTE",
+        "summary": "Orquesta una fase funcional de CIB035E, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 800,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB035E.cbl",
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          461
+        ],
+        "runId": "e2e-20260618T213252Z-cib035e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB035E",
+        "080-REGISTRO"
+      ],
+      "properties": {
+        "programName": "CIB035E",
+        "name": "080-REGISTRO",
+        "summary": "Orquesta una fase funcional de CIB035E, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 900,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB035E.cbl",
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          495
+        ],
+        "runId": "e2e-20260618T213252Z-cib035e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB035E",
+        "090-ARMA"
+      ],
+      "properties": {
+        "programName": "CIB035E",
+        "name": "090-ARMA",
+        "summary": "Orquesta una fase funcional de CIB035E, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 1000,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB035E.cbl",
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          517
+        ],
+        "runId": "e2e-20260618T213252Z-cib035e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB035E",
+        "100-IMPRIME"
+      ],
+      "properties": {
+        "programName": "CIB035E",
+        "name": "100-IMPRIME",
+        "summary": "Orquesta una fase funcional de CIB035E, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 1100,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB035E.cbl",
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          544
+        ],
+        "runId": "e2e-20260618T213252Z-cib035e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB035E",
+        "400-ENCA"
+      ],
+      "properties": {
+        "programName": "CIB035E",
+        "name": "400-ENCA",
+        "summary": "Orquesta una fase funcional de CIB035E, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 1200,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB035E.cbl",
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          555
+        ],
+        "runId": "e2e-20260618T213252Z-cib035e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB035E",
+        "500-LEE-CURSOR-OPERCOB"
+      ],
+      "properties": {
+        "programName": "CIB035E",
+        "name": "500-LEE-CURSOR-OPERCOB",
+        "summary": "Ejecuta lectura/consulta de datos requeridos por CIB035E y deja resultados listos para el siguiente tramo.",
+        "executionOrder": 1300,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB035E.cbl",
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          576
+        ],
+        "runId": "e2e-20260618T213252Z-cib035e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB035E",
+        "510-LEE-CURSOR-EMICOB"
+      ],
+      "properties": {
+        "programName": "CIB035E",
+        "name": "510-LEE-CURSOR-EMICOB",
+        "summary": "Ejecuta lectura/consulta de datos requeridos por CIB035E y deja resultados listos para el siguiente tramo.",
+        "executionOrder": 1400,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB035E.cbl",
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          602
+        ],
+        "runId": "e2e-20260618T213252Z-cib035e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB035E",
+        "520-LEE-TEMPORAL"
+      ],
+      "properties": {
+        "programName": "CIB035E",
+        "name": "520-LEE-TEMPORAL",
+        "summary": "Ejecuta lectura/consulta de datos requeridos por CIB035E y deja resultados listos para el siguiente tramo.",
+        "executionOrder": 1500,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB035E.cbl",
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          633
+        ],
+        "runId": "e2e-20260618T213252Z-cib035e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB035E",
+        "530-UPDATE-CURSOR-EMICOB"
+      ],
+      "properties": {
+        "programName": "CIB035E",
+        "name": "530-UPDATE-CURSOR-EMICOB",
+        "summary": "Orquesta una fase funcional de CIB035E, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 1600,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB035E.cbl",
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          657
+        ],
+        "runId": "e2e-20260618T213252Z-cib035e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB035E",
+        "900-FINALIZA-1"
+      ],
+      "properties": {
+        "programName": "CIB035E",
+        "name": "900-FINALIZA-1",
+        "summary": "Cierra la ejecucion de CIB035E, consolidando trazas y terminacion funcional del proceso.",
+        "executionOrder": 1700,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB035E.cbl",
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          679
+        ],
+        "runId": "e2e-20260618T213252Z-cib035e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB035E",
+        "910-FINALIZA-2"
+      ],
+      "properties": {
+        "programName": "CIB035E",
+        "name": "910-FINALIZA-2",
+        "summary": "Cierra la ejecucion de CIB035E, consolidando trazas y terminacion funcional del proceso.",
+        "executionOrder": 1800,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB035E.cbl",
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          698
+        ],
+        "runId": "e2e-20260618T213252Z-cib035e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB035E",
+        "980-ABORTA"
+      ],
+      "properties": {
+        "programName": "CIB035E",
+        "name": "980-ABORTA",
+        "summary": "Gestiona contingencias en CIB035E, concentrando el manejo de error y salida controlada.",
+        "executionOrder": 1900,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB035E.cbl",
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          719
+        ],
+        "runId": "e2e-20260618T213252Z-cib035e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB035E",
+        "990-CIF-CTL"
+      ],
+      "properties": {
+        "programName": "CIB035E",
+        "name": "990-CIF-CTL",
+        "summary": "Orquesta una fase funcional de CIB035E, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 2000,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB035E.cbl",
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          733
+        ],
+        "runId": "e2e-20260618T213252Z-cib035e"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "DEMICOB"
+      ],
+      "properties": {
+        "name": "DEMICOB",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB035E.cbl",
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          255
+        ],
+        "runId": "e2e-20260618T213252Z-cib035e"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "DOPERCOB"
+      ],
+      "properties": {
+        "name": "DOPERCOB",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB035E.cbl",
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          248
+        ],
+        "runId": "e2e-20260618T213252Z-cib035e"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "SIC004"
+      ],
+      "properties": {
+        "name": "SIC004",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB035E.cbl",
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          713
+        ],
+        "runId": "e2e-20260618T213252Z-cib035e"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "SIC005"
+      ],
+      "properties": {
+        "name": "SIC005",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB035E.cbl",
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          147
+        ],
+        "runId": "e2e-20260618T213252Z-cib035e"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "SIC231"
+      ],
+      "properties": {
+        "name": "SIC231",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB035E.cbl",
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          171
+        ],
+        "runId": "e2e-20260618T213252Z-cib035e"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "SICAM029"
+      ],
+      "properties": {
+        "name": "SICAM029",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB035E.cbl",
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          234
+        ],
+        "runId": "e2e-20260618T213252Z-cib035e"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "SICCE028"
+      ],
+      "properties": {
+        "name": "SICCE028",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB035E.cbl",
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          755
+        ],
+        "runId": "e2e-20260618T213252Z-cib035e"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "SICCM026"
+      ],
+      "properties": {
+        "name": "SICCM026",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB035E.cbl",
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          748
+        ],
+        "runId": "e2e-20260618T213252Z-cib035e"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "SICFH027"
+      ],
+      "properties": {
+        "name": "SICFH027",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB035E.cbl",
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          140
+        ],
+        "runId": "e2e-20260618T213252Z-cib035e"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "SICFP024"
+      ],
+      "properties": {
+        "name": "SICFP024",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB035E.cbl",
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          306
+        ],
+        "runId": "e2e-20260618T213252Z-cib035e"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "SICIP023"
+      ],
+      "properties": {
+        "name": "SICIP023",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB035E.cbl",
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          265
+        ],
+        "runId": "e2e-20260618T213252Z-cib035e"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "SICMF334"
+      ],
+      "properties": {
+        "name": "SICMF334",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB035E.cbl",
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          162
+        ],
+        "runId": "e2e-20260618T213252Z-cib035e"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "SICR1025"
+      ],
+      "properties": {
+        "name": "SICR1025",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB035E.cbl",
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          181
+        ],
+        "runId": "e2e-20260618T213252Z-cib035e"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "SICVS011"
+      ],
+      "properties": {
+        "name": "SICVS011",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB035E.cbl",
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          154
+        ],
+        "runId": "e2e-20260618T213252Z-cib035e"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "SQLCA"
+      ],
+      "properties": {
+        "name": "SQLCA",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB035E.cbl",
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          241
+        ],
+        "runId": "e2e-20260618T213252Z-cib035e"
+      }
+    },
+    {
+      "label": "ExternalRoutine",
+      "key": [
+        "CXB036O"
+      ],
+      "properties": {
+        "name": "CXB036O",
+        "ingestion": "auto",
+        "layer": "integration",
+        "nodeType": "external-service-call",
+        "viewTag": "integration",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB035E.cbl",
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          368
+        ],
+        "runId": "e2e-20260618T213252Z-cib035e"
+      }
+    },
+    {
+      "label": "ExternalRoutine",
+      "key": [
+        "VTB415O"
+      ],
+      "properties": {
+        "name": "VTB415O",
+        "ingestion": "auto",
+        "layer": "integration",
+        "nodeType": "external-service-call",
+        "viewTag": "integration",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB035E.cbl",
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          314
+        ],
+        "runId": "e2e-20260618T213252Z-cib035e"
+      }
+    },
+    {
+      "label": "ExternalRoutine",
+      "key": [
+        "VXB001O"
+      ],
+      "properties": {
+        "name": "VXB001O",
+        "ingestion": "auto",
+        "layer": "integration",
+        "nodeType": "external-service-call",
+        "viewTag": "integration",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB035E.cbl",
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          377
+        ],
+        "runId": "e2e-20260618T213252Z-cib035e"
+      }
+    },
+    {
+      "label": "DBTable",
+      "key": [
+        "EMICOB"
+      ],
+      "properties": {
+        "name": "EMICOB",
+        "ingestion": "auto",
+        "layer": "data-access",
+        "nodeType": "physical-table",
+        "viewTag": "data-access",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB035E.cbl",
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          658,
+          659,
+          660,
+          661,
+          662,
+          663,
+          664,
+          665,
+          666,
+          667
+        ],
+        "runId": "e2e-20260618T213252Z-cib035e"
+      }
+    },
+    {
+      "label": "DBTable",
+      "key": [
+        "OPERCOB"
+      ],
+      "properties": {
+        "name": "OPERCOB",
+        "ingestion": "auto",
+        "layer": "data-access",
+        "nodeType": "physical-table",
+        "viewTag": "data-access",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB035E.cbl",
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          270,
+          271,
+          272,
+          273,
+          274,
+          275,
+          276,
+          277,
+          278,
+          279
+        ],
+        "runId": "e2e-20260618T213252Z-cib035e"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB035E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB035E",
+          "000-INICIO"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          283
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB035E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB035E",
+          "010-INICIALIZA-1"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          312
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB035E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB035E",
+          "020-PROCESO-1"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          343
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB035E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB035E",
+          "030-DIAS-POR-CUBRIR"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          364
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB035E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB035E",
+          "040-CLASIFICACION"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          404
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB035E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB035E",
+          "050-INICIALIZA-2"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          414
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB035E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB035E",
+          "060-PROCESO-2"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          450
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB035E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB035E",
+          "070-CORTE"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          461
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB035E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB035E",
+          "080-REGISTRO"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          495
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB035E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB035E",
+          "090-ARMA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          517
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB035E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB035E",
+          "100-IMPRIME"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          544
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB035E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB035E",
+          "400-ENCA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          555
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB035E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB035E",
+          "500-LEE-CURSOR-OPERCOB"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          576
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB035E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB035E",
+          "510-LEE-CURSOR-EMICOB"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          602
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB035E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB035E",
+          "520-LEE-TEMPORAL"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          633
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB035E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB035E",
+          "530-UPDATE-CURSOR-EMICOB"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          657
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB035E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB035E",
+          "900-FINALIZA-1"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          679
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB035E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB035E",
+          "910-FINALIZA-2"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          698
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB035E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB035E",
+          "980-ABORTA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          719
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB035E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB035E",
+          "990-CIF-CTL"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          733
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "CIB035E"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "DEMICOB"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          255
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "CIB035E"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "DOPERCOB"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          248
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "CIB035E"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          713
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "CIB035E"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC005"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          147
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "CIB035E"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC231"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          171
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "CIB035E"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SICAM029"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          234
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "CIB035E"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SICCE028"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          755
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "CIB035E"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SICCM026"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          748
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "CIB035E"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SICFH027"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          140
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "CIB035E"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SICFP024"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          306
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "CIB035E"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SICIP023"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          265
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "CIB035E"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SICMF334"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          162
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "CIB035E"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SICR1025"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          181
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "CIB035E"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SICVS011"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          154
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "CIB035E"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SQLCA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          241
+        ]
+      }
+    },
+    {
+      "type": "CALLS_ROUTINE",
+      "from": [
+        "Program",
+        [
+          "CIB035E"
+        ]
+      ],
+      "to": [
+        "ExternalRoutine",
+        [
+          "CXB036O"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          368
+        ]
+      }
+    },
+    {
+      "type": "CALLS_ROUTINE",
+      "from": [
+        "Program",
+        [
+          "CIB035E"
+        ]
+      ],
+      "to": [
+        "ExternalRoutine",
+        [
+          "VTB415O"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          314
+        ]
+      }
+    },
+    {
+      "type": "CALLS_ROUTINE",
+      "from": [
+        "Program",
+        [
+          "CIB035E"
+        ]
+      ],
+      "to": [
+        "ExternalRoutine",
+        [
+          "VXB001O"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          377
+        ]
+      }
+    },
+    {
+      "type": "READS_TABLE",
+      "from": [
+        "Program",
+        [
+          "CIB035E"
+        ]
+      ],
+      "to": [
+        "DBTable",
+        [
+          "EMICOB"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          603,
+          604,
+          605,
+          606,
+          607,
+          608,
+          609,
+          610,
+          611,
+          612
+        ]
+      }
+    },
+    {
+      "type": "READS_TABLE",
+      "from": [
+        "Program",
+        [
+          "CIB035E"
+        ]
+      ],
+      "to": [
+        "DBTable",
+        [
+          "OPERCOB"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          270,
+          271,
+          272,
+          273,
+          274,
+          275,
+          276,
+          277,
+          278,
+          279
+        ]
+      }
+    },
+    {
+      "type": "UPDATES_TABLE",
+      "from": [
+        "Program",
+        [
+          "CIB035E"
+        ]
+      ],
+      "to": [
+        "DBTable",
+        [
+          "EMICOB"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          658,
+          659,
+          660,
+          661,
+          662,
+          663,
+          664,
+          665,
+          666,
+          667
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "CIB035E",
+          "000-INICIO"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SICFP024"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          306
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "CIB035E",
+          "000-INICIO"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SICFP024"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          306
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "CIB035E",
+          "010-INICIALIZA-1"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          329
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "CIB035E",
+          "010-INICIALIZA-1"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          329
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "CIB035E",
+          "030-DIAS-POR-CUBRIR"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          371,
+          380
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "CIB035E",
+          "030-DIAS-POR-CUBRIR"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          371,
+          380
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "CIB035E",
+          "050-INICIALIZA-2"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          434
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "CIB035E",
+          "050-INICIALIZA-2"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          434
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "CIB035E",
+          "050-INICIALIZA-2"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SICCE028"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          425
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "CIB035E",
+          "050-INICIALIZA-2"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SICCE028"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          425
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "CIB035E",
+          "500-LEE-CURSOR-OPERCOB"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          590
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "CIB035E",
+          "500-LEE-CURSOR-OPERCOB"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          590
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "CIB035E",
+          "510-LEE-CURSOR-EMICOB"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          619,
+          627
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "CIB035E",
+          "510-LEE-CURSOR-EMICOB"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          619,
+          627
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "CIB035E",
+          "520-LEE-TEMPORAL"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          651
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "CIB035E",
+          "520-LEE-TEMPORAL"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          651
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "CIB035E",
+          "530-UPDATE-CURSOR-EMICOB"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          673
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "CIB035E",
+          "530-UPDATE-CURSOR-EMICOB"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          673
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "CIB035E",
+          "900-FINALIZA-1"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          692
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "CIB035E",
+          "900-FINALIZA-1"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          692
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "CIB035E",
+          "910-FINALIZA-2"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          713
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "CIB035E",
+          "910-FINALIZA-2"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          713
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "CIB035E",
+          "990-CIF-CTL"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SICCE028"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          755
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "CIB035E",
+          "990-CIF-CTL"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SICCE028"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          755
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "CIB035E",
+          "990-CIF-CTL"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SICCM026"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          748
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "CIB035E",
+          "990-CIF-CTL"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SICCM026"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          748
+        ]
+      }
+    },
+    {
+      "type": "DEPENDS_ON_EXTERNAL",
+      "from": [
+        "Paragraph",
+        [
+          "CIB035E",
+          "010-INICIALIZA-1"
+        ]
+      ],
+      "to": [
+        "ExternalRoutine",
+        [
+          "VTB415O"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          314
+        ]
+      }
+    },
+    {
+      "type": "DEPENDS_ON_EXTERNAL",
+      "from": [
+        "Paragraph",
+        [
+          "CIB035E",
+          "030-DIAS-POR-CUBRIR"
+        ]
+      ],
+      "to": [
+        "ExternalRoutine",
+        [
+          "CXB036O"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          368
+        ]
+      }
+    },
+    {
+      "type": "DEPENDS_ON_EXTERNAL",
+      "from": [
+        "Paragraph",
+        [
+          "CIB035E",
+          "030-DIAS-POR-CUBRIR"
+        ]
+      ],
+      "to": [
+        "ExternalRoutine",
+        [
+          "VXB001O"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T213252Z-cib035e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB035E.cbl",
+        "evidenceLines": [
+          377
+        ]
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "program": "CIB035E",
+      "sequenceColumnsNormalized": true,
+      "performTargetCount": 20,
+      "paragraphCount": 20,
+      "missingPerformTargets": []
+    }
+  ]
+}

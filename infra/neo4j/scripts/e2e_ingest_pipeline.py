@@ -68,6 +68,32 @@ SQL_INCLUDE_RE = re.compile(r"\bINCLUDE\s+([A-Z0-9-]+)\b", re.IGNORECASE)
 PARAGRAPH_EXCLUDE = {"END-IF", "END-EXEC", "END-PERFORM", "EXIT", "ELSE", "WHEN", "END-EVALUATE"}
 
 
+def is_candidate_paragraph_name(paragraph_name: str) -> bool:
+    name = paragraph_name.upper().strip()
+    if name in PARAGRAPH_EXCLUDE:
+        return False
+
+    # Legacy estates mix numeric paragraph labels (010-FOO) and alphabetic labels
+    # (e.g. PROCESA-REPORTE). Keep both while excluding control keywords.
+    if re.match(r"^\d{3,4}-", name):
+        return True
+    if name.startswith("P-") or name.startswith("R-"):
+        return True
+    if "-" in name and re.match(r"^[A-Z][A-Z0-9-]{2,70}$", name):
+        return True
+
+    return False
+
+
+def is_ignored_structural_line(logical_line: str) -> bool:
+    stripped = logical_line.lstrip()
+    return stripped.startswith("*") or stripped.startswith("/")
+
+
+def is_ignorable_perform_target(target: str) -> bool:
+    return target in {"UNTIL", "VARYING", "TIMES", "THRU", "THROUGH"}
+
+
 def run_cypher(query: str) -> list[str]:
     command = [
         "docker",
@@ -169,15 +195,7 @@ def extract_copybook_paragraph_names(copybook_name: str) -> set[str]:
         if not pm:
             continue
         paragraph_name = pm.group(1).upper()
-        is_candidate_paragraph = (
-            paragraph_name not in PARAGRAPH_EXCLUDE
-            and (
-                re.match(r"^\d{3,4}-", paragraph_name)
-                or paragraph_name.startswith("P-")
-                or paragraph_name.startswith("R-")
-            )
-        )
-        if is_candidate_paragraph:
+        if is_candidate_paragraph_name(paragraph_name):
             names.add(paragraph_name)
 
     return names
@@ -189,15 +207,39 @@ def parse_program(program: str) -> dict:
     lines = src.read_text(encoding="utf-8", errors="ignore").splitlines()
 
     procedure_line = None
+    first_candidate_paragraph_line = None
+    first_perform_line = None
     normalized: list[tuple[int, str]] = []
     for i, raw in enumerate(lines, start=1):
         logical = normalize_fixed_line(raw)
         normalized.append((i, logical))
-        if procedure_line is None and "PROCEDURE DIVISION" in logical.upper():
+
+        if is_ignored_structural_line(logical):
+            continue
+
+        up = logical.upper()
+        if procedure_line is None and "PROCEDURE DIVISION" in up:
             procedure_line = i
 
-    if procedure_line is None:
-        raise ValueError(f"No PROCEDURE DIVISION found in {src}")
+        if first_candidate_paragraph_line is None:
+            pm = PARAGRAPH_RE.match(logical)
+            if pm and is_candidate_paragraph_name(pm.group(1)):
+                first_candidate_paragraph_line = i
+
+        if first_perform_line is None:
+            for m in PERFORM_RE.finditer(logical):
+                tgt = m.group(1).upper()
+                if not is_ignorable_perform_target(tgt):
+                    first_perform_line = i
+                    break
+
+    parse_start_candidates = [line for line in [procedure_line, first_candidate_paragraph_line, first_perform_line] if line is not None]
+    if parse_start_candidates:
+        parse_start_line = min(parse_start_candidates)
+        parse_start_reason = "PROCEDURE_DIVISION" if procedure_line is not None else "FALLBACK_PARAGRAPH_OR_PERFORM"
+    else:
+        parse_start_line = len(lines) + 1
+        parse_start_reason = "NO_EXECUTABLE_SIGNALS"
 
     copybooks: dict[str, list[int]] = defaultdict(list)
     calls: dict[str, list[int]] = defaultdict(list)
@@ -230,25 +272,17 @@ def parse_program(program: str) -> dict:
             if current_paragraph:
                 paragraph_calls[current_paragraph][routine_name].append(line_no)
 
-        if line_no >= procedure_line:
+        if line_no >= parse_start_line:
             pm = PARAGRAPH_RE.match(logical)
             if pm:
                 paragraph_name = pm.group(1).upper()
-                is_candidate_paragraph = (
-                    paragraph_name not in PARAGRAPH_EXCLUDE
-                    and (
-                        re.match(r"^\d{3,4}-", paragraph_name)
-                        or paragraph_name.startswith("P-")
-                        or paragraph_name.startswith("R-")
-                    )
-                )
-                if is_candidate_paragraph:
+                if is_candidate_paragraph_name(paragraph_name):
                     current_paragraph = paragraph_name
                     paragraphs.append({"name": paragraph_name, "line": line_no})
 
             for m in PERFORM_RE.finditer(logical):
                 tgt = m.group(1).upper()
-                if tgt not in {"UNTIL", "VARYING", "TIMES", "THRU", "THROUGH"}:
+                if not is_ignorable_perform_target(tgt):
                     perform_targets[tgt].append(line_no)
                     if current_paragraph:
                         paragraph_perform_targets[current_paragraph][tgt].append(line_no)
@@ -352,6 +386,8 @@ def parse_program(program: str) -> dict:
         "program": program,
         "sourceFile": f"src/{program}.cbl",
         "procedureLine": procedure_line,
+        "parseStartLine": parse_start_line,
+        "parseStartReason": parse_start_reason,
         "copybooks": [{"name": k, "evidenceLines": sorted(set(v))} for k, v in sorted(copybooks.items())],
         "calls": [{"name": k, "evidenceLines": sorted(set(v))} for k, v in sorted(calls.items())],
         "readTables": [{"name": k, "evidenceLines": sorted(set(v))} for k, v in sorted(read_tables.items())],
@@ -361,6 +397,9 @@ def parse_program(program: str) -> dict:
         "paragraphCopybooks": paragraph_copybook_deps,
         "coverage": {
             "sequenceColumnsNormalized": True,
+            "procedureDivisionFound": procedure_line is not None,
+            "parseStartLine": parse_start_line,
+            "parseStartReason": parse_start_reason,
             "performTargetCount": len(perform_set),
             "paragraphCount": len(extracted_paragraphs),
             "missingPerformTargets": missing_perform_targets,

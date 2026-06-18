@@ -1,0 +1,29 @@
+{
+  "findings": [
+    {
+      "severity": "critical",
+      "type": "PARAGRAPH_EXTRACTION_COVERAGE_GAP",
+      "evidence": {
+        "program": "CIB064D",
+        "missingPerformTargets": [
+          "CALCULA-FECHAS",
+          "DECLRA-CURSR"
+        ]
+      }
+    }
+  ],
+  "blockers": [
+    {
+      "severity": "critical",
+      "type": "PARAGRAPH_EXTRACTION_COVERAGE_GAP",
+      "evidence": {
+        "program": "CIB064D",
+        "missingPerformTargets": [
+          "CALCULA-FECHAS",
+          "DECLRA-CURSR"
+        ]
+      }
+    }
+  ],
+  "qualityGateResult": "fail"
+}

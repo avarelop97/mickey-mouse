@@ -1,0 +1,245 @@
+{
+  "stage": "discovery-extraction",
+  "runId": "e2e-20260618T205351Z-cib065d",
+  "programs": [
+    "CIB065D"
+  ],
+  "extractions": [
+    {
+      "program": "CIB065D",
+      "sourceFile": "src/CIB065D.cbl",
+      "procedureLine": 92,
+      "copybooks": [
+        {
+          "name": "DPARAM",
+          "evidenceLines": [
+            80
+          ]
+        },
+        {
+          "name": "DTIPCAMB",
+          "evidenceLines": [
+            87
+          ]
+        },
+        {
+          "name": "SI2CM026",
+          "evidenceLines": [
+            245
+          ]
+        },
+        {
+          "name": "SI2FH027",
+          "evidenceLines": [
+            74
+          ]
+        },
+        {
+          "name": "SIC004",
+          "evidenceLines": [
+            232
+          ]
+        },
+        {
+          "name": "SIC005",
+          "evidenceLines": [
+            67
+          ]
+        },
+        {
+          "name": "SIXAB001",
+          "evidenceLines": [
+            60
+          ]
+        },
+        {
+          "name": "SIXAB002",
+          "evidenceLines": [
+            239
+          ]
+        },
+        {
+          "name": "SQLCA",
+          "evidenceLines": [
+            53
+          ]
+        }
+      ],
+      "calls": [],
+      "readTables": [
+        {
+          "name": "PARAM",
+          "evidenceLines": [
+            103,
+            104,
+            105,
+            106,
+            107,
+            108
+          ]
+        },
+        {
+          "name": "TIPCAMB",
+          "evidenceLines": [
+            136,
+            137,
+            138,
+            139,
+            140,
+            141,
+            142,
+            143,
+            168,
+            169,
+            170,
+            171,
+            172,
+            173,
+            174,
+            175
+          ]
+        }
+      ],
+      "updateTables": [
+        {
+          "name": "TIPCAMB",
+          "evidenceLines": [
+            195,
+            196,
+            197,
+            198,
+            199,
+            200,
+            201,
+            202,
+            203,
+            204,
+            205,
+            206
+          ]
+        }
+      ],
+      "paragraphs": [
+        {
+          "name": "005-FECHAS",
+          "evidenceLines": [
+            102
+          ],
+          "executionOrder": 100,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB065D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "010-LEE-TIPO-CAMBIO",
+          "evidenceLines": [
+            128
+          ],
+          "executionOrder": 200,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por CIB065D y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "020-OBTEN-TIPO-24",
+          "evidenceLines": [
+            161
+          ],
+          "executionOrder": 300,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por CIB065D y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "030-GRABA-VALOR-48",
+          "evidenceLines": [
+            194
+          ],
+          "executionOrder": 400,
+          "executionPhase": "PROCESSING",
+          "summary": "Persiste actualizaciones de negocio en CIB065D, aplicando reglas de escritura y control de estado."
+        },
+        {
+          "name": "810-TERMINA",
+          "evidenceLines": [
+            226
+          ],
+          "executionOrder": 500,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de CIB065D, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "980-ABORTA",
+          "evidenceLines": [
+            237
+          ],
+          "executionOrder": 600,
+          "executionPhase": "PROCESSING",
+          "summary": "Gestiona contingencias en CIB065D, concentrando el manejo de error y salida controlada."
+        }
+      ],
+      "paragraphCalls": [],
+      "paragraphCopybooks": [
+        {
+          "paragraph": "005-FECHAS",
+          "copybook": "SIC004",
+          "evidenceLines": [
+            113,
+            123
+          ]
+        },
+        {
+          "paragraph": "010-LEE-TIPO-CAMBIO",
+          "copybook": "SIC004",
+          "evidenceLines": [
+            148
+          ]
+        },
+        {
+          "paragraph": "020-OBTEN-TIPO-24",
+          "copybook": "SIC004",
+          "evidenceLines": [
+            180
+          ]
+        },
+        {
+          "paragraph": "030-GRABA-VALOR-48",
+          "copybook": "SIC004",
+          "evidenceLines": [
+            211,
+            221
+          ]
+        },
+        {
+          "paragraph": "810-TERMINA",
+          "copybook": "SIC004",
+          "evidenceLines": [
+            232
+          ]
+        },
+        {
+          "paragraph": "980-ABORTA",
+          "copybook": "SI2CM026",
+          "evidenceLines": [
+            245
+          ]
+        },
+        {
+          "paragraph": "980-ABORTA",
+          "copybook": "SIXAB002",
+          "evidenceLines": [
+            239
+          ]
+        }
+      ],
+      "coverage": {
+        "sequenceColumnsNormalized": true,
+        "performTargetCount": 6,
+        "paragraphCount": 6,
+        "missingPerformTargets": [],
+        "resolvedPerformTargetsViaCopybook": {
+          "970-SQL-ERROR": [
+            "SIC004"
+          ]
+        }
+      }
+    }
+  ]
+}

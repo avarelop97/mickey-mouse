@@ -1,0 +1,449 @@
+{
+  "stage": "discovery-extraction",
+  "runId": "e2e-20260618T205753Z-cib125d",
+  "programs": [
+    "CIB125D"
+  ],
+  "extractions": [
+    {
+      "program": "CIB125D",
+      "sourceFile": "src/CIB125D.cbl",
+      "procedureLine": 120,
+      "copybooks": [
+        {
+          "name": "DCUENTA",
+          "evidenceLines": [
+            116
+          ]
+        },
+        {
+          "name": "DOPECORI",
+          "evidenceLines": [
+            104
+          ]
+        },
+        {
+          "name": "DOPERA",
+          "evidenceLines": [
+            112
+          ]
+        },
+        {
+          "name": "DPARAM",
+          "evidenceLines": [
+            108
+          ]
+        },
+        {
+          "name": "SIC004",
+          "evidenceLines": [
+            519
+          ]
+        },
+        {
+          "name": "SIC005",
+          "evidenceLines": [
+            76
+          ]
+        },
+        {
+          "name": "SICAM029",
+          "evidenceLines": [
+            97
+          ]
+        },
+        {
+          "name": "SICCM026",
+          "evidenceLines": [
+            535
+          ]
+        },
+        {
+          "name": "SICFH027",
+          "evidenceLines": [
+            62
+          ]
+        },
+        {
+          "name": "SICVS011",
+          "evidenceLines": [
+            90
+          ]
+        },
+        {
+          "name": "SIXAB001",
+          "evidenceLines": [
+            83
+          ]
+        },
+        {
+          "name": "SIXAB002",
+          "evidenceLines": [
+            528
+          ]
+        },
+        {
+          "name": "SQLCA",
+          "evidenceLines": [
+            69
+          ]
+        }
+      ],
+      "calls": [],
+      "readTables": [
+        {
+          "name": "OPECORI",
+          "evidenceLines": [
+            239,
+            240,
+            241,
+            242,
+            243,
+            244,
+            245,
+            246,
+            247,
+            248,
+            249,
+            250,
+            251,
+            252,
+            253,
+            254,
+            255,
+            256,
+            257,
+            258,
+            259,
+            260,
+            261,
+            262,
+            263,
+            264,
+            265,
+            266,
+            267,
+            268,
+            269,
+            270,
+            339,
+            340,
+            341,
+            342,
+            343,
+            344,
+            345,
+            361,
+            362,
+            363,
+            364,
+            365,
+            366,
+            367
+          ]
+        },
+        {
+          "name": "PARAM",
+          "evidenceLines": [
+            212,
+            213,
+            214,
+            215,
+            216,
+            217,
+            444,
+            445,
+            446,
+            447,
+            448,
+            449,
+            450,
+            451,
+            452,
+            474,
+            475,
+            476,
+            477,
+            478,
+            479,
+            480,
+            481,
+            482,
+            483,
+            484,
+            485,
+            486,
+            487,
+            488
+          ]
+        }
+      ],
+      "updateTables": [
+        {
+          "name": "OPERA",
+          "evidenceLines": [
+            383,
+            384,
+            385,
+            386,
+            387,
+            388,
+            389,
+            390,
+            391,
+            392,
+            393,
+            394,
+            395,
+            396,
+            397,
+            398,
+            399,
+            400,
+            401,
+            402,
+            403,
+            404,
+            405,
+            406,
+            407,
+            408,
+            409,
+            410,
+            411,
+            412,
+            413,
+            414,
+            415,
+            416,
+            417,
+            418,
+            419,
+            420,
+            421
+          ]
+        }
+      ],
+      "paragraphs": [
+        {
+          "name": "000-CONTROL",
+          "evidenceLines": [
+            124
+          ],
+          "executionOrder": 100,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB125D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "010-PROCESA-INFORMACION",
+          "evidenceLines": [
+            147
+          ],
+          "executionOrder": 200,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB125D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "020-PROC-OPECORI-OPERA",
+          "evidenceLines": [
+            155
+          ],
+          "executionOrder": 300,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB125D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "500-FECHA-DIA-OPERACION",
+          "evidenceLines": [
+            211
+          ],
+          "executionOrder": 400,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB125D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "510-DEFINE-CURSOR-FUTUROS",
+          "evidenceLines": [
+            238
+          ],
+          "executionOrder": 500,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de CIB125D, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "520-LEE-FUTUROS",
+          "evidenceLines": [
+            287
+          ],
+          "executionOrder": 600,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por CIB125D y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "530-BUSCA-OPER-TASA",
+          "evidenceLines": [
+            338
+          ],
+          "executionOrder": 700,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por CIB125D y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "535-BUSCA-OPER-INPC",
+          "evidenceLines": [
+            360
+          ],
+          "executionOrder": 800,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por CIB125D y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "540-INSERTA-OPERA",
+          "evidenceLines": [
+            382
+          ],
+          "executionOrder": 900,
+          "executionPhase": "PROCESSING",
+          "summary": "Persiste actualizaciones de negocio en CIB125D, aplicando reglas de escritura y control de estado."
+        },
+        {
+          "name": "550-TASA-PARAMETRO",
+          "evidenceLines": [
+            443
+          ],
+          "executionOrder": 1000,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB125D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "560-INPC-PARAMETRO",
+          "evidenceLines": [
+            473
+          ],
+          "executionOrder": 1100,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB125D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "700-FIN",
+          "evidenceLines": [
+            509
+          ],
+          "executionOrder": 1200,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de CIB125D, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "980-ABORTA",
+          "evidenceLines": [
+            525
+          ],
+          "executionOrder": 1300,
+          "executionPhase": "PROCESSING",
+          "summary": "Gestiona contingencias en CIB125D, concentrando el manejo de error y salida controlada."
+        }
+      ],
+      "paragraphCalls": [],
+      "paragraphCopybooks": [
+        {
+          "paragraph": "000-CONTROL",
+          "copybook": "SICCM026",
+          "evidenceLines": [
+            125
+          ]
+        },
+        {
+          "paragraph": "500-FECHA-DIA-OPERACION",
+          "copybook": "SIC004",
+          "evidenceLines": [
+            230
+          ]
+        },
+        {
+          "paragraph": "510-DEFINE-CURSOR-FUTUROS",
+          "copybook": "SIC004",
+          "evidenceLines": [
+            279
+          ]
+        },
+        {
+          "paragraph": "520-LEE-FUTUROS",
+          "copybook": "SIC004",
+          "evidenceLines": [
+            331
+          ]
+        },
+        {
+          "paragraph": "530-BUSCA-OPER-TASA",
+          "copybook": "SIC004",
+          "evidenceLines": [
+            350
+          ]
+        },
+        {
+          "paragraph": "535-BUSCA-OPER-INPC",
+          "copybook": "SIC004",
+          "evidenceLines": [
+            372
+          ]
+        },
+        {
+          "paragraph": "540-INSERTA-OPERA",
+          "copybook": "SIC004",
+          "evidenceLines": [
+            437
+          ]
+        },
+        {
+          "paragraph": "550-TASA-PARAMETRO",
+          "copybook": "SIC004",
+          "evidenceLines": [
+            464
+          ]
+        },
+        {
+          "paragraph": "560-INPC-PARAMETRO",
+          "copybook": "SIC004",
+          "evidenceLines": [
+            500
+          ]
+        },
+        {
+          "paragraph": "700-FIN",
+          "copybook": "SIC004",
+          "evidenceLines": [
+            519
+          ]
+        },
+        {
+          "paragraph": "980-ABORTA",
+          "copybook": "SICCM026",
+          "evidenceLines": [
+            535
+          ]
+        },
+        {
+          "paragraph": "980-ABORTA",
+          "copybook": "SIXAB002",
+          "evidenceLines": [
+            528
+          ]
+        }
+      ],
+      "coverage": {
+        "sequenceColumnsNormalized": true,
+        "performTargetCount": 13,
+        "paragraphCount": 13,
+        "missingPerformTargets": [],
+        "resolvedPerformTargetsViaCopybook": {
+          "970-SQL-ERROR": [
+            "SIC004"
+          ],
+          "999-MUEVE-FECHAS": [
+            "SICCM026"
+          ]
+        }
+      }
+    }
+  ]
+}

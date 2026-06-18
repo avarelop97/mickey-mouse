@@ -1,0 +1,53 @@
+{
+  "runId": "e2e-20260618T205338Z-cib013m",
+  "programs": [
+    "CIB013M"
+  ],
+  "artifacts": {
+    "extraction": "infra/neo4j/reports/e2e-20260618T205338Z-cib013m-extraction.json",
+    "writePayload": "infra/neo4j/reports/e2e-20260618T205338Z-cib013m-writepayload.json",
+    "precheck": "infra/neo4j/reports/e2e-20260618T205338Z-cib013m-precheck.json",
+    "cypher": "infra/neo4j/queries/ingest-e2e-20260618T205338Z-cib013m.cypher"
+  },
+  "precheck": {
+    "findings": [
+      {
+        "severity": "critical",
+        "type": "PARAGRAPH_EXTRACTION_COVERAGE_GAP",
+        "evidence": {
+          "program": "CIB013M",
+          "missingPerformTargets": [
+            "GENERA-REPORTE",
+            "PROCSA-REPRTE-DOLR-CONTRLDO",
+            "PROCSA-REPRTE-DOLR-LIBRE"
+          ]
+        }
+      }
+    ],
+    "blockers": [
+      {
+        "severity": "critical",
+        "type": "PARAGRAPH_EXTRACTION_COVERAGE_GAP",
+        "evidence": {
+          "program": "CIB013M",
+          "missingPerformTargets": [
+            "GENERA-REPORTE",
+            "PROCSA-REPRTE-DOLR-CONTRLDO",
+            "PROCSA-REPRTE-DOLR-LIBRE"
+          ]
+        }
+      }
+    ],
+    "qualityGateResult": "fail"
+  },
+  "commitExecuted": false,
+  "inventory": {},
+  "postAudit": {},
+  "postAuditAfterRemediation": {},
+  "remediationApplied": [],
+  "integralBacklog": {
+    "invalidLabelsGlobal": 0,
+    "criticalRelWithoutEvidenceGlobal": 50
+  },
+  "decision": "BLOCKED"
+}

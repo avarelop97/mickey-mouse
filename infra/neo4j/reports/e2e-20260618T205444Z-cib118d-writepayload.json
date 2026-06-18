@@ -1,0 +1,2541 @@
+{
+  "runId": "e2e-20260618T205444Z-cib118d",
+  "nodes": [
+    {
+      "label": "Program",
+      "key": [
+        "CIB118D"
+      ],
+      "properties": {
+        "name": "CIB118D",
+        "ingestion": "auto",
+        "layer": "program",
+        "nodeType": "program",
+        "viewTag": "program",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB118D.cbl",
+        "runId": "e2e-20260618T205444Z-cib118d"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB118D",
+        "000-CONTROL"
+      ],
+      "properties": {
+        "programName": "CIB118D",
+        "name": "000-CONTROL",
+        "summary": "Orquesta una fase funcional de CIB118D, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 100,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB118D.cbl",
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          246
+        ],
+        "runId": "e2e-20260618T205444Z-cib118d"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB118D",
+        "010-INICIO"
+      ],
+      "properties": {
+        "programName": "CIB118D",
+        "name": "010-INICIO",
+        "summary": "Inicializa el flujo operativo de CIB118D, preparando contexto y validaciones de arranque.",
+        "executionOrder": 200,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB118D.cbl",
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          266
+        ],
+        "runId": "e2e-20260618T205444Z-cib118d"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB118D",
+        "015-INICIO"
+      ],
+      "properties": {
+        "programName": "CIB118D",
+        "name": "015-INICIO",
+        "summary": "Inicializa el flujo operativo de CIB118D, preparando contexto y validaciones de arranque.",
+        "executionOrder": 300,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB118D.cbl",
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          294
+        ],
+        "runId": "e2e-20260618T205444Z-cib118d"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB118D",
+        "020-INICIALIZA-WAREAS"
+      ],
+      "properties": {
+        "programName": "CIB118D",
+        "name": "020-INICIALIZA-WAREAS",
+        "summary": "Inicializa el flujo operativo de CIB118D, preparando contexto y validaciones de arranque.",
+        "executionOrder": 400,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB118D.cbl",
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          313
+        ],
+        "runId": "e2e-20260618T205444Z-cib118d"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB118D",
+        "030-PROCESA-INFORMACION"
+      ],
+      "properties": {
+        "programName": "CIB118D",
+        "name": "030-PROCESA-INFORMACION",
+        "summary": "Orquesta una fase funcional de CIB118D, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 500,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB118D.cbl",
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          326
+        ],
+        "runId": "e2e-20260618T205444Z-cib118d"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB118D",
+        "040-DECIDE-IOPERA"
+      ],
+      "properties": {
+        "programName": "CIB118D",
+        "name": "040-DECIDE-IOPERA",
+        "summary": "Orquesta una fase funcional de CIB118D, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 600,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB118D.cbl",
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          341
+        ],
+        "runId": "e2e-20260618T205444Z-cib118d"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB118D",
+        "050-GENERA-REGISTRO-IMPRESION"
+      ],
+      "properties": {
+        "programName": "CIB118D",
+        "name": "050-GENERA-REGISTRO-IMPRESION",
+        "summary": "Orquesta una fase funcional de CIB118D, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 700,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB118D.cbl",
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          363
+        ],
+        "runId": "e2e-20260618T205444Z-cib118d"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB118D",
+        "060-PROCESA-CORTE"
+      ],
+      "properties": {
+        "programName": "CIB118D",
+        "name": "060-PROCESA-CORTE",
+        "summary": "Orquesta una fase funcional de CIB118D, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 800,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB118D.cbl",
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          405
+        ],
+        "runId": "e2e-20260618T205444Z-cib118d"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB118D",
+        "510-DEFINE-CURSOR-VENCIM-CASA"
+      ],
+      "properties": {
+        "programName": "CIB118D",
+        "name": "510-DEFINE-CURSOR-VENCIM-CASA",
+        "summary": "Cierra la ejecucion de CIB118D, consolidando trazas y terminacion funcional del proceso.",
+        "executionOrder": 900,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB118D.cbl",
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          417
+        ],
+        "runId": "e2e-20260618T205444Z-cib118d"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB118D",
+        "515-DEFINE-CURSOR-VENCIM-BANCO"
+      ],
+      "properties": {
+        "programName": "CIB118D",
+        "name": "515-DEFINE-CURSOR-VENCIM-BANCO",
+        "summary": "Cierra la ejecucion de CIB118D, consolidando trazas y terminacion funcional del proceso.",
+        "executionOrder": 1000,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB118D.cbl",
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          454
+        ],
+        "runId": "e2e-20260618T205444Z-cib118d"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB118D",
+        "520-LEE-VENCIMIENTOS-CASA"
+      ],
+      "properties": {
+        "programName": "CIB118D",
+        "name": "520-LEE-VENCIMIENTOS-CASA",
+        "summary": "Ejecuta lectura/consulta de datos requeridos por CIB118D y deja resultados listos para el siguiente tramo.",
+        "executionOrder": 1100,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB118D.cbl",
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          490
+        ],
+        "runId": "e2e-20260618T205444Z-cib118d"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB118D",
+        "530-LEE-VENCIMIENTOS-BANCO"
+      ],
+      "properties": {
+        "programName": "CIB118D",
+        "name": "530-LEE-VENCIMIENTOS-BANCO",
+        "summary": "Ejecuta lectura/consulta de datos requeridos por CIB118D y deja resultados listos para el siguiente tramo.",
+        "executionOrder": 1200,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB118D.cbl",
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          527
+        ],
+        "runId": "e2e-20260618T205444Z-cib118d"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB118D",
+        "700-FIN"
+      ],
+      "properties": {
+        "programName": "CIB118D",
+        "name": "700-FIN",
+        "summary": "Cierra la ejecucion de CIB118D, consolidando trazas y terminacion funcional del proceso.",
+        "executionOrder": 1300,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB118D.cbl",
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          563
+        ],
+        "runId": "e2e-20260618T205444Z-cib118d"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB118D",
+        "705-ENCABEZADO"
+      ],
+      "properties": {
+        "programName": "CIB118D",
+        "name": "705-ENCABEZADO",
+        "summary": "Orquesta una fase funcional de CIB118D, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 1400,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB118D.cbl",
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          573
+        ],
+        "runId": "e2e-20260618T205444Z-cib118d"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB118D",
+        "720-REP-CONCEPTOS"
+      ],
+      "properties": {
+        "programName": "CIB118D",
+        "name": "720-REP-CONCEPTOS",
+        "summary": "Orquesta una fase funcional de CIB118D, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 1500,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB118D.cbl",
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          594
+        ],
+        "runId": "e2e-20260618T205444Z-cib118d"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB118D",
+        "980-ABORTA"
+      ],
+      "properties": {
+        "programName": "CIB118D",
+        "name": "980-ABORTA",
+        "summary": "Gestiona contingencias en CIB118D, concentrando el manejo de error y salida controlada.",
+        "executionOrder": 1600,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB118D.cbl",
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          611
+        ],
+        "runId": "e2e-20260618T205444Z-cib118d"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB118D",
+        "999-CONST-ENCA-BANCO"
+      ],
+      "properties": {
+        "programName": "CIB118D",
+        "name": "999-CONST-ENCA-BANCO",
+        "summary": "Orquesta una fase funcional de CIB118D, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 1700,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB118D.cbl",
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          627
+        ],
+        "runId": "e2e-20260618T205444Z-cib118d"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB118D",
+        "999-0100-CONTRUYE"
+      ],
+      "properties": {
+        "programName": "CIB118D",
+        "name": "999-0100-CONTRUYE",
+        "summary": "Orquesta una fase funcional de CIB118D, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 1800,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB118D.cbl",
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          628
+        ],
+        "runId": "e2e-20260618T205444Z-cib118d"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB118D",
+        "999-9900-FIN"
+      ],
+      "properties": {
+        "programName": "CIB118D",
+        "name": "999-9900-FIN",
+        "summary": "Cierra la ejecucion de CIB118D, consolidando trazas y terminacion funcional del proceso.",
+        "executionOrder": 1900,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB118D.cbl",
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          648
+        ],
+        "runId": "e2e-20260618T205444Z-cib118d"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "DOPECORI"
+      ],
+      "properties": {
+        "name": "DOPECORI",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB118D.cbl",
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          239
+        ],
+        "runId": "e2e-20260618T205444Z-cib118d"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "SI2CE028"
+      ],
+      "properties": {
+        "name": "SI2CE028",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB118D.cbl",
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          621
+        ],
+        "runId": "e2e-20260618T205444Z-cib118d"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "SI2CM026"
+      ],
+      "properties": {
+        "name": "SI2CM026",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB118D.cbl",
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          654
+        ],
+        "runId": "e2e-20260618T205444Z-cib118d"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "SI2FH027"
+      ],
+      "properties": {
+        "name": "SI2FH027",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB118D.cbl",
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          99
+        ],
+        "runId": "e2e-20260618T205444Z-cib118d"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "SI2R1025"
+      ],
+      "properties": {
+        "name": "SI2R1025",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB118D.cbl",
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          141
+        ],
+        "runId": "e2e-20260618T205444Z-cib118d"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "SIC004"
+      ],
+      "properties": {
+        "name": "SIC004",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB118D.cbl",
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          605
+        ],
+        "runId": "e2e-20260618T205444Z-cib118d"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "SIC005"
+      ],
+      "properties": {
+        "name": "SIC005",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB118D.cbl",
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          113
+        ],
+        "runId": "e2e-20260618T205444Z-cib118d"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "SICAM029"
+      ],
+      "properties": {
+        "name": "SICAM029",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB118D.cbl",
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          134
+        ],
+        "runId": "e2e-20260618T205444Z-cib118d"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "SICVS011"
+      ],
+      "properties": {
+        "name": "SICVS011",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB118D.cbl",
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          127
+        ],
+        "runId": "e2e-20260618T205444Z-cib118d"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "SIXAB001"
+      ],
+      "properties": {
+        "name": "SIXAB001",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB118D.cbl",
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          120
+        ],
+        "runId": "e2e-20260618T205444Z-cib118d"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "SIXAB002"
+      ],
+      "properties": {
+        "name": "SIXAB002",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB118D.cbl",
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          614
+        ],
+        "runId": "e2e-20260618T205444Z-cib118d"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "SQLCA"
+      ],
+      "properties": {
+        "name": "SQLCA",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB118D.cbl",
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          106
+        ],
+        "runId": "e2e-20260618T205444Z-cib118d"
+      }
+    },
+    {
+      "label": "ExternalRoutine",
+      "key": [
+        "ADR003"
+      ],
+      "properties": {
+        "name": "ADR003",
+        "ingestion": "auto",
+        "layer": "integration",
+        "nodeType": "external-service-call",
+        "viewTag": "integration",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB118D.cbl",
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          640
+        ],
+        "runId": "e2e-20260618T205444Z-cib118d"
+      }
+    },
+    {
+      "label": "ExternalRoutine",
+      "key": [
+        "ADR009"
+      ],
+      "properties": {
+        "name": "ADR009",
+        "ingestion": "auto",
+        "layer": "integration",
+        "nodeType": "external-service-call",
+        "viewTag": "integration",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB118D.cbl",
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          642,
+          646
+        ],
+        "runId": "e2e-20260618T205444Z-cib118d"
+      }
+    },
+    {
+      "label": "ExternalRoutine",
+      "key": [
+        "MDB403O"
+      ],
+      "properties": {
+        "name": "MDB403O",
+        "ingestion": "auto",
+        "layer": "integration",
+        "nodeType": "external-service-call",
+        "viewTag": "integration",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB118D.cbl",
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          645
+        ],
+        "runId": "e2e-20260618T205444Z-cib118d"
+      }
+    },
+    {
+      "label": "ExternalRoutine",
+      "key": [
+        "VTB415O"
+      ],
+      "properties": {
+        "name": "VTB415O",
+        "ingestion": "auto",
+        "layer": "integration",
+        "nodeType": "external-service-call",
+        "viewTag": "integration",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB118D.cbl",
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          252
+        ],
+        "runId": "e2e-20260618T205444Z-cib118d"
+      }
+    },
+    {
+      "label": "DBTable",
+      "key": [
+        "OPECORI"
+      ],
+      "properties": {
+        "name": "OPECORI",
+        "ingestion": "auto",
+        "layer": "data-access",
+        "nodeType": "physical-table",
+        "viewTag": "data-access",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB118D.cbl",
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          418,
+          419,
+          420,
+          421,
+          422,
+          423,
+          424,
+          425,
+          426,
+          427,
+          428,
+          429,
+          430,
+          431,
+          432,
+          433,
+          434,
+          435,
+          436,
+          455,
+          456,
+          457,
+          458,
+          459,
+          460,
+          461,
+          462,
+          463,
+          464,
+          465,
+          466,
+          467,
+          468,
+          469,
+          470,
+          471,
+          472,
+          473
+        ],
+        "runId": "e2e-20260618T205444Z-cib118d"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB118D"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB118D",
+          "000-CONTROL"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          246
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB118D"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB118D",
+          "010-INICIO"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          266
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB118D"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB118D",
+          "015-INICIO"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          294
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB118D"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB118D",
+          "020-INICIALIZA-WAREAS"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          313
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB118D"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB118D",
+          "030-PROCESA-INFORMACION"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          326
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB118D"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB118D",
+          "040-DECIDE-IOPERA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          341
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB118D"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB118D",
+          "050-GENERA-REGISTRO-IMPRESION"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          363
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB118D"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB118D",
+          "060-PROCESA-CORTE"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          405
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB118D"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB118D",
+          "510-DEFINE-CURSOR-VENCIM-CASA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          417
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB118D"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB118D",
+          "515-DEFINE-CURSOR-VENCIM-BANCO"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          454
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB118D"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB118D",
+          "520-LEE-VENCIMIENTOS-CASA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          490
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB118D"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB118D",
+          "530-LEE-VENCIMIENTOS-BANCO"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          527
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB118D"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB118D",
+          "700-FIN"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          563
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB118D"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB118D",
+          "705-ENCABEZADO"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          573
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB118D"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB118D",
+          "720-REP-CONCEPTOS"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          594
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB118D"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB118D",
+          "980-ABORTA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          611
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB118D"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB118D",
+          "999-CONST-ENCA-BANCO"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          627
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB118D"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB118D",
+          "999-0100-CONTRUYE"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          628
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB118D"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB118D",
+          "999-9900-FIN"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          648
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "CIB118D"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "DOPECORI"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          239
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "CIB118D"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SI2CE028"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          621
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "CIB118D"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SI2CM026"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          654
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "CIB118D"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SI2FH027"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          99
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "CIB118D"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SI2R1025"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          141
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "CIB118D"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          605
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "CIB118D"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC005"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          113
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "CIB118D"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SICAM029"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          134
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "CIB118D"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SICVS011"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          127
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "CIB118D"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIXAB001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          120
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "CIB118D"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIXAB002"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          614
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "CIB118D"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SQLCA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          106
+        ]
+      }
+    },
+    {
+      "type": "CALLS_ROUTINE",
+      "from": [
+        "Program",
+        [
+          "CIB118D"
+        ]
+      ],
+      "to": [
+        "ExternalRoutine",
+        [
+          "ADR003"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          640
+        ]
+      }
+    },
+    {
+      "type": "CALLS_ROUTINE",
+      "from": [
+        "Program",
+        [
+          "CIB118D"
+        ]
+      ],
+      "to": [
+        "ExternalRoutine",
+        [
+          "ADR009"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          642,
+          646
+        ]
+      }
+    },
+    {
+      "type": "CALLS_ROUTINE",
+      "from": [
+        "Program",
+        [
+          "CIB118D"
+        ]
+      ],
+      "to": [
+        "ExternalRoutine",
+        [
+          "MDB403O"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          645
+        ]
+      }
+    },
+    {
+      "type": "CALLS_ROUTINE",
+      "from": [
+        "Program",
+        [
+          "CIB118D"
+        ]
+      ],
+      "to": [
+        "ExternalRoutine",
+        [
+          "VTB415O"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          252
+        ]
+      }
+    },
+    {
+      "type": "READS_TABLE",
+      "from": [
+        "Program",
+        [
+          "CIB118D"
+        ]
+      ],
+      "to": [
+        "DBTable",
+        [
+          "OPECORI"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          418,
+          419,
+          420,
+          421,
+          422,
+          423,
+          424,
+          425,
+          426,
+          427,
+          428,
+          429,
+          430,
+          431,
+          432,
+          433,
+          434,
+          435,
+          436,
+          455,
+          456,
+          457,
+          458,
+          459,
+          460,
+          461,
+          462,
+          463,
+          464,
+          465,
+          466,
+          467,
+          468,
+          469,
+          470,
+          471,
+          472,
+          473
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "CIB118D",
+          "000-CONTROL"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SI2CM026"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          247
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "CIB118D",
+          "000-CONTROL"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SI2CM026"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          247
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "CIB118D",
+          "015-INICIO"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SI2CE028"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          298
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "CIB118D",
+          "015-INICIO"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SI2CE028"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          298
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "CIB118D",
+          "510-DEFINE-CURSOR-VENCIM-CASA"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          445
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "CIB118D",
+          "510-DEFINE-CURSOR-VENCIM-CASA"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          445
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "CIB118D",
+          "515-DEFINE-CURSOR-VENCIM-BANCO"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          482
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "CIB118D",
+          "515-DEFINE-CURSOR-VENCIM-BANCO"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          482
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "CIB118D",
+          "520-LEE-VENCIMIENTOS-CASA"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          520
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "CIB118D",
+          "520-LEE-VENCIMIENTOS-CASA"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          520
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "CIB118D",
+          "530-LEE-VENCIMIENTOS-BANCO"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          557
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "CIB118D",
+          "530-LEE-VENCIMIENTOS-BANCO"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          557
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "CIB118D",
+          "720-REP-CONCEPTOS"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          605
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "CIB118D",
+          "720-REP-CONCEPTOS"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIC004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          605
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "CIB118D",
+          "980-ABORTA"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SI2CE028"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          621
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "CIB118D",
+          "980-ABORTA"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SI2CE028"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          621
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "CIB118D",
+          "980-ABORTA"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIXAB002"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          614
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "CIB118D",
+          "980-ABORTA"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SIXAB002"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          614
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "CIB118D",
+          "999-9900-FIN"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SI2CM026"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          654
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "CIB118D",
+          "999-9900-FIN"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SI2CM026"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          654
+        ]
+      }
+    },
+    {
+      "type": "DEPENDS_ON_EXTERNAL",
+      "from": [
+        "Paragraph",
+        [
+          "CIB118D",
+          "000-CONTROL"
+        ]
+      ],
+      "to": [
+        "ExternalRoutine",
+        [
+          "VTB415O"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          252
+        ]
+      }
+    },
+    {
+      "type": "DEPENDS_ON_EXTERNAL",
+      "from": [
+        "Paragraph",
+        [
+          "CIB118D",
+          "999-0100-CONTRUYE"
+        ]
+      ],
+      "to": [
+        "ExternalRoutine",
+        [
+          "ADR003"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          640
+        ]
+      }
+    },
+    {
+      "type": "DEPENDS_ON_EXTERNAL",
+      "from": [
+        "Paragraph",
+        [
+          "CIB118D",
+          "999-0100-CONTRUYE"
+        ]
+      ],
+      "to": [
+        "ExternalRoutine",
+        [
+          "ADR009"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          642,
+          646
+        ]
+      }
+    },
+    {
+      "type": "DEPENDS_ON_EXTERNAL",
+      "from": [
+        "Paragraph",
+        [
+          "CIB118D",
+          "999-0100-CONTRUYE"
+        ]
+      ],
+      "to": [
+        "ExternalRoutine",
+        [
+          "MDB403O"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T205444Z-cib118d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB118D.cbl",
+        "evidenceLines": [
+          645
+        ]
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "program": "CIB118D",
+      "sequenceColumnsNormalized": true,
+      "performTargetCount": 18,
+      "paragraphCount": 19,
+      "missingPerformTargets": []
+    }
+  ]
+}
