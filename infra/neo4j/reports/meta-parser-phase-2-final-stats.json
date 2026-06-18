@@ -1,0 +1,15 @@
+{
+  "date": "2026-06-18 Phase 2 Final",
+  "sample_size": 250,
+  "total_programs_estate": 6244,
+  "coverage_percentage": 99.8,
+  "total_perform_targets": 5762,
+  "missing_targets": 9,
+  "programs_with_gaps": 4,
+  "programs_with_gaps_list": [
+    "ZM4DCO13",
+    "ZM4DCO14",
+    "ZM4DLG17",
+    "ZM4MH007"
+  ]
+}
