@@ -39,7 +39,7 @@ Si hay conflicto, priorizar este orden.
 
 El flujo vigente se ejecuta con orquestacion y especialistas:
 
-1. `cobol-neo4j-explorer` (orquestador)
+1. `cobol-neo4j-orchestrator` (orquestador)
 2. `cobol-evidence-extractor` (extraccion)
 3. `neo4j-ontology-auditor` (auditoria determinista pre/post)
 4. `cypher-expert` (escritura idempotente autorizada)

@@ -1,5 +1,5 @@
 ---
-name: cobol-neo4j-explorer
+name: cobol-neo4j-orchestrator
 description: "Orquestador COBOL->Neo4j para discovery, auditoria y precheck con evidencia verificable, validacion ontologica y control de riesgos; coordina especialistas y evita escrituras peligrosas."
 tools: [read, search, execute, todo]
 argument-hint: "Indica objetivo, alcance (programa/rango), modo (discovery|audit|precheck), si requiere delegacion a especialistas y salida esperada."

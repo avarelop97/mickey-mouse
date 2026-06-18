@@ -2,14 +2,14 @@
 
 ## Estado Actual
 
-1. `cobol-neo4j-explorer`
+1. `cobol-neo4j-orchestrator`
 - Estado: activo
 - Rol actual: orquestador inicial
 - Recomendacion: completar delegacion a especialistas
 
 ## Estado Objetivo
 
-1. `cobol-neo4j-explorer` (orquestador)
+1. `cobol-neo4j-orchestrator` (orquestador)
 - Entrada: objetivo, alcance, modo
 - Salida: consolidado final + decision + control de calidad de outputs
 - Dependencias: subagentes especializados

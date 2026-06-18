@@ -17,7 +17,7 @@ Este modelo evita mezclar responsabilidades y mejora trazabilidad de decisiones.
 
 ## Topologia Propuesta
 
-1. `cobol-neo4j-explorer` (orquestador)
+1. `cobol-neo4j-orchestrator` (orquestador)
 - Tipo: coordinacion y control de calidad
 - Responsabilidad:
 	- decidir que tareas ejecutar en cada momento
