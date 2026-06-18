@@ -1,0 +1,55 @@
+{
+  "runId": "e2e-20260618T223226Z-cib062d",
+  "programs": [
+    "CIB062D"
+  ],
+  "artifacts": {
+    "extraction": "infra/neo4j/reports/e2e-20260618T223226Z-cib062d-extraction.json",
+    "writePayload": "infra/neo4j/reports/e2e-20260618T223226Z-cib062d-writepayload.json",
+    "precheck": "infra/neo4j/reports/e2e-20260618T223226Z-cib062d-precheck.json",
+    "cypher": "infra/neo4j/queries/ingest-e2e-20260618T223226Z-cib062d.cypher"
+  },
+  "precheck": {
+    "findings": [],
+    "blockers": [],
+    "qualityGateResult": "pass"
+  },
+  "commitExecuted": true,
+  "inventory": {
+    "programNodes": 1,
+    "paragraphNodes": 55,
+    "copybookNodesSeenByRun": 17,
+    "dbTableNodesSeenByRun": 4,
+    "externalRoutineNodesSeenByRun": 2,
+    "includesCopybookRels": 17,
+    "hasParagraphRels": 55,
+    "callsRoutineRels": 2,
+    "usesCopybookRels": 23,
+    "implementedByRels": 23,
+    "dependsOnExternalRels": 3,
+    "readsTableRels": 4,
+    "updatesTableRels": 0
+  },
+  "postAudit": {
+    "missingMandatoryProperties": 0,
+    "invalidReviewStateMetadata": 0,
+    "invalidParagraphSummary": 0,
+    "missingCriticalRelationEvidence": 0,
+    "ontologyViolations": 0
+  },
+  "postAuditAfterRemediation": {
+    "missingMandatoryProperties": 0,
+    "invalidReviewStateMetadata": 0,
+    "invalidParagraphSummary": 0,
+    "missingCriticalRelationEvidence": 0,
+    "ontologyViolations": 0
+  },
+  "remediationApplied": [
+    "Enforced review metadata consistency for ingested scope"
+  ],
+  "integralBacklog": {
+    "invalidLabelsGlobal": 0,
+    "criticalRelWithoutEvidenceGlobal": 10
+  },
+  "decision": "PASS"
+}

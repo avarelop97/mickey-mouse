@@ -1,0 +1,780 @@
+{
+  "stage": "discovery-extraction",
+  "runId": "e2e-20260618T223319Z-cib064d",
+  "programs": [
+    "CIB064D"
+  ],
+  "extractions": [
+    {
+      "program": "CIB064D",
+      "sourceFile": "src/CIB064D.cbl",
+      "procedureLine": null,
+      "parseStartLine": 2,
+      "parseStartReason": "FALLBACK_PARAGRAPH_OR_PERFORM",
+      "copybooks": [
+        {
+          "name": "DCONCEPT",
+          "evidenceLines": [
+            220
+          ]
+        },
+        {
+          "name": "DOPERCOB",
+          "evidenceLines": [
+            202
+          ]
+        },
+        {
+          "name": "DPARAM",
+          "evidenceLines": [
+            214
+          ]
+        },
+        {
+          "name": "DTIPCAMB",
+          "evidenceLines": [
+            208
+          ]
+        },
+        {
+          "name": "SI2CE028",
+          "evidenceLines": [
+            768
+          ]
+        },
+        {
+          "name": "SI2CM026",
+          "evidenceLines": [
+            761
+          ]
+        },
+        {
+          "name": "SI2FH027",
+          "evidenceLines": [
+            313
+          ]
+        },
+        {
+          "name": "SI2R1025",
+          "evidenceLines": [
+            81
+          ]
+        },
+        {
+          "name": "SIC004",
+          "evidenceLines": [
+            731
+          ]
+        },
+        {
+          "name": "SIC005",
+          "evidenceLines": [
+            226
+          ]
+        },
+        {
+          "name": "SIC231",
+          "evidenceLines": [
+            246
+          ]
+        },
+        {
+          "name": "SICAM029",
+          "evidenceLines": [
+            238
+          ]
+        },
+        {
+          "name": "SICFP024",
+          "evidenceLines": [
+            335
+          ]
+        },
+        {
+          "name": "SICIP023",
+          "evidenceLines": [
+            319
+          ]
+        },
+        {
+          "name": "SICPATA2",
+          "evidenceLines": [
+            281
+          ]
+        },
+        {
+          "name": "SICVS011",
+          "evidenceLines": [
+            232
+          ]
+        },
+        {
+          "name": "SQLCA",
+          "evidenceLines": [
+            303
+          ]
+        }
+      ],
+      "calls": [
+        {
+          "name": "VTB415O",
+          "evidenceLines": [
+            341,
+            399
+          ]
+        },
+        {
+          "name": "VXB001O",
+          "evidenceLines": [
+            353,
+            359
+          ]
+        }
+      ],
+      "readTables": [
+        {
+          "name": "CONCEPT",
+          "evidenceLines": [
+            681,
+            682,
+            683,
+            684,
+            685,
+            686,
+            687,
+            688,
+            689,
+            690
+          ]
+        },
+        {
+          "name": "OPERCOB",
+          "evidenceLines": [
+            366,
+            367,
+            368,
+            369,
+            370,
+            371,
+            372,
+            373,
+            374,
+            375,
+            376,
+            377,
+            378,
+            379,
+            380,
+            381,
+            382
+          ]
+        },
+        {
+          "name": "PARAM",
+          "evidenceLines": [
+            588,
+            589,
+            590,
+            591,
+            592,
+            593,
+            594,
+            595,
+            596,
+            597,
+            598
+          ]
+        },
+        {
+          "name": "TIPCAMB",
+          "evidenceLines": [
+            650,
+            651,
+            652,
+            653,
+            654,
+            655,
+            656,
+            657
+          ]
+        }
+      ],
+      "updateTables": [],
+      "paragraphs": [
+        {
+          "name": "PROGRAM-ID",
+          "evidenceLines": [
+            2
+          ],
+          "executionOrder": 100,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB064D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "DATE-WRITTEN",
+          "evidenceLines": [
+            9
+          ],
+          "executionOrder": 200,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB064D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "SOURCE-COMPUTER",
+          "evidenceLines": [
+            44
+          ],
+          "executionOrder": 300,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB064D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "IBM-4381",
+          "evidenceLines": [
+            45
+          ],
+          "executionOrder": 400,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB064D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "OBJECT-COMPUTER",
+          "evidenceLines": [
+            46
+          ],
+          "executionOrder": 500,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB064D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "IBM-4381",
+          "evidenceLines": [
+            47
+          ],
+          "executionOrder": 600,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB064D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "INPUT-OUTPUT",
+          "evidenceLines": [
+            49
+          ],
+          "executionOrder": 700,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB064D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "FILE-CONTROL",
+          "evidenceLines": [
+            50
+          ],
+          "executionOrder": 800,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB064D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "WORKING-STORAGE",
+          "evidenceLines": [
+            64
+          ],
+          "executionOrder": 900,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB064D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "CALCULA-FECHAS",
+          "evidenceLines": [
+            337
+          ],
+          "executionOrder": 1000,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB064D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "DECLRA-CURSR",
+          "evidenceLines": [
+            365
+          ],
+          "executionOrder": 1100,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB064D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "0100-INICIALIZA",
+          "evidenceLines": [
+            384
+          ],
+          "executionOrder": 1200,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de CIB064D, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "000-0100-INICIALIZA",
+          "evidenceLines": [
+            385
+          ],
+          "executionOrder": 1300,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de CIB064D, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "000-0200-FIN",
+          "evidenceLines": [
+            438
+          ],
+          "executionOrder": 1400,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de CIB064D, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "005-PROCESO-PRINCIPAL",
+          "evidenceLines": [
+            441
+          ],
+          "executionOrder": 1500,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB064D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "005-0050-ABRE-CURSOR",
+          "evidenceLines": [
+            442
+          ],
+          "executionOrder": 1600,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB064D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "005-0100-LIMPIA-ACUMULADORES",
+          "evidenceLines": [
+            454
+          ],
+          "executionOrder": 1700,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB064D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "005-9900-FIN",
+          "evidenceLines": [
+            486
+          ],
+          "executionOrder": 1800,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de CIB064D, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "020-PROCESA-OPERACION",
+          "evidenceLines": [
+            489
+          ],
+          "executionOrder": 1900,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB064D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "020-0100-INICIO",
+          "evidenceLines": [
+            490
+          ],
+          "executionOrder": 2000,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de CIB064D, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "020-9900-FIN",
+          "evidenceLines": [
+            580
+          ],
+          "executionOrder": 2100,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de CIB064D, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "500-LEE-PARAM",
+          "evidenceLines": [
+            586
+          ],
+          "executionOrder": 2200,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por CIB064D y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "500-0100-INICIO",
+          "evidenceLines": [
+            587
+          ],
+          "executionOrder": 2300,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de CIB064D, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "500-9900-FIN",
+          "evidenceLines": [
+            614
+          ],
+          "executionOrder": 2400,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de CIB064D, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "510-LEE-OPERCOB",
+          "evidenceLines": [
+            617
+          ],
+          "executionOrder": 2500,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por CIB064D y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "510-0100-INICIO",
+          "evidenceLines": [
+            618
+          ],
+          "executionOrder": 2600,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de CIB064D, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "510-9900-FIN",
+          "evidenceLines": [
+            643
+          ],
+          "executionOrder": 2700,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de CIB064D, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "550-LEE-TIPO-CAMBIO",
+          "evidenceLines": [
+            648
+          ],
+          "executionOrder": 2800,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por CIB064D y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "550-0100-INICIO",
+          "evidenceLines": [
+            649
+          ],
+          "executionOrder": 2900,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de CIB064D, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "550-9900-FIN",
+          "evidenceLines": [
+            673
+          ],
+          "executionOrder": 3000,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de CIB064D, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "600-LEE-CONCEPT",
+          "evidenceLines": [
+            679
+          ],
+          "executionOrder": 3100,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por CIB064D y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "600-0100-INICIO",
+          "evidenceLines": [
+            680
+          ],
+          "executionOrder": 3200,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de CIB064D, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "600-9900-FIN",
+          "evidenceLines": [
+            703
+          ],
+          "executionOrder": 3300,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de CIB064D, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "700-ESC-ENCA",
+          "evidenceLines": [
+            706
+          ],
+          "executionOrder": 3400,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB064D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "700-0100-INICIO",
+          "evidenceLines": [
+            707
+          ],
+          "executionOrder": 3500,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de CIB064D, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "700-9900-FIN",
+          "evidenceLines": [
+            724
+          ],
+          "executionOrder": 3600,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de CIB064D, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "980-ABORTA",
+          "evidenceLines": [
+            734
+          ],
+          "executionOrder": 3700,
+          "executionPhase": "PROCESSING",
+          "summary": "Gestiona contingencias en CIB064D, concentrando el manejo de error y salida controlada."
+        },
+        {
+          "name": "980-0100-INICIO",
+          "evidenceLines": [
+            735
+          ],
+          "executionOrder": 3800,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de CIB064D, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "980-9900-FIN",
+          "evidenceLines": [
+            747
+          ],
+          "executionOrder": 3900,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de CIB064D, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "990-CIF-CTL",
+          "evidenceLines": [
+            753
+          ],
+          "executionOrder": 4000,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB064D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "990-9900-FIN",
+          "evidenceLines": [
+            754
+          ],
+          "executionOrder": 4100,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de CIB064D, consolidando trazas y terminacion funcional del proceso."
+        }
+      ],
+      "paragraphCalls": [
+        {
+          "paragraph": "000-0100-INICIALIZA",
+          "routine": "VTB415O",
+          "evidenceLines": [
+            399
+          ]
+        },
+        {
+          "paragraph": "CALCULA-FECHAS",
+          "routine": "VTB415O",
+          "evidenceLines": [
+            341
+          ]
+        },
+        {
+          "paragraph": "CALCULA-FECHAS",
+          "routine": "VXB001O",
+          "evidenceLines": [
+            353,
+            359
+          ]
+        }
+      ],
+      "paragraphCopybooks": [
+        {
+          "paragraph": "000-0100-INICIALIZA",
+          "copybook": "SI2CE028",
+          "evidenceLines": [
+            389
+          ]
+        },
+        {
+          "paragraph": "005-0050-ABRE-CURSOR",
+          "copybook": "SIC004",
+          "evidenceLines": [
+            452
+          ]
+        },
+        {
+          "paragraph": "500-0100-INICIO",
+          "copybook": "SIC004",
+          "evidenceLines": [
+            603
+          ]
+        },
+        {
+          "paragraph": "510-0100-INICIO",
+          "copybook": "SIC004",
+          "evidenceLines": [
+            638
+          ]
+        },
+        {
+          "paragraph": "550-0100-INICIO",
+          "copybook": "SIC004",
+          "evidenceLines": [
+            662
+          ]
+        },
+        {
+          "paragraph": "600-0100-INICIO",
+          "copybook": "SIC004",
+          "evidenceLines": [
+            695
+          ]
+        },
+        {
+          "paragraph": "700-9900-FIN",
+          "copybook": "SIC004",
+          "evidenceLines": [
+            731
+          ]
+        },
+        {
+          "paragraph": "990-9900-FIN",
+          "copybook": "SI2CE028",
+          "evidenceLines": [
+            768
+          ]
+        },
+        {
+          "paragraph": "990-9900-FIN",
+          "copybook": "SI2CM026",
+          "evidenceLines": [
+            761
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "DCONCEPT",
+          "evidenceLines": [
+            220
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "DOPERCOB",
+          "evidenceLines": [
+            202
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "DPARAM",
+          "evidenceLines": [
+            214
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "DTIPCAMB",
+          "evidenceLines": [
+            208
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "SI2FH027",
+          "evidenceLines": [
+            313
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "SI2R1025",
+          "evidenceLines": [
+            81
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "SIC005",
+          "evidenceLines": [
+            226
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "SIC231",
+          "evidenceLines": [
+            246
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "SICAM029",
+          "evidenceLines": [
+            238
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "SICFP024",
+          "evidenceLines": [
+            335
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "SICIP023",
+          "evidenceLines": [
+            319
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "SICPATA2",
+          "evidenceLines": [
+            281
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "SICVS011",
+          "evidenceLines": [
+            232
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "SQLCA",
+          "evidenceLines": [
+            303
+          ]
+        }
+      ],
+      "coverage": {
+        "sequenceColumnsNormalized": true,
+        "procedureDivisionFound": false,
+        "parseStartLine": 2,
+        "parseStartReason": "FALLBACK_PARAGRAPH_OR_PERFORM",
+        "performTargetCount": 13,
+        "paragraphCount": 41,
+        "missingPerformTargets": [],
+        "resolvedPerformTargetsViaCopybook": {
+          "970-SQL-ERROR": [
+            "SIC004"
+          ],
+          "999-CONST-ENCA": [
+            "SI2CE028"
+          ]
+        }
+      }
+    }
+  ]
+}

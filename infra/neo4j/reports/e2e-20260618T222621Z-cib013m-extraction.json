@@ -1,0 +1,562 @@
+{
+  "stage": "discovery-extraction",
+  "runId": "e2e-20260618T222621Z-cib013m",
+  "programs": [
+    "CIB013M"
+  ],
+  "extractions": [
+    {
+      "program": "CIB013M",
+      "sourceFile": "src/CIB013M.cbl",
+      "procedureLine": 531,
+      "parseStartLine": 2,
+      "parseStartReason": "PROCEDURE_DIVISION",
+      "copybooks": [
+        {
+          "name": "DPARAM",
+          "evidenceLines": [
+            523
+          ]
+        },
+        {
+          "name": "SIC004",
+          "evidenceLines": [
+            1136
+          ]
+        },
+        {
+          "name": "SIC005",
+          "evidenceLines": [
+            495
+          ]
+        },
+        {
+          "name": "SICAM029",
+          "evidenceLines": [
+            509
+          ]
+        },
+        {
+          "name": "SICCE028",
+          "evidenceLines": [
+            1156
+          ]
+        },
+        {
+          "name": "SICCM026",
+          "evidenceLines": [
+            1149
+          ]
+        },
+        {
+          "name": "SICFH027",
+          "evidenceLines": [
+            502
+          ]
+        },
+        {
+          "name": "SICPATA0",
+          "evidenceLines": [
+            118
+          ]
+        },
+        {
+          "name": "SICPATA1",
+          "evidenceLines": [
+            122
+          ]
+        },
+        {
+          "name": "SICR1025",
+          "evidenceLines": [
+            516
+          ]
+        },
+        {
+          "name": "SIXAB001",
+          "evidenceLines": [
+            488
+          ]
+        },
+        {
+          "name": "SIXAB002",
+          "evidenceLines": [
+            1142
+          ]
+        },
+        {
+          "name": "SQLCA",
+          "evidenceLines": [
+            481
+          ]
+        }
+      ],
+      "calls": [],
+      "readTables": [
+        {
+          "name": "PARAM",
+          "evidenceLines": [
+            596,
+            597,
+            598,
+            599,
+            600,
+            601,
+            602,
+            603,
+            605,
+            606,
+            607,
+            608,
+            609,
+            610,
+            611,
+            612
+          ]
+        }
+      ],
+      "updateTables": [
+        {
+          "name": "PARAM",
+          "evidenceLines": [
+            998,
+            999,
+            1000,
+            1001,
+            1002,
+            1031,
+            1032,
+            1033,
+            1034
+          ]
+        }
+      ],
+      "paragraphs": [
+        {
+          "name": "PROGRAM-ID",
+          "evidenceLines": [
+            2
+          ],
+          "executionOrder": 100,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB013M, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "DATE-WRITTEN",
+          "evidenceLines": [
+            9
+          ],
+          "executionOrder": 200,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB013M, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "SOURCE-COMPUTER",
+          "evidenceLines": [
+            29
+          ],
+          "executionOrder": 300,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB013M, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "IBM-4381",
+          "evidenceLines": [
+            30
+          ],
+          "executionOrder": 400,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB013M, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "OBJECT-COMPUTER",
+          "evidenceLines": [
+            31
+          ],
+          "executionOrder": 500,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB013M, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "IBM-4381",
+          "evidenceLines": [
+            32
+          ],
+          "executionOrder": 600,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB013M, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "INPUT-OUTPUT",
+          "evidenceLines": [
+            34
+          ],
+          "executionOrder": 700,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB013M, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "FILE-CONTROL",
+          "evidenceLines": [
+            35
+          ],
+          "executionOrder": 800,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB013M, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "WORKING-STORAGE",
+          "evidenceLines": [
+            54
+          ],
+          "executionOrder": 900,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB013M, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "000-CONTROL",
+          "evidenceLines": [
+            535
+          ],
+          "executionOrder": 1000,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB013M, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "PROCSA-REPRTE-DOLR-CONTRLDO",
+          "evidenceLines": [
+            549
+          ],
+          "executionOrder": 1100,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB013M, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "PROCSA-REPRTE-DOLR-LIBRE",
+          "evidenceLines": [
+            559
+          ],
+          "executionOrder": 1200,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB013M, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "GENERA-REPORTE",
+          "evidenceLines": [
+            569
+          ],
+          "executionOrder": 1300,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB013M, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "005-DECLARA-CURSOR",
+          "evidenceLines": [
+            595
+          ],
+          "executionOrder": 1400,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB013M, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "005-ABRE-CURSR",
+          "evidenceLines": [
+            619
+          ],
+          "executionOrder": 1500,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB013M, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "010-CALCULOS",
+          "evidenceLines": [
+            646
+          ],
+          "executionOrder": 1600,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB013M, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "020-MUEVE-A-IMPRESION",
+          "evidenceLines": [
+            804
+          ],
+          "executionOrder": 1700,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB013M, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "030-IMPRIME",
+          "evidenceLines": [
+            936
+          ],
+          "executionOrder": 1800,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB013M, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "040-ACTUALIZA-PARAM-TA0",
+          "evidenceLines": [
+            994
+          ],
+          "executionOrder": 1900,
+          "executionPhase": "PROCESSING",
+          "summary": "Persiste actualizaciones de negocio en CIB013M, aplicando reglas de escritura y control de estado."
+        },
+        {
+          "name": "050-ACTUALIZA-PARAM-TA1",
+          "evidenceLines": [
+            1016
+          ],
+          "executionOrder": 2000,
+          "executionPhase": "PROCESSING",
+          "summary": "Persiste actualizaciones de negocio en CIB013M, aplicando reglas de escritura y control de estado."
+        },
+        {
+          "name": "510-LEE-DATOS-TA0",
+          "evidenceLines": [
+            1047
+          ],
+          "executionOrder": 2100,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por CIB013M y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "510-LEE-DATOS-TA1",
+          "evidenceLines": [
+            1066
+          ],
+          "executionOrder": 2200,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por CIB013M y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "510-MUEVE-DATOS-TA0",
+          "evidenceLines": [
+            1083
+          ],
+          "executionOrder": 2300,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB013M, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "510-MUEVE-DATOS-TA1",
+          "evidenceLines": [
+            1087
+          ],
+          "executionOrder": 2400,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB013M, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "550-ACT-SDO-MESANT",
+          "evidenceLines": [
+            1095
+          ],
+          "executionOrder": 2500,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB013M, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "700-CIERRA-CURSORES",
+          "evidenceLines": [
+            1105
+          ],
+          "executionOrder": 2600,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de CIB013M, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "710-TERMINA",
+          "evidenceLines": [
+            1128
+          ],
+          "executionOrder": 2700,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de CIB013M, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "980-ABORTA",
+          "evidenceLines": [
+            1140
+          ],
+          "executionOrder": 2800,
+          "executionPhase": "PROCESSING",
+          "summary": "Gestiona contingencias en CIB013M, concentrando el manejo de error y salida controlada."
+        }
+      ],
+      "paragraphCalls": [],
+      "paragraphCopybooks": [
+        {
+          "paragraph": "000-CONTROL",
+          "copybook": "SICCE028",
+          "evidenceLines": [
+            539
+          ]
+        },
+        {
+          "paragraph": "000-CONTROL",
+          "copybook": "SICCM026",
+          "evidenceLines": [
+            538
+          ]
+        },
+        {
+          "paragraph": "005-ABRE-CURSR",
+          "copybook": "SIC004",
+          "evidenceLines": [
+            628,
+            639
+          ]
+        },
+        {
+          "paragraph": "040-ACTUALIZA-PARAM-TA0",
+          "copybook": "SIC004",
+          "evidenceLines": [
+            1009
+          ]
+        },
+        {
+          "paragraph": "050-ACTUALIZA-PARAM-TA1",
+          "copybook": "SIC004",
+          "evidenceLines": [
+            1041
+          ]
+        },
+        {
+          "paragraph": "510-LEE-DATOS-TA0",
+          "copybook": "SIC004",
+          "evidenceLines": [
+            1059
+          ]
+        },
+        {
+          "paragraph": "510-LEE-DATOS-TA1",
+          "copybook": "SIC004",
+          "evidenceLines": [
+            1079
+          ]
+        },
+        {
+          "paragraph": "700-CIERRA-CURSORES",
+          "copybook": "SIC004",
+          "evidenceLines": [
+            1113,
+            1122
+          ]
+        },
+        {
+          "paragraph": "710-TERMINA",
+          "copybook": "SIC004",
+          "evidenceLines": [
+            1136
+          ]
+        },
+        {
+          "paragraph": "980-ABORTA",
+          "copybook": "SICCE028",
+          "evidenceLines": [
+            1156
+          ]
+        },
+        {
+          "paragraph": "980-ABORTA",
+          "copybook": "SICCM026",
+          "evidenceLines": [
+            1149
+          ]
+        },
+        {
+          "paragraph": "980-ABORTA",
+          "copybook": "SIXAB002",
+          "evidenceLines": [
+            1142
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "DPARAM",
+          "evidenceLines": [
+            523
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "SIC005",
+          "evidenceLines": [
+            495
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "SICAM029",
+          "evidenceLines": [
+            509
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "SICFH027",
+          "evidenceLines": [
+            502
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "SICPATA0",
+          "evidenceLines": [
+            118
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "SICPATA1",
+          "evidenceLines": [
+            122
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "SICR1025",
+          "evidenceLines": [
+            516
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "SIXAB001",
+          "evidenceLines": [
+            488
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "SQLCA",
+          "evidenceLines": [
+            481
+          ]
+        }
+      ],
+      "coverage": {
+        "sequenceColumnsNormalized": true,
+        "procedureDivisionFound": true,
+        "parseStartLine": 2,
+        "parseStartReason": "PROCEDURE_DIVISION",
+        "performTargetCount": 20,
+        "paragraphCount": 28,
+        "missingPerformTargets": [],
+        "resolvedPerformTargetsViaCopybook": {
+          "970-SQL-ERROR": [
+            "SIC004"
+          ],
+          "999-0100-CONSTRUYE": [
+            "SICCE028"
+          ],
+          "999-MUEVE-FECHAS": [
+            "SICCM026"
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "runId": "e2e-20260618T224804Z-cib045d-zm2cfi01-zm9rus01",
+  "programs": [
+    "CIB045D",
+    "ZM2CFI01",
+    "ZM9RUS01"
+  ],
+  "artifacts": {
+    "extraction": "infra/neo4j/reports/e2e-20260618T224804Z-cib045d-zm2cfi01-zm9rus01-extraction.json",
+    "writePayload": "infra/neo4j/reports/e2e-20260618T224804Z-cib045d-zm2cfi01-zm9rus01-writepayload.json",
+    "precheck": "infra/neo4j/reports/e2e-20260618T224804Z-cib045d-zm2cfi01-zm9rus01-precheck.json",
+    "cypher": "infra/neo4j/queries/ingest-e2e-20260618T224804Z-cib045d-zm2cfi01-zm9rus01.cypher"
+  },
+  "precheck": {
+    "findings": [],
+    "blockers": [],
+    "qualityGateResult": "pass"
+  },
+  "commitExecuted": true,
+  "inventory": {
+    "programNodes": 3,
+    "paragraphNodes": 149,
+    "copybookNodesSeenByRun": 68,
+    "dbTableNodesSeenByRun": 11,
+    "externalRoutineNodesSeenByRun": 2,
+    "includesCopybookRels": 72,
+    "hasParagraphRels": 149,
+    "callsRoutineRels": 5,
+    "usesCopybookRels": 124,
+    "implementedByRels": 114,
+    "dependsOnExternalRels": 39,
+    "readsTableRels": 16,
+    "updatesTableRels": 5
+  },
+  "postAudit": {
+    "missingMandatoryProperties": 0,
+    "invalidReviewStateMetadata": 0,
+    "invalidParagraphSummary": 0,
+    "missingCriticalRelationEvidence": 0,
+    "ontologyViolations": 0
+  },
+  "postAuditAfterRemediation": {
+    "missingMandatoryProperties": 0,
+    "invalidReviewStateMetadata": 0,
+    "invalidParagraphSummary": 0,
+    "missingCriticalRelationEvidence": 0,
+    "ontologyViolations": 0
+  },
+  "remediationApplied": [
+    "Enforced review metadata consistency for ingested scope"
+  ],
+  "integralBacklog": {
+    "invalidLabelsGlobal": 0,
+    "criticalRelWithoutEvidenceGlobal": 10
+  },
+  "decision": "PASS"
+}

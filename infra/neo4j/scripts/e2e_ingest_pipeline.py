@@ -73,9 +73,11 @@ def is_candidate_paragraph_name(paragraph_name: str) -> bool:
     if name in PARAGRAPH_EXCLUDE:
         return False
 
-    # Legacy estates mix numeric paragraph labels (010-FOO) and alphabetic labels
-    # (e.g. PROCESA-REPORTE). Keep both while excluding control keywords.
-    if re.match(r"^\d{3,4}-", name):
+    # Legacy estates mix numeric paragraph labels (010-FOO, 100000-FOO, 700A-FOO) and alphabetic labels
+    # (e.g. PROCESA-REPORTE). Keep all while excluding control keywords.
+    if re.match(r"^\d{3,6}-", name):
+        return True
+    if re.match(r"^\d{3}[A-Z]-", name):
         return True
     if name.startswith("P-") or name.startswith("R-"):
         return True
@@ -258,6 +260,10 @@ def parse_program(program: str) -> dict:
 
     for line_no, logical in normalized:
         up = logical.upper()
+
+        # Skip comment lines and directive lines
+        if is_ignored_structural_line(logical):
+            continue
 
         cm = COPY_RE.match(logical)
         if cm:
