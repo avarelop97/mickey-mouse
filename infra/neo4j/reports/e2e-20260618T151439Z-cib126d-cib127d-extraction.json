@@ -1,0 +1,272 @@
+{
+  "stage": "discovery-extraction",
+  "runId": "e2e-20260618T151439Z-cib126d-cib127d",
+  "programs": [
+    "CIB126D",
+    "CIB127D"
+  ],
+  "extractions": [
+    {
+      "program": "CIB126D",
+      "sourceFile": "src/CIB126D.cbl",
+      "procedureLine": 278,
+      "copybooks": [],
+      "calls": [
+        {
+          "name": "ADR003",
+          "evidenceLines": [
+            754
+          ]
+        },
+        {
+          "name": "ADR009",
+          "evidenceLines": [
+            756,
+            760
+          ]
+        },
+        {
+          "name": "MDB403O",
+          "evidenceLines": [
+            759
+          ]
+        },
+        {
+          "name": "VTB415O",
+          "evidenceLines": [
+            294
+          ]
+        }
+      ],
+      "readTables": [
+        {
+          "name": "OPECORI",
+          "evidenceLines": [
+            449,
+            450,
+            451,
+            452,
+            453,
+            454,
+            455,
+            456,
+            457,
+            458,
+            459,
+            460,
+            461,
+            462,
+            463,
+            464,
+            465,
+            466,
+            467,
+            468,
+            469,
+            491,
+            492,
+            493,
+            494,
+            495,
+            496,
+            497,
+            498,
+            499,
+            500,
+            501,
+            502,
+            503,
+            504,
+            505,
+            506,
+            507,
+            508,
+            509,
+            510,
+            511
+          ]
+        },
+        {
+          "name": "PARAM",
+          "evidenceLines": [
+            390,
+            391,
+            392,
+            393,
+            394,
+            395,
+            396,
+            397,
+            398,
+            399,
+            400,
+            401,
+            421,
+            422,
+            423,
+            424,
+            425,
+            426,
+            427
+          ]
+        }
+      ],
+      "updateTables": [],
+      "paragraphs": [
+        {
+          "name": "999-0100-CONSTRUYE",
+          "evidenceLines": [
+            741
+          ],
+          "executionOrder": 100,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB126D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "999-9900-FIN",
+          "evidenceLines": [
+            762
+          ],
+          "executionOrder": 200,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de CIB126D, consolidando trazas y terminacion funcional del proceso."
+        }
+      ],
+      "coverage": {
+        "sequenceColumnsNormalized": true,
+        "performTargetCount": 19,
+        "paragraphCount": 2,
+        "missingPerformTargets": [
+          "010-INICIO",
+          "015-INICIA-WAREAS-REPORTE",
+          "020-DECIDE-IOPERA",
+          "030-CALCULA-PLUSVALIA",
+          "500-ULTIMA-TASA",
+          "510-ULTIMO-IND-PAR-APLICA",
+          "520-CURSOR-REGS-VIGS-FOPERACA",
+          "525-CURSOR-REGS-VIGS-FOPERABA",
+          "530-LEE-REGS-VIGS-FOPERACA",
+          "540-LEE-REGS-VIGS-FOPERABA",
+          "700-FIN",
+          "705-ENCABEZADO",
+          "720-REP-CONCEPTOS",
+          "730-TOT-CONCEPT-COMP-REPO",
+          "740-TOT-CONCEPT-VENT-REPO",
+          "970-SQL-ERROR",
+          "999-CONST-ENCA",
+          "999-CONST-ENCA-BANCO",
+          "999-MUEVE-FECHAS"
+        ]
+      }
+    },
+    {
+      "program": "CIB127D",
+      "sourceFile": "src/CIB127D.cbl",
+      "procedureLine": 252,
+      "copybooks": [],
+      "calls": [
+        {
+          "name": "ADR009",
+          "evidenceLines": [
+            623
+          ]
+        },
+        {
+          "name": "MDB403O",
+          "evidenceLines": [
+            622
+          ]
+        },
+        {
+          "name": "VTB415O",
+          "evidenceLines": [
+            263
+          ]
+        }
+      ],
+      "readTables": [
+        {
+          "name": "OPECORI",
+          "evidenceLines": [
+            425,
+            426,
+            427,
+            428,
+            429,
+            430,
+            431,
+            432,
+            433,
+            434,
+            435,
+            436,
+            437,
+            438,
+            439,
+            457,
+            458,
+            459,
+            460,
+            461,
+            462,
+            463,
+            464,
+            465,
+            466,
+            467,
+            468,
+            469,
+            470,
+            471
+          ]
+        }
+      ],
+      "updateTables": [],
+      "paragraphs": [
+        {
+          "name": "999-0100-CONSTRUYE",
+          "evidenceLines": [
+            621
+          ],
+          "executionOrder": 100,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB127D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "999-0100-FIN",
+          "evidenceLines": [
+            625
+          ],
+          "executionOrder": 200,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de CIB127D, consolidando trazas y terminacion funcional del proceso."
+        }
+      ],
+      "coverage": {
+        "sequenceColumnsNormalized": true,
+        "performTargetCount": 18,
+        "paragraphCount": 2,
+        "missingPerformTargets": [
+          "010-INICIO",
+          "015-PROCESO-CURSORES",
+          "020-INICIALIZA-WAREAS",
+          "030-PROCESA-INFORMACION",
+          "040-DECIDE-IOPERA",
+          "050-GENERA-REGISTRO-IMPRESION",
+          "060-PROCESA-CORTE",
+          "510-DEFINE-CURSOR-VENCIM-CASA",
+          "515-DEFINE-CURSOR-VENCIM-BANCO",
+          "520-LEE-VENCIM-CASA",
+          "530-LEE-VENCIM-BANCO",
+          "700-FIN",
+          "705-ENCABEZADO",
+          "720-REP-CONCEPTOS",
+          "970-SQL-ERROR",
+          "999-CONST-ENCA",
+          "999-CONST-ENCA-BANCO",
+          "999-MUEVE-FECHAS"
+        ]
+      }
+    }
+  ]
+}

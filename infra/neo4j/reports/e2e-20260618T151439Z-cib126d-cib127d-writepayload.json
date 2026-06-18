@@ -1,0 +1,828 @@
+{
+  "runId": "e2e-20260618T151439Z-cib126d-cib127d",
+  "nodes": [
+    {
+      "label": "Program",
+      "key": [
+        "CIB126D"
+      ],
+      "properties": {
+        "name": "CIB126D",
+        "ingestion": "auto",
+        "layer": "program",
+        "nodeType": "program",
+        "viewTag": "program",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB126D.cbl",
+        "runId": "e2e-20260618T151439Z-cib126d-cib127d"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB126D",
+        "999-0100-CONSTRUYE"
+      ],
+      "properties": {
+        "programName": "CIB126D",
+        "name": "999-0100-CONSTRUYE",
+        "summary": "Orquesta una fase funcional de CIB126D, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 100,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB126D.cbl",
+        "evidenceFile": "src/CIB126D.cbl",
+        "evidenceLines": [
+          741
+        ],
+        "runId": "e2e-20260618T151439Z-cib126d-cib127d"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB126D",
+        "999-9900-FIN"
+      ],
+      "properties": {
+        "programName": "CIB126D",
+        "name": "999-9900-FIN",
+        "summary": "Cierra la ejecucion de CIB126D, consolidando trazas y terminacion funcional del proceso.",
+        "executionOrder": 200,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB126D.cbl",
+        "evidenceFile": "src/CIB126D.cbl",
+        "evidenceLines": [
+          762
+        ],
+        "runId": "e2e-20260618T151439Z-cib126d-cib127d"
+      }
+    },
+    {
+      "label": "ExternalRoutine",
+      "key": [
+        "ADR003"
+      ],
+      "properties": {
+        "name": "ADR003",
+        "ingestion": "auto",
+        "layer": "integration",
+        "nodeType": "external-service-call",
+        "viewTag": "integration",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB126D.cbl",
+        "evidenceFile": "src/CIB126D.cbl",
+        "evidenceLines": [
+          754
+        ],
+        "runId": "e2e-20260618T151439Z-cib126d-cib127d"
+      }
+    },
+    {
+      "label": "ExternalRoutine",
+      "key": [
+        "ADR009"
+      ],
+      "properties": {
+        "name": "ADR009",
+        "ingestion": "auto",
+        "layer": "integration",
+        "nodeType": "external-service-call",
+        "viewTag": "integration",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB127D.cbl",
+        "evidenceFile": "src/CIB127D.cbl",
+        "evidenceLines": [
+          623
+        ],
+        "runId": "e2e-20260618T151439Z-cib126d-cib127d"
+      }
+    },
+    {
+      "label": "ExternalRoutine",
+      "key": [
+        "MDB403O"
+      ],
+      "properties": {
+        "name": "MDB403O",
+        "ingestion": "auto",
+        "layer": "integration",
+        "nodeType": "external-service-call",
+        "viewTag": "integration",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB127D.cbl",
+        "evidenceFile": "src/CIB127D.cbl",
+        "evidenceLines": [
+          622
+        ],
+        "runId": "e2e-20260618T151439Z-cib126d-cib127d"
+      }
+    },
+    {
+      "label": "ExternalRoutine",
+      "key": [
+        "VTB415O"
+      ],
+      "properties": {
+        "name": "VTB415O",
+        "ingestion": "auto",
+        "layer": "integration",
+        "nodeType": "external-service-call",
+        "viewTag": "integration",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB127D.cbl",
+        "evidenceFile": "src/CIB127D.cbl",
+        "evidenceLines": [
+          263
+        ],
+        "runId": "e2e-20260618T151439Z-cib126d-cib127d"
+      }
+    },
+    {
+      "label": "DBTable",
+      "key": [
+        "OPECORI"
+      ],
+      "properties": {
+        "name": "OPECORI",
+        "ingestion": "auto",
+        "layer": "data-access",
+        "nodeType": "physical-table",
+        "viewTag": "data-access",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB127D.cbl",
+        "evidenceFile": "src/CIB127D.cbl",
+        "evidenceLines": [
+          425,
+          426,
+          427,
+          428,
+          429,
+          430,
+          431,
+          432,
+          433,
+          434,
+          435,
+          436,
+          437,
+          438,
+          439,
+          457,
+          458,
+          459,
+          460,
+          461,
+          462,
+          463,
+          464,
+          465,
+          466,
+          467,
+          468,
+          469,
+          470,
+          471
+        ],
+        "runId": "e2e-20260618T151439Z-cib126d-cib127d"
+      }
+    },
+    {
+      "label": "DBTable",
+      "key": [
+        "PARAM"
+      ],
+      "properties": {
+        "name": "PARAM",
+        "ingestion": "auto",
+        "layer": "data-access",
+        "nodeType": "physical-table",
+        "viewTag": "data-access",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB126D.cbl",
+        "evidenceFile": "src/CIB126D.cbl",
+        "evidenceLines": [
+          390,
+          391,
+          392,
+          393,
+          394,
+          395,
+          396,
+          397,
+          398,
+          399,
+          400,
+          401,
+          421,
+          422,
+          423,
+          424,
+          425,
+          426,
+          427
+        ],
+        "runId": "e2e-20260618T151439Z-cib126d-cib127d"
+      }
+    },
+    {
+      "label": "Program",
+      "key": [
+        "CIB127D"
+      ],
+      "properties": {
+        "name": "CIB127D",
+        "ingestion": "auto",
+        "layer": "program",
+        "nodeType": "program",
+        "viewTag": "program",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB127D.cbl",
+        "runId": "e2e-20260618T151439Z-cib126d-cib127d"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB127D",
+        "999-0100-CONSTRUYE"
+      ],
+      "properties": {
+        "programName": "CIB127D",
+        "name": "999-0100-CONSTRUYE",
+        "summary": "Orquesta una fase funcional de CIB127D, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 100,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB127D.cbl",
+        "evidenceFile": "src/CIB127D.cbl",
+        "evidenceLines": [
+          621
+        ],
+        "runId": "e2e-20260618T151439Z-cib126d-cib127d"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "CIB127D",
+        "999-0100-FIN"
+      ],
+      "properties": {
+        "programName": "CIB127D",
+        "name": "999-0100-FIN",
+        "summary": "Cierra la ejecucion de CIB127D, consolidando trazas y terminacion funcional del proceso.",
+        "executionOrder": 200,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/CIB127D.cbl",
+        "evidenceFile": "src/CIB127D.cbl",
+        "evidenceLines": [
+          625
+        ],
+        "runId": "e2e-20260618T151439Z-cib126d-cib127d"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB126D"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB126D",
+          "999-0100-CONSTRUYE"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T151439Z-cib126d-cib127d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB126D.cbl",
+        "evidenceLines": [
+          741
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB126D"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB126D",
+          "999-9900-FIN"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T151439Z-cib126d-cib127d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB126D.cbl",
+        "evidenceLines": [
+          762
+        ]
+      }
+    },
+    {
+      "type": "CALLS_ROUTINE",
+      "from": [
+        "Program",
+        [
+          "CIB126D"
+        ]
+      ],
+      "to": [
+        "ExternalRoutine",
+        [
+          "ADR003"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T151439Z-cib126d-cib127d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB126D.cbl",
+        "evidenceLines": [
+          754
+        ]
+      }
+    },
+    {
+      "type": "CALLS_ROUTINE",
+      "from": [
+        "Program",
+        [
+          "CIB126D"
+        ]
+      ],
+      "to": [
+        "ExternalRoutine",
+        [
+          "ADR009"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T151439Z-cib126d-cib127d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB126D.cbl",
+        "evidenceLines": [
+          756,
+          760
+        ]
+      }
+    },
+    {
+      "type": "CALLS_ROUTINE",
+      "from": [
+        "Program",
+        [
+          "CIB126D"
+        ]
+      ],
+      "to": [
+        "ExternalRoutine",
+        [
+          "MDB403O"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T151439Z-cib126d-cib127d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB126D.cbl",
+        "evidenceLines": [
+          759
+        ]
+      }
+    },
+    {
+      "type": "CALLS_ROUTINE",
+      "from": [
+        "Program",
+        [
+          "CIB126D"
+        ]
+      ],
+      "to": [
+        "ExternalRoutine",
+        [
+          "VTB415O"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T151439Z-cib126d-cib127d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB126D.cbl",
+        "evidenceLines": [
+          294
+        ]
+      }
+    },
+    {
+      "type": "READS_TABLE",
+      "from": [
+        "Program",
+        [
+          "CIB126D"
+        ]
+      ],
+      "to": [
+        "DBTable",
+        [
+          "OPECORI"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T151439Z-cib126d-cib127d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB126D.cbl",
+        "evidenceLines": [
+          449,
+          450,
+          451,
+          452,
+          453,
+          454,
+          455,
+          456,
+          457,
+          458,
+          459,
+          460,
+          461,
+          462,
+          463,
+          464,
+          465,
+          466,
+          467,
+          468,
+          469,
+          491,
+          492,
+          493,
+          494,
+          495,
+          496,
+          497,
+          498,
+          499,
+          500,
+          501,
+          502,
+          503,
+          504,
+          505,
+          506,
+          507,
+          508,
+          509,
+          510,
+          511
+        ]
+      }
+    },
+    {
+      "type": "READS_TABLE",
+      "from": [
+        "Program",
+        [
+          "CIB126D"
+        ]
+      ],
+      "to": [
+        "DBTable",
+        [
+          "PARAM"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T151439Z-cib126d-cib127d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB126D.cbl",
+        "evidenceLines": [
+          390,
+          391,
+          392,
+          393,
+          394,
+          395,
+          396,
+          397,
+          398,
+          399,
+          400,
+          401,
+          421,
+          422,
+          423,
+          424,
+          425,
+          426,
+          427
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB127D"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB127D",
+          "999-0100-CONSTRUYE"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T151439Z-cib126d-cib127d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB127D.cbl",
+        "evidenceLines": [
+          621
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "CIB127D"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "CIB127D",
+          "999-0100-FIN"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T151439Z-cib126d-cib127d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB127D.cbl",
+        "evidenceLines": [
+          625
+        ]
+      }
+    },
+    {
+      "type": "CALLS_ROUTINE",
+      "from": [
+        "Program",
+        [
+          "CIB127D"
+        ]
+      ],
+      "to": [
+        "ExternalRoutine",
+        [
+          "ADR009"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T151439Z-cib126d-cib127d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB127D.cbl",
+        "evidenceLines": [
+          623
+        ]
+      }
+    },
+    {
+      "type": "CALLS_ROUTINE",
+      "from": [
+        "Program",
+        [
+          "CIB127D"
+        ]
+      ],
+      "to": [
+        "ExternalRoutine",
+        [
+          "MDB403O"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T151439Z-cib126d-cib127d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB127D.cbl",
+        "evidenceLines": [
+          622
+        ]
+      }
+    },
+    {
+      "type": "CALLS_ROUTINE",
+      "from": [
+        "Program",
+        [
+          "CIB127D"
+        ]
+      ],
+      "to": [
+        "ExternalRoutine",
+        [
+          "VTB415O"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T151439Z-cib126d-cib127d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB127D.cbl",
+        "evidenceLines": [
+          263
+        ]
+      }
+    },
+    {
+      "type": "READS_TABLE",
+      "from": [
+        "Program",
+        [
+          "CIB127D"
+        ]
+      ],
+      "to": [
+        "DBTable",
+        [
+          "OPECORI"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T151439Z-cib126d-cib127d",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/CIB127D.cbl",
+        "evidenceLines": [
+          425,
+          426,
+          427,
+          428,
+          429,
+          430,
+          431,
+          432,
+          433,
+          434,
+          435,
+          436,
+          437,
+          438,
+          439,
+          457,
+          458,
+          459,
+          460,
+          461,
+          462,
+          463,
+          464,
+          465,
+          466,
+          467,
+          468,
+          469,
+          470,
+          471
+        ]
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "program": "CIB126D",
+      "sequenceColumnsNormalized": true,
+      "performTargetCount": 19,
+      "paragraphCount": 2,
+      "missingPerformTargets": [
+        "010-INICIO",
+        "015-INICIA-WAREAS-REPORTE",
+        "020-DECIDE-IOPERA",
+        "030-CALCULA-PLUSVALIA",
+        "500-ULTIMA-TASA",
+        "510-ULTIMO-IND-PAR-APLICA",
+        "520-CURSOR-REGS-VIGS-FOPERACA",
+        "525-CURSOR-REGS-VIGS-FOPERABA",
+        "530-LEE-REGS-VIGS-FOPERACA",
+        "540-LEE-REGS-VIGS-FOPERABA",
+        "700-FIN",
+        "705-ENCABEZADO",
+        "720-REP-CONCEPTOS",
+        "730-TOT-CONCEPT-COMP-REPO",
+        "740-TOT-CONCEPT-VENT-REPO",
+        "970-SQL-ERROR",
+        "999-CONST-ENCA",
+        "999-CONST-ENCA-BANCO",
+        "999-MUEVE-FECHAS"
+      ]
+    },
+    {
+      "program": "CIB127D",
+      "sequenceColumnsNormalized": true,
+      "performTargetCount": 18,
+      "paragraphCount": 2,
+      "missingPerformTargets": [
+        "010-INICIO",
+        "015-PROCESO-CURSORES",
+        "020-INICIALIZA-WAREAS",
+        "030-PROCESA-INFORMACION",
+        "040-DECIDE-IOPERA",
+        "050-GENERA-REGISTRO-IMPRESION",
+        "060-PROCESA-CORTE",
+        "510-DEFINE-CURSOR-VENCIM-CASA",
+        "515-DEFINE-CURSOR-VENCIM-BANCO",
+        "520-LEE-VENCIM-CASA",
+        "530-LEE-VENCIM-BANCO",
+        "700-FIN",
+        "705-ENCABEZADO",
+        "720-REP-CONCEPTOS",
+        "970-SQL-ERROR",
+        "999-CONST-ENCA",
+        "999-CONST-ENCA-BANCO",
+        "999-MUEVE-FECHAS"
+      ]
+    }
+  ]
+}

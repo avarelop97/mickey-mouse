@@ -1,0 +1,1077 @@
+{
+  "runId": "e2e-20260618T151512Z-zm1mg549",
+  "nodes": [
+    {
+      "label": "Program",
+      "key": [
+        "ZM1MG549"
+      ],
+      "properties": {
+        "name": "ZM1MG549",
+        "ingestion": "auto",
+        "layer": "program",
+        "nodeType": "program",
+        "viewTag": "program",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM1MG549.cbl",
+        "runId": "e2e-20260618T151512Z-zm1mg549"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM1MG549",
+        "0000-INICIO"
+      ],
+      "properties": {
+        "programName": "ZM1MG549",
+        "name": "0000-INICIO",
+        "summary": "Inicializa el flujo operativo de ZM1MG549, preparando contexto y validaciones de arranque.",
+        "executionOrder": 100,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM1MG549.cbl",
+        "evidenceFile": "src/ZM1MG549.cbl",
+        "evidenceLines": [
+          136
+        ],
+        "runId": "e2e-20260618T151512Z-zm1mg549"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM1MG549",
+        "0010-INICIO-APLICACION"
+      ],
+      "properties": {
+        "programName": "ZM1MG549",
+        "name": "0010-INICIO-APLICACION",
+        "summary": "Inicializa el flujo operativo de ZM1MG549, preparando contexto y validaciones de arranque.",
+        "executionOrder": 200,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM1MG549.cbl",
+        "evidenceFile": "src/ZM1MG549.cbl",
+        "evidenceLines": [
+          150
+        ],
+        "runId": "e2e-20260618T151512Z-zm1mg549"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM1MG549",
+        "0100-REINICIO-APLICACION"
+      ],
+      "properties": {
+        "programName": "ZM1MG549",
+        "name": "0100-REINICIO-APLICACION",
+        "summary": "Inicializa el flujo operativo de ZM1MG549, preparando contexto y validaciones de arranque.",
+        "executionOrder": 300,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM1MG549.cbl",
+        "evidenceFile": "src/ZM1MG549.cbl",
+        "evidenceLines": [
+          157
+        ],
+        "runId": "e2e-20260618T151512Z-zm1mg549"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM1MG549",
+        "8000-TRANSFIERE"
+      ],
+      "properties": {
+        "programName": "ZM1MG549",
+        "name": "8000-TRANSFIERE",
+        "summary": "Orquesta una fase funcional de ZM1MG549, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 400,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM1MG549.cbl",
+        "evidenceFile": "src/ZM1MG549.cbl",
+        "evidenceLines": [
+          170
+        ],
+        "runId": "e2e-20260618T151512Z-zm1mg549"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM1MG549",
+        "8010-PF2-PF3"
+      ],
+      "properties": {
+        "programName": "ZM1MG549",
+        "name": "8010-PF2-PF3",
+        "summary": "Orquesta una fase funcional de ZM1MG549, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 500,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM1MG549.cbl",
+        "evidenceFile": "src/ZM1MG549.cbl",
+        "evidenceLines": [
+          176
+        ],
+        "runId": "e2e-20260618T151512Z-zm1mg549"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM1MG549",
+        "8100-RECIBE-PANTALLA"
+      ],
+      "properties": {
+        "programName": "ZM1MG549",
+        "name": "8100-RECIBE-PANTALLA",
+        "summary": "Orquesta una fase funcional de ZM1MG549, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 600,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM1MG549.cbl",
+        "evidenceFile": "src/ZM1MG549.cbl",
+        "evidenceLines": [
+          192
+        ],
+        "runId": "e2e-20260618T151512Z-zm1mg549"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM1MG549",
+        "8110-ENVIA-PANTALLA"
+      ],
+      "properties": {
+        "programName": "ZM1MG549",
+        "name": "8110-ENVIA-PANTALLA",
+        "summary": "Orquesta una fase funcional de ZM1MG549, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 700,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM1MG549.cbl",
+        "evidenceFile": "src/ZM1MG549.cbl",
+        "evidenceLines": [
+          207
+        ],
+        "runId": "e2e-20260618T151512Z-zm1mg549"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM1MG549",
+        "8120-ENCABEZADO"
+      ],
+      "properties": {
+        "programName": "ZM1MG549",
+        "name": "8120-ENCABEZADO",
+        "summary": "Orquesta una fase funcional de ZM1MG549, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 800,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM1MG549.cbl",
+        "evidenceFile": "src/ZM1MG549.cbl",
+        "evidenceLines": [
+          228
+        ],
+        "runId": "e2e-20260618T151512Z-zm1mg549"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "DFHAID"
+      ],
+      "properties": {
+        "name": "DFHAID",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM1MG549.cbl",
+        "evidenceFile": "src/ZM1MG549.cbl",
+        "evidenceLines": [
+          67
+        ],
+        "runId": "e2e-20260618T151512Z-zm1mg549"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "DFHBMSCA"
+      ],
+      "properties": {
+        "name": "DFHBMSCA",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM1MG549.cbl",
+        "evidenceFile": "src/ZM1MG549.cbl",
+        "evidenceLines": [
+          71
+        ],
+        "runId": "e2e-20260618T151512Z-zm1mg549"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "ZMG5491"
+      ],
+      "properties": {
+        "name": "ZMG5491",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM1MG549.cbl",
+        "evidenceFile": "src/ZM1MG549.cbl",
+        "evidenceLines": [
+          75
+        ],
+        "runId": "e2e-20260618T151512Z-zm1mg549"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "ZMWCOM11"
+      ],
+      "properties": {
+        "name": "ZMWCOM11",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM1MG549.cbl",
+        "evidenceFile": "src/ZM1MG549.cbl",
+        "evidenceLines": [
+          125
+        ],
+        "runId": "e2e-20260618T151512Z-zm1mg549"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "ZMWSC010"
+      ],
+      "properties": {
+        "name": "ZMWSC010",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM1MG549.cbl",
+        "evidenceFile": "src/ZM1MG549.cbl",
+        "evidenceLines": [
+          79
+        ],
+        "runId": "e2e-20260618T151512Z-zm1mg549"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "ZMWSC011"
+      ],
+      "properties": {
+        "name": "ZMWSC011",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM1MG549.cbl",
+        "evidenceFile": "src/ZM1MG549.cbl",
+        "evidenceLines": [
+          83
+        ],
+        "runId": "e2e-20260618T151512Z-zm1mg549"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "ZMWSC012"
+      ],
+      "properties": {
+        "name": "ZMWSC012",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM1MG549.cbl",
+        "evidenceFile": "src/ZM1MG549.cbl",
+        "evidenceLines": [
+          87
+        ],
+        "runId": "e2e-20260618T151512Z-zm1mg549"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "ZMWSC013"
+      ],
+      "properties": {
+        "name": "ZMWSC013",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM1MG549.cbl",
+        "evidenceFile": "src/ZM1MG549.cbl",
+        "evidenceLines": [
+          91
+        ],
+        "runId": "e2e-20260618T151512Z-zm1mg549"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "ZMWSC014"
+      ],
+      "properties": {
+        "name": "ZMWSC014",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM1MG549.cbl",
+        "evidenceFile": "src/ZM1MG549.cbl",
+        "evidenceLines": [
+          95
+        ],
+        "runId": "e2e-20260618T151512Z-zm1mg549"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "ZMWSG532"
+      ],
+      "properties": {
+        "name": "ZMWSG532",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM1MG549.cbl",
+        "evidenceFile": "src/ZM1MG549.cbl",
+        "evidenceLines": [
+          115
+        ],
+        "runId": "e2e-20260618T151512Z-zm1mg549"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "ZMWSR009"
+      ],
+      "properties": {
+        "name": "ZMWSR009",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM1MG549.cbl",
+        "evidenceFile": "src/ZM1MG549.cbl",
+        "evidenceLines": [
+          100
+        ],
+        "runId": "e2e-20260618T151512Z-zm1mg549"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "ZMWSR432"
+      ],
+      "properties": {
+        "name": "ZMWSR432",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM1MG549.cbl",
+        "evidenceFile": "src/ZM1MG549.cbl",
+        "evidenceLines": [
+          110
+        ],
+        "runId": "e2e-20260618T151512Z-zm1mg549"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "ZMWSZ403"
+      ],
+      "properties": {
+        "name": "ZMWSZ403",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM1MG549.cbl",
+        "evidenceFile": "src/ZM1MG549.cbl",
+        "evidenceLines": [
+          105
+        ],
+        "runId": "e2e-20260618T151512Z-zm1mg549"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM1MG549"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM1MG549",
+          "0000-INICIO"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T151512Z-zm1mg549",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM1MG549.cbl",
+        "evidenceLines": [
+          136
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM1MG549"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM1MG549",
+          "0010-INICIO-APLICACION"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T151512Z-zm1mg549",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM1MG549.cbl",
+        "evidenceLines": [
+          150
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM1MG549"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM1MG549",
+          "0100-REINICIO-APLICACION"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T151512Z-zm1mg549",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM1MG549.cbl",
+        "evidenceLines": [
+          157
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM1MG549"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM1MG549",
+          "8000-TRANSFIERE"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T151512Z-zm1mg549",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM1MG549.cbl",
+        "evidenceLines": [
+          170
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM1MG549"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM1MG549",
+          "8010-PF2-PF3"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T151512Z-zm1mg549",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM1MG549.cbl",
+        "evidenceLines": [
+          176
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM1MG549"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM1MG549",
+          "8100-RECIBE-PANTALLA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T151512Z-zm1mg549",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM1MG549.cbl",
+        "evidenceLines": [
+          192
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM1MG549"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM1MG549",
+          "8110-ENVIA-PANTALLA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T151512Z-zm1mg549",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM1MG549.cbl",
+        "evidenceLines": [
+          207
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM1MG549"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM1MG549",
+          "8120-ENCABEZADO"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T151512Z-zm1mg549",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM1MG549.cbl",
+        "evidenceLines": [
+          228
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "ZM1MG549"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "DFHAID"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T151512Z-zm1mg549",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM1MG549.cbl",
+        "evidenceLines": [
+          67
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "ZM1MG549"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "DFHBMSCA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T151512Z-zm1mg549",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM1MG549.cbl",
+        "evidenceLines": [
+          71
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "ZM1MG549"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMG5491"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T151512Z-zm1mg549",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM1MG549.cbl",
+        "evidenceLines": [
+          75
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "ZM1MG549"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWCOM11"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T151512Z-zm1mg549",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM1MG549.cbl",
+        "evidenceLines": [
+          125
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "ZM1MG549"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWSC010"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T151512Z-zm1mg549",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM1MG549.cbl",
+        "evidenceLines": [
+          79
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "ZM1MG549"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWSC011"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T151512Z-zm1mg549",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM1MG549.cbl",
+        "evidenceLines": [
+          83
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "ZM1MG549"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWSC012"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T151512Z-zm1mg549",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM1MG549.cbl",
+        "evidenceLines": [
+          87
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "ZM1MG549"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWSC013"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T151512Z-zm1mg549",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM1MG549.cbl",
+        "evidenceLines": [
+          91
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "ZM1MG549"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWSC014"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T151512Z-zm1mg549",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM1MG549.cbl",
+        "evidenceLines": [
+          95
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "ZM1MG549"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWSG532"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T151512Z-zm1mg549",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM1MG549.cbl",
+        "evidenceLines": [
+          115
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "ZM1MG549"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWSR009"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T151512Z-zm1mg549",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM1MG549.cbl",
+        "evidenceLines": [
+          100
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "ZM1MG549"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWSR432"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T151512Z-zm1mg549",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM1MG549.cbl",
+        "evidenceLines": [
+          110
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "ZM1MG549"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWSZ403"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260618T151512Z-zm1mg549",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM1MG549.cbl",
+        "evidenceLines": [
+          105
+        ]
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "program": "ZM1MG549",
+      "sequenceColumnsNormalized": true,
+      "performTargetCount": 14,
+      "paragraphCount": 8,
+      "missingPerformTargets": [
+        "9000-INICIO",
+        "9000-REINICIO",
+        "9200-MENSAJE-ERROR",
+        "9300-USER-FECHA-HORA",
+        "9400-RETURN",
+        "9886-ALINEA-STRING-IZQ",
+        "9900-TRANSFIERE"
+      ]
+    }
+  ]
+}

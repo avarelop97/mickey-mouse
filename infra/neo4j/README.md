@@ -263,3 +263,71 @@ docker run -d \
 - Cambiar la password por una clave fuerte antes de usar datos reales.
 - No exponer puertos fuera del entorno local sin revisar seguridad.
 - Mantener volumenes persistentes para no perder datos al recrear el contenedor.
+
+## Checklist Operativa de Consistencia
+
+Esta checklist define el minimo obligatorio para considerar una corrida como consistente y reproducible en el tiempo.
+
+### 1) Precondiciones
+
+```bash
+docker ps --filter name=neo4j-local
+```
+
+- El contenedor `neo4j-local` debe estar levantado.
+- El alcance de programas debe existir en `src/`.
+
+### 2) Discovery de backlog
+
+```bash
+python3 infra/neo4j/scripts/discover_missing_nodes.py
+```
+
+- Debe existir un reporte nuevo en `infra/neo4j/reports/discovery-missing-nodes-*.json`.
+- El programa objetivo debe figurar como candidato o estar justificado si no aplica.
+
+### 3) Ejecucion de ingestion (modo commit)
+
+Para corridas operativas en commit, usar obligatoriamente el orquestador reproducible:
+
+```bash
+python3 infra/neo4j/scripts/e2e_ingest_pipeline.py --programs <PROGRAMA> --mode full
+```
+
+Artefactos minimos esperados por corrida:
+
+- `*-extraction.json`
+- `*-writepayload.json`
+- `*-precheck.json`
+- `*-final-report.json`
+- `infra/neo4j/queries/ingest-<runId>.cypher`
+
+### 4) Criterios de aceptacion de calidad
+
+En `*-final-report.json`:
+
+- `precheck.qualityGateResult = pass`
+- `commitExecuted = true`
+- `postAudit.missingMandatoryProperties = 0`
+- `postAudit.invalidReviewStateMetadata = 0`
+- `postAudit.invalidParagraphSummary = 0`
+- `postAudit.missingCriticalRelationEvidence = 0`
+- `postAudit.ontologyViolations = 0`
+
+### 5) Verificacion de coherencia de politica
+
+```bash
+grep -n "Ejecucion Reproducible Obligatoria" .github/copilot-instructions.md
+grep -n "e2e_ingest_pipeline.py" .github/agents/cobol-neo4j-orchestrator.agent.md
+```
+
+- Las instrucciones deben mantener la obligatoriedad de `e2e_ingest_pipeline.py` en corridas commit.
+
+### 6) Snapshot para reproducibilidad inter-entornos
+
+```bash
+snapshot=$(python3 infra/neo4j/scripts/export_live_graph.py)
+bash infra/neo4j/scripts/restore_from_snapshot.sh "$snapshot"
+```
+
+- Permite replicar el estado del grafo en otra maquina con el mismo artefacto versionado.

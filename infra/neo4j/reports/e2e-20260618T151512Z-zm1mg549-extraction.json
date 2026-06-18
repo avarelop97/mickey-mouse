@@ -1,0 +1,185 @@
+{
+  "stage": "discovery-extraction",
+  "runId": "e2e-20260618T151512Z-zm1mg549",
+  "programs": [
+    "ZM1MG549"
+  ],
+  "extractions": [
+    {
+      "program": "ZM1MG549",
+      "sourceFile": "src/ZM1MG549.cbl",
+      "procedureLine": 134,
+      "copybooks": [
+        {
+          "name": "DFHAID",
+          "evidenceLines": [
+            67
+          ]
+        },
+        {
+          "name": "DFHBMSCA",
+          "evidenceLines": [
+            71
+          ]
+        },
+        {
+          "name": "ZMG5491",
+          "evidenceLines": [
+            75
+          ]
+        },
+        {
+          "name": "ZMWCOM11",
+          "evidenceLines": [
+            125
+          ]
+        },
+        {
+          "name": "ZMWSC010",
+          "evidenceLines": [
+            79
+          ]
+        },
+        {
+          "name": "ZMWSC011",
+          "evidenceLines": [
+            83
+          ]
+        },
+        {
+          "name": "ZMWSC012",
+          "evidenceLines": [
+            87
+          ]
+        },
+        {
+          "name": "ZMWSC013",
+          "evidenceLines": [
+            91
+          ]
+        },
+        {
+          "name": "ZMWSC014",
+          "evidenceLines": [
+            95
+          ]
+        },
+        {
+          "name": "ZMWSG532",
+          "evidenceLines": [
+            115
+          ]
+        },
+        {
+          "name": "ZMWSR009",
+          "evidenceLines": [
+            100
+          ]
+        },
+        {
+          "name": "ZMWSR432",
+          "evidenceLines": [
+            110
+          ]
+        },
+        {
+          "name": "ZMWSZ403",
+          "evidenceLines": [
+            105
+          ]
+        }
+      ],
+      "calls": [],
+      "readTables": [],
+      "updateTables": [],
+      "paragraphs": [
+        {
+          "name": "0000-INICIO",
+          "evidenceLines": [
+            136
+          ],
+          "executionOrder": 100,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM1MG549, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "0010-INICIO-APLICACION",
+          "evidenceLines": [
+            150
+          ],
+          "executionOrder": 200,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM1MG549, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "0100-REINICIO-APLICACION",
+          "evidenceLines": [
+            157
+          ],
+          "executionOrder": 300,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM1MG549, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "8000-TRANSFIERE",
+          "evidenceLines": [
+            170
+          ],
+          "executionOrder": 400,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM1MG549, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "8010-PF2-PF3",
+          "evidenceLines": [
+            176
+          ],
+          "executionOrder": 500,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM1MG549, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "8100-RECIBE-PANTALLA",
+          "evidenceLines": [
+            192
+          ],
+          "executionOrder": 600,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM1MG549, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "8110-ENVIA-PANTALLA",
+          "evidenceLines": [
+            207
+          ],
+          "executionOrder": 700,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM1MG549, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "8120-ENCABEZADO",
+          "evidenceLines": [
+            228
+          ],
+          "executionOrder": 800,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM1MG549, encadenando validaciones y transformaciones del proceso principal."
+        }
+      ],
+      "coverage": {
+        "sequenceColumnsNormalized": true,
+        "performTargetCount": 14,
+        "paragraphCount": 8,
+        "missingPerformTargets": [
+          "9000-INICIO",
+          "9000-REINICIO",
+          "9200-MENSAJE-ERROR",
+          "9300-USER-FECHA-HORA",
+          "9400-RETURN",
+          "9886-ALINEA-STRING-IZQ",
+          "9900-TRANSFIERE"
+        ]
+      }
+    }
+  ]
+}

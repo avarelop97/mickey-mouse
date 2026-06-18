@@ -1,0 +1,117 @@
+{
+  "findings": [
+    {
+      "severity": "critical",
+      "type": "PARAGRAPH_EXTRACTION_COVERAGE_GAP",
+      "evidence": {
+        "program": "CIB126D",
+        "missingPerformTargets": [
+          "010-INICIO",
+          "015-INICIA-WAREAS-REPORTE",
+          "020-DECIDE-IOPERA",
+          "030-CALCULA-PLUSVALIA",
+          "500-ULTIMA-TASA",
+          "510-ULTIMO-IND-PAR-APLICA",
+          "520-CURSOR-REGS-VIGS-FOPERACA",
+          "525-CURSOR-REGS-VIGS-FOPERABA",
+          "530-LEE-REGS-VIGS-FOPERACA",
+          "540-LEE-REGS-VIGS-FOPERABA",
+          "700-FIN",
+          "705-ENCABEZADO",
+          "720-REP-CONCEPTOS",
+          "730-TOT-CONCEPT-COMP-REPO",
+          "740-TOT-CONCEPT-VENT-REPO",
+          "970-SQL-ERROR",
+          "999-CONST-ENCA",
+          "999-CONST-ENCA-BANCO",
+          "999-MUEVE-FECHAS"
+        ]
+      }
+    },
+    {
+      "severity": "critical",
+      "type": "PARAGRAPH_EXTRACTION_COVERAGE_GAP",
+      "evidence": {
+        "program": "CIB127D",
+        "missingPerformTargets": [
+          "010-INICIO",
+          "015-PROCESO-CURSORES",
+          "020-INICIALIZA-WAREAS",
+          "030-PROCESA-INFORMACION",
+          "040-DECIDE-IOPERA",
+          "050-GENERA-REGISTRO-IMPRESION",
+          "060-PROCESA-CORTE",
+          "510-DEFINE-CURSOR-VENCIM-CASA",
+          "515-DEFINE-CURSOR-VENCIM-BANCO",
+          "520-LEE-VENCIM-CASA",
+          "530-LEE-VENCIM-BANCO",
+          "700-FIN",
+          "705-ENCABEZADO",
+          "720-REP-CONCEPTOS",
+          "970-SQL-ERROR",
+          "999-CONST-ENCA",
+          "999-CONST-ENCA-BANCO",
+          "999-MUEVE-FECHAS"
+        ]
+      }
+    }
+  ],
+  "blockers": [
+    {
+      "severity": "critical",
+      "type": "PARAGRAPH_EXTRACTION_COVERAGE_GAP",
+      "evidence": {
+        "program": "CIB126D",
+        "missingPerformTargets": [
+          "010-INICIO",
+          "015-INICIA-WAREAS-REPORTE",
+          "020-DECIDE-IOPERA",
+          "030-CALCULA-PLUSVALIA",
+          "500-ULTIMA-TASA",
+          "510-ULTIMO-IND-PAR-APLICA",
+          "520-CURSOR-REGS-VIGS-FOPERACA",
+          "525-CURSOR-REGS-VIGS-FOPERABA",
+          "530-LEE-REGS-VIGS-FOPERACA",
+          "540-LEE-REGS-VIGS-FOPERABA",
+          "700-FIN",
+          "705-ENCABEZADO",
+          "720-REP-CONCEPTOS",
+          "730-TOT-CONCEPT-COMP-REPO",
+          "740-TOT-CONCEPT-VENT-REPO",
+          "970-SQL-ERROR",
+          "999-CONST-ENCA",
+          "999-CONST-ENCA-BANCO",
+          "999-MUEVE-FECHAS"
+        ]
+      }
+    },
+    {
+      "severity": "critical",
+      "type": "PARAGRAPH_EXTRACTION_COVERAGE_GAP",
+      "evidence": {
+        "program": "CIB127D",
+        "missingPerformTargets": [
+          "010-INICIO",
+          "015-PROCESO-CURSORES",
+          "020-INICIALIZA-WAREAS",
+          "030-PROCESA-INFORMACION",
+          "040-DECIDE-IOPERA",
+          "050-GENERA-REGISTRO-IMPRESION",
+          "060-PROCESA-CORTE",
+          "510-DEFINE-CURSOR-VENCIM-CASA",
+          "515-DEFINE-CURSOR-VENCIM-BANCO",
+          "520-LEE-VENCIM-CASA",
+          "530-LEE-VENCIM-BANCO",
+          "700-FIN",
+          "705-ENCABEZADO",
+          "720-REP-CONCEPTOS",
+          "970-SQL-ERROR",
+          "999-CONST-ENCA",
+          "999-CONST-ENCA-BANCO",
+          "999-MUEVE-FECHAS"
+        ]
+      }
+    }
+  ],
+  "qualityGateResult": "fail"
+}
