@@ -28,6 +28,8 @@ Si hay conflicto, priorizar este orden.
 6. Todo resultado automatico debe quedar en `pending_human_review` con `reviewSource = auto-ingestion` hasta aprobacion humana.
 7. Todos los campos definidos por tipologia de nodo son obligatorios; si falta al menos uno, el nodo debe marcarse para revision y notificarse.
 8. La clave natural operativa para `Paragraph` es compuesta (`programName` + `name`); para el resto de tipologias es `name`.
+9. En COBOL de formato fijo, toda extraccion lexical debe normalizar columnas de secuencia (1-6) y no usar columnas 73-80 para detectar labels/parrafos.
+10. Si hay `PERFORM` targets relevantes no resueltos a `Paragraph`, bloquear commit automatico y exigir remediacion o confirmacion humana.
 
 ## Convenciones
 

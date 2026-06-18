@@ -55,6 +55,7 @@ If stage is not provided, default to proposal-check and state assumption.
 - missing mandatory properties (payload-check and post-write-check only)
 - invalid controlled-vocabulary values (payload-check and post-write-check only)
 - invalid `Paragraph.summary` quality (placeholder or generic non-informative template)
+- paragraph extraction coverage anomalies (low match between PERFORM targets and extracted Paragraph names for fixed-format sources)
 
 ## Default Query Packs
 
@@ -71,6 +72,7 @@ Payload pack:
 - invalid property values checks
 - critical evidence checks
 - paragraph summary quality checks
+- paragraph coverage consistency checks for fixed-format COBOL extraction
 
 Post-write pack:
 - persisted entity count checks
@@ -78,6 +80,7 @@ Post-write pack:
 - post-write governance checks
 - deterministic reconciliation vs expected payload
 - post-write paragraph summary quality checks
+- post-write paragraph coverage consistency checks for the target program scope
 
 ## Query Assets To Execute
 
@@ -127,6 +130,7 @@ When auditing proposal-check, do not execute mandatory-property or invalid-value
 - `payload-check` assumes the orchestrator already enriched the payload with mandatory properties and governance fields.
 - `payload-check` requires `Paragraph.summary` to be informative and non-generic.
 - `post-write-check` validates the persisted graph against deterministic quality rules.
+- For fixed-format COBOL programs, `payload-check` and `post-write-check` must flag a blocker when paragraph coverage signals are clearly inconsistent with source evidence (example: many distinct PERFORM targets but very few extracted Paragraph nodes).
 
 ## Consolidated Metrics
 - totalChecks

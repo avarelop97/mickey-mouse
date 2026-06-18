@@ -34,6 +34,8 @@ The extractor returns an `ExtractionProposal`, not a complete write payload.
 4. Attach evidence file and physical lines (1-based).
 5. Propose associations between program components and external components.
 6. Classify SQL structures and physical tables by syntactic context.
+7. Apply fixed-format COBOL normalization before detecting paragraph labels.
+8. Compute paragraph extraction coverage and report gaps when detection is incomplete.
 
 ## Input Contract
 
@@ -84,6 +86,23 @@ If PROGRAM_NAME or SOURCE_FILE is missing, stop and request them.
 - Keep SQL includes/copybooks separated from physical tables even when names are lexically similar.
 - Every `Paragraph` proposal must include an informative `summary` (not generic template, not placeholder).
 
+## Fixed-Format COBOL Parsing Protocol (Mandatory)
+
+When source appears in fixed COBOL format, normalize each physical line before lexical extraction:
+
+1. Ignore sequence area columns 1-6 for pattern detection.
+2. Ignore identification/comment tail columns 73-80 for pattern detection.
+3. Detect paragraph labels on normalized code area only (typically columns 8-72).
+4. Do not treat `DIVISION`, `SECTION`, SQL keywords, or control words as paragraph names.
+5. Keep `evidenceLines` as physical file lines (1-based), never the embedded sequence numbers.
+
+Mandatory paragraph candidate sources:
+
+1. Explicit paragraph labels detected in normalized code area.
+2. `PERFORM <label>` targets found in normalized code area.
+
+If a candidate exists in `PERFORM` targets but not in detected labels, report it as a coverage gap and keep it in ambiguities unless strong evidence supports creation.
+
 ## Negative Rules
 
 1. `WRITEQ TS`, `READQ TS`, `DELETEQ TS` do not imply `OutputFile`.
@@ -102,6 +121,11 @@ If PROGRAM_NAME or SOURCE_FILE is missing, stop and request them.
 	- non-empty
 	- not placeholder text (`limpieza pendiente`, `nodo tecnico no funcional`, etc.)
 	- not generic template (`Parrafo ... del programa ...`)
+- Paragraph extraction coverage is validated:
+	- compute unique `PERFORM` targets in normalized code area
+	- compute matched extracted paragraph names
+	- if coverage is low or suspicious, return explicit quality finding `PARAGRAPH_EXTRACTION_COVERAGE_GAP`
+	- include missing target names and recommended remediation pass
 
 ## Output
 

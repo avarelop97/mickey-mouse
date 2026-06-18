@@ -54,6 +54,7 @@ If there is a conflict, follow this order.
 - Include required fields in checks: `ingestion`, `layer`, `nodeType`, `viewTag`, `reviewStatus`, `reviewRequired`, `reviewSource`
 - For semantic relations (`USES_COPYBOOK`, `READS_DATA`, `UPDATES_DATA`, `DERIVES_FROM`, `DEPENDS_ON_EXTERNAL`), require `evidenceFile` and non-empty `evidenceLines`
 - For `Paragraph` quality checks, treat `summary` as required and reject generic placeholder text.
+- For fixed-format COBOL onboarding, require sequence-aware parsing confirmation before trusting low paragraph counts.
 
 5. Run the embedded pre-delivery checklist in this file.
 
@@ -78,6 +79,7 @@ Prefer these columns unless user requests otherwise:
 - Do not mark auto-generated data as reviewed by default.
 - Do not omit evidence fields on semantic relationships.
 - Do not accept generic `Paragraph.summary` values such as `Parrafo ... del programa ...` as valid semantic documentation.
+- Do not approve payload/write when paragraph extraction evidence is inconsistent (e.g., many distinct `PERFORM` targets but very few extracted `Paragraph` nodes) without explicit remediation.
 
 ## Quick Templates
 
@@ -160,6 +162,12 @@ ORDER BY source, name
   - placeholders (`limpieza pendiente`, `nodo tecnico no funcional`, `requiere limpieza`, `placeholder`, `todo`)
   - generic auto-template (`Parrafo <X> del programa <Y>.`)
 - Prefer summary text that expresses function (validation, query, persistence, orchestration, closure) and optional dependency context.
+
+7) Fixed-format paragraph coverage safety
+- For COBOL fixed-format sources, sequence columns (1-6) and identification tail (73-80) must be ignored during lexical paragraph detection.
+- If audit input includes coverage metrics, treat low coverage as blocker:
+  - report issue type `PARAGRAPH_EXTRACTION_COVERAGE_GAP`
+  - include unmatched PERFORM targets and recommendation for sequence-aware remediation pass.
 
 7) Determinism and readability
 - Output columns are stable and named.

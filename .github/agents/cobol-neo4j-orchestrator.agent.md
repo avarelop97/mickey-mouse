@@ -122,6 +122,9 @@ Steps:
 - natural keys required for each proposed node are present
 - unresolved ambiguities are explicitly listed
 - mandatory governance/transversal fields are not required yet
+- extraction confirms fixed-format normalization when COBOL sequence columns are present (1-6 and 73-80 excluded from lexical detection)
+- paragraph coverage check is present (PERFORM targets vs extracted Paragraph names)
+- if `PARAGRAPH_EXTRACTION_COVERAGE_GAP` exists, do not continue to payload/write without remediation or explicit human override
 
 2) After payload enrichment (`WritePayload`)
 - payload contains mandatory governance and transversal fields
@@ -197,6 +200,18 @@ Stop and request explicit human confirmation if:
 - Ontology violations are detected.
 - Duplicate resolution is ambiguous.
 - Review state transitions are inconsistent.
+- Paragraph extraction coverage is inconsistent with source signals (for example many `PERFORM` targets but very low extracted `Paragraph` count).
+
+## Sequence-Aware Safety Rule
+
+When orchestrating extraction for fixed COBOL sources, require the extractor to report:
+
+1. Whether sequence columns were normalized out before parsing.
+2. Count of unique `PERFORM` targets.
+3. Count of extracted Paragraph names.
+4. Missing target names not resolved to Paragraph proposals.
+
+Do not authorize write stage if this report is absent for fixed-format sources.
 
 ## Quality Bar
 
