@@ -205,6 +205,10 @@ def parse_program(program: str) -> dict:
     paragraphs: list[dict] = []
     current_paragraph = None
 
+    paragraph_calls: dict[str, dict[str, list[int]]] = defaultdict(lambda: defaultdict(list))
+    paragraph_copybooks: dict[str, dict[str, list[int]]] = defaultdict(lambda: defaultdict(list))
+    paragraph_perform_targets: dict[str, dict[str, list[int]]] = defaultdict(lambda: defaultdict(list))
+
     sql_blocks: list[tuple[list[int], str]] = []
     in_sql = False
     sql_lines: list[str] = []
@@ -215,10 +219,16 @@ def parse_program(program: str) -> dict:
 
         cm = COPY_RE.match(logical)
         if cm:
-            copybooks[cm.group(1).upper()].append(line_no)
+            copybook_name = cm.group(1).upper()
+            copybooks[copybook_name].append(line_no)
+            if current_paragraph:
+                paragraph_copybooks[current_paragraph][copybook_name].append(line_no)
 
         for m in CALL_RE.finditer(logical):
-            calls[m.group(1).upper()].append(line_no)
+            routine_name = m.group(1).upper()
+            calls[routine_name].append(line_no)
+            if current_paragraph:
+                paragraph_calls[current_paragraph][routine_name].append(line_no)
 
         if line_no >= procedure_line:
             pm = PARAGRAPH_RE.match(logical)
@@ -240,18 +250,30 @@ def parse_program(program: str) -> dict:
                 tgt = m.group(1).upper()
                 if tgt not in {"UNTIL", "VARYING", "TIMES", "THRU", "THROUGH"}:
                     perform_targets[tgt].append(line_no)
+                    if current_paragraph:
+                        paragraph_perform_targets[current_paragraph][tgt].append(line_no)
 
         if EXEC_SQL_START_RE.search(up):
             in_sql = True
             sql_lines = [logical]
             sql_evidence = [line_no]
+            include_match = SQL_INCLUDE_RE.search(up)
+            if include_match:
+                include_name = include_match.group(1).upper()
+                copybooks[include_name].append(line_no)
+                if current_paragraph:
+                    paragraph_copybooks[current_paragraph][include_name].append(line_no)
             continue
+
         if in_sql:
             sql_lines.append(logical)
             sql_evidence.append(line_no)
             include_match = SQL_INCLUDE_RE.search(up)
             if include_match:
-                copybooks[include_match.group(1).upper()].append(line_no)
+                include_name = include_match.group(1).upper()
+                copybooks[include_name].append(line_no)
+                if current_paragraph:
+                    paragraph_copybooks[current_paragraph][include_name].append(line_no)
             if EXEC_SQL_END_RE.search(up):
                 sql_blocks.append((list(sql_evidence), " ".join(sql_lines)))
                 in_sql = False
@@ -272,6 +294,12 @@ def parse_program(program: str) -> dict:
         for target in sorted(perform_set)
         if target not in paragraph_name_set and target in copybook_paragraph_index
     }
+
+    # If a PERFORM target resolves via copybook, link that evidence back to the caller paragraph.
+    for paragraph_name, targets in paragraph_perform_targets.items():
+        for target_name, target_lines in targets.items():
+            for copybook_name in resolved_perform_targets_via_copybook.get(target_name, []):
+                paragraph_copybooks[paragraph_name][copybook_name].extend(target_lines)
 
     missing_perform_targets = sorted(
         target
@@ -300,6 +328,26 @@ def parse_program(program: str) -> dict:
             }
         )
 
+    paragraph_call_deps = [
+        {
+            "paragraph": paragraph_name,
+            "routine": routine_name,
+            "evidenceLines": sorted(set(dep_lines)),
+        }
+        for paragraph_name, routine_map in sorted(paragraph_calls.items())
+        for routine_name, dep_lines in sorted(routine_map.items())
+    ]
+
+    paragraph_copybook_deps = [
+        {
+            "paragraph": paragraph_name,
+            "copybook": copybook_name,
+            "evidenceLines": sorted(set(dep_lines)),
+        }
+        for paragraph_name, copybook_map in sorted(paragraph_copybooks.items())
+        for copybook_name, dep_lines in sorted(copybook_map.items())
+    ]
+
     return {
         "program": program,
         "sourceFile": f"src/{program}.cbl",
@@ -309,6 +357,8 @@ def parse_program(program: str) -> dict:
         "readTables": [{"name": k, "evidenceLines": sorted(set(v))} for k, v in sorted(read_tables.items())],
         "updateTables": [{"name": k, "evidenceLines": sorted(set(v))} for k, v in sorted(update_tables.items())],
         "paragraphs": extracted_paragraphs,
+        "paragraphCalls": paragraph_call_deps,
+        "paragraphCopybooks": paragraph_copybook_deps,
         "coverage": {
             "sequenceColumnsNormalized": True,
             "performTargetCount": len(perform_set),
@@ -317,8 +367,6 @@ def parse_program(program: str) -> dict:
             "resolvedPerformTargetsViaCopybook": resolved_perform_targets_via_copybook,
         },
     }
-
-
 def validate_payload(payload: dict) -> dict:
     findings: list[dict] = []
 
@@ -570,6 +618,49 @@ def build_payload(extractions: list[dict], run_id: str) -> dict:
                 },
             )
 
+        for dep in ext.get("paragraphCopybooks", []):
+            add_rel(
+                "USES_COPYBOOK",
+                ("Paragraph", (program, dep["paragraph"])),
+                ("Copybook", (dep["copybook"],)),
+                {
+                    "runId": run_id,
+                    "reviewStatus": "pending_human_review",
+                    "reviewSource": "auto-ingestion",
+                    "reviewRequired": True,
+                    "evidenceFile": source_file,
+                    "evidenceLines": dep["evidenceLines"],
+                },
+            )
+            add_rel(
+                "IMPLEMENTED_BY",
+                ("Paragraph", (program, dep["paragraph"])),
+                ("Copybook", (dep["copybook"],)),
+                {
+                    "runId": run_id,
+                    "reviewStatus": "pending_human_review",
+                    "reviewSource": "auto-ingestion",
+                    "reviewRequired": True,
+                    "evidenceFile": source_file,
+                    "evidenceLines": dep["evidenceLines"],
+                },
+            )
+
+        for dep in ext.get("paragraphCalls", []):
+            add_rel(
+                "DEPENDS_ON_EXTERNAL",
+                ("Paragraph", (program, dep["paragraph"])),
+                ("ExternalRoutine", (dep["routine"],)),
+                {
+                    "runId": run_id,
+                    "reviewStatus": "pending_human_review",
+                    "reviewSource": "auto-ingestion",
+                    "reviewRequired": True,
+                    "evidenceFile": source_file,
+                    "evidenceLines": dep["evidenceLines"],
+                },
+            )
+
         coverage.append(
             {
                 "program": program,
@@ -586,8 +677,6 @@ def build_payload(extractions: list[dict], run_id: str) -> dict:
         "relationships": list(relationships.values()),
         "coverage": coverage,
     }
-
-
 def cypher_value(value):
     if value is None:
         return "null"
@@ -706,7 +795,9 @@ def post_audit(run_id: str, programs: list[str]) -> dict:
 
     missing_rel_evidence = count_query(
         "WITH " + program_list + " AS progs "
-        "MATCH (p:Program)-[r]->() WHERE p.name IN progs AND type(r) IN ['INCLUDES_COPYBOOK','READS_TABLE','UPDATES_TABLE','CALLS_ROUTINE','USES_COPYBOOK','READS_DATA','UPDATES_DATA','DERIVES_FROM','DEPENDS_ON_EXTERNAL','USES_PARAM_TYPE','WRITES_FILE','IMPLEMENTED_BY'] "
+        "MATCH (a)-[r]->() "
+        "WHERE ((a:Program AND a.name IN progs) OR (a:Paragraph AND a.programName IN progs)) "
+        "AND type(r) IN ['INCLUDES_COPYBOOK','READS_TABLE','UPDATES_TABLE','CALLS_ROUTINE','USES_COPYBOOK','READS_DATA','UPDATES_DATA','DERIVES_FROM','DEPENDS_ON_EXTERNAL','USES_PARAM_TYPE','WRITES_FILE','IMPLEMENTED_BY'] "
         "AND (r.evidenceFile IS NULL OR trim(toString(r.evidenceFile))='' OR r.evidenceLines IS NULL OR size(r.evidenceLines)=0) "
         "RETURN count(*) AS c;"
     )
@@ -738,6 +829,9 @@ def inventory_counts(programs: list[str], run_id: str) -> dict:
         "includesCopybookRels": count_query("WITH " + program_list + " AS progs MATCH (:Program)-[r:INCLUDES_COPYBOOK]->() WHERE startNode(r).name IN progs RETURN count(*) AS c;"),
         "hasParagraphRels": count_query("WITH " + program_list + " AS progs MATCH (:Program)-[r:HAS_PARAGRAPH]->(:Paragraph) WHERE startNode(r).name IN progs RETURN count(*) AS c;"),
         "callsRoutineRels": count_query("WITH " + program_list + " AS progs MATCH (:Program)-[r:CALLS_ROUTINE]->() WHERE startNode(r).name IN progs RETURN count(*) AS c;"),
+        "usesCopybookRels": count_query("WITH " + program_list + " AS progs MATCH (:Paragraph)-[r:USES_COPYBOOK]->(:Copybook) WHERE startNode(r).programName IN progs RETURN count(*) AS c;"),
+        "implementedByRels": count_query("WITH " + program_list + " AS progs MATCH (:Paragraph)-[r:IMPLEMENTED_BY]->(:Copybook) WHERE startNode(r).programName IN progs RETURN count(*) AS c;"),
+        "dependsOnExternalRels": count_query("WITH " + program_list + " AS progs MATCH (:Paragraph)-[r:DEPENDS_ON_EXTERNAL]->(:ExternalRoutine) WHERE startNode(r).programName IN progs RETURN count(*) AS c;"),
         "readsTableRels": count_query("WITH " + program_list + " AS progs MATCH (:Program)-[r:READS_TABLE]->() WHERE startNode(r).name IN progs RETURN count(*) AS c;"),
         "updatesTableRels": count_query("WITH " + program_list + " AS progs MATCH (:Program)-[r:UPDATES_TABLE]->() WHERE startNode(r).name IN progs RETURN count(*) AS c;"),
     }
