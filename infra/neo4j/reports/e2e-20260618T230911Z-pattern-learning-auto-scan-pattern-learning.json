@@ -1,0 +1,73 @@
+{
+  "stage": "pattern-learning",
+  "runId": "e2e-20260618T230911Z-pattern-learning-auto-scan",
+  "scope": {
+    "scanAll": false,
+    "requestedPrograms": [],
+    "sampleSize": 250,
+    "selectedPrograms": 250,
+    "totalProgramsAvailable": 6244
+  },
+  "extractionErrors": [],
+  "summary": {
+    "programsAnalyzed": 250,
+    "programsWithCoverageGaps": 2,
+    "performTargetsAnalyzed": 7471,
+    "missingTargets": 36,
+    "missingTargetsResolvedByCurrentRulesOrCopybook": 36,
+    "unsupportedMissingTargets": 0,
+    "uniqueMissingTargets": 36
+  },
+  "unresolvedByProgram": [
+    {
+      "program": "ZM4DHW28",
+      "missingPerformTargets": [
+        "010-A-INICIO",
+        "508-LEE-ZMDT603",
+        "508-SELECT-ZMDT603",
+        "525-FETCH-OPE-DIRECTAS"
+      ]
+    },
+    {
+      "program": "ZM4TEN08",
+      "missingPerformTargets": [
+        "100-INICIO",
+        "110-OPEN",
+        "111-OPEN-TENENCIA",
+        "150-LEE-TENENCIA",
+        "160-LEE-ACUMULAD",
+        "162-FIN-ACUMULAD",
+        "170-LEE-P04",
+        "180-LEE-FECHAS",
+        "181-RUTINA-ZM6RG042",
+        "182-DATOS-REGRESO-RUTINA",
+        "183-DISPLAY-REGRESO-RUTINA",
+        "184-MUEVE-FECHA-ANTERIORES",
+        "190-ARREGLA-DIAS",
+        "191-CORRIGE-DIAS",
+        "200-PROCESO",
+        "210-MATCH",
+        "211-1-GRABA-DATIO",
+        "211-GENERA-INHABILES",
+        "213-1-GRABA-MEDIOS",
+        "213-GRABA-MEDIOS",
+        "214-GRABA-ACUMULAD",
+        "215-PROCESA-ACUMULADOS",
+        "216-SUMADORES",
+        "217-FINALES",
+        "300-FINAL",
+        "310-CLOSE-FICHEROS",
+        "311-CLOSE-TENENCIA",
+        "900-IMPRIME-DISPLAY",
+        "990-ERROR-SISTEMA",
+        "991-CIFRAS-CONTROL",
+        "992-ABORTAR-ARCHIVO-VACIO",
+        "999-CIFRAS-DB2"
+      ]
+    }
+  ],
+  "unsupportedMissingTargets": [],
+  "suggestions": [],
+  "qualityGateResult": "pass",
+  "nextSafeAction": "Continue with current parser rules"
+}

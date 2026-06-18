@@ -73,13 +73,20 @@ def is_candidate_paragraph_name(paragraph_name: str) -> bool:
     if name in PARAGRAPH_EXCLUDE:
         return False
 
-    # Legacy estates mix numeric paragraph labels (1-9 digit prefixes) and alphabetic labels
-    # (e.g. 9-STOP, 10-INIT, 100000-FOO, 700A-FOO, PROCESA-REPORTE). Keep all while excluding control keywords.
+    # Legacy estates mix numeric paragraph labels and mixed alphanumeric prefixes.
+    # Examples: 9-STOP, 10-INIT, 183D1-VALIDA, 050MIS-MUEVE, 2B1A-UPDATE, 700A-FOO.
     if re.match(r"^\d+-", name):
         return True
     if re.match(r"^\d+[A-Z]-", name):
         return True
+    if re.match(r"^\d+[A-Z0-9]+-", name):
+        return True
+
     if name.startswith("P-") or name.startswith("R-"):
+        return True
+
+    # Accept pure alphabetic legacy labels (e.g. INICIO, ENCABEZADO) and hyphenated labels.
+    if re.match(r"^[A-Z][A-Z0-9]{2,70}$", name):
         return True
     if "-" in name and re.match(r"^[A-Z][A-Z0-9-]{2,70}$", name):
         return True
