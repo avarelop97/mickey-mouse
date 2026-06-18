@@ -96,6 +96,15 @@ def is_ignorable_perform_target(target: str) -> bool:
     return target in {"UNTIL", "VARYING", "TIMES", "THRU", "THROUGH"}
 
 
+def is_ignorable_perform_pair(logical_line: str, target: str) -> bool:
+    # Ignore loop-count PERFORM forms such as "PERFORM 7 TIMES".
+    if re.match(r"^\d+$", target):
+        pattern = rf"\bPERFORM\s+{re.escape(target)}\s+TIMES\b"
+        if re.search(pattern, logical_line, re.IGNORECASE):
+            return True
+    return False
+
+
 def run_cypher(query: str) -> list[str]:
     command = [
         "docker",
@@ -228,6 +237,8 @@ def parse_program(program: str) -> dict:
         if first_perform_line is None:
             for m in PERFORM_RE.finditer(logical):
                 tgt = m.group(1).upper()
+                if is_ignorable_perform_pair(logical, tgt):
+                    continue
                 if not is_ignorable_perform_target(tgt):
                     first_perform_line = i
                     break
@@ -285,6 +296,8 @@ def parse_program(program: str) -> dict:
 
             for m in PERFORM_RE.finditer(logical):
                 tgt = m.group(1).upper()
+                if is_ignorable_perform_pair(logical, tgt):
+                    continue
                 if not is_ignorable_perform_target(tgt):
                     perform_targets[tgt].append(line_no)
                     if current_paragraph:
@@ -409,6 +422,151 @@ def parse_program(program: str) -> dict:
             "resolvedPerformTargetsViaCopybook": resolved_perform_targets_via_copybook,
         },
     }
+
+def discover_programs_from_src() -> list[str]:
+    return sorted(path.stem.upper() for path in SRC_DIR.glob("*.cbl"))
+
+
+def deterministic_sample(programs: list[str], sample_size: int) -> list[str]:
+    if sample_size <= 0 or sample_size >= len(programs):
+        return list(programs)
+    if sample_size == 1:
+        return [programs[0]]
+
+    n = len(programs)
+    indices = {round(i * (n - 1) / (sample_size - 1)) for i in range(sample_size)}
+    return [programs[i] for i in sorted(indices)]
+
+
+def infer_regex_from_missing_target(target: str) -> str:
+    name = target.upper().strip()
+
+    m = re.match(r"^(\d+)-", name)
+    if m:
+        digits = len(m.group(1))
+        return rf"^\d{{{digits}}}-"
+
+    m = re.match(r"^(\d+)([A-Z])-", name)
+    if m:
+        digits = len(m.group(1))
+        return rf"^\d{{{digits}}}[A-Z]-"
+
+    if name.startswith(("P-", "R-")):
+        return r"^[PR]-"
+
+    if "-" in name and re.match(r"^[A-Z][A-Z0-9-]{2,70}$", name):
+        return r"^[A-Z][A-Z0-9-]{2,70}$"
+
+    escaped = re.escape(name)
+    return rf"^{escaped}$"
+
+
+def build_pattern_learning_report(extractions: list[dict], run_id: str, scope: dict, extraction_errors: list[dict]) -> dict:
+    unresolved_by_program: list[dict] = []
+    unsupported_missing_targets: list[str] = []
+    all_missing_targets: list[str] = []
+
+    for ext in extractions:
+        program = ext["program"]
+        coverage = ext.get("coverage", {})
+        missing = sorted(set(coverage.get("missingPerformTargets", [])))
+        if missing:
+            unresolved_by_program.append({"program": program, "missingPerformTargets": missing})
+            all_missing_targets.extend(missing)
+            for target in missing:
+                if not is_candidate_paragraph_name(target):
+                    unsupported_missing_targets.append(target)
+
+    unique_missing = sorted(set(all_missing_targets))
+    unique_unsupported = sorted(set(unsupported_missing_targets))
+
+    grouped_patterns: dict[str, list[str]] = defaultdict(list)
+    for target in unique_unsupported:
+        grouped_patterns[infer_regex_from_missing_target(target)].append(target)
+
+    existing_paragraph_names = {
+        paragraph["name"]
+        for ext in extractions
+        for paragraph in ext.get("paragraphs", [])
+    }
+
+    suggestions = []
+    total_unsupported = max(1, len(unique_unsupported))
+    for pattern, examples in sorted(grouped_patterns.items(), key=lambda item: (-len(item[1]), item[0])):
+        support_hits = [name for name in sorted(existing_paragraph_names) if re.match(pattern, name)]
+        covered = len(examples)
+        coverage_ratio = covered / total_unsupported
+        support_ratio = min(1.0, len(support_hits) / max(1, covered))
+        confidence = round(100 * (0.75 * coverage_ratio + 0.25 * support_ratio), 1)
+
+        suggestions.append(
+            {
+                "suggestedRegex": pattern,
+                "requiresHumanApproval": True,
+                "confidence": confidence,
+                "coveredUnsupportedTargets": covered,
+                "exampleUnsupportedTargets": examples[:10],
+                "existingParagraphMatchesInSample": len(support_hits),
+                "exampleExistingParagraphMatches": support_hits[:10],
+            }
+        )
+
+    total_perform_targets = sum(ext.get("coverage", {}).get("performTargetCount", 0) for ext in extractions)
+    total_missing = len(all_missing_targets)
+    total_supported_missing = total_missing - len(unique_unsupported)
+
+    return {
+        "stage": "pattern-learning",
+        "runId": run_id,
+        "scope": scope,
+        "extractionErrors": extraction_errors,
+        "summary": {
+            "programsAnalyzed": len(extractions),
+            "programsWithCoverageGaps": len(unresolved_by_program),
+            "performTargetsAnalyzed": total_perform_targets,
+            "missingTargets": total_missing,
+            "missingTargetsResolvedByCurrentRulesOrCopybook": total_supported_missing,
+            "unsupportedMissingTargets": len(unique_unsupported),
+            "uniqueMissingTargets": len(unique_missing),
+        },
+        "unresolvedByProgram": unresolved_by_program,
+        "unsupportedMissingTargets": unique_unsupported,
+        "suggestions": suggestions,
+        "qualityGateResult": "pass" if not unique_unsupported else "review_required",
+        "nextSafeAction": "Continue with current parser rules" if not unique_unsupported else "Review suggestions and approve deterministic rule updates",
+    }
+
+
+def run_pattern_learning(run_id: str, programs: list[str], sample_size: int, scan_all: bool) -> tuple[pathlib.Path, dict]:
+    source_programs = [p.upper() for p in programs] if programs else discover_programs_from_src()
+    selected_programs = source_programs if scan_all else deterministic_sample(source_programs, sample_size)
+
+    extractions: list[dict] = []
+    extraction_errors: list[dict] = []
+    for program in selected_programs:
+        try:
+            extractions.append(parse_program(program))
+        except Exception as exc:  # defensive path for large estate scans
+            extraction_errors.append({"program": program, "error": str(exc)[:300]})
+
+    report = build_pattern_learning_report(
+        extractions=extractions,
+        run_id=run_id,
+        scope={
+            "scanAll": scan_all,
+            "requestedPrograms": [p.upper() for p in programs] if programs else [],
+            "sampleSize": sample_size,
+            "selectedPrograms": len(selected_programs),
+            "totalProgramsAvailable": len(source_programs),
+        },
+        extraction_errors=extraction_errors,
+    )
+
+    report_path = REPORT_DIR / f"{run_id}-pattern-learning.json"
+    report_path.write_text(json.dumps(report, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
+    return report_path, report
+
+
 def validate_payload(payload: dict) -> dict:
     findings: list[dict] = []
 
@@ -881,15 +1039,42 @@ def inventory_counts(programs: list[str], run_id: str) -> dict:
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--programs", nargs="+", required=True)
-    parser.add_argument("--mode", choices=["discovery", "precheck", "commit", "post-audit", "full"], default="full")
+    parser.add_argument("--programs", nargs="+")
+    parser.add_argument("--mode", choices=["discovery", "precheck", "commit", "post-audit", "full", "pattern-learn"], default="full")
+    parser.add_argument("--sample-size", type=int, default=250)
+    parser.add_argument("--scan-all", action="store_true")
     args = parser.parse_args()
-
-    timestamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
-    run_id = f"e2e-{timestamp}-" + "-".join(p.lower() for p in args.programs)
 
     REPORT_DIR.mkdir(parents=True, exist_ok=True)
     QUERY_DIR.mkdir(parents=True, exist_ok=True)
+
+    timestamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+
+    if args.mode == "pattern-learn":
+        program_suffix = "custom" if args.programs else "auto-scan"
+        run_id = f"e2e-{timestamp}-pattern-learning-{program_suffix}"
+        report_path, report = run_pattern_learning(
+            run_id=run_id,
+            programs=args.programs or [],
+            sample_size=args.sample_size,
+            scan_all=args.scan_all,
+        )
+        print(str(report_path.relative_to(REPO_ROOT)))
+        print(json.dumps({
+            "runId": run_id,
+            "mode": "pattern-learn",
+            "qualityGateResult": report["qualityGateResult"],
+            "programsAnalyzed": report["summary"]["programsAnalyzed"],
+            "programsWithCoverageGaps": report["summary"]["programsWithCoverageGaps"],
+            "unsupportedMissingTargets": report["summary"]["unsupportedMissingTargets"],
+            "suggestions": len(report["suggestions"]),
+        }, ensure_ascii=True))
+        return 0
+
+    if not args.programs:
+        parser.error("--programs is required for mode '" + args.mode + "'")
+
+    run_id = f"e2e-{timestamp}-" + "-".join(p.lower() for p in args.programs)
 
     extractions = [parse_program(p.upper()) for p in args.programs]
 
