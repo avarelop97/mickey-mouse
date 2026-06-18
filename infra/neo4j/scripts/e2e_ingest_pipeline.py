@@ -17,6 +17,7 @@ SRC_DIR = REPO_ROOT / "src"
 CPY_DIR = REPO_ROOT / "cpy"
 REPORT_DIR = REPO_ROOT / "infra" / "neo4j" / "reports"
 QUERY_DIR = REPO_ROOT / "infra" / "neo4j" / "queries"
+APPROVED_PATTERN_RULES_PATH = REPO_ROOT / "infra" / "neo4j" / "approved-perform-target-patterns.json"
 
 NEO4J_CONTAINER = os.environ.get("NEO4J_CONTAINER", "neo4j-local")
 NEO4J_PASSWORD = os.environ.get("NEO4J_PASSWORD", "CambiaEstaClave123!")
@@ -58,7 +59,9 @@ INVALID_SUMMARY_TOKENS = [
 # Accept both COBOL styles for paragraph headers:
 # - "010-INIT."
 # - "010-INIT SECTION."
-PARAGRAPH_RE = re.compile(r"^\s*([0-9A-Z][0-9A-Z-]{1,70})(?:\s+SECTION)?\.\s*$", re.IGNORECASE)
+PARAGRAPH_RE = re.compile(r"^\s*([0-9A-Z][0-9A-Z-]{1,70})(?:\s+SECTION)?\s*\.\s*$", re.IGNORECASE)
+PARAGRAPH_RE_NO_DOT = re.compile(r"^\s*([0-9A-Z][0-9A-Z-]{1,70})(?:\s+SECTION)?\s*$", re.IGNORECASE)
+DOT_ONLY_RE = re.compile(r"^\s*\.\s*$")
 COPY_RE = re.compile(r"^\s*COPY\s+([A-Z0-9-]+)\b", re.IGNORECASE)
 CALL_RE = re.compile(r"\bCALL\s+'([A-Z0-9-]+)'", re.IGNORECASE)
 PERFORM_RE = re.compile(r"\bPERFORM\s+([A-Z0-9-]+)\b", re.IGNORECASE)
@@ -66,6 +69,49 @@ EXEC_SQL_START_RE = re.compile(r"\bEXEC\s+SQL\b", re.IGNORECASE)
 EXEC_SQL_END_RE = re.compile(r"\bEND-EXEC\b", re.IGNORECASE)
 SQL_INCLUDE_RE = re.compile(r"\bINCLUDE\s+([A-Z0-9-]+)\b", re.IGNORECASE)
 PARAGRAPH_EXCLUDE = {"END-IF", "END-EXEC", "END-PERFORM", "EXIT", "ELSE", "WHEN", "END-EVALUATE"}
+MAX_COPYBOOK_RECURSION_DEPTH = 12
+
+_APPROVED_PARAGRAPH_PATTERNS: list[re.Pattern[str]] | None = None
+_COPYBOOK_TRANSITIVE_PARAGRAPH_CACHE: dict[str, set[str]] = {}
+
+
+def load_approved_paragraph_patterns() -> list[re.Pattern[str]]:
+    global _APPROVED_PARAGRAPH_PATTERNS
+    if _APPROVED_PARAGRAPH_PATTERNS is not None:
+        return _APPROVED_PARAGRAPH_PATTERNS
+
+    if not APPROVED_PATTERN_RULES_PATH.exists():
+        _APPROVED_PARAGRAPH_PATTERNS = []
+        return _APPROVED_PARAGRAPH_PATTERNS
+
+    try:
+        payload = json.loads(APPROVED_PATTERN_RULES_PATH.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        raise ValueError(f"Invalid JSON in {APPROVED_PATTERN_RULES_PATH}: {exc}") from exc
+
+    raw_patterns = payload.get("approvedParagraphNameRegex", [])
+    if not isinstance(raw_patterns, list):
+        raise ValueError(
+            f"Field approvedParagraphNameRegex must be a list in {APPROVED_PATTERN_RULES_PATH}"
+        )
+
+    compiled: list[re.Pattern[str]] = []
+    for idx, raw in enumerate(raw_patterns):
+        if not isinstance(raw, str):
+            raise ValueError(
+                f"Pattern at index {idx} must be a string in {APPROVED_PATTERN_RULES_PATH}"
+            )
+        if not raw.startswith("^") or not raw.endswith("$"):
+            raise ValueError(
+                f"Pattern at index {idx} must be fully anchored (^...$): {raw}"
+            )
+        try:
+            compiled.append(re.compile(raw, re.IGNORECASE))
+        except re.error as exc:
+            raise ValueError(f"Invalid regex at index {idx}: {raw}: {exc}") from exc
+
+    _APPROVED_PARAGRAPH_PATTERNS = compiled
+    return _APPROVED_PARAGRAPH_PATTERNS
 
 
 def is_candidate_paragraph_name(paragraph_name: str) -> bool:
@@ -90,6 +136,11 @@ def is_candidate_paragraph_name(paragraph_name: str) -> bool:
         return True
     if "-" in name and re.match(r"^[A-Z][A-Z0-9-]{2,70}$", name):
         return True
+
+    # Allow controlled extensions approved during pattern-learning review.
+    for pattern in load_approved_paragraph_patterns():
+        if pattern.match(name):
+            return True
 
     return False
 
@@ -147,6 +198,37 @@ def normalize_fixed_line(raw_line: str) -> str:
     return raw_line[6:72]
 
 
+def strip_quoted_literals(logical_line: str) -> str:
+    def _blank(match: re.Match[str]) -> str:
+        return " " * len(match.group(0))
+
+    return re.sub(r"'[^']*'", _blank, logical_line)
+
+
+def extract_paragraph_name_from_normalized(
+    normalized_lines: list[tuple[int, str]],
+    idx: int,
+) -> str | None:
+    logical = normalized_lines[idx][1]
+
+    pm = PARAGRAPH_RE.match(logical)
+    if pm:
+        return pm.group(1).upper()
+
+    pm_no_dot = PARAGRAPH_RE_NO_DOT.match(logical)
+    if not pm_no_dot:
+        return None
+
+    if idx + 1 >= len(normalized_lines):
+        return None
+
+    next_logical = normalized_lines[idx + 1][1]
+    if DOT_ONLY_RE.match(next_logical):
+        return pm_no_dot.group(1).upper()
+
+    return None
+
+
 def extract_sql_tables(sql_block: str) -> tuple[set[str], set[str]]:
     up = sql_block.upper()
     reads: set[str] = set()
@@ -201,22 +283,60 @@ def resolve_copybook_file(copybook_name: str) -> tuple[str, pathlib.Path] | tupl
     return None, None
 
 
-def extract_copybook_paragraph_names(copybook_name: str) -> set[str]:
-    _, path = resolve_copybook_file(copybook_name)
-    if not path:
+def extract_copybook_paragraph_names(
+    copybook_name: str,
+    visited: set[str] | None = None,
+    depth: int = 0,
+) -> set[str]:
+    resolved_name, path = resolve_copybook_file(copybook_name)
+    if not path or not resolved_name:
         return set()
 
+    if resolved_name in _COPYBOOK_TRANSITIVE_PARAGRAPH_CACHE:
+        return set(_COPYBOOK_TRANSITIVE_PARAGRAPH_CACHE[resolved_name])
+
+    if depth >= MAX_COPYBOOK_RECURSION_DEPTH:
+        return set()
+
+    if visited is None:
+        visited = set()
+    if resolved_name in visited:
+        return set()
+
+    visited_local = set(visited)
+    visited_local.add(resolved_name)
+
     names: set[str] = set()
-    for raw in path.read_text(encoding="utf-8", errors="ignore").splitlines():
-        logical = normalize_fixed_line(raw)
-        pm = PARAGRAPH_RE.match(logical)
-        if not pm:
+    nested_copybooks: set[str] = set()
+
+    normalized = [
+        (line_no, normalize_fixed_line(raw))
+        for line_no, raw in enumerate(path.read_text(encoding="utf-8", errors="ignore").splitlines(), start=1)
+    ]
+
+    for idx, (_, logical) in enumerate(normalized):
+        if is_ignored_structural_line(logical):
             continue
-        paragraph_name = pm.group(1).upper()
-        if is_candidate_paragraph_name(paragraph_name):
+
+        paragraph_name = extract_paragraph_name_from_normalized(normalized, idx)
+        if paragraph_name and is_candidate_paragraph_name(paragraph_name):
             names.add(paragraph_name)
 
+        cm = COPY_RE.match(logical)
+        if cm:
+            nested_copybooks.add(cm.group(1).upper())
+
+        include_match = SQL_INCLUDE_RE.search(logical.upper())
+        if include_match:
+            nested_copybooks.add(include_match.group(1).upper())
+
+    for nested in sorted(nested_copybooks):
+        names.update(extract_copybook_paragraph_names(nested, visited_local, depth + 1))
+
+    _COPYBOOK_TRANSITIVE_PARAGRAPH_CACHE[resolved_name] = set(names)
     return names
+
+
 def parse_program(program: str) -> dict:
     src = SRC_DIR / f"{program}.cbl"
     if not src.exists():
@@ -224,30 +344,33 @@ def parse_program(program: str) -> dict:
 
     lines = src.read_text(encoding="utf-8", errors="ignore").splitlines()
 
-    procedure_line = None
-    first_candidate_paragraph_line = None
-    first_perform_line = None
     normalized: list[tuple[int, str]] = []
     for i, raw in enumerate(lines, start=1):
         logical = normalize_fixed_line(raw)
         normalized.append((i, logical))
 
+    procedure_line = None
+    first_candidate_paragraph_line = None
+    first_perform_line = None
+    for idx, (line_no, logical) in enumerate(normalized):
+        searchable = strip_quoted_literals(logical)
+
         up = logical.upper()
         if procedure_line is None and "PROCEDURE DIVISION" in up:
-            procedure_line = i
+            procedure_line = line_no
 
         if first_candidate_paragraph_line is None:
-            pm = PARAGRAPH_RE.match(logical)
-            if pm and is_candidate_paragraph_name(pm.group(1)):
-                first_candidate_paragraph_line = i
+            paragraph_name = extract_paragraph_name_from_normalized(normalized, idx)
+            if paragraph_name and is_candidate_paragraph_name(paragraph_name):
+                first_candidate_paragraph_line = line_no
 
         if first_perform_line is None:
-            for m in PERFORM_RE.finditer(logical):
+            for m in PERFORM_RE.finditer(searchable):
                 tgt = m.group(1).upper()
                 if is_ignorable_perform_pair(logical, tgt):
                     continue
                 if not is_ignorable_perform_target(tgt):
-                    first_perform_line = i
+                    first_perform_line = line_no
                     break
 
     parse_start_candidates = [line for line in [procedure_line, first_candidate_paragraph_line, first_perform_line] if line is not None]
@@ -273,7 +396,8 @@ def parse_program(program: str) -> dict:
     sql_lines: list[str] = []
     sql_evidence: list[int] = []
 
-    for line_no, logical in normalized:
+    for idx, (line_no, logical) in enumerate(normalized):
+        searchable = strip_quoted_literals(logical)
         up = logical.upper()
 
         # Skip comment lines and directive lines
@@ -287,21 +411,19 @@ def parse_program(program: str) -> dict:
             if current_paragraph:
                 paragraph_copybooks[current_paragraph][copybook_name].append(line_no)
 
-        for m in CALL_RE.finditer(logical):
+        for m in CALL_RE.finditer(searchable):
             routine_name = m.group(1).upper()
             calls[routine_name].append(line_no)
             if current_paragraph:
                 paragraph_calls[current_paragraph][routine_name].append(line_no)
 
         if line_no >= parse_start_line:
-            pm = PARAGRAPH_RE.match(logical)
-            if pm:
-                paragraph_name = pm.group(1).upper()
-                if is_candidate_paragraph_name(paragraph_name):
-                    current_paragraph = paragraph_name
-                    paragraphs.append({"name": paragraph_name, "line": line_no})
+            paragraph_name = extract_paragraph_name_from_normalized(normalized, idx)
+            if paragraph_name and is_candidate_paragraph_name(paragraph_name):
+                current_paragraph = paragraph_name
+                paragraphs.append({"name": paragraph_name, "line": line_no})
 
-            for m in PERFORM_RE.finditer(logical):
+            for m in PERFORM_RE.finditer(searchable):
                 tgt = m.group(1).upper()
                 if is_ignorable_perform_pair(logical, tgt):
                     continue
@@ -340,9 +462,9 @@ def parse_program(program: str) -> dict:
     paragraph_name_set = {p["name"] for p in paragraphs}
     perform_set = set(perform_targets.keys())
 
-    # Strictly resolve missing PERFORM targets against included copybooks.
+    # Strictly resolve missing PERFORM targets against included copybooks (transitively).
     copybook_paragraph_index: dict[str, set[str]] = defaultdict(set)
-    for copybook_name in copybooks.keys():
+    for copybook_name in sorted(copybooks.keys()):
         for paragraph_name in extract_copybook_paragraph_names(copybook_name):
             copybook_paragraph_index[paragraph_name].add(copybook_name)
 
@@ -352,16 +474,40 @@ def parse_program(program: str) -> dict:
         if target not in paragraph_name_set and target in copybook_paragraph_index
     }
 
+    # Resolve deterministic aliases when a missing target maps to exactly one known paragraph
+    # by strict prefix extension. Example: 508-LEE-ZMDT603 -> 508-LEE-ZMDT603-CJ
+    known_paragraph_names = paragraph_name_set | set(copybook_paragraph_index.keys())
+    resolved_perform_targets_via_prefix_alias: dict[str, str] = {}
+    for target in sorted(perform_set):
+        if target in paragraph_name_set or target in resolved_perform_targets_via_copybook:
+            continue
+        if "-" not in target:
+            continue
+
+        if target.endswith("-"):
+            matches = sorted(name for name in known_paragraph_names if name.startswith(target))
+        else:
+            matches = sorted(name for name in known_paragraph_names if name.startswith(target + "-"))
+
+        if len(matches) == 1:
+            resolved_perform_targets_via_prefix_alias[target] = matches[0]
+
     # If a PERFORM target resolves via copybook, link that evidence back to the caller paragraph.
     for paragraph_name, targets in paragraph_perform_targets.items():
         for target_name, target_lines in targets.items():
             for copybook_name in resolved_perform_targets_via_copybook.get(target_name, []):
                 paragraph_copybooks[paragraph_name][copybook_name].extend(target_lines)
+            alias_name = resolved_perform_targets_via_prefix_alias.get(target_name)
+            if alias_name:
+                for copybook_name in copybook_paragraph_index.get(alias_name, set()):
+                    paragraph_copybooks[paragraph_name][copybook_name].extend(target_lines)
 
     missing_perform_targets = sorted(
         target
         for target in perform_set
-        if target not in paragraph_name_set and target not in resolved_perform_targets_via_copybook
+        if target not in paragraph_name_set
+        and target not in resolved_perform_targets_via_copybook
+        and target not in resolved_perform_targets_via_prefix_alias
     )
 
     read_tables: dict[str, list[int]] = defaultdict(list)
@@ -427,6 +573,7 @@ def parse_program(program: str) -> dict:
             "paragraphCount": len(extracted_paragraphs),
             "missingPerformTargets": missing_perform_targets,
             "resolvedPerformTargetsViaCopybook": resolved_perform_targets_via_copybook,
+            "resolvedPerformTargetsViaPrefixAlias": resolved_perform_targets_via_prefix_alias,
         },
     }
 

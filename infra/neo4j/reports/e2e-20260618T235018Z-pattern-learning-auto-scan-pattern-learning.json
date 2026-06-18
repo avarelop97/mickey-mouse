@@ -1,0 +1,159 @@
+{
+  "stage": "pattern-learning",
+  "runId": "e2e-20260618T235018Z-pattern-learning-auto-scan",
+  "scope": {
+    "scanAll": true,
+    "requestedPrograms": [],
+    "sampleSize": 250,
+    "selectedPrograms": 6244,
+    "totalProgramsAvailable": 6244
+  },
+  "extractionErrors": [],
+  "summary": {
+    "programsAnalyzed": 6244,
+    "programsWithCoverageGaps": 22,
+    "performTargetsAnalyzed": 181575,
+    "missingTargets": 22,
+    "missingTargetsResolvedByCurrentRulesOrCopybook": 22,
+    "unsupportedMissingTargets": 0,
+    "uniqueMissingTargets": 6
+  },
+  "unresolvedByProgram": [
+    {
+      "program": "ZM3DAA04",
+      "missingPerformTargets": [
+        "200300-"
+      ]
+    },
+    {
+      "program": "ZM3DAA05",
+      "missingPerformTargets": [
+        "200300-"
+      ]
+    },
+    {
+      "program": "ZM4BTR20",
+      "missingPerformTargets": [
+        "100200-ABRE-"
+      ]
+    },
+    {
+      "program": "ZM4DH080",
+      "missingPerformTargets": [
+        "9800-ABORTA"
+      ]
+    },
+    {
+      "program": "ZM4DH091",
+      "missingPerformTargets": [
+        "9800-ABORTA"
+      ]
+    },
+    {
+      "program": "ZM4DH092",
+      "missingPerformTargets": [
+        "9800-ABORTA"
+      ]
+    },
+    {
+      "program": "ZM4DH093",
+      "missingPerformTargets": [
+        "9800-ABORTA"
+      ]
+    },
+    {
+      "program": "ZM4DH09A",
+      "missingPerformTargets": [
+        "9800-ABORTA"
+      ]
+    },
+    {
+      "program": "ZM4DH09E",
+      "missingPerformTargets": [
+        "9800-ABORTA"
+      ]
+    },
+    {
+      "program": "ZM4DHW22",
+      "missingPerformTargets": [
+        "SQL-INITIAL"
+      ]
+    },
+    {
+      "program": "ZM4DHW23",
+      "missingPerformTargets": [
+        "SQL-INITIAL"
+      ]
+    },
+    {
+      "program": "ZM4DHW29",
+      "missingPerformTargets": [
+        "SQL-INITIAL"
+      ]
+    },
+    {
+      "program": "ZM4DHW33",
+      "missingPerformTargets": [
+        "SQL-INITIAL"
+      ]
+    },
+    {
+      "program": "ZM4DHW91",
+      "missingPerformTargets": [
+        "SQL-INITIAL"
+      ]
+    },
+    {
+      "program": "ZM4DHW92",
+      "missingPerformTargets": [
+        "SQL-INITIAL"
+      ]
+    },
+    {
+      "program": "ZM4DHW99",
+      "missingPerformTargets": [
+        "SQL-INITIAL"
+      ]
+    },
+    {
+      "program": "ZM4DS058",
+      "missingPerformTargets": [
+        "WS-DIAS"
+      ]
+    },
+    {
+      "program": "ZM4MGT55",
+      "missingPerformTargets": [
+        "SQL-INITIAL"
+      ]
+    },
+    {
+      "program": "ZM4MGT58",
+      "missingPerformTargets": [
+        "SQL-INITIAL"
+      ]
+    },
+    {
+      "program": "ZM4MGT61",
+      "missingPerformTargets": [
+        "SQL-INITIAL"
+      ]
+    },
+    {
+      "program": "ZM4MH007",
+      "missingPerformTargets": [
+        "9800-ABORTA"
+      ]
+    },
+    {
+      "program": "ZM4MS023",
+      "missingPerformTargets": [
+        "TTV7-MAX"
+      ]
+    }
+  ],
+  "unsupportedMissingTargets": [],
+  "suggestions": [],
+  "qualityGateResult": "pass",
+  "nextSafeAction": "Continue with current parser rules"
+}

@@ -245,6 +245,31 @@ Salida:
 - reporte JSON en `infra/neo4j/reports/discovery-missing-nodes-*.json`
 - resumen por consola con conteos de backlog pendiente
 
+## Reglas aprobadas para pattern-learning
+
+Para evitar cambios de codigo por cada ajuste puntual de clasificacion de `PERFORM` targets,
+el pipeline ahora admite reglas regex suplementarias aprobadas por humano en:
+
+- `infra/neo4j/approved-perform-target-patterns.json`
+
+Contrato minimo del archivo:
+
+- `version`: version del esquema local
+- `reviewSource`: trazabilidad de aprobacion
+- `approvedParagraphNameRegex`: lista de regex ancladas (`^...$`)
+
+Validaciones aplicadas por el pipeline:
+
+- el archivo debe ser JSON valido
+- `approvedParagraphNameRegex` debe ser lista de strings
+- cada regex debe estar anclada (`^...$`)
+
+Prueba rapida de pattern-learning (sin commit):
+
+```bash
+python3 infra/neo4j/scripts/e2e_ingest_pipeline.py --mode pattern-learn --sample-size 50
+```
+
 ## Alternativa sin Compose (docker run)
 
 ```bash

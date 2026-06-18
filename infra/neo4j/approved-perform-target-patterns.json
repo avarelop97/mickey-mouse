@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "reviewSource": "human-approved",
+  "description": "Supplemental regex rules for candidate COBOL paragraph names used by pattern-learning/precheck.",
+  "approvedParagraphNameRegex": [
+    "^\\d+[A-Z0-9]+-[A-Z0-9-]+$",
+    "^[A-Z]{3,}$"
+  ]
+}

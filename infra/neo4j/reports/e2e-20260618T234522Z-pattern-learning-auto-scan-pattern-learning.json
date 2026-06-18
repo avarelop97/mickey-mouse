@@ -1,0 +1,282 @@
+{
+  "stage": "pattern-learning",
+  "runId": "e2e-20260618T234522Z-pattern-learning-auto-scan",
+  "scope": {
+    "scanAll": true,
+    "requestedPrograms": [],
+    "sampleSize": 250,
+    "selectedPrograms": 6244,
+    "totalProgramsAvailable": 6244
+  },
+  "extractionErrors": [],
+  "summary": {
+    "programsAnalyzed": 6244,
+    "programsWithCoverageGaps": 40,
+    "performTargetsAnalyzed": 181608,
+    "missingTargets": 55,
+    "missingTargetsResolvedByCurrentRulesOrCopybook": 55,
+    "unsupportedMissingTargets": 0,
+    "uniqueMissingTargets": 20
+  },
+  "unresolvedByProgram": [
+    {
+      "program": "ZM2OLD54",
+      "missingPerformTargets": [
+        "5537-LEE-"
+      ]
+    },
+    {
+      "program": "ZM3DAA04",
+      "missingPerformTargets": [
+        "200300-"
+      ]
+    },
+    {
+      "program": "ZM3DAA05",
+      "missingPerformTargets": [
+        "200300-"
+      ]
+    },
+    {
+      "program": "ZM4BTR20",
+      "missingPerformTargets": [
+        "100200-ABRE-"
+      ]
+    },
+    {
+      "program": "ZM4DH080",
+      "missingPerformTargets": [
+        "9800-ABORTA"
+      ]
+    },
+    {
+      "program": "ZM4DH091",
+      "missingPerformTargets": [
+        "9800-ABORTA"
+      ]
+    },
+    {
+      "program": "ZM4DH092",
+      "missingPerformTargets": [
+        "9800-ABORTA"
+      ]
+    },
+    {
+      "program": "ZM4DH093",
+      "missingPerformTargets": [
+        "9800-ABORTA"
+      ]
+    },
+    {
+      "program": "ZM4DH09A",
+      "missingPerformTargets": [
+        "9800-ABORTA"
+      ]
+    },
+    {
+      "program": "ZM4DH09E",
+      "missingPerformTargets": [
+        "9800-ABORTA"
+      ]
+    },
+    {
+      "program": "ZM4DHW22",
+      "missingPerformTargets": [
+        "SQL-INITIAL"
+      ]
+    },
+    {
+      "program": "ZM4DHW23",
+      "missingPerformTargets": [
+        "SQL-INITIAL"
+      ]
+    },
+    {
+      "program": "ZM4DHW28",
+      "missingPerformTargets": [
+        "010-A-INICIO",
+        "508-LEE-ZMDT603",
+        "508-SELECT-ZMDT603",
+        "525-FETCH-OPE-DIRECTAS"
+      ]
+    },
+    {
+      "program": "ZM4DHW29",
+      "missingPerformTargets": [
+        "SQL-INITIAL"
+      ]
+    },
+    {
+      "program": "ZM4DHW33",
+      "missingPerformTargets": [
+        "SQL-INITIAL"
+      ]
+    },
+    {
+      "program": "ZM4DHW91",
+      "missingPerformTargets": [
+        "SQL-INITIAL"
+      ]
+    },
+    {
+      "program": "ZM4DHW92",
+      "missingPerformTargets": [
+        "SQL-INITIAL"
+      ]
+    },
+    {
+      "program": "ZM4DHW99",
+      "missingPerformTargets": [
+        "SQL-INITIAL"
+      ]
+    },
+    {
+      "program": "ZM4DMW01",
+      "missingPerformTargets": [
+        "1200-ABRE-CURSOR"
+      ]
+    },
+    {
+      "program": "ZM4DMW02",
+      "missingPerformTargets": [
+        "1200-ABRE-CURSOR"
+      ]
+    },
+    {
+      "program": "ZM4DS058",
+      "missingPerformTargets": [
+        "WS-DIAS"
+      ]
+    },
+    {
+      "program": "ZM4MGT55",
+      "missingPerformTargets": [
+        "SQL-INITIAL"
+      ]
+    },
+    {
+      "program": "ZM4MGT58",
+      "missingPerformTargets": [
+        "SQL-INITIAL"
+      ]
+    },
+    {
+      "program": "ZM4MGT61",
+      "missingPerformTargets": [
+        "SQL-INITIAL"
+      ]
+    },
+    {
+      "program": "ZM4MH007",
+      "missingPerformTargets": [
+        "9800-ABORTA"
+      ]
+    },
+    {
+      "program": "ZM4MS023",
+      "missingPerformTargets": [
+        "TTV7-MAX"
+      ]
+    },
+    {
+      "program": "ZM4VMW32",
+      "missingPerformTargets": [
+        "2300-FETCH-CURSOR-MG1"
+      ]
+    },
+    {
+      "program": "ZM4VMW56",
+      "missingPerformTargets": [
+        "2100-FETCH-CURSOR-T161",
+        "2200-FETCH-CURSOR-MDD"
+      ]
+    },
+    {
+      "program": "ZM4VMW57",
+      "missingPerformTargets": [
+        "2100-FETCH-CURSOR-T6101",
+        "2100-FETCH-CURSOR-T6102"
+      ]
+    },
+    {
+      "program": "ZM4VMW58",
+      "missingPerformTargets": [
+        "2100-FETCH-CURSOR-CARTE"
+      ]
+    },
+    {
+      "program": "ZM4VMW70",
+      "missingPerformTargets": [
+        "1100-OPEN-CURSOR",
+        "2300-INSERTA"
+      ]
+    },
+    {
+      "program": "ZM4VMW71",
+      "missingPerformTargets": [
+        "1100-OPEN-CURSOR",
+        "2300-INSERTA"
+      ]
+    },
+    {
+      "program": "ZM4VMW72",
+      "missingPerformTargets": [
+        "1100-OPEN-CURSOR",
+        "2300-INSERTA"
+      ]
+    },
+    {
+      "program": "ZM4VMW75",
+      "missingPerformTargets": [
+        "1100-OPEN-CURSOR",
+        "2300-INSERTA"
+      ]
+    },
+    {
+      "program": "ZM4VMW76",
+      "missingPerformTargets": [
+        "1100-OPEN-CURSOR",
+        "2300-INSERTA"
+      ]
+    },
+    {
+      "program": "ZM4VMW77",
+      "missingPerformTargets": [
+        "1100-OPEN-CURSOR",
+        "2300-INSERTA"
+      ]
+    },
+    {
+      "program": "ZM4VMW79",
+      "missingPerformTargets": [
+        "1100-OPEN-CURSOR",
+        "2300-INSERTA"
+      ]
+    },
+    {
+      "program": "ZM4VMW91",
+      "missingPerformTargets": [
+        "1100-OPEN-CURSOR",
+        "2300-INSERTA"
+      ]
+    },
+    {
+      "program": "ZM4VMW92",
+      "missingPerformTargets": [
+        "1100-OPEN-CURSOR",
+        "2300-INSERTA"
+      ]
+    },
+    {
+      "program": "ZM4VMW93",
+      "missingPerformTargets": [
+        "1100-OPEN-CURSOR",
+        "2300-INSERTA"
+      ]
+    }
+  ],
+  "unsupportedMissingTargets": [],
+  "suggestions": [],
+  "qualityGateResult": "pass",
+  "nextSafeAction": "Continue with current parser rules"
+}

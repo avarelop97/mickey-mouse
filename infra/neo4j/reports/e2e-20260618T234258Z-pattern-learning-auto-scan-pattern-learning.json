@@ -1,0 +1,670 @@
+{
+  "stage": "pattern-learning",
+  "runId": "e2e-20260618T234258Z-pattern-learning-auto-scan",
+  "scope": {
+    "scanAll": true,
+    "requestedPrograms": [],
+    "sampleSize": 250,
+    "selectedPrograms": 6244,
+    "totalProgramsAvailable": 6244
+  },
+  "extractionErrors": [],
+  "summary": {
+    "programsAnalyzed": 6244,
+    "programsWithCoverageGaps": 77,
+    "performTargetsAnalyzed": 181608,
+    "missingTargets": 258,
+    "missingTargetsResolvedByCurrentRulesOrCopybook": 258,
+    "unsupportedMissingTargets": 0,
+    "uniqueMissingTargets": 155
+  },
+  "unresolvedByProgram": [
+    {
+      "program": "ZM1MLD17",
+      "missingPerformTargets": [
+        "6000-MUEVE-DATOS-ENCA"
+      ]
+    },
+    {
+      "program": "ZM2CFI13",
+      "missingPerformTargets": [
+        "410000-TRANSF-PANTALLA"
+      ]
+    },
+    {
+      "program": "ZM2CFI14",
+      "missingPerformTargets": [
+        "410000-TRANSF-PANTALLA"
+      ]
+    },
+    {
+      "program": "ZM2CFI61",
+      "missingPerformTargets": [
+        "8510-ENVIA-PANTALLA",
+        "8610-PRESENTA-VALORES",
+        "8611-1-MUEVE-VALORES-INSERT",
+        "8611-SELECT-ZMDT780",
+        "8620-ENVIA-PANTALLA-DATOS",
+        "8630-ACTUALIZA-TASA",
+        "8631-UPDATE-ZMDT780",
+        "8632-ACT-VALORES"
+      ]
+    },
+    {
+      "program": "ZM2IH120",
+      "missingPerformTargets": [
+        "9651-OPEN-C-ORDF8"
+      ]
+    },
+    {
+      "program": "ZM2IHJ06",
+      "missingPerformTargets": [
+        "8300-ELIMINA-ATRIBUTOS"
+      ]
+    },
+    {
+      "program": "ZM2IHJ07",
+      "missingPerformTargets": [
+        "8300-ELIMINA-ATRIBUTOS"
+      ]
+    },
+    {
+      "program": "ZM2ILC83",
+      "missingPerformTargets": [
+        "6000-MUEVE-DATOS-ENCA"
+      ]
+    },
+    {
+      "program": "ZM2ILD78",
+      "missingPerformTargets": [
+        "6000-MUEVE-DATOS-ENCA"
+      ]
+    },
+    {
+      "program": "ZM2ILD86",
+      "missingPerformTargets": [
+        "6000-MUEVE-DATOS-ENCA"
+      ]
+    },
+    {
+      "program": "ZM2OCY36",
+      "missingPerformTargets": [
+        "1600-OBT-PORCENT-Y-IMP-MIN",
+        "2703-1-MOV-PORC-DESC",
+        "2706-MUEVE-BD-GPOCTA",
+        "8819-OPEN-FONDEO-AUTO"
+      ]
+    },
+    {
+      "program": "ZM2ODC04",
+      "missingPerformTargets": [
+        "9900-CONCEPT-SELECT"
+      ]
+    },
+    {
+      "program": "ZM2ODC06",
+      "missingPerformTargets": [
+        "9900-CONCEPT-SELECT-ITVBM"
+      ]
+    },
+    {
+      "program": "ZM2OH537",
+      "missingPerformTargets": [
+        "8300-ELIMINA-ATRIBUTOS"
+      ]
+    },
+    {
+      "program": "ZM2OH539",
+      "missingPerformTargets": [
+        "8300-ELIMINA-ATRIBUTOS"
+      ]
+    },
+    {
+      "program": "ZM2OH545",
+      "missingPerformTargets": [
+        "8300-ELIMINA-ATRIBUTOS"
+      ]
+    },
+    {
+      "program": "ZM2OHU30",
+      "missingPerformTargets": [
+        "8300-ELIMINA-ATRIBUTOS"
+      ]
+    },
+    {
+      "program": "ZM2OHV05",
+      "missingPerformTargets": [
+        "8300-ELIMINA-ATRIBUTOS"
+      ]
+    },
+    {
+      "program": "ZM2OJG06",
+      "missingPerformTargets": [
+        "8100-OBTIENE-TOT-DATOS"
+      ]
+    },
+    {
+      "program": "ZM2OLD54",
+      "missingPerformTargets": [
+        "5537-LEE-"
+      ]
+    },
+    {
+      "program": "ZM2OLD78",
+      "missingPerformTargets": [
+        "6000-MUEVE-DATOS-ENCA"
+      ]
+    },
+    {
+      "program": "ZM3DAA04",
+      "missingPerformTargets": [
+        "200300-"
+      ]
+    },
+    {
+      "program": "ZM3DAA05",
+      "missingPerformTargets": [
+        "200300-"
+      ]
+    },
+    {
+      "program": "ZM3MU022",
+      "missingPerformTargets": [
+        "954100-WRITE-ZM3MU0A3",
+        "959500-CLOSE-ZM3MU0A3"
+      ]
+    },
+    {
+      "program": "ZM3PLL07",
+      "missingPerformTargets": [
+        "610200-LEER-SELLERR"
+      ]
+    },
+    {
+      "program": "ZM4BTR20",
+      "missingPerformTargets": [
+        "100200-ABRE-"
+      ]
+    },
+    {
+      "program": "ZM4CFVN1",
+      "missingPerformTargets": [
+        "00000-CALC-CANT",
+        "00000-CALC-IMPORTE",
+        "00000-CALC-MONTO-TIT",
+        "00000-CONSULTA-CARTERA",
+        "00000-EMISERIE-MONTOS",
+        "00000-INQPARAM",
+        "00000-INS-CPA-VALNOR-FDO-DESTI",
+        "00000-PARAM-SELECT-CUENTAS",
+        "10000-INICIO",
+        "10100-ABRIR-ARCHIVOS",
+        "20000-PROCESO",
+        "20100-DIAS-HABILES-FONDOS",
+        "20200-LLENAR-TS1",
+        "20210-CONSULTA-TITULOS-PRECIO",
+        "20220-OPERASI-VALOR-NORMAL",
+        "20300-TOTALES-OPERASI",
+        "20400-PROCESA-OPERASI",
+        "20410-COMPLETA-DATOS-TRECOL",
+        "20430-LLENAR-TS2",
+        "20440-OPEVALNO-WRITE",
+        "20500-VALIDA-EMISORA-SERIE",
+        "20600-PARAM-EMISORA-SERIE",
+        "30000-FINAL",
+        "30100-CERRAR-ARCHIVOS",
+        "30200-CIFRAS-CONTROL",
+        "99000-AGPOCTA-SELECT",
+        "99000-CARTAUX-SELECT",
+        "99000-CARTERA-SELECT",
+        "99000-CATIVA-SELECT",
+        "99000-CONCEPT-SELECT",
+        "99000-CTLPROC-SELECT",
+        "99000-CUENTA-SELECT",
+        "99000-CUENTA-SELECT-CTA-EMP",
+        "99000-CURSOR-CARTERA-CLOSE",
+        "99000-CURSOR-CARTERA-FETCH",
+        "99000-CURSOR-CARTERA-OPEN",
+        "99000-CURSOR-FONDOS-CLOSE",
+        "99000-CURSOR-FONDOS-FETCH",
+        "99000-CURSOR-FONDOS-OPEN",
+        "99000-CURSOR-OPERASI-CLOSE",
+        "99000-CURSOR-OPERASI-FETCH",
+        "99000-CURSOR-OPERASI-OPEN",
+        "99000-CURSOR-PARAM-CLOSE",
+        "99000-CURSOR-PARAM-FETCH",
+        "99000-CURSOR-PARAM-OPEN",
+        "99000-OPERASI-SELECT",
+        "99000-OPERASI-SELECT-OPER",
+        "99000-PARAM-SELECT-P05",
+        "99000-PARAM-SELECT-TQA-TQ1",
+        "99000-PERJUR-SELECT",
+        "99000-PRECIO-SELECT",
+        "99000-PRECIO-SELECT-MAX",
+        "99000-ZMDT622-SELECT"
+      ]
+    },
+    {
+      "program": "ZM4DCO13",
+      "missingPerformTargets": [
+        "10-FETCH-SIC-COMP",
+        "20-OPEN-NAC-COMP"
+      ]
+    },
+    {
+      "program": "ZM4DCO14",
+      "missingPerformTargets": [
+        "10-FETCH-NAC-COMP",
+        "10-FETCH-SIC-COMP",
+        "20-OPEN-NAC-COMP",
+        "25-CLOSE-NAC-COMP",
+        "25-CLOSE-SIC-COMP"
+      ]
+    },
+    {
+      "program": "ZM4DH080",
+      "missingPerformTargets": [
+        "9800-ABORTA"
+      ]
+    },
+    {
+      "program": "ZM4DH091",
+      "missingPerformTargets": [
+        "9800-ABORTA"
+      ]
+    },
+    {
+      "program": "ZM4DH092",
+      "missingPerformTargets": [
+        "9800-ABORTA"
+      ]
+    },
+    {
+      "program": "ZM4DH093",
+      "missingPerformTargets": [
+        "9800-ABORTA"
+      ]
+    },
+    {
+      "program": "ZM4DH09A",
+      "missingPerformTargets": [
+        "9800-ABORTA"
+      ]
+    },
+    {
+      "program": "ZM4DH09E",
+      "missingPerformTargets": [
+        "9800-ABORTA"
+      ]
+    },
+    {
+      "program": "ZM4DHW22",
+      "missingPerformTargets": [
+        "SQL-INITIAL"
+      ]
+    },
+    {
+      "program": "ZM4DHW23",
+      "missingPerformTargets": [
+        "SQL-INITIAL"
+      ]
+    },
+    {
+      "program": "ZM4DHW28",
+      "missingPerformTargets": [
+        "010-A-INICIO",
+        "508-LEE-ZMDT603",
+        "508-SELECT-ZMDT603",
+        "525-FETCH-OPE-DIRECTAS"
+      ]
+    },
+    {
+      "program": "ZM4DHW29",
+      "missingPerformTargets": [
+        "SQL-INITIAL"
+      ]
+    },
+    {
+      "program": "ZM4DHW33",
+      "missingPerformTargets": [
+        "SQL-INITIAL"
+      ]
+    },
+    {
+      "program": "ZM4DHW91",
+      "missingPerformTargets": [
+        "SQL-INITIAL"
+      ]
+    },
+    {
+      "program": "ZM4DHW92",
+      "missingPerformTargets": [
+        "SQL-INITIAL"
+      ]
+    },
+    {
+      "program": "ZM4DHW99",
+      "missingPerformTargets": [
+        "SQL-INITIAL"
+      ]
+    },
+    {
+      "program": "ZM4DLG17",
+      "missingPerformTargets": [
+        "100000-INICIO"
+      ]
+    },
+    {
+      "program": "ZM4DMW01",
+      "missingPerformTargets": [
+        "1200-ABRE-CURSOR"
+      ]
+    },
+    {
+      "program": "ZM4DMW02",
+      "missingPerformTargets": [
+        "1200-ABRE-CURSOR"
+      ]
+    },
+    {
+      "program": "ZM4DS058",
+      "missingPerformTargets": [
+        "WS-DIAS"
+      ]
+    },
+    {
+      "program": "ZM4FINIQ",
+      "missingPerformTargets": [
+        "1000-INICIO",
+        "2000-PROCESO",
+        "2100-READ-UNLOAD01",
+        "2110-ARMA-SALIDA",
+        "2120-MOVE-RESTO",
+        "3000-FINAL",
+        "3010-CERRAR-ARCHIVO",
+        "9777-STOP-RUN"
+      ]
+    },
+    {
+      "program": "ZM4MEDE1",
+      "missingPerformTargets": [
+        "100000-INICIO",
+        "100200-LEE",
+        "110200-BORRA-LOGERR"
+      ]
+    },
+    {
+      "program": "ZM4MEDE2",
+      "missingPerformTargets": [
+        "100000-INICIO",
+        "100200-LEE"
+      ]
+    },
+    {
+      "program": "ZM4MGT55",
+      "missingPerformTargets": [
+        "SQL-INITIAL"
+      ]
+    },
+    {
+      "program": "ZM4MGT58",
+      "missingPerformTargets": [
+        "SQL-INITIAL"
+      ]
+    },
+    {
+      "program": "ZM4MGT61",
+      "missingPerformTargets": [
+        "SQL-INITIAL"
+      ]
+    },
+    {
+      "program": "ZM4MH007",
+      "missingPerformTargets": [
+        "9800-ABORTA"
+      ]
+    },
+    {
+      "program": "ZM4MS023",
+      "missingPerformTargets": [
+        "TTV7-MAX"
+      ]
+    },
+    {
+      "program": "ZM4TEN06",
+      "missingPerformTargets": [
+        "100-INICIO",
+        "110-OPEN",
+        "150-LEE-TENENCIA",
+        "160-LEE-ACUMULAD",
+        "162-1-ELIMINA-TEMPORALES",
+        "162-FIN-ACUMULAD",
+        "170-LEE-P04",
+        "180-LEE-FECHAS",
+        "190-ARREGLA-DIAS",
+        "191-CORRIGE-DIAS",
+        "200-PROCESO",
+        "210-MATCH",
+        "211-GRABA-DATIO",
+        "212-1-1-GENERA-INHABILES",
+        "212-1-ACUMULA-DIARIO",
+        "212-GENERA-SOLO-TENENCIA",
+        "213-1-1-GRABA-MEDIOS-CONTINUE",
+        "213-1-2-MUEVE-CTD-ACUMULADO",
+        "213-1-GRABA-MEDIOS",
+        "213-SACA-MEDIOS",
+        "214-GRABA-ACUMULAD",
+        "300-FINAL",
+        "310-CLOSE-FICHEROS",
+        "990-ERROR-SISTEMA",
+        "991-CIFRAS-CONTROL",
+        "992-ABORTAR-ARCHIVO-VACIO",
+        "999-CIFRAS-DB2"
+      ]
+    },
+    {
+      "program": "ZM4TEN07",
+      "missingPerformTargets": [
+        "100-INICIO",
+        "110-OPEN",
+        "150-LEE-TENENCIA",
+        "160-LEE-ACUMULAD",
+        "162-1-ELIMINA-TEMPORALES",
+        "162-FIN-ACUMULAD",
+        "170-LEE-P04",
+        "180-LEE-FECHAS",
+        "181-RUTINA-ZM6RG042",
+        "182-DATOS-REGRESO-RUTINA",
+        "183-DISPLAY-REGRESO-RUTINA",
+        "184-MUEVE-FECHA-ANTERIORES",
+        "190-ARREGLA-DIAS",
+        "191-CORRIGE-DIAS",
+        "200-PROCESO",
+        "210-MATCH",
+        "211-GRABA-DATIO",
+        "212-1-1-GENERA-INHABILES",
+        "212-1-ACUMULA-DIARIO",
+        "212-GENERA-SOLO-TENENCIA",
+        "213-1-1-GRABA-MEDIOS-CONTINUE",
+        "213-1-2-MUEVE-CTD-ACUMULADO",
+        "213-1-GRABA-MEDIOS",
+        "213-SACA-MEDIOS",
+        "214-GRABA-ACUMULAD",
+        "300-FINAL",
+        "310-CLOSE-FICHEROS",
+        "990-ERROR-SISTEMA",
+        "991-CIFRAS-CONTROL",
+        "992-ABORTAR-ARCHIVO-VACIO",
+        "999-CIFRAS-DB2"
+      ]
+    },
+    {
+      "program": "ZM4TEN08",
+      "missingPerformTargets": [
+        "100-INICIO",
+        "110-OPEN",
+        "111-OPEN-TENENCIA",
+        "150-LEE-TENENCIA",
+        "160-LEE-ACUMULAD",
+        "162-FIN-ACUMULAD",
+        "170-LEE-P04",
+        "180-LEE-FECHAS",
+        "181-RUTINA-ZM6RG042",
+        "182-DATOS-REGRESO-RUTINA",
+        "183-DISPLAY-REGRESO-RUTINA",
+        "184-MUEVE-FECHA-ANTERIORES",
+        "190-ARREGLA-DIAS",
+        "191-CORRIGE-DIAS",
+        "200-PROCESO",
+        "210-MATCH",
+        "211-1-GRABA-DATIO",
+        "211-GENERA-INHABILES",
+        "213-1-GRABA-MEDIOS",
+        "213-GRABA-MEDIOS",
+        "214-GRABA-ACUMULAD",
+        "215-PROCESA-ACUMULADOS",
+        "216-SUMADORES",
+        "217-FINALES",
+        "300-FINAL",
+        "310-CLOSE-FICHEROS",
+        "311-CLOSE-TENENCIA",
+        "900-IMPRIME-DISPLAY",
+        "990-ERROR-SISTEMA",
+        "991-CIFRAS-CONTROL",
+        "992-ABORTAR-ARCHIVO-VACIO",
+        "999-CIFRAS-DB2"
+      ]
+    },
+    {
+      "program": "ZM4VG002",
+      "missingPerformTargets": [
+        "050-LEE-CSR-PROMOT",
+        "050-UPDATE-CSR-PROMOT"
+      ]
+    },
+    {
+      "program": "ZM4VMW32",
+      "missingPerformTargets": [
+        "2300-FETCH-CURSOR-MG1"
+      ]
+    },
+    {
+      "program": "ZM4VMW56",
+      "missingPerformTargets": [
+        "2100-FETCH-CURSOR-T161",
+        "2200-FETCH-CURSOR-MDD"
+      ]
+    },
+    {
+      "program": "ZM4VMW57",
+      "missingPerformTargets": [
+        "2100-FETCH-CURSOR-T6101",
+        "2100-FETCH-CURSOR-T6102"
+      ]
+    },
+    {
+      "program": "ZM4VMW58",
+      "missingPerformTargets": [
+        "2100-FETCH-CURSOR-CARTE"
+      ]
+    },
+    {
+      "program": "ZM4VMW70",
+      "missingPerformTargets": [
+        "1100-OPEN-CURSOR",
+        "2300-INSERTA"
+      ]
+    },
+    {
+      "program": "ZM4VMW71",
+      "missingPerformTargets": [
+        "1100-OPEN-CURSOR",
+        "2300-INSERTA"
+      ]
+    },
+    {
+      "program": "ZM4VMW72",
+      "missingPerformTargets": [
+        "1100-OPEN-CURSOR",
+        "2300-INSERTA"
+      ]
+    },
+    {
+      "program": "ZM4VMW75",
+      "missingPerformTargets": [
+        "1100-OPEN-CURSOR",
+        "2300-INSERTA"
+      ]
+    },
+    {
+      "program": "ZM4VMW76",
+      "missingPerformTargets": [
+        "1100-OPEN-CURSOR",
+        "2300-INSERTA"
+      ]
+    },
+    {
+      "program": "ZM4VMW77",
+      "missingPerformTargets": [
+        "1100-OPEN-CURSOR",
+        "2300-INSERTA"
+      ]
+    },
+    {
+      "program": "ZM4VMW79",
+      "missingPerformTargets": [
+        "1100-OPEN-CURSOR",
+        "2300-INSERTA"
+      ]
+    },
+    {
+      "program": "ZM4VMW91",
+      "missingPerformTargets": [
+        "1100-OPEN-CURSOR",
+        "2300-INSERTA"
+      ]
+    },
+    {
+      "program": "ZM4VMW92",
+      "missingPerformTargets": [
+        "1100-OPEN-CURSOR",
+        "2300-INSERTA"
+      ]
+    },
+    {
+      "program": "ZM4VMW93",
+      "missingPerformTargets": [
+        "1100-OPEN-CURSOR",
+        "2300-INSERTA"
+      ]
+    },
+    {
+      "program": "ZM7PCLD5",
+      "missingPerformTargets": [
+        "500851-FRP-057"
+      ]
+    },
+    {
+      "program": "ZM9CRX03",
+      "missingPerformTargets": [
+        "2430-ABRE-PARAM"
+      ]
+    },
+    {
+      "program": "ZM9PCAL5",
+      "missingPerformTargets": [
+        "500851-FRP-057"
+      ]
+    },
+    {
+      "program": "ZM9PCLD5",
+      "missingPerformTargets": [
+        "500851-FRP-057"
+      ]
+    }
+  ],
+  "unsupportedMissingTargets": [],
+  "suggestions": [],
+  "qualityGateResult": "pass",
+  "nextSafeAction": "Continue with current parser rules"
+}

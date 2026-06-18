@@ -1,0 +1,26 @@
+{
+  "stage": "pattern-learning",
+  "runId": "e2e-20260618T234252Z-pattern-learning-auto-scan",
+  "scope": {
+    "scanAll": false,
+    "requestedPrograms": [],
+    "sampleSize": 50,
+    "selectedPrograms": 50,
+    "totalProgramsAvailable": 6244
+  },
+  "extractionErrors": [],
+  "summary": {
+    "programsAnalyzed": 50,
+    "programsWithCoverageGaps": 0,
+    "performTargetsAnalyzed": 1585,
+    "missingTargets": 0,
+    "missingTargetsResolvedByCurrentRulesOrCopybook": 0,
+    "unsupportedMissingTargets": 0,
+    "uniqueMissingTargets": 0
+  },
+  "unresolvedByProgram": [],
+  "unsupportedMissingTargets": [],
+  "suggestions": [],
+  "qualityGateResult": "pass",
+  "nextSafeAction": "Continue with current parser rules"
+}
