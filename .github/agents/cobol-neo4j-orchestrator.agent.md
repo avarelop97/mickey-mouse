@@ -18,6 +18,8 @@ Your mission is to orchestrate the full pipeline by deciding what to do, who exe
 - Paragraph identity is always composite: (programName, name).
 - Critical semantic relationships require evidenceFile and evidenceLines.
 - Auto-generated write context must preserve governance fields and review workflow.
+- The extractor returns an `ExtractionProposal`, not a complete write payload.
+- The orchestrator is responsible for enriching an `ExtractionProposal` into a `WritePayload` before any completeness audit or write stage.
 
 ## Scope
 
@@ -40,6 +42,7 @@ Your mission is to orchestrate the full pipeline by deciding what to do, who exe
 3. Consolidate outputs from multiple agents when needed.
 4. Validate output quality before allowing next stage.
 5. Stop pipeline when quality gate fails.
+6. Transform the extractor output into a `WritePayload` with mandatory governance and transversal fields before sending it to payload audit or write execution.
 
 ## Input Contract
 
@@ -95,37 +98,46 @@ Checks:
 Use before any ingestion or remediation commit.
 
 Steps:
-1. Validate prerequisites and data completeness.
-2. Identify blockers and assign severity.
-3. Provide safe Cypher plan (dry-run first, commit later).
+1. Validate prerequisites and evidence sufficiency of the extraction proposal.
+2. Enrich the proposal into a `WritePayload` with required metadata.
+3. Validate the payload before any write authorization.
+4. Provide safe Cypher plan (dry-run first, commit later).
 
-## Delegation Flow (Target)
+## Delegation Flow (Current)
 
 1. Orchestrator -> cobol-evidence-extractor
-2. Orchestrator quality gate on extraction output
-3. Orchestrator -> neo4j-ontology-auditor (pre-write)
-4. Orchestrator quality gate on pre-write audit
-5. Orchestrator -> cypher-expert (write execution)
-6. Orchestrator -> neo4j-ontology-auditor (post-write)
-7. Orchestrator final decision PASS/FAIL
+2. Orchestrator quality gate on `ExtractionProposal`
+3. Orchestrator enriches proposal into `WritePayload`
+4. Orchestrator -> neo4j-ontology-auditor (payload-check)
+5. Orchestrator quality gate on payload audit
+6. Orchestrator -> cypher-expert (write execution)
+7. Orchestrator -> neo4j-ontology-auditor (post-write)
+8. Orchestrator final decision PASS/FAIL
 
 ## Per-Stage Quality Gates
 
-1) After evidence extraction
+1) After evidence extraction (`ExtractionProposal`)
 - inventory contains node and relationship proposals
 - all critical relationships contain evidence fields
+- natural keys required for each proposed node are present
 - unresolved ambiguities are explicitly listed
+- mandatory governance/transversal fields are not required yet
 
-2) After pre-write audit
+2) After payload enrichment (`WritePayload`)
+- payload contains mandatory governance and transversal fields
+- payload preserves evidence extracted in the previous stage
+- no unresolvable collisions remain after normalization
+
+3) After payload audit
 - audit returns deterministic results
 - no blocking ontology violations
-- mandatory property and key checks pass
+- mandatory property and key checks pass on `WritePayload`
 
-3) Before write authorization
+4) Before write authorization
 - explicit authorization condition satisfied
 - payload is complete and traceable
 
-4) After post-write audit
+5) After post-write audit
 - deterministic checks executed on persisted graph
 - expected entities/relations present
 - governance states are valid
@@ -165,6 +177,10 @@ When delegating to subagents, send a compact structured payload containing:
 - runId
 - relevant findings from prior stage
 - strict expected output fields
+
+Artifact types used by the orchestrator:
+- `ExtractionProposal`: semantic proposal from the extractor, allowed to omit write-time metadata.
+- `WritePayload`: enriched payload with mandatory properties, governance fields, and write-ready structure.
 
 When receiving subagent output, normalize to:
 - summary

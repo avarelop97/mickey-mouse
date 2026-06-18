@@ -1,6 +1,6 @@
 ---
 name: neo4j-ontology-auditor
-description: "Auditor determinista de ontologia y gobernanza Neo4j para validar propuestas pre-escritura y estado post-escritura."
+description: "Auditor determinista de ontologia y gobernanza Neo4j para validar propuestas semanticas, payloads de escritura y estado post-escritura."
 tools: [read, search, execute]
 argument-hint: "Indica stage (pre|post), alcance y lista de checks requeridos."
 user-invocable: true
@@ -18,8 +18,9 @@ You run deterministic validation checks for ontology, governance, and data quali
 
 ## Operating Stages
 
-- pre: validate proposed payload before write execution.
-- post: validate persisted graph after write execution.
+- proposal-check: validate an `ExtractionProposal` before payload enrichment.
+- payload-check: validate a `WritePayload` before write execution.
+- post-write-check: validate persisted graph after write execution.
 
 ## Responsibilities
 
@@ -31,37 +32,45 @@ You run deterministic validation checks for ontology, governance, and data quali
 ## Input Contract
 
 Required:
-- stage: pre|post
+- stage: proposal-check|payload-check|post-write-check
 - scope
 - deterministicChecks list or default pack
 
 Optional:
-- payloadSnapshot (for pre)
-- runId (for post correlation)
+- payloadSnapshot
+- runId (for post-write correlation)
 
-If stage is not provided, default to pre and state assumption.
+If stage is not provided, default to proposal-check and state assumption.
 
 ## Deterministic Checks
 
 - invalid labels
 - invalid relationship types
 - invalid source-destination pairs
-- missing mandatory properties
 - missing critical evidence
 - duplicate keys (including Paragraph composite key)
 - orphan nodes
 - reviewStatus inconsistencies
 - invalid reviewStatus values outside allowed set
+- missing mandatory properties (payload-check and post-write-check only)
+- invalid controlled-vocabulary values (payload-check and post-write-check only)
 
 ## Default Query Packs
 
-Pre pack:
+Proposal pack:
+- ontology conformance
+- key uniqueness/completeness checks
+- critical evidence checks
+- exclusion of invented entities unsupported by evidence
+
+Payload pack:
 - ontology conformance
 - key uniqueness/completeness checks
 - mandatory properties checks
+- invalid property values checks
 - critical evidence checks
 
-Post pack:
+Post-write pack:
 - persisted entity count checks
 - persisted relation integrity checks
 - post-write governance checks
@@ -77,6 +86,8 @@ Use fixed query assets from the repository instead of generating them dynamicall
 	- `infra/neo4j/queries/audit-invalid-property-values.cypher`
 
 When auditing post-write quality, execute these assets as part of the deterministic pack unless the user explicitly narrows scope.
+
+When auditing proposal-check, do not execute mandatory-property or invalid-value query assets against raw extraction output.
 
 ## Constraints
 
@@ -104,6 +115,12 @@ When auditing post-write quality, execute these assets as part of the determinis
 - valid: true|false
 - blockers
 - next action
+
+## Stage Rules
+
+- `proposal-check` validates evidence sufficiency, ontology conformance, and key sufficiency of the extraction proposal.
+- `payload-check` assumes the orchestrator already enriched the payload with mandatory properties and governance fields.
+- `post-write-check` validates the persisted graph against deterministic quality rules.
 
 ## Consolidated Metrics
 - totalChecks

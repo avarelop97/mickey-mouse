@@ -47,10 +47,11 @@ El flujo vigente se ejecuta con orquestacion y especialistas:
 Secuencia operativa actual:
 
 1. Orquestador -> Evidence Extractor
-2. Orquestador -> Auditor (pre)
-3. Orquestador -> Cypher Expert (solo si pre valida)
-4. Orquestador -> Auditor (post)
-5. Orquestador -> Decision final
+2. Orquestador enriquece la propuesta a `WritePayload`
+3. Orquestador -> Auditor (payload-check)
+4. Orquestador -> Cypher Expert (solo si payload-check valida)
+5. Orquestador -> Auditor (post-write-check)
+6. Orquestador -> Decision final
 
 ## Skill obligatoria para Cypher
 

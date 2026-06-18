@@ -326,6 +326,27 @@ reviewedAt: timestamp('...')
 
 ### 5.2 Queries de Auditoría
 
+### Contrato operativo entre extracción y escritura
+
+El flujo operativo actual distingue dos artefactos distintos:
+
+- `ExtractionProposal`: propuesta semántica generada por el extractor.
+- `WritePayload`: payload enriquecido y listo para escritura.
+
+Reglas:
+
+- El extractor no tiene obligación de devolver `ingestion`, `layer`, `nodeType`, `viewTag`, `reviewStatus`, `reviewRequired` y `reviewSource` completos en `ExtractionProposal`.
+- Esos campos se validan cuando el orquestador ya construyó el `WritePayload`.
+- Las queries de completitud e invalidación de valores no deben ejecutarse sobre la propuesta bruta del extractor.
+
+### Reglas negativas del extractor
+
+- `WRITEQ TS`, `READQ TS` y `DELETEQ TS` no crean `OutputFile`.
+- Si no existe evidencia explícita de `CALL`, no se crea `ExternalRoutine`.
+- `COPY X` y `EXEC SQL INCLUDE X` se clasifican como `Copybook`.
+- `SELECT/INSERT/UPDATE/DELETE` sobre `X` se clasifican como `DBTable`.
+- No mezclar `Copybook` y `DBTable` por similitud léxica del nombre.
+
 Verificar estado de revisión:
 
 ```cypher

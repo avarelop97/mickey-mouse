@@ -1,21 +1,15 @@
 # Modelo de Arquitectura de Agentes
 
-## Objetivo
+## Estado Operativo Actual
 
-Definir una arquitectura de agentes que reduzca errores en exploracion COBOL -> Neo4j,
-mejore trazabilidad y haga mas predecible la ejecucion.
-
-## Decision Recomendada
-
-Adoptar un modelo de orquestador + subagentes especialistas, con doble validacion
-determinista (antes y despues de escritura).
+La arquitectura activa usa un orquestador y subagentes especialistas, con una distincion explicita entre propuesta semantica de extraccion, payload de escritura y validacion post-escritura.
 
 - Orquestador: decide que hacer, quien lo hace, que input enviar y valida calidad de salida.
 - Subagentes: ejecutan funciones acotadas con contrato estricto de entrada/salida.
 
-Este modelo evita mezclar responsabilidades y mejora trazabilidad de decisiones.
+Este modelo evita mezclar responsabilidades y reduce falsos bloqueos en precheck.
 
-## Topologia Propuesta
+## Topologia Activa
 
 1. `cobol-neo4j-orchestrator` (orquestador)
 - Tipo: coordinacion y control de calidad
@@ -34,7 +28,9 @@ Este modelo evita mezclar responsabilidades y mejora trazabilidad de decisiones.
 	- identificar elementos del programa (paragraphs, dependencias, copybooks, externos)
 	- decidir la informacion relevante para el sistema
 	- construir asociaciones entre elementos (propuesta de relaciones)
+	- clasificar dependencias por contexto sintactico (COPY/INCLUDE vs SQL DML)
 - Salida:
+	- `ExtractionProposal`
 	- inventario de nodos propuestos
 	- inventario de relaciones propuestas
 	- evidencia verificable (archivo + lineas fisicas)
@@ -43,8 +39,8 @@ Este modelo evita mezclar responsabilidades y mejora trazabilidad de decisiones.
 - Tipo: auditoria
 - Responsabilidad:
 	- ejecutar set determinista de queries de control
-	- validar completitud de nodos, relaciones y propiedades
-	- validar que valores de propiedades sean validos segun contexto de ejecucion
+	- validar propuesta semantica, payload de escritura o grafo persistido segun etapa
+	- validar completitud y valores de propiedades solo cuando exista `WritePayload` o grafo persistido
 	- consolidar resultado de evaluacion
 - Salida:
 	- documento de evaluacion consolidado
@@ -54,7 +50,7 @@ Este modelo evita mezclar responsabilidades y mejora trazabilidad de decisiones.
 4. `cypher-expert` (subagente)
 - Tipo: ejecucion de escritura
 - Responsabilidad:
-	- insertar en Neo4j el contenido validado por el orquestador
+	- insertar en Neo4j un `WritePayload` validado por el orquestador
 	- ejecutar Cypher de carga de manera idempotente
 - Salida:
 	- reporte de ejecucion (creados/reutilizados/actualizados)
@@ -64,13 +60,11 @@ Este modelo evita mezclar responsabilidades y mejora trazabilidad de decisiones.
 
 1. Orquestador recibe objetivo, modo y alcance.
 2. Orquestador delega a `cobol-evidence-extractor`.
-3. Orquestador valida calidad minima del output de evidencia.
-4. Orquestador delega a `neo4j-ontology-auditor` para validacion pre-escritura
-	(incluyendo validez de propiedades).
-5. Orquestador evalua resultado de auditoria pre-escritura.
-6. Si pasa calidad, orquestador delega a `cypher-expert` para insercion.
-7. Orquestador delega de nuevo a `neo4j-ontology-auditor` para validacion
-	post-escritura determinista en BD.
+3. Orquestador valida calidad minima del `ExtractionProposal`.
+4. Orquestador enriquece la propuesta y construye `WritePayload`.
+5. Orquestador delega a `neo4j-ontology-auditor` para `payload-check`.
+6. Si el payload pasa validacion, orquestador delega a `cypher-expert` para insercion.
+7. Orquestador delega de nuevo a `neo4j-ontology-auditor` para `post-write-check` determinista en BD.
 8. Orquestador consolida resultado final y decision.
 
 ## Reglas de Bloqueo
@@ -82,43 +76,32 @@ Detener y pedir validacion humana si:
 - Hay inconsistencia de `reviewStatus`.
 - El auditor marca salida no valida en cualquier etapa.
 
-## Beneficios Esperados
+## Beneficios Operativos
 
 - Menos errores por especializacion de rol.
 - Mejor auditabilidad de decisiones.
 - Menor drift entre prompts, skills y agentes.
-- Mayor mantenibilidad cuando crezca el pipeline.
+- Menor ambiguedad entre extraccion, enriquecimiento y escritura.
 
 ## Contrato de Calidad Entre Etapas
 
 1. Extractor -> Orquestador
-- Debe incluir inventario de nodos, relaciones y evidencia.
+- Debe devolver `ExtractionProposal` con inventario, relaciones y evidencia.
 
-2. Orquestador -> Auditor (pre)
-- Debe enviar propuesta consolidada para validacion determinista.
+2. Orquestador -> Auditor (`payload-check`)
+- Debe enviar `WritePayload`, no propuesta bruta.
 
-3. Auditor (pre) -> Orquestador
+3. Auditor (`payload-check`) -> Orquestador
 - Debe devolver estado `valid` y lista de bloqueos.
 
 4. Orquestador -> Cypher Expert
-- Solo si `valid = true` en auditoria pre.
+- Solo si `valid = true` en `payload-check`.
 
 5. Cypher Expert -> Orquestador
 - Debe devolver resultado de ejecucion estructurado.
 
-6. Orquestador -> Auditor (post)
+6. Orquestador -> Auditor (`post-write-check`)
 - Debe enviar contexto de ejecucion para verificacion en BD.
 
-7. Auditor (post) -> Orquestador
+7. Auditor (`post-write-check`) -> Orquestador
 - Debe devolver evaluacion final determinista.
-
-## Plan de Adopcion (Fases)
-
-Fase 1 (ahora)
-- Ajustar documentacion y contratos al modelo objetivo.
-
-Fase 2
-- Crear `cobol-evidence-extractor` y `neo4j-ontology-auditor`.
-
-Fase 3
-- Crear `cypher-expert` y activar flujo completo pre/post auditoria.

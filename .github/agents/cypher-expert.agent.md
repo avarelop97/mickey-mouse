@@ -22,7 +22,7 @@ You execute Cypher writes for already validated payloads.
 
 ## Responsibilities
 
-1. Receive validated data package from orchestrator.
+1. Receive a validated `WritePayload` from the orchestrator.
 2. Execute idempotent write queries.
 3. Report created/reused/updated entities and relationships.
 4. Return execution errors with context.
@@ -40,6 +40,15 @@ Optional:
 
 If writeAuthorization is missing or false, do not execute writes.
 
+`validatedPayload` must already include, at minimum, the mandatory write-time fields expected by the ontology:
+- ingestion
+- layer
+- nodeType
+- viewTag
+- reviewStatus
+- reviewRequired
+- reviewSource
+
 ## Constraints
 
 - Execute only after orchestrator authorization.
@@ -51,7 +60,7 @@ If writeAuthorization is missing or false, do not execute writes.
 
 ## Execution Strategy
 
-1. Validate payload completeness before first write.
+1. Validate that the input is a complete `WritePayload` before first write.
 2. Execute idempotent merges/sets in deterministic order.
 3. Capture per-step affected counts and failures.
 4. Stop on blocking error and return partial execution report.

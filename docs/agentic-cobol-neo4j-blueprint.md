@@ -130,8 +130,8 @@ flowchart LR
 
 1. Discovery identifica programas pendientes.
 2. Extractor genera paquete de evidencia por programa.
-3. Normalizer transforma a operaciones de grafo.
-4. Validator aplica contrato ontológico y reglas de evidencia.
+3. Orchestrator enriquece la propuesta semántica y construye `WritePayload`.
+4. Validator aplica contrato ontológico y reglas de evidencia sobre `WritePayload`.
 5. Writer ejecuta upsert transaccional en Neo4j.
 6. Governance marca pending_human_review.
 7. Audit valida salud del subgrafo y emite reporte.
@@ -145,7 +145,6 @@ sequenceDiagram
   participant ORQ as Orchestrator
   participant DSC as Discovery
   participant EXT as Extractor
-  participant NRM as Normalizer
   participant VAL as Validator
   participant WRT as Writer
   participant GOV as Governance
@@ -156,8 +155,7 @@ sequenceDiagram
   DSC-->>ORQ: ProgramBacklogItem[]
   ORQ->>EXT: Extraer evidencia por programa
   EXT-->>ORQ: EvidenceFactPack
-  ORQ->>NRM: Normalizar claves y operaciones
-  NRM-->>ORQ: NormalizedGraphOps
+  ORQ->>ORQ: Enriquecer ExtractionProposal a WritePayload
   ORQ->>VAL: Validar ontologia y evidencia
   VAL-->>ORQ: ValidationReport
   alt valid=true
