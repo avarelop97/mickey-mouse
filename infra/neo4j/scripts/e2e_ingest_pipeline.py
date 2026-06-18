@@ -691,6 +691,64 @@ def build_pattern_learning_report(extractions: list[dict], run_id: str, scope: d
     }
 
 
+def build_ai_residual_cases_prompt(report: dict) -> str:
+    unresolved = report.get("unresolvedByProgram", [])
+    summary = report.get("summary", {})
+    run_id = report.get("runId", "unknown-run")
+
+    lines = [
+        "# Residual Cases Remediation Prompt",
+        "",
+        "You are a COBOL parser remediation specialist.",
+        "",
+        "## Context",
+        f"- runId: {run_id}",
+        f"- programsAnalyzed: {summary.get('programsAnalyzed', 0)}",
+        f"- programsWithCoverageGaps: {summary.get('programsWithCoverageGaps', 0)}",
+        f"- missingTargets: {summary.get('missingTargets', 0)}",
+        f"- unsupportedMissingTargets: {summary.get('unsupportedMissingTargets', 0)}",
+        "",
+        "## Objective",
+        "For each residual program/target, determine the deterministic remediation path without inventing nodes or relations.",
+        "",
+        "## Required Output Per Target",
+        "1. rootCauseCategory: one of",
+        "   - IN_STRING_LITERAL",
+        "   - TRUNCATED_TARGET",
+        "   - COPYBOOK_TRANSITIVE",
+        "   - LOCAL_PARAGRAPH_NAME_VARIANT",
+        "   - TEMPLATE_ROUTINE",
+        "   - TRUE_MISSING_REQUIRES_HUMAN_REVIEW",
+        "2. evidence: source file + exact line(s)",
+        "3. deterministicAction: exact parser behavior change or no-change with manual review",
+        "4. risk: LOW/MEDIUM/HIGH and why",
+        "",
+        "## Hard Constraints",
+        "- No hallucinations.",
+        "- No ontology violations.",
+        "- If ambiguous, choose TRUE_MISSING_REQUIRES_HUMAN_REVIEW.",
+        "- Keep unsupportedMissingTargets at 0.",
+        "",
+        "## Residual Programs and Missing Targets",
+    ]
+
+    for item in unresolved:
+        program = item.get("program", "UNKNOWN")
+        targets = item.get("missingPerformTargets", [])
+        lines.append(f"- {program} ({len(targets)}): {', '.join(targets)}")
+
+    lines.extend(
+        [
+            "",
+            "## Final Summary Required",
+            "- Count by rootCauseCategory",
+            "- Proposed deterministic changes count",
+            "- Targets that must stay pending_human_review",
+        ]
+    )
+
+    return "\n".join(lines) + "\n"
+
 def run_pattern_learning(run_id: str, programs: list[str], sample_size: int, scan_all: bool) -> tuple[pathlib.Path, dict]:
     source_programs = [p.upper() for p in programs] if programs else discover_programs_from_src()
     selected_programs = source_programs if scan_all else deterministic_sample(source_programs, sample_size)
@@ -715,6 +773,13 @@ def run_pattern_learning(run_id: str, programs: list[str], sample_size: int, sca
         },
         extraction_errors=extraction_errors,
     )
+
+    prompt_path = REPORT_DIR / f"{run_id}-residual-remediation.prompt.md"
+    prompt_content = build_ai_residual_cases_prompt(report)
+    prompt_path.write_text(prompt_content, encoding="utf-8")
+    report["artifacts"] = {
+        "residualRemediationPrompt": str(prompt_path.relative_to(REPO_ROOT)),
+    }
 
     report_path = REPORT_DIR / f"{run_id}-pattern-learning.json"
     report_path.write_text(json.dumps(report, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
@@ -1222,6 +1287,7 @@ def main() -> int:
             "programsWithCoverageGaps": report["summary"]["programsWithCoverageGaps"],
             "unsupportedMissingTargets": report["summary"]["unsupportedMissingTargets"],
             "suggestions": len(report["suggestions"]),
+            "residualRemediationPrompt": report.get("artifacts", {}).get("residualRemediationPrompt", ""),
         }, ensure_ascii=True))
         return 0
 

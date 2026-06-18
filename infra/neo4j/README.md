@@ -270,6 +270,12 @@ Prueba rapida de pattern-learning (sin commit):
 python3 infra/neo4j/scripts/e2e_ingest_pipeline.py --mode pattern-learn --sample-size 50
 ```
 
+Salida adicional automatica de `pattern-learn`:
+
+- ademas del JSON principal, el pipeline genera un prompt accionable por corrida en:
+  - `infra/neo4j/reports/<runId>-residual-remediation.prompt.md`
+- la ruta del prompt queda referenciada en `artifacts.residualRemediationPrompt` dentro del reporte JSON.
+
 ## Alternativa sin Compose (docker run)
 
 ```bash
