@@ -1,0 +1,701 @@
+{
+  "stage": "discovery-extraction",
+  "runId": "e2e-20260618T191557Z-cib138d",
+  "programs": [
+    "CIB138D"
+  ],
+  "extractions": [
+    {
+      "program": "CIB138D",
+      "sourceFile": "src/CIB138D.cbl",
+      "procedureLine": 409,
+      "copybooks": [
+        {
+          "name": "DCARTERA",
+          "evidenceLines": [
+            396
+          ]
+        },
+        {
+          "name": "DCUENTA",
+          "evidenceLines": [
+            406
+          ]
+        },
+        {
+          "name": "DDEFOPER",
+          "evidenceLines": [
+            401
+          ]
+        },
+        {
+          "name": "DOPECORI",
+          "evidenceLines": [
+            391
+          ]
+        },
+        {
+          "name": "DPARAM",
+          "evidenceLines": [
+            386
+          ]
+        },
+        {
+          "name": "SI2CE028",
+          "evidenceLines": [
+            1146
+          ]
+        },
+        {
+          "name": "SI2CM026",
+          "evidenceLines": [
+            1180
+          ]
+        },
+        {
+          "name": "SI2FH027",
+          "evidenceLines": [
+            188
+          ]
+        },
+        {
+          "name": "SI2R1025",
+          "evidenceLines": [
+            295
+          ]
+        },
+        {
+          "name": "SIC004",
+          "evidenceLines": [
+            1130
+          ]
+        },
+        {
+          "name": "SIC005",
+          "evidenceLines": [
+            252
+          ]
+        },
+        {
+          "name": "SICAM029",
+          "evidenceLines": [
+            281
+          ]
+        },
+        {
+          "name": "SICPT104",
+          "evidenceLines": [
+            274
+          ]
+        },
+        {
+          "name": "SICTAT84",
+          "evidenceLines": [
+            288
+          ]
+        },
+        {
+          "name": "SICVS011",
+          "evidenceLines": [
+            266
+          ]
+        },
+        {
+          "name": "SIXAB001",
+          "evidenceLines": [
+            259
+          ]
+        },
+        {
+          "name": "SIXAB002",
+          "evidenceLines": [
+            1139
+          ]
+        },
+        {
+          "name": "SQLCA",
+          "evidenceLines": [
+            245
+          ]
+        }
+      ],
+      "calls": [
+        {
+          "name": "ADR003",
+          "evidenceLines": [
+            1165
+          ]
+        },
+        {
+          "name": "ADR009",
+          "evidenceLines": [
+            1167,
+            1171
+          ]
+        },
+        {
+          "name": "MDB403O",
+          "evidenceLines": [
+            1170
+          ]
+        },
+        {
+          "name": "VTB415O",
+          "evidenceLines": [
+            456
+          ]
+        }
+      ],
+      "readTables": [
+        {
+          "name": "DEFOPER",
+          "evidenceLines": [
+            972,
+            973,
+            974,
+            975,
+            976,
+            977
+          ]
+        },
+        {
+          "name": "OPECORI",
+          "evidenceLines": [
+            498,
+            499,
+            500,
+            501,
+            502,
+            503,
+            504,
+            505,
+            506,
+            507,
+            508,
+            509,
+            510,
+            511,
+            512,
+            513,
+            514,
+            515,
+            516,
+            517,
+            518,
+            519,
+            520,
+            521,
+            522,
+            523,
+            524,
+            525,
+            526,
+            527,
+            528,
+            529,
+            530,
+            531,
+            532,
+            533,
+            534,
+            535,
+            548,
+            549,
+            550,
+            551,
+            552,
+            553,
+            554,
+            555,
+            556,
+            557,
+            558,
+            559,
+            560,
+            561,
+            562,
+            563,
+            564,
+            565,
+            566,
+            567,
+            568,
+            569,
+            570,
+            571,
+            572,
+            573,
+            574,
+            575,
+            576,
+            577,
+            578,
+            579,
+            580,
+            581,
+            582,
+            583,
+            584,
+            585,
+            603,
+            604,
+            605,
+            606,
+            607,
+            608,
+            609,
+            610,
+            611,
+            612,
+            613,
+            614,
+            615,
+            616,
+            617,
+            618,
+            619,
+            620,
+            621,
+            622,
+            623,
+            624,
+            625,
+            626,
+            627,
+            628,
+            629,
+            630,
+            631,
+            632,
+            633,
+            634,
+            635,
+            636,
+            637,
+            638,
+            639,
+            640,
+            641,
+            642,
+            643,
+            644,
+            645,
+            646,
+            647,
+            648,
+            649,
+            650,
+            651,
+            652,
+            653,
+            654,
+            655,
+            656,
+            657,
+            658,
+            659,
+            660,
+            661,
+            662,
+            663,
+            664,
+            682,
+            683,
+            684,
+            685,
+            686,
+            687,
+            688,
+            689,
+            690,
+            691,
+            692,
+            693,
+            694,
+            695,
+            696,
+            697,
+            698,
+            699,
+            700,
+            701,
+            702,
+            703,
+            704,
+            705,
+            706,
+            707,
+            708,
+            709,
+            710,
+            711,
+            712,
+            713,
+            714,
+            715,
+            716,
+            717,
+            718,
+            719,
+            720,
+            721,
+            722,
+            723,
+            724,
+            725,
+            726,
+            727,
+            728,
+            729,
+            730,
+            731,
+            732,
+            733,
+            734,
+            735,
+            736,
+            737,
+            738,
+            739,
+            740,
+            741,
+            742,
+            743,
+            744
+          ]
+        }
+      ],
+      "updateTables": [],
+      "paragraphs": [
+        {
+          "name": "000-CONTROL",
+          "evidenceLines": [
+            413
+          ],
+          "executionOrder": 100,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB138D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "010-INICIO",
+          "evidenceLines": [
+            450
+          ],
+          "executionOrder": 200,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de CIB138D, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "020-INICIALIZA-WAREAS",
+          "evidenceLines": [
+            462
+          ],
+          "executionOrder": 300,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de CIB138D, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "080-PROCESA-VENCIMIENTOS",
+          "evidenceLines": [
+            483
+          ],
+          "executionOrder": 400,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB138D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "500-BUSCA-PREVIA-CONCERTADA",
+          "evidenceLines": [
+            497
+          ],
+          "executionOrder": 500,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por CIB138D y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "501-BUSCA-CTA-PAGAR-COBRAR",
+          "evidenceLines": [
+            547
+          ],
+          "executionOrder": 600,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por CIB138D y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "550-DEFINE-CURSOR-VENCIMIENTOS",
+          "evidenceLines": [
+            602
+          ],
+          "executionOrder": 700,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de CIB138D, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "555-DEFINE-CURSOR-VENCIMIENTOS",
+          "evidenceLines": [
+            681
+          ],
+          "executionOrder": 800,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de CIB138D, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "560-LEE-VENCIMIENTOS",
+          "evidenceLines": [
+            762
+          ],
+          "executionOrder": 900,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por CIB138D y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "565-LEE-VENCIMIENTOS",
+          "evidenceLines": [
+            867
+          ],
+          "executionOrder": 1000,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por CIB138D y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "570-BUSCA-EOPERA",
+          "evidenceLines": [
+            971
+          ],
+          "executionOrder": 1100,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por CIB138D y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "700-FIN",
+          "evidenceLines": [
+            994
+          ],
+          "executionOrder": 1200,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de CIB138D, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "705-ENCABEZADO",
+          "evidenceLines": [
+            1004
+          ],
+          "executionOrder": 1300,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB138D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "720-REP-CONCEPTOS",
+          "evidenceLines": [
+            1023
+          ],
+          "executionOrder": 1400,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB138D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "721-REP-CONCEPTOS",
+          "evidenceLines": [
+            1053
+          ],
+          "executionOrder": 1500,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB138D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "722-REP-CONCEPTOS",
+          "evidenceLines": [
+            1082
+          ],
+          "executionOrder": 1600,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB138D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "980-ABORTA",
+          "evidenceLines": [
+            1136
+          ],
+          "executionOrder": 1700,
+          "executionPhase": "PROCESSING",
+          "summary": "Gestiona contingencias en CIB138D, concentrando el manejo de error y salida controlada."
+        },
+        {
+          "name": "999-CONST-ENCA-BANCO",
+          "evidenceLines": [
+            1152
+          ],
+          "executionOrder": 1800,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB138D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "999-0100-CONSTRUYE",
+          "evidenceLines": [
+            1153
+          ],
+          "executionOrder": 1900,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB138D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "999-9900-FIN",
+          "evidenceLines": [
+            1173
+          ],
+          "executionOrder": 2000,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de CIB138D, consolidando trazas y terminacion funcional del proceso."
+        }
+      ],
+      "paragraphCalls": [
+        {
+          "paragraph": "010-INICIO",
+          "routine": "VTB415O",
+          "evidenceLines": [
+            456
+          ]
+        },
+        {
+          "paragraph": "999-0100-CONSTRUYE",
+          "routine": "ADR003",
+          "evidenceLines": [
+            1165
+          ]
+        },
+        {
+          "paragraph": "999-0100-CONSTRUYE",
+          "routine": "ADR009",
+          "evidenceLines": [
+            1167,
+            1171
+          ]
+        },
+        {
+          "paragraph": "999-0100-CONSTRUYE",
+          "routine": "MDB403O",
+          "evidenceLines": [
+            1170
+          ]
+        }
+      ],
+      "paragraphCopybooks": [
+        {
+          "paragraph": "000-CONTROL",
+          "copybook": "SI2CE028",
+          "evidenceLines": [
+            423
+          ]
+        },
+        {
+          "paragraph": "000-CONTROL",
+          "copybook": "SI2CM026",
+          "evidenceLines": [
+            414
+          ]
+        },
+        {
+          "paragraph": "500-BUSCA-PREVIA-CONCERTADA",
+          "copybook": "SIC004",
+          "evidenceLines": [
+            541
+          ]
+        },
+        {
+          "paragraph": "501-BUSCA-CTA-PAGAR-COBRAR",
+          "copybook": "SIC004",
+          "evidenceLines": [
+            592
+          ]
+        },
+        {
+          "paragraph": "550-DEFINE-CURSOR-VENCIMIENTOS",
+          "copybook": "SIC004",
+          "evidenceLines": [
+            673
+          ]
+        },
+        {
+          "paragraph": "555-DEFINE-CURSOR-VENCIMIENTOS",
+          "copybook": "SIC004",
+          "evidenceLines": [
+            753
+          ]
+        },
+        {
+          "paragraph": "560-LEE-VENCIMIENTOS",
+          "copybook": "SI2CE028",
+          "evidenceLines": [
+            799
+          ]
+        },
+        {
+          "paragraph": "560-LEE-VENCIMIENTOS",
+          "copybook": "SIC004",
+          "evidenceLines": [
+            796
+          ]
+        },
+        {
+          "paragraph": "565-LEE-VENCIMIENTOS",
+          "copybook": "SIC004",
+          "evidenceLines": [
+            901
+          ]
+        },
+        {
+          "paragraph": "570-BUSCA-EOPERA",
+          "copybook": "SIC004",
+          "evidenceLines": [
+            988
+          ]
+        },
+        {
+          "paragraph": "722-REP-CONCEPTOS",
+          "copybook": "SIC004",
+          "evidenceLines": [
+            1130
+          ]
+        },
+        {
+          "paragraph": "980-ABORTA",
+          "copybook": "SI2CE028",
+          "evidenceLines": [
+            1146
+          ]
+        },
+        {
+          "paragraph": "980-ABORTA",
+          "copybook": "SIXAB002",
+          "evidenceLines": [
+            1139
+          ]
+        },
+        {
+          "paragraph": "999-9900-FIN",
+          "copybook": "SI2CM026",
+          "evidenceLines": [
+            1180
+          ]
+        }
+      ],
+      "coverage": {
+        "sequenceColumnsNormalized": true,
+        "performTargetCount": 19,
+        "paragraphCount": 20,
+        "missingPerformTargets": [],
+        "resolvedPerformTargetsViaCopybook": {
+          "970-SQL-ERROR": [
+            "SIC004"
+          ],
+          "999-CONST-ENCA": [
+            "SI2CE028"
+          ],
+          "999-MUEVE-FECHAS": [
+            "SI2CM026"
+          ]
+        }
+      }
+    }
+  ]
+}

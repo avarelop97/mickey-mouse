@@ -1,0 +1,395 @@
+{
+  "stage": "discovery-extraction",
+  "runId": "e2e-20260618T182837Z-cib129d",
+  "programs": [
+    "CIB129D"
+  ],
+  "extractions": [
+    {
+      "program": "CIB129D",
+      "sourceFile": "src/CIB129D.cbl",
+      "procedureLine": 274,
+      "copybooks": [
+        {
+          "name": "DCTAMARC",
+          "evidenceLines": [
+            270
+          ]
+        },
+        {
+          "name": "DOPECORI",
+          "evidenceLines": [
+            262
+          ]
+        },
+        {
+          "name": "DPARAM",
+          "evidenceLines": [
+            266
+          ]
+        },
+        {
+          "name": "SI2CE028",
+          "evidenceLines": [
+            683
+          ]
+        },
+        {
+          "name": "SI2CM026",
+          "evidenceLines": [
+            720
+          ]
+        },
+        {
+          "name": "SI2FH027",
+          "evidenceLines": [
+            82
+          ]
+        },
+        {
+          "name": "SI2R1025",
+          "evidenceLines": [
+            131
+          ]
+        },
+        {
+          "name": "SI2TAT77",
+          "evidenceLines": [
+            117
+          ]
+        },
+        {
+          "name": "SIC004",
+          "evidenceLines": [
+            667
+          ]
+        },
+        {
+          "name": "SIC005",
+          "evidenceLines": [
+            96
+          ]
+        },
+        {
+          "name": "SICAM029",
+          "evidenceLines": [
+            124
+          ]
+        },
+        {
+          "name": "SICVS011",
+          "evidenceLines": [
+            110
+          ]
+        },
+        {
+          "name": "SIXAB001",
+          "evidenceLines": [
+            103
+          ]
+        },
+        {
+          "name": "SIXAB002",
+          "evidenceLines": [
+            676
+          ]
+        },
+        {
+          "name": "SQLCA",
+          "evidenceLines": [
+            89
+          ]
+        }
+      ],
+      "calls": [
+        {
+          "name": "ADR003",
+          "evidenceLines": [
+            705
+          ]
+        },
+        {
+          "name": "ADR009",
+          "evidenceLines": [
+            707,
+            711
+          ]
+        },
+        {
+          "name": "MDB403O",
+          "evidenceLines": [
+            710
+          ]
+        },
+        {
+          "name": "VTB415O",
+          "evidenceLines": [
+            286
+          ]
+        }
+      ],
+      "readTables": [
+        {
+          "name": "OPECORI",
+          "evidenceLines": [
+            473,
+            474,
+            475,
+            476,
+            477,
+            478,
+            479,
+            480,
+            481,
+            482,
+            483,
+            484,
+            485,
+            486,
+            487,
+            488,
+            489,
+            490,
+            491,
+            492,
+            510,
+            511,
+            512,
+            513,
+            514,
+            515,
+            516,
+            517,
+            518,
+            519,
+            520,
+            521,
+            522,
+            523,
+            524,
+            525,
+            526,
+            527,
+            528,
+            529
+          ]
+        },
+        {
+          "name": "PARAM",
+          "evidenceLines": [
+            423,
+            424,
+            425,
+            426,
+            427,
+            428,
+            429,
+            430,
+            431,
+            432
+          ]
+        }
+      ],
+      "updateTables": [],
+      "paragraphs": [
+        {
+          "name": "000-CONTROL",
+          "evidenceLines": [
+            278
+          ],
+          "executionOrder": 100,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB129D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "010-INICIO",
+          "evidenceLines": [
+            299
+          ],
+          "executionOrder": 200,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de CIB129D, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "015-PROCESO-CURSORES",
+          "evidenceLines": [
+            315
+          ],
+          "executionOrder": 300,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB129D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "020-LIMPIA-REPORTE",
+          "evidenceLines": [
+            357
+          ],
+          "executionOrder": 400,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB129D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "030-PROCESA-INFORMACION",
+          "evidenceLines": [
+            374
+          ],
+          "executionOrder": 500,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB129D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "040-ULTIMO-INPC",
+          "evidenceLines": [
+            385
+          ],
+          "executionOrder": 600,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB129D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "050-GENERA-REGISTRO-IMPRESION",
+          "evidenceLines": [
+            393
+          ],
+          "executionOrder": 700,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB129D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "510-ULTIMO-INDICE-APLICA",
+          "evidenceLines": [
+            422
+          ],
+          "executionOrder": 800,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB129D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "520-LEE-CURSOR-INDICE",
+          "evidenceLines": [
+            449
+          ],
+          "executionOrder": 900,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por CIB129D y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "530-DEFINE-CURSOR-POSICASA",
+          "evidenceLines": [
+            472
+          ],
+          "executionOrder": 1000,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de CIB129D, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "535-DEFINE-CURSOR-POSIBAN",
+          "evidenceLines": [
+            509
+          ],
+          "executionOrder": 1100,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de CIB129D, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "540-LEE-POSICASA",
+          "evidenceLines": [
+            545
+          ],
+          "executionOrder": 1200,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por CIB129D y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "550-LEE-POSIBAN",
+          "evidenceLines": [
+            584
+          ],
+          "executionOrder": 1300,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por CIB129D y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "700-FIN",
+          "evidenceLines": [
+            622
+          ],
+          "executionOrder": 1400,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de CIB129D, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "705-ENCABEZADO",
+          "evidenceLines": [
+            632
+          ],
+          "executionOrder": 1500,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB129D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "720-REP-CONCEPTOS",
+          "evidenceLines": [
+            655
+          ],
+          "executionOrder": 1600,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB129D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "980-ABORTA",
+          "evidenceLines": [
+            673
+          ],
+          "executionOrder": 1700,
+          "executionPhase": "PROCESSING",
+          "summary": "Gestiona contingencias en CIB129D, concentrando el manejo de error y salida controlada."
+        },
+        {
+          "name": "999-CONST-ENCA-BANCO",
+          "evidenceLines": [
+            689
+          ],
+          "executionOrder": 1800,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB129D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "999-0100-CONSTRUYE",
+          "evidenceLines": [
+            690
+          ],
+          "executionOrder": 1900,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de CIB129D, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "999-0100-FIN",
+          "evidenceLines": [
+            713
+          ],
+          "executionOrder": 2000,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de CIB129D, consolidando trazas y terminacion funcional del proceso."
+        }
+      ],
+      "coverage": {
+        "sequenceColumnsNormalized": true,
+        "performTargetCount": 19,
+        "paragraphCount": 20,
+        "missingPerformTargets": [],
+        "resolvedPerformTargetsViaCopybook": {
+          "970-SQL-ERROR": [
+            "SIC004"
+          ],
+          "999-CONST-ENCA": [
+            "SI2CE028"
+          ],
+          "999-MUEVE-FECHAS": [
+            "SI2CM026"
+          ]
+        }
+      }
+    }
+  ]
+}
