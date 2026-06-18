@@ -73,11 +73,11 @@ def is_candidate_paragraph_name(paragraph_name: str) -> bool:
     if name in PARAGRAPH_EXCLUDE:
         return False
 
-    # Legacy estates mix numeric paragraph labels (010-FOO, 100000-FOO, 700A-FOO) and alphabetic labels
-    # (e.g. PROCESA-REPORTE). Keep all while excluding control keywords.
-    if re.match(r"^\d{3,6}-", name):
+    # Legacy estates mix numeric paragraph labels (1-9 digit prefixes) and alphabetic labels
+    # (e.g. 9-STOP, 10-INIT, 100000-FOO, 700A-FOO, PROCESA-REPORTE). Keep all while excluding control keywords.
+    if re.match(r"^\d+-", name):
         return True
-    if re.match(r"^\d{3}[A-Z]-", name):
+    if re.match(r"^\d+[A-Z]-", name):
         return True
     if name.startswith("P-") or name.startswith("R-"):
         return True
@@ -215,9 +215,6 @@ def parse_program(program: str) -> dict:
     for i, raw in enumerate(lines, start=1):
         logical = normalize_fixed_line(raw)
         normalized.append((i, logical))
-
-        if is_ignored_structural_line(logical):
-            continue
 
         up = logical.upper()
         if procedure_line is None and "PROCEDURE DIVISION" in up:
