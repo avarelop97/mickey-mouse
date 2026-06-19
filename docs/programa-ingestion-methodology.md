@@ -23,7 +23,7 @@ Este documento describe el proceso completo para documentar un programa COBOL de
 ### 1.2 Validación contra Ontología
 - Consultar [docs/graph-ontology.md](graph-ontology.md)
 - **Confirmar que el programa será documentado con**:
-  - ✅ **7 tipos de nodos permitidos**:
+  - ✅ **13 tipos de nodos permitidos** (core + operacion):
     - Program (1 por programa)
     - Paragraph (uno por sección ejecutable)
     - Copybook (uno por incluido)
@@ -31,6 +31,12 @@ Este documento describe el proceso completo para documentar un programa COBOL de
     - ParamType (tipos de datos/estructura)
     - ExternalRoutine (rutinas/funciones externas)
     - OutputFile (archivos de salida)
+    - Procedure (procedimiento JCL)
+    - ProcStep (pasos EXEC del procedimiento)
+    - ProcVariable (simbolos/parametros)
+    - ProcDD (definiciones DD)
+    - RuntimeDataset (datasets fisicos)
+    - SchedulerCondition (condiciones de scheduler)
   
   - ✅ **Relaciones permitidas** con sus orígenes de evidencia:
     - INCLUDES_COPYBOOK → evidenceFile + evidenceLines
@@ -46,6 +52,20 @@ Este documento describe el proceso completo para documentar un programa COBOL de
     - DEPENDS_ON_EXTERNAL → evidenceFile + evidenceLines
     - DERIVES_FROM → evidenceFile + evidenceLines
     - IMPLEMENTED_BY → (paragraph → copybook)
+    - HAS_STEP → evidenceFile + evidenceLines
+    - DEFINES_VARIABLE → evidenceFile + evidenceLines
+    - DEFINES_DD → evidenceFile + evidenceLines
+    - USES_DD → evidenceFile + evidenceLines
+    - RESOLVES_TO_DATASET → evidenceFile + evidenceLines
+    - ROUTES_TO_VARIABLE → evidenceFile + evidenceLines
+    - EMITS_CONDITION → evidenceFile + evidenceLines
+    - EXECUTES_PROGRAM → evidenceFile + evidenceLines
+
+  ### 1.2.1 Regla de no solapamiento (obligatoria)
+
+  - `Paragraph` y `ProcStep` no son equivalentes: el primero modela flujo COBOL, el segundo ejecucion de PROC.
+  - `OutputFile` no reemplaza `RuntimeDataset`: salida funcional vs dataset tecnico.
+  - En capa operativa, usar `EXECUTES_PROGRAM`; reservar `CALLS_ROUTINE` para invocaciones COBOL.
 
 ### 1.3 Identificación de Elementos Clave
 
@@ -59,6 +79,19 @@ Completar tabla de inventario:
 | Rutina | EXTERNALROUTINE | (ej: DSNTIAR) | - | CALL statement |
 | ParamType | PARAMTYPE | (ej: TA0) | - | Data definition |
 | Archivo | OUTPUTFILE | (ej: SALIDA.txt) | - | FD/SELECT definition |
+
+### 1.4 Propiedad autoexplicativa de nodo
+
+- Todo nodo nuevo debe llevar `description` con una explicacion breve y natural de su significado.
+- `description` no reemplaza a `objective`: `objective` describe el proposito operativo o funcional; `description` describe el nodo en lenguaje natural.
+- En `Paragraph`, `summary` sigue siendo la descripcion funcional del flujo y puede convivir con `description`.
+- En `Procedure`, `ProcStep`, `ProcVariable`, `ProcDD`, `RuntimeDataset`, `SchedulerCondition`, `Copybook`, `DBTable`, `ParamType`, `ExternalRoutine` y `OutputFile`, `description` debe permitir entender el nodo sin mirar el resto del grafo.
+
+### 1.5 Tratamiento de artefactos existentes
+
+- Si un artefacto ya existe en Neo4j pero no tiene `description`, debe tratarse como incompleto para la capa autoexplicativa.
+- La correccion debe hacerse mediante reingestion o migracion controlada, no sobrescribiendo `objective` con texto descriptivo.
+- Si falta `description`, conservar `objective` tal como esta y añadir `description` de forma independiente.
 
 ---
 

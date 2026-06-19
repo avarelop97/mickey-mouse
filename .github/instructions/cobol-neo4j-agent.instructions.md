@@ -21,7 +21,9 @@ Si hay conflicto, prevalece este archivo y luego el orden anterior.
 
 ## Politica comun de identidad y gobernanza
 
-1. Labels permitidas: `Program`, `Paragraph`, `Copybook`, `DBTable`, `ParamType`, `ExternalRoutine`, `OutputFile`.
+1. Labels permitidas:
+	- Core: `Program`, `Paragraph`, `Copybook`, `DBTable`, `ParamType`, `ExternalRoutine`, `OutputFile`
+	- Operacion PRC/JCL: `Procedure`, `ProcStep`, `ProcVariable`, `ProcDD`, `RuntimeDataset`, `SchedulerCondition`
 2. Claves naturales:
 	- Compartidas: `name`
 	- `Paragraph`: `programName` + `name`

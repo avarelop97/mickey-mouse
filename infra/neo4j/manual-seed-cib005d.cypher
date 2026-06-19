@@ -24,6 +24,7 @@ SET program.language = 'COBOL',
     program.platform = 'IBM-4381',
     program.database = 'DB2',
     program.objective = 'Informe Contable Diario para Coberturas Cambiarias',
+  program.description = 'Programa COBOL de informe contable diario para coberturas cambiarias.',
     program.ingestion = 'manual',
     program.seedVersion = 'v3-direct',
     program.seedDate = '2026-06-16',
@@ -48,23 +49,24 @@ DETACH DELETE orphan;
 
 MATCH (program:Program {name: 'CIB005D'})
 UNWIND [
-  {name: '000-CONTROL', kind: 'control', summary: 'Orquesta la ejecucion principal del programa.', executionOrder: 10, phase: 'main-control', orderSource: 'manual-call-tree'},
-  {name: '999-MUEVE-FECHAS', kind: 'utility', summary: 'Construye fecha y hora de trabajo con logica Y2K.', executionOrder: 20, phase: 'initialization', orderSource: 'manual-call-tree'},
-  {name: '999-0100-CONSTRUYE', kind: 'reporting', summary: 'Construye la cabecera del reporte.', executionOrder: 30, phase: 'initialization', orderSource: 'manual-call-tree'},
-  {name: 'PROCESA-REPORTE', kind: 'process', summary: 'Inicializa acumulados, abre cursores y dispara la generacion del reporte.', executionOrder: 40, phase: 'main-process', orderSource: 'manual-call-tree'},
-  {name: 'GENERA-REPORTE', kind: 'process', summary: 'Lee TA0 y TA1, calcula saldos, imprime y actualiza PARAM.', executionOrder: 50, phase: 'main-process', orderSource: 'manual-call-tree'},
-  {name: '010-CALCULOS', kind: 'calculation', summary: 'Calcula resultados del dia, mes y periodo.', executionOrder: 60, phase: 'calculation', orderSource: 'manual-call-tree'},
-  {name: 'CALCLA-SALDO-COMPRAS', kind: 'calculation', summary: 'Calcula titulos, primas y deslizamiento para compras.', executionOrder: 70, phase: 'calculation', orderSource: 'manual-call-tree'},
-  {name: 'CALCLA-SALDO-VENTAS', kind: 'calculation', summary: 'Calcula titulos, primas y deslizamiento para ventas.', executionOrder: 80, phase: 'calculation', orderSource: 'manual-call-tree'},
-  {name: '040-ACTUALIZA-PARAM-TA0', kind: 'persistence', summary: 'Actualiza la tabla PARAM con los acumulados TA0.', executionOrder: 90, phase: 'persistence', orderSource: 'manual-call-tree'},
-  {name: '970-SQL-ERROR', kind: 'error-handling', summary: 'Formatea SQLCA y deriva el aborto del proceso.', executionOrder: 900, phase: 'error-path', orderSource: 'manual-call-tree'},
-  {name: '980-ABORTA', kind: 'error-handling', summary: 'Hace rollback y termina el programa con codigo 16.', executionOrder: 910, phase: 'error-path', orderSource: 'manual-call-tree'}
+  {name: '000-CONTROL', kind: 'control', summary: 'Orquesta la ejecucion principal del programa.', description: 'Parrafo de control principal del programa.', executionOrder: 10, phase: 'main-control', orderSource: 'manual-call-tree'},
+  {name: '999-MUEVE-FECHAS', kind: 'utility', summary: 'Construye fecha y hora de trabajo con logica Y2K.', description: 'Parrafo utilitario para construir fechas y horas de trabajo.', executionOrder: 20, phase: 'initialization', orderSource: 'manual-call-tree'},
+  {name: '999-0100-CONSTRUYE', kind: 'reporting', summary: 'Construye la cabecera del reporte.', description: 'Parrafo que construye la cabecera del reporte diario.', executionOrder: 30, phase: 'initialization', orderSource: 'manual-call-tree'},
+  {name: 'PROCESA-REPORTE', kind: 'process', summary: 'Inicializa acumulados, abre cursores y dispara la generacion del reporte.', description: 'Parrafo de proceso que prepara la ejecucion del reporte.', executionOrder: 40, phase: 'main-process', orderSource: 'manual-call-tree'},
+  {name: 'GENERA-REPORTE', kind: 'process', summary: 'Lee TA0 y TA1, calcula saldos, imprime y actualiza PARAM.', description: 'Parrafo central que genera el reporte y actualiza acumulados.', executionOrder: 50, phase: 'main-process', orderSource: 'manual-call-tree'},
+  {name: '010-CALCULOS', kind: 'calculation', summary: 'Calcula resultados del dia, mes y periodo.', description: 'Parrafo de calculo de resultados diarios, mensuales y periodicos.', executionOrder: 60, phase: 'calculation', orderSource: 'manual-call-tree'},
+  {name: 'CALCLA-SALDO-COMPRAS', kind: 'calculation', summary: 'Calcula titulos, primas y deslizamiento para compras.', description: 'Parrafo de calculo de saldos para operaciones de compra.', executionOrder: 70, phase: 'calculation', orderSource: 'manual-call-tree'},
+  {name: 'CALCLA-SALDO-VENTAS', kind: 'calculation', summary: 'Calcula titulos, primas y deslizamiento para ventas.', description: 'Parrafo de calculo de saldos para operaciones de venta.', executionOrder: 80, phase: 'calculation', orderSource: 'manual-call-tree'},
+  {name: '040-ACTUALIZA-PARAM-TA0', kind: 'persistence', summary: 'Actualiza la tabla PARAM con los acumulados TA0.', description: 'Parrafo de persistencia que escribe los acumulados TA0 en PARAM.', executionOrder: 90, phase: 'persistence', orderSource: 'manual-call-tree'},
+  {name: '970-SQL-ERROR', kind: 'error-handling', summary: 'Formatea SQLCA y deriva el aborto del proceso.', description: 'Parrafo de manejo de error SQL que prepara el mensaje diagnostico.', executionOrder: 900, phase: 'error-path', orderSource: 'manual-call-tree'},
+  {name: '980-ABORTA', kind: 'error-handling', summary: 'Hace rollback y termina el programa con codigo 16.', description: 'Parrafo de aborto que revierte la transaccion y termina el programa.', executionOrder: 910, phase: 'error-path', orderSource: 'manual-call-tree'}
 ] AS paragraphData
 MERGE (paragraph:Paragraph {programName: program.name, name: paragraphData.name})
 SET paragraph.name = paragraphData.name,
   paragraph.programName = program.name,
     paragraph.kind = paragraphData.kind,
     paragraph.summary = paragraphData.summary,
+    paragraph.description = paragraphData.description,
     paragraph.executionOrder = paragraphData.executionOrder,
     paragraph.executionPhase = paragraphData.phase,
     paragraph.executionOrderSource = paragraphData.orderSource,
@@ -154,6 +156,7 @@ UNWIND [
 MERGE (routine:ExternalRoutine {name: routineData.name})
 SET routine.vendor = routineData.vendor,
     routine.purpose = routineData.purpose,
+  routine.description = routineData.purpose,
     routine.ingestion = 'manual',
     routine.layer = 'integration',
     routine.nodeType = 'external-service-call',

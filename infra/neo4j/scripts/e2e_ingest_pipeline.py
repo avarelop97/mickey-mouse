@@ -65,6 +65,7 @@ DOT_ONLY_RE = re.compile(r"^\s*\.\s*$")
 COPY_RE = re.compile(r"^\s*COPY\s+([A-Z0-9-]+)\b", re.IGNORECASE)
 CALL_RE = re.compile(r"\bCALL\s+'([A-Z0-9-]+)'", re.IGNORECASE)
 PERFORM_RE = re.compile(r"\bPERFORM\s+([A-Z0-9-]+)\b", re.IGNORECASE)
+DATA_ITEM_DEF_RE = re.compile(r"^\s*\d{1,2}\s+([A-Z][A-Z0-9-]{1,70})\b", re.IGNORECASE)
 EXEC_SQL_START_RE = re.compile(r"\bEXEC\s+SQL\b", re.IGNORECASE)
 EXEC_SQL_END_RE = re.compile(r"\bEND-EXEC\b", re.IGNORECASE)
 SQL_INCLUDE_RE = re.compile(r"\bINCLUDE\s+([A-Z0-9-]+)\b", re.IGNORECASE)
@@ -154,12 +155,20 @@ def is_ignorable_perform_target(target: str) -> bool:
     return target in {"UNTIL", "VARYING", "TIMES", "THRU", "THROUGH"}
 
 
-def is_ignorable_perform_pair(logical_line: str, target: str) -> bool:
+def is_ignorable_perform_pair(logical_line: str, target: str, data_item_names: set[str] | None = None) -> bool:
     # Ignore loop-count PERFORM forms such as "PERFORM 7 TIMES".
     if re.match(r"^\d+$", target):
         pattern = rf"\bPERFORM\s+{re.escape(target)}\s+TIMES\b"
         if re.search(pattern, logical_line, re.IGNORECASE):
             return True
+
+    # Ignore loop-count PERFORM forms such as "PERFORM TTV7-MAX TIMES"
+    # when the identifier is a declared data item.
+    if data_item_names and target in data_item_names:
+        pattern = rf"\bPERFORM\s+{re.escape(target)}\s+TIMES\b"
+        if re.search(pattern, logical_line, re.IGNORECASE):
+            return True
+
     return False
 
 
@@ -349,6 +358,14 @@ def parse_program(program: str) -> dict:
         logical = normalize_fixed_line(raw)
         normalized.append((i, logical))
 
+    data_item_names: set[str] = set()
+    for _, logical in normalized:
+        if is_ignored_structural_line(logical):
+            continue
+        dm = DATA_ITEM_DEF_RE.match(logical)
+        if dm:
+            data_item_names.add(dm.group(1).upper())
+
     procedure_line = None
     first_candidate_paragraph_line = None
     first_perform_line = None
@@ -367,7 +384,7 @@ def parse_program(program: str) -> dict:
         if first_perform_line is None:
             for m in PERFORM_RE.finditer(searchable):
                 tgt = m.group(1).upper()
-                if is_ignorable_perform_pair(logical, tgt):
+                if is_ignorable_perform_pair(logical, tgt, data_item_names):
                     continue
                 if not is_ignorable_perform_target(tgt):
                     first_perform_line = line_no
@@ -425,7 +442,7 @@ def parse_program(program: str) -> dict:
 
             for m in PERFORM_RE.finditer(searchable):
                 tgt = m.group(1).upper()
-                if is_ignorable_perform_pair(logical, tgt):
+                if is_ignorable_perform_pair(logical, tgt, data_item_names):
                     continue
                 if not is_ignorable_perform_target(tgt):
                     perform_targets[tgt].append(line_no)
@@ -1321,7 +1338,9 @@ def main() -> int:
 
     commit_executed = False
     remediation = []
-    if precheck["qualityGateResult"] == "pass":
+    allow_write_stage = args.mode in {"commit", "full"}
+
+    if precheck["qualityGateResult"] == "pass" and allow_write_stage:
         run_cypher_file(cypher_path)
         commit_executed = True
 

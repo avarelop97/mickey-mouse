@@ -20,6 +20,11 @@ El contrato se deriva del seed vigente en `infra/neo4j/manual-seed-cib005d.cyphe
 
 ## Tipos de nodo permitidos
 
+La ontologia queda organizada en dos dominios complementarios:
+
+1. **Dominio funcional COBOL (core)**: explica que hace el programa.
+2. **Dominio operativo batch (PRC/JCL)**: explica como corre en ejecucion.
+
 | Label | Clave natural | Descripcion | Capa |
 |---|---|---|---|
 | Program | name | Programa COBOL analizado | program |
@@ -29,8 +34,24 @@ El contrato se deriva del seed vigente en `infra/neo4j/manual-seed-cib005d.cyphe
 | ParamType | name | Tipo logico dentro de tabla (ej. TA0/TA1) | data-access |
 | ExternalRoutine | name | Rutina externa llamada | integration |
 | OutputFile | name | Archivo de salida generado | output |
+| Procedure | name | Procedimiento JCL (PROC) | orchestration |
+| ProcStep | procedureName + stepName | Paso EXEC dentro de PROC | orchestration |
+| ProcVariable | procedureName + name + direction | Simbolo/parametro declarado en PROC | orchestration |
+| ProcDD | procedureName + ddName | Definicion DD en PROC | orchestration |
+| RuntimeDataset | dsn | Dataset fisico referenciado por DD | orchestration |
+| SchedulerCondition | scheduler + name + dateScope | Condicion emitida/consumida por scheduler | orchestration |
 
 Nota: `ProgramFacet` es legado y no forma parte del modelo activo. Si aparece, se considera desviacion.
+
+## Reglas anti-solapamiento (canon de modelado)
+
+Para evitar duplicidad semantica entre core y operacion:
+
+1. `Paragraph` modela **pasos COBOL**; `ProcStep` modela **pasos EXEC de PROC**.
+2. `OutputFile` modela **salidas de negocio COBOL**; `RuntimeDataset` modela **datasets tecnicos de ejecucion**.
+3. En capa operativa, la ejecucion de programas desde PROC se modela con `EXECUTES_PROGRAM` (no con `CALLS_ROUTINE`).
+4. `CALLS_ROUTINE` se reserva para invocaciones de programa COBOL (dominio funcional).
+5. Un hecho debe tener una representacion canonica por capa; si existe mapping cruzado, debe documentarse explicitamente.
 
 ## Restricciones de unicidad (actuales)
 
@@ -43,6 +64,12 @@ Las siguientes restricciones deben existir en Neo4j:
 - `ParamType.name` unico
 - `ExternalRoutine.name` unico
 - `OutputFile.name` unico
+- `Procedure.name` unico
+- `ProcStep(procedureName, stepName)` unico (constraint compuesto)
+- `ProcVariable(procedureName, name, direction)` unico (constraint compuesto)
+- `ProcDD(procedureName, ddName)` unico (constraint compuesto)
+- `RuntimeDataset.dsn` unico
+- `SchedulerCondition(scheduler, name, dateScope)` unico (constraint compuesto)
 
 Propiedad obligatoria adicional para `Paragraph`:
 
@@ -63,6 +90,14 @@ Propiedad obligatoria adicional para `Paragraph`:
 | WRITES_FILE | Program | OutputFile | Programa genera archivo de salida |
 | STORES | DBTable | ParamType | Tabla fisica almacena tipo logico |
 | IMPLEMENTED_BY | Paragraph | Copybook | Parrafo implementado por copybook |
+| HAS_STEP | Procedure | ProcStep | PROC contiene pasos EXEC |
+| DEFINES_VARIABLE | Procedure | ProcVariable | PROC declara simbolos |
+| DEFINES_DD | Procedure | ProcDD | PROC define DDs |
+| USES_DD | ProcStep | ProcDD | Paso EXEC usa DD |
+| RESOLVES_TO_DATASET | ProcDD | RuntimeDataset | DD resuelve a dataset fisico |
+| ROUTES_TO_VARIABLE | ProcDD | ProcVariable | DD enruta salida mediante simbolo |
+| EMITS_CONDITION | ProcStep | SchedulerCondition | Paso emite condicion scheduler |
+| EXECUTES_PROGRAM | ProcStep | ExternalRoutine | Paso EXEC invoca programa/utilitario |
 
 ### Semanticas con trazabilidad
 
@@ -73,6 +108,8 @@ Propiedad obligatoria adicional para `Paragraph`:
 | UPDATES_DATA | Paragraph | ParamType | evidenceFile, evidenceLines |
 | DERIVES_FROM | Paragraph | ParamType | evidenceFile, evidenceLines |
 | DEPENDS_ON_EXTERNAL | Paragraph | ExternalRoutine | evidenceFile, evidenceLines |
+
+Nota operativa: en dominio PRC/JCL, `DEFINES_VARIABLE`, `DEFINES_DD`, `USES_DD`, `RESOLVES_TO_DATASET`, `ROUTES_TO_VARIABLE`, `EMITS_CONDITION`, `EXECUTES_PROGRAM`, `HAS_STEP` tambien deben llevar evidencia cuando provengan de extraccion automatica.
 
 ## Matriz de pares origen -> destino permitidos
 
@@ -88,6 +125,14 @@ Propiedad obligatoria adicional para `Paragraph`:
 | Paragraph | ParamType | READS_DATA, UPDATES_DATA, DERIVES_FROM |
 | Paragraph | ExternalRoutine | DEPENDS_ON_EXTERNAL |
 | DBTable | ParamType | STORES |
+| Procedure | ProcStep | HAS_STEP |
+| Procedure | ProcVariable | DEFINES_VARIABLE |
+| Procedure | ProcDD | DEFINES_DD |
+| ProcStep | ProcDD | USES_DD |
+| ProcStep | ExternalRoutine | EXECUTES_PROGRAM |
+| ProcStep | SchedulerCondition | EMITS_CONDITION |
+| ProcDD | RuntimeDataset | RESOLVES_TO_DATASET |
+| ProcDD | ProcVariable | ROUTES_TO_VARIABLE |
 
 Cualquier otro par origen-destino se considera no valido.
 
@@ -105,6 +150,19 @@ Propiedades transversales minimas de control:
 - Gobierno de revision: `reviewStatus`, `reviewRequired`, `reviewSource`
 - Auditoria humana (cuando aplique): `reviewedBy`, `reviewedAt`
 - Auditoria de agente (cuando aplique): `agentReviewedBy`, `agentReviewedAt`, `agentReviewNotes`
+
+Propiedad autoexplicativa recomendada para todos los nodos:
+
+- `description`: texto breve y semantico que explique que representa el nodo en lenguaje natural.
+
+Regla de uso frente a `objective`:
+
+- `objective` expresa el proposito operativo o de negocio del nodo cuando aplique.
+- `description` explica que es el nodo y por que existe dentro del grafo.
+- No deben considerarse sinonimos ni reemplazarse entre si.
+- Si un nodo tiene `objective` pero no tiene `description`, sigue considerandose incompleto para la capa autoexplicativa.
+
+Nota: para `Paragraph` puede coexistir `summary` como descripcion funcional del flujo COBOL, pero `description` sigue siendo la explicacion general del nodo.
 
 ## Politica anti-invencion
 
@@ -134,7 +192,10 @@ Para evitar desviaciones de trazabilidad en COBOL de formato fijo:
 MATCH (n)
 UNWIND labels(n) AS lbl
 WITH DISTINCT lbl
-WHERE NOT lbl IN ['Program','Paragraph','Copybook','DBTable','ParamType','ExternalRoutine','OutputFile']
+WHERE NOT lbl IN [
+  'Program','Paragraph','Copybook','DBTable','ParamType','ExternalRoutine','OutputFile',
+  'Procedure','ProcStep','ProcVariable','ProcDD','RuntimeDataset','SchedulerCondition'
+]
 RETURN lbl AS invalidLabel;
 ```
 
@@ -146,7 +207,9 @@ WITH DISTINCT type(r) AS rel
 WHERE NOT rel IN [
   'HAS_PARAGRAPH','INCLUDES_COPYBOOK','READS_TABLE','UPDATES_TABLE','USES_PARAM_TYPE',
   'CALLS_ROUTINE','WRITES_FILE','STORES','IMPLEMENTED_BY','USES_COPYBOOK',
-  'READS_DATA','UPDATES_DATA','DERIVES_FROM','DEPENDS_ON_EXTERNAL'
+  'READS_DATA','UPDATES_DATA','DERIVES_FROM','DEPENDS_ON_EXTERNAL',
+  'HAS_STEP','DEFINES_VARIABLE','DEFINES_DD','USES_DD','RESOLVES_TO_DATASET',
+  'ROUTES_TO_VARIABLE','EMITS_CONDITION','EXECUTES_PROGRAM'
 ]
 RETURN rel AS invalidRelationship;
 ```
@@ -171,7 +234,15 @@ WITH src, rel, dst,
        'Paragraph|READS_DATA|ParamType',
        'Paragraph|UPDATES_DATA|ParamType',
        'Paragraph|DERIVES_FROM|ParamType',
-       'Paragraph|DEPENDS_ON_EXTERNAL|ExternalRoutine'
+       'Paragraph|DEPENDS_ON_EXTERNAL|ExternalRoutine',
+       'Procedure|HAS_STEP|ProcStep',
+       'Procedure|DEFINES_VARIABLE|ProcVariable',
+       'Procedure|DEFINES_DD|ProcDD',
+       'ProcStep|USES_DD|ProcDD',
+       'ProcStep|EXECUTES_PROGRAM|ExternalRoutine',
+       'ProcStep|EMITS_CONDITION|SchedulerCondition',
+       'ProcDD|RESOLVES_TO_DATASET|RuntimeDataset',
+       'ProcDD|ROUTES_TO_VARIABLE|ProcVariable'
      ] AS allowed
 WHERE NOT (src + '|' + rel + '|' + dst) IN allowed
 RETURN src, rel, dst;
@@ -181,7 +252,11 @@ RETURN src, rel, dst;
 
 ```cypher
 MATCH ()-[r]->()
-WHERE type(r) IN ['USES_COPYBOOK','READS_DATA','UPDATES_DATA','DERIVES_FROM','DEPENDS_ON_EXTERNAL']
+WHERE type(r) IN [
+  'USES_COPYBOOK','READS_DATA','UPDATES_DATA','DERIVES_FROM','DEPENDS_ON_EXTERNAL',
+  'HAS_STEP','DEFINES_VARIABLE','DEFINES_DD','USES_DD','RESOLVES_TO_DATASET',
+  'ROUTES_TO_VARIABLE','EMITS_CONDITION','EXECUTES_PROGRAM'
+]
   AND (
     r.evidenceFile IS NULL OR trim(r.evidenceFile) = '' OR
     r.evidenceLines IS NULL OR size(r.evidenceLines) = 0

@@ -5,18 +5,18 @@
 # - infra
 
 # Default deny
-*
+#*
 
 # Keep this policy file tracked
 !.gitignore
 
 # Allow only approved folders
-!.github/
-!.github/**
-!docs/
-!docs/**
-!infra/
-!infra/**
+#!.github/
+#!.github/**
+#!docs/
+#!docs/**
+#!infra/
+#!infra/**
 
 # Safety net for local artifacts
 .DS_Store
