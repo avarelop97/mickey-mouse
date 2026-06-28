@@ -1,0 +1,172 @@
+{
+  "generatedAt": "2026-06-24T21:56:38+00:00",
+  "mode": "apply",
+  "batchFile": "/Users/xmk9539/Documents/Software/zm_cbop/infra/neo4j/queries/bms-batch-next10.txt",
+  "workers": 4,
+  "maxRetries": 2,
+  "summary": {
+    "total": 10,
+    "success": 10,
+    "failed": 0
+  },
+  "results": [
+    {
+      "bmsFile": "/Users/xmk9539/Documents/Software/zm_cbop/mps/ZMPG723.bms",
+      "status": "ok",
+      "startedAt": "2026-06-24T21:48:06+00:00",
+      "mapset": "ZMPG723",
+      "map": "ZMPG723",
+      "mapKey": "ZMPG723::ZMPG723",
+      "programs": [
+        "ZM2IPG72",
+        "ZM2IPG75"
+      ],
+      "fields": 17,
+      "literals": 14,
+      "functionKeys": 5,
+      "endedAt": "2026-06-24T21:49:53+00:00"
+    },
+    {
+      "bmsFile": "/Users/xmk9539/Documents/Software/zm_cbop/mps/ZMPG733.bms",
+      "status": "ok",
+      "startedAt": "2026-06-24T21:48:06+00:00",
+      "mapset": "ZMPG733",
+      "map": "ZMPG733",
+      "mapKey": "ZMPG733::ZMPG733",
+      "programs": [
+        "ZM2IPG73",
+        "ZM2IPG76"
+      ],
+      "fields": 26,
+      "literals": 14,
+      "functionKeys": 5,
+      "endedAt": "2026-06-24T21:50:13+00:00"
+    },
+    {
+      "bmsFile": "/Users/xmk9539/Documents/Software/zm_cbop/mps/ZMPG732.bms",
+      "status": "ok",
+      "startedAt": "2026-06-24T21:48:06+00:00",
+      "mapset": "ZMPG732",
+      "map": "ZMPG732",
+      "mapKey": "ZMPG732::ZMPG732",
+      "programs": [
+        "ZM2IPG73",
+        "ZM2IPG76"
+      ],
+      "fields": 41,
+      "literals": 14,
+      "functionKeys": 5,
+      "endedAt": "2026-06-24T21:50:55+00:00"
+    },
+    {
+      "bmsFile": "/Users/xmk9539/Documents/Software/zm_cbop/mps/ZMLD35A.bms",
+      "status": "ok",
+      "startedAt": "2026-06-24T21:50:55+00:00",
+      "mapset": "ZMLD35A",
+      "map": "ZMLD35A",
+      "mapKey": "ZMLD35A::ZMLD35A",
+      "programs": [
+        "ZM2OCY30",
+        "ZM2ODG40",
+        "ZM2OLD35"
+      ],
+      "fields": 1,
+      "literals": 15,
+      "functionKeys": 0,
+      "endedAt": "2026-06-24T21:51:47+00:00"
+    },
+    {
+      "bmsFile": "/Users/xmk9539/Documents/Software/zm_cbop/mps/ZMHA279.bms",
+      "status": "ok",
+      "startedAt": "2026-06-24T21:48:06+00:00",
+      "mapset": "ZMHA279",
+      "map": "ZMHA279",
+      "mapKey": "ZMHA279::ZMHA279",
+      "programs": [
+        "ZM2OHA27"
+      ],
+      "fields": 94,
+      "literals": 7,
+      "functionKeys": 1,
+      "endedAt": "2026-06-24T21:52:45+00:00"
+    },
+    {
+      "bmsFile": "/Users/xmk9539/Documents/Software/zm_cbop/mps/ZMLE99G.bms",
+      "status": "ok",
+      "startedAt": "2026-06-24T21:49:53+00:00",
+      "mapset": "ZMLE99G",
+      "map": "MS0G",
+      "mapKey": "ZMLE99G::MS0G",
+      "programs": [
+        "ZM2OLE99"
+      ],
+      "fields": 45,
+      "literals": 58,
+      "functionKeys": 3,
+      "endedAt": "2026-06-24T21:54:39+00:00"
+    },
+    {
+      "bmsFile": "/Users/xmk9539/Documents/Software/zm_cbop/mps/ZMLE74G.bms",
+      "status": "ok",
+      "startedAt": "2026-06-24T21:50:13+00:00",
+      "mapset": "ZMLE74G",
+      "map": "MS0G",
+      "mapKey": "ZMLE74G::MS0G",
+      "programs": [
+        "ZM2OGU74"
+      ],
+      "fields": 45,
+      "literals": 58,
+      "functionKeys": 3,
+      "endedAt": "2026-06-24T21:54:57+00:00"
+    },
+    {
+      "bmsFile": "/Users/xmk9539/Documents/Software/zm_cbop/mps/ZMG0103.bms",
+      "status": "ok",
+      "startedAt": "2026-06-24T21:54:39+00:00",
+      "mapset": "ZMG0103",
+      "map": "ZMG0103",
+      "mapKey": "ZMG0103::ZMG0103",
+      "programs": [
+        "ZM2OGF33",
+        "ZM2OJ102",
+        "ZM2OJ103"
+      ],
+      "fields": 7,
+      "literals": 0,
+      "functionKeys": 0,
+      "endedAt": "2026-06-24T21:55:05+00:00"
+    },
+    {
+      "bmsFile": "/Users/xmk9539/Documents/Software/zm_cbop/mps/ZMJ7931.bms",
+      "status": "ok",
+      "startedAt": "2026-06-24T21:51:47+00:00",
+      "mapset": "ZMJ7931",
+      "map": "ZMJ7931",
+      "mapKey": "ZMJ7931::ZMJ7931",
+      "programs": [
+        "ZM1MJ793"
+      ],
+      "fields": 18,
+      "literals": 78,
+      "functionKeys": 3,
+      "endedAt": "2026-06-24T21:55:40+00:00"
+    },
+    {
+      "bmsFile": "/Users/xmk9539/Documents/Software/zm_cbop/mps/ZMHJ691.bms",
+      "status": "ok",
+      "startedAt": "2026-06-24T21:52:45+00:00",
+      "mapset": "ZMHJ691",
+      "map": "ZMHJ691",
+      "mapKey": "ZMHJ691::ZMHJ691",
+      "programs": [
+        "ZM2IHJ69",
+        "ZM2OHJ69"
+      ],
+      "fields": 107,
+      "literals": 20,
+      "functionKeys": 6,
+      "endedAt": "2026-06-24T21:56:38+00:00"
+    }
+  ]
+}

@@ -1,0 +1,418 @@
+node {
+  diameter: 50px;
+  color: #F4F4F4;
+  border-color: #BDBDBD;
+  border-width: 2px;
+  text-color-internal: #121212;
+  font-size: 10px;
+}
+
+relationship {
+  color: #B8C2CC;
+  shaft-width: 1px;
+  font-size: 7px;
+  padding: 3px;
+  text-color-external: #5F6C7B;
+  text-color-internal: #5F6C7B;
+}
+
+node.Program {
+  caption: '{name}';
+  color: #004481;
+  border-color: #072146;
+  text-color-internal: #FFFFFF;
+  diameter: 72px;
+}
+
+node.ProgramFacet {
+  caption: '{kind}';
+  color: #1464A5;
+  border-color: #49A5E6;
+  text-color-internal: #FFFFFF;
+  diameter: 58px;
+}
+
+node.Paragraph {
+  caption: '{name}';
+  color: #49A5E6;
+  border-color: #1464A5;
+  text-color-internal: #3A3A3A;
+}
+
+node.Copybook {
+  caption: '{name}';
+  color: #B2EAF5;
+  border-color: #028484;
+  text-color-internal: #3A3A3A;
+}
+
+node.DBTable {
+  caption: '{name}';
+  color: #1464A5;
+  border-color: #49A5E6;
+  text-color-internal: #FFFFFF;
+}
+
+node.ParamType {
+  caption: '{name}';
+  color: #02A5A5;
+  border-color: #028484;
+  text-color-internal: #FFFFFF;
+}
+
+node.ExternalRoutine {
+  caption: '{name}';
+  color: #F9ECD3;
+  border-color: #F5A623;
+  text-color-internal: #3A3A3A;
+}
+
+node.OutputFile {
+  caption: '{name}';
+  color: #D4EDFC;
+  border-color: #49A5E6;
+  text-color-internal: #3A3A3A;
+}
+
+node.Procedure {
+  caption: '{name}';
+  color: #072146;
+  border-color: #004481;
+  text-color-internal: #FFFFFF;
+  diameter: 78px;
+}
+
+node.ProcStep {
+  caption: '{stepName}';
+  color: #1464A5;
+  border-color: #49A5E6;
+  text-color-internal: #FFFFFF;
+  diameter: 62px;
+}
+
+node.ProcVariable {
+  caption: '{name}';
+  color: #49A5E6;
+  border-color: #028484;
+  text-color-internal: #3A3A3A;
+  diameter: 52px;
+}
+
+node.ProcDD {
+  caption: '{ddName}';
+  color: #B2EAF5;
+  border-color: #1464A5;
+  text-color-internal: #3A3A3A;
+  diameter: 54px;
+}
+
+node.SchedulerCondition {
+  caption: '{name}';
+  color: #F9ECD3;
+  border-color: #F5A623;
+  text-color-internal: #3A3A3A;
+  diameter: 58px;
+}
+
+node.RuntimeDataset {
+  caption: '{dsn}';
+  color: #D4EDFC;
+  border-color: #49A5E6;
+  text-color-internal: #3A3A3A;
+  diameter: 58px;
+}
+
+node.ControlCardMember {
+  caption: '{member}';
+  color: #CCF5F5;
+  border-color: #02A5A5;
+  text-color-internal: #072146;
+  diameter: 60px;
+}
+
+node.SysoutChannel {
+  caption: '{code}';
+  color: #D4EDFC;
+  border-color: #028484;
+  text-color-internal: #174764;
+  diameter: 52px;
+}
+
+node.BatchJob {
+  caption: '{name}';
+  color: #F5A623;
+  border-color: #B9790F;
+  text-color-internal: #072146;
+  diameter: 72px;
+}
+
+relationship.HAS_FACET {
+  color: #89A9C4;
+  shaft-width: 1px;
+}
+
+relationship.HAS_PARAGRAPH {
+  color: #7FB7D6;
+  shaft-width: 2px;
+}
+
+relationship.INCLUDES_COPYBOOK {
+  color: #A9D8E5;
+  shaft-width: 1px;
+}
+
+relationship.USES_COPYBOOK {
+  color: #8FC9D8;
+  shaft-width: 2px;
+}
+
+relationship.IMPLEMENTED_BY {
+  color: #7FB8C9;
+  shaft-width: 2px;
+}
+
+relationship.READS_TABLE {
+  color: #7AA3C4;
+  shaft-width: 1px;
+}
+
+relationship.UPDATES_TABLE {
+  color: #5F89AE;
+  shaft-width: 2px;
+}
+
+relationship.USES_PARAM_TYPE {
+  color: #8BC3CF;
+  shaft-width: 1px;
+}
+
+relationship.READS_DATA {
+  color: #7FBBC9;
+  shaft-width: 1px;
+}
+
+relationship.UPDATES_DATA {
+  color: #5FA0AF;
+  shaft-width: 2px;
+}
+
+relationship.DERIVES_FROM {
+  color: #99CBD5;
+  shaft-width: 1px;
+}
+
+relationship.CALLS_ROUTINE {
+  color: #D6C3A3;
+  shaft-width: 1px;
+}
+
+relationship.DEPENDS_ON_EXTERNAL {
+  color: #C4AE8C;
+  shaft-width: 2px;
+}
+
+relationship.WRITES_FILE {
+  color: #A8CCE5;
+  shaft-width: 2px;
+}
+
+relationship.STORES {
+  color: #73AEBB;
+  shaft-width: 2px;
+}
+
+relationship.HAS_STEP {
+  color: #3C74A5;
+  shaft-width: 2px;
+}
+
+relationship.DEFINES_VARIABLE {
+  color: #6DAFDB;
+  shaft-width: 1px;
+}
+
+relationship.DEFINES_DD {
+  color: #7FB8C9;
+  shaft-width: 1px;
+}
+
+relationship.EXECUTES_PROGRAM {
+  color: #D6C3A3;
+  shaft-width: 2px;
+}
+
+relationship.EMITS_CONDITION {
+  color: #C4AE8C;
+  shaft-width: 2px;
+}
+
+relationship.USES_DD {
+  color: #5FA0AF;
+  shaft-width: 1px;
+}
+
+relationship.RESOLVES_TO_DATASET {
+  color: #8BC3CF;
+  shaft-width: 1px;
+}
+
+relationship.ROUTES_TO_VARIABLE {
+  color: #5F89AE;
+  shaft-width: 2px;
+}
+
+relationship.USES_CONTROL_CARD {
+  color: #02A5A5;
+  shaft-width: 2px;
+}
+
+relationship.TARGETS_SYSOUT_CHANNEL {
+  color: #028484;
+  shaft-width: 2px;
+}
+
+relationship.IMPACTS_JOB {
+  color: #F5A623;
+  shaft-width: 3px;
+}
+
+// =============================================================================
+// TIPOS FUNCIONALES Y DE PROCESO
+// =============================================================================
+
+node.Functionality {
+  caption: '{name}';
+  color: #e47aa7;
+  border-color: #9E3A5E;
+  text-color-internal: #FFFFFF;
+}
+
+node.SubFunctionality {
+  caption: '{name}';
+  color: #adf4ff;
+  border-color: #49A5E6;
+  text-color-internal: #3A3A3A;
+}
+
+node.ProcessFlow {
+  caption: '{name}';
+  color: #9ab7da;
+  border-color: #5A7BAB;
+  text-color-internal: #3A3A3A;
+}
+
+node.ProcessState {
+  caption: '{name}';
+  color: #b3bf7c;
+  border-color: #7A8A4C;
+  text-color-internal: #3A3A3A;
+}
+
+// =============================================================================
+// DB2 / DCLGEN
+// =============================================================================
+
+node.DclgenArtifact {
+  caption: '{name}';
+  color: #B2EAF5;
+  border-color: #1DB7E4;
+  text-color-internal: #3A3A3A;
+}
+
+node.TableColumn {
+  caption: '{name}';
+  color: #CCF5F5;
+  border-color: #028484;
+  text-color-internal: #3A3A3A;
+}
+
+// =============================================================================
+// BMS / CICS
+// =============================================================================
+
+node.BmsMapset {
+  caption: '{name}';
+  color: #cadfff;
+  border-color: #7BA5D5;
+  text-color-internal: #3A3A3A;
+}
+
+node.BmsMap {
+  caption: '{name}';
+  color: #3edeff;
+  border-color: #009BBB;
+  text-color-internal: #3A3A3A;
+}
+
+node.BmsField {
+  caption: '{name}';
+  color: #9bbf00;
+  border-color: #6a8500;
+  text-color-internal: #3A3A3A;
+}
+
+node.UiLiteral {
+  caption: '{text}';
+  color: #fdde93;
+  border-color: #C4A840;
+  text-color-internal: #3A3A3A;
+}
+
+node.UiFunctionKey {
+  caption: '{name}';
+  color: #c59360;
+  border-color: #8A6030;
+  text-color-internal: #3A3A3A;
+}
+
+// =============================================================================
+// CONFORMIDAD
+// =============================================================================
+
+node.ConfDeficient {
+  caption: '{confStatus}';
+  color: #D8232A;
+  border-color: #7A0E12;
+  border-width: 5px;
+  text-color-internal: #FFFFFF;
+  diameter: 70px;
+}
+
+node.ConfWarn {
+  caption: '{confStatus}';
+  color: #F5A623;
+  border-color: #B9790F;
+  border-width: 4px;
+  text-color-internal: #2B2B2B;
+  diameter: 64px;
+}
+
+// =============================================================================
+// RELACIONES — FUNCIONAL / PROCESO / BMS
+// =============================================================================
+
+relationship.IMPLEMENTS_FUNCTIONALITY  { color: #C98BAD; shaft-width: 1px; }
+relationship.HAS_SUBFUNCTIONALITY      { color: #C989BD; shaft-width: 1px; }
+relationship.REALIZED_BY               { color: #8FC9D8; shaft-width: 1px; }
+relationship.PERFORMS_PARAGRAPH        { color: #7FB7D6; shaft-width: 1px; }
+
+relationship.ORCHESTRATES_PROCESS      { color: #7AA3C4; shaft-width: 1px; }
+relationship.HAS_STATE                 { color: #7FBBC9; shaft-width: 1px; }
+relationship.TRANSITIONS_TO            { color: #5F89AE; shaft-width: 2px; }
+relationship.STATE_ENTRY_PARAGRAPH     { color: #7FB8C9; shaft-width: 1px; }
+
+relationship.USES_MAPSET               { color: #A9D8E5; shaft-width: 1px; }
+relationship.PRESENTS_MAP              { color: #8FC9D8; shaft-width: 1px; }
+relationship.SUBMITS_INPUT_TO          { color: #7FB7D6; shaft-width: 1px; }
+relationship.HAS_MAP                   { color: #B2EAF5; shaft-width: 1px; }
+relationship.HAS_FIELD                 { color: #A9D8E5; shaft-width: 1px; }
+relationship.DISPLAYS_LITERAL          { color: #7FB7D6; shaft-width: 1px; }
+relationship.SUPPORTS_KEY              { color: #A9D8E5; shaft-width: 1px; }
+relationship.LABELS_FIELD              { color: #B2EAF5; shaft-width: 1px; }
+relationship.TRIGGERS_FUNCTIONALITY    { color: #D4709A; shaft-width: 1px; }
+relationship.TRIGGERS_SUBFUNCTIONALITY { color: #C4607A; shaft-width: 1px; }
+relationship.TRIGGERS_PARAGRAPH        { color: #B4506A; shaft-width: 1px; }
+relationship.TRIGGERS_STATE            { color: #C4607A; shaft-width: 1px; }
+
+relationship.DESCRIBES_TABLE           { color: #1464A5; shaft-width: 1px; }
+relationship.HAS_COLUMN                { color: #B2EAF5; shaft-width: 1px; }

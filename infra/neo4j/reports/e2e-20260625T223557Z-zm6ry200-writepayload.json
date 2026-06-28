@@ -1,0 +1,5495 @@
+{
+  "runId": "e2e-20260625T223557Z-zm6ry200",
+  "nodes": [
+    {
+      "label": "Program",
+      "key": [
+        "ZM6RY200"
+      ],
+      "properties": {
+        "name": "ZM6RY200",
+        "ingestion": "auto",
+        "layer": "program",
+        "nodeType": "program",
+        "viewTag": "cobol-program",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "objective": "CLONAR RUTINA ZM6RY100 ACTUALIZA LA BASE DE DATOS PARA LAS OPERACIONES DE COMPRA DE SOCIEDADES DE INVERSION QUE AFECTAN. TESORERIA (LIQUIDACIONES BPIGO-BUC) SE AGREGAN ACCESOS PARA TABLAS ESPEJO L O G D E M O D I F I C A C I O N E S FECHA | MODIFICADO | | | | | INDICADOR |",
+        "description": "Programa COBOL que clonar rutina zm6ry100 actualiza la base de datos para las operaciones de compra de sociedades de inversion que afectan. tesoreria (liquidaciones bpigo-buc) se agregan accesos para tablas espejo l o g d e m o d i f i c a c i o n e s fecha | modificado | | | | | indicador |. Pertenece a: CASA DE BOLSA BBVA BANCOMER, S A DE C V. 18/ENE/12. /.",
+        "system": "CASA DE BOLSA BBVA BANCOMER, S A DE C V. 18/ENE/12. /",
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Functionality",
+      "key": [
+        "FUNCTIONALITY_ZM6RY200"
+      ],
+      "properties": {
+        "name": "FUNCTIONALITY_ZM6RY200",
+        "objective": "CLONAR RUTINA ZM6RY100 ACTUALIZA LA BASE DE DATOS PARA LAS OPERACIONES DE COMPRA DE SOCIEDADES DE INVERSION QUE AFECTAN. TESORERIA (LIQUIDACIONES BPIGO-BUC) SE AGREGAN ACCESOS PARA TABLAS ESPEJO L O G D E M O D I F I C A C I O N E S FECHA | MODIFICADO | | | | | INDICADOR |",
+        "description": "Programa COBOL que clonar rutina zm6ry100 actualiza la base de datos para las operaciones de compra de sociedades de inversion que afectan. tesoreria (liquidaciones bpigo-buc) se agregan accesos para tablas espejo l o g d e m o d i f i c a c i o n e s fecha | modificado | | | | | indicador |. Pertenece a: CASA DE BOLSA BBVA BANCOMER, S A DE C V. 18/ENE/12. /.",
+        "businessDomain": "pending_human_review",
+        "ingestion": "auto",
+        "layer": "functional",
+        "nodeType": "business-function",
+        "viewTag": "functional",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "SubFunctionality",
+      "key": [
+        "FUNCTIONALITY_ZM6RY200",
+        "ZM6RY200_PROCESSING"
+      ],
+      "properties": {
+        "functionalityName": "FUNCTIONALITY_ZM6RY200",
+        "name": "ZM6RY200_PROCESSING",
+        "description": "Sub-funcionalidad de ZM6RY200 para fase PROCESSING.",
+        "ingestion": "auto",
+        "layer": "functional",
+        "nodeType": "sub-business-function",
+        "viewTag": "functional",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "PROGRAM-ID"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "PROGRAM-ID",
+        "summary": "Orquesta una fase funcional de ZM6RY200, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 100,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          2
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "ZM6RY200"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "ZM6RY200",
+        "summary": "Orquesta una fase funcional de ZM6RY200, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 200,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          3
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "AUTHOR"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "AUTHOR",
+        "summary": "Orquesta una fase funcional de ZM6RY200, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 300,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          4
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "INSTALLATION"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "INSTALLATION",
+        "summary": "Orquesta una fase funcional de ZM6RY200, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 400,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          7
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "DATE-WRITTEN"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "DATE-WRITTEN",
+        "summary": "Orquesta una fase funcional de ZM6RY200, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 500,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          9
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "CONFIGURATION"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "CONFIGURATION",
+        "summary": "Orquesta una fase funcional de ZM6RY200, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 600,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          33
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "SOURCE-COMPUTER"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "SOURCE-COMPUTER",
+        "summary": "Orquesta una fase funcional de ZM6RY200, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 700,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          34
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "IBM-4381"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "IBM-4381",
+        "summary": "Orquesta una fase funcional de ZM6RY200, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 1000,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          37
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "OBJECT-COMPUTER"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "OBJECT-COMPUTER",
+        "summary": "Orquesta una fase funcional de ZM6RY200, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 900,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          36
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "WORKING-STORAGE"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "WORKING-STORAGE",
+        "summary": "Orquesta una fase funcional de ZM6RY200, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 1100,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          40
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "LINKAGE"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "LINKAGE",
+        "summary": "Orquesta una fase funcional de ZM6RY200, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 1200,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          151
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "000-CONTROL"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "000-CONTROL",
+        "summary": "Orquesta una fase funcional de ZM6RY200, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 1300,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          158
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "000-0100-INICIO"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "000-0100-INICIO",
+        "summary": "Inicializa el flujo operativo de ZM6RY200, preparando contexto y validaciones de arranque.",
+        "executionOrder": 1400,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          159
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "000-0200-GENERA"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "000-0200-GENERA",
+        "summary": "Orquesta una fase funcional de ZM6RY200, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 1500,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          161
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "000-0300-TERMINA"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "000-0300-TERMINA",
+        "summary": "Cierra la ejecucion de ZM6RY200, consolidando trazas y terminacion funcional del proceso.",
+        "executionOrder": 1600,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          163
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "000-9900-FIN"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "000-9900-FIN",
+        "summary": "Cierra la ejecucion de ZM6RY200, consolidando trazas y terminacion funcional del proceso.",
+        "executionOrder": 1700,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          165
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "010-INICIAL"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "010-INICIAL",
+        "summary": "Inicializa el flujo operativo de ZM6RY200, preparando contexto y validaciones de arranque.",
+        "executionOrder": 1800,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          168
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "010-0100-INICIO"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "010-0100-INICIO",
+        "summary": "Inicializa el flujo operativo de ZM6RY200, preparando contexto y validaciones de arranque.",
+        "executionOrder": 1900,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          169
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "010-0990-FIN"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "010-0990-FIN",
+        "summary": "Cierra la ejecucion de ZM6RY200, consolidando trazas y terminacion funcional del proceso.",
+        "executionOrder": 2000,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          228
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "100-DECLARA-CURSOR-SI"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "100-DECLARA-CURSOR-SI",
+        "summary": "Orquesta una fase funcional de ZM6RY200, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 2100,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          234
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "100-010-INI"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "100-010-INI",
+        "summary": "Orquesta una fase funcional de ZM6RY200, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 2200,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          235
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "100-010-FIN"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "100-010-FIN",
+        "summary": "Cierra la ejecucion de ZM6RY200, consolidando trazas y terminacion funcional del proceso.",
+        "executionOrder": 2300,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          263
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "200-PROCESO"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "200-PROCESO",
+        "summary": "Orquesta una fase funcional de ZM6RY200, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 2400,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          266
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "200-010-INI"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "200-010-INI",
+        "summary": "Orquesta una fase funcional de ZM6RY200, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 2500,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          267
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "200-010-FIN"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "200-010-FIN",
+        "summary": "Cierra la ejecucion de ZM6RY200, consolidando trazas y terminacion funcional del proceso.",
+        "executionOrder": 2600,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          303
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "210-BUSCA-OPERATES"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "210-BUSCA-OPERATES",
+        "summary": "Ejecuta lectura/consulta de datos requeridos por ZM6RY200 y deja resultados listos para el siguiente tramo.",
+        "executionOrder": 2700,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          306
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "210-010-INI"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "210-010-INI",
+        "summary": "Orquesta una fase funcional de ZM6RY200, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 2800,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          307
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "210-010-FIN"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "210-010-FIN",
+        "summary": "Cierra la ejecucion de ZM6RY200, consolidando trazas y terminacion funcional del proceso.",
+        "executionOrder": 2900,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          311
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "220-UPDATE-OPERATE"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "220-UPDATE-OPERATE",
+        "summary": "Orquesta una fase funcional de ZM6RY200, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 3000,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          314
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "220-010-INI"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "220-010-INI",
+        "summary": "Orquesta una fase funcional de ZM6RY200, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 3100,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          315
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "220-010-FIN"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "220-010-FIN",
+        "summary": "Cierra la ejecucion de ZM6RY200, consolidando trazas y terminacion funcional del proceso.",
+        "executionOrder": 3200,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          324
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "300-TERMINA"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "300-TERMINA",
+        "summary": "Cierra la ejecucion de ZM6RY200, consolidando trazas y terminacion funcional del proceso.",
+        "executionOrder": 3300,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          327
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "300-010-INI"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "300-010-INI",
+        "summary": "Orquesta una fase funcional de ZM6RY200, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 3400,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          328
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "300-010-FIN"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "300-010-FIN",
+        "summary": "Cierra la ejecucion de ZM6RY200, consolidando trazas y terminacion funcional del proceso.",
+        "executionOrder": 3500,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          339
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "500-LEE-IEMPR"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "500-LEE-IEMPR",
+        "summary": "Ejecuta lectura/consulta de datos requeridos por ZM6RY200 y deja resultados listos para el siguiente tramo.",
+        "executionOrder": 3600,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          342
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "500-0100-INICIO"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "500-0100-INICIO",
+        "summary": "Inicializa el flujo operativo de ZM6RY200, preparando contexto y validaciones de arranque.",
+        "executionOrder": 3700,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          343
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "500-9900-FIN"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "500-9900-FIN",
+        "summary": "Cierra la ejecucion de ZM6RY200, consolidando trazas y terminacion funcional del proceso.",
+        "executionOrder": 3800,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          360
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "510-LEE-DEFOPER"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "510-LEE-DEFOPER",
+        "summary": "Ejecuta lectura/consulta de datos requeridos por ZM6RY200 y deja resultados listos para el siguiente tramo.",
+        "executionOrder": 3900,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          363
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "510-0100-INICIO"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "510-0100-INICIO",
+        "summary": "Inicializa el flujo operativo de ZM6RY200, preparando contexto y validaciones de arranque.",
+        "executionOrder": 4000,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          364
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "510-9900-FIN"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "510-9900-FIN",
+        "summary": "Cierra la ejecucion de ZM6RY200, consolidando trazas y terminacion funcional del proceso.",
+        "executionOrder": 4100,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          381
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "520-LEE-OPERTET"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "520-LEE-OPERTET",
+        "summary": "Ejecuta lectura/consulta de datos requeridos por ZM6RY200 y deja resultados listos para el siguiente tramo.",
+        "executionOrder": 4200,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          384
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "520-0100-INICIO"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "520-0100-INICIO",
+        "summary": "Inicializa el flujo operativo de ZM6RY200, preparando contexto y validaciones de arranque.",
+        "executionOrder": 4300,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          385
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "520-9900-FIN"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "520-9900-FIN",
+        "summary": "Cierra la ejecucion de ZM6RY200, consolidando trazas y terminacion funcional del proceso.",
+        "executionOrder": 4400,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          407
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "530-UPDATE-OPERATE"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "530-UPDATE-OPERATE",
+        "summary": "Orquesta una fase funcional de ZM6RY200, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 4500,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          410
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "530-0100-INICIO"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "530-0100-INICIO",
+        "summary": "Inicializa el flujo operativo de ZM6RY200, preparando contexto y validaciones de arranque.",
+        "executionOrder": 4600,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          411
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "530-9900-FIN"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "530-9900-FIN",
+        "summary": "Cierra la ejecucion de ZM6RY200, consolidando trazas y terminacion funcional del proceso.",
+        "executionOrder": 4700,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          427
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "800-ABRE-CUR-OPERASDI"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "800-ABRE-CUR-OPERASDI",
+        "summary": "Orquesta una fase funcional de ZM6RY200, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 4800,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          433
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "800-010-INICIO"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "800-010-INICIO",
+        "summary": "Inicializa el flujo operativo de ZM6RY200, preparando contexto y validaciones de arranque.",
+        "executionOrder": 4900,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          434
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "800-010-FIN"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "800-010-FIN",
+        "summary": "Cierra la ejecucion de ZM6RY200, consolidando trazas y terminacion funcional del proceso.",
+        "executionOrder": 5000,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          446
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "810-LEE-CUR-OPERASDI"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "810-LEE-CUR-OPERASDI",
+        "summary": "Ejecuta lectura/consulta de datos requeridos por ZM6RY200 y deja resultados listos para el siguiente tramo.",
+        "executionOrder": 5100,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          451
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "810-010-INICIO"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "810-010-INICIO",
+        "summary": "Inicializa el flujo operativo de ZM6RY200, preparando contexto y validaciones de arranque.",
+        "executionOrder": 5200,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          452
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "810-010-FIN"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "810-010-FIN",
+        "summary": "Cierra la ejecucion de ZM6RY200, consolidando trazas y terminacion funcional del proceso.",
+        "executionOrder": 5300,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          480
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "820-CIERRA-CUR-OPERASDI"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "820-CIERRA-CUR-OPERASDI",
+        "summary": "Cierra la ejecucion de ZM6RY200, consolidando trazas y terminacion funcional del proceso.",
+        "executionOrder": 5400,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          483
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "820-010-INICIO"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "820-010-INICIO",
+        "summary": "Inicializa el flujo operativo de ZM6RY200, preparando contexto y validaciones de arranque.",
+        "executionOrder": 5500,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          484
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "820-010-FIN"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "820-010-FIN",
+        "summary": "Cierra la ejecucion de ZM6RY200, consolidando trazas y terminacion funcional del proceso.",
+        "executionOrder": 5600,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          493
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "980-ABORTA"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "980-ABORTA",
+        "summary": "Gestiona contingencias en ZM6RY200, concentrando el manejo de error y salida controlada.",
+        "executionOrder": 5700,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          503
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "980-0100-INICIO"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "980-0100-INICIO",
+        "summary": "Inicializa el flujo operativo de ZM6RY200, preparando contexto y validaciones de arranque.",
+        "executionOrder": 5800,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          504
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM6RY200",
+        "980-9900-FIN"
+      ],
+      "properties": {
+        "programName": "ZM6RY200",
+        "name": "980-9900-FIN",
+        "summary": "Cierra la ejecucion de ZM6RY200, consolidando trazas y terminacion funcional del proceso.",
+        "executionOrder": 5900,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          510
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "SQLCA"
+      ],
+      "properties": {
+        "name": "SQLCA",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          103
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "ZDEFOPER"
+      ],
+      "properties": {
+        "name": "ZDEFOPER",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          143
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "ZEMPRESA"
+      ],
+      "properties": {
+        "name": "ZEMPRESA",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          147
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "ZMGTATE"
+      ],
+      "properties": {
+        "name": "ZMGTATE",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          131
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "ZMGTOPS"
+      ],
+      "properties": {
+        "name": "ZMGTOPS",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          123
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "ZMGTOPT"
+      ],
+      "properties": {
+        "name": "ZMGTOPT",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          139
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "ZMWBP001"
+      ],
+      "properties": {
+        "name": "ZMWBP001",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          499
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "ZMWBV002"
+      ],
+      "properties": {
+        "name": "ZMWBV002",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          106
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "ZMWBV356"
+      ],
+      "properties": {
+        "name": "ZMWBV356",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          111
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "ZMWSY100"
+      ],
+      "properties": {
+        "name": "ZMWSY100",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          154
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "ZOPERASI"
+      ],
+      "properties": {
+        "name": "ZOPERASI",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          119
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "ZOPERATE"
+      ],
+      "properties": {
+        "name": "ZOPERATE",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          127
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "ZOPERTET"
+      ],
+      "properties": {
+        "name": "ZOPERTET",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          135
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "DBTable",
+      "key": [
+        "DEFOPER"
+      ],
+      "properties": {
+        "name": "DEFOPER",
+        "ingestion": "auto",
+        "layer": "data-access",
+        "nodeType": "physical-table",
+        "viewTag": "data-access",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          366,
+          367,
+          368,
+          369,
+          370,
+          371
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "DBTable",
+      "key": [
+        "EMPRESA"
+      ],
+      "properties": {
+        "name": "EMPRESA",
+        "ingestion": "auto",
+        "layer": "data-access",
+        "nodeType": "physical-table",
+        "viewTag": "data-access",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          344,
+          345,
+          346,
+          347,
+          348,
+          349
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200"
+      }
+    },
+    {
+      "label": "DBTable",
+      "key": [
+        "ZMDTOPS"
+      ],
+      "properties": {
+        "name": "ZMDTOPS",
+        "ingestion": "auto",
+        "layer": "data-access",
+        "nodeType": "physical-table",
+        "viewTag": "data-access",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          245,
+          246,
+          247,
+          248,
+          249,
+          250,
+          251,
+          252,
+          253,
+          254,
+          255,
+          256,
+          257,
+          258
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "qualifiedName": "ZMDTOPS",
+        "schemaName": null,
+        "dclMember": "ZMGTOPS",
+        "dclPath": "dcl/ZMGTOPS.dcl",
+        "dclHostStructure": "DCLZMDTOPS",
+        "declaredColumnCount": 32,
+        "declaredColumns": [
+          "IOPERA",
+          "IREF",
+          "ISEC",
+          "ITRANS",
+          "IDOCTO",
+          "IUSUARIO",
+          "EOPERA",
+          "ETRANS",
+          "ICUENTA1",
+          "ICONCEP1",
+          "CANT1",
+          "ICUENTA2",
+          "ICONCEP2",
+          "CANT2",
+          "ACOSCASA",
+          "ACOSFPRO",
+          "ACOSPROM",
+          "MCPROEXI",
+          "FREG",
+          "FOPERA",
+          "FVENC",
+          "FLIQUIDA",
+          "IRUTA",
+          "SLIQUID",
+          "SESTATUS",
+          "MPRECIO",
+          "MSOLOPER",
+          "ITIPOTEN",
+          "ICVEOPES",
+          "IFOLOPES",
+          "SCORTO",
+          "IEMPR"
+        ],
+        "declaredColumnDefinitions": [
+          "IOPERA DECIMAL(5, 0) NOT NULL",
+          "IREF DECIMAL(9, 0) NOT NULL",
+          "ISEC DECIMAL(2, 0) NOT NULL",
+          "ITRANS CHAR(1) NOT NULL",
+          "IDOCTO DECIMAL(7, 0) NOT NULL",
+          "IUSUARIO CHAR(8) NOT NULL",
+          "EOPERA CHAR(15) NOT NULL",
+          "ETRANS CHAR(15) NOT NULL",
+          "ICUENTA1 DECIMAL(7, 0) NOT NULL",
+          "ICONCEP1 DECIMAL(5, 0) NOT NULL",
+          "CANT1 DECIMAL(15, 2) NOT NULL",
+          "ICUENTA2 DECIMAL(7, 0) NOT NULL",
+          "ICONCEP2 DECIMAL(5, 0) NOT NULL",
+          "CANT2 DECIMAL(15, 2) NOT NULL",
+          "ACOSCASA DECIMAL(8, 4)",
+          "ACOSFPRO DECIMAL(8, 4)",
+          "ACOSPROM DECIMAL(8, 4) NOT NULL",
+          "MCPROEXI DECIMAL(15, 8) NOT NULL",
+          "FREG TIMESTAMP NOT NULL",
+          "FOPERA DATE NOT NULL",
+          "FVENC DATE NOT NULL",
+          "FLIQUIDA DATE NOT NULL",
+          "IRUTA CHAR(3) NOT NULL",
+          "SLIQUID CHAR(1) NOT NULL",
+          "SESTATUS CHAR(1) NOT NULL",
+          "MPRECIO DECIMAL(15, 8) NOT NULL",
+          "MSOLOPER DECIMAL(15, 2) NOT NULL",
+          "ITIPOTEN CHAR(1) NOT NULL",
+          "ICVEOPES DECIMAL(3, 0) NOT NULL",
+          "IFOLOPES DECIMAL(9, 0) NOT NULL",
+          "SCORTO CHAR(1) NOT NULL",
+          "IEMPR CHAR(3) NOT NULL"
+        ]
+      }
+    },
+    {
+      "label": "DBTable",
+      "key": [
+        "ZMDTOPT"
+      ],
+      "properties": {
+        "name": "ZMDTOPT",
+        "ingestion": "auto",
+        "layer": "data-access",
+        "nodeType": "physical-table",
+        "viewTag": "data-access",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          388,
+          389,
+          390,
+          391,
+          392,
+          393,
+          394,
+          395,
+          396,
+          397
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "qualifiedName": "ZMDTOPT",
+        "schemaName": null,
+        "dclMember": "ZMGTOPT",
+        "dclPath": "dcl/ZMGTOPT.dcl",
+        "dclHostStructure": "DCLZMDTOPT",
+        "declaredColumnCount": 37,
+        "declaredColumns": [
+          "IREF",
+          "ISEC",
+          "IOPERA",
+          "ITIPODOC",
+          "IMEDIO",
+          "NBENE1",
+          "NBENE2",
+          "NBENE3",
+          "IBANCO",
+          "ICTABCO",
+          "NSUC",
+          "DBENEF",
+          "NEDOBENE",
+          "NPOBBENE",
+          "EDOCTO",
+          "NPOBLA",
+          "HIMP",
+          "IAFECTA",
+          "ISUCCASA",
+          "ICCOSTO",
+          "MSALANT",
+          "IPROM",
+          "FOPERA",
+          "SESTATUS",
+          "CAFECBON",
+          "CTIPOBON",
+          "IDATO1",
+          "IDATO2",
+          "IDATO3",
+          "IDATO4",
+          "IDATO5",
+          "IDATO6",
+          "IDATO7",
+          "SPROMTES",
+          "IFOLSPE",
+          "IFOLREC",
+          "ICTCLABE"
+        ],
+        "declaredColumnDefinitions": [
+          "IREF DECIMAL(9, 0) NOT NULL",
+          "ISEC DECIMAL(2, 0) NOT NULL",
+          "IOPERA DECIMAL(5, 0) NOT NULL",
+          "ITIPODOC CHAR(1)",
+          "IMEDIO CHAR(1)",
+          "NBENE1 CHAR(55)",
+          "NBENE2 CHAR(55)",
+          "NBENE3 CHAR(55)",
+          "IBANCO DECIMAL(2, 0)",
+          "ICTABCO CHAR(16)",
+          "NSUC CHAR(25)",
+          "DBENEF CHAR(50)",
+          "NEDOBENE CHAR(30)",
+          "NPOBBENE CHAR(25)",
+          "EDOCTO CHAR(45)",
+          "NPOBLA CHAR(30)",
+          "HIMP TIME NOT NULL",
+          "IAFECTA DECIMAL(2, 0) NOT NULL",
+          "ISUCCASA CHAR(3) NOT NULL",
+          "ICCOSTO DECIMAL(5, 0) NOT NULL",
+          "MSALANT DECIMAL(15, 2) NOT NULL",
+          "IPROM DECIMAL(4, 0) NOT NULL",
+          "FOPERA DATE NOT NULL",
+          "SESTATUS CHAR(1) NOT NULL",
+          "CAFECBON DECIMAL(10, 0) NOT NULL",
+          "CTIPOBON CHAR(2) NOT NULL",
+          "IDATO1 CHAR(254) NOT NULL",
+          "IDATO2 CHAR(254) NOT NULL",
+          "IDATO3 CHAR(254) NOT NULL",
+          "IDATO4 CHAR(254) NOT NULL",
+          "IDATO5 CHAR(254) NOT NULL",
+          "IDATO6 CHAR(254) NOT NULL",
+          "IDATO7 CHAR(254) NOT NULL",
+          "SPROMTES CHAR(1) NOT NULL",
+          "IFOLSPE DECIMAL(7, 0) NOT NULL",
+          "IFOLREC DECIMAL(5, 0) NOT NULL",
+          "ICTCLABE DECIMAL(18, 0) NOT NULL"
+        ]
+      }
+    },
+    {
+      "label": "DBTable",
+      "key": [
+        "ZMDTATE"
+      ],
+      "properties": {
+        "name": "ZMDTATE",
+        "ingestion": "auto",
+        "layer": "data-access",
+        "nodeType": "physical-table",
+        "viewTag": "data-access",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          412,
+          413,
+          414,
+          415,
+          416,
+          417,
+          418,
+          419
+        ],
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "qualifiedName": "ZMDTATE",
+        "schemaName": null,
+        "dclMember": "ZMGTATE",
+        "dclPath": "dcl/ZMGTATE.dcl",
+        "dclHostStructure": "DCLZMDTATE",
+        "declaredColumnCount": 40,
+        "declaredColumns": [
+          "IOPERA",
+          "IREF",
+          "ISEC",
+          "ITRANS",
+          "IDOCTO",
+          "IUSUARIO",
+          "EOPERA",
+          "ETRANS",
+          "ICUENTA1",
+          "ICONCEP1",
+          "CANT1",
+          "ICUENTA2",
+          "ICONCEP2",
+          "CANT2",
+          "ACOSCASA",
+          "ACOSFPRO",
+          "ACOSPROM",
+          "MCPROEXI",
+          "FREG",
+          "FOPERA",
+          "FVENC",
+          "FLIQUIDA",
+          "IRUTA",
+          "SLIQUID",
+          "SESTATUS",
+          "MPRECIO",
+          "MSOLOPER",
+          "ITIPOTEN",
+          "ICVEOPES",
+          "IFOLOPES",
+          "SCORTO",
+          "IDATO1",
+          "IDATO2",
+          "IDATO3",
+          "IDATO4",
+          "IDATO5",
+          "IDATO6",
+          "IDATO7",
+          "IDATO8",
+          "IEMPR"
+        ],
+        "declaredColumnDefinitions": [
+          "IOPERA DECIMAL(5, 0) NOT NULL",
+          "IREF DECIMAL(9, 0) NOT NULL",
+          "ISEC DECIMAL(2, 0) NOT NULL",
+          "ITRANS CHAR(1) NOT NULL",
+          "IDOCTO DECIMAL(7, 0)",
+          "IUSUARIO CHAR(8) NOT NULL",
+          "EOPERA CHAR(15) NOT NULL",
+          "ETRANS CHAR(15) NOT NULL",
+          "ICUENTA1 DECIMAL(7, 0) NOT NULL",
+          "ICONCEP1 DECIMAL(5, 0) NOT NULL",
+          "CANT1 DECIMAL(15, 2) NOT NULL",
+          "ICUENTA2 DECIMAL(7, 0)",
+          "ICONCEP2 DECIMAL(5, 0)",
+          "CANT2 DECIMAL(15, 2)",
+          "ACOSCASA DECIMAL(8, 4)",
+          "ACOSFPRO DECIMAL(8, 4)",
+          "ACOSPROM DECIMAL(8, 4)",
+          "MCPROEXI DECIMAL(15, 8)",
+          "FREG TIMESTAMP NOT NULL",
+          "FOPERA DATE",
+          "FVENC DATE",
+          "FLIQUIDA DATE",
+          "IRUTA CHAR(3)",
+          "SLIQUID CHAR(1)",
+          "SESTATUS CHAR(1) NOT NULL",
+          "MPRECIO DECIMAL(15, 8)",
+          "MSOLOPER DECIMAL(15, 2) NOT NULL",
+          "ITIPOTEN CHAR(1) NOT NULL",
+          "ICVEOPES DECIMAL(3, 0) NOT NULL",
+          "IFOLOPES DECIMAL(9, 0) NOT NULL",
+          "SCORTO CHAR(1) NOT NULL",
+          "IDATO1 CHAR(254) NOT NULL",
+          "IDATO2 CHAR(254) NOT NULL",
+          "IDATO3 CHAR(254) NOT NULL",
+          "IDATO4 CHAR(254) NOT NULL",
+          "IDATO5 CHAR(254) NOT NULL",
+          "IDATO6 CHAR(254) NOT NULL",
+          "IDATO7 CHAR(254) NOT NULL",
+          "IDATO8 CHAR(254) NOT NULL",
+          "IEMPR CHAR(3) NOT NULL"
+        ]
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "type": "IMPLEMENTS_FUNCTIONALITY",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Functionality",
+        [
+          "FUNCTIONALITY_ZM6RY200"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "HAS_SUBFUNCTIONALITY",
+      "from": [
+        "Functionality",
+        [
+          "FUNCTIONALITY_ZM6RY200"
+        ]
+      ],
+      "to": [
+        "SubFunctionality",
+        [
+          "FUNCTIONALITY_ZM6RY200",
+          "ZM6RY200_PROCESSING"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "PROGRAM-ID"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          2
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "ZM6RY200"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          3
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "AUTHOR"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          4
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "INSTALLATION"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          7
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "DATE-WRITTEN"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          9
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "CONFIGURATION"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          33
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "SOURCE-COMPUTER"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          34
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "IBM-4381"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          37
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "OBJECT-COMPUTER"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          36
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          40
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "LINKAGE"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          151
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "000-CONTROL"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          158
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "000-0100-INICIO"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          159
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "000-0200-GENERA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          161
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "000-0300-TERMINA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          163
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "000-9900-FIN"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          165
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "010-INICIAL"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          168
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "010-0100-INICIO"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          169
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "010-0990-FIN"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          228
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "100-DECLARA-CURSOR-SI"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          234
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "100-010-INI"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          235
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "100-010-FIN"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          263
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "200-PROCESO"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          266
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "200-010-INI"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          267
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "200-010-FIN"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          303
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "210-BUSCA-OPERATES"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          306
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "210-010-INI"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          307
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "210-010-FIN"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          311
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "220-UPDATE-OPERATE"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          314
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "220-010-INI"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          315
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "220-010-FIN"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          324
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "300-TERMINA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          327
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "300-010-INI"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          328
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "300-010-FIN"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          339
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "500-LEE-IEMPR"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          342
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "500-0100-INICIO"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          343
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "500-9900-FIN"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          360
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "510-LEE-DEFOPER"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          363
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "510-0100-INICIO"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          364
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "510-9900-FIN"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          381
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "520-LEE-OPERTET"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          384
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "520-0100-INICIO"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          385
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "520-9900-FIN"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          407
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "530-UPDATE-OPERATE"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          410
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "530-0100-INICIO"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          411
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "530-9900-FIN"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          427
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "800-ABRE-CUR-OPERASDI"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          433
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "800-010-INICIO"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          434
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "800-010-FIN"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          446
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "810-LEE-CUR-OPERASDI"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          451
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "810-010-INICIO"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          452
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "810-010-FIN"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          480
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "820-CIERRA-CUR-OPERASDI"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          483
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "820-010-INICIO"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          484
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "820-010-FIN"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          493
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "980-ABORTA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          503
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "980-0100-INICIO"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          504
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "980-9900-FIN"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          510
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SQLCA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          103
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZDEFOPER"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          143
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZEMPRESA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          147
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMGTATE"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          131
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMGTOPS"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          123
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMGTOPT"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          139
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          499
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBV002"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          106
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBV356"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          111
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWSY100"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          154
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZOPERASI"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          119
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZOPERATE"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          127
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZOPERTET"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          135
+        ]
+      }
+    },
+    {
+      "type": "READS_TABLE",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "DBTable",
+        [
+          "DEFOPER"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          366,
+          367,
+          368,
+          369,
+          370,
+          371
+        ]
+      }
+    },
+    {
+      "type": "READS_TABLE",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "DBTable",
+        [
+          "EMPRESA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          344,
+          345,
+          346,
+          347,
+          348,
+          349
+        ]
+      }
+    },
+    {
+      "type": "READS_TABLE",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "DBTable",
+        [
+          "ZMDTOPS"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          245,
+          246,
+          247,
+          248,
+          249,
+          250,
+          251,
+          252,
+          253,
+          254,
+          255,
+          256,
+          257,
+          258
+        ]
+      }
+    },
+    {
+      "type": "READS_TABLE",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "DBTable",
+        [
+          "ZMDTOPT"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          388,
+          389,
+          390,
+          391,
+          392,
+          393,
+          394,
+          395,
+          396,
+          397
+        ]
+      }
+    },
+    {
+      "type": "UPDATES_TABLE",
+      "from": [
+        "Program",
+        [
+          "ZM6RY200"
+        ]
+      ],
+      "to": [
+        "DBTable",
+        [
+          "ZMDTATE"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          412,
+          413,
+          414,
+          415,
+          416,
+          417,
+          418,
+          419
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "100-010-INI"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          261
+        ]
+      }
+    },
+    {
+      "type": "REALIZED_BY",
+      "from": [
+        "SubFunctionality",
+        [
+          "FUNCTIONALITY_ZM6RY200",
+          "ZM6RY200_PROCESSING"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "980-9900-FIN"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          510
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "100-010-INI"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          261
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "500-0100-INICIO"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          353
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "500-0100-INICIO"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          353
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "510-0100-INICIO"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          375
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "510-0100-INICIO"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          375
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "520-0100-INICIO"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          401
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "520-0100-INICIO"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          401
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "530-0100-INICIO"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          426
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "530-0100-INICIO"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          426
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "800-010-INICIO"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          441
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "800-010-INICIO"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          441
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "810-010-INICIO"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          464
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "810-010-INICIO"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          464
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "820-010-FIN"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          499
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "820-010-FIN"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          499
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "820-010-INICIO"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          490
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "820-010-INICIO"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          490
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "LINKAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWSY100"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          154
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "LINKAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWSY100"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          154
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SQLCA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          103
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SQLCA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          103
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZDEFOPER"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          143
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZDEFOPER"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          143
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZEMPRESA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          147
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZEMPRESA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          147
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMGTATE"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          131
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMGTATE"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          131
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMGTOPS"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          123
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMGTOPS"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          123
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMGTOPT"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          139
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMGTOPT"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          139
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBV002"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          106
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBV002"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          106
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBV356"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          111
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBV356"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          111
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZOPERASI"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          119
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZOPERASI"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          119
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZOPERATE"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          127
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZOPERATE"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          127
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZOPERTET"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          135
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM6RY200",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZOPERTET"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223557Z-zm6ry200",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM6RY200.cbl",
+        "evidenceLines": [
+          135
+        ]
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "program": "ZM6RY200",
+      "sequenceColumnsNormalized": true,
+      "performTargetCount": 15,
+      "paragraphCount": 59,
+      "missingPerformTargets": []
+    }
+  ]
+}

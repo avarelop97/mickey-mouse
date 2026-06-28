@@ -1,0 +1,28 @@
+{
+  "runId": "e2e-20260625T223535Z-zm2ogj44",
+  "programs": [
+    "ZM2OGJ44"
+  ],
+  "artifacts": {
+    "extraction": "infra/neo4j/reports/e2e-20260625T223535Z-zm2ogj44-extraction.json",
+    "writePayload": "infra/neo4j/reports/e2e-20260625T223535Z-zm2ogj44-writepayload.json",
+    "precheck": "infra/neo4j/reports/e2e-20260625T223535Z-zm2ogj44-precheck.json",
+    "cypher": "infra/neo4j/queries/ingest-e2e-20260625T223535Z-zm2ogj44.cypher"
+  },
+  "precheck": {
+    "findings": [],
+    "blockers": [],
+    "qualityGateResult": "pass"
+  },
+  "commitExecuted": false,
+  "inventory": {},
+  "postAudit": {},
+  "postAuditAfterRemediation": {},
+  "remediationApplied": [],
+  "integralBacklog": {
+    "invalidLabelsGlobal": 20,
+    "criticalRelWithoutEvidenceGlobal": 28,
+    "deprecatedProgramUsesParamTypeGlobal": 7
+  },
+  "decision": "PASS"
+}

@@ -1,0 +1,28 @@
+{
+  "runId": "e2e-20260625T221448Z-zm4civax",
+  "programs": [
+    "ZM4CIVAX"
+  ],
+  "artifacts": {
+    "extraction": "infra/neo4j/reports/e2e-20260625T221448Z-zm4civax-extraction.json",
+    "writePayload": "infra/neo4j/reports/e2e-20260625T221448Z-zm4civax-writepayload.json",
+    "precheck": "infra/neo4j/reports/e2e-20260625T221448Z-zm4civax-precheck.json",
+    "cypher": "infra/neo4j/queries/ingest-e2e-20260625T221448Z-zm4civax.cypher"
+  },
+  "precheck": {
+    "findings": [],
+    "blockers": [],
+    "qualityGateResult": "pass"
+  },
+  "commitExecuted": false,
+  "inventory": {},
+  "postAudit": {},
+  "postAuditAfterRemediation": {},
+  "remediationApplied": [],
+  "integralBacklog": {
+    "invalidLabelsGlobal": 20,
+    "criticalRelWithoutEvidenceGlobal": 28,
+    "deprecatedProgramUsesParamTypeGlobal": 7
+  },
+  "decision": "PASS"
+}

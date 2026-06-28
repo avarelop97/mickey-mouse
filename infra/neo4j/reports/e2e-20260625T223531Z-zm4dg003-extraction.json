@@ -1,0 +1,491 @@
+{
+  "stage": "discovery-extraction",
+  "runId": "e2e-20260625T223531Z-zm4dg003",
+  "programs": [
+    "ZM4DG003"
+  ],
+  "extractions": [
+    {
+      "program": "ZM4DG003",
+      "sourceFile": "src/ZM4DG003.cbl",
+      "procedureLine": 67,
+      "parseStartLine": 11,
+      "parseStartReason": "PROCEDURE_DIVISION",
+      "metadata": {
+        "objective": "REMPLAZAR TEMPORALMENTE LOS SPUFIS.",
+        "description": "Programa COBOL que remplazar temporalmente los spufis.. Pertenece a: PROGRAM-ID. ZM4DG003. INSTALLATION. BBVA BANCOMER, S.A. DE C.V..",
+        "system": "PROGRAM-ID. ZM4DG003. INSTALLATION. BBVA BANCOMER, S.A. DE C.V.",
+        "author": null
+      },
+      "copybooks": [
+        {
+          "name": "SQLCA",
+          "evidenceLines": [
+            36
+          ]
+        },
+        {
+          "name": "ZAGPOCTA",
+          "evidenceLines": [
+            45
+          ]
+        },
+        {
+          "name": "ZCTLPROC",
+          "evidenceLines": [
+            39
+          ]
+        },
+        {
+          "name": "ZCUENTA",
+          "evidenceLines": [
+            51
+          ]
+        },
+        {
+          "name": "ZMDINBMV",
+          "evidenceLines": [
+            48
+          ]
+        },
+        {
+          "name": "ZPARAM",
+          "evidenceLines": [
+            42
+          ]
+        }
+      ],
+      "dclTables": [
+        {
+          "memberName": "ZMDINBMV",
+          "tableName": "MDINBMV",
+          "qualifiedName": "MDINBMV",
+          "schemaName": null,
+          "hostStructureName": "DCLMDINBMV",
+          "declaredColumnCount": 12,
+          "declaredColumns": [
+            "ITIPOREG",
+            "ITIPOMDO",
+            "FVALBMV",
+            "ITIPOBMV",
+            "IEMISORA",
+            "ISERBMV",
+            "MPREACT",
+            "ICODBMV",
+            "MPREMES",
+            "MPREANO",
+            "IPROGRAM",
+            "FSIST"
+          ],
+          "declaredColumnDefinitions": [
+            "ITIPOREG CHAR(2) NOT NULL",
+            "ITIPOMDO CHAR(2) NOT NULL",
+            "FVALBMV DATE NOT NULL",
+            "ITIPOBMV CHAR(6) NOT NULL",
+            "IEMISORA CHAR(7) NOT NULL",
+            "ISERBMV CHAR(8) NOT NULL",
+            "MPREACT DECIMAL(15, 8) NOT NULL",
+            "ICODBMV DECIMAL(2, 0) NOT NULL",
+            "MPREMES DECIMAL(15, 8) NOT NULL",
+            "MPREANO DECIMAL(15, 8) NOT NULL",
+            "IPROGRAM CHAR(8) NOT NULL",
+            "FSIST TIMESTAMP NOT NULL"
+          ],
+          "dclPath": "dcl/ZMDINBMV.dcl"
+        }
+      ],
+      "calls": [],
+      "readTables": [
+        {
+          "name": "AGPOCTA",
+          "evidenceLines": [
+            249,
+            250,
+            251,
+            252,
+            253,
+            254,
+            255
+          ]
+        },
+        {
+          "name": "CTLPROC",
+          "evidenceLines": [
+            146,
+            147,
+            148,
+            149,
+            150,
+            151
+          ]
+        },
+        {
+          "name": "MDINBMV",
+          "evidenceLines": [
+            185,
+            186,
+            187
+          ]
+        },
+        {
+          "name": "PARAM",
+          "evidenceLines": [
+            289,
+            290,
+            291,
+            292,
+            293,
+            294,
+            307,
+            308,
+            309,
+            310,
+            311,
+            312,
+            313,
+            314,
+            315,
+            316,
+            317,
+            318,
+            319,
+            320,
+            321,
+            322
+          ]
+        }
+      ],
+      "updateTables": [
+        {
+          "name": "AGPOCTA",
+          "evidenceLines": [
+            249,
+            250,
+            251,
+            252,
+            253,
+            254,
+            255,
+            272,
+            273,
+            274,
+            275,
+            276
+          ]
+        },
+        {
+          "name": "CTLPROC",
+          "evidenceLines": [
+            146,
+            147,
+            148,
+            149,
+            150,
+            151,
+            200,
+            201,
+            202,
+            203,
+            204,
+            205,
+            206,
+            207,
+            208,
+            209,
+            210,
+            211,
+            212,
+            225,
+            226,
+            227,
+            228,
+            229,
+            230,
+            231,
+            232,
+            233,
+            307,
+            308,
+            309,
+            310,
+            311,
+            312,
+            313,
+            314,
+            315,
+            316,
+            317,
+            318,
+            319,
+            320,
+            321,
+            322
+          ]
+        },
+        {
+          "name": "CUENTA",
+          "evidenceLines": [
+            336,
+            337,
+            338,
+            339,
+            340
+          ]
+        },
+        {
+          "name": "MDINBMV",
+          "evidenceLines": [
+            185,
+            186,
+            187
+          ]
+        },
+        {
+          "name": "PARAM",
+          "evidenceLines": [
+            167,
+            168,
+            169,
+            170,
+            171,
+            289,
+            290,
+            291,
+            292,
+            293,
+            294
+          ]
+        }
+      ],
+      "paragraphs": [
+        {
+          "name": "CONFIGURATION",
+          "evidenceLines": [
+            11
+          ],
+          "executionOrder": 100,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DG003, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "INPUT-OUTPUT",
+          "evidenceLines": [
+            14
+          ],
+          "executionOrder": 200,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DG003, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "FILE-CONTROL",
+          "evidenceLines": [
+            15
+          ],
+          "executionOrder": 300,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DG003, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "FILE",
+          "evidenceLines": [
+            19
+          ],
+          "executionOrder": 400,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DG003, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "WORKING-STORAGE",
+          "evidenceLines": [
+            21
+          ],
+          "executionOrder": 500,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DG003, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "LINKAGE",
+          "evidenceLines": [
+            58
+          ],
+          "executionOrder": 600,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DG003, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "0000-RUTINA-DE-CONTROL",
+          "evidenceLines": [
+            69
+          ],
+          "executionOrder": 700,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DG003, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "1010-BORRA-CTLPROC",
+          "evidenceLines": [
+            143
+          ],
+          "executionOrder": 800,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DG003, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "1021-ACTUALIZA-PARAM",
+          "evidenceLines": [
+            164
+          ],
+          "executionOrder": 900,
+          "executionPhase": "PROCESSING",
+          "summary": "Persiste actualizaciones de negocio en ZM4DG003, aplicando reglas de escritura y control de estado."
+        },
+        {
+          "name": "1022-BORRA-MDINBMV",
+          "evidenceLines": [
+            182
+          ],
+          "executionOrder": 1000,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DG003, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "1030-INSERTA-CTLPROC",
+          "evidenceLines": [
+            197
+          ],
+          "executionOrder": 1100,
+          "executionPhase": "PROCESSING",
+          "summary": "Persiste actualizaciones de negocio en ZM4DG003, aplicando reglas de escritura y control de estado."
+        },
+        {
+          "name": "1040-ACTUALIZA-CTLPROC",
+          "evidenceLines": [
+            222
+          ],
+          "executionOrder": 1200,
+          "executionPhase": "PROCESSING",
+          "summary": "Persiste actualizaciones de negocio en ZM4DG003, aplicando reglas de escritura y control de estado."
+        },
+        {
+          "name": "1050-BORRA-AGPOCTA",
+          "evidenceLines": [
+            246
+          ],
+          "executionOrder": 1300,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DG003, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "1061-INSERTA-AGPOCTA",
+          "evidenceLines": [
+            269
+          ],
+          "executionOrder": 1400,
+          "executionPhase": "PROCESSING",
+          "summary": "Persiste actualizaciones de negocio en ZM4DG003, aplicando reglas de escritura y control de estado."
+        },
+        {
+          "name": "1062-BORRA-PARAM",
+          "evidenceLines": [
+            286
+          ],
+          "executionOrder": 1500,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DG003, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "1070-INSERTA-CTLPROC-PARAM",
+          "evidenceLines": [
+            304
+          ],
+          "executionOrder": 1600,
+          "executionPhase": "PROCESSING",
+          "summary": "Persiste actualizaciones de negocio en ZM4DG003, aplicando reglas de escritura y control de estado."
+        },
+        {
+          "name": "1080-ACTUALIZA-CUENTA",
+          "evidenceLines": [
+            333
+          ],
+          "executionOrder": 1700,
+          "executionPhase": "PROCESSING",
+          "summary": "Persiste actualizaciones de negocio en ZM4DG003, aplicando reglas de escritura y control de estado."
+        },
+        {
+          "name": "2000-TERMINA",
+          "evidenceLines": [
+            350
+          ],
+          "executionOrder": 1800,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM4DG003, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "9800-ABORTA",
+          "evidenceLines": [
+            364
+          ],
+          "executionOrder": 1900,
+          "executionPhase": "PROCESSING",
+          "summary": "Gestiona contingencias en ZM4DG003, concentrando el manejo de error y salida controlada."
+        }
+      ],
+      "paragraphCalls": [],
+      "paragraphCopybooks": [
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "SQLCA",
+          "evidenceLines": [
+            36
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZAGPOCTA",
+          "evidenceLines": [
+            45
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZCTLPROC",
+          "evidenceLines": [
+            39
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZCUENTA",
+          "evidenceLines": [
+            51
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMDINBMV",
+          "evidenceLines": [
+            48
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZPARAM",
+          "evidenceLines": [
+            42
+          ]
+        }
+      ],
+      "coverage": {
+        "sequenceColumnsNormalized": true,
+        "procedureDivisionFound": true,
+        "parseStartLine": 11,
+        "parseStartReason": "PROCEDURE_DIVISION",
+        "performTargetCount": 12,
+        "paragraphCount": 19,
+        "missingPerformTargets": [],
+        "resolvedPerformTargetsViaCopybook": {},
+        "resolvedPerformTargetsViaPrefixAlias": {}
+      }
+    }
+  ]
+}

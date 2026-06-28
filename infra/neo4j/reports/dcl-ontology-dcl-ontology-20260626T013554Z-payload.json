@@ -1,0 +1,3785 @@
+{
+  "runId": "dcl-ontology-20260626T013554Z",
+  "generatedAt": "2026-06-26T01:35:54.999999+00:00",
+  "nodes": [
+    {
+      "label": "DB2System",
+      "name": "DB2",
+      "properties": {
+        "name": "DB2",
+        "layer": "data-access",
+        "nodeType": "db2-system",
+        "viewTag": "db2",
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/*"
+      }
+    },
+    {
+      "label": "DB2Schema",
+      "name": "DESARSV1",
+      "properties": {
+        "name": "DESARSV1",
+        "layer": "data-access",
+        "nodeType": "db2-schema",
+        "viewTag": "db2",
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMDDCST.dcl"
+      }
+    },
+    {
+      "label": "DBTable",
+      "name": "MDDCST",
+      "properties": {
+        "name": "MDDCST",
+        "qualifiedName": "DESARSV1.MDDCST",
+        "schemaName": "DESARSV1",
+        "dclMember": "ZMDDCST",
+        "dclPath": "dcl/ZMDDCST.dcl",
+        "dclHostStructure": "DCLMDDCST",
+        "declaredColumnCount": 18,
+        "declaredColumns": [
+          "ICUENTA",
+          "IEMISORA",
+          "ISERIE",
+          "ICUPON",
+          "ISUBFOL",
+          "IFOLADM",
+          "CTITULOS",
+          "FOPERA",
+          "MPRECIO",
+          "ITIPOVAL",
+          "FSIST",
+          "IUSUARIO",
+          "ITVBMV",
+          "FADQUISI",
+          "SVIGEN",
+          "FBAJA",
+          "IREF",
+          "IFOLIO"
+        ],
+        "declaredColumnDefinitions": [
+          "ICUENTA DECIMAL(7, 0) NOT NULL",
+          "IEMISORA CHAR(7) NOT NULL",
+          "ISERIE CHAR(8) NOT NULL",
+          "ICUPON DECIMAL(3, 0) NOT NULL",
+          "ISUBFOL DECIMAL(3, 0) NOT NULL",
+          "IFOLADM DECIMAL(9, 0) NOT NULL",
+          "CTITULOS DECIMAL(15, 0) NOT NULL",
+          "FOPERA DATE NOT NULL",
+          "MPRECIO DECIMAL(15, 8) NOT NULL",
+          "ITIPOVAL DECIMAL(6, 0) NOT NULL",
+          "FSIST TIMESTAMP NOT NULL",
+          "IUSUARIO CHAR(8) NOT NULL",
+          "ITVBMV CHAR(4) NOT NULL",
+          "FADQUISI DATE NOT NULL",
+          "SVIGEN CHAR(1) NOT NULL",
+          "FBAJA DATE NOT NULL",
+          "IREF DECIMAL(9, 0) NOT NULL",
+          "IFOLIO DECIMAL(9, 0) NOT NULL"
+        ],
+        "layer": "data-access",
+        "nodeType": "db-table",
+        "viewTag": "db2",
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMDDCST.dcl"
+      }
+    },
+    {
+      "label": "DclgenLibrary",
+      "name": "MB59217.PO.SPUFI.COBOL",
+      "properties": {
+        "name": "MB59217.PO.SPUFI.COBOL",
+        "librarySpec": "MB59217.PO.SPUFI.COBOL(ZMDDCST)",
+        "layer": "data-access",
+        "nodeType": "dclgen-library",
+        "viewTag": "db2",
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMDDCST.dcl"
+      }
+    },
+    {
+      "label": "DclgenArtifact",
+      "name": "ZMDDCST",
+      "properties": {
+        "name": "ZMDDCST",
+        "qualifiedName": "DESARSV1.MDDCST",
+        "schemaName": "DESARSV1",
+        "libraryDataset": "MB59217.PO.SPUFI.COBOL",
+        "libraryMember": "ZMDDCST",
+        "hostStructureName": "DCLMDDCST",
+        "declaredColumnCount": 18,
+        "layer": "data-access",
+        "nodeType": "dclgen-artifact",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMDDCST.dcl"
+      }
+    },
+    {
+      "label": "TableColumn",
+      "name": "MDDCST.ICUENTA",
+      "properties": {
+        "name": "MDDCST.ICUENTA",
+        "tableName": "MDDCST",
+        "columnName": "ICUENTA",
+        "sqlDefinition": "DECIMAL(7, 0) NOT NULL",
+        "nullable": false,
+        "position": 1,
+        "layer": "data-access",
+        "nodeType": "db2-column",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMDDCST.dcl"
+      }
+    },
+    {
+      "label": "CobolHostField",
+      "name": "ZMDDCST.ICUENTA",
+      "properties": {
+        "name": "ZMDDCST.ICUENTA",
+        "memberName": "ZMDDCST",
+        "fieldName": "ICUENTA",
+        "picClause": "S9(7)V USAGE COMP-3",
+        "hostStructureName": "DCLMDDCST",
+        "layer": "data-access",
+        "nodeType": "cobol-host-field",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMDDCST.dcl"
+      }
+    },
+    {
+      "label": "TableColumn",
+      "name": "MDDCST.IEMISORA",
+      "properties": {
+        "name": "MDDCST.IEMISORA",
+        "tableName": "MDDCST",
+        "columnName": "IEMISORA",
+        "sqlDefinition": "CHAR(7) NOT NULL",
+        "nullable": false,
+        "position": 2,
+        "layer": "data-access",
+        "nodeType": "db2-column",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMDDCST.dcl"
+      }
+    },
+    {
+      "label": "CobolHostField",
+      "name": "ZMDDCST.IEMISORA",
+      "properties": {
+        "name": "ZMDDCST.IEMISORA",
+        "memberName": "ZMDDCST",
+        "fieldName": "IEMISORA",
+        "picClause": "X(7)",
+        "hostStructureName": "DCLMDDCST",
+        "layer": "data-access",
+        "nodeType": "cobol-host-field",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMDDCST.dcl"
+      }
+    },
+    {
+      "label": "TableColumn",
+      "name": "MDDCST.ISERIE",
+      "properties": {
+        "name": "MDDCST.ISERIE",
+        "tableName": "MDDCST",
+        "columnName": "ISERIE",
+        "sqlDefinition": "CHAR(8) NOT NULL",
+        "nullable": false,
+        "position": 3,
+        "layer": "data-access",
+        "nodeType": "db2-column",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMDDCST.dcl"
+      }
+    },
+    {
+      "label": "CobolHostField",
+      "name": "ZMDDCST.ISERIE",
+      "properties": {
+        "name": "ZMDDCST.ISERIE",
+        "memberName": "ZMDDCST",
+        "fieldName": "ISERIE",
+        "picClause": "X(8)",
+        "hostStructureName": "DCLMDDCST",
+        "layer": "data-access",
+        "nodeType": "cobol-host-field",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMDDCST.dcl"
+      }
+    },
+    {
+      "label": "TableColumn",
+      "name": "MDDCST.ICUPON",
+      "properties": {
+        "name": "MDDCST.ICUPON",
+        "tableName": "MDDCST",
+        "columnName": "ICUPON",
+        "sqlDefinition": "DECIMAL(3, 0) NOT NULL",
+        "nullable": false,
+        "position": 4,
+        "layer": "data-access",
+        "nodeType": "db2-column",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMDDCST.dcl"
+      }
+    },
+    {
+      "label": "CobolHostField",
+      "name": "ZMDDCST.ICUPON",
+      "properties": {
+        "name": "ZMDDCST.ICUPON",
+        "memberName": "ZMDDCST",
+        "fieldName": "ICUPON",
+        "picClause": "S9(3)V USAGE COMP-3",
+        "hostStructureName": "DCLMDDCST",
+        "layer": "data-access",
+        "nodeType": "cobol-host-field",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMDDCST.dcl"
+      }
+    },
+    {
+      "label": "TableColumn",
+      "name": "MDDCST.ISUBFOL",
+      "properties": {
+        "name": "MDDCST.ISUBFOL",
+        "tableName": "MDDCST",
+        "columnName": "ISUBFOL",
+        "sqlDefinition": "DECIMAL(3, 0) NOT NULL",
+        "nullable": false,
+        "position": 5,
+        "layer": "data-access",
+        "nodeType": "db2-column",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMDDCST.dcl"
+      }
+    },
+    {
+      "label": "CobolHostField",
+      "name": "ZMDDCST.ISUBFOL",
+      "properties": {
+        "name": "ZMDDCST.ISUBFOL",
+        "memberName": "ZMDDCST",
+        "fieldName": "ISUBFOL",
+        "picClause": "S9(3)V USAGE COMP-3",
+        "hostStructureName": "DCLMDDCST",
+        "layer": "data-access",
+        "nodeType": "cobol-host-field",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMDDCST.dcl"
+      }
+    },
+    {
+      "label": "TableColumn",
+      "name": "MDDCST.IFOLADM",
+      "properties": {
+        "name": "MDDCST.IFOLADM",
+        "tableName": "MDDCST",
+        "columnName": "IFOLADM",
+        "sqlDefinition": "DECIMAL(9, 0) NOT NULL",
+        "nullable": false,
+        "position": 6,
+        "layer": "data-access",
+        "nodeType": "db2-column",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMDDCST.dcl"
+      }
+    },
+    {
+      "label": "CobolHostField",
+      "name": "ZMDDCST.IFOLADM",
+      "properties": {
+        "name": "ZMDDCST.IFOLADM",
+        "memberName": "ZMDDCST",
+        "fieldName": "IFOLADM",
+        "picClause": "S9(9)V USAGE COMP-3",
+        "hostStructureName": "DCLMDDCST",
+        "layer": "data-access",
+        "nodeType": "cobol-host-field",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMDDCST.dcl"
+      }
+    },
+    {
+      "label": "TableColumn",
+      "name": "MDDCST.CTITULOS",
+      "properties": {
+        "name": "MDDCST.CTITULOS",
+        "tableName": "MDDCST",
+        "columnName": "CTITULOS",
+        "sqlDefinition": "DECIMAL(15, 0) NOT NULL",
+        "nullable": false,
+        "position": 7,
+        "layer": "data-access",
+        "nodeType": "db2-column",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMDDCST.dcl"
+      }
+    },
+    {
+      "label": "CobolHostField",
+      "name": "ZMDDCST.CTITULOS",
+      "properties": {
+        "name": "ZMDDCST.CTITULOS",
+        "memberName": "ZMDDCST",
+        "fieldName": "CTITULOS",
+        "picClause": "S9(15)V USAGE COMP-3",
+        "hostStructureName": "DCLMDDCST",
+        "layer": "data-access",
+        "nodeType": "cobol-host-field",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMDDCST.dcl"
+      }
+    },
+    {
+      "label": "TableColumn",
+      "name": "MDDCST.FOPERA",
+      "properties": {
+        "name": "MDDCST.FOPERA",
+        "tableName": "MDDCST",
+        "columnName": "FOPERA",
+        "sqlDefinition": "DATE NOT NULL",
+        "nullable": false,
+        "position": 8,
+        "layer": "data-access",
+        "nodeType": "db2-column",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMDDCST.dcl"
+      }
+    },
+    {
+      "label": "CobolHostField",
+      "name": "ZMDDCST.FOPERA",
+      "properties": {
+        "name": "ZMDDCST.FOPERA",
+        "memberName": "ZMDDCST",
+        "fieldName": "FOPERA",
+        "picClause": "X(10)",
+        "hostStructureName": "DCLMDDCST",
+        "layer": "data-access",
+        "nodeType": "cobol-host-field",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMDDCST.dcl"
+      }
+    },
+    {
+      "label": "TableColumn",
+      "name": "MDDCST.MPRECIO",
+      "properties": {
+        "name": "MDDCST.MPRECIO",
+        "tableName": "MDDCST",
+        "columnName": "MPRECIO",
+        "sqlDefinition": "DECIMAL(15, 8) NOT NULL",
+        "nullable": false,
+        "position": 9,
+        "layer": "data-access",
+        "nodeType": "db2-column",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMDDCST.dcl"
+      }
+    },
+    {
+      "label": "CobolHostField",
+      "name": "ZMDDCST.MPRECIO",
+      "properties": {
+        "name": "ZMDDCST.MPRECIO",
+        "memberName": "ZMDDCST",
+        "fieldName": "MPRECIO",
+        "picClause": "S9(7)V9(8) USAGE COMP-3",
+        "hostStructureName": "DCLMDDCST",
+        "layer": "data-access",
+        "nodeType": "cobol-host-field",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMDDCST.dcl"
+      }
+    },
+    {
+      "label": "TableColumn",
+      "name": "MDDCST.ITIPOVAL",
+      "properties": {
+        "name": "MDDCST.ITIPOVAL",
+        "tableName": "MDDCST",
+        "columnName": "ITIPOVAL",
+        "sqlDefinition": "DECIMAL(6, 0) NOT NULL",
+        "nullable": false,
+        "position": 10,
+        "layer": "data-access",
+        "nodeType": "db2-column",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMDDCST.dcl"
+      }
+    },
+    {
+      "label": "CobolHostField",
+      "name": "ZMDDCST.ITIPOVAL",
+      "properties": {
+        "name": "ZMDDCST.ITIPOVAL",
+        "memberName": "ZMDDCST",
+        "fieldName": "ITIPOVAL",
+        "picClause": "S9(6)V USAGE COMP-3",
+        "hostStructureName": "DCLMDDCST",
+        "layer": "data-access",
+        "nodeType": "cobol-host-field",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMDDCST.dcl"
+      }
+    },
+    {
+      "label": "TableColumn",
+      "name": "MDDCST.FSIST",
+      "properties": {
+        "name": "MDDCST.FSIST",
+        "tableName": "MDDCST",
+        "columnName": "FSIST",
+        "sqlDefinition": "TIMESTAMP NOT NULL",
+        "nullable": false,
+        "position": 11,
+        "layer": "data-access",
+        "nodeType": "db2-column",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMDDCST.dcl"
+      }
+    },
+    {
+      "label": "CobolHostField",
+      "name": "ZMDDCST.FSIST",
+      "properties": {
+        "name": "ZMDDCST.FSIST",
+        "memberName": "ZMDDCST",
+        "fieldName": "FSIST",
+        "picClause": "X(26)",
+        "hostStructureName": "DCLMDDCST",
+        "layer": "data-access",
+        "nodeType": "cobol-host-field",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMDDCST.dcl"
+      }
+    },
+    {
+      "label": "TableColumn",
+      "name": "MDDCST.IUSUARIO",
+      "properties": {
+        "name": "MDDCST.IUSUARIO",
+        "tableName": "MDDCST",
+        "columnName": "IUSUARIO",
+        "sqlDefinition": "CHAR(8) NOT NULL",
+        "nullable": false,
+        "position": 12,
+        "layer": "data-access",
+        "nodeType": "db2-column",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMDDCST.dcl"
+      }
+    },
+    {
+      "label": "CobolHostField",
+      "name": "ZMDDCST.IUSUARIO",
+      "properties": {
+        "name": "ZMDDCST.IUSUARIO",
+        "memberName": "ZMDDCST",
+        "fieldName": "IUSUARIO",
+        "picClause": "X(8)",
+        "hostStructureName": "DCLMDDCST",
+        "layer": "data-access",
+        "nodeType": "cobol-host-field",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMDDCST.dcl"
+      }
+    },
+    {
+      "label": "TableColumn",
+      "name": "MDDCST.ITVBMV",
+      "properties": {
+        "name": "MDDCST.ITVBMV",
+        "tableName": "MDDCST",
+        "columnName": "ITVBMV",
+        "sqlDefinition": "CHAR(4) NOT NULL",
+        "nullable": false,
+        "position": 13,
+        "layer": "data-access",
+        "nodeType": "db2-column",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMDDCST.dcl"
+      }
+    },
+    {
+      "label": "CobolHostField",
+      "name": "ZMDDCST.ITVBMV",
+      "properties": {
+        "name": "ZMDDCST.ITVBMV",
+        "memberName": "ZMDDCST",
+        "fieldName": "ITVBMV",
+        "picClause": "X(4)",
+        "hostStructureName": "DCLMDDCST",
+        "layer": "data-access",
+        "nodeType": "cobol-host-field",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMDDCST.dcl"
+      }
+    },
+    {
+      "label": "TableColumn",
+      "name": "MDDCST.FADQUISI",
+      "properties": {
+        "name": "MDDCST.FADQUISI",
+        "tableName": "MDDCST",
+        "columnName": "FADQUISI",
+        "sqlDefinition": "DATE NOT NULL",
+        "nullable": false,
+        "position": 14,
+        "layer": "data-access",
+        "nodeType": "db2-column",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMDDCST.dcl"
+      }
+    },
+    {
+      "label": "CobolHostField",
+      "name": "ZMDDCST.FADQUISI",
+      "properties": {
+        "name": "ZMDDCST.FADQUISI",
+        "memberName": "ZMDDCST",
+        "fieldName": "FADQUISI",
+        "picClause": "X(10)",
+        "hostStructureName": "DCLMDDCST",
+        "layer": "data-access",
+        "nodeType": "cobol-host-field",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMDDCST.dcl"
+      }
+    },
+    {
+      "label": "TableColumn",
+      "name": "MDDCST.SVIGEN",
+      "properties": {
+        "name": "MDDCST.SVIGEN",
+        "tableName": "MDDCST",
+        "columnName": "SVIGEN",
+        "sqlDefinition": "CHAR(1) NOT NULL",
+        "nullable": false,
+        "position": 15,
+        "layer": "data-access",
+        "nodeType": "db2-column",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMDDCST.dcl"
+      }
+    },
+    {
+      "label": "CobolHostField",
+      "name": "ZMDDCST.SVIGEN",
+      "properties": {
+        "name": "ZMDDCST.SVIGEN",
+        "memberName": "ZMDDCST",
+        "fieldName": "SVIGEN",
+        "picClause": "X(1)",
+        "hostStructureName": "DCLMDDCST",
+        "layer": "data-access",
+        "nodeType": "cobol-host-field",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMDDCST.dcl"
+      }
+    },
+    {
+      "label": "TableColumn",
+      "name": "MDDCST.FBAJA",
+      "properties": {
+        "name": "MDDCST.FBAJA",
+        "tableName": "MDDCST",
+        "columnName": "FBAJA",
+        "sqlDefinition": "DATE NOT NULL",
+        "nullable": false,
+        "position": 16,
+        "layer": "data-access",
+        "nodeType": "db2-column",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMDDCST.dcl"
+      }
+    },
+    {
+      "label": "CobolHostField",
+      "name": "ZMDDCST.FBAJA",
+      "properties": {
+        "name": "ZMDDCST.FBAJA",
+        "memberName": "ZMDDCST",
+        "fieldName": "FBAJA",
+        "picClause": "X(10)",
+        "hostStructureName": "DCLMDDCST",
+        "layer": "data-access",
+        "nodeType": "cobol-host-field",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMDDCST.dcl"
+      }
+    },
+    {
+      "label": "TableColumn",
+      "name": "MDDCST.IREF",
+      "properties": {
+        "name": "MDDCST.IREF",
+        "tableName": "MDDCST",
+        "columnName": "IREF",
+        "sqlDefinition": "DECIMAL(9, 0) NOT NULL",
+        "nullable": false,
+        "position": 17,
+        "layer": "data-access",
+        "nodeType": "db2-column",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMDDCST.dcl"
+      }
+    },
+    {
+      "label": "CobolHostField",
+      "name": "ZMDDCST.IREF",
+      "properties": {
+        "name": "ZMDDCST.IREF",
+        "memberName": "ZMDDCST",
+        "fieldName": "IREF",
+        "picClause": "S9(9)V USAGE COMP-3",
+        "hostStructureName": "DCLMDDCST",
+        "layer": "data-access",
+        "nodeType": "cobol-host-field",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMDDCST.dcl"
+      }
+    },
+    {
+      "label": "TableColumn",
+      "name": "MDDCST.IFOLIO",
+      "properties": {
+        "name": "MDDCST.IFOLIO",
+        "tableName": "MDDCST",
+        "columnName": "IFOLIO",
+        "sqlDefinition": "DECIMAL(9, 0) NOT NULL",
+        "nullable": false,
+        "position": 18,
+        "layer": "data-access",
+        "nodeType": "db2-column",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMDDCST.dcl"
+      }
+    },
+    {
+      "label": "CobolHostField",
+      "name": "ZMDDCST.IFOLIO",
+      "properties": {
+        "name": "ZMDDCST.IFOLIO",
+        "memberName": "ZMDDCST",
+        "fieldName": "IFOLIO",
+        "picClause": "S9(9)V USAGE COMP-3",
+        "hostStructureName": "DCLMDDCST",
+        "layer": "data-access",
+        "nodeType": "cobol-host-field",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMDDCST.dcl"
+      }
+    },
+    {
+      "label": "DB2Schema",
+      "name": "UNSPECIFIED_SCHEMA",
+      "properties": {
+        "name": "UNSPECIFIED_SCHEMA",
+        "layer": "data-access",
+        "nodeType": "db2-schema",
+        "viewTag": "db2",
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMCAPISR.dcl"
+      }
+    },
+    {
+      "label": "DBTable",
+      "name": "MCAPISR",
+      "properties": {
+        "name": "MCAPISR",
+        "qualifiedName": "UNSPECIFIED_SCHEMA.MCAPISR",
+        "schemaName": "UNSPECIFIED_SCHEMA",
+        "dclMember": "ZMCAPISR",
+        "dclPath": "dcl/ZMCAPISR.dcl",
+        "dclHostStructure": "DCLMCAPISR",
+        "declaredColumnCount": 11,
+        "declaredColumns": [
+          "ICUENTA",
+          "IEMISORA",
+          "ISERIE",
+          "ICUPON",
+          "STIPOPER",
+          "CTITEFE",
+          "FOPERA",
+          "FLIQUIDA",
+          "FSIST",
+          "SESTATUS",
+          "IDATO1"
+        ],
+        "declaredColumnDefinitions": [
+          "ICUENTA DECIMAL(7, 0) NOT NULL",
+          "IEMISORA CHAR(7) NOT NULL",
+          "ISERIE CHAR(8) NOT NULL",
+          "ICUPON DECIMAL(3, 0)",
+          "STIPOPER CHAR(1) NOT NULL",
+          "CTITEFE DECIMAL(15, 2) NOT NULL",
+          "FOPERA DATE NOT NULL",
+          "FLIQUIDA DATE NOT NULL",
+          "FSIST TIMESTAMP NOT NULL",
+          "SESTATUS CHAR(3) NOT NULL",
+          "IDATO1 CHAR(15) NOT NULL"
+        ],
+        "layer": "data-access",
+        "nodeType": "db-table",
+        "viewTag": "db2",
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMCAPISR.dcl"
+      }
+    },
+    {
+      "label": "DclgenLibrary",
+      "name": "CBOD.ZMEA.DCLGEN",
+      "properties": {
+        "name": "CBOD.ZMEA.DCLGEN",
+        "librarySpec": "CBOD.ZMEA.DCLGEN(ZMCAPISR)",
+        "layer": "data-access",
+        "nodeType": "dclgen-library",
+        "viewTag": "db2",
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMCAPISR.dcl"
+      }
+    },
+    {
+      "label": "DclgenArtifact",
+      "name": "ZMCAPISR",
+      "properties": {
+        "name": "ZMCAPISR",
+        "qualifiedName": "UNSPECIFIED_SCHEMA.MCAPISR",
+        "schemaName": "UNSPECIFIED_SCHEMA",
+        "libraryDataset": "CBOD.ZMEA.DCLGEN",
+        "libraryMember": "ZMCAPISR",
+        "hostStructureName": "DCLMCAPISR",
+        "declaredColumnCount": 11,
+        "layer": "data-access",
+        "nodeType": "dclgen-artifact",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMCAPISR.dcl"
+      }
+    },
+    {
+      "label": "TableColumn",
+      "name": "MCAPISR.ICUENTA",
+      "properties": {
+        "name": "MCAPISR.ICUENTA",
+        "tableName": "MCAPISR",
+        "columnName": "ICUENTA",
+        "sqlDefinition": "DECIMAL(7, 0) NOT NULL",
+        "nullable": false,
+        "position": 1,
+        "layer": "data-access",
+        "nodeType": "db2-column",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMCAPISR.dcl"
+      }
+    },
+    {
+      "label": "CobolHostField",
+      "name": "ZMCAPISR.ICUENTA",
+      "properties": {
+        "name": "ZMCAPISR.ICUENTA",
+        "memberName": "ZMCAPISR",
+        "fieldName": "ICUENTA",
+        "picClause": "S9(7)V USAGE COMP-3",
+        "hostStructureName": "DCLMCAPISR",
+        "layer": "data-access",
+        "nodeType": "cobol-host-field",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMCAPISR.dcl"
+      }
+    },
+    {
+      "label": "TableColumn",
+      "name": "MCAPISR.IEMISORA",
+      "properties": {
+        "name": "MCAPISR.IEMISORA",
+        "tableName": "MCAPISR",
+        "columnName": "IEMISORA",
+        "sqlDefinition": "CHAR(7) NOT NULL",
+        "nullable": false,
+        "position": 2,
+        "layer": "data-access",
+        "nodeType": "db2-column",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMCAPISR.dcl"
+      }
+    },
+    {
+      "label": "CobolHostField",
+      "name": "ZMCAPISR.IEMISORA",
+      "properties": {
+        "name": "ZMCAPISR.IEMISORA",
+        "memberName": "ZMCAPISR",
+        "fieldName": "IEMISORA",
+        "picClause": "X(7)",
+        "hostStructureName": "DCLMCAPISR",
+        "layer": "data-access",
+        "nodeType": "cobol-host-field",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMCAPISR.dcl"
+      }
+    },
+    {
+      "label": "TableColumn",
+      "name": "MCAPISR.ISERIE",
+      "properties": {
+        "name": "MCAPISR.ISERIE",
+        "tableName": "MCAPISR",
+        "columnName": "ISERIE",
+        "sqlDefinition": "CHAR(8) NOT NULL",
+        "nullable": false,
+        "position": 3,
+        "layer": "data-access",
+        "nodeType": "db2-column",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMCAPISR.dcl"
+      }
+    },
+    {
+      "label": "CobolHostField",
+      "name": "ZMCAPISR.ISERIE",
+      "properties": {
+        "name": "ZMCAPISR.ISERIE",
+        "memberName": "ZMCAPISR",
+        "fieldName": "ISERIE",
+        "picClause": "X(8)",
+        "hostStructureName": "DCLMCAPISR",
+        "layer": "data-access",
+        "nodeType": "cobol-host-field",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMCAPISR.dcl"
+      }
+    },
+    {
+      "label": "TableColumn",
+      "name": "MCAPISR.ICUPON",
+      "properties": {
+        "name": "MCAPISR.ICUPON",
+        "tableName": "MCAPISR",
+        "columnName": "ICUPON",
+        "sqlDefinition": "DECIMAL(3, 0)",
+        "nullable": true,
+        "position": 4,
+        "layer": "data-access",
+        "nodeType": "db2-column",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMCAPISR.dcl"
+      }
+    },
+    {
+      "label": "CobolHostField",
+      "name": "ZMCAPISR.ICUPON",
+      "properties": {
+        "name": "ZMCAPISR.ICUPON",
+        "memberName": "ZMCAPISR",
+        "fieldName": "ICUPON",
+        "picClause": "S9(3)V USAGE COMP-3",
+        "hostStructureName": "DCLMCAPISR",
+        "layer": "data-access",
+        "nodeType": "cobol-host-field",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMCAPISR.dcl"
+      }
+    },
+    {
+      "label": "TableColumn",
+      "name": "MCAPISR.STIPOPER",
+      "properties": {
+        "name": "MCAPISR.STIPOPER",
+        "tableName": "MCAPISR",
+        "columnName": "STIPOPER",
+        "sqlDefinition": "CHAR(1) NOT NULL",
+        "nullable": false,
+        "position": 5,
+        "layer": "data-access",
+        "nodeType": "db2-column",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMCAPISR.dcl"
+      }
+    },
+    {
+      "label": "CobolHostField",
+      "name": "ZMCAPISR.STIPOPER",
+      "properties": {
+        "name": "ZMCAPISR.STIPOPER",
+        "memberName": "ZMCAPISR",
+        "fieldName": "STIPOPER",
+        "picClause": "X(1)",
+        "hostStructureName": "DCLMCAPISR",
+        "layer": "data-access",
+        "nodeType": "cobol-host-field",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMCAPISR.dcl"
+      }
+    },
+    {
+      "label": "TableColumn",
+      "name": "MCAPISR.CTITEFE",
+      "properties": {
+        "name": "MCAPISR.CTITEFE",
+        "tableName": "MCAPISR",
+        "columnName": "CTITEFE",
+        "sqlDefinition": "DECIMAL(15, 2) NOT NULL",
+        "nullable": false,
+        "position": 6,
+        "layer": "data-access",
+        "nodeType": "db2-column",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMCAPISR.dcl"
+      }
+    },
+    {
+      "label": "CobolHostField",
+      "name": "ZMCAPISR.CTITEFE",
+      "properties": {
+        "name": "ZMCAPISR.CTITEFE",
+        "memberName": "ZMCAPISR",
+        "fieldName": "CTITEFE",
+        "picClause": "S9(13)V9(2) USAGE COMP-3",
+        "hostStructureName": "DCLMCAPISR",
+        "layer": "data-access",
+        "nodeType": "cobol-host-field",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMCAPISR.dcl"
+      }
+    },
+    {
+      "label": "TableColumn",
+      "name": "MCAPISR.FOPERA",
+      "properties": {
+        "name": "MCAPISR.FOPERA",
+        "tableName": "MCAPISR",
+        "columnName": "FOPERA",
+        "sqlDefinition": "DATE NOT NULL",
+        "nullable": false,
+        "position": 7,
+        "layer": "data-access",
+        "nodeType": "db2-column",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMCAPISR.dcl"
+      }
+    },
+    {
+      "label": "CobolHostField",
+      "name": "ZMCAPISR.FOPERA",
+      "properties": {
+        "name": "ZMCAPISR.FOPERA",
+        "memberName": "ZMCAPISR",
+        "fieldName": "FOPERA",
+        "picClause": "X(10)",
+        "hostStructureName": "DCLMCAPISR",
+        "layer": "data-access",
+        "nodeType": "cobol-host-field",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMCAPISR.dcl"
+      }
+    },
+    {
+      "label": "TableColumn",
+      "name": "MCAPISR.FLIQUIDA",
+      "properties": {
+        "name": "MCAPISR.FLIQUIDA",
+        "tableName": "MCAPISR",
+        "columnName": "FLIQUIDA",
+        "sqlDefinition": "DATE NOT NULL",
+        "nullable": false,
+        "position": 8,
+        "layer": "data-access",
+        "nodeType": "db2-column",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMCAPISR.dcl"
+      }
+    },
+    {
+      "label": "CobolHostField",
+      "name": "ZMCAPISR.FLIQUIDA",
+      "properties": {
+        "name": "ZMCAPISR.FLIQUIDA",
+        "memberName": "ZMCAPISR",
+        "fieldName": "FLIQUIDA",
+        "picClause": "X(10)",
+        "hostStructureName": "DCLMCAPISR",
+        "layer": "data-access",
+        "nodeType": "cobol-host-field",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMCAPISR.dcl"
+      }
+    },
+    {
+      "label": "TableColumn",
+      "name": "MCAPISR.FSIST",
+      "properties": {
+        "name": "MCAPISR.FSIST",
+        "tableName": "MCAPISR",
+        "columnName": "FSIST",
+        "sqlDefinition": "TIMESTAMP NOT NULL",
+        "nullable": false,
+        "position": 9,
+        "layer": "data-access",
+        "nodeType": "db2-column",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMCAPISR.dcl"
+      }
+    },
+    {
+      "label": "CobolHostField",
+      "name": "ZMCAPISR.FSIST",
+      "properties": {
+        "name": "ZMCAPISR.FSIST",
+        "memberName": "ZMCAPISR",
+        "fieldName": "FSIST",
+        "picClause": "X(26)",
+        "hostStructureName": "DCLMCAPISR",
+        "layer": "data-access",
+        "nodeType": "cobol-host-field",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMCAPISR.dcl"
+      }
+    },
+    {
+      "label": "TableColumn",
+      "name": "MCAPISR.SESTATUS",
+      "properties": {
+        "name": "MCAPISR.SESTATUS",
+        "tableName": "MCAPISR",
+        "columnName": "SESTATUS",
+        "sqlDefinition": "CHAR(3) NOT NULL",
+        "nullable": false,
+        "position": 10,
+        "layer": "data-access",
+        "nodeType": "db2-column",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMCAPISR.dcl"
+      }
+    },
+    {
+      "label": "CobolHostField",
+      "name": "ZMCAPISR.SESTATUS",
+      "properties": {
+        "name": "ZMCAPISR.SESTATUS",
+        "memberName": "ZMCAPISR",
+        "fieldName": "SESTATUS",
+        "picClause": "X(3)",
+        "hostStructureName": "DCLMCAPISR",
+        "layer": "data-access",
+        "nodeType": "cobol-host-field",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMCAPISR.dcl"
+      }
+    },
+    {
+      "label": "TableColumn",
+      "name": "MCAPISR.IDATO1",
+      "properties": {
+        "name": "MCAPISR.IDATO1",
+        "tableName": "MCAPISR",
+        "columnName": "IDATO1",
+        "sqlDefinition": "CHAR(15) NOT NULL",
+        "nullable": false,
+        "position": 11,
+        "layer": "data-access",
+        "nodeType": "db2-column",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMCAPISR.dcl"
+      }
+    },
+    {
+      "label": "CobolHostField",
+      "name": "ZMCAPISR.IDATO1",
+      "properties": {
+        "name": "ZMCAPISR.IDATO1",
+        "memberName": "ZMCAPISR",
+        "fieldName": "IDATO1",
+        "picClause": "X(15)",
+        "hostStructureName": "DCLMCAPISR",
+        "layer": "data-access",
+        "nodeType": "cobol-host-field",
+        "viewTag": "db2",
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ],
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "dcl-ontology-20260626T013554Z",
+        "sourceFile": "dcl/ZMCAPISR.dcl"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "type": "HAS_SCHEMA",
+      "fromLabel": "DB2System",
+      "fromName": "DB2",
+      "toLabel": "DB2Schema",
+      "toName": "DESARSV1",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "HAS_TABLE",
+      "fromLabel": "DB2Schema",
+      "fromName": "DESARSV1",
+      "toLabel": "DBTable",
+      "toName": "MDDCST",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "CONTAINS_DCLGEN",
+      "fromLabel": "DclgenLibrary",
+      "fromName": "MB59217.PO.SPUFI.COBOL",
+      "toLabel": "DclgenArtifact",
+      "toName": "ZMDDCST",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DESCRIBES_TABLE",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMDDCST",
+      "toLabel": "DBTable",
+      "toName": "MDDCST",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_COLUMN",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMDDCST",
+      "toLabel": "TableColumn",
+      "toName": "MDDCST.ICUENTA",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "HAS_COLUMN",
+      "fromLabel": "DBTable",
+      "fromName": "MDDCST",
+      "toLabel": "TableColumn",
+      "toName": "MDDCST.ICUENTA",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_HOST_FIELD",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMDDCST",
+      "toLabel": "CobolHostField",
+      "toName": "ZMDDCST.ICUENTA",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "TRANSLATED_TO",
+      "fromLabel": "TableColumn",
+      "fromName": "MDDCST.ICUENTA",
+      "toLabel": "CobolHostField",
+      "toName": "ZMDDCST.ICUENTA",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_COLUMN",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMDDCST",
+      "toLabel": "TableColumn",
+      "toName": "MDDCST.IEMISORA",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "HAS_COLUMN",
+      "fromLabel": "DBTable",
+      "fromName": "MDDCST",
+      "toLabel": "TableColumn",
+      "toName": "MDDCST.IEMISORA",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_HOST_FIELD",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMDDCST",
+      "toLabel": "CobolHostField",
+      "toName": "ZMDDCST.IEMISORA",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "TRANSLATED_TO",
+      "fromLabel": "TableColumn",
+      "fromName": "MDDCST.IEMISORA",
+      "toLabel": "CobolHostField",
+      "toName": "ZMDDCST.IEMISORA",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_COLUMN",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMDDCST",
+      "toLabel": "TableColumn",
+      "toName": "MDDCST.ISERIE",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "HAS_COLUMN",
+      "fromLabel": "DBTable",
+      "fromName": "MDDCST",
+      "toLabel": "TableColumn",
+      "toName": "MDDCST.ISERIE",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_HOST_FIELD",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMDDCST",
+      "toLabel": "CobolHostField",
+      "toName": "ZMDDCST.ISERIE",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "TRANSLATED_TO",
+      "fromLabel": "TableColumn",
+      "fromName": "MDDCST.ISERIE",
+      "toLabel": "CobolHostField",
+      "toName": "ZMDDCST.ISERIE",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_COLUMN",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMDDCST",
+      "toLabel": "TableColumn",
+      "toName": "MDDCST.ICUPON",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "HAS_COLUMN",
+      "fromLabel": "DBTable",
+      "fromName": "MDDCST",
+      "toLabel": "TableColumn",
+      "toName": "MDDCST.ICUPON",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_HOST_FIELD",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMDDCST",
+      "toLabel": "CobolHostField",
+      "toName": "ZMDDCST.ICUPON",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "TRANSLATED_TO",
+      "fromLabel": "TableColumn",
+      "fromName": "MDDCST.ICUPON",
+      "toLabel": "CobolHostField",
+      "toName": "ZMDDCST.ICUPON",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_COLUMN",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMDDCST",
+      "toLabel": "TableColumn",
+      "toName": "MDDCST.ISUBFOL",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "HAS_COLUMN",
+      "fromLabel": "DBTable",
+      "fromName": "MDDCST",
+      "toLabel": "TableColumn",
+      "toName": "MDDCST.ISUBFOL",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_HOST_FIELD",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMDDCST",
+      "toLabel": "CobolHostField",
+      "toName": "ZMDDCST.ISUBFOL",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "TRANSLATED_TO",
+      "fromLabel": "TableColumn",
+      "fromName": "MDDCST.ISUBFOL",
+      "toLabel": "CobolHostField",
+      "toName": "ZMDDCST.ISUBFOL",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_COLUMN",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMDDCST",
+      "toLabel": "TableColumn",
+      "toName": "MDDCST.IFOLADM",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "HAS_COLUMN",
+      "fromLabel": "DBTable",
+      "fromName": "MDDCST",
+      "toLabel": "TableColumn",
+      "toName": "MDDCST.IFOLADM",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_HOST_FIELD",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMDDCST",
+      "toLabel": "CobolHostField",
+      "toName": "ZMDDCST.IFOLADM",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "TRANSLATED_TO",
+      "fromLabel": "TableColumn",
+      "fromName": "MDDCST.IFOLADM",
+      "toLabel": "CobolHostField",
+      "toName": "ZMDDCST.IFOLADM",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_COLUMN",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMDDCST",
+      "toLabel": "TableColumn",
+      "toName": "MDDCST.CTITULOS",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "HAS_COLUMN",
+      "fromLabel": "DBTable",
+      "fromName": "MDDCST",
+      "toLabel": "TableColumn",
+      "toName": "MDDCST.CTITULOS",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_HOST_FIELD",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMDDCST",
+      "toLabel": "CobolHostField",
+      "toName": "ZMDDCST.CTITULOS",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "TRANSLATED_TO",
+      "fromLabel": "TableColumn",
+      "fromName": "MDDCST.CTITULOS",
+      "toLabel": "CobolHostField",
+      "toName": "ZMDDCST.CTITULOS",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_COLUMN",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMDDCST",
+      "toLabel": "TableColumn",
+      "toName": "MDDCST.FOPERA",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "HAS_COLUMN",
+      "fromLabel": "DBTable",
+      "fromName": "MDDCST",
+      "toLabel": "TableColumn",
+      "toName": "MDDCST.FOPERA",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_HOST_FIELD",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMDDCST",
+      "toLabel": "CobolHostField",
+      "toName": "ZMDDCST.FOPERA",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "TRANSLATED_TO",
+      "fromLabel": "TableColumn",
+      "fromName": "MDDCST.FOPERA",
+      "toLabel": "CobolHostField",
+      "toName": "ZMDDCST.FOPERA",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_COLUMN",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMDDCST",
+      "toLabel": "TableColumn",
+      "toName": "MDDCST.MPRECIO",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "HAS_COLUMN",
+      "fromLabel": "DBTable",
+      "fromName": "MDDCST",
+      "toLabel": "TableColumn",
+      "toName": "MDDCST.MPRECIO",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_HOST_FIELD",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMDDCST",
+      "toLabel": "CobolHostField",
+      "toName": "ZMDDCST.MPRECIO",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "TRANSLATED_TO",
+      "fromLabel": "TableColumn",
+      "fromName": "MDDCST.MPRECIO",
+      "toLabel": "CobolHostField",
+      "toName": "ZMDDCST.MPRECIO",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_COLUMN",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMDDCST",
+      "toLabel": "TableColumn",
+      "toName": "MDDCST.ITIPOVAL",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "HAS_COLUMN",
+      "fromLabel": "DBTable",
+      "fromName": "MDDCST",
+      "toLabel": "TableColumn",
+      "toName": "MDDCST.ITIPOVAL",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_HOST_FIELD",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMDDCST",
+      "toLabel": "CobolHostField",
+      "toName": "ZMDDCST.ITIPOVAL",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "TRANSLATED_TO",
+      "fromLabel": "TableColumn",
+      "fromName": "MDDCST.ITIPOVAL",
+      "toLabel": "CobolHostField",
+      "toName": "ZMDDCST.ITIPOVAL",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_COLUMN",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMDDCST",
+      "toLabel": "TableColumn",
+      "toName": "MDDCST.FSIST",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "HAS_COLUMN",
+      "fromLabel": "DBTable",
+      "fromName": "MDDCST",
+      "toLabel": "TableColumn",
+      "toName": "MDDCST.FSIST",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_HOST_FIELD",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMDDCST",
+      "toLabel": "CobolHostField",
+      "toName": "ZMDDCST.FSIST",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "TRANSLATED_TO",
+      "fromLabel": "TableColumn",
+      "fromName": "MDDCST.FSIST",
+      "toLabel": "CobolHostField",
+      "toName": "ZMDDCST.FSIST",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_COLUMN",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMDDCST",
+      "toLabel": "TableColumn",
+      "toName": "MDDCST.IUSUARIO",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "HAS_COLUMN",
+      "fromLabel": "DBTable",
+      "fromName": "MDDCST",
+      "toLabel": "TableColumn",
+      "toName": "MDDCST.IUSUARIO",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_HOST_FIELD",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMDDCST",
+      "toLabel": "CobolHostField",
+      "toName": "ZMDDCST.IUSUARIO",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "TRANSLATED_TO",
+      "fromLabel": "TableColumn",
+      "fromName": "MDDCST.IUSUARIO",
+      "toLabel": "CobolHostField",
+      "toName": "ZMDDCST.IUSUARIO",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_COLUMN",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMDDCST",
+      "toLabel": "TableColumn",
+      "toName": "MDDCST.ITVBMV",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "HAS_COLUMN",
+      "fromLabel": "DBTable",
+      "fromName": "MDDCST",
+      "toLabel": "TableColumn",
+      "toName": "MDDCST.ITVBMV",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_HOST_FIELD",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMDDCST",
+      "toLabel": "CobolHostField",
+      "toName": "ZMDDCST.ITVBMV",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "TRANSLATED_TO",
+      "fromLabel": "TableColumn",
+      "fromName": "MDDCST.ITVBMV",
+      "toLabel": "CobolHostField",
+      "toName": "ZMDDCST.ITVBMV",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_COLUMN",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMDDCST",
+      "toLabel": "TableColumn",
+      "toName": "MDDCST.FADQUISI",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "HAS_COLUMN",
+      "fromLabel": "DBTable",
+      "fromName": "MDDCST",
+      "toLabel": "TableColumn",
+      "toName": "MDDCST.FADQUISI",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_HOST_FIELD",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMDDCST",
+      "toLabel": "CobolHostField",
+      "toName": "ZMDDCST.FADQUISI",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "TRANSLATED_TO",
+      "fromLabel": "TableColumn",
+      "fromName": "MDDCST.FADQUISI",
+      "toLabel": "CobolHostField",
+      "toName": "ZMDDCST.FADQUISI",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_COLUMN",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMDDCST",
+      "toLabel": "TableColumn",
+      "toName": "MDDCST.SVIGEN",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "HAS_COLUMN",
+      "fromLabel": "DBTable",
+      "fromName": "MDDCST",
+      "toLabel": "TableColumn",
+      "toName": "MDDCST.SVIGEN",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_HOST_FIELD",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMDDCST",
+      "toLabel": "CobolHostField",
+      "toName": "ZMDDCST.SVIGEN",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "TRANSLATED_TO",
+      "fromLabel": "TableColumn",
+      "fromName": "MDDCST.SVIGEN",
+      "toLabel": "CobolHostField",
+      "toName": "ZMDDCST.SVIGEN",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_COLUMN",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMDDCST",
+      "toLabel": "TableColumn",
+      "toName": "MDDCST.FBAJA",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "HAS_COLUMN",
+      "fromLabel": "DBTable",
+      "fromName": "MDDCST",
+      "toLabel": "TableColumn",
+      "toName": "MDDCST.FBAJA",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_HOST_FIELD",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMDDCST",
+      "toLabel": "CobolHostField",
+      "toName": "ZMDDCST.FBAJA",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "TRANSLATED_TO",
+      "fromLabel": "TableColumn",
+      "fromName": "MDDCST.FBAJA",
+      "toLabel": "CobolHostField",
+      "toName": "ZMDDCST.FBAJA",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_COLUMN",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMDDCST",
+      "toLabel": "TableColumn",
+      "toName": "MDDCST.IREF",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "HAS_COLUMN",
+      "fromLabel": "DBTable",
+      "fromName": "MDDCST",
+      "toLabel": "TableColumn",
+      "toName": "MDDCST.IREF",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_HOST_FIELD",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMDDCST",
+      "toLabel": "CobolHostField",
+      "toName": "ZMDDCST.IREF",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "TRANSLATED_TO",
+      "fromLabel": "TableColumn",
+      "fromName": "MDDCST.IREF",
+      "toLabel": "CobolHostField",
+      "toName": "ZMDDCST.IREF",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_COLUMN",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMDDCST",
+      "toLabel": "TableColumn",
+      "toName": "MDDCST.IFOLIO",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "HAS_COLUMN",
+      "fromLabel": "DBTable",
+      "fromName": "MDDCST",
+      "toLabel": "TableColumn",
+      "toName": "MDDCST.IFOLIO",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_HOST_FIELD",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMDDCST",
+      "toLabel": "CobolHostField",
+      "toName": "ZMDDCST.IFOLIO",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "TRANSLATED_TO",
+      "fromLabel": "TableColumn",
+      "fromName": "MDDCST.IFOLIO",
+      "toLabel": "CobolHostField",
+      "toName": "ZMDDCST.IFOLIO",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMDDCST.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "HAS_SCHEMA",
+      "fromLabel": "DB2System",
+      "fromName": "DB2",
+      "toLabel": "DB2Schema",
+      "toName": "UNSPECIFIED_SCHEMA",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "HAS_TABLE",
+      "fromLabel": "DB2Schema",
+      "fromName": "UNSPECIFIED_SCHEMA",
+      "toLabel": "DBTable",
+      "toName": "MCAPISR",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "CONTAINS_DCLGEN",
+      "fromLabel": "DclgenLibrary",
+      "fromName": "CBOD.ZMEA.DCLGEN",
+      "toLabel": "DclgenArtifact",
+      "toName": "ZMCAPISR",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DESCRIBES_TABLE",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMCAPISR",
+      "toLabel": "DBTable",
+      "toName": "MCAPISR",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_COLUMN",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMCAPISR",
+      "toLabel": "TableColumn",
+      "toName": "MCAPISR.ICUENTA",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "HAS_COLUMN",
+      "fromLabel": "DBTable",
+      "fromName": "MCAPISR",
+      "toLabel": "TableColumn",
+      "toName": "MCAPISR.ICUENTA",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_HOST_FIELD",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMCAPISR",
+      "toLabel": "CobolHostField",
+      "toName": "ZMCAPISR.ICUENTA",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "TRANSLATED_TO",
+      "fromLabel": "TableColumn",
+      "fromName": "MCAPISR.ICUENTA",
+      "toLabel": "CobolHostField",
+      "toName": "ZMCAPISR.ICUENTA",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_COLUMN",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMCAPISR",
+      "toLabel": "TableColumn",
+      "toName": "MCAPISR.IEMISORA",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "HAS_COLUMN",
+      "fromLabel": "DBTable",
+      "fromName": "MCAPISR",
+      "toLabel": "TableColumn",
+      "toName": "MCAPISR.IEMISORA",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_HOST_FIELD",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMCAPISR",
+      "toLabel": "CobolHostField",
+      "toName": "ZMCAPISR.IEMISORA",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "TRANSLATED_TO",
+      "fromLabel": "TableColumn",
+      "fromName": "MCAPISR.IEMISORA",
+      "toLabel": "CobolHostField",
+      "toName": "ZMCAPISR.IEMISORA",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_COLUMN",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMCAPISR",
+      "toLabel": "TableColumn",
+      "toName": "MCAPISR.ISERIE",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "HAS_COLUMN",
+      "fromLabel": "DBTable",
+      "fromName": "MCAPISR",
+      "toLabel": "TableColumn",
+      "toName": "MCAPISR.ISERIE",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_HOST_FIELD",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMCAPISR",
+      "toLabel": "CobolHostField",
+      "toName": "ZMCAPISR.ISERIE",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "TRANSLATED_TO",
+      "fromLabel": "TableColumn",
+      "fromName": "MCAPISR.ISERIE",
+      "toLabel": "CobolHostField",
+      "toName": "ZMCAPISR.ISERIE",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_COLUMN",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMCAPISR",
+      "toLabel": "TableColumn",
+      "toName": "MCAPISR.ICUPON",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "HAS_COLUMN",
+      "fromLabel": "DBTable",
+      "fromName": "MCAPISR",
+      "toLabel": "TableColumn",
+      "toName": "MCAPISR.ICUPON",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_HOST_FIELD",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMCAPISR",
+      "toLabel": "CobolHostField",
+      "toName": "ZMCAPISR.ICUPON",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "TRANSLATED_TO",
+      "fromLabel": "TableColumn",
+      "fromName": "MCAPISR.ICUPON",
+      "toLabel": "CobolHostField",
+      "toName": "ZMCAPISR.ICUPON",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_COLUMN",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMCAPISR",
+      "toLabel": "TableColumn",
+      "toName": "MCAPISR.STIPOPER",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "HAS_COLUMN",
+      "fromLabel": "DBTable",
+      "fromName": "MCAPISR",
+      "toLabel": "TableColumn",
+      "toName": "MCAPISR.STIPOPER",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_HOST_FIELD",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMCAPISR",
+      "toLabel": "CobolHostField",
+      "toName": "ZMCAPISR.STIPOPER",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "TRANSLATED_TO",
+      "fromLabel": "TableColumn",
+      "fromName": "MCAPISR.STIPOPER",
+      "toLabel": "CobolHostField",
+      "toName": "ZMCAPISR.STIPOPER",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_COLUMN",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMCAPISR",
+      "toLabel": "TableColumn",
+      "toName": "MCAPISR.CTITEFE",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "HAS_COLUMN",
+      "fromLabel": "DBTable",
+      "fromName": "MCAPISR",
+      "toLabel": "TableColumn",
+      "toName": "MCAPISR.CTITEFE",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_HOST_FIELD",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMCAPISR",
+      "toLabel": "CobolHostField",
+      "toName": "ZMCAPISR.CTITEFE",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "TRANSLATED_TO",
+      "fromLabel": "TableColumn",
+      "fromName": "MCAPISR.CTITEFE",
+      "toLabel": "CobolHostField",
+      "toName": "ZMCAPISR.CTITEFE",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_COLUMN",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMCAPISR",
+      "toLabel": "TableColumn",
+      "toName": "MCAPISR.FOPERA",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "HAS_COLUMN",
+      "fromLabel": "DBTable",
+      "fromName": "MCAPISR",
+      "toLabel": "TableColumn",
+      "toName": "MCAPISR.FOPERA",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_HOST_FIELD",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMCAPISR",
+      "toLabel": "CobolHostField",
+      "toName": "ZMCAPISR.FOPERA",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "TRANSLATED_TO",
+      "fromLabel": "TableColumn",
+      "fromName": "MCAPISR.FOPERA",
+      "toLabel": "CobolHostField",
+      "toName": "ZMCAPISR.FOPERA",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_COLUMN",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMCAPISR",
+      "toLabel": "TableColumn",
+      "toName": "MCAPISR.FLIQUIDA",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "HAS_COLUMN",
+      "fromLabel": "DBTable",
+      "fromName": "MCAPISR",
+      "toLabel": "TableColumn",
+      "toName": "MCAPISR.FLIQUIDA",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_HOST_FIELD",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMCAPISR",
+      "toLabel": "CobolHostField",
+      "toName": "ZMCAPISR.FLIQUIDA",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "TRANSLATED_TO",
+      "fromLabel": "TableColumn",
+      "fromName": "MCAPISR.FLIQUIDA",
+      "toLabel": "CobolHostField",
+      "toName": "ZMCAPISR.FLIQUIDA",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_COLUMN",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMCAPISR",
+      "toLabel": "TableColumn",
+      "toName": "MCAPISR.FSIST",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "HAS_COLUMN",
+      "fromLabel": "DBTable",
+      "fromName": "MCAPISR",
+      "toLabel": "TableColumn",
+      "toName": "MCAPISR.FSIST",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_HOST_FIELD",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMCAPISR",
+      "toLabel": "CobolHostField",
+      "toName": "ZMCAPISR.FSIST",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "TRANSLATED_TO",
+      "fromLabel": "TableColumn",
+      "fromName": "MCAPISR.FSIST",
+      "toLabel": "CobolHostField",
+      "toName": "ZMCAPISR.FSIST",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_COLUMN",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMCAPISR",
+      "toLabel": "TableColumn",
+      "toName": "MCAPISR.SESTATUS",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "HAS_COLUMN",
+      "fromLabel": "DBTable",
+      "fromName": "MCAPISR",
+      "toLabel": "TableColumn",
+      "toName": "MCAPISR.SESTATUS",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_HOST_FIELD",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMCAPISR",
+      "toLabel": "CobolHostField",
+      "toName": "ZMCAPISR.SESTATUS",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "TRANSLATED_TO",
+      "fromLabel": "TableColumn",
+      "fromName": "MCAPISR.SESTATUS",
+      "toLabel": "CobolHostField",
+      "toName": "ZMCAPISR.SESTATUS",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_COLUMN",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMCAPISR",
+      "toLabel": "TableColumn",
+      "toName": "MCAPISR.IDATO1",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "HAS_COLUMN",
+      "fromLabel": "DBTable",
+      "fromName": "MCAPISR",
+      "toLabel": "TableColumn",
+      "toName": "MCAPISR.IDATO1",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_HOST_FIELD",
+      "fromLabel": "DclgenArtifact",
+      "fromName": "ZMCAPISR",
+      "toLabel": "CobolHostField",
+      "toName": "ZMCAPISR.IDATO1",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "TRANSLATED_TO",
+      "fromLabel": "TableColumn",
+      "fromName": "MCAPISR.IDATO1",
+      "toLabel": "CobolHostField",
+      "toName": "ZMCAPISR.IDATO1",
+      "properties": {
+        "runId": "dcl-ontology-20260626T013554Z",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    }
+  ],
+  "dclFiles": [
+    "dcl/ZMDDCST.dcl",
+    "dcl/ZMCAPISR.dcl"
+  ]
+}

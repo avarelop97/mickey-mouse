@@ -1,0 +1,1513 @@
+{
+  "stage": "discovery-extraction",
+  "runId": "e2e-20260625T223541Z-zm2og609",
+  "programs": [
+    "ZM2OG609"
+  ],
+  "extractions": [
+    {
+      "program": "ZM2OG609",
+      "sourceFile": "src/ZM2OG609.cbl",
+      "procedureLine": 606,
+      "parseStartLine": 78,
+      "parseStartReason": "PROCEDURE_DIVISION",
+      "metadata": {
+        "objective": "BAJA (LOGICA) DE CONTRATOS. : TRANSACCION : Z609 OPCION : 465 RUTINAS UTILIZADAS: COBOL-CICS CSP PROGRAM ( AREA ) LINK ZM8CR009 (ZMWSR009) CENTRA TEXTO AHR009 (VXW108) ZM9CZ403 (ZMWSZ403) OBTIENE NOMBRE COMPANIA VRB403O (VRW403) ZMWSC009 (ZMWSR432) RUTINA TRANSFERENCIA VRB432O (VXW008) ZM2OG532 (ZMWSG532) ABORTA VRC980 (VRW980) PERFORM (ZMWSC003) OBTIENE USUARIO FIRMADO VXB045O (VXW004) ZM8CR653 (ZM8CR653) OBTIENE USUARIO TABLAS VRB653O (VRW653) /ASIGNA NOMBRE COMPA\u00d1IA CALL VRB403O VRW403 /CENTRA NOMBRE COMPA\u00d1IA CALL AHR009 VXW108 /ASIGNA USUARIO FIRMADO CALL VXB045O VXW004 /OBTEN REGISTRO USUARIO CALL VRB653O VRW653 /ERRORES DE SQL CALL VRC980O VRW980 /VALIDA AUT USUARIO A OPERAR C/CONTR CALL VRB469D VRW469 ZMWSCOM1 (ZMWSC011) VERIFICA FECHA VALIDA VRC090O (VXT001) ZM9CR469 (ZMWSR469) AUT/OPERAR S/CONTRATO VRB469D (VRW469) ZM9CRE85 (ZMWSRE85) OBTENER EFEC DISPONIBLE VRBE85O (VRWE85) ZMWSCOM0 (ZMWCOM11) 9000-INICIO ZMWSCOM0 (ZMWSR009) 9000-INICIO ZMWSCOM0 (ZMWSZ403) 9000-INICIO ZMWSCOM0 (ZMWSG532) 9000-INICIO ZMWSCOM0 (........) 9000-INICIO ZMWSCOM1 (ZMWSC011) 9100-OBTENER-FECHAS-VXT YA NO UTLIZAR ZMWSC003 (ZMWSC013) 9300-USER-FECHA-HORA ZMWSC006 (ZMWSG532) 9600-VALIDA-SQL VRC451O ZMWSC006 (SQLCA ) 9600-VALIDA-SQL VRC451O ZMWSC005 (ZMWSG532) 9500-VALIDA-CICS ZMWSC008 (ZMWSC010) 9800-ABORTA ZMWSC008 (ZMWSG532) 9800-ABORTA ZMWSC004 (........) 9400-RETURN REGRESA CONTROL AL CICS TABLAS DB2: INCLUDE (ZUSUARIO) SELECT USUARIO INCLUDE (ZCUENTA) SELECT CUENTA INCLUDE (ZCARTERA) SELECT CARTERA INCLUDE (ZBCOPAR) SELECT BCOPAR INCLUDE (ZPARAM) SELECT PARAM INCLUDE (ZCLTEFAX) SELECT CLTEFAX INCLUDE (ZMOVFAX) SELECT MOVFAX BITACORA DE MODIFICACIONES FECHA MODIFICACION AUTOR 10-03-2003 SE CORRIGIO LA VALIDACION DE LIC.OMAR MARTINEZ LA RUTINA ZM9CR469 PUES SE ENVIABA LA EMPRESA INCORRECTA. FS-1.0.0-01 TECNOCOM 08MAY13 - ADECUACION SOLICITADA POR DYD 2014-01-02 ANS01 ANGELICA GARCIA RODRIGUEZ. SE CONTROLA ACCESO A LA TABLA ZMDT690, CUANDO NO EXISTAN CONTRATOS CON ELEGIBILIDAD SIGA EL FLUJO SIN ABORTAR EL PROGRAMA. FS-1.0.0-02 XM26281 21ABR16 SE REALIZA LLAMADO A RUTINA PARA GRABAR EN TABLA HISTORICO ZMDTCTH.",
+        "description": "Programa COBOL que baja (logica) de contratos. : transaccion : z609 opcion : 465 rutinas utilizadas: cobol-cics csp program ( area ) link zm8cr009 (zmwsr009) centra texto ahr009 (vxw108) zm9cz403 (zmwsz403) obtiene nombre compania vrb403o (vrw403) zmwsc009 (zmwsr432) rutina transferencia vrb432o (vxw008) zm2og532 (zmwsg532) aborta vrc980 (vrw980) perform (zmwsc003) obtiene usuario firmado vxb045o (vxw004) zm8cr653 (zm8cr653) obtiene usuario tablas vrb653o (vrw653) /asigna nombre compa\u00f1ia call vrb403o vrw403 /centra nombre compa\u00f1ia call ahr009 vxw108 /asigna usuario firmado call vxb045o vxw004 /obten registro usuario call vrb653o vrw653 /errores de sql call vrc980o vrw980 /valida aut usuario a operar c/contr call vrb469d vrw469 zmwscom1 (zmwsc011) verifica fecha valida vrc090o (vxt001) zm9cr469 (zmwsr469) aut/operar s/contrato vrb469d (vrw469) zm9cre85 (zmwsre85) obtener efec disponible vrbe85o (vrwe85) zmwscom0 (zmwcom11) 9000-inicio zmwscom0 (zmwsr009) 9000-inicio zmwscom0 (zmwsz403) 9000-inicio zmwscom0 (zmwsg532) 9000-inicio zmwscom0 (........) 9000-inicio zmwscom1 (zmwsc011) 9100-obtener-fechas-vxt ya no utlizar zmwsc003 (zmwsc013) 9300-user-fecha-hora zmwsc006 (zmwsg532) 9600-valida-sql vrc451o zmwsc006 (sqlca ) 9600-valida-sql vrc451o zmwsc005 (zmwsg532) 9500-valida-cics zmwsc008 (zmwsc010) 9800-aborta zmwsc008 (zmwsg532) 9800-aborta zmwsc004 (........) 9400-return regresa control al cics tablas db2: include (zusuario) select usuario include (zcuenta) select cuenta include (zcartera) select cartera include (zbcopar) select bcopar include (zparam) select param include (zcltefax) select cltefax include (zmovfax) select movfax bitacora de modificaciones fecha modificacion autor 10-03-2003 se corrigio la validacion de lic.omar martinez la rutina zm9cr469 pues se enviaba la empresa incorrecta. fs-1.0.0-01 tecnocom 08may13 - adecuacion solicitada por dyd 2014-01-02 ans01 angelica garcia rodriguez. se controla acceso a la tabla zmdt690, cuando no existan contratos con elegibilidad siga el flujo sin abortar el programa. fs-1.0.0-02 xm26281 21abr16 se realiza llamado a rutina para grabar en tabla historico zmdtcth.. Pertenece a: PROGRAM-ID. ZM2OG609..",
+        "system": "PROGRAM-ID. ZM2OG609.",
+        "author": null
+      },
+      "copybooks": [
+        {
+          "name": "DFHAID",
+          "evidenceLines": [
+            587
+          ]
+        },
+        {
+          "name": "DFHBMSCA",
+          "evidenceLines": [
+            592
+          ]
+        },
+        {
+          "name": "SQLCA",
+          "evidenceLines": [
+            234
+          ]
+        },
+        {
+          "name": "ZBCOPAR",
+          "evidenceLines": [
+            206
+          ]
+        },
+        {
+          "name": "ZCARTERA",
+          "evidenceLines": [
+            199
+          ]
+        },
+        {
+          "name": "ZCLTEFAX",
+          "evidenceLines": [
+            220
+          ]
+        },
+        {
+          "name": "ZCUENTA",
+          "evidenceLines": [
+            185
+          ]
+        },
+        {
+          "name": "ZMECTH1",
+          "evidenceLines": [
+            545
+          ]
+        },
+        {
+          "name": "ZMG6091",
+          "evidenceLines": [
+            240
+          ]
+        },
+        {
+          "name": "ZMOVFAX",
+          "evidenceLines": [
+            227
+          ]
+        },
+        {
+          "name": "ZMWCOM11",
+          "evidenceLines": [
+            269
+          ]
+        },
+        {
+          "name": "ZMWSC002",
+          "evidenceLines": [
+            2887
+          ]
+        },
+        {
+          "name": "ZMWSC003",
+          "evidenceLines": [
+            2881
+          ]
+        },
+        {
+          "name": "ZMWSC004",
+          "evidenceLines": [
+            2869
+          ]
+        },
+        {
+          "name": "ZMWSC005",
+          "evidenceLines": [
+            2875
+          ]
+        },
+        {
+          "name": "ZMWSC006",
+          "evidenceLines": [
+            2761
+          ]
+        },
+        {
+          "name": "ZMWSC008",
+          "evidenceLines": [
+            2863
+          ]
+        },
+        {
+          "name": "ZMWSC009",
+          "evidenceLines": [
+            2922
+          ]
+        },
+        {
+          "name": "ZMWSC010",
+          "evidenceLines": [
+            480
+          ]
+        },
+        {
+          "name": "ZMWSC011",
+          "evidenceLines": [
+            571
+          ]
+        },
+        {
+          "name": "ZMWSC012",
+          "evidenceLines": [
+            497
+          ]
+        },
+        {
+          "name": "ZMWSC013",
+          "evidenceLines": [
+            492
+          ]
+        },
+        {
+          "name": "ZMWSC014",
+          "evidenceLines": [
+            515
+          ]
+        },
+        {
+          "name": "ZMWSC015",
+          "evidenceLines": [
+            2911
+          ]
+        },
+        {
+          "name": "ZMWSC016",
+          "evidenceLines": [
+            2916
+          ]
+        },
+        {
+          "name": "ZMWSC017",
+          "evidenceLines": [
+            520
+          ]
+        },
+        {
+          "name": "ZMWSCOM0",
+          "evidenceLines": [
+            2857
+          ]
+        },
+        {
+          "name": "ZMWSCOM1",
+          "evidenceLines": [
+            2905
+          ]
+        },
+        {
+          "name": "ZMWSG532",
+          "evidenceLines": [
+            470
+          ]
+        },
+        {
+          "name": "ZMWSR009",
+          "evidenceLines": [
+            475
+          ]
+        },
+        {
+          "name": "ZMWSR432",
+          "evidenceLines": [
+            526
+          ]
+        },
+        {
+          "name": "ZMWSR467",
+          "evidenceLines": [
+            533
+          ]
+        },
+        {
+          "name": "ZMWSR469",
+          "evidenceLines": [
+            540
+          ]
+        },
+        {
+          "name": "ZMWSRE85",
+          "evidenceLines": [
+            582
+          ]
+        },
+        {
+          "name": "ZMWSZ403",
+          "evidenceLines": [
+            487
+          ]
+        },
+        {
+          "name": "ZPARAM",
+          "evidenceLines": [
+            213
+          ]
+        },
+        {
+          "name": "ZUSUARIO",
+          "evidenceLines": [
+            178
+          ]
+        },
+        {
+          "name": "ZZMDT690",
+          "evidenceLines": [
+            192
+          ]
+        }
+      ],
+      "dclTables": [
+        {
+          "memberName": "ZMOVFAX",
+          "tableName": "MOVFAX",
+          "qualifiedName": "MOVFAX",
+          "schemaName": null,
+          "hostStructureName": "DCLMOVFAX",
+          "declaredColumnCount": 4,
+          "declaredColumns": [
+            "IMOV",
+            "ICUENTA",
+            "INIP",
+            "FREG"
+          ],
+          "declaredColumnDefinitions": [
+            "IMOV CHAR(1) NOT NULL",
+            "ICUENTA DECIMAL(7, 0) NOT NULL",
+            "INIP DECIMAL(4, 0) NOT NULL",
+            "FREG TIMESTAMP NOT NULL"
+          ],
+          "dclPath": "dcl/ZMOVFAX.dcl"
+        }
+      ],
+      "calls": [],
+      "readTables": [
+        {
+          "name": "BCOPAR",
+          "evidenceLines": [
+            2138,
+            2139,
+            2140,
+            2141,
+            2142,
+            2143,
+            2144,
+            2145,
+            2146,
+            2147,
+            2180,
+            2181,
+            2182,
+            2183,
+            2184,
+            2185,
+            2186,
+            2187,
+            2188,
+            2189
+          ]
+        },
+        {
+          "name": "CARTERA",
+          "evidenceLines": [
+            2038,
+            2039,
+            2040,
+            2041,
+            2042,
+            2043,
+            2044,
+            2045,
+            2046,
+            2047,
+            2082,
+            2083,
+            2084,
+            2085,
+            2086,
+            2087,
+            2088,
+            2089,
+            2090,
+            2091
+          ]
+        },
+        {
+          "name": "CLTEFAX",
+          "evidenceLines": [
+            2305,
+            2306,
+            2307,
+            2308,
+            2309,
+            2310,
+            2311,
+            2312,
+            2313,
+            2314,
+            2315,
+            2316,
+            2317,
+            2318,
+            2319,
+            2320,
+            2321,
+            2322,
+            2323,
+            2324,
+            2325,
+            2326,
+            2327,
+            2328,
+            2329,
+            2528,
+            2529,
+            2530,
+            2531
+          ]
+        },
+        {
+          "name": "CUENTA",
+          "evidenceLines": [
+            1532,
+            1533,
+            1534,
+            1535,
+            1536,
+            1537,
+            1538,
+            1539,
+            1540,
+            1541,
+            1542,
+            1543,
+            1544,
+            1545,
+            1546,
+            1547,
+            1548,
+            1549,
+            1550,
+            1551,
+            1552,
+            1553,
+            1554,
+            1555,
+            1556,
+            1557,
+            1558,
+            1559,
+            1560,
+            1561,
+            1562,
+            1563,
+            1564,
+            1565,
+            1566,
+            1567,
+            1568,
+            1569,
+            1570,
+            1571,
+            1572,
+            1573,
+            1574,
+            1575,
+            1576,
+            1577,
+            1578,
+            1579,
+            1580,
+            1581,
+            1582,
+            1583,
+            1584,
+            1585,
+            1586,
+            1587,
+            1588,
+            1589,
+            1590,
+            1591,
+            1592,
+            1593,
+            1594,
+            1595,
+            1596,
+            1597,
+            1598,
+            1599,
+            1600,
+            1601,
+            1602,
+            1603,
+            1604,
+            1605,
+            1606,
+            1607,
+            1608,
+            1609,
+            1610,
+            1611,
+            1612,
+            1613,
+            1614,
+            1615,
+            1616,
+            1617,
+            1618,
+            1619,
+            1620,
+            1621,
+            1622,
+            1623,
+            1624,
+            1625,
+            1626,
+            1627,
+            1628,
+            1629,
+            1630,
+            1631,
+            1632,
+            1633,
+            1634,
+            1635,
+            1636,
+            1637,
+            1638,
+            1639,
+            1640,
+            1641,
+            1642,
+            1643,
+            1644,
+            1645,
+            1646,
+            1647,
+            1648,
+            1649,
+            1650,
+            1651,
+            1652,
+            1653,
+            1654,
+            1655,
+            1656,
+            1657,
+            1658,
+            1659,
+            1660,
+            1661,
+            1662,
+            1663,
+            1664,
+            1665,
+            1666,
+            1667,
+            1668,
+            1669,
+            1670,
+            1671,
+            1672,
+            1673,
+            1674,
+            1675,
+            1676,
+            1677,
+            1678,
+            1679,
+            1680,
+            1681,
+            1682,
+            1683,
+            1684,
+            1685,
+            1686,
+            1687,
+            1688,
+            1689,
+            1690,
+            1691,
+            1692,
+            1693,
+            1694,
+            1695,
+            1696,
+            1697,
+            1698,
+            1699,
+            1700,
+            1701,
+            1702,
+            1703,
+            1704,
+            1705,
+            1999,
+            2000,
+            2001,
+            2002,
+            2003,
+            2004,
+            2005,
+            2006,
+            2007,
+            2008
+          ]
+        },
+        {
+          "name": "PARAM",
+          "evidenceLines": [
+            2223,
+            2224,
+            2225,
+            2226,
+            2227,
+            2228,
+            2229,
+            2230,
+            2231,
+            2232,
+            2233
+          ]
+        }
+      ],
+      "updateTables": [
+        {
+          "name": "CLTEFAX",
+          "evidenceLines": [
+            2528,
+            2529,
+            2530,
+            2531
+          ]
+        },
+        {
+          "name": "CUENTA",
+          "evidenceLines": [
+            2378,
+            2379,
+            2380,
+            2381,
+            2382,
+            2383,
+            2384,
+            2385,
+            2386,
+            2387,
+            2388,
+            2389,
+            2390
+          ]
+        },
+        {
+          "name": "MOVFAX",
+          "evidenceLines": [
+            2564,
+            2565,
+            2566,
+            2567,
+            2568,
+            2569,
+            2570,
+            2571
+          ]
+        },
+        {
+          "name": "ZMDT690",
+          "evidenceLines": [
+            2470,
+            2471,
+            2472,
+            2473,
+            2474,
+            2475,
+            2476,
+            2477,
+            2478
+          ]
+        }
+      ],
+      "paragraphs": [
+        {
+          "name": "CONFIGURATION",
+          "evidenceLines": [
+            78
+          ],
+          "executionOrder": 100,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OG609, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "WORKING-STORAGE",
+          "evidenceLines": [
+            83
+          ],
+          "executionOrder": 200,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OG609, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "LINKAGE",
+          "evidenceLines": [
+            599
+          ],
+          "executionOrder": 300,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OG609, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "0000-CONTROL",
+          "evidenceLines": [
+            607
+          ],
+          "executionOrder": 400,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OG609, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "0100-TRANS",
+          "evidenceLines": [
+            675
+          ],
+          "executionOrder": 500,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OG609, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "0110-PROTFSET-DATOSA",
+          "evidenceLines": [
+            688
+          ],
+          "executionOrder": 600,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OG609, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "0110-MAP-HEADER",
+          "evidenceLines": [
+            732
+          ],
+          "executionOrder": 700,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OG609, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "0120-ENVIA-MAPA",
+          "evidenceLines": [
+            745
+          ],
+          "executionOrder": 800,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OG609, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "0120-INIT-MAPA",
+          "evidenceLines": [
+            777
+          ],
+          "executionOrder": 900,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OG609, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "0120-INIT-CA-ADICIONAL",
+          "evidenceLines": [
+            873
+          ],
+          "executionOrder": 1000,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OG609, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "0130-RECIBE-MAPA",
+          "evidenceLines": [
+            944
+          ],
+          "executionOrder": 1100,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OG609, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "0130-MAP-RESTORE",
+          "evidenceLines": [
+            1012
+          ],
+          "executionOrder": 1200,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OG609, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "0130-DATOSCAA",
+          "evidenceLines": [
+            1091
+          ],
+          "executionOrder": 1300,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OG609, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "0130-PROCESA-ENTRADA",
+          "evidenceLines": [
+            1180
+          ],
+          "executionOrder": 1400,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OG609, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "0140-VALIDA-FORMATO",
+          "evidenceLines": [
+            1237
+          ],
+          "executionOrder": 1500,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OG609, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "0142-DATOS-DATABASE",
+          "evidenceLines": [
+            1276
+          ],
+          "executionOrder": 1600,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OG609, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "0140-CONFIRMACION",
+          "evidenceLines": [
+            1375
+          ],
+          "executionOrder": 1700,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OG609, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "0500-RUT-PF4",
+          "evidenceLines": [
+            1457
+          ],
+          "executionOrder": 1800,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OG609, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "5100-CUENTA-OBTIENE",
+          "evidenceLines": [
+            1530
+          ],
+          "executionOrder": 1900,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OG609, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "5100-CUENTA-DATOSCA",
+          "evidenceLines": [
+            1744
+          ],
+          "executionOrder": 2000,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OG609, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "5110-CUENTA-GLOBAL",
+          "evidenceLines": [
+            1997
+          ],
+          "executionOrder": 2100,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OG609, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "5200-CARTERA-SUMACON",
+          "evidenceLines": [
+            2036
+          ],
+          "executionOrder": 2200,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OG609, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "5210-CARTERA-EFECTIVO",
+          "evidenceLines": [
+            2080
+          ],
+          "executionOrder": 2300,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OG609, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "5300-BCOPAR-TERCERO",
+          "evidenceLines": [
+            2136
+          ],
+          "executionOrder": 2400,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OG609, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "5310-BCOPAR-CASA",
+          "evidenceLines": [
+            2178
+          ],
+          "executionOrder": 2500,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OG609, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "5400-PARAM-OBTIENE",
+          "evidenceLines": [
+            2221
+          ],
+          "executionOrder": 2600,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OG609, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "5500-CLETFAX-OBTIENE",
+          "evidenceLines": [
+            2303
+          ],
+          "executionOrder": 2700,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OG609, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "6100-CUENTA-UPDATE",
+          "evidenceLines": [
+            2376
+          ],
+          "executionOrder": 2800,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OG609, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "322910-LINK-ZM9CTH10",
+          "evidenceLines": [
+            2438
+          ],
+          "executionOrder": 2900,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OG609, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "6100-ZMDT690-UPDATE",
+          "evidenceLines": [
+            2468
+          ],
+          "executionOrder": 3000,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OG609, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "6500-CLTEFAX-DELETE",
+          "evidenceLines": [
+            2526
+          ],
+          "executionOrder": 3100,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OG609, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "6600-MOVFAX-INSERT",
+          "evidenceLines": [
+            2562
+          ],
+          "executionOrder": 3200,
+          "executionPhase": "PROCESSING",
+          "summary": "Persiste actualizaciones de negocio en ZM2OG609, aplicando reglas de escritura y control de estado."
+        },
+        {
+          "name": "7100-AUTOP-SIVA",
+          "evidenceLines": [
+            2607
+          ],
+          "executionOrder": 3300,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OG609, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "7200-AUTOP-CONTRATO",
+          "evidenceLines": [
+            2647
+          ],
+          "executionOrder": 3400,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OG609, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "7300-EFECTIVO-CLIENTE",
+          "evidenceLines": [
+            2701
+          ],
+          "executionOrder": 3500,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OG609, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "5000-RUT-PF2",
+          "evidenceLines": [
+            2770
+          ],
+          "executionOrder": 3600,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OG609, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "5000-RUT-PF3",
+          "evidenceLines": [
+            2794
+          ],
+          "executionOrder": 3700,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OG609, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "5000-RUT-PF5",
+          "evidenceLines": [
+            2817
+          ],
+          "executionOrder": 3800,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OG609, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "9100-INIT-PANTALLA",
+          "evidenceLines": [
+            2932
+          ],
+          "executionOrder": 3900,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OG609, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "9800-PREPARA-ABORTA",
+          "evidenceLines": [
+            2959
+          ],
+          "executionOrder": 4000,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM2OG609, preparando contexto y validaciones de arranque."
+        }
+      ],
+      "paragraphCalls": [],
+      "paragraphCopybooks": [
+        {
+          "paragraph": "0000-CONTROL",
+          "copybook": "ZMWSC004",
+          "evidenceLines": [
+            670
+          ]
+        },
+        {
+          "paragraph": "0000-CONTROL",
+          "copybook": "ZMWSCOM0",
+          "evidenceLines": [
+            622
+          ]
+        },
+        {
+          "paragraph": "0110-MAP-HEADER",
+          "copybook": "ZMWSC003",
+          "evidenceLines": [
+            736
+          ]
+        },
+        {
+          "paragraph": "0120-ENVIA-MAPA",
+          "copybook": "ZMWSC002",
+          "evidenceLines": [
+            751
+          ]
+        },
+        {
+          "paragraph": "0120-ENVIA-MAPA",
+          "copybook": "ZMWSCOM0",
+          "evidenceLines": [
+            772
+          ]
+        },
+        {
+          "paragraph": "0130-RECIBE-MAPA",
+          "copybook": "ZMWSC015",
+          "evidenceLines": [
+            1006
+          ]
+        },
+        {
+          "paragraph": "0140-VALIDA-FORMATO",
+          "copybook": "ZMWSC016",
+          "evidenceLines": [
+            1254
+          ]
+        },
+        {
+          "paragraph": "5000-RUT-PF2",
+          "copybook": "ZMWSC009",
+          "evidenceLines": [
+            2783
+          ]
+        },
+        {
+          "paragraph": "5000-RUT-PF3",
+          "copybook": "ZMWSC009",
+          "evidenceLines": [
+            2799
+          ]
+        },
+        {
+          "paragraph": "5000-RUT-PF5",
+          "copybook": "ZMWSC002",
+          "evidenceLines": [
+            2887
+          ]
+        },
+        {
+          "paragraph": "5000-RUT-PF5",
+          "copybook": "ZMWSC003",
+          "evidenceLines": [
+            2881
+          ]
+        },
+        {
+          "paragraph": "5000-RUT-PF5",
+          "copybook": "ZMWSC004",
+          "evidenceLines": [
+            2869
+          ]
+        },
+        {
+          "paragraph": "5000-RUT-PF5",
+          "copybook": "ZMWSC005",
+          "evidenceLines": [
+            2875
+          ]
+        },
+        {
+          "paragraph": "5000-RUT-PF5",
+          "copybook": "ZMWSC008",
+          "evidenceLines": [
+            2863
+          ]
+        },
+        {
+          "paragraph": "5000-RUT-PF5",
+          "copybook": "ZMWSC009",
+          "evidenceLines": [
+            2825,
+            2922
+          ]
+        },
+        {
+          "paragraph": "5000-RUT-PF5",
+          "copybook": "ZMWSC015",
+          "evidenceLines": [
+            2911
+          ]
+        },
+        {
+          "paragraph": "5000-RUT-PF5",
+          "copybook": "ZMWSC016",
+          "evidenceLines": [
+            2916
+          ]
+        },
+        {
+          "paragraph": "5000-RUT-PF5",
+          "copybook": "ZMWSCOM0",
+          "evidenceLines": [
+            2857
+          ]
+        },
+        {
+          "paragraph": "5000-RUT-PF5",
+          "copybook": "ZMWSCOM1",
+          "evidenceLines": [
+            2905
+          ]
+        },
+        {
+          "paragraph": "5100-CUENTA-OBTIENE",
+          "copybook": "ZMWSC006",
+          "evidenceLines": [
+            1738
+          ]
+        },
+        {
+          "paragraph": "5110-CUENTA-GLOBAL",
+          "copybook": "ZMWSC006",
+          "evidenceLines": [
+            2022
+          ]
+        },
+        {
+          "paragraph": "5200-CARTERA-SUMACON",
+          "copybook": "ZMWSC006",
+          "evidenceLines": [
+            2074
+          ]
+        },
+        {
+          "paragraph": "5210-CARTERA-EFECTIVO",
+          "copybook": "ZMWSC006",
+          "evidenceLines": [
+            2130
+          ]
+        },
+        {
+          "paragraph": "5300-BCOPAR-TERCERO",
+          "copybook": "ZMWSC006",
+          "evidenceLines": [
+            2172
+          ]
+        },
+        {
+          "paragraph": "5310-BCOPAR-CASA",
+          "copybook": "ZMWSC006",
+          "evidenceLines": [
+            2215
+          ]
+        },
+        {
+          "paragraph": "5400-PARAM-OBTIENE",
+          "copybook": "ZMWSC006",
+          "evidenceLines": [
+            2297
+          ]
+        },
+        {
+          "paragraph": "5500-CLETFAX-OBTIENE",
+          "copybook": "ZMWSC006",
+          "evidenceLines": [
+            2370
+          ]
+        },
+        {
+          "paragraph": "6100-CUENTA-UPDATE",
+          "copybook": "ZMWSC006",
+          "evidenceLines": [
+            2431
+          ]
+        },
+        {
+          "paragraph": "6100-CUENTA-UPDATE",
+          "copybook": "ZMWSC008",
+          "evidenceLines": [
+            2417
+          ]
+        },
+        {
+          "paragraph": "6100-ZMDT690-UPDATE",
+          "copybook": "ZMWSC006",
+          "evidenceLines": [
+            2520
+          ]
+        },
+        {
+          "paragraph": "6500-CLTEFAX-DELETE",
+          "copybook": "ZMWSC006",
+          "evidenceLines": [
+            2556
+          ]
+        },
+        {
+          "paragraph": "6500-CLTEFAX-DELETE",
+          "copybook": "ZMWSC008",
+          "evidenceLines": [
+            2548
+          ]
+        },
+        {
+          "paragraph": "6600-MOVFAX-INSERT",
+          "copybook": "ZMWSC006",
+          "evidenceLines": [
+            2600
+          ]
+        },
+        {
+          "paragraph": "6600-MOVFAX-INSERT",
+          "copybook": "ZMWSC008",
+          "evidenceLines": [
+            2590
+          ]
+        },
+        {
+          "paragraph": "7100-AUTOP-SIVA",
+          "copybook": "ZMWSC005",
+          "evidenceLines": [
+            2616
+          ]
+        },
+        {
+          "paragraph": "7100-AUTOP-SIVA",
+          "copybook": "ZMWSC008",
+          "evidenceLines": [
+            2620
+          ]
+        },
+        {
+          "paragraph": "7200-AUTOP-CONTRATO",
+          "copybook": "ZMWSC005",
+          "evidenceLines": [
+            2656
+          ]
+        },
+        {
+          "paragraph": "7200-AUTOP-CONTRATO",
+          "copybook": "ZMWSC008",
+          "evidenceLines": [
+            2660
+          ]
+        },
+        {
+          "paragraph": "7300-EFECTIVO-CLIENTE",
+          "copybook": "ZMWSC005",
+          "evidenceLines": [
+            2710
+          ]
+        },
+        {
+          "paragraph": "7300-EFECTIVO-CLIENTE",
+          "copybook": "ZMWSC006",
+          "evidenceLines": [
+            2761
+          ]
+        },
+        {
+          "paragraph": "7300-EFECTIVO-CLIENTE",
+          "copybook": "ZMWSC008",
+          "evidenceLines": [
+            2713
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "DFHAID",
+          "evidenceLines": [
+            587
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "DFHBMSCA",
+          "evidenceLines": [
+            592
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "SQLCA",
+          "evidenceLines": [
+            234
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZBCOPAR",
+          "evidenceLines": [
+            206
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZCARTERA",
+          "evidenceLines": [
+            199
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZCLTEFAX",
+          "evidenceLines": [
+            220
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZCUENTA",
+          "evidenceLines": [
+            185
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMECTH1",
+          "evidenceLines": [
+            545
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMG6091",
+          "evidenceLines": [
+            240
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMOVFAX",
+          "evidenceLines": [
+            227
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMWCOM11",
+          "evidenceLines": [
+            269
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMWSC010",
+          "evidenceLines": [
+            480
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMWSC011",
+          "evidenceLines": [
+            571
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMWSC012",
+          "evidenceLines": [
+            497
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMWSC013",
+          "evidenceLines": [
+            492
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMWSC014",
+          "evidenceLines": [
+            515
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMWSC017",
+          "evidenceLines": [
+            520
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMWSG532",
+          "evidenceLines": [
+            470
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMWSR009",
+          "evidenceLines": [
+            475
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMWSR432",
+          "evidenceLines": [
+            526
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMWSR467",
+          "evidenceLines": [
+            533
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMWSR469",
+          "evidenceLines": [
+            540
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMWSRE85",
+          "evidenceLines": [
+            582
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMWSZ403",
+          "evidenceLines": [
+            487
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZPARAM",
+          "evidenceLines": [
+            213
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZUSUARIO",
+          "evidenceLines": [
+            178
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZZMDT690",
+          "evidenceLines": [
+            192
+          ]
+        }
+      ],
+      "coverage": {
+        "sequenceColumnsNormalized": true,
+        "procedureDivisionFound": true,
+        "parseStartLine": 78,
+        "parseStartReason": "PROCEDURE_DIVISION",
+        "performTargetCount": 46,
+        "paragraphCount": 40,
+        "missingPerformTargets": [],
+        "resolvedPerformTargetsViaCopybook": {
+          "9000-INICIO": [
+            "ZMWSCOM0"
+          ],
+          "9000-REINICIO": [
+            "ZMWSCOM0"
+          ],
+          "9200-MENSAJE-ERROR": [
+            "ZMWSC002"
+          ],
+          "9300-USER-FECHA-HORA": [
+            "ZMWSC003"
+          ],
+          "9350-VALIDA-CANTIDAD": [
+            "ZMWSC016"
+          ],
+          "9400-RETURN": [
+            "ZMWSC004"
+          ],
+          "9500-VALIDA-CICS": [
+            "ZMWSC005"
+          ],
+          "9600-VALIDA-SQL": [
+            "ZMWSC006"
+          ],
+          "9800-ABORTA": [
+            "ZMWSC008"
+          ],
+          "9886-ALINEA-STRING-IZQ": [
+            "ZMWSC015"
+          ],
+          "9888-ABORTA-RETURN": [
+            "ZMWSC008"
+          ],
+          "9900-TRANSFIERE": [
+            "ZMWSC009"
+          ]
+        },
+        "resolvedPerformTargetsViaPrefixAlias": {}
+      }
+    }
+  ]
+}

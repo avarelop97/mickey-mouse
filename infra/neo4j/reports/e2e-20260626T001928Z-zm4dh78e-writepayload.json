@@ -1,0 +1,7829 @@
+{
+  "runId": "e2e-20260626T001928Z-zm4dh78e",
+  "nodes": [
+    {
+      "label": "DB2System",
+      "key": [
+        "DB2"
+      ],
+      "properties": {
+        "name": "DB2",
+        "layer": "data-access",
+        "nodeType": "db2-system",
+        "viewTag": "db2",
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "sourceFile": "src/ZM4DH78E.cbl"
+      }
+    },
+    {
+      "label": "DclgenLibrary",
+      "key": [
+        "CBOD.ZMEA.DCLGEN(ZMCAPISR))                     *"
+      ],
+      "properties": {
+        "name": "CBOD.ZMEA.DCLGEN(ZMCAPISR))                     *",
+        "librarySpec": "CBOD.ZMEA.DCLGEN(ZMCAPISR))                     *",
+        "layer": "data-access",
+        "nodeType": "dclgen-library",
+        "viewTag": "db2",
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "sourceFile": "src/ZM4DH78E.cbl"
+      }
+    },
+    {
+      "label": "DclgenArtifact",
+      "key": [
+        "ZMCAPISR"
+      ],
+      "properties": {
+        "name": "ZMCAPISR",
+        "qualifiedName": "MCAPISR",
+        "schemaName": null,
+        "libraryDataset": "CBOD.ZMEA.DCLGEN(ZMCAPISR))                     *",
+        "libraryMember": "ZMCAPISR",
+        "hostStructureName": "DCLMCAPISR",
+        "declaredColumnCount": 11,
+        "layer": "data-access",
+        "nodeType": "dclgen-artifact",
+        "viewTag": "db2",
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "sourceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "label": "DBTable",
+      "key": [
+        "MCAPISR"
+      ],
+      "properties": {
+        "name": "MCAPISR",
+        "ingestion": "auto",
+        "layer": "data-access",
+        "nodeType": "physical-table",
+        "viewTag": "data-access",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1339,
+          1340,
+          1341,
+          1342,
+          1343,
+          1344,
+          1345,
+          1346,
+          1347,
+          1348,
+          1349,
+          1350,
+          1351,
+          1352,
+          1353,
+          1354,
+          1355,
+          1356,
+          1357,
+          1358,
+          1359,
+          1360,
+          1361,
+          1362,
+          1381,
+          1382,
+          1383,
+          1384,
+          1385,
+          1386,
+          1387,
+          1388,
+          1389,
+          1390,
+          1391,
+          1392,
+          1393,
+          1394,
+          1395,
+          1396,
+          1397,
+          1398,
+          1399,
+          1400,
+          1401,
+          1402,
+          1403,
+          1404,
+          1457,
+          1458,
+          1459,
+          1461,
+          1462,
+          1463,
+          1464,
+          1465,
+          1466,
+          1467,
+          1468,
+          1488,
+          1489,
+          1490,
+          1491,
+          1493,
+          1494,
+          1495,
+          1496,
+          1497,
+          1498,
+          1517,
+          1518,
+          1519,
+          1520,
+          1522,
+          1523,
+          1524,
+          1525,
+          1526,
+          1527,
+          1528,
+          1552,
+          1553,
+          1554,
+          1555,
+          1556,
+          1557,
+          1559,
+          1560,
+          1561,
+          1562,
+          1563,
+          1564,
+          1587,
+          1588,
+          1589,
+          1590,
+          1591,
+          1592,
+          1593,
+          1594,
+          1612,
+          1613,
+          1614,
+          1615,
+          1616,
+          1617,
+          1618,
+          1619
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "qualifiedName": "MCAPISR",
+        "schemaName": null,
+        "dclMember": "ZMCAPISR",
+        "dclPath": "dcl/ZMCAPISR.dcl",
+        "dclHostStructure": "DCLMCAPISR",
+        "declaredColumnCount": 11,
+        "declaredColumns": [
+          "ICUENTA",
+          "IEMISORA",
+          "ISERIE",
+          "ICUPON",
+          "STIPOPER",
+          "CTITEFE",
+          "FOPERA",
+          "FLIQUIDA",
+          "FSIST",
+          "SESTATUS",
+          "IDATO1"
+        ],
+        "declaredColumnDefinitions": [
+          "ICUENTA DECIMAL(7, 0) NOT NULL",
+          "IEMISORA CHAR(7) NOT NULL",
+          "ISERIE CHAR(8) NOT NULL",
+          "ICUPON DECIMAL(3, 0)",
+          "STIPOPER CHAR(1) NOT NULL",
+          "CTITEFE DECIMAL(15, 2) NOT NULL",
+          "FOPERA DATE NOT NULL",
+          "FLIQUIDA DATE NOT NULL",
+          "FSIST TIMESTAMP NOT NULL",
+          "SESTATUS CHAR(3) NOT NULL",
+          "IDATO1 CHAR(15) NOT NULL"
+        ]
+      }
+    },
+    {
+      "label": "TableColumn",
+      "key": [
+        "MCAPISR.ICUENTA"
+      ],
+      "properties": {
+        "name": "MCAPISR.ICUENTA",
+        "tableName": "MCAPISR",
+        "columnName": "ICUENTA",
+        "sqlDefinition": "DECIMAL(7, 0) NOT NULL",
+        "nullable": false,
+        "position": 1,
+        "layer": "data-access",
+        "nodeType": "db2-column",
+        "viewTag": "db2",
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "sourceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "label": "CobolHostField",
+      "key": [
+        "ZMCAPISR.ICUENTA"
+      ],
+      "properties": {
+        "name": "ZMCAPISR.ICUENTA",
+        "memberName": "ZMCAPISR",
+        "fieldName": "ICUENTA",
+        "picClause": "S9(7)V USAGE COMP-3",
+        "hostStructureName": "DCLMCAPISR",
+        "layer": "data-access",
+        "nodeType": "cobol-host-field",
+        "viewTag": "db2",
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "sourceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "label": "TableColumn",
+      "key": [
+        "MCAPISR.IEMISORA"
+      ],
+      "properties": {
+        "name": "MCAPISR.IEMISORA",
+        "tableName": "MCAPISR",
+        "columnName": "IEMISORA",
+        "sqlDefinition": "CHAR(7) NOT NULL",
+        "nullable": false,
+        "position": 2,
+        "layer": "data-access",
+        "nodeType": "db2-column",
+        "viewTag": "db2",
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "sourceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "label": "CobolHostField",
+      "key": [
+        "ZMCAPISR.IEMISORA"
+      ],
+      "properties": {
+        "name": "ZMCAPISR.IEMISORA",
+        "memberName": "ZMCAPISR",
+        "fieldName": "IEMISORA",
+        "picClause": "X(7)",
+        "hostStructureName": "DCLMCAPISR",
+        "layer": "data-access",
+        "nodeType": "cobol-host-field",
+        "viewTag": "db2",
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "sourceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "label": "TableColumn",
+      "key": [
+        "MCAPISR.ISERIE"
+      ],
+      "properties": {
+        "name": "MCAPISR.ISERIE",
+        "tableName": "MCAPISR",
+        "columnName": "ISERIE",
+        "sqlDefinition": "CHAR(8) NOT NULL",
+        "nullable": false,
+        "position": 3,
+        "layer": "data-access",
+        "nodeType": "db2-column",
+        "viewTag": "db2",
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "sourceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "label": "CobolHostField",
+      "key": [
+        "ZMCAPISR.ISERIE"
+      ],
+      "properties": {
+        "name": "ZMCAPISR.ISERIE",
+        "memberName": "ZMCAPISR",
+        "fieldName": "ISERIE",
+        "picClause": "X(8)",
+        "hostStructureName": "DCLMCAPISR",
+        "layer": "data-access",
+        "nodeType": "cobol-host-field",
+        "viewTag": "db2",
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "sourceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "label": "TableColumn",
+      "key": [
+        "MCAPISR.ICUPON"
+      ],
+      "properties": {
+        "name": "MCAPISR.ICUPON",
+        "tableName": "MCAPISR",
+        "columnName": "ICUPON",
+        "sqlDefinition": "DECIMAL(3, 0)",
+        "nullable": true,
+        "position": 4,
+        "layer": "data-access",
+        "nodeType": "db2-column",
+        "viewTag": "db2",
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "sourceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "label": "CobolHostField",
+      "key": [
+        "ZMCAPISR.ICUPON"
+      ],
+      "properties": {
+        "name": "ZMCAPISR.ICUPON",
+        "memberName": "ZMCAPISR",
+        "fieldName": "ICUPON",
+        "picClause": "S9(3)V USAGE COMP-3",
+        "hostStructureName": "DCLMCAPISR",
+        "layer": "data-access",
+        "nodeType": "cobol-host-field",
+        "viewTag": "db2",
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "sourceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "label": "TableColumn",
+      "key": [
+        "MCAPISR.STIPOPER"
+      ],
+      "properties": {
+        "name": "MCAPISR.STIPOPER",
+        "tableName": "MCAPISR",
+        "columnName": "STIPOPER",
+        "sqlDefinition": "CHAR(1) NOT NULL",
+        "nullable": false,
+        "position": 5,
+        "layer": "data-access",
+        "nodeType": "db2-column",
+        "viewTag": "db2",
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "sourceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "label": "CobolHostField",
+      "key": [
+        "ZMCAPISR.STIPOPER"
+      ],
+      "properties": {
+        "name": "ZMCAPISR.STIPOPER",
+        "memberName": "ZMCAPISR",
+        "fieldName": "STIPOPER",
+        "picClause": "X(1)",
+        "hostStructureName": "DCLMCAPISR",
+        "layer": "data-access",
+        "nodeType": "cobol-host-field",
+        "viewTag": "db2",
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "sourceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "label": "TableColumn",
+      "key": [
+        "MCAPISR.CTITEFE"
+      ],
+      "properties": {
+        "name": "MCAPISR.CTITEFE",
+        "tableName": "MCAPISR",
+        "columnName": "CTITEFE",
+        "sqlDefinition": "DECIMAL(15, 2) NOT NULL",
+        "nullable": false,
+        "position": 6,
+        "layer": "data-access",
+        "nodeType": "db2-column",
+        "viewTag": "db2",
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "sourceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "label": "CobolHostField",
+      "key": [
+        "ZMCAPISR.CTITEFE"
+      ],
+      "properties": {
+        "name": "ZMCAPISR.CTITEFE",
+        "memberName": "ZMCAPISR",
+        "fieldName": "CTITEFE",
+        "picClause": "S9(13)V9(2) USAGE COMP-3",
+        "hostStructureName": "DCLMCAPISR",
+        "layer": "data-access",
+        "nodeType": "cobol-host-field",
+        "viewTag": "db2",
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "sourceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "label": "TableColumn",
+      "key": [
+        "MCAPISR.FOPERA"
+      ],
+      "properties": {
+        "name": "MCAPISR.FOPERA",
+        "tableName": "MCAPISR",
+        "columnName": "FOPERA",
+        "sqlDefinition": "DATE NOT NULL",
+        "nullable": false,
+        "position": 7,
+        "layer": "data-access",
+        "nodeType": "db2-column",
+        "viewTag": "db2",
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "sourceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "label": "CobolHostField",
+      "key": [
+        "ZMCAPISR.FOPERA"
+      ],
+      "properties": {
+        "name": "ZMCAPISR.FOPERA",
+        "memberName": "ZMCAPISR",
+        "fieldName": "FOPERA",
+        "picClause": "X(10)",
+        "hostStructureName": "DCLMCAPISR",
+        "layer": "data-access",
+        "nodeType": "cobol-host-field",
+        "viewTag": "db2",
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "sourceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "label": "TableColumn",
+      "key": [
+        "MCAPISR.FLIQUIDA"
+      ],
+      "properties": {
+        "name": "MCAPISR.FLIQUIDA",
+        "tableName": "MCAPISR",
+        "columnName": "FLIQUIDA",
+        "sqlDefinition": "DATE NOT NULL",
+        "nullable": false,
+        "position": 8,
+        "layer": "data-access",
+        "nodeType": "db2-column",
+        "viewTag": "db2",
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "sourceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "label": "CobolHostField",
+      "key": [
+        "ZMCAPISR.FLIQUIDA"
+      ],
+      "properties": {
+        "name": "ZMCAPISR.FLIQUIDA",
+        "memberName": "ZMCAPISR",
+        "fieldName": "FLIQUIDA",
+        "picClause": "X(10)",
+        "hostStructureName": "DCLMCAPISR",
+        "layer": "data-access",
+        "nodeType": "cobol-host-field",
+        "viewTag": "db2",
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "sourceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "label": "TableColumn",
+      "key": [
+        "MCAPISR.FSIST"
+      ],
+      "properties": {
+        "name": "MCAPISR.FSIST",
+        "tableName": "MCAPISR",
+        "columnName": "FSIST",
+        "sqlDefinition": "TIMESTAMP NOT NULL",
+        "nullable": false,
+        "position": 9,
+        "layer": "data-access",
+        "nodeType": "db2-column",
+        "viewTag": "db2",
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "sourceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "label": "CobolHostField",
+      "key": [
+        "ZMCAPISR.FSIST"
+      ],
+      "properties": {
+        "name": "ZMCAPISR.FSIST",
+        "memberName": "ZMCAPISR",
+        "fieldName": "FSIST",
+        "picClause": "X(26)",
+        "hostStructureName": "DCLMCAPISR",
+        "layer": "data-access",
+        "nodeType": "cobol-host-field",
+        "viewTag": "db2",
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "sourceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "label": "TableColumn",
+      "key": [
+        "MCAPISR.SESTATUS"
+      ],
+      "properties": {
+        "name": "MCAPISR.SESTATUS",
+        "tableName": "MCAPISR",
+        "columnName": "SESTATUS",
+        "sqlDefinition": "CHAR(3) NOT NULL",
+        "nullable": false,
+        "position": 10,
+        "layer": "data-access",
+        "nodeType": "db2-column",
+        "viewTag": "db2",
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "sourceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "label": "CobolHostField",
+      "key": [
+        "ZMCAPISR.SESTATUS"
+      ],
+      "properties": {
+        "name": "ZMCAPISR.SESTATUS",
+        "memberName": "ZMCAPISR",
+        "fieldName": "SESTATUS",
+        "picClause": "X(3)",
+        "hostStructureName": "DCLMCAPISR",
+        "layer": "data-access",
+        "nodeType": "cobol-host-field",
+        "viewTag": "db2",
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "sourceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "label": "TableColumn",
+      "key": [
+        "MCAPISR.IDATO1"
+      ],
+      "properties": {
+        "name": "MCAPISR.IDATO1",
+        "tableName": "MCAPISR",
+        "columnName": "IDATO1",
+        "sqlDefinition": "CHAR(15) NOT NULL",
+        "nullable": false,
+        "position": 11,
+        "layer": "data-access",
+        "nodeType": "db2-column",
+        "viewTag": "db2",
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "sourceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "label": "CobolHostField",
+      "key": [
+        "ZMCAPISR.IDATO1"
+      ],
+      "properties": {
+        "name": "ZMCAPISR.IDATO1",
+        "memberName": "ZMCAPISR",
+        "fieldName": "IDATO1",
+        "picClause": "X(15)",
+        "hostStructureName": "DCLMCAPISR",
+        "layer": "data-access",
+        "nodeType": "cobol-host-field",
+        "viewTag": "db2",
+        "ingestion": "auto",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "sourceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "label": "Program",
+      "key": [
+        "ZM4DH78E"
+      ],
+      "properties": {
+        "name": "ZM4DH78E",
+        "ingestion": "auto",
+        "layer": "program",
+        "nodeType": "program",
+        "viewTag": "cobol-program",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "objective": null,
+        "description": "Programa COBOL que ejecuta procesos. Pertenece a: BBVA BANCOMER..",
+        "system": "BBVA BANCOMER.",
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Functionality",
+      "key": [
+        "FUNCTIONALITY_ZM4DH78E"
+      ],
+      "properties": {
+        "name": "FUNCTIONALITY_ZM4DH78E",
+        "objective": "Capacidad funcional principal de ZM4DH78E.",
+        "description": "Programa COBOL que ejecuta procesos. Pertenece a: BBVA BANCOMER..",
+        "businessDomain": "pending_human_review",
+        "ingestion": "auto",
+        "layer": "functional",
+        "nodeType": "business-function",
+        "viewTag": "functional",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "SubFunctionality",
+      "key": [
+        "FUNCTIONALITY_ZM4DH78E",
+        "ZM4DH78E_PROCESSING"
+      ],
+      "properties": {
+        "functionalityName": "FUNCTIONALITY_ZM4DH78E",
+        "name": "ZM4DH78E_PROCESSING",
+        "description": "Sub-funcionalidad de ZM4DH78E para fase PROCESSING.",
+        "ingestion": "auto",
+        "layer": "functional",
+        "nodeType": "sub-business-function",
+        "viewTag": "functional",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4DH78E",
+        "PROGRAM-ID"
+      ],
+      "properties": {
+        "programName": "ZM4DH78E",
+        "name": "PROGRAM-ID",
+        "summary": "Orquesta una fase funcional de ZM4DH78E, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 100,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          3
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4DH78E",
+        "ZM4DH78E"
+      ],
+      "properties": {
+        "programName": "ZM4DH78E",
+        "name": "ZM4DH78E",
+        "summary": "Orquesta una fase funcional de ZM4DH78E, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 200,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          4
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4DH78E",
+        "AUTHOR"
+      ],
+      "properties": {
+        "programName": "ZM4DH78E",
+        "name": "AUTHOR",
+        "summary": "Orquesta una fase funcional de ZM4DH78E, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 300,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          5
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4DH78E",
+        "INSTALLATION"
+      ],
+      "properties": {
+        "programName": "ZM4DH78E",
+        "name": "INSTALLATION",
+        "summary": "Orquesta una fase funcional de ZM4DH78E, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 400,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          7
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4DH78E",
+        "DATE-WRITTEN"
+      ],
+      "properties": {
+        "programName": "ZM4DH78E",
+        "name": "DATE-WRITTEN",
+        "summary": "Orquesta una fase funcional de ZM4DH78E, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 500,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          9
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4DH78E",
+        "CONFIGURATION"
+      ],
+      "properties": {
+        "programName": "ZM4DH78E",
+        "name": "CONFIGURATION",
+        "summary": "Orquesta una fase funcional de ZM4DH78E, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 600,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          23
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4DH78E",
+        "SOURCE-COMPUTER"
+      ],
+      "properties": {
+        "programName": "ZM4DH78E",
+        "name": "SOURCE-COMPUTER",
+        "summary": "Orquesta una fase funcional de ZM4DH78E, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 700,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          24
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4DH78E",
+        "IBM-4381"
+      ],
+      "properties": {
+        "programName": "ZM4DH78E",
+        "name": "IBM-4381",
+        "summary": "Orquesta una fase funcional de ZM4DH78E, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 1000,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          27
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4DH78E",
+        "OBJECT-COMPUTER"
+      ],
+      "properties": {
+        "programName": "ZM4DH78E",
+        "name": "OBJECT-COMPUTER",
+        "summary": "Orquesta una fase funcional de ZM4DH78E, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 900,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          26
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4DH78E",
+        "INPUT-OUTPUT"
+      ],
+      "properties": {
+        "programName": "ZM4DH78E",
+        "name": "INPUT-OUTPUT",
+        "summary": "Orquesta una fase funcional de ZM4DH78E, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 1100,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          28
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4DH78E",
+        "FILE-CONTROL"
+      ],
+      "properties": {
+        "programName": "ZM4DH78E",
+        "name": "FILE-CONTROL",
+        "summary": "Orquesta una fase funcional de ZM4DH78E, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 1200,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          29
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4DH78E",
+        "FILE"
+      ],
+      "properties": {
+        "programName": "ZM4DH78E",
+        "name": "FILE",
+        "summary": "Orquesta una fase funcional de ZM4DH78E, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 1300,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          39
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4DH78E",
+        "WORKING-STORAGE"
+      ],
+      "properties": {
+        "programName": "ZM4DH78E",
+        "name": "WORKING-STORAGE",
+        "summary": "Orquesta una fase funcional de ZM4DH78E, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 1400,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          49
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4DH78E",
+        "LINKAGE"
+      ],
+      "properties": {
+        "programName": "ZM4DH78E",
+        "name": "LINKAGE",
+        "summary": "Orquesta una fase funcional de ZM4DH78E, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 1500,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          226
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4DH78E",
+        "000-CONTROL"
+      ],
+      "properties": {
+        "programName": "ZM4DH78E",
+        "name": "000-CONTROL",
+        "summary": "Orquesta una fase funcional de ZM4DH78E, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 1600,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          236
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4DH78E",
+        "010-INICIO"
+      ],
+      "properties": {
+        "programName": "ZM4DH78E",
+        "name": "010-INICIO",
+        "summary": "Inicializa el flujo operativo de ZM4DH78E, preparando contexto y validaciones de arranque.",
+        "executionOrder": 1700,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          251
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4DH78E",
+        "END-READ"
+      ],
+      "properties": {
+        "programName": "ZM4DH78E",
+        "name": "END-READ",
+        "summary": "Orquesta una fase funcional de ZM4DH78E, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 1800,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          265
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4DH78E",
+        "020-DECLARA-CURSORES"
+      ],
+      "properties": {
+        "programName": "ZM4DH78E",
+        "name": "020-DECLARA-CURSORES",
+        "summary": "Orquesta una fase funcional de ZM4DH78E, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 1900,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          286
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4DH78E",
+        "080-PROCESO"
+      ],
+      "properties": {
+        "programName": "ZM4DH78E",
+        "name": "080-PROCESO",
+        "summary": "Orquesta una fase funcional de ZM4DH78E, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 2000,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          360
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4DH78E",
+        "084-PROCESA-CPAVTA"
+      ],
+      "properties": {
+        "programName": "ZM4DH78E",
+        "name": "084-PROCESA-CPAVTA",
+        "summary": "Orquesta una fase funcional de ZM4DH78E, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 2100,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          389
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4DH78E",
+        "085-PROCESA-IOPERAS"
+      ],
+      "properties": {
+        "programName": "ZM4DH78E",
+        "name": "085-PROCESA-IOPERAS",
+        "summary": "Orquesta una fase funcional de ZM4DH78E, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 2200,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          474
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4DH78E",
+        "086-PROCESA-TRASPASOS"
+      ],
+      "properties": {
+        "programName": "ZM4DH78E",
+        "name": "086-PROCESA-TRASPASOS",
+        "summary": "Orquesta una fase funcional de ZM4DH78E, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 2300,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          736
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4DH78E",
+        "087-CANCELA-TRASPASOS"
+      ],
+      "properties": {
+        "programName": "ZM4DH78E",
+        "name": "087-CANCELA-TRASPASOS",
+        "summary": "Orquesta una fase funcional de ZM4DH78E, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 2400,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          812
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4DH78E",
+        "090-CIERRA-CURSORES"
+      ],
+      "properties": {
+        "programName": "ZM4DH78E",
+        "name": "090-CIERRA-CURSORES",
+        "summary": "Cierra la ejecucion de ZM4DH78E, consolidando trazas y terminacion funcional del proceso.",
+        "executionOrder": 2500,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          936
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4DH78E",
+        "200-FIN"
+      ],
+      "properties": {
+        "programName": "ZM4DH78E",
+        "name": "200-FIN",
+        "summary": "Cierra la ejecucion de ZM4DH78E, consolidando trazas y terminacion funcional del proceso.",
+        "executionOrder": 2600,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          948
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4DH78E",
+        "500-BUSCA-P05"
+      ],
+      "properties": {
+        "programName": "ZM4DH78E",
+        "name": "500-BUSCA-P05",
+        "summary": "Ejecuta lectura/consulta de datos requeridos por ZM4DH78E y deja resultados listos para el siguiente tramo.",
+        "executionOrder": 2700,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          957
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4DH78E",
+        "505-LEE-PARAM-T47"
+      ],
+      "properties": {
+        "programName": "ZM4DH78E",
+        "name": "505-LEE-PARAM-T47",
+        "summary": "Ejecuta lectura/consulta de datos requeridos por ZM4DH78E y deja resultados listos para el siguiente tramo.",
+        "executionOrder": 2800,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          980
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4DH78E",
+        "506-SELECT-PARAM"
+      ],
+      "properties": {
+        "programName": "ZM4DH78E",
+        "name": "506-SELECT-PARAM",
+        "summary": "Orquesta una fase funcional de ZM4DH78E, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 2900,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1000
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4DH78E",
+        "507-SELECT-IREF-ULTIMO"
+      ],
+      "properties": {
+        "programName": "ZM4DH78E",
+        "name": "507-SELECT-IREF-ULTIMO",
+        "summary": "Orquesta una fase funcional de ZM4DH78E, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 3000,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1022
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4DH78E",
+        "510-LEE-OPERAVA"
+      ],
+      "properties": {
+        "programName": "ZM4DH78E",
+        "name": "510-LEE-OPERAVA",
+        "summary": "Ejecuta lectura/consulta de datos requeridos por ZM4DH78E y deja resultados listos para el siguiente tramo.",
+        "executionOrder": 3100,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1061
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4DH78E",
+        "530-DETERMINA-TIP-RETEN"
+      ],
+      "properties": {
+        "programName": "ZM4DH78E",
+        "name": "530-DETERMINA-TIP-RETEN",
+        "summary": "Cierra la ejecucion de ZM4DH78E, consolidando trazas y terminacion funcional del proceso.",
+        "executionOrder": 3200,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1125
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4DH78E",
+        "540-SELECT-MCAPISR"
+      ],
+      "properties": {
+        "programName": "ZM4DH78E",
+        "name": "540-SELECT-MCAPISR",
+        "summary": "Orquesta una fase funcional de ZM4DH78E, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 3300,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1153
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4DH78E",
+        "545-SEL-TRASP"
+      ],
+      "properties": {
+        "programName": "ZM4DH78E",
+        "name": "545-SEL-TRASP",
+        "summary": "Orquesta una fase funcional de ZM4DH78E, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 3400,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1191
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4DH78E",
+        "550-SEL-MCAPISR-CPAVTA"
+      ],
+      "properties": {
+        "programName": "ZM4DH78E",
+        "name": "550-SEL-MCAPISR-CPAVTA",
+        "summary": "Orquesta una fase funcional de ZM4DH78E, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 3500,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1230
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4DH78E",
+        "556-SEL-CANRET"
+      ],
+      "properties": {
+        "programName": "ZM4DH78E",
+        "name": "556-SEL-CANRET",
+        "summary": "Orquesta una fase funcional de ZM4DH78E, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 3600,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1264
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4DH78E",
+        "555-SEL-RETIROS"
+      ],
+      "properties": {
+        "programName": "ZM4DH78E",
+        "name": "555-SEL-RETIROS",
+        "summary": "Orquesta una fase funcional de ZM4DH78E, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 3700,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1290
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4DH78E",
+        "600-INSERTA-PARAM"
+      ],
+      "properties": {
+        "programName": "ZM4DH78E",
+        "name": "600-INSERTA-PARAM",
+        "summary": "Persiste actualizaciones de negocio en ZM4DH78E, aplicando reglas de escritura y control de estado.",
+        "executionOrder": 3800,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1316
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4DH78E",
+        "600-INSERTA-MCAPISR"
+      ],
+      "properties": {
+        "programName": "ZM4DH78E",
+        "name": "600-INSERTA-MCAPISR",
+        "summary": "Persiste actualizaciones de negocio en ZM4DH78E, aplicando reglas de escritura y control de estado.",
+        "executionOrder": 3900,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1338
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4DH78E",
+        "610-INSERT-TRASP"
+      ],
+      "properties": {
+        "programName": "ZM4DH78E",
+        "name": "610-INSERT-TRASP",
+        "summary": "Persiste actualizaciones de negocio en ZM4DH78E, aplicando reglas de escritura y control de estado.",
+        "executionOrder": 4000,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1379
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4DH78E",
+        "670-UPDATE-PARAM-T47"
+      ],
+      "properties": {
+        "programName": "ZM4DH78E",
+        "name": "670-UPDATE-PARAM-T47",
+        "summary": "Orquesta una fase funcional de ZM4DH78E, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 4100,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1421
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4DH78E",
+        "650-UPDATE-MCAPISR"
+      ],
+      "properties": {
+        "programName": "ZM4DH78E",
+        "name": "650-UPDATE-MCAPISR",
+        "summary": "Orquesta una fase funcional de ZM4DH78E, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 4200,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1456
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4DH78E",
+        "655-UPD-TRASP"
+      ],
+      "properties": {
+        "programName": "ZM4DH78E",
+        "name": "655-UPD-TRASP",
+        "summary": "Orquesta una fase funcional de ZM4DH78E, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 4300,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1486
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4DH78E",
+        "660-ACTCTO-TRASP"
+      ],
+      "properties": {
+        "programName": "ZM4DH78E",
+        "name": "660-ACTCTO-TRASP",
+        "summary": "Orquesta una fase funcional de ZM4DH78E, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 4400,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1515
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4DH78E",
+        "665-ACT-CPASVTAS"
+      ],
+      "properties": {
+        "programName": "ZM4DH78E",
+        "name": "665-ACT-CPASVTAS",
+        "summary": "Orquesta una fase funcional de ZM4DH78E, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 4500,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1550
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4DH78E",
+        "700-DELETE-MCAPISR"
+      ],
+      "properties": {
+        "programName": "ZM4DH78E",
+        "name": "700-DELETE-MCAPISR",
+        "summary": "Orquesta una fase funcional de ZM4DH78E, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 4600,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1586
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4DH78E",
+        "710-DELETE-MCAPISR"
+      ],
+      "properties": {
+        "programName": "ZM4DH78E",
+        "name": "710-DELETE-MCAPISR",
+        "summary": "Orquesta una fase funcional de ZM4DH78E, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 4700,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1611
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4DH78E",
+        "850-COMMIT-GRAL"
+      ],
+      "properties": {
+        "programName": "ZM4DH78E",
+        "name": "850-COMMIT-GRAL",
+        "summary": "Orquesta una fase funcional de ZM4DH78E, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 4800,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1637
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4DH78E",
+        "850-COMMIT"
+      ],
+      "properties": {
+        "programName": "ZM4DH78E",
+        "name": "850-COMMIT",
+        "summary": "Orquesta una fase funcional de ZM4DH78E, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 4900,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1648
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4DH78E",
+        "980-ABORTA"
+      ],
+      "properties": {
+        "programName": "ZM4DH78E",
+        "name": "980-ABORTA",
+        "summary": "Gestiona contingencias en ZM4DH78E, concentrando el manejo de error y salida controlada.",
+        "executionOrder": 5000,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1670
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4DH78E",
+        "990-CIF-CTL"
+      ],
+      "properties": {
+        "programName": "ZM4DH78E",
+        "name": "990-CIF-CTL",
+        "summary": "Orquesta una fase funcional de ZM4DH78E, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 5100,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1680
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "SQLCA"
+      ],
+      "properties": {
+        "name": "SQLCA",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          194
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "ZAGPOCTA"
+      ],
+      "properties": {
+        "name": "ZAGPOCTA",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          222
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "ZCATOPER"
+      ],
+      "properties": {
+        "name": "ZCATOPER",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          217
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "ZCONCEPT"
+      ],
+      "properties": {
+        "name": "ZCONCEPT",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          208
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "ZMCAPISR"
+      ],
+      "properties": {
+        "name": "ZMCAPISR",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          204
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "ZMWBP001"
+      ],
+      "properties": {
+        "name": "ZMWBP001",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1665
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "ZMWBP070"
+      ],
+      "properties": {
+        "name": "ZMWBP070",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1692
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "ZMWBV000"
+      ],
+      "properties": {
+        "name": "ZMWBV000",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          187
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "ZMWBV002"
+      ],
+      "properties": {
+        "name": "ZMWBV002",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          138
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "ZMWBV003"
+      ],
+      "properties": {
+        "name": "ZMWBV003",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          179
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "ZMWBV004"
+      ],
+      "properties": {
+        "name": "ZMWBV004",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          116
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "ZMWBV147"
+      ],
+      "properties": {
+        "name": "ZMWBV147",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          131
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "ZMWBV356"
+      ],
+      "properties": {
+        "name": "ZMWBV356",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          124
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "ZMWSCD60"
+      ],
+      "properties": {
+        "name": "ZMWSCD60",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          62
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "ZOPERAVA"
+      ],
+      "properties": {
+        "name": "ZOPERAVA",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          213
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "ZPARAM"
+      ],
+      "properties": {
+        "name": "ZPARAM",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          199
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "DBTable",
+      "key": [
+        "AGPOCTA"
+      ],
+      "properties": {
+        "name": "AGPOCTA",
+        "ingestion": "auto",
+        "layer": "data-access",
+        "nodeType": "physical-table",
+        "viewTag": "data-access",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          291,
+          292,
+          293,
+          294,
+          295,
+          296,
+          297,
+          298,
+          299,
+          300,
+          301,
+          302,
+          303,
+          304,
+          308,
+          309,
+          310,
+          311,
+          312,
+          313,
+          314,
+          315,
+          316,
+          317,
+          319,
+          321,
+          322
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "DBTable",
+      "key": [
+        "OPERAVA"
+      ],
+      "properties": {
+        "name": "OPERAVA",
+        "ingestion": "auto",
+        "layer": "data-access",
+        "nodeType": "physical-table",
+        "viewTag": "data-access",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          291,
+          292,
+          293,
+          294,
+          295,
+          296,
+          297,
+          298,
+          299,
+          300,
+          301,
+          302,
+          303,
+          304,
+          308,
+          309,
+          310,
+          311,
+          312,
+          313,
+          314,
+          315,
+          316,
+          317,
+          319,
+          321,
+          322,
+          1024,
+          1025,
+          1026,
+          1027,
+          1028,
+          1029,
+          1030,
+          1031,
+          1032,
+          1033,
+          1034,
+          1035,
+          1036,
+          1037,
+          1038,
+          1039,
+          1041,
+          1043
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    },
+    {
+      "label": "DBTable",
+      "key": [
+        "PARAM"
+      ],
+      "properties": {
+        "name": "PARAM",
+        "ingestion": "auto",
+        "layer": "data-access",
+        "nodeType": "physical-table",
+        "viewTag": "data-access",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1318,
+          1319,
+          1320,
+          1321,
+          1322,
+          1323,
+          1324,
+          1426,
+          1427,
+          1428,
+          1429,
+          1430,
+          1431
+        ],
+        "runId": "e2e-20260626T001928Z-zm4dh78e"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "type": "CONTAINS_DCLGEN",
+      "from": [
+        "DclgenLibrary",
+        [
+          "CBOD.ZMEA.DCLGEN(ZMCAPISR))                     *"
+        ]
+      ],
+      "to": [
+        "DclgenArtifact",
+        [
+          "ZMCAPISR"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DESCRIBES_TABLE",
+      "from": [
+        "DclgenArtifact",
+        [
+          "ZMCAPISR"
+        ]
+      ],
+      "to": [
+        "DBTable",
+        [
+          "MCAPISR"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "HAS_COLUMN",
+      "from": [
+        "DBTable",
+        [
+          "MCAPISR"
+        ]
+      ],
+      "to": [
+        "TableColumn",
+        [
+          "MCAPISR.ICUENTA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_COLUMN",
+      "from": [
+        "DclgenArtifact",
+        [
+          "ZMCAPISR"
+        ]
+      ],
+      "to": [
+        "TableColumn",
+        [
+          "MCAPISR.ICUENTA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_HOST_FIELD",
+      "from": [
+        "DclgenArtifact",
+        [
+          "ZMCAPISR"
+        ]
+      ],
+      "to": [
+        "CobolHostField",
+        [
+          "ZMCAPISR.ICUENTA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "TRANSLATED_TO",
+      "from": [
+        "TableColumn",
+        [
+          "MCAPISR.ICUENTA"
+        ]
+      ],
+      "to": [
+        "CobolHostField",
+        [
+          "ZMCAPISR.ICUENTA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "HAS_COLUMN",
+      "from": [
+        "DBTable",
+        [
+          "MCAPISR"
+        ]
+      ],
+      "to": [
+        "TableColumn",
+        [
+          "MCAPISR.IEMISORA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_COLUMN",
+      "from": [
+        "DclgenArtifact",
+        [
+          "ZMCAPISR"
+        ]
+      ],
+      "to": [
+        "TableColumn",
+        [
+          "MCAPISR.IEMISORA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_HOST_FIELD",
+      "from": [
+        "DclgenArtifact",
+        [
+          "ZMCAPISR"
+        ]
+      ],
+      "to": [
+        "CobolHostField",
+        [
+          "ZMCAPISR.IEMISORA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "TRANSLATED_TO",
+      "from": [
+        "TableColumn",
+        [
+          "MCAPISR.IEMISORA"
+        ]
+      ],
+      "to": [
+        "CobolHostField",
+        [
+          "ZMCAPISR.IEMISORA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "HAS_COLUMN",
+      "from": [
+        "DBTable",
+        [
+          "MCAPISR"
+        ]
+      ],
+      "to": [
+        "TableColumn",
+        [
+          "MCAPISR.ISERIE"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_COLUMN",
+      "from": [
+        "DclgenArtifact",
+        [
+          "ZMCAPISR"
+        ]
+      ],
+      "to": [
+        "TableColumn",
+        [
+          "MCAPISR.ISERIE"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_HOST_FIELD",
+      "from": [
+        "DclgenArtifact",
+        [
+          "ZMCAPISR"
+        ]
+      ],
+      "to": [
+        "CobolHostField",
+        [
+          "ZMCAPISR.ISERIE"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "TRANSLATED_TO",
+      "from": [
+        "TableColumn",
+        [
+          "MCAPISR.ISERIE"
+        ]
+      ],
+      "to": [
+        "CobolHostField",
+        [
+          "ZMCAPISR.ISERIE"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "HAS_COLUMN",
+      "from": [
+        "DBTable",
+        [
+          "MCAPISR"
+        ]
+      ],
+      "to": [
+        "TableColumn",
+        [
+          "MCAPISR.ICUPON"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_COLUMN",
+      "from": [
+        "DclgenArtifact",
+        [
+          "ZMCAPISR"
+        ]
+      ],
+      "to": [
+        "TableColumn",
+        [
+          "MCAPISR.ICUPON"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_HOST_FIELD",
+      "from": [
+        "DclgenArtifact",
+        [
+          "ZMCAPISR"
+        ]
+      ],
+      "to": [
+        "CobolHostField",
+        [
+          "ZMCAPISR.ICUPON"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "TRANSLATED_TO",
+      "from": [
+        "TableColumn",
+        [
+          "MCAPISR.ICUPON"
+        ]
+      ],
+      "to": [
+        "CobolHostField",
+        [
+          "ZMCAPISR.ICUPON"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "HAS_COLUMN",
+      "from": [
+        "DBTable",
+        [
+          "MCAPISR"
+        ]
+      ],
+      "to": [
+        "TableColumn",
+        [
+          "MCAPISR.STIPOPER"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_COLUMN",
+      "from": [
+        "DclgenArtifact",
+        [
+          "ZMCAPISR"
+        ]
+      ],
+      "to": [
+        "TableColumn",
+        [
+          "MCAPISR.STIPOPER"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_HOST_FIELD",
+      "from": [
+        "DclgenArtifact",
+        [
+          "ZMCAPISR"
+        ]
+      ],
+      "to": [
+        "CobolHostField",
+        [
+          "ZMCAPISR.STIPOPER"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "TRANSLATED_TO",
+      "from": [
+        "TableColumn",
+        [
+          "MCAPISR.STIPOPER"
+        ]
+      ],
+      "to": [
+        "CobolHostField",
+        [
+          "ZMCAPISR.STIPOPER"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "HAS_COLUMN",
+      "from": [
+        "DBTable",
+        [
+          "MCAPISR"
+        ]
+      ],
+      "to": [
+        "TableColumn",
+        [
+          "MCAPISR.CTITEFE"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_COLUMN",
+      "from": [
+        "DclgenArtifact",
+        [
+          "ZMCAPISR"
+        ]
+      ],
+      "to": [
+        "TableColumn",
+        [
+          "MCAPISR.CTITEFE"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_HOST_FIELD",
+      "from": [
+        "DclgenArtifact",
+        [
+          "ZMCAPISR"
+        ]
+      ],
+      "to": [
+        "CobolHostField",
+        [
+          "ZMCAPISR.CTITEFE"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "TRANSLATED_TO",
+      "from": [
+        "TableColumn",
+        [
+          "MCAPISR.CTITEFE"
+        ]
+      ],
+      "to": [
+        "CobolHostField",
+        [
+          "ZMCAPISR.CTITEFE"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "HAS_COLUMN",
+      "from": [
+        "DBTable",
+        [
+          "MCAPISR"
+        ]
+      ],
+      "to": [
+        "TableColumn",
+        [
+          "MCAPISR.FOPERA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_COLUMN",
+      "from": [
+        "DclgenArtifact",
+        [
+          "ZMCAPISR"
+        ]
+      ],
+      "to": [
+        "TableColumn",
+        [
+          "MCAPISR.FOPERA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_HOST_FIELD",
+      "from": [
+        "DclgenArtifact",
+        [
+          "ZMCAPISR"
+        ]
+      ],
+      "to": [
+        "CobolHostField",
+        [
+          "ZMCAPISR.FOPERA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "TRANSLATED_TO",
+      "from": [
+        "TableColumn",
+        [
+          "MCAPISR.FOPERA"
+        ]
+      ],
+      "to": [
+        "CobolHostField",
+        [
+          "ZMCAPISR.FOPERA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "HAS_COLUMN",
+      "from": [
+        "DBTable",
+        [
+          "MCAPISR"
+        ]
+      ],
+      "to": [
+        "TableColumn",
+        [
+          "MCAPISR.FLIQUIDA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_COLUMN",
+      "from": [
+        "DclgenArtifact",
+        [
+          "ZMCAPISR"
+        ]
+      ],
+      "to": [
+        "TableColumn",
+        [
+          "MCAPISR.FLIQUIDA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_HOST_FIELD",
+      "from": [
+        "DclgenArtifact",
+        [
+          "ZMCAPISR"
+        ]
+      ],
+      "to": [
+        "CobolHostField",
+        [
+          "ZMCAPISR.FLIQUIDA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "TRANSLATED_TO",
+      "from": [
+        "TableColumn",
+        [
+          "MCAPISR.FLIQUIDA"
+        ]
+      ],
+      "to": [
+        "CobolHostField",
+        [
+          "ZMCAPISR.FLIQUIDA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "HAS_COLUMN",
+      "from": [
+        "DBTable",
+        [
+          "MCAPISR"
+        ]
+      ],
+      "to": [
+        "TableColumn",
+        [
+          "MCAPISR.FSIST"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_COLUMN",
+      "from": [
+        "DclgenArtifact",
+        [
+          "ZMCAPISR"
+        ]
+      ],
+      "to": [
+        "TableColumn",
+        [
+          "MCAPISR.FSIST"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_HOST_FIELD",
+      "from": [
+        "DclgenArtifact",
+        [
+          "ZMCAPISR"
+        ]
+      ],
+      "to": [
+        "CobolHostField",
+        [
+          "ZMCAPISR.FSIST"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "TRANSLATED_TO",
+      "from": [
+        "TableColumn",
+        [
+          "MCAPISR.FSIST"
+        ]
+      ],
+      "to": [
+        "CobolHostField",
+        [
+          "ZMCAPISR.FSIST"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "HAS_COLUMN",
+      "from": [
+        "DBTable",
+        [
+          "MCAPISR"
+        ]
+      ],
+      "to": [
+        "TableColumn",
+        [
+          "MCAPISR.SESTATUS"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_COLUMN",
+      "from": [
+        "DclgenArtifact",
+        [
+          "ZMCAPISR"
+        ]
+      ],
+      "to": [
+        "TableColumn",
+        [
+          "MCAPISR.SESTATUS"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_HOST_FIELD",
+      "from": [
+        "DclgenArtifact",
+        [
+          "ZMCAPISR"
+        ]
+      ],
+      "to": [
+        "CobolHostField",
+        [
+          "ZMCAPISR.SESTATUS"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "TRANSLATED_TO",
+      "from": [
+        "TableColumn",
+        [
+          "MCAPISR.SESTATUS"
+        ]
+      ],
+      "to": [
+        "CobolHostField",
+        [
+          "ZMCAPISR.SESTATUS"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "HAS_COLUMN",
+      "from": [
+        "DBTable",
+        [
+          "MCAPISR"
+        ]
+      ],
+      "to": [
+        "TableColumn",
+        [
+          "MCAPISR.IDATO1"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_COLUMN",
+      "from": [
+        "DclgenArtifact",
+        [
+          "ZMCAPISR"
+        ]
+      ],
+      "to": [
+        "TableColumn",
+        [
+          "MCAPISR.IDATO1"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "DECLARES_HOST_FIELD",
+      "from": [
+        "DclgenArtifact",
+        [
+          "ZMCAPISR"
+        ]
+      ],
+      "to": [
+        "CobolHostField",
+        [
+          "ZMCAPISR.IDATO1"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "TRANSLATED_TO",
+      "from": [
+        "TableColumn",
+        [
+          "MCAPISR.IDATO1"
+        ]
+      ],
+      "to": [
+        "CobolHostField",
+        [
+          "ZMCAPISR.IDATO1"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "dcl/ZMCAPISR.dcl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTS_FUNCTIONALITY",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Functionality",
+        [
+          "FUNCTIONALITY_ZM4DH78E"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "HAS_SUBFUNCTIONALITY",
+      "from": [
+        "Functionality",
+        [
+          "FUNCTIONALITY_ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "SubFunctionality",
+        [
+          "FUNCTIONALITY_ZM4DH78E",
+          "ZM4DH78E_PROCESSING"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "PROGRAM-ID"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          3
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "ZM4DH78E"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          4
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "AUTHOR"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          5
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "INSTALLATION"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          7
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "DATE-WRITTEN"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          9
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "CONFIGURATION"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          23
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "SOURCE-COMPUTER"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          24
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "IBM-4381"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          27
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "OBJECT-COMPUTER"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          26
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "INPUT-OUTPUT"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          28
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "FILE-CONTROL"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          29
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "FILE"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          39
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          49
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "LINKAGE"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          226
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "000-CONTROL"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          236
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "010-INICIO"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          251
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "END-READ"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          265
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "020-DECLARA-CURSORES"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          286
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "080-PROCESO"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          360
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "084-PROCESA-CPAVTA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          389
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "085-PROCESA-IOPERAS"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          474
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "086-PROCESA-TRASPASOS"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          736
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "087-CANCELA-TRASPASOS"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          812
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "090-CIERRA-CURSORES"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          936
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "200-FIN"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          948
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "500-BUSCA-P05"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          957
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "505-LEE-PARAM-T47"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          980
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "506-SELECT-PARAM"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1000
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "507-SELECT-IREF-ULTIMO"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1022
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "510-LEE-OPERAVA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1061
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "530-DETERMINA-TIP-RETEN"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1125
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "540-SELECT-MCAPISR"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1153
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "545-SEL-TRASP"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1191
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "550-SEL-MCAPISR-CPAVTA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1230
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "556-SEL-CANRET"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1264
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "555-SEL-RETIROS"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1290
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "600-INSERTA-PARAM"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1316
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "600-INSERTA-MCAPISR"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1338
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "610-INSERT-TRASP"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1379
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "670-UPDATE-PARAM-T47"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1421
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "650-UPDATE-MCAPISR"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1456
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "655-UPD-TRASP"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1486
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "660-ACTCTO-TRASP"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1515
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "665-ACT-CPASVTAS"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1550
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "700-DELETE-MCAPISR"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1586
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "710-DELETE-MCAPISR"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1611
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "850-COMMIT-GRAL"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1637
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "850-COMMIT"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1648
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "980-ABORTA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1670
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "990-CIF-CTL"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1680
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SQLCA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          194
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZAGPOCTA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          222
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZCATOPER"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          217
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZCONCEPT"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          208
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMCAPISR"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          204
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1665
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP070"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1692
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBV000"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          187
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBV002"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          138
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBV003"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          179
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBV004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          116
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBV147"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          131
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBV356"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          124
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWSCD60"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          62
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZOPERAVA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          213
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZPARAM"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          199
+        ]
+      }
+    },
+    {
+      "type": "READS_TABLE",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "DBTable",
+        [
+          "AGPOCTA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          291,
+          292,
+          293,
+          294,
+          295,
+          296,
+          297,
+          298,
+          299,
+          300,
+          301,
+          302,
+          303,
+          304,
+          308,
+          309,
+          310,
+          311,
+          312,
+          313,
+          314,
+          315,
+          316,
+          317,
+          319,
+          321,
+          322
+        ]
+      }
+    },
+    {
+      "type": "READS_TABLE",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "DBTable",
+        [
+          "MCAPISR"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          331,
+          332,
+          333,
+          334,
+          335,
+          336,
+          337,
+          338,
+          339,
+          341,
+          342,
+          343,
+          344,
+          345,
+          346,
+          347,
+          348,
+          349,
+          350,
+          351,
+          352,
+          355,
+          356,
+          1155,
+          1157,
+          1158,
+          1159,
+          1160,
+          1162,
+          1163,
+          1164,
+          1165,
+          1167,
+          1169,
+          1170,
+          1192,
+          1194,
+          1195,
+          1197,
+          1198,
+          1199,
+          1200,
+          1201,
+          1202,
+          1203,
+          1204,
+          1205,
+          1206,
+          1207,
+          1208,
+          1209,
+          1232,
+          1233,
+          1234,
+          1235,
+          1236,
+          1237,
+          1238,
+          1239,
+          1240,
+          1241,
+          1242,
+          1243,
+          1587,
+          1588,
+          1589,
+          1590,
+          1591,
+          1592,
+          1593,
+          1594,
+          1612,
+          1613,
+          1614,
+          1615,
+          1616,
+          1617,
+          1618,
+          1619
+        ]
+      }
+    },
+    {
+      "type": "READS_TABLE",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "DBTable",
+        [
+          "OPERAVA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          291,
+          292,
+          293,
+          294,
+          295,
+          296,
+          297,
+          298,
+          299,
+          300,
+          301,
+          302,
+          303,
+          304,
+          308,
+          309,
+          310,
+          311,
+          312,
+          313,
+          314,
+          315,
+          316,
+          317,
+          319,
+          321,
+          322,
+          1024,
+          1025,
+          1026,
+          1027,
+          1028,
+          1029,
+          1030,
+          1031,
+          1032,
+          1033,
+          1034,
+          1035,
+          1036,
+          1037,
+          1038,
+          1039,
+          1041,
+          1043
+        ]
+      }
+    },
+    {
+      "type": "READS_TABLE",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "DBTable",
+        [
+          "PARAM"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          958,
+          959,
+          960,
+          961,
+          962,
+          963,
+          1003,
+          1004,
+          1005,
+          1006,
+          1007,
+          1008,
+          1009,
+          1130,
+          1131,
+          1132,
+          1133,
+          1134,
+          1136,
+          1137,
+          1138
+        ]
+      }
+    },
+    {
+      "type": "UPDATES_TABLE",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "DBTable",
+        [
+          "MCAPISR"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1339,
+          1340,
+          1341,
+          1342,
+          1343,
+          1344,
+          1345,
+          1346,
+          1347,
+          1348,
+          1349,
+          1350,
+          1351,
+          1352,
+          1353,
+          1354,
+          1355,
+          1356,
+          1357,
+          1358,
+          1359,
+          1360,
+          1361,
+          1362,
+          1381,
+          1382,
+          1383,
+          1384,
+          1385,
+          1386,
+          1387,
+          1388,
+          1389,
+          1390,
+          1391,
+          1392,
+          1393,
+          1394,
+          1395,
+          1396,
+          1397,
+          1398,
+          1399,
+          1400,
+          1401,
+          1402,
+          1403,
+          1404,
+          1457,
+          1458,
+          1459,
+          1461,
+          1462,
+          1463,
+          1464,
+          1465,
+          1466,
+          1467,
+          1468,
+          1488,
+          1489,
+          1490,
+          1491,
+          1493,
+          1494,
+          1495,
+          1496,
+          1497,
+          1498,
+          1517,
+          1518,
+          1519,
+          1520,
+          1522,
+          1523,
+          1524,
+          1525,
+          1526,
+          1527,
+          1528,
+          1552,
+          1553,
+          1554,
+          1555,
+          1556,
+          1557,
+          1559,
+          1560,
+          1561,
+          1562,
+          1563,
+          1564,
+          1587,
+          1588,
+          1589,
+          1590,
+          1591,
+          1592,
+          1593,
+          1594,
+          1612,
+          1613,
+          1614,
+          1615,
+          1616,
+          1617,
+          1618,
+          1619
+        ]
+      }
+    },
+    {
+      "type": "UPDATES_TABLE",
+      "from": [
+        "Program",
+        [
+          "ZM4DH78E"
+        ]
+      ],
+      "to": [
+        "DBTable",
+        [
+          "PARAM"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1318,
+          1319,
+          1320,
+          1321,
+          1322,
+          1323,
+          1324,
+          1426,
+          1427,
+          1428,
+          1429,
+          1430,
+          1431
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "000-CONTROL"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP070"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          237
+        ]
+      }
+    },
+    {
+      "type": "REALIZED_BY",
+      "from": [
+        "SubFunctionality",
+        [
+          "FUNCTIONALITY_ZM4DH78E",
+          "ZM4DH78E_PROCESSING"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "990-CIF-CTL"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1680
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "000-CONTROL"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP070"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          237
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "020-DECLARA-CURSORES"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          328
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "020-DECLARA-CURSORES"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          328
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "085-PROCESA-IOPERAS"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          527,
+          588,
+          669,
+          727
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "085-PROCESA-IOPERAS"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          527,
+          588,
+          669,
+          727
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "090-CIERRA-CURSORES"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          943
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "090-CIERRA-CURSORES"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          943
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "500-BUSCA-P05"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          967,
+          972
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "500-BUSCA-P05"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          967,
+          972
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "506-SELECT-PARAM"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1017
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "506-SELECT-PARAM"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1017
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "507-SELECT-IREF-ULTIMO"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1055
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "507-SELECT-IREF-ULTIMO"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1055
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "510-LEE-OPERAVA"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1115
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "510-LEE-OPERAVA"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1115
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "530-DETERMINA-TIP-RETEN"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1142
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "530-DETERMINA-TIP-RETEN"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1142
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "540-SELECT-MCAPISR"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1180
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "540-SELECT-MCAPISR"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1180
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "545-SEL-TRASP"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1219
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "545-SEL-TRASP"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1219
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "550-SEL-MCAPISR-CPAVTA"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1253
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "550-SEL-MCAPISR-CPAVTA"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1253
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "555-SEL-RETIROS"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1306
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "555-SEL-RETIROS"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1306
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "556-SEL-CANRET"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1280
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "556-SEL-CANRET"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1280
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "600-INSERTA-MCAPISR"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1370
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "600-INSERTA-MCAPISR"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1370
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "610-INSERT-TRASP"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1412
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "610-INSERT-TRASP"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1412
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "850-COMMIT"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1658,
+          1665
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "850-COMMIT"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1658,
+          1665
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "850-COMMIT-GRAL"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1643
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "850-COMMIT-GRAL"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP001"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1643
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "990-CIF-CTL"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP070"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1692
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "990-CIF-CTL"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBP070"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          1692
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SQLCA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          194
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SQLCA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          194
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZAGPOCTA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          222
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZAGPOCTA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          222
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZCATOPER"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          217
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZCATOPER"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          217
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZCONCEPT"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          208
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZCONCEPT"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          208
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMCAPISR"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          204
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMCAPISR"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          204
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBV000"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          187
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBV000"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          187
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBV002"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          138
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBV002"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          138
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBV003"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          179
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBV003"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          179
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBV004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          116
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBV004"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          116
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBV147"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          131
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBV147"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          131
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBV356"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          124
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWBV356"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          124
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWSCD60"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          62
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMWSCD60"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          62
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZOPERAVA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          213
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZOPERAVA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          213
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZPARAM"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          199
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4DH78E",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZPARAM"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260626T001928Z-zm4dh78e",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4DH78E.cbl",
+        "evidenceLines": [
+          199
+        ]
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "program": "ZM4DH78E",
+      "sequenceColumnsNormalized": true,
+      "performTargetCount": 35,
+      "paragraphCount": 51,
+      "missingPerformTargets": []
+    }
+  ]
+}

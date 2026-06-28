@@ -1,0 +1,602 @@
+{
+  "kind": "bms-graph-ai-supervision",
+  "runAt": "2026-06-25T22:09:46.301704+00:00",
+  "scope": {
+    "mapKey": "ZMG0103::ZMG0103",
+    "program": "ZM2OJ102"
+  },
+  "deterministic": {
+    "verdict": "mostly_sense",
+    "confidence": "medium",
+    "findingCounts": {
+      "critical": 0,
+      "high": 0,
+      "medium": 1
+    },
+    "findings": [
+      {
+        "severity": "medium",
+        "code": "NO_NAVIGATION_DESTINATIONS",
+        "message": "No hay destinos explicitos suficientes; existen destinos parciales (derived/dynamic_unresolved) pero falta resolverlos.",
+        "evidence": {
+          "total": 15,
+          "withMap": 0,
+          "withProgram": 0,
+          "dynamicUnresolved": 14,
+          "derivedPerform": 0,
+          "explicitTransid": 0
+        }
+      }
+    ]
+  },
+  "ai": {
+    "status": "ok",
+    "provider": "copilot",
+    "result": {
+      "verdict": "partial_sense",
+      "confidence": "medium",
+      "risks": [
+        "No navigation destinations inferred for transitions",
+        "State-field links are mostly read-only in this scope"
+      ],
+      "recommendations": [
+        "Expand destination extraction patterns around XCTL/LINK/CALL and MAP/MAPSET",
+        "Improve classifier to emit VALIDATES_INPUT and WRITES_FIELD with stronger evidence"
+      ]
+    },
+    "promptSummary": {
+      "schema": {
+        "verdict": "sense|mostly_sense|partial_sense|no_sense",
+        "confidence": "low|medium|high",
+        "risks": [
+          "..."
+        ],
+        "recommendations": [
+          "..."
+        ]
+      },
+      "task": "Validar consistencia semantica de grafo BMS"
+    }
+  },
+  "copilotPrompt": {
+    "provider": "copilot",
+    "system": "Eres un auditor senior de grafos semanticos COBOL/BMS. Debes evaluar si el modelo tiene sentido funcional y explicar huecos. Responde JSON estricto con claves: verdict, confidence, risks, recommendations.",
+    "user": {
+      "task": "Validar consistencia semantica de grafo BMS",
+      "context": {
+        "mapKey": "ZMG0103::ZMG0103",
+        "programFilter": "ZM2OJ102",
+        "counts": [
+          {
+            "fields": "7",
+            "inputFields": "1",
+            "keys": "12",
+            "subfuncs": "12",
+            "programs": "1"
+          }
+        ],
+        "stateTransitionMatrix": [
+          {
+            "program": "\"ZM2OJ102\"",
+            "state": "\"1\"",
+            "transitions": "8"
+          },
+          {
+            "program": "\"ZM2OJ102\"",
+            "state": "\"3\"",
+            "transitions": "6"
+          },
+          {
+            "program": "\"ZM2OJ102\"",
+            "state": "\"GLOBAL\"",
+            "transitions": "1"
+          }
+        ],
+        "destinationCoverage": [
+          {
+            "total": "15",
+            "withMap": "0",
+            "withProgram": "0",
+            "dynamicUnresolved": "14",
+            "derivedPerform": "0",
+            "explicitTransid": "0"
+          }
+        ],
+        "stateFieldLinks": [
+          {
+            "program": "\"ZM2OJ102\"",
+            "state": "\"0\"",
+            "rel": "NULL",
+            "relCount": "0",
+            "fields": "[]"
+          },
+          {
+            "program": "\"ZM2OJ102\"",
+            "state": "\"1\"",
+            "rel": "\"READS_INPUT\"",
+            "relCount": "1",
+            "fields": "[\"MENS7\"]"
+          },
+          {
+            "program": "\"ZM2OJ102\"",
+            "state": "\"1\"",
+            "rel": "\"VALIDATES_INPUT\"",
+            "relCount": "1",
+            "fields": "[\"MENS7\"]"
+          },
+          {
+            "program": "\"ZM2OJ102\"",
+            "state": "\"1\"",
+            "rel": "\"WRITES_FIELD\"",
+            "relCount": "1",
+            "fields": "[\"MENS7\"]"
+          },
+          {
+            "program": "\"ZM2OJ102\"",
+            "state": "\"2\"",
+            "rel": "NULL",
+            "relCount": "0",
+            "fields": "[]"
+          },
+          {
+            "program": "\"ZM2OJ102\"",
+            "state": "\"3\"",
+            "rel": "\"READS_INPUT\"",
+            "relCount": "1",
+            "fields": "[\"MENS7\"]"
+          },
+          {
+            "program": "\"ZM2OJ102\"",
+            "state": "\"3\"",
+            "rel": "\"VALIDATES_INPUT\"",
+            "relCount": "1",
+            "fields": "[\"MENS7\"]"
+          },
+          {
+            "program": "\"ZM2OJ102\"",
+            "state": "\"3\"",
+            "rel": "\"WRITES_FIELD\"",
+            "relCount": "1",
+            "fields": "[\"MENS7\"]"
+          },
+          {
+            "program": "\"ZM2OJ102\"",
+            "state": "\"GLOBAL\"",
+            "rel": "\"READS_INPUT\"",
+            "relCount": "1",
+            "fields": "[\"MENS7\"]"
+          },
+          {
+            "program": "\"ZM2OJ102\"",
+            "state": "\"GLOBAL\"",
+            "rel": "\"VALIDATES_INPUT\"",
+            "relCount": "1",
+            "fields": "[\"MENS7\"]"
+          },
+          {
+            "program": "\"ZM2OJ102\"",
+            "state": "\"GLOBAL\"",
+            "rel": "\"WRITES_FIELD\"",
+            "relCount": "1",
+            "fields": "[\"MENS7\"]"
+          },
+          {
+            "program": "\"ZM2OJ102\"",
+            "state": "\"OTHER\"",
+            "rel": "NULL",
+            "relCount": "0",
+            "fields": "[]"
+          }
+        ],
+        "sampleTransitions": [
+          {
+            "program": "\"ZM2OJ102\"",
+            "state": "\"1\"",
+            "key": "\"ENTER\"",
+            "targetMapKey": "\"\"",
+            "targetProgram": "\"\"",
+            "subfunc": "\"ZMG0103__ZMG0103__ENTER_PROGRAM_AID\""
+          },
+          {
+            "program": "\"ZM2OJ102\"",
+            "state": "\"1\"",
+            "key": "\"PF10\"",
+            "targetMapKey": "\"\"",
+            "targetProgram": "\"\"",
+            "subfunc": "\"ZMG0103__ZMG0103__PF10_PROGRAM_AID\""
+          },
+          {
+            "program": "\"ZM2OJ102\"",
+            "state": "\"1\"",
+            "key": "\"PF11\"",
+            "targetMapKey": "\"\"",
+            "targetProgram": "\"\"",
+            "subfunc": "\"ZMG0103__ZMG0103__PF11_PROGRAM_AID\""
+          },
+          {
+            "program": "\"ZM2OJ102\"",
+            "state": "\"1\"",
+            "key": "\"PF2\"",
+            "targetMapKey": "\"\"",
+            "targetProgram": "\"\"",
+            "subfunc": "\"ZMG0103__ZMG0103__PF2_PROGRAM_AID\""
+          },
+          {
+            "program": "\"ZM2OJ102\"",
+            "state": "\"1\"",
+            "key": "\"PF3\"",
+            "targetMapKey": "\"\"",
+            "targetProgram": "\"\"",
+            "subfunc": "\"ZMG0103__ZMG0103__PF3_PROGRAM_AID\""
+          },
+          {
+            "program": "\"ZM2OJ102\"",
+            "state": "\"1\"",
+            "key": "\"PF5\"",
+            "targetMapKey": "\"\"",
+            "targetProgram": "\"\"",
+            "subfunc": "\"ZMG0103__ZMG0103__PF5_PROGRAM_AID\""
+          },
+          {
+            "program": "\"ZM2OJ102\"",
+            "state": "\"1\"",
+            "key": "\"PF6\"",
+            "targetMapKey": "\"\"",
+            "targetProgram": "\"\"",
+            "subfunc": "\"ZMG0103__ZMG0103__PF6_PROGRAM_AID\""
+          },
+          {
+            "program": "\"ZM2OJ102\"",
+            "state": "\"1\"",
+            "key": "\"PF9\"",
+            "targetMapKey": "\"\"",
+            "targetProgram": "\"\"",
+            "subfunc": "\"ZMG0103__ZMG0103__PF9_PROGRAM_AID\""
+          },
+          {
+            "program": "\"ZM2OJ102\"",
+            "state": "\"3\"",
+            "key": "\"PF10\"",
+            "targetMapKey": "\"\"",
+            "targetProgram": "\"\"",
+            "subfunc": "\"ZMG0103__ZMG0103__PF10_PROGRAM_AID\""
+          },
+          {
+            "program": "\"ZM2OJ102\"",
+            "state": "\"3\"",
+            "key": "\"PF11\"",
+            "targetMapKey": "\"\"",
+            "targetProgram": "\"\"",
+            "subfunc": "\"ZMG0103__ZMG0103__PF11_PROGRAM_AID\""
+          },
+          {
+            "program": "\"ZM2OJ102\"",
+            "state": "\"3\"",
+            "key": "\"PF2\"",
+            "targetMapKey": "\"\"",
+            "targetProgram": "\"\"",
+            "subfunc": "\"ZMG0103__ZMG0103__PF2_PROGRAM_AID\""
+          },
+          {
+            "program": "\"ZM2OJ102\"",
+            "state": "\"3\"",
+            "key": "\"PF3\"",
+            "targetMapKey": "\"\"",
+            "targetProgram": "\"\"",
+            "subfunc": "\"ZMG0103__ZMG0103__PF3_PROGRAM_AID\""
+          },
+          {
+            "program": "\"ZM2OJ102\"",
+            "state": "\"3\"",
+            "key": "\"PF4\"",
+            "targetMapKey": "\"\"",
+            "targetProgram": "\"\"",
+            "subfunc": "\"ZMG0103__ZMG0103__PF4_PROGRAM_AID\""
+          },
+          {
+            "program": "\"ZM2OJ102\"",
+            "state": "\"3\"",
+            "key": "\"PF5\"",
+            "targetMapKey": "\"\"",
+            "targetProgram": "\"\"",
+            "subfunc": "\"ZMG0103__ZMG0103__PF5_PROGRAM_AID\""
+          },
+          {
+            "program": "\"ZM2OJ102\"",
+            "state": "\"GLOBAL\"",
+            "key": "\"PF12\"",
+            "targetMapKey": "\"\"",
+            "targetProgram": "\"\"",
+            "subfunc": "\"ZMG0103__ZMG0103__PF12_PROGRAM_AID\""
+          }
+        ]
+      },
+      "deterministic": {
+        "verdict": "mostly_sense",
+        "confidence": "medium",
+        "findingCounts": {
+          "critical": 0,
+          "high": 0,
+          "medium": 1
+        },
+        "findings": [
+          {
+            "severity": "medium",
+            "code": "NO_NAVIGATION_DESTINATIONS",
+            "message": "No hay destinos explicitos suficientes; existen destinos parciales (derived/dynamic_unresolved) pero falta resolverlos.",
+            "evidence": {
+              "total": 15,
+              "withMap": 0,
+              "withProgram": 0,
+              "dynamicUnresolved": 14,
+              "derivedPerform": 0,
+              "explicitTransid": 0
+            }
+          }
+        ]
+      },
+      "required_schema": {
+        "verdict": "sense|mostly_sense|partial_sense|no_sense",
+        "confidence": "low|medium|high",
+        "risks": [
+          "..."
+        ],
+        "recommendations": [
+          "..."
+        ]
+      }
+    },
+    "instructions": "Pega 'system' y luego 'user' en Copilot Chat, solicita salida JSON estricta y guarda la respuesta JSON en un archivo para --copilot-response-file."
+  },
+  "recommendations": [
+    "Ampliar patrones de destino (XCTL/LINK/CALL/MAP/MAPSET) con ventana contextual por bloque de tecla."
+  ],
+  "context": {
+    "mapKey": "ZMG0103::ZMG0103",
+    "programFilter": "ZM2OJ102",
+    "counts": [
+      {
+        "fields": "7",
+        "inputFields": "1",
+        "keys": "12",
+        "subfuncs": "12",
+        "programs": "1"
+      }
+    ],
+    "stateTransitionMatrix": [
+      {
+        "program": "\"ZM2OJ102\"",
+        "state": "\"1\"",
+        "transitions": "8"
+      },
+      {
+        "program": "\"ZM2OJ102\"",
+        "state": "\"3\"",
+        "transitions": "6"
+      },
+      {
+        "program": "\"ZM2OJ102\"",
+        "state": "\"GLOBAL\"",
+        "transitions": "1"
+      }
+    ],
+    "destinationCoverage": [
+      {
+        "total": "15",
+        "withMap": "0",
+        "withProgram": "0",
+        "dynamicUnresolved": "14",
+        "derivedPerform": "0",
+        "explicitTransid": "0"
+      }
+    ],
+    "stateFieldLinks": [
+      {
+        "program": "\"ZM2OJ102\"",
+        "state": "\"0\"",
+        "rel": "NULL",
+        "relCount": "0",
+        "fields": "[]"
+      },
+      {
+        "program": "\"ZM2OJ102\"",
+        "state": "\"1\"",
+        "rel": "\"READS_INPUT\"",
+        "relCount": "1",
+        "fields": "[\"MENS7\"]"
+      },
+      {
+        "program": "\"ZM2OJ102\"",
+        "state": "\"1\"",
+        "rel": "\"VALIDATES_INPUT\"",
+        "relCount": "1",
+        "fields": "[\"MENS7\"]"
+      },
+      {
+        "program": "\"ZM2OJ102\"",
+        "state": "\"1\"",
+        "rel": "\"WRITES_FIELD\"",
+        "relCount": "1",
+        "fields": "[\"MENS7\"]"
+      },
+      {
+        "program": "\"ZM2OJ102\"",
+        "state": "\"2\"",
+        "rel": "NULL",
+        "relCount": "0",
+        "fields": "[]"
+      },
+      {
+        "program": "\"ZM2OJ102\"",
+        "state": "\"3\"",
+        "rel": "\"READS_INPUT\"",
+        "relCount": "1",
+        "fields": "[\"MENS7\"]"
+      },
+      {
+        "program": "\"ZM2OJ102\"",
+        "state": "\"3\"",
+        "rel": "\"VALIDATES_INPUT\"",
+        "relCount": "1",
+        "fields": "[\"MENS7\"]"
+      },
+      {
+        "program": "\"ZM2OJ102\"",
+        "state": "\"3\"",
+        "rel": "\"WRITES_FIELD\"",
+        "relCount": "1",
+        "fields": "[\"MENS7\"]"
+      },
+      {
+        "program": "\"ZM2OJ102\"",
+        "state": "\"GLOBAL\"",
+        "rel": "\"READS_INPUT\"",
+        "relCount": "1",
+        "fields": "[\"MENS7\"]"
+      },
+      {
+        "program": "\"ZM2OJ102\"",
+        "state": "\"GLOBAL\"",
+        "rel": "\"VALIDATES_INPUT\"",
+        "relCount": "1",
+        "fields": "[\"MENS7\"]"
+      },
+      {
+        "program": "\"ZM2OJ102\"",
+        "state": "\"GLOBAL\"",
+        "rel": "\"WRITES_FIELD\"",
+        "relCount": "1",
+        "fields": "[\"MENS7\"]"
+      },
+      {
+        "program": "\"ZM2OJ102\"",
+        "state": "\"OTHER\"",
+        "rel": "NULL",
+        "relCount": "0",
+        "fields": "[]"
+      }
+    ],
+    "sampleTransitions": [
+      {
+        "program": "\"ZM2OJ102\"",
+        "state": "\"1\"",
+        "key": "\"ENTER\"",
+        "targetMapKey": "\"\"",
+        "targetProgram": "\"\"",
+        "subfunc": "\"ZMG0103__ZMG0103__ENTER_PROGRAM_AID\""
+      },
+      {
+        "program": "\"ZM2OJ102\"",
+        "state": "\"1\"",
+        "key": "\"PF10\"",
+        "targetMapKey": "\"\"",
+        "targetProgram": "\"\"",
+        "subfunc": "\"ZMG0103__ZMG0103__PF10_PROGRAM_AID\""
+      },
+      {
+        "program": "\"ZM2OJ102\"",
+        "state": "\"1\"",
+        "key": "\"PF11\"",
+        "targetMapKey": "\"\"",
+        "targetProgram": "\"\"",
+        "subfunc": "\"ZMG0103__ZMG0103__PF11_PROGRAM_AID\""
+      },
+      {
+        "program": "\"ZM2OJ102\"",
+        "state": "\"1\"",
+        "key": "\"PF2\"",
+        "targetMapKey": "\"\"",
+        "targetProgram": "\"\"",
+        "subfunc": "\"ZMG0103__ZMG0103__PF2_PROGRAM_AID\""
+      },
+      {
+        "program": "\"ZM2OJ102\"",
+        "state": "\"1\"",
+        "key": "\"PF3\"",
+        "targetMapKey": "\"\"",
+        "targetProgram": "\"\"",
+        "subfunc": "\"ZMG0103__ZMG0103__PF3_PROGRAM_AID\""
+      },
+      {
+        "program": "\"ZM2OJ102\"",
+        "state": "\"1\"",
+        "key": "\"PF5\"",
+        "targetMapKey": "\"\"",
+        "targetProgram": "\"\"",
+        "subfunc": "\"ZMG0103__ZMG0103__PF5_PROGRAM_AID\""
+      },
+      {
+        "program": "\"ZM2OJ102\"",
+        "state": "\"1\"",
+        "key": "\"PF6\"",
+        "targetMapKey": "\"\"",
+        "targetProgram": "\"\"",
+        "subfunc": "\"ZMG0103__ZMG0103__PF6_PROGRAM_AID\""
+      },
+      {
+        "program": "\"ZM2OJ102\"",
+        "state": "\"1\"",
+        "key": "\"PF9\"",
+        "targetMapKey": "\"\"",
+        "targetProgram": "\"\"",
+        "subfunc": "\"ZMG0103__ZMG0103__PF9_PROGRAM_AID\""
+      },
+      {
+        "program": "\"ZM2OJ102\"",
+        "state": "\"3\"",
+        "key": "\"PF10\"",
+        "targetMapKey": "\"\"",
+        "targetProgram": "\"\"",
+        "subfunc": "\"ZMG0103__ZMG0103__PF10_PROGRAM_AID\""
+      },
+      {
+        "program": "\"ZM2OJ102\"",
+        "state": "\"3\"",
+        "key": "\"PF11\"",
+        "targetMapKey": "\"\"",
+        "targetProgram": "\"\"",
+        "subfunc": "\"ZMG0103__ZMG0103__PF11_PROGRAM_AID\""
+      },
+      {
+        "program": "\"ZM2OJ102\"",
+        "state": "\"3\"",
+        "key": "\"PF2\"",
+        "targetMapKey": "\"\"",
+        "targetProgram": "\"\"",
+        "subfunc": "\"ZMG0103__ZMG0103__PF2_PROGRAM_AID\""
+      },
+      {
+        "program": "\"ZM2OJ102\"",
+        "state": "\"3\"",
+        "key": "\"PF3\"",
+        "targetMapKey": "\"\"",
+        "targetProgram": "\"\"",
+        "subfunc": "\"ZMG0103__ZMG0103__PF3_PROGRAM_AID\""
+      },
+      {
+        "program": "\"ZM2OJ102\"",
+        "state": "\"3\"",
+        "key": "\"PF4\"",
+        "targetMapKey": "\"\"",
+        "targetProgram": "\"\"",
+        "subfunc": "\"ZMG0103__ZMG0103__PF4_PROGRAM_AID\""
+      },
+      {
+        "program": "\"ZM2OJ102\"",
+        "state": "\"3\"",
+        "key": "\"PF5\"",
+        "targetMapKey": "\"\"",
+        "targetProgram": "\"\"",
+        "subfunc": "\"ZMG0103__ZMG0103__PF5_PROGRAM_AID\""
+      },
+      {
+        "program": "\"ZM2OJ102\"",
+        "state": "\"GLOBAL\"",
+        "key": "\"PF12\"",
+        "targetMapKey": "\"\"",
+        "targetProgram": "\"\"",
+        "subfunc": "\"ZMG0103__ZMG0103__PF12_PROGRAM_AID\""
+      }
+    ]
+  }
+}

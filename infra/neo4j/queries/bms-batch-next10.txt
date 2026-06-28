@@ -1,0 +1,11 @@
+# Next 10 BMS candidates (auto-generated 2026-06-24)
+mps/ZMHA279.bms
+mps/ZMPG733.bms
+mps/ZMPG732.bms
+mps/ZMPG723.bms
+mps/ZMLE99G.bms
+mps/ZMLE74G.bms
+mps/ZMLD35A.bms
+mps/ZMJ7931.bms
+mps/ZMHJ691.bms
+mps/ZMG0103.bms

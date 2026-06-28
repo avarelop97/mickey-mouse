@@ -1,0 +1,246 @@
+{
+  "provider": "copilot",
+  "system": "Eres un auditor senior de grafos semanticos COBOL/BMS. Debes evaluar si el modelo tiene sentido funcional y explicar huecos. Responde JSON estricto con claves: verdict, confidence, risks, recommendations.",
+  "user": {
+    "task": "Validar consistencia semantica de grafo BMS",
+    "context": {
+      "mapKey": "ZMG0103::ZMG0103",
+      "programFilter": "ZM2OGF33",
+      "counts": [
+        {
+          "fields": "7",
+          "inputFields": "1",
+          "keys": "12",
+          "subfuncs": "12",
+          "programs": "1"
+        }
+      ],
+      "stateTransitionMatrix": [
+        {
+          "program": "\"ZM2OGF33\"",
+          "state": "\"1\"",
+          "transitions": "8"
+        },
+        {
+          "program": "\"ZM2OGF33\"",
+          "state": "\"3\"",
+          "transitions": "4"
+        },
+        {
+          "program": "\"ZM2OGF33\"",
+          "state": "\"GLOBAL\"",
+          "transitions": "1"
+        }
+      ],
+      "destinationCoverage": [
+        {
+          "total": "13",
+          "withMap": "1",
+          "withProgram": "3",
+          "dynamicUnresolved": "6",
+          "derivedPerform": "4",
+          "explicitTransid": "0"
+        }
+      ],
+      "stateFieldLinks": [
+        {
+          "program": "\"ZM2OGF33\"",
+          "state": "\"0\"",
+          "rel": "NULL",
+          "relCount": "0",
+          "fields": "[]"
+        },
+        {
+          "program": "\"ZM2OGF33\"",
+          "state": "\"1\"",
+          "rel": "\"READS_INPUT\"",
+          "relCount": "1",
+          "fields": "[\"MENS7\"]"
+        },
+        {
+          "program": "\"ZM2OGF33\"",
+          "state": "\"1\"",
+          "rel": "\"VALIDATES_INPUT\"",
+          "relCount": "1",
+          "fields": "[\"MENS7\"]"
+        },
+        {
+          "program": "\"ZM2OGF33\"",
+          "state": "\"2\"",
+          "rel": "NULL",
+          "relCount": "0",
+          "fields": "[]"
+        },
+        {
+          "program": "\"ZM2OGF33\"",
+          "state": "\"3\"",
+          "rel": "\"READS_INPUT\"",
+          "relCount": "1",
+          "fields": "[\"MENS7\"]"
+        },
+        {
+          "program": "\"ZM2OGF33\"",
+          "state": "\"3\"",
+          "rel": "\"VALIDATES_INPUT\"",
+          "relCount": "1",
+          "fields": "[\"MENS7\"]"
+        },
+        {
+          "program": "\"ZM2OGF33\"",
+          "state": "\"GLOBAL\"",
+          "rel": "\"READS_INPUT\"",
+          "relCount": "1",
+          "fields": "[\"MENS7\"]"
+        },
+        {
+          "program": "\"ZM2OGF33\"",
+          "state": "\"GLOBAL\"",
+          "rel": "\"VALIDATES_INPUT\"",
+          "relCount": "1",
+          "fields": "[\"MENS7\"]"
+        },
+        {
+          "program": "\"ZM2OGF33\"",
+          "state": "\"GLOBAL\"",
+          "rel": "\"WRITES_FIELD\"",
+          "relCount": "1",
+          "fields": "[\"MENS7\"]"
+        },
+        {
+          "program": "\"ZM2OGF33\"",
+          "state": "\"OTHER\"",
+          "rel": "NULL",
+          "relCount": "0",
+          "fields": "[]"
+        }
+      ],
+      "sampleTransitions": [
+        {
+          "program": "\"ZM2OGF33\"",
+          "state": "\"1\"",
+          "key": "\"ENTER\"",
+          "targetMapKey": "\"\"",
+          "targetProgram": "\"ZM9RG042\"",
+          "subfunc": "\"ZMG0103__ZMG0103__ENTER_PROGRAM_AID\""
+        },
+        {
+          "program": "\"ZM2OGF33\"",
+          "state": "\"1\"",
+          "key": "\"PF2\"",
+          "targetMapKey": "\"\"",
+          "targetProgram": "\"\"",
+          "subfunc": "\"ZMG0103__ZMG0103__PF2_PROGRAM_AID\""
+        },
+        {
+          "program": "\"ZM2OGF33\"",
+          "state": "\"1\"",
+          "key": "\"PF3\"",
+          "targetMapKey": "\"\"",
+          "targetProgram": "\"\"",
+          "subfunc": "\"ZMG0103__ZMG0103__PF3_PROGRAM_AID\""
+        },
+        {
+          "program": "\"ZM2OGF33\"",
+          "state": "\"1\"",
+          "key": "\"PF5\"",
+          "targetMapKey": "\"\"",
+          "targetProgram": "\"\"",
+          "subfunc": "\"ZMG0103__ZMG0103__PF5_PROGRAM_AID\""
+        },
+        {
+          "program": "\"ZM2OGF33\"",
+          "state": "\"1\"",
+          "key": "\"PF6\"",
+          "targetMapKey": "\"ZMG0103::ZMG0103\"",
+          "targetProgram": "\"\"",
+          "subfunc": "\"ZMG0103__ZMG0103__PF6_PROGRAM_AID\""
+        },
+        {
+          "program": "\"ZM2OGF33\"",
+          "state": "\"1\"",
+          "key": "\"PF7\"",
+          "targetMapKey": "\"\"",
+          "targetProgram": "\"\"",
+          "subfunc": "\"ZMG0103__ZMG0103__PF7_PROGRAM_AID\""
+        },
+        {
+          "program": "\"ZM2OGF33\"",
+          "state": "\"1\"",
+          "key": "\"PF8\"",
+          "targetMapKey": "\"\"",
+          "targetProgram": "\"\"",
+          "subfunc": "\"ZMG0103__ZMG0103__PF8_PROGRAM_AID\""
+        },
+        {
+          "program": "\"ZM2OGF33\"",
+          "state": "\"1\"",
+          "key": "\"PF9\"",
+          "targetMapKey": "\"\"",
+          "targetProgram": "\"ZM9RG042\"",
+          "subfunc": "\"ZMG0103__ZMG0103__PF9_PROGRAM_AID\""
+        },
+        {
+          "program": "\"ZM2OGF33\"",
+          "state": "\"3\"",
+          "key": "\"PF2\"",
+          "targetMapKey": "\"\"",
+          "targetProgram": "\"\"",
+          "subfunc": "\"ZMG0103__ZMG0103__PF2_PROGRAM_AID\""
+        },
+        {
+          "program": "\"ZM2OGF33\"",
+          "state": "\"3\"",
+          "key": "\"PF3\"",
+          "targetMapKey": "\"\"",
+          "targetProgram": "\"\"",
+          "subfunc": "\"ZMG0103__ZMG0103__PF3_PROGRAM_AID\""
+        },
+        {
+          "program": "\"ZM2OGF33\"",
+          "state": "\"3\"",
+          "key": "\"PF4\"",
+          "targetMapKey": "\"\"",
+          "targetProgram": "\"ZM9RG042\"",
+          "subfunc": "\"ZMG0103__ZMG0103__PF4_PROGRAM_AID\""
+        },
+        {
+          "program": "\"ZM2OGF33\"",
+          "state": "\"3\"",
+          "key": "\"PF5\"",
+          "targetMapKey": "\"\"",
+          "targetProgram": "\"\"",
+          "subfunc": "\"ZMG0103__ZMG0103__PF5_PROGRAM_AID\""
+        },
+        {
+          "program": "\"ZM2OGF33\"",
+          "state": "\"GLOBAL\"",
+          "key": "\"PF12\"",
+          "targetMapKey": "\"\"",
+          "targetProgram": "\"\"",
+          "subfunc": "\"ZMG0103__ZMG0103__PF12_PROGRAM_AID\""
+        }
+      ]
+    },
+    "deterministic": {
+      "verdict": "sense",
+      "confidence": "high",
+      "findingCounts": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0
+      },
+      "findings": []
+    },
+    "required_schema": {
+      "verdict": "sense|mostly_sense|partial_sense|no_sense",
+      "confidence": "low|medium|high",
+      "risks": [
+        "..."
+      ],
+      "recommendations": [
+        "..."
+      ]
+    }
+  },
+  "instructions": "Pega 'system' y luego 'user' en Copilot Chat, solicita salida JSON estricta y guarda la respuesta JSON en un archivo para --copilot-response-file."
+}

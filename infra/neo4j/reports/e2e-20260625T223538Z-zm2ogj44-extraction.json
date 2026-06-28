@@ -1,0 +1,1071 @@
+{
+  "stage": "discovery-extraction",
+  "runId": "e2e-20260625T223538Z-zm2ogj44",
+  "programs": [
+    "ZM2OGJ44"
+  ],
+  "extractions": [
+    {
+      "program": "ZM2OGJ44",
+      "sourceFile": "src/ZM2OGJ44.cbl",
+      "procedureLine": 235,
+      "parseStartLine": 5,
+      "parseStartReason": "PROCEDURE_DIVISION",
+      "metadata": {
+        "objective": null,
+        "description": "Programa COBOL que ejecuta procesos.",
+        "system": null,
+        "author": null
+      },
+      "copybooks": [
+        {
+          "name": "DFHAID",
+          "evidenceLines": [
+            119
+          ]
+        },
+        {
+          "name": "DFHBMSCA",
+          "evidenceLines": [
+            123
+          ]
+        },
+        {
+          "name": "SQLCA",
+          "evidenceLines": [
+            83
+          ]
+        },
+        {
+          "name": "ZMENSAJE",
+          "evidenceLines": [
+            91
+          ]
+        },
+        {
+          "name": "ZMENTEXT",
+          "evidenceLines": [
+            95
+          ]
+        },
+        {
+          "name": "ZMGJ441",
+          "evidenceLines": [
+            127
+          ]
+        },
+        {
+          "name": "ZMGJ442",
+          "evidenceLines": [
+            140
+          ]
+        },
+        {
+          "name": "ZMWCOM11",
+          "evidenceLines": [
+            210
+          ]
+        },
+        {
+          "name": "ZMWSC002",
+          "evidenceLines": [
+            868
+          ]
+        },
+        {
+          "name": "ZMWSC003",
+          "evidenceLines": [
+            874
+          ]
+        },
+        {
+          "name": "ZMWSC004",
+          "evidenceLines": [
+            886
+          ]
+        },
+        {
+          "name": "ZMWSC005",
+          "evidenceLines": [
+            892
+          ]
+        },
+        {
+          "name": "ZMWSC006",
+          "evidenceLines": [
+            898
+          ]
+        },
+        {
+          "name": "ZMWSC008",
+          "evidenceLines": [
+            904
+          ]
+        },
+        {
+          "name": "ZMWSC009",
+          "evidenceLines": [
+            910
+          ]
+        },
+        {
+          "name": "ZMWSC010",
+          "evidenceLines": [
+            153
+          ]
+        },
+        {
+          "name": "ZMWSC011",
+          "evidenceLines": [
+            157
+          ]
+        },
+        {
+          "name": "ZMWSC012",
+          "evidenceLines": [
+            161
+          ]
+        },
+        {
+          "name": "ZMWSC013",
+          "evidenceLines": [
+            165
+          ]
+        },
+        {
+          "name": "ZMWSC014",
+          "evidenceLines": [
+            169
+          ]
+        },
+        {
+          "name": "ZMWSC015",
+          "evidenceLines": [
+            917
+          ]
+        },
+        {
+          "name": "ZMWSC016",
+          "evidenceLines": [
+            880
+          ]
+        },
+        {
+          "name": "ZMWSC017",
+          "evidenceLines": [
+            173
+          ]
+        },
+        {
+          "name": "ZMWSCOM0",
+          "evidenceLines": [
+            856
+          ]
+        },
+        {
+          "name": "ZMWSCOM1",
+          "evidenceLines": [
+            862
+          ]
+        },
+        {
+          "name": "ZMWSG532",
+          "evidenceLines": [
+            193
+          ]
+        },
+        {
+          "name": "ZMWSR009",
+          "evidenceLines": [
+            178
+          ]
+        },
+        {
+          "name": "ZMWSR432",
+          "evidenceLines": [
+            188
+          ]
+        },
+        {
+          "name": "ZMWSZ403",
+          "evidenceLines": [
+            183
+          ]
+        },
+        {
+          "name": "ZRESPTAS",
+          "evidenceLines": [
+            99
+          ]
+        },
+        {
+          "name": "ZRESTEXT",
+          "evidenceLines": [
+            103
+          ]
+        },
+        {
+          "name": "ZUSUARIO",
+          "evidenceLines": [
+            87
+          ]
+        }
+      ],
+      "dclTables": [
+        {
+          "memberName": "ZMENSAJE",
+          "tableName": "MENSAJE",
+          "qualifiedName": "MENSAJE",
+          "schemaName": null,
+          "hostStructureName": "DCLMENSAJE",
+          "declaredColumnCount": 8,
+          "declaredColumns": [
+            "IMESSAGE",
+            "SDEPTO",
+            "ITIPOMES",
+            "ISUCCASA",
+            "IPROM",
+            "FREG",
+            "IUSERAUT",
+            "ITERM"
+          ],
+          "declaredColumnDefinitions": [
+            "IMESSAGE DECIMAL(5, 0) NOT NULL",
+            "SDEPTO CHAR(2) NOT NULL",
+            "ITIPOMES DECIMAL(3, 0) NOT NULL",
+            "ISUCCASA CHAR(3) NOT NULL",
+            "IPROM DECIMAL(4, 0) NOT NULL",
+            "FREG TIMESTAMP NOT NULL",
+            "IUSERAUT CHAR(8) NOT NULL",
+            "ITERM CHAR(8) NOT NULL"
+          ],
+          "dclPath": "dcl/ZMENSAJE.dcl"
+        },
+        {
+          "memberName": "ZMENTEXT",
+          "tableName": "MENTEXT",
+          "qualifiedName": "MENTEXT",
+          "schemaName": null,
+          "hostStructureName": "DCLMENTEXT",
+          "declaredColumnCount": 3,
+          "declaredColumns": [
+            "IMESSAGE",
+            "ISEC",
+            "ETEXTO"
+          ],
+          "declaredColumnDefinitions": [
+            "IMESSAGE DECIMAL(5, 0) NOT NULL",
+            "ISEC DECIMAL(2, 0) NOT NULL",
+            "ETEXTO VARCHAR(254) NOT NULL"
+          ],
+          "dclPath": "dcl/ZMENTEXT.dcl"
+        }
+      ],
+      "calls": [],
+      "readTables": [
+        {
+          "name": "MENTEXT",
+          "evidenceLines": [
+            108,
+            109,
+            110,
+            111,
+            112,
+            113,
+            114,
+            441,
+            442,
+            443,
+            444,
+            445,
+            446,
+            447,
+            448,
+            449
+          ]
+        },
+        {
+          "name": "RESPTAS",
+          "evidenceLines": [
+            460,
+            461,
+            462,
+            463,
+            464,
+            465,
+            466,
+            467,
+            468
+          ]
+        },
+        {
+          "name": "USUARIO",
+          "evidenceLines": [
+            403,
+            404,
+            405,
+            406,
+            407,
+            408,
+            409,
+            410,
+            411,
+            412
+          ]
+        }
+      ],
+      "updateTables": [
+        {
+          "name": "RESPTAS",
+          "evidenceLines": [
+            485,
+            486,
+            487,
+            488,
+            489,
+            490,
+            491,
+            492,
+            493,
+            494
+          ]
+        },
+        {
+          "name": "RESTEXT",
+          "evidenceLines": [
+            508,
+            509,
+            510,
+            511,
+            512,
+            513,
+            514
+          ]
+        }
+      ],
+      "paragraphs": [
+        {
+          "name": "AUTHOR",
+          "evidenceLines": [
+            5
+          ],
+          "executionOrder": 100,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OGJ44, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "INSTALLATION",
+          "evidenceLines": [
+            7
+          ],
+          "executionOrder": 200,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OGJ44, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "WORKING-STORAGE",
+          "evidenceLines": [
+            31
+          ],
+          "executionOrder": 300,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OGJ44, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "LINKAGE",
+          "evidenceLines": [
+            230
+          ],
+          "executionOrder": 400,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OGJ44, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "0000-INICIO",
+          "evidenceLines": [
+            237
+          ],
+          "executionOrder": 500,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM2OGJ44, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "0010-INICIO-APLICACION",
+          "evidenceLines": [
+            256
+          ],
+          "executionOrder": 600,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM2OGJ44, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "0100-PF2-PF3-PF5",
+          "evidenceLines": [
+            262
+          ],
+          "executionOrder": 700,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OGJ44, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "0100-REINICIO-APLICACION",
+          "evidenceLines": [
+            285
+          ],
+          "executionOrder": 800,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM2OGJ44, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "1000-OBTIENE-DATOS",
+          "evidenceLines": [
+            335
+          ],
+          "executionOrder": 900,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OGJ44, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "5000-SEL-PROM-SUC",
+          "evidenceLines": [
+            395
+          ],
+          "executionOrder": 1000,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OGJ44, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "5100-FETCH-MENTEXT",
+          "evidenceLines": [
+            418
+          ],
+          "executionOrder": 1100,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OGJ44, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "5150-SEL-MENTEXT",
+          "evidenceLines": [
+            439
+          ],
+          "executionOrder": 1200,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OGJ44, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "5200-SEL-RESPTAS",
+          "evidenceLines": [
+            458
+          ],
+          "executionOrder": 1300,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OGJ44, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "6100-INSERT-RESPTAS",
+          "evidenceLines": [
+            477
+          ],
+          "executionOrder": 1400,
+          "executionPhase": "PROCESSING",
+          "summary": "Persiste actualizaciones de negocio en ZM2OGJ44, aplicando reglas de escritura y control de estado."
+        },
+        {
+          "name": "6200-INSERT-RESTEXT",
+          "evidenceLines": [
+            500
+          ],
+          "executionOrder": 1500,
+          "executionPhase": "PROCESSING",
+          "summary": "Persiste actualizaciones de negocio en ZM2OGJ44, aplicando reglas de escritura y control de estado."
+        },
+        {
+          "name": "8000-OPEN-MENTEXT",
+          "evidenceLines": [
+            520
+          ],
+          "executionOrder": 1600,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OGJ44, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "8100-CLOSE-MENTEXT",
+          "evidenceLines": [
+            527
+          ],
+          "executionOrder": 1700,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OGJ44, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "8000-TRANSFIERE",
+          "evidenceLines": [
+            535
+          ],
+          "executionOrder": 1800,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OGJ44, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "8000-PROTEGE-MAPA2",
+          "evidenceLines": [
+            542
+          ],
+          "executionOrder": 1900,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OGJ44, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "M2TXT10A",
+          "evidenceLines": [
+            547
+          ],
+          "executionOrder": 2000,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OGJ44, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "8000-DESPROTEGE-MAPA2",
+          "evidenceLines": [
+            549
+          ],
+          "executionOrder": 2100,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OGJ44, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "M2TXT10A",
+          "evidenceLines": [
+            554
+          ],
+          "executionOrder": 2200,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OGJ44, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "8100-RECIBE-PANTALLA",
+          "evidenceLines": [
+            556
+          ],
+          "executionOrder": 2300,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OGJ44, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "8105-ENVIA-PANTALLA",
+          "evidenceLines": [
+            571
+          ],
+          "executionOrder": 2400,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OGJ44, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "8110-ENVIA-PANTALLA",
+          "evidenceLines": [
+            582
+          ],
+          "executionOrder": 2500,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OGJ44, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "8115-ENVIA-PANTALLA2",
+          "evidenceLines": [
+            624
+          ],
+          "executionOrder": 2600,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OGJ44, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "8120-ENCABEZADO",
+          "evidenceLines": [
+            665
+          ],
+          "executionOrder": 2700,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OGJ44, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "M2HORAI",
+          "evidenceLines": [
+            679
+          ],
+          "executionOrder": 2800,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OGJ44, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "8130-VALIDA-PANTALLA2",
+          "evidenceLines": [
+            681
+          ],
+          "executionOrder": 2900,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OGJ44, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "8135-DETALLE",
+          "evidenceLines": [
+            736
+          ],
+          "executionOrder": 3000,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OGJ44, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "8137-DETALLE2",
+          "evidenceLines": [
+            753
+          ],
+          "executionOrder": 3100,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OGJ44, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "8140-ACTUALIZA-DATOS",
+          "evidenceLines": [
+            772
+          ],
+          "executionOrder": 3200,
+          "executionPhase": "PROCESSING",
+          "summary": "Persiste actualizaciones de negocio en ZM2OGJ44, aplicando reglas de escritura y control de estado."
+        },
+        {
+          "name": "8150-LIMPIA-PANTALLA",
+          "evidenceLines": [
+            795
+          ],
+          "executionOrder": 3300,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OGJ44, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "8150-RECIBE-PANTALLA2",
+          "evidenceLines": [
+            816
+          ],
+          "executionOrder": 3400,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OGJ44, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "8160-LIMPIA-PANTALLA2",
+          "evidenceLines": [
+            831
+          ],
+          "executionOrder": 3500,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM2OGJ44, encadenando validaciones y transformaciones del proceso principal."
+        }
+      ],
+      "paragraphCalls": [],
+      "paragraphCopybooks": [
+        {
+          "paragraph": "0000-INICIO",
+          "copybook": "ZMWSC004",
+          "evidenceLines": [
+            254
+          ]
+        },
+        {
+          "paragraph": "0000-INICIO",
+          "copybook": "ZMWSCOM0",
+          "evidenceLines": [
+            239
+          ]
+        },
+        {
+          "paragraph": "1000-OBTIENE-DATOS",
+          "copybook": "ZMWSC003",
+          "evidenceLines": [
+            337
+          ]
+        },
+        {
+          "paragraph": "1000-OBTIENE-DATOS",
+          "copybook": "ZMWSC016",
+          "evidenceLines": [
+            355
+          ]
+        },
+        {
+          "paragraph": "5000-SEL-PROM-SUC",
+          "copybook": "ZMWSC006",
+          "evidenceLines": [
+            413
+          ]
+        },
+        {
+          "paragraph": "5100-FETCH-MENTEXT",
+          "copybook": "ZMWSC006",
+          "evidenceLines": [
+            432
+          ]
+        },
+        {
+          "paragraph": "5150-SEL-MENTEXT",
+          "copybook": "ZMWSC006",
+          "evidenceLines": [
+            450
+          ]
+        },
+        {
+          "paragraph": "5200-SEL-RESPTAS",
+          "copybook": "ZMWSC006",
+          "evidenceLines": [
+            469
+          ]
+        },
+        {
+          "paragraph": "6100-INSERT-RESPTAS",
+          "copybook": "ZMWSC006",
+          "evidenceLines": [
+            495
+          ]
+        },
+        {
+          "paragraph": "6200-INSERT-RESTEXT",
+          "copybook": "ZMWSC006",
+          "evidenceLines": [
+            515
+          ]
+        },
+        {
+          "paragraph": "8000-OPEN-MENTEXT",
+          "copybook": "ZMWSC006",
+          "evidenceLines": [
+            525
+          ]
+        },
+        {
+          "paragraph": "8000-TRANSFIERE",
+          "copybook": "ZMWSC009",
+          "evidenceLines": [
+            539
+          ]
+        },
+        {
+          "paragraph": "8100-CLOSE-MENTEXT",
+          "copybook": "ZMWSC006",
+          "evidenceLines": [
+            533
+          ]
+        },
+        {
+          "paragraph": "8100-RECIBE-PANTALLA",
+          "copybook": "ZMWSC015",
+          "evidenceLines": [
+            567
+          ]
+        },
+        {
+          "paragraph": "8110-ENVIA-PANTALLA",
+          "copybook": "ZMWSC002",
+          "evidenceLines": [
+            610
+          ]
+        },
+        {
+          "paragraph": "8110-ENVIA-PANTALLA",
+          "copybook": "ZMWSCOM0",
+          "evidenceLines": [
+            622
+          ]
+        },
+        {
+          "paragraph": "8115-ENVIA-PANTALLA2",
+          "copybook": "ZMWSC002",
+          "evidenceLines": [
+            651
+          ]
+        },
+        {
+          "paragraph": "8115-ENVIA-PANTALLA2",
+          "copybook": "ZMWSCOM0",
+          "evidenceLines": [
+            663
+          ]
+        },
+        {
+          "paragraph": "8120-ENCABEZADO",
+          "copybook": "ZMWSC003",
+          "evidenceLines": [
+            671
+          ]
+        },
+        {
+          "paragraph": "8150-RECIBE-PANTALLA2",
+          "copybook": "ZMWSC015",
+          "evidenceLines": [
+            827
+          ]
+        },
+        {
+          "paragraph": "8160-LIMPIA-PANTALLA2",
+          "copybook": "ZMWSC002",
+          "evidenceLines": [
+            868
+          ]
+        },
+        {
+          "paragraph": "8160-LIMPIA-PANTALLA2",
+          "copybook": "ZMWSC003",
+          "evidenceLines": [
+            874
+          ]
+        },
+        {
+          "paragraph": "8160-LIMPIA-PANTALLA2",
+          "copybook": "ZMWSC004",
+          "evidenceLines": [
+            886
+          ]
+        },
+        {
+          "paragraph": "8160-LIMPIA-PANTALLA2",
+          "copybook": "ZMWSC005",
+          "evidenceLines": [
+            892
+          ]
+        },
+        {
+          "paragraph": "8160-LIMPIA-PANTALLA2",
+          "copybook": "ZMWSC006",
+          "evidenceLines": [
+            898
+          ]
+        },
+        {
+          "paragraph": "8160-LIMPIA-PANTALLA2",
+          "copybook": "ZMWSC008",
+          "evidenceLines": [
+            904
+          ]
+        },
+        {
+          "paragraph": "8160-LIMPIA-PANTALLA2",
+          "copybook": "ZMWSC009",
+          "evidenceLines": [
+            910
+          ]
+        },
+        {
+          "paragraph": "8160-LIMPIA-PANTALLA2",
+          "copybook": "ZMWSC015",
+          "evidenceLines": [
+            917
+          ]
+        },
+        {
+          "paragraph": "8160-LIMPIA-PANTALLA2",
+          "copybook": "ZMWSC016",
+          "evidenceLines": [
+            880
+          ]
+        },
+        {
+          "paragraph": "8160-LIMPIA-PANTALLA2",
+          "copybook": "ZMWSCOM0",
+          "evidenceLines": [
+            856
+          ]
+        },
+        {
+          "paragraph": "8160-LIMPIA-PANTALLA2",
+          "copybook": "ZMWSCOM1",
+          "evidenceLines": [
+            862
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "DFHAID",
+          "evidenceLines": [
+            119
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "DFHBMSCA",
+          "evidenceLines": [
+            123
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "SQLCA",
+          "evidenceLines": [
+            83
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMENSAJE",
+          "evidenceLines": [
+            91
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMENTEXT",
+          "evidenceLines": [
+            95
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMGJ441",
+          "evidenceLines": [
+            127
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMGJ442",
+          "evidenceLines": [
+            140
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMWCOM11",
+          "evidenceLines": [
+            210
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMWSC010",
+          "evidenceLines": [
+            153
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMWSC011",
+          "evidenceLines": [
+            157
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMWSC012",
+          "evidenceLines": [
+            161
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMWSC013",
+          "evidenceLines": [
+            165
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMWSC014",
+          "evidenceLines": [
+            169
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMWSC017",
+          "evidenceLines": [
+            173
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMWSG532",
+          "evidenceLines": [
+            193
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMWSR009",
+          "evidenceLines": [
+            178
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMWSR432",
+          "evidenceLines": [
+            188
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMWSZ403",
+          "evidenceLines": [
+            183
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZRESPTAS",
+          "evidenceLines": [
+            99
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZRESTEXT",
+          "evidenceLines": [
+            103
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZUSUARIO",
+          "evidenceLines": [
+            87
+          ]
+        }
+      ],
+      "coverage": {
+        "sequenceColumnsNormalized": true,
+        "procedureDivisionFound": true,
+        "parseStartLine": 5,
+        "parseStartReason": "PROCEDURE_DIVISION",
+        "performTargetCount": 34,
+        "paragraphCount": 35,
+        "missingPerformTargets": [],
+        "resolvedPerformTargetsViaCopybook": {
+          "9000-INICIO": [
+            "ZMWSCOM0"
+          ],
+          "9000-REINICIO": [
+            "ZMWSCOM0"
+          ],
+          "9200-MENSAJE-ERROR": [
+            "ZMWSC002"
+          ],
+          "9300-USER-FECHA-HORA": [
+            "ZMWSC003"
+          ],
+          "9350-VALIDA-CANTIDAD": [
+            "ZMWSC016"
+          ],
+          "9400-RETURN": [
+            "ZMWSC004"
+          ],
+          "9600-VALIDA-SQL": [
+            "ZMWSC006"
+          ],
+          "9886-ALINEA-STRING-IZQ": [
+            "ZMWSC015"
+          ],
+          "9900-TRANSFIERE": [
+            "ZMWSC009"
+          ]
+        },
+        "resolvedPerformTargetsViaPrefixAlias": {}
+      }
+    }
+  ]
+}

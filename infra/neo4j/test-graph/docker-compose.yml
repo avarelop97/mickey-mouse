@@ -1,0 +1,41 @@
+services:
+  neo4j:
+    image: neo4j:5
+    container_name: neo4j-final
+    restart: unless-stopped
+    ports:
+      - "7475:7474"
+      - "7688:7687"
+    environment:
+      NEO4J_AUTH: neo4j/${NEO4J_TEST_PASSWORD:-TestClave123!}
+    volumes:
+      - neo4j_test_data:/data
+      - neo4j_test_logs:/logs
+    healthcheck:
+      test: ["CMD-SHELL", "cypher-shell -u neo4j -p '${NEO4J_TEST_PASSWORD:-TestClave123!}' 'RETURN 1' || exit 1"]
+      interval: 15s
+      timeout: 10s
+      retries: 20
+      start_period: 60s
+
+  seed:
+    image: neo4j:5
+    container_name: neo4j-final-seed
+    depends_on:
+      neo4j:
+        condition: service_healthy
+    volumes:
+      - ./seed-test-graph.cypher:/seed.cypher:ro
+    entrypoint:
+      - bash
+      - -c
+      - |
+        echo "Cargando test graph..."
+        cypher-shell -u neo4j -p '${NEO4J_TEST_PASSWORD:-TestClave123!}' \
+          -a neo4j://neo4j:7687 \
+          --file /seed.cypher && echo "Test graph cargado correctamente."
+    restart: "no"
+
+volumes:
+  neo4j_test_data:
+  neo4j_test_logs:

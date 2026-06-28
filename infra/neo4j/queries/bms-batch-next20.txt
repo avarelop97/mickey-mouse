@@ -1,0 +1,21 @@
+# Next 20 BMS candidates (auto-generated 2026-06-24)
+mps/ZMLE99X.bms
+mps/ZMLE99V.bms
+mps/ZMLE99U.bms
+mps/ZMLE99T.bms
+mps/ZMLE99R.bms
+mps/ZMLE99Q.bms
+mps/ZMLE99P.bms
+mps/ZMLE99N.bms
+mps/ZMLE99L.bms
+mps/ZMLE99F.bms
+mps/ZMLE99E.bms
+mps/ZMLE99D.bms
+mps/ZMLE99C.bms
+mps/ZMLE99B.bms
+mps/ZMLE74Z.bms
+mps/ZMLE74X.bms
+mps/ZMLE74V.bms
+mps/ZMLE74U.bms
+mps/ZMLE74T.bms
+mps/ZMLE74S.bms

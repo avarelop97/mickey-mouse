@@ -1,0 +1,1133 @@
+{
+  "stage": "discovery-extraction",
+  "runId": "e2e-20260625T223557Z-zm6ry200",
+  "programs": [
+    "ZM6RY200"
+  ],
+  "extractions": [
+    {
+      "program": "ZM6RY200",
+      "sourceFile": "src/ZM6RY200.cbl",
+      "procedureLine": 157,
+      "parseStartLine": 2,
+      "parseStartReason": "PROCEDURE_DIVISION",
+      "metadata": {
+        "objective": "CLONAR RUTINA ZM6RY100 ACTUALIZA LA BASE DE DATOS PARA LAS OPERACIONES DE COMPRA DE SOCIEDADES DE INVERSION QUE AFECTAN. TESORERIA (LIQUIDACIONES BPIGO-BUC) SE AGREGAN ACCESOS PARA TABLAS ESPEJO L O G D E M O D I F I C A C I O N E S FECHA | MODIFICADO | | | | | INDICADOR |",
+        "description": "Programa COBOL que clonar rutina zm6ry100 actualiza la base de datos para las operaciones de compra de sociedades de inversion que afectan. tesoreria (liquidaciones bpigo-buc) se agregan accesos para tablas espejo l o g d e m o d i f i c a c i o n e s fecha | modificado | | | | | indicador |. Pertenece a: CASA DE BOLSA BBVA BANCOMER, S A DE C V. 18/ENE/12. /.",
+        "system": "CASA DE BOLSA BBVA BANCOMER, S A DE C V. 18/ENE/12. /",
+        "author": null
+      },
+      "copybooks": [
+        {
+          "name": "SQLCA",
+          "evidenceLines": [
+            103
+          ]
+        },
+        {
+          "name": "ZDEFOPER",
+          "evidenceLines": [
+            143
+          ]
+        },
+        {
+          "name": "ZEMPRESA",
+          "evidenceLines": [
+            147
+          ]
+        },
+        {
+          "name": "ZMGTATE",
+          "evidenceLines": [
+            131
+          ]
+        },
+        {
+          "name": "ZMGTOPS",
+          "evidenceLines": [
+            123
+          ]
+        },
+        {
+          "name": "ZMGTOPT",
+          "evidenceLines": [
+            139
+          ]
+        },
+        {
+          "name": "ZMWBP001",
+          "evidenceLines": [
+            499
+          ]
+        },
+        {
+          "name": "ZMWBV002",
+          "evidenceLines": [
+            106
+          ]
+        },
+        {
+          "name": "ZMWBV356",
+          "evidenceLines": [
+            111
+          ]
+        },
+        {
+          "name": "ZMWSY100",
+          "evidenceLines": [
+            154
+          ]
+        },
+        {
+          "name": "ZOPERASI",
+          "evidenceLines": [
+            119
+          ]
+        },
+        {
+          "name": "ZOPERATE",
+          "evidenceLines": [
+            127
+          ]
+        },
+        {
+          "name": "ZOPERTET",
+          "evidenceLines": [
+            135
+          ]
+        }
+      ],
+      "dclTables": [
+        {
+          "memberName": "ZMGTATE",
+          "tableName": "ZMDTATE",
+          "qualifiedName": "ZMDTATE",
+          "schemaName": null,
+          "hostStructureName": "DCLZMDTATE",
+          "declaredColumnCount": 40,
+          "declaredColumns": [
+            "IOPERA",
+            "IREF",
+            "ISEC",
+            "ITRANS",
+            "IDOCTO",
+            "IUSUARIO",
+            "EOPERA",
+            "ETRANS",
+            "ICUENTA1",
+            "ICONCEP1",
+            "CANT1",
+            "ICUENTA2",
+            "ICONCEP2",
+            "CANT2",
+            "ACOSCASA",
+            "ACOSFPRO",
+            "ACOSPROM",
+            "MCPROEXI",
+            "FREG",
+            "FOPERA",
+            "FVENC",
+            "FLIQUIDA",
+            "IRUTA",
+            "SLIQUID",
+            "SESTATUS",
+            "MPRECIO",
+            "MSOLOPER",
+            "ITIPOTEN",
+            "ICVEOPES",
+            "IFOLOPES",
+            "SCORTO",
+            "IDATO1",
+            "IDATO2",
+            "IDATO3",
+            "IDATO4",
+            "IDATO5",
+            "IDATO6",
+            "IDATO7",
+            "IDATO8",
+            "IEMPR"
+          ],
+          "declaredColumnDefinitions": [
+            "IOPERA DECIMAL(5, 0) NOT NULL",
+            "IREF DECIMAL(9, 0) NOT NULL",
+            "ISEC DECIMAL(2, 0) NOT NULL",
+            "ITRANS CHAR(1) NOT NULL",
+            "IDOCTO DECIMAL(7, 0)",
+            "IUSUARIO CHAR(8) NOT NULL",
+            "EOPERA CHAR(15) NOT NULL",
+            "ETRANS CHAR(15) NOT NULL",
+            "ICUENTA1 DECIMAL(7, 0) NOT NULL",
+            "ICONCEP1 DECIMAL(5, 0) NOT NULL",
+            "CANT1 DECIMAL(15, 2) NOT NULL",
+            "ICUENTA2 DECIMAL(7, 0)",
+            "ICONCEP2 DECIMAL(5, 0)",
+            "CANT2 DECIMAL(15, 2)",
+            "ACOSCASA DECIMAL(8, 4)",
+            "ACOSFPRO DECIMAL(8, 4)",
+            "ACOSPROM DECIMAL(8, 4)",
+            "MCPROEXI DECIMAL(15, 8)",
+            "FREG TIMESTAMP NOT NULL",
+            "FOPERA DATE",
+            "FVENC DATE",
+            "FLIQUIDA DATE",
+            "IRUTA CHAR(3)",
+            "SLIQUID CHAR(1)",
+            "SESTATUS CHAR(1) NOT NULL",
+            "MPRECIO DECIMAL(15, 8)",
+            "MSOLOPER DECIMAL(15, 2) NOT NULL",
+            "ITIPOTEN CHAR(1) NOT NULL",
+            "ICVEOPES DECIMAL(3, 0) NOT NULL",
+            "IFOLOPES DECIMAL(9, 0) NOT NULL",
+            "SCORTO CHAR(1) NOT NULL",
+            "IDATO1 CHAR(254) NOT NULL",
+            "IDATO2 CHAR(254) NOT NULL",
+            "IDATO3 CHAR(254) NOT NULL",
+            "IDATO4 CHAR(254) NOT NULL",
+            "IDATO5 CHAR(254) NOT NULL",
+            "IDATO6 CHAR(254) NOT NULL",
+            "IDATO7 CHAR(254) NOT NULL",
+            "IDATO8 CHAR(254) NOT NULL",
+            "IEMPR CHAR(3) NOT NULL"
+          ],
+          "dclPath": "dcl/ZMGTATE.dcl"
+        },
+        {
+          "memberName": "ZMGTOPS",
+          "tableName": "ZMDTOPS",
+          "qualifiedName": "ZMDTOPS",
+          "schemaName": null,
+          "hostStructureName": "DCLZMDTOPS",
+          "declaredColumnCount": 32,
+          "declaredColumns": [
+            "IOPERA",
+            "IREF",
+            "ISEC",
+            "ITRANS",
+            "IDOCTO",
+            "IUSUARIO",
+            "EOPERA",
+            "ETRANS",
+            "ICUENTA1",
+            "ICONCEP1",
+            "CANT1",
+            "ICUENTA2",
+            "ICONCEP2",
+            "CANT2",
+            "ACOSCASA",
+            "ACOSFPRO",
+            "ACOSPROM",
+            "MCPROEXI",
+            "FREG",
+            "FOPERA",
+            "FVENC",
+            "FLIQUIDA",
+            "IRUTA",
+            "SLIQUID",
+            "SESTATUS",
+            "MPRECIO",
+            "MSOLOPER",
+            "ITIPOTEN",
+            "ICVEOPES",
+            "IFOLOPES",
+            "SCORTO",
+            "IEMPR"
+          ],
+          "declaredColumnDefinitions": [
+            "IOPERA DECIMAL(5, 0) NOT NULL",
+            "IREF DECIMAL(9, 0) NOT NULL",
+            "ISEC DECIMAL(2, 0) NOT NULL",
+            "ITRANS CHAR(1) NOT NULL",
+            "IDOCTO DECIMAL(7, 0) NOT NULL",
+            "IUSUARIO CHAR(8) NOT NULL",
+            "EOPERA CHAR(15) NOT NULL",
+            "ETRANS CHAR(15) NOT NULL",
+            "ICUENTA1 DECIMAL(7, 0) NOT NULL",
+            "ICONCEP1 DECIMAL(5, 0) NOT NULL",
+            "CANT1 DECIMAL(15, 2) NOT NULL",
+            "ICUENTA2 DECIMAL(7, 0) NOT NULL",
+            "ICONCEP2 DECIMAL(5, 0) NOT NULL",
+            "CANT2 DECIMAL(15, 2) NOT NULL",
+            "ACOSCASA DECIMAL(8, 4)",
+            "ACOSFPRO DECIMAL(8, 4)",
+            "ACOSPROM DECIMAL(8, 4) NOT NULL",
+            "MCPROEXI DECIMAL(15, 8) NOT NULL",
+            "FREG TIMESTAMP NOT NULL",
+            "FOPERA DATE NOT NULL",
+            "FVENC DATE NOT NULL",
+            "FLIQUIDA DATE NOT NULL",
+            "IRUTA CHAR(3) NOT NULL",
+            "SLIQUID CHAR(1) NOT NULL",
+            "SESTATUS CHAR(1) NOT NULL",
+            "MPRECIO DECIMAL(15, 8) NOT NULL",
+            "MSOLOPER DECIMAL(15, 2) NOT NULL",
+            "ITIPOTEN CHAR(1) NOT NULL",
+            "ICVEOPES DECIMAL(3, 0) NOT NULL",
+            "IFOLOPES DECIMAL(9, 0) NOT NULL",
+            "SCORTO CHAR(1) NOT NULL",
+            "IEMPR CHAR(3) NOT NULL"
+          ],
+          "dclPath": "dcl/ZMGTOPS.dcl"
+        },
+        {
+          "memberName": "ZMGTOPT",
+          "tableName": "ZMDTOPT",
+          "qualifiedName": "ZMDTOPT",
+          "schemaName": null,
+          "hostStructureName": "DCLZMDTOPT",
+          "declaredColumnCount": 37,
+          "declaredColumns": [
+            "IREF",
+            "ISEC",
+            "IOPERA",
+            "ITIPODOC",
+            "IMEDIO",
+            "NBENE1",
+            "NBENE2",
+            "NBENE3",
+            "IBANCO",
+            "ICTABCO",
+            "NSUC",
+            "DBENEF",
+            "NEDOBENE",
+            "NPOBBENE",
+            "EDOCTO",
+            "NPOBLA",
+            "HIMP",
+            "IAFECTA",
+            "ISUCCASA",
+            "ICCOSTO",
+            "MSALANT",
+            "IPROM",
+            "FOPERA",
+            "SESTATUS",
+            "CAFECBON",
+            "CTIPOBON",
+            "IDATO1",
+            "IDATO2",
+            "IDATO3",
+            "IDATO4",
+            "IDATO5",
+            "IDATO6",
+            "IDATO7",
+            "SPROMTES",
+            "IFOLSPE",
+            "IFOLREC",
+            "ICTCLABE"
+          ],
+          "declaredColumnDefinitions": [
+            "IREF DECIMAL(9, 0) NOT NULL",
+            "ISEC DECIMAL(2, 0) NOT NULL",
+            "IOPERA DECIMAL(5, 0) NOT NULL",
+            "ITIPODOC CHAR(1)",
+            "IMEDIO CHAR(1)",
+            "NBENE1 CHAR(55)",
+            "NBENE2 CHAR(55)",
+            "NBENE3 CHAR(55)",
+            "IBANCO DECIMAL(2, 0)",
+            "ICTABCO CHAR(16)",
+            "NSUC CHAR(25)",
+            "DBENEF CHAR(50)",
+            "NEDOBENE CHAR(30)",
+            "NPOBBENE CHAR(25)",
+            "EDOCTO CHAR(45)",
+            "NPOBLA CHAR(30)",
+            "HIMP TIME NOT NULL",
+            "IAFECTA DECIMAL(2, 0) NOT NULL",
+            "ISUCCASA CHAR(3) NOT NULL",
+            "ICCOSTO DECIMAL(5, 0) NOT NULL",
+            "MSALANT DECIMAL(15, 2) NOT NULL",
+            "IPROM DECIMAL(4, 0) NOT NULL",
+            "FOPERA DATE NOT NULL",
+            "SESTATUS CHAR(1) NOT NULL",
+            "CAFECBON DECIMAL(10, 0) NOT NULL",
+            "CTIPOBON CHAR(2) NOT NULL",
+            "IDATO1 CHAR(254) NOT NULL",
+            "IDATO2 CHAR(254) NOT NULL",
+            "IDATO3 CHAR(254) NOT NULL",
+            "IDATO4 CHAR(254) NOT NULL",
+            "IDATO5 CHAR(254) NOT NULL",
+            "IDATO6 CHAR(254) NOT NULL",
+            "IDATO7 CHAR(254) NOT NULL",
+            "SPROMTES CHAR(1) NOT NULL",
+            "IFOLSPE DECIMAL(7, 0) NOT NULL",
+            "IFOLREC DECIMAL(5, 0) NOT NULL",
+            "ICTCLABE DECIMAL(18, 0) NOT NULL"
+          ],
+          "dclPath": "dcl/ZMGTOPT.dcl"
+        }
+      ],
+      "calls": [],
+      "readTables": [
+        {
+          "name": "DEFOPER",
+          "evidenceLines": [
+            366,
+            367,
+            368,
+            369,
+            370,
+            371
+          ]
+        },
+        {
+          "name": "EMPRESA",
+          "evidenceLines": [
+            344,
+            345,
+            346,
+            347,
+            348,
+            349
+          ]
+        },
+        {
+          "name": "ZMDTOPS",
+          "evidenceLines": [
+            245,
+            246,
+            247,
+            248,
+            249,
+            250,
+            251,
+            252,
+            253,
+            254,
+            255,
+            256,
+            257,
+            258
+          ]
+        },
+        {
+          "name": "ZMDTOPT",
+          "evidenceLines": [
+            388,
+            389,
+            390,
+            391,
+            392,
+            393,
+            394,
+            395,
+            396,
+            397
+          ]
+        }
+      ],
+      "updateTables": [
+        {
+          "name": "ZMDTATE",
+          "evidenceLines": [
+            412,
+            413,
+            414,
+            415,
+            416,
+            417,
+            418,
+            419
+          ]
+        }
+      ],
+      "paragraphs": [
+        {
+          "name": "PROGRAM-ID",
+          "evidenceLines": [
+            2
+          ],
+          "executionOrder": 100,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RY200, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "ZM6RY200",
+          "evidenceLines": [
+            3
+          ],
+          "executionOrder": 200,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RY200, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "AUTHOR",
+          "evidenceLines": [
+            4
+          ],
+          "executionOrder": 300,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RY200, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "INSTALLATION",
+          "evidenceLines": [
+            7
+          ],
+          "executionOrder": 400,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RY200, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "DATE-WRITTEN",
+          "evidenceLines": [
+            9
+          ],
+          "executionOrder": 500,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RY200, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "CONFIGURATION",
+          "evidenceLines": [
+            33
+          ],
+          "executionOrder": 600,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RY200, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "SOURCE-COMPUTER",
+          "evidenceLines": [
+            34
+          ],
+          "executionOrder": 700,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RY200, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "IBM-4381",
+          "evidenceLines": [
+            35
+          ],
+          "executionOrder": 800,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RY200, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "OBJECT-COMPUTER",
+          "evidenceLines": [
+            36
+          ],
+          "executionOrder": 900,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RY200, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "IBM-4381",
+          "evidenceLines": [
+            37
+          ],
+          "executionOrder": 1000,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RY200, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "WORKING-STORAGE",
+          "evidenceLines": [
+            40
+          ],
+          "executionOrder": 1100,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RY200, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "LINKAGE",
+          "evidenceLines": [
+            151
+          ],
+          "executionOrder": 1200,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RY200, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "000-CONTROL",
+          "evidenceLines": [
+            158
+          ],
+          "executionOrder": 1300,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RY200, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "000-0100-INICIO",
+          "evidenceLines": [
+            159
+          ],
+          "executionOrder": 1400,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RY200, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "000-0200-GENERA",
+          "evidenceLines": [
+            161
+          ],
+          "executionOrder": 1500,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RY200, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "000-0300-TERMINA",
+          "evidenceLines": [
+            163
+          ],
+          "executionOrder": 1600,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RY200, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "000-9900-FIN",
+          "evidenceLines": [
+            165
+          ],
+          "executionOrder": 1700,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RY200, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "010-INICIAL",
+          "evidenceLines": [
+            168
+          ],
+          "executionOrder": 1800,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RY200, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "010-0100-INICIO",
+          "evidenceLines": [
+            169
+          ],
+          "executionOrder": 1900,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RY200, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "010-0990-FIN",
+          "evidenceLines": [
+            228
+          ],
+          "executionOrder": 2000,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RY200, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "100-DECLARA-CURSOR-SI",
+          "evidenceLines": [
+            234
+          ],
+          "executionOrder": 2100,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RY200, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "100-010-INI",
+          "evidenceLines": [
+            235
+          ],
+          "executionOrder": 2200,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RY200, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "100-010-FIN",
+          "evidenceLines": [
+            263
+          ],
+          "executionOrder": 2300,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RY200, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "200-PROCESO",
+          "evidenceLines": [
+            266
+          ],
+          "executionOrder": 2400,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RY200, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "200-010-INI",
+          "evidenceLines": [
+            267
+          ],
+          "executionOrder": 2500,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RY200, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "200-010-FIN",
+          "evidenceLines": [
+            303
+          ],
+          "executionOrder": 2600,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RY200, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "210-BUSCA-OPERATES",
+          "evidenceLines": [
+            306
+          ],
+          "executionOrder": 2700,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por ZM6RY200 y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "210-010-INI",
+          "evidenceLines": [
+            307
+          ],
+          "executionOrder": 2800,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RY200, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "210-010-FIN",
+          "evidenceLines": [
+            311
+          ],
+          "executionOrder": 2900,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RY200, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "220-UPDATE-OPERATE",
+          "evidenceLines": [
+            314
+          ],
+          "executionOrder": 3000,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RY200, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "220-010-INI",
+          "evidenceLines": [
+            315
+          ],
+          "executionOrder": 3100,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RY200, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "220-010-FIN",
+          "evidenceLines": [
+            324
+          ],
+          "executionOrder": 3200,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RY200, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "300-TERMINA",
+          "evidenceLines": [
+            327
+          ],
+          "executionOrder": 3300,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RY200, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "300-010-INI",
+          "evidenceLines": [
+            328
+          ],
+          "executionOrder": 3400,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RY200, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "300-010-FIN",
+          "evidenceLines": [
+            339
+          ],
+          "executionOrder": 3500,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RY200, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "500-LEE-IEMPR",
+          "evidenceLines": [
+            342
+          ],
+          "executionOrder": 3600,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por ZM6RY200 y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "500-0100-INICIO",
+          "evidenceLines": [
+            343
+          ],
+          "executionOrder": 3700,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RY200, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "500-9900-FIN",
+          "evidenceLines": [
+            360
+          ],
+          "executionOrder": 3800,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RY200, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "510-LEE-DEFOPER",
+          "evidenceLines": [
+            363
+          ],
+          "executionOrder": 3900,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por ZM6RY200 y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "510-0100-INICIO",
+          "evidenceLines": [
+            364
+          ],
+          "executionOrder": 4000,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RY200, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "510-9900-FIN",
+          "evidenceLines": [
+            381
+          ],
+          "executionOrder": 4100,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RY200, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "520-LEE-OPERTET",
+          "evidenceLines": [
+            384
+          ],
+          "executionOrder": 4200,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por ZM6RY200 y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "520-0100-INICIO",
+          "evidenceLines": [
+            385
+          ],
+          "executionOrder": 4300,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RY200, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "520-9900-FIN",
+          "evidenceLines": [
+            407
+          ],
+          "executionOrder": 4400,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RY200, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "530-UPDATE-OPERATE",
+          "evidenceLines": [
+            410
+          ],
+          "executionOrder": 4500,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RY200, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "530-0100-INICIO",
+          "evidenceLines": [
+            411
+          ],
+          "executionOrder": 4600,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RY200, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "530-9900-FIN",
+          "evidenceLines": [
+            427
+          ],
+          "executionOrder": 4700,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RY200, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "800-ABRE-CUR-OPERASDI",
+          "evidenceLines": [
+            433
+          ],
+          "executionOrder": 4800,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RY200, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "800-010-INICIO",
+          "evidenceLines": [
+            434
+          ],
+          "executionOrder": 4900,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RY200, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "800-010-FIN",
+          "evidenceLines": [
+            446
+          ],
+          "executionOrder": 5000,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RY200, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "810-LEE-CUR-OPERASDI",
+          "evidenceLines": [
+            451
+          ],
+          "executionOrder": 5100,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por ZM6RY200 y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "810-010-INICIO",
+          "evidenceLines": [
+            452
+          ],
+          "executionOrder": 5200,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RY200, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "810-010-FIN",
+          "evidenceLines": [
+            480
+          ],
+          "executionOrder": 5300,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RY200, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "820-CIERRA-CUR-OPERASDI",
+          "evidenceLines": [
+            483
+          ],
+          "executionOrder": 5400,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RY200, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "820-010-INICIO",
+          "evidenceLines": [
+            484
+          ],
+          "executionOrder": 5500,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RY200, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "820-010-FIN",
+          "evidenceLines": [
+            493
+          ],
+          "executionOrder": 5600,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RY200, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "980-ABORTA",
+          "evidenceLines": [
+            503
+          ],
+          "executionOrder": 5700,
+          "executionPhase": "PROCESSING",
+          "summary": "Gestiona contingencias en ZM6RY200, concentrando el manejo de error y salida controlada."
+        },
+        {
+          "name": "980-0100-INICIO",
+          "evidenceLines": [
+            504
+          ],
+          "executionOrder": 5800,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RY200, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "980-9900-FIN",
+          "evidenceLines": [
+            510
+          ],
+          "executionOrder": 5900,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RY200, consolidando trazas y terminacion funcional del proceso."
+        }
+      ],
+      "paragraphCalls": [],
+      "paragraphCopybooks": [
+        {
+          "paragraph": "100-010-INI",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            261
+          ]
+        },
+        {
+          "paragraph": "500-0100-INICIO",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            353
+          ]
+        },
+        {
+          "paragraph": "510-0100-INICIO",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            375
+          ]
+        },
+        {
+          "paragraph": "520-0100-INICIO",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            401
+          ]
+        },
+        {
+          "paragraph": "530-0100-INICIO",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            426
+          ]
+        },
+        {
+          "paragraph": "800-010-INICIO",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            441
+          ]
+        },
+        {
+          "paragraph": "810-010-INICIO",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            464
+          ]
+        },
+        {
+          "paragraph": "820-010-FIN",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            499
+          ]
+        },
+        {
+          "paragraph": "820-010-INICIO",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            490
+          ]
+        },
+        {
+          "paragraph": "LINKAGE",
+          "copybook": "ZMWSY100",
+          "evidenceLines": [
+            154
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "SQLCA",
+          "evidenceLines": [
+            103
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZDEFOPER",
+          "evidenceLines": [
+            143
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZEMPRESA",
+          "evidenceLines": [
+            147
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMGTATE",
+          "evidenceLines": [
+            131
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMGTOPS",
+          "evidenceLines": [
+            123
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMGTOPT",
+          "evidenceLines": [
+            139
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMWBV002",
+          "evidenceLines": [
+            106
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMWBV356",
+          "evidenceLines": [
+            111
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZOPERASI",
+          "evidenceLines": [
+            119
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZOPERATE",
+          "evidenceLines": [
+            127
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZOPERTET",
+          "evidenceLines": [
+            135
+          ]
+        }
+      ],
+      "coverage": {
+        "sequenceColumnsNormalized": true,
+        "procedureDivisionFound": true,
+        "parseStartLine": 2,
+        "parseStartReason": "PROCEDURE_DIVISION",
+        "performTargetCount": 15,
+        "paragraphCount": 59,
+        "missingPerformTargets": [],
+        "resolvedPerformTargetsViaCopybook": {
+          "970-SQL-ERROR": [
+            "ZMWBP001"
+          ]
+        },
+        "resolvedPerformTargetsViaPrefixAlias": {}
+      }
+    }
+  ]
+}

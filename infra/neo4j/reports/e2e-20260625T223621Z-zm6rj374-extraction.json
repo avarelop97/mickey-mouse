@@ -1,0 +1,4648 @@
+{
+  "stage": "discovery-extraction",
+  "runId": "e2e-20260625T223621Z-zm6rj374",
+  "programs": [
+    "ZM6RJ374"
+  ],
+  "extractions": [
+    {
+      "program": "ZM6RJ374",
+      "sourceFile": "src/ZM6RJ374.cbl",
+      "procedureLine": 541,
+      "parseStartLine": 2,
+      "parseStartReason": "PROCEDURE_DIVISION",
+      "metadata": {
+        "objective": "CLONAR RUTINA ZM6RJ274 ACTUALIZA LA BASE DE DATOS PARA LA (RE)-VALUACION DE LAS OPERACIONES DE COMPRA Y VENTA (CONFIRMADAS)- POTENCIALES DE SOCIEDADES DE INVERSION. SE AGREGAN ACCEOS A LAS TABLAS ESPEJO. L O G D E M O D I F I C A C I O N E S MARCA AUTOR FECHA DESCRIPCION FSW-AAAAMMDD XXXXXX DDMMMAA XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX FS-1.0.0-02 CAPGEMI 31OCT12 MODIFICA PARA QUE EN LUGAR DE ACTUALIZAR EL REGISTRO DE COMISIONES LO INSERTE SIEMPRE Y CUANDO EL CAMPO DE COMISION SEA DIFERENTE DE CERO. MODIFICADO: FSW-TECNOCOM MARCA: FS-1.0.0-01 FECHA: ABRIL DE 2013 ASUNTO: AJUSTES PARA EL BUEN FUNCIONAMIENTO DEL PROGRAMA SIVA 2012 FS-1.1.0-01 CAPGEMINI 01JUN17 MODIFICAR LOS VALORES DE PARAME- TROS DE FONDOS. @HITSS01 HITSS 08FEB19 COMISION CORRETAJE BTRADER FIRV",
+        "description": "Programa COBOL que clonar rutina zm6rj274 actualiza la base de datos para la (re)-valuacion de las operaciones de compra y venta (confirmadas)- potenciales de sociedades de inversion. se agregan acceos a las tablas espejo. l o g d e m o d i f i c a c i o n e s marca autor fecha descripcion fsw-aaaammdd xxxxxx ddmmmaa xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx fs-1.0.0-02 capgemi 31oct12 modifica para que en lugar de actualizar el registro de comisiones lo inserte siempre y cuando el campo de comision sea diferente de cero. modificado: fsw-tecnocom marca: fs-1.0.0-01 fecha: abril de 2013 asunto: ajustes para el buen funcionamiento del programa siva 2012 fs-1.1.0-01 capgemini 01jun17 modificar los valores de parame- tros de fondos. @hitss01 hitss 08feb19 comision corretaje btrader firv. Pertenece a: CASA DE BOLSA PROBURSA, S A DE C V. 16/ENE/12. /.",
+        "system": "CASA DE BOLSA PROBURSA, S A DE C V. 16/ENE/12. /",
+        "author": null
+      },
+      "copybooks": [
+        {
+          "name": "SQLCA",
+          "evidenceLines": [
+            360
+          ]
+        },
+        {
+          "name": "ZCARTAUX",
+          "evidenceLines": [
+            466
+          ]
+        },
+        {
+          "name": "ZCARTERA",
+          "evidenceLines": [
+            458
+          ]
+        },
+        {
+          "name": "ZCATIVA",
+          "evidenceLines": [
+            446
+          ]
+        },
+        {
+          "name": "ZCONCEPT",
+          "evidenceLines": [
+            504
+          ]
+        },
+        {
+          "name": "ZCTLPROC",
+          "evidenceLines": [
+            516
+          ]
+        },
+        {
+          "name": "ZCUENTA",
+          "evidenceLines": [
+            508
+          ]
+        },
+        {
+          "name": "ZDEFOPER",
+          "evidenceLines": [
+            488
+          ]
+        },
+        {
+          "name": "ZEMPRESA",
+          "evidenceLines": [
+            326
+          ]
+        },
+        {
+          "name": "ZMGTCAR",
+          "evidenceLines": [
+            484
+          ]
+        },
+        {
+          "name": "ZMGTCAX",
+          "evidenceLines": [
+            462
+          ]
+        },
+        {
+          "name": "ZMGTCTA",
+          "evidenceLines": [
+            512
+          ]
+        },
+        {
+          "name": "ZMGTCTL",
+          "evidenceLines": [
+            520
+          ]
+        },
+        {
+          "name": "ZMGTOPS",
+          "evidenceLines": [
+            454
+          ]
+        },
+        {
+          "name": "ZMGTOPT",
+          "evidenceLines": [
+            528
+          ]
+        },
+        {
+          "name": "ZMWBP000",
+          "evidenceLines": [
+            3467
+          ]
+        },
+        {
+          "name": "ZMWBP001",
+          "evidenceLines": [
+            3400
+          ]
+        },
+        {
+          "name": "ZMWBP023",
+          "evidenceLines": [
+            553
+          ]
+        },
+        {
+          "name": "ZMWBP070",
+          "evidenceLines": [
+            3462
+          ]
+        },
+        {
+          "name": "ZMWBP074",
+          "evidenceLines": [
+            3475
+          ]
+        },
+        {
+          "name": "ZMWBV000",
+          "evidenceLines": [
+            339
+          ]
+        },
+        {
+          "name": "ZMWBV002",
+          "evidenceLines": [
+            363
+          ]
+        },
+        {
+          "name": "ZMWBV003",
+          "evidenceLines": [
+            321
+          ]
+        },
+        {
+          "name": "ZMWBV004",
+          "evidenceLines": [
+            317
+          ]
+        },
+        {
+          "name": "ZMWBV224",
+          "evidenceLines": [
+            539
+          ]
+        },
+        {
+          "name": "ZMWBV225",
+          "evidenceLines": [
+            357
+          ]
+        },
+        {
+          "name": "ZMWBV227",
+          "evidenceLines": [
+            303
+          ]
+        },
+        {
+          "name": "ZMWBV470",
+          "evidenceLines": [
+            71
+          ]
+        },
+        {
+          "name": "ZMWBV471",
+          "evidenceLines": [
+            346
+          ]
+        },
+        {
+          "name": "ZMWRTX1B",
+          "evidenceLines": [
+            309
+          ]
+        },
+        {
+          "name": "ZMWSJZ39",
+          "evidenceLines": [
+            352
+          ]
+        },
+        {
+          "name": "ZOPERASI",
+          "evidenceLines": [
+            450
+          ]
+        },
+        {
+          "name": "ZOPERTET",
+          "evidenceLines": [
+            524
+          ]
+        },
+        {
+          "name": "ZPARAM",
+          "evidenceLines": [
+            496
+          ]
+        },
+        {
+          "name": "ZPERJUR",
+          "evidenceLines": [
+            492
+          ]
+        },
+        {
+          "name": "ZPRECIO",
+          "evidenceLines": [
+            500
+          ]
+        },
+        {
+          "name": "ZTIPCAMB",
+          "evidenceLines": [
+            471
+          ]
+        },
+        {
+          "name": "ZZMDT110",
+          "evidenceLines": [
+            475
+          ]
+        },
+        {
+          "name": "ZZMDT111",
+          "evidenceLines": [
+            479
+          ]
+        },
+        {
+          "name": "ZZMDT622",
+          "evidenceLines": [
+            332
+          ]
+        },
+        {
+          "name": "ZZMDTSCN",
+          "evidenceLines": [
+            532
+          ]
+        }
+      ],
+      "dclTables": [
+        {
+          "memberName": "ZMGTCAR",
+          "tableName": "ZMDTCAR",
+          "qualifiedName": "ZMDTCAR",
+          "schemaName": null,
+          "hostStructureName": "DCLZMDTCAR",
+          "declaredColumnCount": 28,
+          "declaredColumns": [
+            "ICUENTA",
+            "SCUENTA",
+            "ICONCEPT",
+            "SCONCEPT",
+            "IEMISORA",
+            "ISERIE",
+            "ICUPON",
+            "FCARTERA",
+            "FULTCOMP",
+            "ITIPOCAR",
+            "ITIPOSDO",
+            "ITIPOTEN",
+            "IREF",
+            "AREND",
+            "FVEN",
+            "CDIAPZO",
+            "CTITEFE",
+            "MVALMERC",
+            "MCPROEXI",
+            "ICONCEXP",
+            "IDIACAR",
+            "ICVEOPES",
+            "IFOLOPES",
+            "ISUBFOL",
+            "IFOLADM",
+            "FULACCPP",
+            "MCPPFA",
+            "MCPPBP"
+          ],
+          "declaredColumnDefinitions": [
+            "ICUENTA DECIMAL(7, 0) NOT NULL",
+            "SCUENTA CHAR(1) NOT NULL",
+            "ICONCEPT DECIMAL(5, 0) NOT NULL",
+            "SCONCEPT CHAR(1) NOT NULL",
+            "IEMISORA CHAR(7)",
+            "ISERIE CHAR(8)",
+            "ICUPON DECIMAL(3, 0)",
+            "FCARTERA DATE NOT NULL",
+            "FULTCOMP DATE",
+            "ITIPOCAR CHAR(1) NOT NULL",
+            "ITIPOSDO CHAR(1) NOT NULL",
+            "ITIPOTEN CHAR(1) NOT NULL",
+            "IREF DECIMAL(9, 0)",
+            "AREND DECIMAL(8, 4) NOT NULL",
+            "FVEN DATE",
+            "CDIAPZO DECIMAL(3, 0)",
+            "CTITEFE DECIMAL(15, 2) NOT NULL",
+            "MVALMERC DECIMAL(15, 8)",
+            "MCPROEXI DECIMAL(15, 8) NOT NULL",
+            "ICONCEXP DECIMAL(5, 0) NOT NULL",
+            "IDIACAR DECIMAL(3, 0) NOT NULL",
+            "ICVEOPES DECIMAL(3, 0) NOT NULL",
+            "IFOLOPES DECIMAL(9, 0) NOT NULL",
+            "ISUBFOL DECIMAL(3, 0) NOT NULL",
+            "IFOLADM DECIMAL(9, 0) NOT NULL",
+            "FULACCPP DATE NOT NULL",
+            "MCPPFA DECIMAL(15, 8) NOT NULL",
+            "MCPPBP DECIMAL(15, 8) NOT NULL"
+          ],
+          "dclPath": "dcl/ZMGTCAR.dcl"
+        },
+        {
+          "memberName": "ZMGTCAX",
+          "tableName": "ZMDTCAX",
+          "qualifiedName": "ZMDTCAX",
+          "schemaName": null,
+          "hostStructureName": "DCLZMDTCAX",
+          "declaredColumnCount": 21,
+          "declaredColumns": [
+            "ZMCAX_ICONCEPT",
+            "ZMCAX_SCONCEPT",
+            "ZMCAX_ICUENTA",
+            "ZMCAX_SCUENTA",
+            "ZMCAX_IEMISORA",
+            "ZMCAX_ISERIE",
+            "ZMCAX_ICUPON",
+            "ZMCAX_FCARTERA",
+            "ZMCAX_CVTAS",
+            "ZMCAX_CCPAS",
+            "ZMCAX_CTITVTA",
+            "ZMCAX_CTITCPA",
+            "ZMCAX_MCOMPRAS",
+            "ZMCAX_MVENTAS",
+            "ZMCAX_CTITULOS",
+            "ZMCAX_ICONCEXP",
+            "ZMCAX_IDIACAR",
+            "ZMCAX_ITIPOTEN",
+            "ZMCAX_ISUBFOL",
+            "ZMCAX_CDIASVEN",
+            "ZMCAX_IEMPR"
+          ],
+          "declaredColumnDefinitions": [
+            "ZMCAX_ICONCEPT DECIMAL(5, 0) NOT NULL",
+            "ZMCAX_SCONCEPT CHAR(1) NOT NULL",
+            "ZMCAX_ICUENTA DECIMAL(7, 0) NOT NULL",
+            "ZMCAX_SCUENTA CHAR(1) NOT NULL",
+            "ZMCAX_IEMISORA CHAR(7)",
+            "ZMCAX_ISERIE CHAR(8)",
+            "ZMCAX_ICUPON DECIMAL(3, 0)",
+            "ZMCAX_FCARTERA DATE NOT NULL",
+            "ZMCAX_CVTAS DECIMAL(6, 0) NOT NULL",
+            "ZMCAX_CCPAS DECIMAL(6, 0) NOT NULL",
+            "ZMCAX_CTITVTA DECIMAL(15, 0) NOT NULL",
+            "ZMCAX_CTITCPA DECIMAL(15, 0) NOT NULL",
+            "ZMCAX_MCOMPRAS DECIMAL(15, 2) NOT NULL",
+            "ZMCAX_MVENTAS DECIMAL(15, 2) NOT NULL",
+            "ZMCAX_CTITULOS DECIMAL(15, 0) NOT NULL",
+            "ZMCAX_ICONCEXP DECIMAL(5, 0)",
+            "ZMCAX_IDIACAR DECIMAL(3, 0) NOT NULL",
+            "ZMCAX_ITIPOTEN CHAR(1) NOT NULL",
+            "ZMCAX_ISUBFOL DECIMAL(3, 0) NOT NULL",
+            "ZMCAX_CDIASVEN DECIMAL(5, 0) NOT NULL",
+            "ZMCAX_IEMPR CHAR(3) NOT NULL"
+          ],
+          "dclPath": "dcl/ZMGTCAX.dcl"
+        },
+        {
+          "memberName": "ZMGTCTA",
+          "tableName": "ZMDTCTA",
+          "qualifiedName": "ZMDTCTA",
+          "schemaName": null,
+          "hostStructureName": "DCLZMDTCTA",
+          "declaredColumnCount": 88,
+          "declaredColumns": [
+            "SVIGEN",
+            "ICTAGLO",
+            "ICUENTA",
+            "ITIPOCTA",
+            "IPERJUR",
+            "IRFC",
+            "ITASAFIS",
+            "INACIO",
+            "IPROM",
+            "ICCOSTO",
+            "IUSUARIO",
+            "IPROGRAM",
+            "FALTA",
+            "FALTAANT",
+            "FBAJA",
+            "FULTCAMB",
+            "FULTMOV",
+            "IENVDOC",
+            "NPROF",
+            "NABREV",
+            "NOMBRE",
+            "NAPELL1",
+            "NAPELL2",
+            "DCALLE",
+            "DCOLON",
+            "DPOBLA",
+            "IPOS",
+            "DESTADO",
+            "DCALLEP",
+            "DCOLONP",
+            "DPOBLAP",
+            "IPOSP",
+            "DESTADOP",
+            "ITEL1",
+            "IEXT1",
+            "ITEL2",
+            "IEXT2",
+            "ICAPTA",
+            "IFIRMA",
+            "IRUTA",
+            "SCOMPNAC",
+            "SDOCUM",
+            "SLIQUID",
+            "SOPER12",
+            "PCOMCTA",
+            "MABOANO",
+            "MABOMES",
+            "MCGOANO",
+            "MCGOMES",
+            "MCARACT",
+            "MCARIMES",
+            "APREFMAR",
+            "FDEBEDES",
+            "XSEG",
+            "IEMICHE",
+            "IESTRATO",
+            "ISUCCASA",
+            "IZONECO",
+            "IESTMIG",
+            "STARFIR",
+            "SCONFIR",
+            "SCANDADO",
+            "ISUBCLAS",
+            "PCOMCTA1",
+            "PCOMCTA2",
+            "PCOMCTA3",
+            "PCOMCTA4",
+            "SIMPRESO",
+            "SACTCON",
+            "SPODERES",
+            "ICANDAD1",
+            "ICANDAD2",
+            "ICLACTO",
+            "INSTENV",
+            "SREPASAM",
+            "IAPLIDER",
+            "FSIST",
+            "ITERM",
+            "IESTCON",
+            "STIPOIN",
+            "CIMPRESO",
+            "ISERSP",
+            "ICODAREA",
+            "MLINCRB",
+            "CEXINDEV",
+            "PCUSTOD",
+            "IREPRCAS",
+            "IEMPR"
+          ],
+          "declaredColumnDefinitions": [
+            "SVIGEN CHAR(1) NOT NULL",
+            "ICTAGLO DECIMAL(7, 0)",
+            "ICUENTA DECIMAL(7, 0) NOT NULL",
+            "ITIPOCTA CHAR(1) NOT NULL",
+            "IPERJUR CHAR(2)",
+            "IRFC CHAR(13)",
+            "ITASAFIS CHAR(1)",
+            "INACIO CHAR(2)",
+            "IPROM DECIMAL(4, 0)",
+            "ICCOSTO DECIMAL(5, 0) NOT NULL",
+            "IUSUARIO CHAR(8) NOT NULL",
+            "IPROGRAM CHAR(8)",
+            "FALTA DATE NOT NULL",
+            "FALTAANT DATE",
+            "FBAJA DATE",
+            "FULTCAMB DATE",
+            "FULTMOV DATE",
+            "IENVDOC DECIMAL(2, 0)",
+            "NPROF CHAR(5)",
+            "NABREV CHAR(25)",
+            "NOMBRE CHAR(20)",
+            "NAPELL1 CHAR(40) NOT NULL",
+            "NAPELL2 CHAR(20)",
+            "DCALLE CHAR(25)",
+            "DCOLON CHAR(25)",
+            "DPOBLA CHAR(30)",
+            "IPOS DECIMAL(5, 0)",
+            "DESTADO CHAR(25)",
+            "DCALLEP CHAR(25)",
+            "DCOLONP CHAR(25)",
+            "DPOBLAP CHAR(30)",
+            "IPOSP DECIMAL(5, 0)",
+            "DESTADOP CHAR(25)",
+            "ITEL1 DECIMAL(7, 0)",
+            "IEXT1 DECIMAL(4, 0)",
+            "ITEL2 DECIMAL(7, 0)",
+            "IEXT2 DECIMAL(4, 0)",
+            "ICAPTA CHAR(1)",
+            "IFIRMA CHAR(1)",
+            "IRUTA CHAR(3)",
+            "SCOMPNAC CHAR(1)",
+            "SDOCUM CHAR(1)",
+            "SLIQUID CHAR(1)",
+            "SOPER12 CHAR(1)",
+            "PCOMCTA DECIMAL(5, 4) NOT NULL",
+            "MABOANO DECIMAL(15, 2) NOT NULL",
+            "MABOMES DECIMAL(15, 2) NOT NULL",
+            "MCGOANO DECIMAL(15, 2) NOT NULL",
+            "MCGOMES DECIMAL(15, 2) NOT NULL",
+            "MCARACT DECIMAL(15, 2) NOT NULL",
+            "MCARIMES DECIMAL(15, 2) NOT NULL",
+            "APREFMAR DECIMAL(9, 5)",
+            "FDEBEDES DATE",
+            "XSEG CHAR(5)",
+            "IEMICHE CHAR(1) NOT NULL",
+            "IESTRATO CHAR(3) NOT NULL",
+            "ISUCCASA CHAR(3) NOT NULL",
+            "IZONECO CHAR(3) NOT NULL",
+            "IESTMIG CHAR(1) NOT NULL",
+            "STARFIR CHAR(1) NOT NULL",
+            "SCONFIR CHAR(1) NOT NULL",
+            "SCANDADO CHAR(1) NOT NULL",
+            "ISUBCLAS CHAR(3) NOT NULL",
+            "PCOMCTA1 DECIMAL(5, 4) NOT NULL",
+            "PCOMCTA2 DECIMAL(5, 4) NOT NULL",
+            "PCOMCTA3 DECIMAL(5, 4) NOT NULL",
+            "PCOMCTA4 DECIMAL(5, 4) NOT NULL",
+            "SIMPRESO CHAR(1) NOT NULL",
+            "SACTCON CHAR(1) NOT NULL",
+            "SPODERES CHAR(1) NOT NULL",
+            "ICANDAD1 DECIMAL(1, 0) NOT NULL",
+            "ICANDAD2 DECIMAL(1, 0) NOT NULL",
+            "ICLACTO DECIMAL(1, 0) NOT NULL",
+            "INSTENV DECIMAL(1, 0) NOT NULL",
+            "SREPASAM CHAR(1) NOT NULL",
+            "IAPLIDER DECIMAL(1, 0) NOT NULL",
+            "FSIST TIMESTAMP NOT NULL",
+            "ITERM CHAR(8) NOT NULL",
+            "IESTCON CHAR(3) NOT NULL",
+            "STIPOIN CHAR(1) NOT NULL",
+            "CIMPRESO DECIMAL(2, 0) NOT NULL",
+            "ISERSP CHAR(1) NOT NULL",
+            "ICODAREA DECIMAL(6, 0) NOT NULL",
+            "MLINCRB DECIMAL(15, 2) NOT NULL",
+            "CEXINDEV CHAR(9) NOT NULL",
+            "PCUSTOD DECIMAL(5, 4) NOT NULL",
+            "IREPRCAS DECIMAL(7, 0) NOT NULL",
+            "IEMPR CHAR(3) NOT NULL"
+          ],
+          "dclPath": "dcl/ZMGTCTA.dcl"
+        },
+        {
+          "memberName": "ZMGTCTL",
+          "tableName": "ZMDTCTL",
+          "qualifiedName": "ZMDTCTL",
+          "schemaName": null,
+          "hostStructureName": "DCLZMDTCTL",
+          "declaredColumnCount": 21,
+          "declaredColumns": [
+            "ZMCTL_IAPLICA",
+            "ZMCTL_ISUCCASA",
+            "ZMCTL_FEVENTO",
+            "ZMCTL_STERMINO",
+            "ZMCTL_HEVENTO",
+            "ZMCTL_IULTLLA",
+            "ZMCTL_FSIST",
+            "ZMCTL_IUSERAUT",
+            "ZMCTL_ITERM",
+            "ZMCTL_IDATO1",
+            "ZMCTL_IDATO2",
+            "ZMCTL_IDATO3",
+            "ZMCTL_IDATO4",
+            "ZMCTL_IDATO5",
+            "ZMCTL_IDATO6",
+            "ZMCTL_IDATO7",
+            "ZMCTL_IDATO8",
+            "ZMCTL_IDATO9",
+            "ZMCTL_IDATO10",
+            "ZMCTL_IDATO11",
+            "ZMCTL_IEMPR"
+          ],
+          "declaredColumnDefinitions": [
+            "ZMCTL_IAPLICA CHAR(3) NOT NULL",
+            "ZMCTL_ISUCCASA CHAR(3) NOT NULL",
+            "ZMCTL_FEVENTO DATE NOT NULL",
+            "ZMCTL_STERMINO CHAR(1) NOT NULL",
+            "ZMCTL_HEVENTO TIME NOT NULL",
+            "ZMCTL_IULTLLA CHAR(50) NOT NULL",
+            "ZMCTL_FSIST TIMESTAMP NOT NULL",
+            "ZMCTL_IUSERAUT CHAR(8) NOT NULL",
+            "ZMCTL_ITERM CHAR(8) NOT NULL",
+            "ZMCTL_IDATO1 CHAR(254) NOT NULL",
+            "ZMCTL_IDATO2 CHAR(254) NOT NULL",
+            "ZMCTL_IDATO3 CHAR(254) NOT NULL",
+            "ZMCTL_IDATO4 CHAR(254) NOT NULL",
+            "ZMCTL_IDATO5 CHAR(254) NOT NULL",
+            "ZMCTL_IDATO6 CHAR(254) NOT NULL",
+            "ZMCTL_IDATO7 CHAR(254) NOT NULL",
+            "ZMCTL_IDATO8 CHAR(254) NOT NULL",
+            "ZMCTL_IDATO9 CHAR(254) NOT NULL",
+            "ZMCTL_IDATO10 CHAR(254) NOT NULL",
+            "ZMCTL_IDATO11 CHAR(254) NOT NULL",
+            "ZMCTL_IEMPR CHAR(3) NOT NULL"
+          ],
+          "dclPath": "dcl/ZMGTCTL.dcl"
+        },
+        {
+          "memberName": "ZMGTOPS",
+          "tableName": "ZMDTOPS",
+          "qualifiedName": "ZMDTOPS",
+          "schemaName": null,
+          "hostStructureName": "DCLZMDTOPS",
+          "declaredColumnCount": 32,
+          "declaredColumns": [
+            "IOPERA",
+            "IREF",
+            "ISEC",
+            "ITRANS",
+            "IDOCTO",
+            "IUSUARIO",
+            "EOPERA",
+            "ETRANS",
+            "ICUENTA1",
+            "ICONCEP1",
+            "CANT1",
+            "ICUENTA2",
+            "ICONCEP2",
+            "CANT2",
+            "ACOSCASA",
+            "ACOSFPRO",
+            "ACOSPROM",
+            "MCPROEXI",
+            "FREG",
+            "FOPERA",
+            "FVENC",
+            "FLIQUIDA",
+            "IRUTA",
+            "SLIQUID",
+            "SESTATUS",
+            "MPRECIO",
+            "MSOLOPER",
+            "ITIPOTEN",
+            "ICVEOPES",
+            "IFOLOPES",
+            "SCORTO",
+            "IEMPR"
+          ],
+          "declaredColumnDefinitions": [
+            "IOPERA DECIMAL(5, 0) NOT NULL",
+            "IREF DECIMAL(9, 0) NOT NULL",
+            "ISEC DECIMAL(2, 0) NOT NULL",
+            "ITRANS CHAR(1) NOT NULL",
+            "IDOCTO DECIMAL(7, 0) NOT NULL",
+            "IUSUARIO CHAR(8) NOT NULL",
+            "EOPERA CHAR(15) NOT NULL",
+            "ETRANS CHAR(15) NOT NULL",
+            "ICUENTA1 DECIMAL(7, 0) NOT NULL",
+            "ICONCEP1 DECIMAL(5, 0) NOT NULL",
+            "CANT1 DECIMAL(15, 2) NOT NULL",
+            "ICUENTA2 DECIMAL(7, 0) NOT NULL",
+            "ICONCEP2 DECIMAL(5, 0) NOT NULL",
+            "CANT2 DECIMAL(15, 2) NOT NULL",
+            "ACOSCASA DECIMAL(8, 4)",
+            "ACOSFPRO DECIMAL(8, 4)",
+            "ACOSPROM DECIMAL(8, 4) NOT NULL",
+            "MCPROEXI DECIMAL(15, 8) NOT NULL",
+            "FREG TIMESTAMP NOT NULL",
+            "FOPERA DATE NOT NULL",
+            "FVENC DATE NOT NULL",
+            "FLIQUIDA DATE NOT NULL",
+            "IRUTA CHAR(3) NOT NULL",
+            "SLIQUID CHAR(1) NOT NULL",
+            "SESTATUS CHAR(1) NOT NULL",
+            "MPRECIO DECIMAL(15, 8) NOT NULL",
+            "MSOLOPER DECIMAL(15, 2) NOT NULL",
+            "ITIPOTEN CHAR(1) NOT NULL",
+            "ICVEOPES DECIMAL(3, 0) NOT NULL",
+            "IFOLOPES DECIMAL(9, 0) NOT NULL",
+            "SCORTO CHAR(1) NOT NULL",
+            "IEMPR CHAR(3) NOT NULL"
+          ],
+          "dclPath": "dcl/ZMGTOPS.dcl"
+        },
+        {
+          "memberName": "ZMGTOPT",
+          "tableName": "ZMDTOPT",
+          "qualifiedName": "ZMDTOPT",
+          "schemaName": null,
+          "hostStructureName": "DCLZMDTOPT",
+          "declaredColumnCount": 37,
+          "declaredColumns": [
+            "IREF",
+            "ISEC",
+            "IOPERA",
+            "ITIPODOC",
+            "IMEDIO",
+            "NBENE1",
+            "NBENE2",
+            "NBENE3",
+            "IBANCO",
+            "ICTABCO",
+            "NSUC",
+            "DBENEF",
+            "NEDOBENE",
+            "NPOBBENE",
+            "EDOCTO",
+            "NPOBLA",
+            "HIMP",
+            "IAFECTA",
+            "ISUCCASA",
+            "ICCOSTO",
+            "MSALANT",
+            "IPROM",
+            "FOPERA",
+            "SESTATUS",
+            "CAFECBON",
+            "CTIPOBON",
+            "IDATO1",
+            "IDATO2",
+            "IDATO3",
+            "IDATO4",
+            "IDATO5",
+            "IDATO6",
+            "IDATO7",
+            "SPROMTES",
+            "IFOLSPE",
+            "IFOLREC",
+            "ICTCLABE"
+          ],
+          "declaredColumnDefinitions": [
+            "IREF DECIMAL(9, 0) NOT NULL",
+            "ISEC DECIMAL(2, 0) NOT NULL",
+            "IOPERA DECIMAL(5, 0) NOT NULL",
+            "ITIPODOC CHAR(1)",
+            "IMEDIO CHAR(1)",
+            "NBENE1 CHAR(55)",
+            "NBENE2 CHAR(55)",
+            "NBENE3 CHAR(55)",
+            "IBANCO DECIMAL(2, 0)",
+            "ICTABCO CHAR(16)",
+            "NSUC CHAR(25)",
+            "DBENEF CHAR(50)",
+            "NEDOBENE CHAR(30)",
+            "NPOBBENE CHAR(25)",
+            "EDOCTO CHAR(45)",
+            "NPOBLA CHAR(30)",
+            "HIMP TIME NOT NULL",
+            "IAFECTA DECIMAL(2, 0) NOT NULL",
+            "ISUCCASA CHAR(3) NOT NULL",
+            "ICCOSTO DECIMAL(5, 0) NOT NULL",
+            "MSALANT DECIMAL(15, 2) NOT NULL",
+            "IPROM DECIMAL(4, 0) NOT NULL",
+            "FOPERA DATE NOT NULL",
+            "SESTATUS CHAR(1) NOT NULL",
+            "CAFECBON DECIMAL(10, 0) NOT NULL",
+            "CTIPOBON CHAR(2) NOT NULL",
+            "IDATO1 CHAR(254) NOT NULL",
+            "IDATO2 CHAR(254) NOT NULL",
+            "IDATO3 CHAR(254) NOT NULL",
+            "IDATO4 CHAR(254) NOT NULL",
+            "IDATO5 CHAR(254) NOT NULL",
+            "IDATO6 CHAR(254) NOT NULL",
+            "IDATO7 CHAR(254) NOT NULL",
+            "SPROMTES CHAR(1) NOT NULL",
+            "IFOLSPE DECIMAL(7, 0) NOT NULL",
+            "IFOLREC DECIMAL(5, 0) NOT NULL",
+            "ICTCLABE DECIMAL(18, 0) NOT NULL"
+          ],
+          "dclPath": "dcl/ZMGTOPT.dcl"
+        }
+      ],
+      "calls": [],
+      "readTables": [
+        {
+          "name": "CATIVA",
+          "evidenceLines": [
+            3257,
+            3258,
+            3259,
+            3260,
+            3261,
+            3262,
+            3263,
+            3264,
+            3265
+          ]
+        },
+        {
+          "name": "CONCEPT",
+          "evidenceLines": [
+            2370,
+            2371,
+            2372,
+            2373,
+            2374,
+            2375,
+            2376,
+            2377,
+            2378,
+            2379,
+            2380,
+            2381,
+            2382,
+            2383,
+            2384,
+            2385,
+            2386,
+            2387,
+            2388,
+            3222,
+            3223,
+            3224,
+            3225,
+            3226,
+            3227,
+            3228,
+            3229,
+            3230,
+            3231,
+            3232,
+            3233,
+            3234,
+            3235,
+            3236,
+            3237,
+            3238
+          ]
+        },
+        {
+          "name": "PARAM",
+          "evidenceLines": [
+            1389,
+            1390,
+            1391,
+            1392,
+            1393,
+            1394,
+            1395,
+            3376,
+            3377,
+            3378,
+            3379,
+            3380,
+            3381,
+            3382
+          ]
+        },
+        {
+          "name": "PERJUR",
+          "evidenceLines": [
+            672,
+            673,
+            674,
+            675,
+            676,
+            677
+          ]
+        },
+        {
+          "name": "PRECIO",
+          "evidenceLines": [
+            564,
+            565,
+            566,
+            567,
+            568,
+            569,
+            570,
+            571,
+            572
+          ]
+        },
+        {
+          "name": "TIPCAMB",
+          "evidenceLines": [
+            3340,
+            3341,
+            3342,
+            3343,
+            3344,
+            3345,
+            3346,
+            3347,
+            3348,
+            3349,
+            3350,
+            3351,
+            3352
+          ]
+        },
+        {
+          "name": "ZMDT110",
+          "evidenceLines": [
+            1405,
+            1406,
+            1407,
+            1408,
+            1409,
+            1410,
+            1411,
+            1412,
+            1413,
+            1414,
+            1415
+          ]
+        },
+        {
+          "name": "ZMDT622",
+          "evidenceLines": [
+            679,
+            680,
+            681,
+            682,
+            683,
+            684,
+            685,
+            686,
+            687,
+            688,
+            689,
+            690,
+            2506,
+            2507,
+            2508,
+            2509,
+            2510,
+            2511,
+            2512,
+            2513,
+            2514,
+            2515,
+            2528,
+            2529,
+            2530,
+            2531,
+            2532,
+            2533,
+            2534,
+            2535
+          ]
+        },
+        {
+          "name": "ZMDTCAR",
+          "evidenceLines": [
+            2711,
+            2712,
+            2713,
+            2714,
+            2715,
+            2716,
+            2717,
+            2718,
+            2719,
+            2720,
+            2721,
+            2722,
+            2723,
+            2724,
+            2725,
+            2726,
+            2821,
+            2822,
+            2823,
+            2824,
+            2825,
+            2826,
+            2827,
+            2828,
+            2829
+          ]
+        },
+        {
+          "name": "ZMDTCTA",
+          "evidenceLines": [
+            2638,
+            2639,
+            2640,
+            2641,
+            2642,
+            2643,
+            2644,
+            2645,
+            2646,
+            2647,
+            2648,
+            2649,
+            2650,
+            2651,
+            2652,
+            2653,
+            2654,
+            2677,
+            2678,
+            2679,
+            2680,
+            2681,
+            2682,
+            2683
+          ]
+        },
+        {
+          "name": "ZMDTCTL",
+          "evidenceLines": [
+            3165,
+            3166,
+            3167,
+            3168,
+            3169,
+            3170
+          ]
+        },
+        {
+          "name": "ZMDTOPS",
+          "evidenceLines": [
+            574,
+            575,
+            576,
+            578,
+            579,
+            580,
+            581,
+            582,
+            583,
+            584,
+            585,
+            586,
+            587,
+            588,
+            589,
+            590,
+            591,
+            592,
+            593,
+            594,
+            595,
+            596,
+            597,
+            598,
+            599,
+            600,
+            603,
+            604,
+            606,
+            607,
+            609,
+            610,
+            611,
+            612,
+            613,
+            614,
+            615,
+            616,
+            617,
+            618,
+            619,
+            620,
+            621,
+            622,
+            623,
+            624,
+            625,
+            626,
+            627,
+            628,
+            629,
+            630,
+            631,
+            634,
+            635,
+            637,
+            638,
+            642,
+            644,
+            645,
+            646,
+            647,
+            648,
+            649,
+            650,
+            651,
+            652,
+            653,
+            654,
+            655,
+            656,
+            657,
+            658,
+            659,
+            660,
+            661,
+            662,
+            663,
+            664,
+            665,
+            666,
+            667,
+            668,
+            669,
+            670,
+            1335,
+            1336,
+            1337,
+            1338,
+            1339,
+            1340,
+            1341,
+            1342,
+            1343,
+            1344,
+            1345,
+            1346,
+            1347,
+            1348,
+            1349,
+            1350,
+            1351,
+            1352,
+            1353,
+            1354,
+            1355,
+            1356,
+            1357,
+            1358,
+            1359,
+            1360,
+            1361,
+            1362,
+            1363,
+            1364,
+            1365,
+            1366,
+            1367,
+            1368,
+            1369,
+            1370,
+            1371,
+            1372,
+            1373,
+            1374,
+            2953,
+            2954,
+            2955,
+            2956,
+            2957,
+            2958,
+            2959,
+            2960,
+            2961,
+            2962,
+            2963,
+            2964,
+            2965,
+            2966,
+            2967,
+            2968,
+            2969,
+            2970,
+            2971,
+            2972,
+            2973,
+            2974,
+            2975,
+            2976,
+            2977,
+            2978,
+            2979,
+            2980,
+            2981,
+            2982,
+            2983,
+            2984,
+            2985,
+            2986,
+            2987,
+            2988,
+            2989,
+            2990,
+            2991,
+            2992
+          ]
+        },
+        {
+          "name": "ZMDTSCN",
+          "evidenceLines": [
+            2779,
+            2780,
+            2781,
+            2782,
+            2783,
+            2784,
+            2785
+          ]
+        }
+      ],
+      "updateTables": [
+        {
+          "name": "ZMDTCAR",
+          "evidenceLines": [
+            2795,
+            2796,
+            2797,
+            2798,
+            2799,
+            2800,
+            2801,
+            2802,
+            2803,
+            2804,
+            2805,
+            2806,
+            2821,
+            2822,
+            2823,
+            2824,
+            2825,
+            2826,
+            2827,
+            2828,
+            2829,
+            2844,
+            2845,
+            2846,
+            2847,
+            2848,
+            2849,
+            2850,
+            2851,
+            2852,
+            2853,
+            2854,
+            2855,
+            2856,
+            2857,
+            2858,
+            2859,
+            2860,
+            2861,
+            2862,
+            2863,
+            2864,
+            2865,
+            2866,
+            3056,
+            3057,
+            3058,
+            3059,
+            3060,
+            3061,
+            3062,
+            3063,
+            3064,
+            3065,
+            3066,
+            3081,
+            3082,
+            3083,
+            3084,
+            3085,
+            3086,
+            3087,
+            3088,
+            3089,
+            3090,
+            3091,
+            3092,
+            3093,
+            3094,
+            3095,
+            3096,
+            3097,
+            3098,
+            3099,
+            3100,
+            3101,
+            3102,
+            3103
+          ]
+        },
+        {
+          "name": "ZMDTCAX",
+          "evidenceLines": [
+            3118,
+            3119,
+            3120,
+            3121,
+            3122,
+            3123,
+            3124,
+            3125,
+            3126,
+            3127,
+            3128,
+            3129,
+            3130,
+            3131,
+            3132,
+            3133,
+            3134,
+            3135,
+            3136
+          ]
+        },
+        {
+          "name": "ZMDTCTL",
+          "evidenceLines": [
+            3165,
+            3166,
+            3167,
+            3168,
+            3169,
+            3170
+          ]
+        },
+        {
+          "name": "ZMDTOPS",
+          "evidenceLines": [
+            1598,
+            1599,
+            1600,
+            1601,
+            1602,
+            1603,
+            1604,
+            1605,
+            1606,
+            1607,
+            1608,
+            1609,
+            1610,
+            1611,
+            1612,
+            1613,
+            1614,
+            1615,
+            1616,
+            2881,
+            2882,
+            2883,
+            2884,
+            2885,
+            2886,
+            2887,
+            2888,
+            2889,
+            2890,
+            2891,
+            2892,
+            2929,
+            2930,
+            2931,
+            2932,
+            2933,
+            2934,
+            2935,
+            3024,
+            3025,
+            3026,
+            3027,
+            3028,
+            3029,
+            3030,
+            3031,
+            3032,
+            3033,
+            3034,
+            3035,
+            3036,
+            3037,
+            3038,
+            3039,
+            3040,
+            3041,
+            3042,
+            3181,
+            3182,
+            3183,
+            3184,
+            3185,
+            3186,
+            3187
+          ]
+        },
+        {
+          "name": "ZMDTOPT",
+          "evidenceLines": [
+            2902,
+            2903,
+            2904,
+            2905,
+            2906,
+            2907,
+            2908,
+            2909,
+            2910,
+            2911,
+            2912,
+            2913,
+            3198,
+            3199,
+            3200,
+            3201,
+            3202,
+            3203,
+            3204,
+            3205,
+            3206
+          ]
+        }
+      ],
+      "paragraphs": [
+        {
+          "name": "PROGRAM-ID",
+          "evidenceLines": [
+            2
+          ],
+          "executionOrder": 100,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "ZM6RJ374",
+          "evidenceLines": [
+            3
+          ],
+          "executionOrder": 200,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "AUTHOR",
+          "evidenceLines": [
+            4
+          ],
+          "executionOrder": 300,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "INSTALLATION",
+          "evidenceLines": [
+            7
+          ],
+          "executionOrder": 400,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "DATE-WRITTEN",
+          "evidenceLines": [
+            9
+          ],
+          "executionOrder": 500,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "CONFIGURATION",
+          "evidenceLines": [
+            46
+          ],
+          "executionOrder": 600,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "SOURCE-COMPUTER",
+          "evidenceLines": [
+            47
+          ],
+          "executionOrder": 700,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "IBM-4381",
+          "evidenceLines": [
+            48
+          ],
+          "executionOrder": 800,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "OBJECT-COMPUTER",
+          "evidenceLines": [
+            49
+          ],
+          "executionOrder": 900,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "IBM-4381",
+          "evidenceLines": [
+            50
+          ],
+          "executionOrder": 1000,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "INPUT-OUTPUT",
+          "evidenceLines": [
+            51
+          ],
+          "executionOrder": 1100,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "FILE-CONTROL",
+          "evidenceLines": [
+            52
+          ],
+          "executionOrder": 1200,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "FILE",
+          "evidenceLines": [
+            67
+          ],
+          "executionOrder": 1300,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "WORKING-STORAGE",
+          "evidenceLines": [
+            106
+          ],
+          "executionOrder": 1400,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "LINKAGE",
+          "evidenceLines": [
+            537
+          ],
+          "executionOrder": 1500,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "000-CONTROL",
+          "evidenceLines": [
+            542
+          ],
+          "executionOrder": 1600,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "000-0100-INICIO",
+          "evidenceLines": [
+            543
+          ],
+          "executionOrder": 1700,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "010-INICIAL",
+          "evidenceLines": [
+            555
+          ],
+          "executionOrder": 1800,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "010-0100-INICIO",
+          "evidenceLines": [
+            556
+          ],
+          "executionOrder": 1900,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "S980-CLOSE",
+          "evidenceLines": [
+            712
+          ],
+          "executionOrder": 2000,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "010-9900-FIN",
+          "evidenceLines": [
+            745
+          ],
+          "executionOrder": 2100,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "030-GLOBAL",
+          "evidenceLines": [
+            748
+          ],
+          "executionOrder": 2200,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "030-0100-INICIO",
+          "evidenceLines": [
+            749
+          ],
+          "executionOrder": 2300,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "030-9900-FIN",
+          "evidenceLines": [
+            755
+          ],
+          "executionOrder": 2400,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "040-GRABA-OPERA",
+          "evidenceLines": [
+            758
+          ],
+          "executionOrder": 2500,
+          "executionPhase": "PROCESSING",
+          "summary": "Persiste actualizaciones de negocio en ZM6RJ374, aplicando reglas de escritura y control de estado."
+        },
+        {
+          "name": "040-0100-INICIO",
+          "evidenceLines": [
+            759
+          ],
+          "executionOrder": 2600,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "040-0200-GLOBAL",
+          "evidenceLines": [
+            766
+          ],
+          "executionOrder": 2700,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "040-0300-INDIVIDUAL",
+          "evidenceLines": [
+            781
+          ],
+          "executionOrder": 2800,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "040-0350-SAL1",
+          "evidenceLines": [
+            793
+          ],
+          "executionOrder": 2900,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "040-0400-SALIDA",
+          "evidenceLines": [
+            807
+          ],
+          "executionOrder": 3000,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "040-0500-LEER",
+          "evidenceLines": [
+            809
+          ],
+          "executionOrder": 3100,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por ZM6RJ374 y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "040-0600-CLOSE",
+          "evidenceLines": [
+            840
+          ],
+          "executionOrder": 3200,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "040-9900-FIN",
+          "evidenceLines": [
+            845
+          ],
+          "executionOrder": 3300,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "045-PRO-ARCH-SEC",
+          "evidenceLines": [
+            848
+          ],
+          "executionOrder": 3400,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "045-0100-INICIO",
+          "evidenceLines": [
+            849
+          ],
+          "executionOrder": 3500,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "045-0200-LEER",
+          "evidenceLines": [
+            854
+          ],
+          "executionOrder": 3600,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por ZM6RJ374 y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "045-0300-CLOSE",
+          "evidenceLines": [
+            860
+          ],
+          "executionOrder": 3700,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "045-9900-FIN",
+          "evidenceLines": [
+            862
+          ],
+          "executionOrder": 3800,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "046-PROC-IEMPR",
+          "evidenceLines": [
+            865
+          ],
+          "executionOrder": 3900,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "046-0100-INICIO",
+          "evidenceLines": [
+            866
+          ],
+          "executionOrder": 4000,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "046-0200-LEER",
+          "evidenceLines": [
+            868
+          ],
+          "executionOrder": 4100,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por ZM6RJ374 y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "046-9900-FIN",
+          "evidenceLines": [
+            873
+          ],
+          "executionOrder": 4200,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "047-PROC-CONC",
+          "evidenceLines": [
+            876
+          ],
+          "executionOrder": 4300,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "047-0100-INICIO",
+          "evidenceLines": [
+            877
+          ],
+          "executionOrder": 4400,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "047-0200-LEER",
+          "evidenceLines": [
+            879
+          ],
+          "executionOrder": 4500,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por ZM6RJ374 y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "047-0300-COMMIT",
+          "evidenceLines": [
+            885
+          ],
+          "executionOrder": 4600,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "047-9900-FIN",
+          "evidenceLines": [
+            889
+          ],
+          "executionOrder": 4700,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "048-PROC-FLIQUIDA",
+          "evidenceLines": [
+            892
+          ],
+          "executionOrder": 4800,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "048-0100-INICIO",
+          "evidenceLines": [
+            893
+          ],
+          "executionOrder": 4900,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "W000-CTITULOS",
+          "evidenceLines": [
+            905
+          ],
+          "executionOrder": 5000,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "048-0200-LEER",
+          "evidenceLines": [
+            907
+          ],
+          "executionOrder": 5100,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por ZM6RJ374 y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "048-0300-ACTUALIZA",
+          "evidenceLines": [
+            912
+          ],
+          "executionOrder": 5200,
+          "executionPhase": "PROCESSING",
+          "summary": "Persiste actualizaciones de negocio en ZM6RJ374, aplicando reglas de escritura y control de estado."
+        },
+        {
+          "name": "048-9900-FIN",
+          "evidenceLines": [
+            923
+          ],
+          "executionOrder": 5300,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "050-PROC-MOVIMIENTO",
+          "evidenceLines": [
+            926
+          ],
+          "executionOrder": 5400,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "050-0100-INICIO",
+          "evidenceLines": [
+            927
+          ],
+          "executionOrder": 5500,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "050-0300-PROCESA",
+          "evidenceLines": [
+            954
+          ],
+          "executionOrder": 5600,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "050-0800-LEE-OPERA",
+          "evidenceLines": [
+            957
+          ],
+          "executionOrder": 5700,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por ZM6RJ374 y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "050-9900-FIN",
+          "evidenceLines": [
+            961
+          ],
+          "executionOrder": 5800,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "060-CONC-PRECIO",
+          "evidenceLines": [
+            964
+          ],
+          "executionOrder": 5900,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "060-0100-INICIO",
+          "evidenceLines": [
+            965
+          ],
+          "executionOrder": 6000,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "060-0200-RENTA",
+          "evidenceLines": [
+            989
+          ],
+          "executionOrder": 6100,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "060-9900-FIN",
+          "evidenceLines": [
+            1019
+          ],
+          "executionOrder": 6200,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "057-CARGA-PERJUR",
+          "evidenceLines": [
+            1022
+          ],
+          "executionOrder": 6300,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "057-0100-INICIO",
+          "evidenceLines": [
+            1023
+          ],
+          "executionOrder": 6400,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "057-0200-LEER",
+          "evidenceLines": [
+            1035
+          ],
+          "executionOrder": 6500,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por ZM6RJ374 y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "057-0300-SALIDA",
+          "evidenceLines": [
+            1047
+          ],
+          "executionOrder": 6600,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "057-9900-FIN",
+          "evidenceLines": [
+            1055
+          ],
+          "executionOrder": 6700,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "058-CARGA-PARAM",
+          "evidenceLines": [
+            1061
+          ],
+          "executionOrder": 6800,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "058-0100-INICIO",
+          "evidenceLines": [
+            1062
+          ],
+          "executionOrder": 6900,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "058-0200-LEER",
+          "evidenceLines": [
+            1071
+          ],
+          "executionOrder": 7000,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por ZM6RJ374 y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "058-0300-SALIDA",
+          "evidenceLines": [
+            1079
+          ],
+          "executionOrder": 7100,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "058-9900-FIN",
+          "evidenceLines": [
+            1087
+          ],
+          "executionOrder": 7200,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "080-PROCESA-OPERA",
+          "evidenceLines": [
+            1093
+          ],
+          "executionOrder": 7300,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "080-0100-INICIO",
+          "evidenceLines": [
+            1094
+          ],
+          "executionOrder": 7400,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "080-0200-ERROR",
+          "evidenceLines": [
+            1158
+          ],
+          "executionOrder": 7500,
+          "executionPhase": "PROCESSING",
+          "summary": "Gestiona contingencias en ZM6RJ374, concentrando el manejo de error y salida controlada."
+        },
+        {
+          "name": "080-0300-EJECUTA",
+          "evidenceLines": [
+            1168
+          ],
+          "executionOrder": 7600,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "080-9900-FIN",
+          "evidenceLines": [
+            1170
+          ],
+          "executionOrder": 7700,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "090-CALCULOS-COMI",
+          "evidenceLines": [
+            1173
+          ],
+          "executionOrder": 7800,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "090-0100-INICIO",
+          "evidenceLines": [
+            1174
+          ],
+          "executionOrder": 7900,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "090-0200-COMPRA",
+          "evidenceLines": [
+            1236
+          ],
+          "executionOrder": 8000,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "090-0300-VENTA",
+          "evidenceLines": [
+            1242
+          ],
+          "executionOrder": 8100,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "090-0350-CANTIDAD",
+          "evidenceLines": [
+            1248
+          ],
+          "executionOrder": 8200,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "090-0400-SALIDA",
+          "evidenceLines": [
+            1250
+          ],
+          "executionOrder": 8300,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "090-9900-FIN",
+          "evidenceLines": [
+            1277
+          ],
+          "executionOrder": 8400,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "100-GEN-TITULOS",
+          "evidenceLines": [
+            1280
+          ],
+          "executionOrder": 8500,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "100-0100-INICIO",
+          "evidenceLines": [
+            1281
+          ],
+          "executionOrder": 8600,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "100-9900-FIN",
+          "evidenceLines": [
+            1290
+          ],
+          "executionOrder": 8700,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "110-GEN-MOVIMIENTO",
+          "evidenceLines": [
+            1293
+          ],
+          "executionOrder": 8800,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "110-0100-INICIO",
+          "evidenceLines": [
+            1294
+          ],
+          "executionOrder": 8900,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "110-9900-FIN",
+          "evidenceLines": [
+            1308
+          ],
+          "executionOrder": 9000,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "120-GEN-COMISION",
+          "evidenceLines": [
+            1311
+          ],
+          "executionOrder": 9100,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "120-0100-INICIO",
+          "evidenceLines": [
+            1312
+          ],
+          "executionOrder": 9200,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "120-9900-FIN",
+          "evidenceLines": [
+            1324
+          ],
+          "executionOrder": 9300,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "125-GEN-REG-GANANCIA-PERDIDA",
+          "evidenceLines": [
+            1329
+          ],
+          "executionOrder": 9400,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "125-0100-INICIO",
+          "evidenceLines": [
+            1330
+          ],
+          "executionOrder": 9500,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "125-9900-FIN",
+          "evidenceLines": [
+            1626
+          ],
+          "executionOrder": 9600,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "130-GEN-EFECTIVO",
+          "evidenceLines": [
+            1632
+          ],
+          "executionOrder": 9700,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "130-0100-INICIO",
+          "evidenceLines": [
+            1633
+          ],
+          "executionOrder": 9800,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "130-9900-FIN",
+          "evidenceLines": [
+            1644
+          ],
+          "executionOrder": 9900,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "140-ACUMULA",
+          "evidenceLines": [
+            1647
+          ],
+          "executionOrder": 10000,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "140-0100-INICIO",
+          "evidenceLines": [
+            1648
+          ],
+          "executionOrder": 10100,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "140-0200-COMPRA",
+          "evidenceLines": [
+            1652
+          ],
+          "executionOrder": 10200,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "140-0300-CONFIRMADO",
+          "evidenceLines": [
+            1656
+          ],
+          "executionOrder": 10300,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "140-0400-POTENCIAL",
+          "evidenceLines": [
+            1664
+          ],
+          "executionOrder": 10400,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "140-0500-VENTA",
+          "evidenceLines": [
+            1670
+          ],
+          "executionOrder": 10500,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "140-0600-CONFIRMADO",
+          "evidenceLines": [
+            1674
+          ],
+          "executionOrder": 10600,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "140-0700-POTENCIAL",
+          "evidenceLines": [
+            1682
+          ],
+          "executionOrder": 10700,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "140-9900-FIN",
+          "evidenceLines": [
+            1687
+          ],
+          "executionOrder": 10800,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "150-EJECT-COMMIT",
+          "evidenceLines": [
+            1690
+          ],
+          "executionOrder": 10900,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "150-0100-INICIO",
+          "evidenceLines": [
+            1691
+          ],
+          "executionOrder": 11000,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "150-9900-FIN",
+          "evidenceLines": [
+            1703
+          ],
+          "executionOrder": 11100,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "160-IMPT-COM",
+          "evidenceLines": [
+            1706
+          ],
+          "executionOrder": 11200,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "160-0100-INICIO",
+          "evidenceLines": [
+            1707
+          ],
+          "executionOrder": 11300,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "160-0200-RANGO2",
+          "evidenceLines": [
+            1717
+          ],
+          "executionOrder": 11400,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "160-0300-VAR3",
+          "evidenceLines": [
+            1726
+          ],
+          "executionOrder": 11500,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "160-0150-SALCOM",
+          "evidenceLines": [
+            1740
+          ],
+          "executionOrder": 11600,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "ROUNDED",
+          "evidenceLines": [
+            1753
+          ],
+          "executionOrder": 11700,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "160-9900-FIN",
+          "evidenceLines": [
+            1775
+          ],
+          "executionOrder": 11800,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "164-BUSCA-PERJUR",
+          "evidenceLines": [
+            1778
+          ],
+          "executionOrder": 11900,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por ZM6RJ374 y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "164-0100-INICIO",
+          "evidenceLines": [
+            1779
+          ],
+          "executionOrder": 12000,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "164-0200-BUSCA",
+          "evidenceLines": [
+            1782
+          ],
+          "executionOrder": 12100,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por ZM6RJ374 y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "164-0300-SALIDA",
+          "evidenceLines": [
+            1791
+          ],
+          "executionOrder": 12200,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "164-9900-FIN",
+          "evidenceLines": [
+            1799
+          ],
+          "executionOrder": 12300,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "168-BUSCA-PARAM",
+          "evidenceLines": [
+            1805
+          ],
+          "executionOrder": 12400,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por ZM6RJ374 y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "168-0100-INICIO",
+          "evidenceLines": [
+            1806
+          ],
+          "executionOrder": 12500,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "168-0200-BUSCA",
+          "evidenceLines": [
+            1809
+          ],
+          "executionOrder": 12600,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por ZM6RJ374 y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "168-9900-FIN",
+          "evidenceLines": [
+            1817
+          ],
+          "executionOrder": 12700,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "170-CANT-COM",
+          "evidenceLines": [
+            1823
+          ],
+          "executionOrder": 12800,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "170-0100-INICIO",
+          "evidenceLines": [
+            1824
+          ],
+          "executionOrder": 12900,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "170-0200-COMCTA",
+          "evidenceLines": [
+            1837
+          ],
+          "executionOrder": 13000,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "170-0300-VAR3",
+          "evidenceLines": [
+            1846
+          ],
+          "executionOrder": 13100,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "170-0150-SALCOM",
+          "evidenceLines": [
+            1858
+          ],
+          "executionOrder": 13200,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "ROUNDED",
+          "evidenceLines": [
+            1865
+          ],
+          "executionOrder": 13300,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "ROUNDED",
+          "evidenceLines": [
+            1868
+          ],
+          "executionOrder": 13400,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "170-9900-FIN",
+          "evidenceLines": [
+            1875
+          ],
+          "executionOrder": 13500,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "180-IMPT-VEN",
+          "evidenceLines": [
+            1878
+          ],
+          "executionOrder": 13600,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "180-0100-INICIO",
+          "evidenceLines": [
+            1879
+          ],
+          "executionOrder": 13700,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "180-0200-RANGO2",
+          "evidenceLines": [
+            1889
+          ],
+          "executionOrder": 13800,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "180-0300-VAR3",
+          "evidenceLines": [
+            1898
+          ],
+          "executionOrder": 13900,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "180-0150-SALCOM",
+          "evidenceLines": [
+            1912
+          ],
+          "executionOrder": 14000,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "ROUNDED",
+          "evidenceLines": [
+            1921
+          ],
+          "executionOrder": 14100,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "ROUNDED",
+          "evidenceLines": [
+            1929
+          ],
+          "executionOrder": 14200,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "180-9900-FIN",
+          "evidenceLines": [
+            1985
+          ],
+          "executionOrder": 14300,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "190-CANT-VEN",
+          "evidenceLines": [
+            1988
+          ],
+          "executionOrder": 14400,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "190-0100-INICIO",
+          "evidenceLines": [
+            1989
+          ],
+          "executionOrder": 14500,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "190-0200-COMCTA",
+          "evidenceLines": [
+            2002
+          ],
+          "executionOrder": 14600,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "190-0300-VAR3",
+          "evidenceLines": [
+            2011
+          ],
+          "executionOrder": 14700,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "190-0150-SALCOM",
+          "evidenceLines": [
+            2023
+          ],
+          "executionOrder": 14800,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "ROUNDED",
+          "evidenceLines": [
+            2030
+          ],
+          "executionOrder": 14900,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "ROUNDED",
+          "evidenceLines": [
+            2033
+          ],
+          "executionOrder": 15000,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "190-9900-FIN",
+          "evidenceLines": [
+            2073
+          ],
+          "executionOrder": 15100,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "200-FINAL",
+          "evidenceLines": [
+            2076
+          ],
+          "executionOrder": 15200,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "200-0100-INICIO",
+          "evidenceLines": [
+            2077
+          ],
+          "executionOrder": 15300,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "200-0200-GLOBAL",
+          "evidenceLines": [
+            2090
+          ],
+          "executionOrder": 15400,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "200-9900-FIN",
+          "evidenceLines": [
+            2093
+          ],
+          "executionOrder": 15500,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "300-ACT-TIT",
+          "evidenceLines": [
+            2096
+          ],
+          "executionOrder": 15600,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "300-0100-INICIO",
+          "evidenceLines": [
+            2097
+          ],
+          "executionOrder": 15700,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "300-0200-COMPRA",
+          "evidenceLines": [
+            2101
+          ],
+          "executionOrder": 15800,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "300-0300-CONFIRMADO",
+          "evidenceLines": [
+            2105
+          ],
+          "executionOrder": 15900,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "300-0333-CONTINUA",
+          "evidenceLines": [
+            2141
+          ],
+          "executionOrder": 16000,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "300-0400-POTENCIAL",
+          "evidenceLines": [
+            2146
+          ],
+          "executionOrder": 16100,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "300-0444-CONTINUA",
+          "evidenceLines": [
+            2181
+          ],
+          "executionOrder": 16200,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "300-0500-VENTA",
+          "evidenceLines": [
+            2186
+          ],
+          "executionOrder": 16300,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "300-0600-CONFIRMADO",
+          "evidenceLines": [
+            2190
+          ],
+          "executionOrder": 16400,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "300-0700-POTENCIAL",
+          "evidenceLines": [
+            2198
+          ],
+          "executionOrder": 16500,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "W000-TITULOS",
+          "evidenceLines": [
+            2204
+          ],
+          "executionOrder": 16600,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "300-0800-SALIDA-GRAL",
+          "evidenceLines": [
+            2205
+          ],
+          "executionOrder": 16700,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "300-9900-FIN",
+          "evidenceLines": [
+            2210
+          ],
+          "executionOrder": 16800,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "310-INS-TIT",
+          "evidenceLines": [
+            2213
+          ],
+          "executionOrder": 16900,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "310-0100-INICIO",
+          "evidenceLines": [
+            2214
+          ],
+          "executionOrder": 17000,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "310-0200-POTENCIAL",
+          "evidenceLines": [
+            2234
+          ],
+          "executionOrder": 17100,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "310-0300-CONFIRMADO",
+          "evidenceLines": [
+            2240
+          ],
+          "executionOrder": 17200,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "310-0400-SALIDA",
+          "evidenceLines": [
+            2247
+          ],
+          "executionOrder": 17300,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "310-9900-FIN",
+          "evidenceLines": [
+            2264
+          ],
+          "executionOrder": 17400,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "320-ACT-EFE",
+          "evidenceLines": [
+            2267
+          ],
+          "executionOrder": 17500,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "320-0100-INICIO",
+          "evidenceLines": [
+            2268
+          ],
+          "executionOrder": 17600,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "320-0200-COMPRA",
+          "evidenceLines": [
+            2272
+          ],
+          "executionOrder": 17700,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "320-0300-CONFIRMADO",
+          "evidenceLines": [
+            2276
+          ],
+          "executionOrder": 17800,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "320-0400-POTENCIAL",
+          "evidenceLines": [
+            2283
+          ],
+          "executionOrder": 17900,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "320-0500-VENTA",
+          "evidenceLines": [
+            2289
+          ],
+          "executionOrder": 18000,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "320-0600-CONFIRMADO",
+          "evidenceLines": [
+            2293
+          ],
+          "executionOrder": 18100,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "320-0700-POTENCIAL",
+          "evidenceLines": [
+            2302
+          ],
+          "executionOrder": 18200,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "320-0800-SALIDA-GRAL",
+          "evidenceLines": [
+            2310
+          ],
+          "executionOrder": 18300,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "320-9900-FIN",
+          "evidenceLines": [
+            2312
+          ],
+          "executionOrder": 18400,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "330-INS-EFE",
+          "evidenceLines": [
+            2315
+          ],
+          "executionOrder": 18500,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "330-0100-INICIO",
+          "evidenceLines": [
+            2316
+          ],
+          "executionOrder": 18600,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "330-0200-POTENCIAL",
+          "evidenceLines": [
+            2334
+          ],
+          "executionOrder": 18700,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "330-0300-CONFIRMADO",
+          "evidenceLines": [
+            2347
+          ],
+          "executionOrder": 18800,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "330-0400-SALIDA",
+          "evidenceLines": [
+            2361
+          ],
+          "executionOrder": 18900,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "330-9900-FIN",
+          "evidenceLines": [
+            2365
+          ],
+          "executionOrder": 19000,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "500-LEE-CONCEPT",
+          "evidenceLines": [
+            2368
+          ],
+          "executionOrder": 19100,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por ZM6RJ374 y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "500-0100-INICIO",
+          "evidenceLines": [
+            2369
+          ],
+          "executionOrder": 19200,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "500-9900-FIN",
+          "evidenceLines": [
+            2400
+          ],
+          "executionOrder": 19300,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "520-LEE-PRECIO",
+          "evidenceLines": [
+            2403
+          ],
+          "executionOrder": 19400,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por ZM6RJ374 y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "520-0100-INICIO",
+          "evidenceLines": [
+            2404
+          ],
+          "executionOrder": 19500,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "520-9900-FIN",
+          "evidenceLines": [
+            2421
+          ],
+          "executionOrder": 19600,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "530-SCAN-GLOB",
+          "evidenceLines": [
+            2424
+          ],
+          "executionOrder": 19700,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "530-0100-INICIO",
+          "evidenceLines": [
+            2425
+          ],
+          "executionOrder": 19800,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "530-9900-FIN",
+          "evidenceLines": [
+            2459
+          ],
+          "executionOrder": 19900,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "540-SCAN-INDV",
+          "evidenceLines": [
+            2462
+          ],
+          "executionOrder": 20000,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "540-0100-INICIO",
+          "evidenceLines": [
+            2463
+          ],
+          "executionOrder": 20100,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "540-9900-FIN",
+          "evidenceLines": [
+            2495
+          ],
+          "executionOrder": 20200,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "550-SELECT-ZMDT622",
+          "evidenceLines": [
+            2498
+          ],
+          "executionOrder": 20300,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "550-0100-INICIO",
+          "evidenceLines": [
+            2499
+          ],
+          "executionOrder": 20400,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "550-9900-FIN",
+          "evidenceLines": [
+            2546
+          ],
+          "executionOrder": 20500,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "552-PRECIO-CONTRATO",
+          "evidenceLines": [
+            2553
+          ],
+          "executionOrder": 20600,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "552-0100-INICIO",
+          "evidenceLines": [
+            2554
+          ],
+          "executionOrder": 20700,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "552-9900-FIN",
+          "evidenceLines": [
+            2566
+          ],
+          "executionOrder": 20800,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "553-PRECIO-CLIENTE",
+          "evidenceLines": [
+            2573
+          ],
+          "executionOrder": 20900,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "553-0100-INICIO",
+          "evidenceLines": [
+            2574
+          ],
+          "executionOrder": 21000,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "553-9900-FIN",
+          "evidenceLines": [
+            2586
+          ],
+          "executionOrder": 21100,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "570-LEE-PERJUR",
+          "evidenceLines": [
+            2589
+          ],
+          "executionOrder": 21200,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por ZM6RJ374 y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "570-0100-INICIO",
+          "evidenceLines": [
+            2590
+          ],
+          "executionOrder": 21300,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "570-9900-FIN",
+          "evidenceLines": [
+            2606
+          ],
+          "executionOrder": 21400,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "575-LEE-PARAM",
+          "evidenceLines": [
+            2612
+          ],
+          "executionOrder": 21500,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por ZM6RJ374 y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "575-0100-INICIO",
+          "evidenceLines": [
+            2613
+          ],
+          "executionOrder": 21600,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "575-9900-FIN",
+          "evidenceLines": [
+            2624
+          ],
+          "executionOrder": 21700,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "580-INS-OPERA",
+          "evidenceLines": [
+            2630
+          ],
+          "executionOrder": 21800,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "580-0100-INICIO",
+          "evidenceLines": [
+            2631
+          ],
+          "executionOrder": 21900,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "580-9900-FIN",
+          "evidenceLines": [
+            2633
+          ],
+          "executionOrder": 22000,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "590-LEE-CUENTA",
+          "evidenceLines": [
+            2636
+          ],
+          "executionOrder": 22100,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por ZM6RJ374 y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "590-0100-INICIO",
+          "evidenceLines": [
+            2637
+          ],
+          "executionOrder": 22200,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "590-9900-FIN",
+          "evidenceLines": [
+            2672
+          ],
+          "executionOrder": 22300,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "592-LEE-CUENTA",
+          "evidenceLines": [
+            2675
+          ],
+          "executionOrder": 22400,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por ZM6RJ374 y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "592-0100-INICIO",
+          "evidenceLines": [
+            2676
+          ],
+          "executionOrder": 22500,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "592-9900-FIN",
+          "evidenceLines": [
+            2692
+          ],
+          "executionOrder": 22600,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "595-LEE-OPERA",
+          "evidenceLines": [
+            2695
+          ],
+          "executionOrder": 22700,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por ZM6RJ374 y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "595-0100-INICIO",
+          "evidenceLines": [
+            2696
+          ],
+          "executionOrder": 22800,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "595-9900-FIN",
+          "evidenceLines": [
+            2706
+          ],
+          "executionOrder": 22900,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "600-BUSCA-CARTERA",
+          "evidenceLines": [
+            2709
+          ],
+          "executionOrder": 23000,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por ZM6RJ374 y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "600-0100-INICIO",
+          "evidenceLines": [
+            2710
+          ],
+          "executionOrder": 23100,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "600-9900-FIN",
+          "evidenceLines": [
+            2773
+          ],
+          "executionOrder": 23200,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "605-BUSCA-SUBCANAL",
+          "evidenceLines": [
+            2777
+          ],
+          "executionOrder": 23300,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por ZM6RJ374 y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "605-0100-INICIO",
+          "evidenceLines": [
+            2778
+          ],
+          "executionOrder": 23400,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "605-9900-FIN",
+          "evidenceLines": [
+            2790
+          ],
+          "executionOrder": 23500,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "610-UPDATE-TIT",
+          "evidenceLines": [
+            2793
+          ],
+          "executionOrder": 23600,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "610-0100-INICIO",
+          "evidenceLines": [
+            2794
+          ],
+          "executionOrder": 23700,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "610-9900-FIN",
+          "evidenceLines": [
+            2816
+          ],
+          "executionOrder": 23800,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "615-DELETE-TIT",
+          "evidenceLines": [
+            2819
+          ],
+          "executionOrder": 23900,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "615-0100-INICIO",
+          "evidenceLines": [
+            2820
+          ],
+          "executionOrder": 24000,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "615-9900-FIN",
+          "evidenceLines": [
+            2839
+          ],
+          "executionOrder": 24100,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "620-INS-TITULOS",
+          "evidenceLines": [
+            2842
+          ],
+          "executionOrder": 24200,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "620-0100-INICIO",
+          "evidenceLines": [
+            2843
+          ],
+          "executionOrder": 24300,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "620-9900-FIN",
+          "evidenceLines": [
+            2876
+          ],
+          "executionOrder": 24400,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "630-UPDATE-MOVIM",
+          "evidenceLines": [
+            2879
+          ],
+          "executionOrder": 24500,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "630-0100-INICIO",
+          "evidenceLines": [
+            2880
+          ],
+          "executionOrder": 24600,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "630-9900-FIN",
+          "evidenceLines": [
+            2924
+          ],
+          "executionOrder": 24700,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "635-UPDATE-OPERASI",
+          "evidenceLines": [
+            2927
+          ],
+          "executionOrder": 24800,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "635-0100-INICIO",
+          "evidenceLines": [
+            2928
+          ],
+          "executionOrder": 24900,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "635-9900-FIN",
+          "evidenceLines": [
+            2945
+          ],
+          "executionOrder": 25000,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "640-INSERT-COMIS",
+          "evidenceLines": [
+            2948
+          ],
+          "executionOrder": 25100,
+          "executionPhase": "PROCESSING",
+          "summary": "Persiste actualizaciones de negocio en ZM6RJ374, aplicando reglas de escritura y control de estado."
+        },
+        {
+          "name": "640-0100-INICIO",
+          "evidenceLines": [
+            2949
+          ],
+          "executionOrder": 25200,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "640-9900-FIN",
+          "evidenceLines": [
+            3051
+          ],
+          "executionOrder": 25300,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "650-UPDATE-EFE",
+          "evidenceLines": [
+            3054
+          ],
+          "executionOrder": 25400,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "650-0100-INICIO",
+          "evidenceLines": [
+            3055
+          ],
+          "executionOrder": 25500,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "650-9900-FIN",
+          "evidenceLines": [
+            3076
+          ],
+          "executionOrder": 25600,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "660-INS-EFECTIVO",
+          "evidenceLines": [
+            3079
+          ],
+          "executionOrder": 25700,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "660-0100-INICIO",
+          "evidenceLines": [
+            3080
+          ],
+          "executionOrder": 25800,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "660-9900-FIN",
+          "evidenceLines": [
+            3113
+          ],
+          "executionOrder": 25900,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "670-UPDATE-CARTAUX",
+          "evidenceLines": [
+            3116
+          ],
+          "executionOrder": 26000,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "670-0100-INICIO",
+          "evidenceLines": [
+            3117
+          ],
+          "executionOrder": 26100,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "670-9900-FIN",
+          "evidenceLines": [
+            3159
+          ],
+          "executionOrder": 26200,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "690-DELE-CTLPRO",
+          "evidenceLines": [
+            3163
+          ],
+          "executionOrder": 26300,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "690-0100-INICIO",
+          "evidenceLines": [
+            3164
+          ],
+          "executionOrder": 26400,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "690-9900-FIN",
+          "evidenceLines": [
+            3176
+          ],
+          "executionOrder": 26500,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "700-UPDATE-OPERA",
+          "evidenceLines": [
+            3179
+          ],
+          "executionOrder": 26600,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "700-0100-INICIO",
+          "evidenceLines": [
+            3180
+          ],
+          "executionOrder": 26700,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "700-9900-FIN",
+          "evidenceLines": [
+            3217
+          ],
+          "executionOrder": 26800,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "710-LEE-CONCEPT",
+          "evidenceLines": [
+            3220
+          ],
+          "executionOrder": 26900,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por ZM6RJ374 y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "710-0100-INICIO",
+          "evidenceLines": [
+            3221
+          ],
+          "executionOrder": 27000,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "710-9900-FIN",
+          "evidenceLines": [
+            3252
+          ],
+          "executionOrder": 27100,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "720-LEE-CATIVA",
+          "evidenceLines": [
+            3255
+          ],
+          "executionOrder": 27200,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por ZM6RJ374 y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "720-0100-INICIO",
+          "evidenceLines": [
+            3256
+          ],
+          "executionOrder": 27300,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "720-9900-FIN",
+          "evidenceLines": [
+            3280
+          ],
+          "executionOrder": 27400,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "730-PARAMETRO-IEMPR",
+          "evidenceLines": [
+            3283
+          ],
+          "executionOrder": 27500,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "730-0100-INICIO",
+          "evidenceLines": [
+            3284
+          ],
+          "executionOrder": 27600,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "730-9900-FIN",
+          "evidenceLines": [
+            3333
+          ],
+          "executionOrder": 27700,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "750-OBT-INPC-TIPCAMB",
+          "evidenceLines": [
+            3337
+          ],
+          "executionOrder": 27800,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "750-0100-INICIO",
+          "evidenceLines": [
+            3338
+          ],
+          "executionOrder": 27900,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "750-9900-FIN",
+          "evidenceLines": [
+            3353
+          ],
+          "executionOrder": 28000,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "900-FECHA-VALOR",
+          "evidenceLines": [
+            3360
+          ],
+          "executionOrder": 28100,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "900-0100-PROCESO",
+          "evidenceLines": [
+            3361
+          ],
+          "executionOrder": 28200,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "900-9900-FIN",
+          "evidenceLines": [
+            3393
+          ],
+          "executionOrder": 28300,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "980-ABORTA",
+          "evidenceLines": [
+            3404
+          ],
+          "executionOrder": 28400,
+          "executionPhase": "PROCESSING",
+          "summary": "Gestiona contingencias en ZM6RJ374, concentrando el manejo de error y salida controlada."
+        },
+        {
+          "name": "980-0100-INICIO",
+          "evidenceLines": [
+            3405
+          ],
+          "executionOrder": 28500,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "980-9900-FIN",
+          "evidenceLines": [
+            3421
+          ],
+          "executionOrder": 28600,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "990-CIF-CTL",
+          "evidenceLines": [
+            3424
+          ],
+          "executionOrder": 28700,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "990-0100-INICIO",
+          "evidenceLines": [
+            3425
+          ],
+          "executionOrder": 28800,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "A040-TOT-CANC",
+          "evidenceLines": [
+            3434
+          ],
+          "executionOrder": 28900,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "990-9900-FIN",
+          "evidenceLines": [
+            3435
+          ],
+          "executionOrder": 29000,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "995-ESCRIBE-ENCABE",
+          "evidenceLines": [
+            3438
+          ],
+          "executionOrder": 29100,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "995-0100-INICIO",
+          "evidenceLines": [
+            3439
+          ],
+          "executionOrder": 29200,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM6RJ374, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "995-0200-ESCRIBE",
+          "evidenceLines": [
+            3443
+          ],
+          "executionOrder": 29300,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM6RJ374, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "995-9900-FIN",
+          "evidenceLines": [
+            3456
+          ],
+          "executionOrder": 29400,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM6RJ374, consolidando trazas y terminacion funcional del proceso."
+        }
+      ],
+      "paragraphCalls": [],
+      "paragraphCopybooks": [
+        {
+          "paragraph": "000-0100-INICIO",
+          "copybook": "ZMWBP023",
+          "evidenceLines": [
+            553
+          ]
+        },
+        {
+          "paragraph": "000-0100-INICIO",
+          "copybook": "ZMWBP070",
+          "evidenceLines": [
+            544
+          ]
+        },
+        {
+          "paragraph": "040-0200-GLOBAL",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            778
+          ]
+        },
+        {
+          "paragraph": "040-0350-SAL1",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            805
+          ]
+        },
+        {
+          "paragraph": "057-0100-INICIO",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            1033
+          ]
+        },
+        {
+          "paragraph": "058-0100-INICIO",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            1069
+          ]
+        },
+        {
+          "paragraph": "060-0200-RENTA",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            997
+          ]
+        },
+        {
+          "paragraph": "125-0100-INICIO",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            1382,
+            1623
+          ]
+        },
+        {
+          "paragraph": "500-0100-INICIO",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            2393
+          ]
+        },
+        {
+          "paragraph": "520-0100-INICIO",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            2415
+          ]
+        },
+        {
+          "paragraph": "530-0100-INICIO",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            2448
+          ]
+        },
+        {
+          "paragraph": "540-0100-INICIO",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            2484
+          ]
+        },
+        {
+          "paragraph": "550-0100-INICIO",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            2521
+          ]
+        },
+        {
+          "paragraph": "570-0100-INICIO",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            2603
+          ]
+        },
+        {
+          "paragraph": "575-0100-INICIO",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            2621
+          ]
+        },
+        {
+          "paragraph": "590-0100-INICIO",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            2660
+          ]
+        },
+        {
+          "paragraph": "592-0100-INICIO",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            2687
+          ]
+        },
+        {
+          "paragraph": "600-0100-INICIO",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            2737
+          ]
+        },
+        {
+          "paragraph": "605-0100-INICIO",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            2787
+          ]
+        },
+        {
+          "paragraph": "610-0100-INICIO",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            2815
+          ]
+        },
+        {
+          "paragraph": "615-0100-INICIO",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            2838
+          ]
+        },
+        {
+          "paragraph": "620-0100-INICIO",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            2875
+          ]
+        },
+        {
+          "paragraph": "630-0100-INICIO",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            2898,
+            2920
+          ]
+        },
+        {
+          "paragraph": "635-0100-INICIO",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            2943
+          ]
+        },
+        {
+          "paragraph": "640-0100-INICIO",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            2999,
+            3049
+          ]
+        },
+        {
+          "paragraph": "650-0100-INICIO",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            3075
+          ]
+        },
+        {
+          "paragraph": "660-0100-INICIO",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            3112
+          ]
+        },
+        {
+          "paragraph": "670-0100-INICIO",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            3148,
+            3158
+          ]
+        },
+        {
+          "paragraph": "690-0100-INICIO",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            3175
+          ]
+        },
+        {
+          "paragraph": "700-0100-INICIO",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            3194,
+            3213
+          ]
+        },
+        {
+          "paragraph": "710-0100-INICIO",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            3243
+          ]
+        },
+        {
+          "paragraph": "720-0100-INICIO",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            3272
+          ]
+        },
+        {
+          "paragraph": "730-0100-INICIO",
+          "copybook": "ZMWBP000",
+          "evidenceLines": [
+            3331
+          ]
+        },
+        {
+          "paragraph": "730-0100-INICIO",
+          "copybook": "ZMWBP074",
+          "evidenceLines": [
+            3325
+          ]
+        },
+        {
+          "paragraph": "900-0100-PROCESO",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            3386,
+            3390
+          ]
+        },
+        {
+          "paragraph": "900-9900-FIN",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            3400
+          ]
+        },
+        {
+          "paragraph": "995-9900-FIN",
+          "copybook": "ZMWBP000",
+          "evidenceLines": [
+            3467
+          ]
+        },
+        {
+          "paragraph": "995-9900-FIN",
+          "copybook": "ZMWBP070",
+          "evidenceLines": [
+            3462
+          ]
+        },
+        {
+          "paragraph": "995-9900-FIN",
+          "copybook": "ZMWBP074",
+          "evidenceLines": [
+            3475
+          ]
+        },
+        {
+          "paragraph": "FILE",
+          "copybook": "ZMWBV470",
+          "evidenceLines": [
+            71
+          ]
+        },
+        {
+          "paragraph": "LINKAGE",
+          "copybook": "ZMWBV224",
+          "evidenceLines": [
+            539
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "SQLCA",
+          "evidenceLines": [
+            360
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZCARTAUX",
+          "evidenceLines": [
+            466
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZCARTERA",
+          "evidenceLines": [
+            458
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZCATIVA",
+          "evidenceLines": [
+            446
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZCONCEPT",
+          "evidenceLines": [
+            504
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZCTLPROC",
+          "evidenceLines": [
+            516
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZCUENTA",
+          "evidenceLines": [
+            508
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZDEFOPER",
+          "evidenceLines": [
+            488
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZEMPRESA",
+          "evidenceLines": [
+            326
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMGTCAR",
+          "evidenceLines": [
+            484
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMGTCAX",
+          "evidenceLines": [
+            462
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMGTCTA",
+          "evidenceLines": [
+            512
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMGTCTL",
+          "evidenceLines": [
+            520
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMGTOPS",
+          "evidenceLines": [
+            454
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMGTOPT",
+          "evidenceLines": [
+            528
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMWBV000",
+          "evidenceLines": [
+            339
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMWBV002",
+          "evidenceLines": [
+            363
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMWBV003",
+          "evidenceLines": [
+            321
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMWBV004",
+          "evidenceLines": [
+            317
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMWBV225",
+          "evidenceLines": [
+            357
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMWBV227",
+          "evidenceLines": [
+            303
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMWBV471",
+          "evidenceLines": [
+            346
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMWRTX1B",
+          "evidenceLines": [
+            309
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMWSJZ39",
+          "evidenceLines": [
+            352
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZOPERASI",
+          "evidenceLines": [
+            450
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZOPERTET",
+          "evidenceLines": [
+            524
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZPARAM",
+          "evidenceLines": [
+            496
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZPERJUR",
+          "evidenceLines": [
+            492
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZPRECIO",
+          "evidenceLines": [
+            500
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZTIPCAMB",
+          "evidenceLines": [
+            471
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZZMDT110",
+          "evidenceLines": [
+            475
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZZMDT111",
+          "evidenceLines": [
+            479
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZZMDT622",
+          "evidenceLines": [
+            332
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZZMDTSCN",
+          "evidenceLines": [
+            532
+          ]
+        }
+      ],
+      "coverage": {
+        "sequenceColumnsNormalized": true,
+        "procedureDivisionFound": true,
+        "parseStartLine": 2,
+        "parseStartReason": "PROCEDURE_DIVISION",
+        "performTargetCount": 68,
+        "paragraphCount": 294,
+        "missingPerformTargets": [],
+        "resolvedPerformTargetsViaCopybook": {
+          "970-SQL-ERROR": [
+            "ZMWBP001"
+          ],
+          "9800-OBT-CASILLERO": [
+            "ZMWBP074"
+          ],
+          "999-CONST-ENCA": [
+            "ZMWBP000"
+          ],
+          "999-MUEVE-FECHAS": [
+            "ZMWBP070"
+          ]
+        },
+        "resolvedPerformTargetsViaPrefixAlias": {}
+      }
+    }
+  ]
+}

@@ -1,0 +1,877 @@
+{
+  "stage": "discovery-extraction",
+  "runId": "e2e-20260625T223547Z-zm4dj340",
+  "programs": [
+    "ZM4DJ340"
+  ],
+  "extractions": [
+    {
+      "program": "ZM4DJ340",
+      "sourceFile": "src/ZM4DJ340.cbl",
+      "procedureLine": 334,
+      "parseStartLine": 2,
+      "parseStartReason": "PROCEDURE_DIVISION",
+      "metadata": {
+        "objective": null,
+        "description": "Programa COBOL que ejecuta procesos. Pertenece a: PROBURSA, S.A. DE C.V. BBVA BANCOMER, S.A. DE C.V. --- SISTEMA MULTIEMPRESAS --- 05/ABR/00. /.",
+        "system": "PROBURSA, S.A. DE C.V. BBVA BANCOMER, S.A. DE C.V. --- SISTEMA MULTIEMPRESAS --- 05/ABR/00. /",
+        "author": null
+      },
+      "copybooks": [
+        {
+          "name": "SQLCA",
+          "evidenceLines": [
+            169
+          ]
+        },
+        {
+          "name": "ZAGPOPRO",
+          "evidenceLines": [
+            159
+          ]
+        },
+        {
+          "name": "ZCUENTA",
+          "evidenceLines": [
+            190
+          ]
+        },
+        {
+          "name": "ZEMPRESA",
+          "evidenceLines": [
+            217
+          ]
+        },
+        {
+          "name": "ZGFSUCUR",
+          "evidenceLines": [
+            202
+          ]
+        },
+        {
+          "name": "ZMSGERAL",
+          "evidenceLines": [
+            214
+          ]
+        },
+        {
+          "name": "ZMWBP000",
+          "evidenceLines": [
+            800
+          ]
+        },
+        {
+          "name": "ZMWBP001",
+          "evidenceLines": [
+            762
+          ]
+        },
+        {
+          "name": "ZMWBP070",
+          "evidenceLines": [
+            795
+          ]
+        },
+        {
+          "name": "ZMWBP074",
+          "evidenceLines": [
+            808
+          ]
+        },
+        {
+          "name": "ZMWBV000",
+          "evidenceLines": [
+            145
+          ]
+        },
+        {
+          "name": "ZMWBV002",
+          "evidenceLines": [
+            142
+          ]
+        },
+        {
+          "name": "ZMWBV003",
+          "evidenceLines": [
+            150
+          ]
+        },
+        {
+          "name": "ZMWBV004",
+          "evidenceLines": [
+            164
+          ]
+        },
+        {
+          "name": "ZMWBV147",
+          "evidenceLines": [
+            154
+          ]
+        },
+        {
+          "name": "ZMWBV356",
+          "evidenceLines": [
+            79
+          ]
+        },
+        {
+          "name": "ZMWBV470",
+          "evidenceLines": [
+            41
+          ]
+        },
+        {
+          "name": "ZMWBV471",
+          "evidenceLines": [
+            85
+          ]
+        },
+        {
+          "name": "ZMWSJZ39",
+          "evidenceLines": [
+            131
+          ]
+        },
+        {
+          "name": "ZOPERASI",
+          "evidenceLines": [
+            184
+          ]
+        },
+        {
+          "name": "ZPARAM",
+          "evidenceLines": [
+            178
+          ]
+        },
+        {
+          "name": "ZSEHIPRO",
+          "evidenceLines": [
+            208
+          ]
+        },
+        {
+          "name": "ZSVCTOCB",
+          "evidenceLines": [
+            196
+          ]
+        }
+      ],
+      "dclTables": [
+        {
+          "memberName": "ZMSGERAL",
+          "tableName": "MSGERALT",
+          "qualifiedName": "DESARSVP.MSGERALT",
+          "schemaName": "DESARSVP",
+          "hostStructureName": "DCLMSGERALT",
+          "declaredColumnCount": 18,
+          "declaredColumns": [
+            "IAPLIBCO",
+            "ITIPOERR",
+            "INUMSEQ",
+            "IIDIOMA",
+            "ICOLV1",
+            "ILONV1",
+            "ICOLV2",
+            "ILONV2",
+            "DMSGERR",
+            "DMSGADI1",
+            "DMSGADI2",
+            "DMSGADI3",
+            "IMSGADI4",
+            "FSISTALT",
+            "IUSRALT",
+            "FHMOD",
+            "HRMOD",
+            "IUSRMOD"
+          ],
+          "declaredColumnDefinitions": [
+            "IAPLIBCO CHAR(2) NOT NULL",
+            "ITIPOERR CHAR(1) NOT NULL",
+            "INUMSEQ CHAR(4) NOT NULL",
+            "IIDIOMA CHAR(1) NOT NULL",
+            "ICOLV1 CHAR(2) NOT NULL",
+            "ILONV1 CHAR(2) NOT NULL",
+            "ICOLV2 CHAR(2) NOT NULL",
+            "ILONV2 CHAR(2) NOT NULL",
+            "DMSGERR CHAR(71) NOT NULL",
+            "DMSGADI1 CHAR(71) NOT NULL",
+            "DMSGADI2 CHAR(71) NOT NULL",
+            "DMSGADI3 CHAR(71) NOT NULL",
+            "IMSGADI4 CHAR(71) NOT NULL",
+            "FSISTALT CHAR(26) NOT NULL",
+            "IUSRALT CHAR(8) NOT NULL",
+            "FHMOD CHAR(10) NOT NULL",
+            "HRMOD CHAR(8) NOT NULL",
+            "IUSRMOD CHAR(8) NOT NULL"
+          ],
+          "dclPath": "dcl/ZMSGERAL.dcl"
+        }
+      ],
+      "calls": [],
+      "readTables": [
+        {
+          "name": "MSGERALT",
+          "evidenceLines": [
+            460,
+            461,
+            462,
+            463,
+            464,
+            465,
+            466,
+            467
+          ]
+        },
+        {
+          "name": "OPERASI",
+          "evidenceLines": [
+            299,
+            300,
+            301,
+            302,
+            303,
+            304,
+            305,
+            306,
+            307,
+            308,
+            309,
+            310,
+            311,
+            312,
+            313,
+            314,
+            315,
+            316,
+            317,
+            318,
+            319,
+            320
+          ]
+        },
+        {
+          "name": "SEHIPRO",
+          "evidenceLines": [
+            322,
+            323,
+            324,
+            325,
+            326,
+            327,
+            328,
+            329,
+            330,
+            674,
+            675,
+            676,
+            677,
+            678,
+            679
+          ]
+        }
+      ],
+      "updateTables": [
+        {
+          "name": "SEHIPRO",
+          "evidenceLines": [
+            674,
+            675,
+            676,
+            677,
+            678,
+            679
+          ]
+        }
+      ],
+      "paragraphs": [
+        {
+          "name": "PROGRAM-ID",
+          "evidenceLines": [
+            2
+          ],
+          "executionOrder": 100,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DJ340, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "ZM4DJ340",
+          "evidenceLines": [
+            3
+          ],
+          "executionOrder": 200,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DJ340, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "AUTHOR",
+          "evidenceLines": [
+            4
+          ],
+          "executionOrder": 300,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DJ340, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "INSTALLATION",
+          "evidenceLines": [
+            7
+          ],
+          "executionOrder": 400,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DJ340, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "DATE-WRITTEN",
+          "evidenceLines": [
+            10
+          ],
+          "executionOrder": 500,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DJ340, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "CONFIGURATION",
+          "evidenceLines": [
+            19
+          ],
+          "executionOrder": 600,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DJ340, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "SOURCE-COMPUTER",
+          "evidenceLines": [
+            20
+          ],
+          "executionOrder": 700,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DJ340, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "IBM-4381",
+          "evidenceLines": [
+            21
+          ],
+          "executionOrder": 800,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DJ340, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "OBJECT-COMPUTER",
+          "evidenceLines": [
+            22
+          ],
+          "executionOrder": 900,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DJ340, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "IBM-4381",
+          "evidenceLines": [
+            23
+          ],
+          "executionOrder": 1000,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DJ340, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "INPUT-OUTPUT",
+          "evidenceLines": [
+            24
+          ],
+          "executionOrder": 1100,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DJ340, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "FILE-CONTROL",
+          "evidenceLines": [
+            25
+          ],
+          "executionOrder": 1200,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DJ340, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "FILE",
+          "evidenceLines": [
+            37
+          ],
+          "executionOrder": 1300,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DJ340, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "WORKING-STORAGE",
+          "evidenceLines": [
+            53
+          ],
+          "executionOrder": 1400,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DJ340, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "000-CONTROL",
+          "evidenceLines": [
+            335
+          ],
+          "executionOrder": 1500,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DJ340, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "001-PROCESO",
+          "evidenceLines": [
+            343
+          ],
+          "executionOrder": 1600,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DJ340, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "010-INICIO",
+          "evidenceLines": [
+            352
+          ],
+          "executionOrder": 1700,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM4DJ340, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "015-PROCESA-IEMPR",
+          "evidenceLines": [
+            382
+          ],
+          "executionOrder": 1800,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DJ340, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "020-PROCESA-SUCURSAL",
+          "evidenceLines": [
+            391
+          ],
+          "executionOrder": 1900,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DJ340, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "024-BUSCA-CONTROL",
+          "evidenceLines": [
+            404
+          ],
+          "executionOrder": 2000,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por ZM4DJ340 y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "025-BUSCA-DESC",
+          "evidenceLines": [
+            454
+          ],
+          "executionOrder": 2100,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por ZM4DJ340 y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "030-GENERA-REPO",
+          "evidenceLines": [
+            488
+          ],
+          "executionOrder": 2200,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DJ340, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "100-TERMINA",
+          "evidenceLines": [
+            498
+          ],
+          "executionOrder": 2300,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM4DJ340, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "500-OBT-FECHA",
+          "evidenceLines": [
+            531
+          ],
+          "executionOrder": 2400,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DJ340, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "510-LEE-CURSOR",
+          "evidenceLines": [
+            539
+          ],
+          "executionOrder": 2500,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por ZM4DJ340 y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "600-ESC-ENCA1",
+          "evidenceLines": [
+            576
+          ],
+          "executionOrder": 2600,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DJ340, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "610-ESC-ENCA2",
+          "evidenceLines": [
+            590
+          ],
+          "executionOrder": 2700,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DJ340, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "620-ESC-DETA",
+          "evidenceLines": [
+            600
+          ],
+          "executionOrder": 2800,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DJ340, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "620-ESC-DETA1",
+          "evidenceLines": [
+            625
+          ],
+          "executionOrder": 2900,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DJ340, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "700-ABRE-CURSOR",
+          "evidenceLines": [
+            642
+          ],
+          "executionOrder": 3000,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DJ340, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "800-CIERRA-CURSOR",
+          "evidenceLines": [
+            658
+          ],
+          "executionOrder": 3100,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM4DJ340, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "900-BORRA-SEHIPRO",
+          "evidenceLines": [
+            673
+          ],
+          "executionOrder": 3200,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DJ340, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "730-PARAMETRO-IEMPR",
+          "evidenceLines": [
+            698
+          ],
+          "executionOrder": 3300,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DJ340, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "730-0100-INICIO",
+          "evidenceLines": [
+            699
+          ],
+          "executionOrder": 3400,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM4DJ340, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "730-9900-FIN",
+          "evidenceLines": [
+            756
+          ],
+          "executionOrder": 3500,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM4DJ340, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "980-ABORTA",
+          "evidenceLines": [
+            766
+          ],
+          "executionOrder": 3600,
+          "executionPhase": "PROCESSING",
+          "summary": "Gestiona contingencias en ZM4DJ340, concentrando el manejo de error y salida controlada."
+        },
+        {
+          "name": "990-CIF-CTL",
+          "evidenceLines": [
+            781
+          ],
+          "executionOrder": 3700,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DJ340, encadenando validaciones y transformaciones del proceso principal."
+        }
+      ],
+      "paragraphCalls": [],
+      "paragraphCopybooks": [
+        {
+          "paragraph": "010-INICIO",
+          "copybook": "ZMWBP070",
+          "evidenceLines": [
+            354
+          ]
+        },
+        {
+          "paragraph": "024-BUSCA-CONTROL",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            420,
+            434,
+            449
+          ]
+        },
+        {
+          "paragraph": "025-BUSCA-DESC",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            477
+          ]
+        },
+        {
+          "paragraph": "510-LEE-CURSOR",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            556
+          ]
+        },
+        {
+          "paragraph": "700-ABRE-CURSOR",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            652
+          ]
+        },
+        {
+          "paragraph": "730-0100-INICIO",
+          "copybook": "ZMWBP000",
+          "evidenceLines": [
+            754
+          ]
+        },
+        {
+          "paragraph": "730-0100-INICIO",
+          "copybook": "ZMWBP074",
+          "evidenceLines": [
+            744
+          ]
+        },
+        {
+          "paragraph": "730-9900-FIN",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            762
+          ]
+        },
+        {
+          "paragraph": "800-CIERRA-CURSOR",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            668
+          ]
+        },
+        {
+          "paragraph": "900-BORRA-SEHIPRO",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            693
+          ]
+        },
+        {
+          "paragraph": "990-CIF-CTL",
+          "copybook": "ZMWBP000",
+          "evidenceLines": [
+            800
+          ]
+        },
+        {
+          "paragraph": "990-CIF-CTL",
+          "copybook": "ZMWBP070",
+          "evidenceLines": [
+            795
+          ]
+        },
+        {
+          "paragraph": "990-CIF-CTL",
+          "copybook": "ZMWBP074",
+          "evidenceLines": [
+            808
+          ]
+        },
+        {
+          "paragraph": "FILE",
+          "copybook": "ZMWBV470",
+          "evidenceLines": [
+            41
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "SQLCA",
+          "evidenceLines": [
+            169
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZAGPOPRO",
+          "evidenceLines": [
+            159
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZCUENTA",
+          "evidenceLines": [
+            190
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZEMPRESA",
+          "evidenceLines": [
+            217
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZGFSUCUR",
+          "evidenceLines": [
+            202
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMSGERAL",
+          "evidenceLines": [
+            214
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMWBV000",
+          "evidenceLines": [
+            145
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMWBV002",
+          "evidenceLines": [
+            142
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMWBV003",
+          "evidenceLines": [
+            150
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMWBV004",
+          "evidenceLines": [
+            164
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMWBV147",
+          "evidenceLines": [
+            154
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMWBV356",
+          "evidenceLines": [
+            79
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMWBV471",
+          "evidenceLines": [
+            85
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMWSJZ39",
+          "evidenceLines": [
+            131
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZOPERASI",
+          "evidenceLines": [
+            184
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZPARAM",
+          "evidenceLines": [
+            178
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZSEHIPRO",
+          "evidenceLines": [
+            208
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZSVCTOCB",
+          "evidenceLines": [
+            196
+          ]
+        }
+      ],
+      "coverage": {
+        "sequenceColumnsNormalized": true,
+        "procedureDivisionFound": true,
+        "parseStartLine": 2,
+        "parseStartReason": "PROCEDURE_DIVISION",
+        "performTargetCount": 23,
+        "paragraphCount": 37,
+        "missingPerformTargets": [],
+        "resolvedPerformTargetsViaCopybook": {
+          "970-SQL-ERROR": [
+            "ZMWBP001"
+          ],
+          "9800-OBT-CASILLERO": [
+            "ZMWBP074"
+          ],
+          "999-CONST-ENCA": [
+            "ZMWBP000"
+          ],
+          "999-MUEVE-FECHAS": [
+            "ZMWBP070"
+          ]
+        },
+        "resolvedPerformTargetsViaPrefixAlias": {}
+      }
+    }
+  ]
+}

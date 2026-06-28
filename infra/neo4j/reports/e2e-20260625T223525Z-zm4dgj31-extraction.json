@@ -1,0 +1,1792 @@
+{
+  "stage": "discovery-extraction",
+  "runId": "e2e-20260625T223525Z-zm4dgj31",
+  "programs": [
+    "ZM4DGJ31"
+  ],
+  "extractions": [
+    {
+      "program": "ZM4DGJ31",
+      "sourceFile": "src/ZM4DGJ31.cbl",
+      "procedureLine": null,
+      "parseStartLine": 3,
+      "parseStartReason": "FALLBACK_PARAGRAPH_OR_PERFORM",
+      "metadata": {
+        "objective": "OBTENER PORCENTAJES DE ASIGNACION DE EMISORAS DE LOS CLIENTES QUE PARTICIPAN EN EL MANEJO DISCRE- CIONAL POR ANALISIS TECNICO Y LA GENERACION DE LOS TOTALES DE LAS CARTERAS.",
+        "description": "Programa COBOL que obtener porcentajes de asignacion de emisoras de los clientes que participan en el manejo discre- cional por analisis tecnico y la generacion de los totales de las carteras.. Pertenece a: BBVA-BANCOMER S.A. DE C.V. NOVIEMBRE 2002..",
+        "system": "BBVA-BANCOMER S.A. DE C.V. NOVIEMBRE 2002.",
+        "author": null
+      },
+      "copybooks": [
+        {
+          "name": "SQLCA",
+          "evidenceLines": [
+            252
+          ]
+        },
+        {
+          "name": "ZAGPOCTA",
+          "evidenceLines": [
+            257
+          ]
+        },
+        {
+          "name": "ZCARTERA",
+          "evidenceLines": [
+            262
+          ]
+        },
+        {
+          "name": "ZCONCEPT",
+          "evidenceLines": [
+            267
+          ]
+        },
+        {
+          "name": "ZCTLPROC",
+          "evidenceLines": [
+            272
+          ]
+        },
+        {
+          "name": "ZCUENTA",
+          "evidenceLines": [
+            277
+          ]
+        },
+        {
+          "name": "ZDEMANDA",
+          "evidenceLines": [
+            282
+          ]
+        },
+        {
+          "name": "ZMCCARAT",
+          "evidenceLines": [
+            287
+          ]
+        },
+        {
+          "name": "ZMWBP001",
+          "evidenceLines": [
+            2008
+          ]
+        },
+        {
+          "name": "ZMWBP023",
+          "evidenceLines": [
+            333
+          ]
+        },
+        {
+          "name": "ZMWBP025",
+          "evidenceLines": [
+            321
+          ]
+        },
+        {
+          "name": "ZMWBP070",
+          "evidenceLines": [
+            2065
+          ]
+        },
+        {
+          "name": "ZMWBV002",
+          "evidenceLines": [
+            235
+          ]
+        },
+        {
+          "name": "ZMWBV004",
+          "evidenceLines": [
+            230
+          ]
+        },
+        {
+          "name": "ZMWBV356",
+          "evidenceLines": [
+            241
+          ]
+        },
+        {
+          "name": "ZMWBV470",
+          "evidenceLines": [
+            35
+          ]
+        },
+        {
+          "name": "ZMWSID03",
+          "evidenceLines": [
+            247
+          ]
+        },
+        {
+          "name": "ZPARAM",
+          "evidenceLines": [
+            292
+          ]
+        },
+        {
+          "name": "ZPRECIO",
+          "evidenceLines": [
+            297
+          ]
+        }
+      ],
+      "dclTables": [
+        {
+          "memberName": "ZMCCARAT",
+          "tableName": "MCCARAT",
+          "qualifiedName": "MCCARAT",
+          "schemaName": null,
+          "hostStructureName": "DCLMCCARAT",
+          "declaredColumnCount": 17,
+          "declaredColumns": [
+            "ICUENTA",
+            "STOTDIS",
+            "ICONCEPT",
+            "IEMISORA",
+            "ISERIE",
+            "ICUPON",
+            "IDIACAR",
+            "CTITEFE",
+            "FCARTERA",
+            "FULTCOMP",
+            "PPORDIS",
+            "ICVEOPES",
+            "IFOLOPES",
+            "IPROGRAM",
+            "FREG",
+            "CLIQVEN",
+            "IGPOCTA"
+          ],
+          "declaredColumnDefinitions": [
+            "ICUENTA DECIMAL(7, 0) NOT NULL",
+            "STOTDIS CHAR(1) NOT NULL",
+            "ICONCEPT DECIMAL(5, 0) NOT NULL",
+            "IEMISORA CHAR(7)",
+            "ISERIE CHAR(8)",
+            "ICUPON DECIMAL(3, 0)",
+            "IDIACAR DECIMAL(3, 0) NOT NULL",
+            "CTITEFE DECIMAL(15, 2) NOT NULL",
+            "FCARTERA DATE NOT NULL",
+            "FULTCOMP DATE",
+            "PPORDIS DECIMAL(11, 8) NOT NULL",
+            "ICVEOPES DECIMAL(3, 0) NOT NULL",
+            "IFOLOPES DECIMAL(9, 0) NOT NULL",
+            "IPROGRAM CHAR(8) NOT NULL",
+            "FREG TIMESTAMP NOT NULL",
+            "CLIQVEN DECIMAL(15, 2) NOT NULL",
+            "IGPOCTA DECIMAL(7, 0) NOT NULL"
+          ],
+          "dclPath": "dcl/ZMCCARAT.dcl"
+        }
+      ],
+      "calls": [],
+      "readTables": [
+        {
+          "name": "CARTERA",
+          "evidenceLines": [
+            553,
+            554,
+            555,
+            556,
+            557,
+            558,
+            559,
+            560,
+            561,
+            562,
+            563,
+            564,
+            565,
+            566,
+            567,
+            568,
+            569,
+            570,
+            571,
+            572,
+            573,
+            574,
+            575,
+            599,
+            600,
+            601,
+            602,
+            603,
+            604,
+            605,
+            606,
+            607,
+            608,
+            609,
+            610,
+            611,
+            612,
+            613,
+            614,
+            615,
+            1133,
+            1134,
+            1135,
+            1136,
+            1137,
+            1138,
+            1139,
+            1140,
+            1141,
+            1142,
+            1143,
+            1144,
+            1145,
+            1146,
+            1147,
+            1148,
+            1149,
+            1150,
+            1151,
+            1152,
+            1153,
+            1219,
+            1220,
+            1221,
+            1222,
+            1223,
+            1224,
+            1225,
+            1226,
+            1227,
+            1228,
+            1229,
+            1230,
+            1231,
+            1232,
+            1233,
+            1260,
+            1261,
+            1262,
+            1263,
+            1264,
+            1265,
+            1266,
+            1267,
+            1268,
+            1269,
+            1270,
+            1271,
+            1272,
+            1273,
+            1274,
+            1275,
+            1276,
+            1277,
+            1278
+          ]
+        },
+        {
+          "name": "CTLPROC",
+          "evidenceLines": [
+            1507,
+            1508,
+            1509,
+            1510,
+            1511,
+            1512,
+            1513,
+            1514,
+            1515,
+            1516
+          ]
+        },
+        {
+          "name": "DEMANDA",
+          "evidenceLines": [
+            1304,
+            1305,
+            1306,
+            1307,
+            1308,
+            1309,
+            1310,
+            1311,
+            1312
+          ]
+        },
+        {
+          "name": "MCCARAT",
+          "evidenceLines": [
+            1339,
+            1340,
+            1341,
+            1342,
+            1343,
+            1344,
+            1345,
+            1346,
+            1347,
+            1348,
+            1349,
+            1350,
+            1426,
+            1427,
+            1428,
+            1429,
+            1430,
+            1431,
+            1432,
+            1433,
+            1434,
+            1435,
+            1468,
+            1469,
+            1470,
+            1471,
+            1472,
+            1473,
+            1474,
+            1475,
+            1476,
+            1477,
+            1478,
+            1548,
+            1549,
+            1550,
+            1551,
+            1552
+          ]
+        },
+        {
+          "name": "PARAM",
+          "evidenceLines": [
+            525,
+            526,
+            527,
+            528,
+            529,
+            530,
+            531
+          ]
+        },
+        {
+          "name": "PRECIO",
+          "evidenceLines": [
+            1380,
+            1381,
+            1382,
+            1383,
+            1384,
+            1385,
+            1386,
+            1387,
+            1388,
+            1389,
+            1390,
+            1391,
+            1392,
+            1393,
+            1394
+          ]
+        }
+      ],
+      "updateTables": [
+        {
+          "name": "CTLPROC",
+          "evidenceLines": [
+            1763,
+            1764,
+            1765,
+            1766,
+            1767,
+            1768,
+            1769,
+            1770,
+            1771,
+            1772,
+            1773,
+            1774,
+            1775,
+            1776,
+            1800,
+            1801,
+            1802,
+            1803,
+            1804,
+            1805,
+            1806,
+            1807,
+            1808,
+            1809,
+            1810
+          ]
+        },
+        {
+          "name": "MCCARAT",
+          "evidenceLines": [
+            1548,
+            1549,
+            1550,
+            1551,
+            1552,
+            1602,
+            1603,
+            1604,
+            1605,
+            1606,
+            1607,
+            1608,
+            1609,
+            1610,
+            1611,
+            1612,
+            1613,
+            1614,
+            1615,
+            1616,
+            1617,
+            1618,
+            1619,
+            1620,
+            1621,
+            1622,
+            1623,
+            1624,
+            1625,
+            1626,
+            1659,
+            1660,
+            1661,
+            1662,
+            1663,
+            1664,
+            1665,
+            1666,
+            1667,
+            1668,
+            1669,
+            1670,
+            1692,
+            1693,
+            1694,
+            1695,
+            1696,
+            1697,
+            1698,
+            1699,
+            1722,
+            1723,
+            1724,
+            1725,
+            1726,
+            1727,
+            1728,
+            1729,
+            1730,
+            1731,
+            1732
+          ]
+        },
+        {
+          "name": "PARAM",
+          "evidenceLines": [
+            1833,
+            1834,
+            1835,
+            1836,
+            1837,
+            1838,
+            1839,
+            1869,
+            1870,
+            1871,
+            1872,
+            1873,
+            1874,
+            1901,
+            1902,
+            1903,
+            1904,
+            1905
+          ]
+        }
+      ],
+      "paragraphs": [
+        {
+          "name": "PROGRAM-ID",
+          "evidenceLines": [
+            3
+          ],
+          "executionOrder": 100,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DGJ31, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "ZM4DGJ31",
+          "evidenceLines": [
+            4
+          ],
+          "executionOrder": 200,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DGJ31, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "AUTHOR",
+          "evidenceLines": [
+            5
+          ],
+          "executionOrder": 300,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DGJ31, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "INSTALLATION",
+          "evidenceLines": [
+            7
+          ],
+          "executionOrder": 400,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DGJ31, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "DATE-WRITTEN",
+          "evidenceLines": [
+            9
+          ],
+          "executionOrder": 500,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DGJ31, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "CONFIGURATION",
+          "evidenceLines": [
+            19
+          ],
+          "executionOrder": 600,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DGJ31, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "SOURCE-COMPUTER",
+          "evidenceLines": [
+            20
+          ],
+          "executionOrder": 700,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DGJ31, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "IBM-9121",
+          "evidenceLines": [
+            21
+          ],
+          "executionOrder": 800,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DGJ31, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "OBJECT-COMPUTER",
+          "evidenceLines": [
+            22
+          ],
+          "executionOrder": 900,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DGJ31, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "IBM-9121",
+          "evidenceLines": [
+            23
+          ],
+          "executionOrder": 1000,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DGJ31, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "INPUT-OUTPUT",
+          "evidenceLines": [
+            24
+          ],
+          "executionOrder": 1100,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DGJ31, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "FILE-CONTROL",
+          "evidenceLines": [
+            25
+          ],
+          "executionOrder": 1200,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DGJ31, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "FILE",
+          "evidenceLines": [
+            31
+          ],
+          "executionOrder": 1300,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DGJ31, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "WORKING-STORAGE",
+          "evidenceLines": [
+            37
+          ],
+          "executionOrder": 1400,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DGJ31, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "005-INICIO",
+          "evidenceLines": [
+            338
+          ],
+          "executionOrder": 1500,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM4DGJ31, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "005-INICIO-FIN",
+          "evidenceLines": [
+            373
+          ],
+          "executionOrder": 1600,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM4DGJ31, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "005-TERMINO",
+          "evidenceLines": [
+            379
+          ],
+          "executionOrder": 1700,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM4DGJ31, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "005-TERMINO-FIN",
+          "evidenceLines": [
+            390
+          ],
+          "executionOrder": 1800,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM4DGJ31, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "010-EVALUA-CTLPROC",
+          "evidenceLines": [
+            397
+          ],
+          "executionOrder": 1900,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DGJ31, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "010-EVALUA-CTLPROC-FIN",
+          "evidenceLines": [
+            453
+          ],
+          "executionOrder": 2000,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM4DGJ31, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "015-PROCESA-CTLPROC",
+          "evidenceLines": [
+            459
+          ],
+          "executionOrder": 2100,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DGJ31, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "015-PROCESA-CTLPROC-FIN",
+          "evidenceLines": [
+            468
+          ],
+          "executionOrder": 2200,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM4DGJ31, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "020-SELECCIONA-PORTAFOLIOS",
+          "evidenceLines": [
+            474
+          ],
+          "executionOrder": 2300,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DGJ31, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "020-SELECCIONA-PORTAFOLIOS-FIN",
+          "evidenceLines": [
+            517
+          ],
+          "executionOrder": 2400,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM4DGJ31, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "030-OPEN-PARAM-T39",
+          "evidenceLines": [
+            523
+          ],
+          "executionOrder": 2500,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DGJ31, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "030-OPEN-PARAM-T39-FIN",
+          "evidenceLines": [
+            542
+          ],
+          "executionOrder": 2600,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM4DGJ31, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "040-OPEN-CARTERA-C501",
+          "evidenceLines": [
+            548
+          ],
+          "executionOrder": 2700,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DGJ31, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "040-OPEN-CARTERA-C501-FIN",
+          "evidenceLines": [
+            589
+          ],
+          "executionOrder": 2800,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM4DGJ31, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "040-OPEN-CARTERA-C531",
+          "evidenceLines": [
+            595
+          ],
+          "executionOrder": 2900,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DGJ31, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "040-OPEN-CARTERA-C531-FIN",
+          "evidenceLines": [
+            628
+          ],
+          "executionOrder": 3000,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM4DGJ31, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "050-PROCESO",
+          "evidenceLines": [
+            634
+          ],
+          "executionOrder": 3100,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DGJ31, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "050-PROCESO-FIN",
+          "evidenceLines": [
+            669
+          ],
+          "executionOrder": 3200,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM4DGJ31, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "100-CHECA-REINICIO",
+          "evidenceLines": [
+            672
+          ],
+          "executionOrder": 3300,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM4DGJ31, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "100-CHECA-REINICIO-FIN",
+          "evidenceLines": [
+            683
+          ],
+          "executionOrder": 3400,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM4DGJ31, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "200-PROCESO-CAPITALES",
+          "evidenceLines": [
+            686
+          ],
+          "executionOrder": 3500,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DGJ31, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "200-PROCESO-CAPITALES-FIN",
+          "evidenceLines": [
+            756
+          ],
+          "executionOrder": 3600,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM4DGJ31, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "210-PROCESO-SOCIEDADES",
+          "evidenceLines": [
+            759
+          ],
+          "executionOrder": 3700,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DGJ31, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "210-PROCESO-SOCIEDADES-FIN",
+          "evidenceLines": [
+            834
+          ],
+          "executionOrder": 3800,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM4DGJ31, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "220-PROCESO-EFECTIVO",
+          "evidenceLines": [
+            837
+          ],
+          "executionOrder": 3900,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DGJ31, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "220-PROCESO-EFECTIVO-FIN",
+          "evidenceLines": [
+            908
+          ],
+          "executionOrder": 4000,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM4DGJ31, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "230-PROCESO-ACUMULADO",
+          "evidenceLines": [
+            911
+          ],
+          "executionOrder": 4100,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DGJ31, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "230-PROCESO-ACUMULADO-FIN",
+          "evidenceLines": [
+            948
+          ],
+          "executionOrder": 4200,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM4DGJ31, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "300-MONTO-INICIAL",
+          "evidenceLines": [
+            951
+          ],
+          "executionOrder": 4300,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM4DGJ31, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "300-MONTO-INICIAL-FIN",
+          "evidenceLines": [
+            984
+          ],
+          "executionOrder": 4400,
+          "executionPhase": "PROCESSING",
+          "summary": "Inicializa el flujo operativo de ZM4DGJ31, preparando contexto y validaciones de arranque."
+        },
+        {
+          "name": "310-LIQUIDEZ",
+          "evidenceLines": [
+            987
+          ],
+          "executionOrder": 4500,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DGJ31, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "310-LIQUIDEZ-FIN",
+          "evidenceLines": [
+            1020
+          ],
+          "executionOrder": 4600,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM4DGJ31, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "500-FETCH-PARAM-T39",
+          "evidenceLines": [
+            1026
+          ],
+          "executionOrder": 4700,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DGJ31, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "500-FETCH-PARAM-T39-FIN",
+          "evidenceLines": [
+            1058
+          ],
+          "executionOrder": 4800,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM4DGJ31, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "501-FETCH-CARTERA",
+          "evidenceLines": [
+            1064
+          ],
+          "executionOrder": 4900,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DGJ31, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "501-FETCH-CARTERA-FIN",
+          "evidenceLines": [
+            1121
+          ],
+          "executionOrder": 5000,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM4DGJ31, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "502-SUM-CARTERA",
+          "evidenceLines": [
+            1127
+          ],
+          "executionOrder": 5100,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DGJ31, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "502-SUM-CARTERA-FIN",
+          "evidenceLines": [
+            1170
+          ],
+          "executionOrder": 5200,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM4DGJ31, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "531-FETCH-CARTERA",
+          "evidenceLines": [
+            1176
+          ],
+          "executionOrder": 5300,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DGJ31, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "531-FETCH-CARTERA-FIN",
+          "evidenceLines": [
+            1208
+          ],
+          "executionOrder": 5400,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM4DGJ31, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "532-SUM-CTITEFE",
+          "evidenceLines": [
+            1214
+          ],
+          "executionOrder": 5500,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DGJ31, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "532-SUM-CTITEFE-FIN",
+          "evidenceLines": [
+            1249
+          ],
+          "executionOrder": 5600,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM4DGJ31, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "533-SUM-MREAL",
+          "evidenceLines": [
+            1255
+          ],
+          "executionOrder": 5700,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DGJ31, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "533-SUM-MREAL-FIN",
+          "evidenceLines": [
+            1294
+          ],
+          "executionOrder": 5800,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM4DGJ31, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "535-SUM-DEMANDA",
+          "evidenceLines": [
+            1300
+          ],
+          "executionOrder": 5900,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DGJ31, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "535-SUM-DEMANDA-FIN",
+          "evidenceLines": [
+            1327
+          ],
+          "executionOrder": 6000,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM4DGJ31, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "540-BUSCA-MCCARAT",
+          "evidenceLines": [
+            1333
+          ],
+          "executionOrder": 6100,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por ZM4DGJ31 y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "540-BUSCA-MCCARAT-FIN",
+          "evidenceLines": [
+            1372
+          ],
+          "executionOrder": 6200,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por ZM4DGJ31 y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "550-LEE-PRECIO",
+          "evidenceLines": [
+            1378
+          ],
+          "executionOrder": 6300,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por ZM4DGJ31 y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "550-LEE-PRECIO-FIN",
+          "evidenceLines": [
+            1413
+          ],
+          "executionOrder": 6400,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por ZM4DGJ31 y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "560-SUM-LIQUIDEZ",
+          "evidenceLines": [
+            1419
+          ],
+          "executionOrder": 6500,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DGJ31, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "560-SUM-LIQUIDEZ-FIN",
+          "evidenceLines": [
+            1455
+          ],
+          "executionOrder": 6600,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM4DGJ31, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "570-SUM-LIQUIDEZ-POSITIVA",
+          "evidenceLines": [
+            1461
+          ],
+          "executionOrder": 6700,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DGJ31, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "570-SUM-LIQUIDEZ-POSITIVA-FIN",
+          "evidenceLines": [
+            1497
+          ],
+          "executionOrder": 6800,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM4DGJ31, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "580-LEE-CTLPROC",
+          "evidenceLines": [
+            1503
+          ],
+          "executionOrder": 6900,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por ZM4DGJ31 y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "580-LEE-CTLPROC-FIN",
+          "evidenceLines": [
+            1540
+          ],
+          "executionOrder": 7000,
+          "executionPhase": "PROCESSING",
+          "summary": "Ejecuta lectura/consulta de datos requeridos por ZM4DGJ31 y deja resultados listos para el siguiente tramo."
+        },
+        {
+          "name": "600-DELETE-MCCARAT",
+          "evidenceLines": [
+            1546
+          ],
+          "executionOrder": 7100,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DGJ31, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "600-DELETE-MCCARAT-FIN",
+          "evidenceLines": [
+            1564
+          ],
+          "executionOrder": 7200,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM4DGJ31, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "700-INSERTA-MCCARAT",
+          "evidenceLines": [
+            1570
+          ],
+          "executionOrder": 7300,
+          "executionPhase": "PROCESSING",
+          "summary": "Persiste actualizaciones de negocio en ZM4DGJ31, aplicando reglas de escritura y control de estado."
+        },
+        {
+          "name": "700-INSERTA-MCCARAT-FIN",
+          "evidenceLines": [
+            1644
+          ],
+          "executionOrder": 7400,
+          "executionPhase": "PROCESSING",
+          "summary": "Persiste actualizaciones de negocio en ZM4DGJ31, aplicando reglas de escritura y control de estado."
+        },
+        {
+          "name": "705-UPDATE-MCCARAT",
+          "evidenceLines": [
+            1650
+          ],
+          "executionOrder": 7500,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DGJ31, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "705-UPDATE-MCCARAT-FIN",
+          "evidenceLines": [
+            1682
+          ],
+          "executionOrder": 7600,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM4DGJ31, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "710-UPDATE-MCCARAT-MONTO",
+          "evidenceLines": [
+            1688
+          ],
+          "executionOrder": 7700,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DGJ31, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "710-UPDATE-MCCARAT-MONTO-FIN",
+          "evidenceLines": [
+            1709
+          ],
+          "executionOrder": 7800,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM4DGJ31, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "715-UPDATE-MCCARAT-PPORDIS",
+          "evidenceLines": [
+            1715
+          ],
+          "executionOrder": 7900,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DGJ31, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "715-UPDATE-MCCARAT-PPORDIS-FIN",
+          "evidenceLines": [
+            1749
+          ],
+          "executionOrder": 8000,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM4DGJ31, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "720-INSERTA-CTLPROC",
+          "evidenceLines": [
+            1755
+          ],
+          "executionOrder": 8100,
+          "executionPhase": "PROCESSING",
+          "summary": "Persiste actualizaciones de negocio en ZM4DGJ31, aplicando reglas de escritura y control de estado."
+        },
+        {
+          "name": "720-INSERTA-CTLPROC-FIN",
+          "evidenceLines": [
+            1786
+          ],
+          "executionOrder": 8200,
+          "executionPhase": "PROCESSING",
+          "summary": "Persiste actualizaciones de negocio en ZM4DGJ31, aplicando reglas de escritura y control de estado."
+        },
+        {
+          "name": "725-UPDATE-CTLPROC",
+          "evidenceLines": [
+            1792
+          ],
+          "executionOrder": 8300,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DGJ31, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "725-UPDATE-CTLPROC-FIN",
+          "evidenceLines": [
+            1823
+          ],
+          "executionOrder": 8400,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM4DGJ31, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "750-ACTUALIZA-PORTAFOLIO",
+          "evidenceLines": [
+            1829
+          ],
+          "executionOrder": 8500,
+          "executionPhase": "PROCESSING",
+          "summary": "Persiste actualizaciones de negocio en ZM4DGJ31, aplicando reglas de escritura y control de estado."
+        },
+        {
+          "name": "750-ACTUALIZA-PORTAFOLIO-FIN",
+          "evidenceLines": [
+            1860
+          ],
+          "executionOrder": 8600,
+          "executionPhase": "PROCESSING",
+          "summary": "Persiste actualizaciones de negocio en ZM4DGJ31, aplicando reglas de escritura y control de estado."
+        },
+        {
+          "name": "760-ACTIVA-PORTAFOLIOS",
+          "evidenceLines": [
+            1866
+          ],
+          "executionOrder": 8700,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DGJ31, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "760-ACTIVA-PORTAFOLIOS-FIN",
+          "evidenceLines": [
+            1892
+          ],
+          "executionOrder": 8800,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM4DGJ31, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "770-ACTUALIZA-PARAM-P21",
+          "evidenceLines": [
+            1898
+          ],
+          "executionOrder": 8900,
+          "executionPhase": "PROCESSING",
+          "summary": "Persiste actualizaciones de negocio en ZM4DGJ31, aplicando reglas de escritura y control de estado."
+        },
+        {
+          "name": "770-ACTUALIZA-PARAM-P21-FIN",
+          "evidenceLines": [
+            1921
+          ],
+          "executionOrder": 9000,
+          "executionPhase": "PROCESSING",
+          "summary": "Persiste actualizaciones de negocio en ZM4DGJ31, aplicando reglas de escritura y control de estado."
+        },
+        {
+          "name": "800-COMMIT-SQL",
+          "evidenceLines": [
+            1928
+          ],
+          "executionOrder": 9100,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DGJ31, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "800-COMMIT-SQL-FIN",
+          "evidenceLines": [
+            1963
+          ],
+          "executionOrder": 9200,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM4DGJ31, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "805-CLOSE-PARAM-T39",
+          "evidenceLines": [
+            1966
+          ],
+          "executionOrder": 9300,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DGJ31, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "805-CLOSE-PARAM-T39-FIN",
+          "evidenceLines": [
+            1976
+          ],
+          "executionOrder": 9400,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM4DGJ31, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "810-CLOSE-CARTERA-C501",
+          "evidenceLines": [
+            1979
+          ],
+          "executionOrder": 9500,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DGJ31, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "810-CLOSE-CARTERA-C501-FIN",
+          "evidenceLines": [
+            1989
+          ],
+          "executionOrder": 9600,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM4DGJ31, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "810-CLOSE-CARTERA-C531",
+          "evidenceLines": [
+            1992
+          ],
+          "executionOrder": 9700,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DGJ31, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "810-CLOSE-CARTERA-C531-FIN",
+          "evidenceLines": [
+            2002
+          ],
+          "executionOrder": 9800,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM4DGJ31, consolidando trazas y terminacion funcional del proceso."
+        },
+        {
+          "name": "980-ABORTA",
+          "evidenceLines": [
+            2014
+          ],
+          "executionOrder": 9900,
+          "executionPhase": "PROCESSING",
+          "summary": "Gestiona contingencias en ZM4DGJ31, concentrando el manejo de error y salida controlada."
+        },
+        {
+          "name": "980-ABORTA-FIN",
+          "evidenceLines": [
+            2021
+          ],
+          "executionOrder": 10000,
+          "executionPhase": "PROCESSING",
+          "summary": "Gestiona contingencias en ZM4DGJ31, concentrando el manejo de error y salida controlada."
+        },
+        {
+          "name": "990-CIF-CTL",
+          "evidenceLines": [
+            2024
+          ],
+          "executionOrder": 10100,
+          "executionPhase": "PROCESSING",
+          "summary": "Orquesta una fase funcional de ZM4DGJ31, encadenando validaciones y transformaciones del proceso principal."
+        },
+        {
+          "name": "990-CIF-CTL-FIN",
+          "evidenceLines": [
+            2060
+          ],
+          "executionOrder": 10200,
+          "executionPhase": "PROCESSING",
+          "summary": "Cierra la ejecucion de ZM4DGJ31, consolidando trazas y terminacion funcional del proceso."
+        }
+      ],
+      "paragraphCalls": [],
+      "paragraphCopybooks": [
+        {
+          "paragraph": "030-OPEN-PARAM-T39",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            540
+          ]
+        },
+        {
+          "paragraph": "040-OPEN-CARTERA-C501",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            587
+          ]
+        },
+        {
+          "paragraph": "040-OPEN-CARTERA-C531",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            626
+          ]
+        },
+        {
+          "paragraph": "500-FETCH-PARAM-T39",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            1036
+          ]
+        },
+        {
+          "paragraph": "501-FETCH-CARTERA",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            1089
+          ]
+        },
+        {
+          "paragraph": "502-SUM-CARTERA",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            1162
+          ]
+        },
+        {
+          "paragraph": "531-FETCH-CARTERA",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            1192
+          ]
+        },
+        {
+          "paragraph": "532-SUM-CTITEFE",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            1241
+          ]
+        },
+        {
+          "paragraph": "533-SUM-MREAL",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            1286
+          ]
+        },
+        {
+          "paragraph": "535-SUM-DEMANDA",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            1319
+          ]
+        },
+        {
+          "paragraph": "540-BUSCA-MCCARAT",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            1360
+          ]
+        },
+        {
+          "paragraph": "550-LEE-PRECIO",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            1400
+          ]
+        },
+        {
+          "paragraph": "560-SUM-LIQUIDEZ",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            1445
+          ]
+        },
+        {
+          "paragraph": "570-SUM-LIQUIDEZ-POSITIVA",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            1489
+          ]
+        },
+        {
+          "paragraph": "580-LEE-CTLPROC",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            1524
+          ]
+        },
+        {
+          "paragraph": "600-DELETE-MCCARAT",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            1559
+          ]
+        },
+        {
+          "paragraph": "700-INSERTA-MCCARAT",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            1638
+          ]
+        },
+        {
+          "paragraph": "705-UPDATE-MCCARAT",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            1680
+          ]
+        },
+        {
+          "paragraph": "710-UPDATE-MCCARAT-MONTO",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            1707
+          ]
+        },
+        {
+          "paragraph": "715-UPDATE-MCCARAT-PPORDIS",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            1747
+          ]
+        },
+        {
+          "paragraph": "720-INSERTA-CTLPROC",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            1784
+          ]
+        },
+        {
+          "paragraph": "725-UPDATE-CTLPROC",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            1821
+          ]
+        },
+        {
+          "paragraph": "750-ACTUALIZA-PORTAFOLIO",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            1847,
+            1856
+          ]
+        },
+        {
+          "paragraph": "760-ACTIVA-PORTAFOLIOS",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            1881,
+            1889
+          ]
+        },
+        {
+          "paragraph": "770-ACTUALIZA-PARAM-P21",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            1911,
+            1919
+          ]
+        },
+        {
+          "paragraph": "800-COMMIT-SQL",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            1946
+          ]
+        },
+        {
+          "paragraph": "805-CLOSE-PARAM-T39",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            1974
+          ]
+        },
+        {
+          "paragraph": "810-CLOSE-CARTERA-C501",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            1987
+          ]
+        },
+        {
+          "paragraph": "810-CLOSE-CARTERA-C531",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            2000
+          ]
+        },
+        {
+          "paragraph": "810-CLOSE-CARTERA-C531-FIN",
+          "copybook": "ZMWBP001",
+          "evidenceLines": [
+            2008
+          ]
+        },
+        {
+          "paragraph": "990-CIF-CTL-FIN",
+          "copybook": "ZMWBP070",
+          "evidenceLines": [
+            2065
+          ]
+        },
+        {
+          "paragraph": "FILE",
+          "copybook": "ZMWBV470",
+          "evidenceLines": [
+            35
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "SQLCA",
+          "evidenceLines": [
+            252
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZAGPOCTA",
+          "evidenceLines": [
+            257
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZCARTERA",
+          "evidenceLines": [
+            262
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZCONCEPT",
+          "evidenceLines": [
+            267
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZCTLPROC",
+          "evidenceLines": [
+            272
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZCUENTA",
+          "evidenceLines": [
+            277
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZDEMANDA",
+          "evidenceLines": [
+            282
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMCCARAT",
+          "evidenceLines": [
+            287
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMWBP023",
+          "evidenceLines": [
+            333
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMWBP025",
+          "evidenceLines": [
+            321
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMWBV002",
+          "evidenceLines": [
+            235
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMWBV004",
+          "evidenceLines": [
+            230
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMWBV356",
+          "evidenceLines": [
+            241
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZMWSID03",
+          "evidenceLines": [
+            247
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZPARAM",
+          "evidenceLines": [
+            292
+          ]
+        },
+        {
+          "paragraph": "WORKING-STORAGE",
+          "copybook": "ZPRECIO",
+          "evidenceLines": [
+            297
+          ]
+        }
+      ],
+      "coverage": {
+        "sequenceColumnsNormalized": true,
+        "procedureDivisionFound": false,
+        "parseStartLine": 3,
+        "parseStartReason": "FALLBACK_PARAGRAPH_OR_PERFORM",
+        "performTargetCount": 45,
+        "paragraphCount": 102,
+        "missingPerformTargets": [],
+        "resolvedPerformTargetsViaCopybook": {
+          "970-SQL-ERROR": [
+            "ZMWBP001"
+          ]
+        },
+        "resolvedPerformTargetsViaPrefixAlias": {}
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "runId": "dcl-ontology-20260626T013546Z",
+  "mode": "discovery",
+  "totalDclFilesRequested": 2,
+  "parsedDclFiles": 2,
+  "skippedDclFiles": 0,
+  "payloadFile": "infra/neo4j/reports/dcl-ontology-dcl-ontology-20260626T013546Z-payload.json",
+  "nodes": 67,
+  "relationships": 124,
+  "skipped": []
+}

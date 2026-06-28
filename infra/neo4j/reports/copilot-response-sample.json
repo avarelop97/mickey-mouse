@@ -1,0 +1,12 @@
+{
+  "verdict": "partial_sense",
+  "confidence": "medium",
+  "risks": [
+    "No navigation destinations inferred for transitions",
+    "State-field links are mostly read-only in this scope"
+  ],
+  "recommendations": [
+    "Expand destination extraction patterns around XCTL/LINK/CALL and MAP/MAPSET",
+    "Improve classifier to emit VALIDATES_INPUT and WRITES_FIELD with stronger evidence"
+  ]
+}

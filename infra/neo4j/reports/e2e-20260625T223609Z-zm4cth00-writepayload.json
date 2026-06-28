@@ -1,0 +1,2507 @@
+{
+  "runId": "e2e-20260625T223609Z-zm4cth00",
+  "nodes": [
+    {
+      "label": "Program",
+      "key": [
+        "ZM4CTH00"
+      ],
+      "properties": {
+        "name": "ZM4CTH00",
+        "ingestion": "auto",
+        "layer": "program",
+        "nodeType": "program",
+        "viewTag": "cobol-program",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4CTH00.cbl",
+        "objective": null,
+        "description": "Programa COBOL que ejecuta procesos. Pertenece a: PROGRAM-ID. ZM4CTH00..",
+        "system": "PROGRAM-ID. ZM4CTH00.",
+        "runId": "e2e-20260625T223609Z-zm4cth00"
+      }
+    },
+    {
+      "label": "Functionality",
+      "key": [
+        "FUNCTIONALITY_ZM4CTH00"
+      ],
+      "properties": {
+        "name": "FUNCTIONALITY_ZM4CTH00",
+        "objective": "Capacidad funcional principal de ZM4CTH00.",
+        "description": "Programa COBOL que ejecuta procesos. Pertenece a: PROGRAM-ID. ZM4CTH00..",
+        "businessDomain": "pending_human_review",
+        "ingestion": "auto",
+        "layer": "functional",
+        "nodeType": "business-function",
+        "viewTag": "functional",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4CTH00.cbl",
+        "runId": "e2e-20260625T223609Z-zm4cth00"
+      }
+    },
+    {
+      "label": "SubFunctionality",
+      "key": [
+        "FUNCTIONALITY_ZM4CTH00",
+        "ZM4CTH00_PROCESSING"
+      ],
+      "properties": {
+        "functionalityName": "FUNCTIONALITY_ZM4CTH00",
+        "name": "ZM4CTH00_PROCESSING",
+        "description": "Sub-funcionalidad de ZM4CTH00 para fase PROCESSING.",
+        "ingestion": "auto",
+        "layer": "functional",
+        "nodeType": "sub-business-function",
+        "viewTag": "functional",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4CTH00.cbl",
+        "runId": "e2e-20260625T223609Z-zm4cth00"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4CTH00",
+        "CONFIGURATION"
+      ],
+      "properties": {
+        "programName": "ZM4CTH00",
+        "name": "CONFIGURATION",
+        "summary": "Orquesta una fase funcional de ZM4CTH00, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 100,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4CTH00.cbl",
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          27
+        ],
+        "runId": "e2e-20260625T223609Z-zm4cth00"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4CTH00",
+        "WORKING-STORAGE"
+      ],
+      "properties": {
+        "programName": "ZM4CTH00",
+        "name": "WORKING-STORAGE",
+        "summary": "Orquesta una fase funcional de ZM4CTH00, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 200,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4CTH00.cbl",
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          39
+        ],
+        "runId": "e2e-20260625T223609Z-zm4cth00"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4CTH00",
+        "000000-CONTROL"
+      ],
+      "properties": {
+        "programName": "ZM4CTH00",
+        "name": "000000-CONTROL",
+        "summary": "Orquesta una fase funcional de ZM4CTH00, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 300,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4CTH00.cbl",
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          567
+        ],
+        "runId": "e2e-20260625T223609Z-zm4cth00"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4CTH00",
+        "100000-INICIO"
+      ],
+      "properties": {
+        "programName": "ZM4CTH00",
+        "name": "100000-INICIO",
+        "summary": "Inicializa el flujo operativo de ZM4CTH00, preparando contexto y validaciones de arranque.",
+        "executionOrder": 400,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4CTH00.cbl",
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          577
+        ],
+        "runId": "e2e-20260625T223609Z-zm4cth00"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4CTH00",
+        "200000-PROCESO"
+      ],
+      "properties": {
+        "programName": "ZM4CTH00",
+        "name": "200000-PROCESO",
+        "summary": "Orquesta una fase funcional de ZM4CTH00, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 500,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4CTH00.cbl",
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          606
+        ],
+        "runId": "e2e-20260625T223609Z-zm4cth00"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4CTH00",
+        "200050-CONSULTA-CAUSCAN"
+      ],
+      "properties": {
+        "programName": "ZM4CTH00",
+        "name": "200050-CONSULTA-CAUSCAN",
+        "summary": "Ejecuta lectura/consulta de datos requeridos por ZM4CTH00 y deja resultados listos para el siguiente tramo.",
+        "executionOrder": 600,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4CTH00.cbl",
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          615
+        ],
+        "runId": "e2e-20260625T223609Z-zm4cth00"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4CTH00",
+        "200100-CONSULTA-HISTORICO"
+      ],
+      "properties": {
+        "programName": "ZM4CTH00",
+        "name": "200100-CONSULTA-HISTORICO",
+        "summary": "Ejecuta lectura/consulta de datos requeridos por ZM4CTH00 y deja resultados listos para el siguiente tramo.",
+        "executionOrder": 700,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4CTH00.cbl",
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          651
+        ],
+        "runId": "e2e-20260625T223609Z-zm4cth00"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4CTH00",
+        "200150-INFORMA-ZMDTCTH"
+      ],
+      "properties": {
+        "programName": "ZM4CTH00",
+        "name": "200150-INFORMA-ZMDTCTH",
+        "summary": "Orquesta una fase funcional de ZM4CTH00, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 800,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4CTH00.cbl",
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          693
+        ],
+        "runId": "e2e-20260625T223609Z-zm4cth00"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4CTH00",
+        "200200-INSERT-ZMDTCTH"
+      ],
+      "properties": {
+        "programName": "ZM4CTH00",
+        "name": "200200-INSERT-ZMDTCTH",
+        "summary": "Persiste actualizaciones de negocio en ZM4CTH00, aplicando reglas de escritura y control de estado.",
+        "executionOrder": 900,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4CTH00.cbl",
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          790
+        ],
+        "runId": "e2e-20260625T223609Z-zm4cth00"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4CTH00",
+        "200250-MAX-INDICE"
+      ],
+      "properties": {
+        "programName": "ZM4CTH00",
+        "name": "200250-MAX-INDICE",
+        "summary": "Orquesta una fase funcional de ZM4CTH00, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 1000,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4CTH00.cbl",
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          1003
+        ],
+        "runId": "e2e-20260625T223609Z-zm4cth00"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4CTH00",
+        "300000-FINAL"
+      ],
+      "properties": {
+        "programName": "ZM4CTH00",
+        "name": "300000-FINAL",
+        "summary": "Cierra la ejecucion de ZM4CTH00, consolidando trazas y terminacion funcional del proceso.",
+        "executionOrder": 1100,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4CTH00.cbl",
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          1027
+        ],
+        "runId": "e2e-20260625T223609Z-zm4cth00"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4CTH00",
+        "300000-STOP-RUN"
+      ],
+      "properties": {
+        "programName": "ZM4CTH00",
+        "name": "300000-STOP-RUN",
+        "summary": "Orquesta una fase funcional de ZM4CTH00, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 1200,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4CTH00.cbl",
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          1035
+        ],
+        "runId": "e2e-20260625T223609Z-zm4cth00"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4CTH00",
+        "300300-IMPRIMIR-CIFRAS-CONTROL"
+      ],
+      "properties": {
+        "programName": "ZM4CTH00",
+        "name": "300300-IMPRIMIR-CIFRAS-CONTROL",
+        "summary": "Orquesta una fase funcional de ZM4CTH00, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 1300,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4CTH00.cbl",
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          1041
+        ],
+        "runId": "e2e-20260625T223609Z-zm4cth00"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4CTH00",
+        "900100-OPEN-CURCTA"
+      ],
+      "properties": {
+        "programName": "ZM4CTH00",
+        "name": "900100-OPEN-CURCTA",
+        "summary": "Orquesta una fase funcional de ZM4CTH00, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 1400,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4CTH00.cbl",
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          1066
+        ],
+        "runId": "e2e-20260625T223609Z-zm4cth00"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4CTH00",
+        "900200-LEER-CURCTA"
+      ],
+      "properties": {
+        "programName": "ZM4CTH00",
+        "name": "900200-LEER-CURCTA",
+        "summary": "Ejecuta lectura/consulta de datos requeridos por ZM4CTH00 y deja resultados listos para el siguiente tramo.",
+        "executionOrder": 1500,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4CTH00.cbl",
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          1093
+        ],
+        "runId": "e2e-20260625T223609Z-zm4cth00"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4CTH00",
+        "900300-CLOSE-CURCTA"
+      ],
+      "properties": {
+        "programName": "ZM4CTH00",
+        "name": "900300-CLOSE-CURCTA",
+        "summary": "Orquesta una fase funcional de ZM4CTH00, encadenando validaciones y transformaciones del proceso principal.",
+        "executionOrder": 1600,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4CTH00.cbl",
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          1208
+        ],
+        "runId": "e2e-20260625T223609Z-zm4cth00"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4CTH00",
+        "900700-OBTEN-HORA"
+      ],
+      "properties": {
+        "programName": "ZM4CTH00",
+        "name": "900700-OBTEN-HORA",
+        "summary": "Ejecuta lectura/consulta de datos requeridos por ZM4CTH00 y deja resultados listos para el siguiente tramo.",
+        "executionOrder": 1700,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4CTH00.cbl",
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          1231
+        ],
+        "runId": "e2e-20260625T223609Z-zm4cth00"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4CTH00",
+        "999994-ABORTAR-RUT-DB2"
+      ],
+      "properties": {
+        "programName": "ZM4CTH00",
+        "name": "999994-ABORTAR-RUT-DB2",
+        "summary": "Gestiona contingencias en ZM4CTH00, concentrando el manejo de error y salida controlada.",
+        "executionOrder": 1800,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4CTH00.cbl",
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          1240
+        ],
+        "runId": "e2e-20260625T223609Z-zm4cth00"
+      }
+    },
+    {
+      "label": "Paragraph",
+      "key": [
+        "ZM4CTH00",
+        "999997-DESPLIEGA-ABORTO"
+      ],
+      "properties": {
+        "programName": "ZM4CTH00",
+        "name": "999997-DESPLIEGA-ABORTO",
+        "summary": "Gestiona contingencias en ZM4CTH00, concentrando el manejo de error y salida controlada.",
+        "executionOrder": 1900,
+        "executionPhase": "PROCESSING",
+        "ingestion": "auto",
+        "layer": "execution",
+        "nodeType": "process-step",
+        "viewTag": "execution",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4CTH00.cbl",
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          1260
+        ],
+        "runId": "e2e-20260625T223609Z-zm4cth00"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "SQLCA"
+      ],
+      "properties": {
+        "name": "SQLCA",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4CTH00.cbl",
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          46
+        ],
+        "runId": "e2e-20260625T223609Z-zm4cth00"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "ZCAUSCAN"
+      ],
+      "properties": {
+        "name": "ZCAUSCAN",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4CTH00.cbl",
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          60
+        ],
+        "runId": "e2e-20260625T223609Z-zm4cth00"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "ZCUENTA"
+      ],
+      "properties": {
+        "name": "ZCUENTA",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4CTH00.cbl",
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          53
+        ],
+        "runId": "e2e-20260625T223609Z-zm4cth00"
+      }
+    },
+    {
+      "label": "Copybook",
+      "key": [
+        "ZMGTCTH"
+      ],
+      "properties": {
+        "name": "ZMGTCTH",
+        "ingestion": "auto",
+        "layer": "dependency",
+        "nodeType": "copybook",
+        "viewTag": "dependency",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4CTH00.cbl",
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          67
+        ],
+        "runId": "e2e-20260625T223609Z-zm4cth00"
+      }
+    },
+    {
+      "label": "DBTable",
+      "key": [
+        "CAUSCAN"
+      ],
+      "properties": {
+        "name": "CAUSCAN",
+        "ingestion": "auto",
+        "layer": "data-access",
+        "nodeType": "physical-table",
+        "viewTag": "data-access",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4CTH00.cbl",
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          620,
+          621,
+          622,
+          623,
+          624,
+          625,
+          626,
+          627,
+          628,
+          629
+        ],
+        "runId": "e2e-20260625T223609Z-zm4cth00"
+      }
+    },
+    {
+      "label": "DBTable",
+      "key": [
+        "CUENTA"
+      ],
+      "properties": {
+        "name": "CUENTA",
+        "ingestion": "auto",
+        "layer": "data-access",
+        "nodeType": "physical-table",
+        "viewTag": "data-access",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4CTH00.cbl",
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          463,
+          464,
+          465,
+          466,
+          467,
+          468,
+          469,
+          470,
+          471,
+          472,
+          473,
+          474,
+          475,
+          476,
+          477,
+          478,
+          479,
+          480,
+          481,
+          482,
+          483,
+          484,
+          485,
+          486,
+          487,
+          488,
+          489,
+          490,
+          491,
+          492,
+          493,
+          494,
+          495,
+          496,
+          497,
+          498,
+          499,
+          500,
+          501,
+          502,
+          503,
+          504,
+          505,
+          506,
+          507,
+          508,
+          509,
+          510,
+          511,
+          512,
+          513,
+          514,
+          515,
+          516,
+          517,
+          518,
+          519,
+          520,
+          521,
+          522,
+          523,
+          524,
+          525,
+          526,
+          527,
+          528,
+          529,
+          530,
+          531,
+          532,
+          533,
+          534,
+          535,
+          536,
+          537,
+          538,
+          539,
+          540,
+          541,
+          542,
+          543,
+          544,
+          545,
+          546,
+          547,
+          548,
+          549,
+          550,
+          551,
+          552,
+          553,
+          554,
+          555,
+          556,
+          557
+        ],
+        "runId": "e2e-20260625T223609Z-zm4cth00"
+      }
+    },
+    {
+      "label": "DBTable",
+      "key": [
+        "ZMDTCTH"
+      ],
+      "properties": {
+        "name": "ZMDTCTH",
+        "ingestion": "auto",
+        "layer": "data-access",
+        "nodeType": "physical-table",
+        "viewTag": "data-access",
+        "reviewStatus": "pending_human_review",
+        "reviewRequired": true,
+        "reviewSource": "auto-ingestion",
+        "sourceFile": "src/ZM4CTH00.cbl",
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          792,
+          793,
+          794,
+          795,
+          796,
+          797,
+          798,
+          799,
+          800,
+          801,
+          802,
+          803,
+          804,
+          805,
+          806,
+          807,
+          808,
+          809,
+          810,
+          811,
+          812,
+          813,
+          814,
+          815,
+          816,
+          817,
+          818,
+          819,
+          820,
+          821,
+          822,
+          823,
+          824,
+          825,
+          826,
+          827,
+          828,
+          829,
+          830,
+          831,
+          832,
+          833,
+          834,
+          835,
+          836,
+          837,
+          838,
+          839,
+          840,
+          841,
+          842,
+          843,
+          844,
+          845,
+          846,
+          847,
+          848,
+          849,
+          850,
+          851,
+          852,
+          853,
+          854,
+          855,
+          856,
+          857,
+          858,
+          859,
+          860,
+          861,
+          862,
+          863,
+          864,
+          865,
+          866,
+          867,
+          868,
+          869,
+          870,
+          871,
+          872,
+          873,
+          874,
+          875,
+          876,
+          877,
+          878,
+          879,
+          880,
+          881,
+          882,
+          883,
+          884,
+          885,
+          886,
+          887,
+          888,
+          889,
+          890,
+          891,
+          892,
+          893,
+          894,
+          895,
+          896,
+          897,
+          898,
+          899,
+          900,
+          901,
+          902,
+          903,
+          904,
+          905,
+          906,
+          907,
+          908,
+          909,
+          910,
+          911,
+          912,
+          913,
+          914,
+          915,
+          916,
+          917,
+          918,
+          919,
+          920,
+          921,
+          922,
+          923,
+          924,
+          925,
+          926,
+          927,
+          928,
+          929,
+          930,
+          931,
+          932,
+          933,
+          934,
+          935,
+          936,
+          937,
+          938,
+          939,
+          940,
+          941,
+          942,
+          943,
+          944,
+          945,
+          946,
+          947,
+          948,
+          949,
+          950,
+          951,
+          952,
+          953,
+          954,
+          955,
+          956,
+          957,
+          958,
+          959,
+          960,
+          961,
+          962,
+          963,
+          964,
+          965,
+          966,
+          967,
+          968,
+          969,
+          970,
+          971,
+          972,
+          973,
+          974,
+          975,
+          976
+        ],
+        "runId": "e2e-20260625T223609Z-zm4cth00",
+        "qualifiedName": "ZMDTCTH",
+        "schemaName": null,
+        "dclMember": "ZMGTCTH",
+        "dclPath": "dcl/ZMGTCTH.dcl",
+        "dclHostStructure": "DCLZMDTCTH",
+        "declaredColumnCount": 91,
+        "declaredColumns": [
+          "ICUENTA",
+          "INDICE",
+          "SVIGEN",
+          "ICTAGLO",
+          "ITIPOCTA",
+          "IPERJUR",
+          "IRFC",
+          "ITASAFIS",
+          "INACIO",
+          "IPROM",
+          "ICCOSTO",
+          "FALTA",
+          "FALTAANT",
+          "FBAJA",
+          "IENVDOC",
+          "NPROF",
+          "NABREV",
+          "NOMBRE",
+          "NAPELL1",
+          "NAPELL2",
+          "DCALLE",
+          "DCOLON",
+          "DPOBLA",
+          "IPOS",
+          "DESTADO",
+          "DCALLEP",
+          "DCOLONP",
+          "DPOBLAP",
+          "IPOSP",
+          "DESTADOP",
+          "ITEL1",
+          "IEXT1",
+          "ITEL2",
+          "IEXT2",
+          "ICAPTA",
+          "IFIRMA",
+          "IRUTA",
+          "SCOMPNAC",
+          "SDOCUM",
+          "SLIQUID",
+          "SOPER12",
+          "PCOMCTA",
+          "MABOANO",
+          "MABOMES",
+          "MCGOANO",
+          "MCGOMES",
+          "MCARACT",
+          "MCARIMES",
+          "APREFMAR",
+          "FDEBEDES",
+          "XSEG",
+          "IEMICHE",
+          "IESTRATO",
+          "ISUCCASA",
+          "IZONECO",
+          "IESTMIG",
+          "STARFIR",
+          "SCONFIR",
+          "SCANDADO",
+          "ISUBCLAS",
+          "PCOMCTA1",
+          "PCOMCTA2",
+          "PCOMCTA3",
+          "PCOMCTA4",
+          "SIMPRESO",
+          "SACTCON",
+          "SPODERES",
+          "ICANDAD1",
+          "ICANDAD2",
+          "ICLACTO",
+          "INSTENV",
+          "SREPASAM",
+          "IAPLIDER",
+          "IESTCON",
+          "STIPOIN",
+          "CIMPRESO",
+          "ISERSP",
+          "ICODAREA",
+          "MLINCRB",
+          "CEXINDEV",
+          "PCUSTOD",
+          "IREPRCAS",
+          "IEMPR",
+          "ECANDAD1",
+          "ECANDAD2",
+          "FULTCAMB",
+          "FULTMOV",
+          "IUSUARIO",
+          "IPROGRAM",
+          "ITERM",
+          "FSIST"
+        ],
+        "declaredColumnDefinitions": [
+          "ICUENTA DECIMAL(7, 0) NOT NULL",
+          "INDICE DECIMAL(3, 0) NOT NULL",
+          "SVIGEN CHAR(1) NOT NULL",
+          "ICTAGLO DECIMAL(7, 0) NOT NULL",
+          "ITIPOCTA CHAR(1) NOT NULL",
+          "IPERJUR CHAR(2) NOT NULL",
+          "IRFC CHAR(13) NOT NULL",
+          "ITASAFIS CHAR(1) NOT NULL",
+          "INACIO CHAR(2) NOT NULL",
+          "IPROM DECIMAL(4, 0) NOT NULL",
+          "ICCOSTO DECIMAL(5, 0) NOT NULL",
+          "FALTA DATE NOT NULL",
+          "FALTAANT DATE NOT NULL",
+          "FBAJA DATE NOT NULL",
+          "IENVDOC DECIMAL(2, 0) NOT NULL",
+          "NPROF CHAR(5) NOT NULL",
+          "NABREV CHAR(25) NOT NULL",
+          "NOMBRE CHAR(20) NOT NULL",
+          "NAPELL1 CHAR(40) NOT NULL",
+          "NAPELL2 CHAR(20) NOT NULL",
+          "DCALLE CHAR(25) NOT NULL",
+          "DCOLON CHAR(25) NOT NULL",
+          "DPOBLA CHAR(30) NOT NULL",
+          "IPOS DECIMAL(5, 0) NOT NULL",
+          "DESTADO CHAR(25) NOT NULL",
+          "DCALLEP CHAR(25) NOT NULL",
+          "DCOLONP CHAR(25) NOT NULL",
+          "DPOBLAP CHAR(30) NOT NULL",
+          "IPOSP DECIMAL(5, 0) NOT NULL",
+          "DESTADOP CHAR(25) NOT NULL",
+          "ITEL1 DECIMAL(7, 0) NOT NULL",
+          "IEXT1 DECIMAL(4, 0) NOT NULL",
+          "ITEL2 DECIMAL(7, 0) NOT NULL",
+          "IEXT2 DECIMAL(4, 0) NOT NULL",
+          "ICAPTA CHAR(1) NOT NULL",
+          "IFIRMA CHAR(1) NOT NULL",
+          "IRUTA CHAR(3) NOT NULL",
+          "SCOMPNAC CHAR(1) NOT NULL",
+          "SDOCUM CHAR(1) NOT NULL",
+          "SLIQUID CHAR(1) NOT NULL",
+          "SOPER12 CHAR(1) NOT NULL",
+          "PCOMCTA DECIMAL(5, 4) NOT NULL",
+          "MABOANO DECIMAL(15, 2) NOT NULL",
+          "MABOMES DECIMAL(15, 2) NOT NULL",
+          "MCGOANO DECIMAL(15, 2) NOT NULL",
+          "MCGOMES DECIMAL(15, 2) NOT NULL",
+          "MCARACT DECIMAL(15, 2) NOT NULL",
+          "MCARIMES DECIMAL(15, 2) NOT NULL",
+          "APREFMAR DECIMAL(9, 5) NOT NULL",
+          "FDEBEDES DATE NOT NULL",
+          "XSEG CHAR(5) NOT NULL",
+          "IEMICHE CHAR(1) NOT NULL",
+          "IESTRATO CHAR(3) NOT NULL",
+          "ISUCCASA CHAR(3) NOT NULL",
+          "IZONECO CHAR(3) NOT NULL",
+          "IESTMIG CHAR(1) NOT NULL",
+          "STARFIR CHAR(1) NOT NULL",
+          "SCONFIR CHAR(1) NOT NULL",
+          "SCANDADO CHAR(1) NOT NULL",
+          "ISUBCLAS CHAR(3) NOT NULL",
+          "PCOMCTA1 DECIMAL(5, 4) NOT NULL",
+          "PCOMCTA2 DECIMAL(5, 4) NOT NULL",
+          "PCOMCTA3 DECIMAL(5, 4) NOT NULL",
+          "PCOMCTA4 DECIMAL(5, 4) NOT NULL",
+          "SIMPRESO CHAR(1) NOT NULL",
+          "SACTCON CHAR(1) NOT NULL",
+          "SPODERES CHAR(1) NOT NULL",
+          "ICANDAD1 DECIMAL(1, 0) NOT NULL",
+          "ICANDAD2 DECIMAL(1, 0) NOT NULL",
+          "ICLACTO DECIMAL(1, 0) NOT NULL",
+          "INSTENV DECIMAL(1, 0) NOT NULL",
+          "SREPASAM CHAR(1) NOT NULL",
+          "IAPLIDER DECIMAL(1, 0) NOT NULL",
+          "IESTCON CHAR(3) NOT NULL",
+          "STIPOIN CHAR(1) NOT NULL",
+          "CIMPRESO DECIMAL(2, 0) NOT NULL",
+          "ISERSP CHAR(1) NOT NULL",
+          "ICODAREA DECIMAL(6, 0) NOT NULL",
+          "MLINCRB DECIMAL(15, 2) NOT NULL",
+          "CEXINDEV CHAR(9) NOT NULL",
+          "PCUSTOD DECIMAL(5, 4) NOT NULL",
+          "IREPRCAS DECIMAL(7, 0) NOT NULL",
+          "IEMPR CHAR(3) NOT NULL",
+          "ECANDAD1 CHAR(50) NOT NULL",
+          "ECANDAD2 CHAR(50) NOT NULL",
+          "FULTCAMB DATE NOT NULL",
+          "FULTMOV DATE NOT NULL",
+          "IUSUARIO CHAR(8) NOT NULL",
+          "IPROGRAM CHAR(8) NOT NULL",
+          "ITERM CHAR(8) NOT NULL",
+          "FSIST TIMESTAMP NOT NULL"
+        ]
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "type": "IMPLEMENTS_FUNCTIONALITY",
+      "from": [
+        "Program",
+        [
+          "ZM4CTH00"
+        ]
+      ],
+      "to": [
+        "Functionality",
+        [
+          "FUNCTIONALITY_ZM4CTH00"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223609Z-zm4cth00",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "HAS_SUBFUNCTIONALITY",
+      "from": [
+        "Functionality",
+        [
+          "FUNCTIONALITY_ZM4CTH00"
+        ]
+      ],
+      "to": [
+        "SubFunctionality",
+        [
+          "FUNCTIONALITY_ZM4CTH00",
+          "ZM4CTH00_PROCESSING"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223609Z-zm4cth00",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4CTH00"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4CTH00",
+          "CONFIGURATION"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223609Z-zm4cth00",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          27
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4CTH00"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4CTH00",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223609Z-zm4cth00",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          39
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4CTH00"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4CTH00",
+          "000000-CONTROL"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223609Z-zm4cth00",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          567
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4CTH00"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4CTH00",
+          "100000-INICIO"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223609Z-zm4cth00",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          577
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4CTH00"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4CTH00",
+          "200000-PROCESO"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223609Z-zm4cth00",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          606
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4CTH00"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4CTH00",
+          "200050-CONSULTA-CAUSCAN"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223609Z-zm4cth00",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          615
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4CTH00"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4CTH00",
+          "200100-CONSULTA-HISTORICO"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223609Z-zm4cth00",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          651
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4CTH00"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4CTH00",
+          "200150-INFORMA-ZMDTCTH"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223609Z-zm4cth00",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          693
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4CTH00"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4CTH00",
+          "200200-INSERT-ZMDTCTH"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223609Z-zm4cth00",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          790
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4CTH00"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4CTH00",
+          "200250-MAX-INDICE"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223609Z-zm4cth00",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          1003
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4CTH00"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4CTH00",
+          "300000-FINAL"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223609Z-zm4cth00",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          1027
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4CTH00"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4CTH00",
+          "300000-STOP-RUN"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223609Z-zm4cth00",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          1035
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4CTH00"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4CTH00",
+          "300300-IMPRIMIR-CIFRAS-CONTROL"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223609Z-zm4cth00",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          1041
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4CTH00"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4CTH00",
+          "900100-OPEN-CURCTA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223609Z-zm4cth00",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          1066
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4CTH00"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4CTH00",
+          "900200-LEER-CURCTA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223609Z-zm4cth00",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          1093
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4CTH00"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4CTH00",
+          "900300-CLOSE-CURCTA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223609Z-zm4cth00",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          1208
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4CTH00"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4CTH00",
+          "900700-OBTEN-HORA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223609Z-zm4cth00",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          1231
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4CTH00"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4CTH00",
+          "999994-ABORTAR-RUT-DB2"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223609Z-zm4cth00",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          1240
+        ]
+      }
+    },
+    {
+      "type": "HAS_PARAGRAPH",
+      "from": [
+        "Program",
+        [
+          "ZM4CTH00"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4CTH00",
+          "999997-DESPLIEGA-ABORTO"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223609Z-zm4cth00",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          1260
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "ZM4CTH00"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SQLCA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223609Z-zm4cth00",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          46
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "ZM4CTH00"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZCAUSCAN"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223609Z-zm4cth00",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          60
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "ZM4CTH00"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZCUENTA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223609Z-zm4cth00",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          53
+        ]
+      }
+    },
+    {
+      "type": "INCLUDES_COPYBOOK",
+      "from": [
+        "Program",
+        [
+          "ZM4CTH00"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMGTCTH"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223609Z-zm4cth00",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          67
+        ]
+      }
+    },
+    {
+      "type": "READS_TABLE",
+      "from": [
+        "Program",
+        [
+          "ZM4CTH00"
+        ]
+      ],
+      "to": [
+        "DBTable",
+        [
+          "CAUSCAN"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223609Z-zm4cth00",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          620,
+          621,
+          622,
+          623,
+          624,
+          625,
+          626,
+          627,
+          628,
+          629
+        ]
+      }
+    },
+    {
+      "type": "READS_TABLE",
+      "from": [
+        "Program",
+        [
+          "ZM4CTH00"
+        ]
+      ],
+      "to": [
+        "DBTable",
+        [
+          "CUENTA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223609Z-zm4cth00",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          463,
+          464,
+          465,
+          466,
+          467,
+          468,
+          469,
+          470,
+          471,
+          472,
+          473,
+          474,
+          475,
+          476,
+          477,
+          478,
+          479,
+          480,
+          481,
+          482,
+          483,
+          484,
+          485,
+          486,
+          487,
+          488,
+          489,
+          490,
+          491,
+          492,
+          493,
+          494,
+          495,
+          496,
+          497,
+          498,
+          499,
+          500,
+          501,
+          502,
+          503,
+          504,
+          505,
+          506,
+          507,
+          508,
+          509,
+          510,
+          511,
+          512,
+          513,
+          514,
+          515,
+          516,
+          517,
+          518,
+          519,
+          520,
+          521,
+          522,
+          523,
+          524,
+          525,
+          526,
+          527,
+          528,
+          529,
+          530,
+          531,
+          532,
+          533,
+          534,
+          535,
+          536,
+          537,
+          538,
+          539,
+          540,
+          541,
+          542,
+          543,
+          544,
+          545,
+          546,
+          547,
+          548,
+          549,
+          550,
+          551,
+          552,
+          553,
+          554,
+          555,
+          556,
+          557
+        ]
+      }
+    },
+    {
+      "type": "READS_TABLE",
+      "from": [
+        "Program",
+        [
+          "ZM4CTH00"
+        ]
+      ],
+      "to": [
+        "DBTable",
+        [
+          "ZMDTCTH"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223609Z-zm4cth00",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          658,
+          659,
+          660,
+          661,
+          662,
+          663,
+          664,
+          665,
+          666,
+          1005,
+          1006,
+          1007,
+          1008,
+          1009,
+          1010,
+          1011
+        ]
+      }
+    },
+    {
+      "type": "UPDATES_TABLE",
+      "from": [
+        "Program",
+        [
+          "ZM4CTH00"
+        ]
+      ],
+      "to": [
+        "DBTable",
+        [
+          "ZMDTCTH"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223609Z-zm4cth00",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          792,
+          793,
+          794,
+          795,
+          796,
+          797,
+          798,
+          799,
+          800,
+          801,
+          802,
+          803,
+          804,
+          805,
+          806,
+          807,
+          808,
+          809,
+          810,
+          811,
+          812,
+          813,
+          814,
+          815,
+          816,
+          817,
+          818,
+          819,
+          820,
+          821,
+          822,
+          823,
+          824,
+          825,
+          826,
+          827,
+          828,
+          829,
+          830,
+          831,
+          832,
+          833,
+          834,
+          835,
+          836,
+          837,
+          838,
+          839,
+          840,
+          841,
+          842,
+          843,
+          844,
+          845,
+          846,
+          847,
+          848,
+          849,
+          850,
+          851,
+          852,
+          853,
+          854,
+          855,
+          856,
+          857,
+          858,
+          859,
+          860,
+          861,
+          862,
+          863,
+          864,
+          865,
+          866,
+          867,
+          868,
+          869,
+          870,
+          871,
+          872,
+          873,
+          874,
+          875,
+          876,
+          877,
+          878,
+          879,
+          880,
+          881,
+          882,
+          883,
+          884,
+          885,
+          886,
+          887,
+          888,
+          889,
+          890,
+          891,
+          892,
+          893,
+          894,
+          895,
+          896,
+          897,
+          898,
+          899,
+          900,
+          901,
+          902,
+          903,
+          904,
+          905,
+          906,
+          907,
+          908,
+          909,
+          910,
+          911,
+          912,
+          913,
+          914,
+          915,
+          916,
+          917,
+          918,
+          919,
+          920,
+          921,
+          922,
+          923,
+          924,
+          925,
+          926,
+          927,
+          928,
+          929,
+          930,
+          931,
+          932,
+          933,
+          934,
+          935,
+          936,
+          937,
+          938,
+          939,
+          940,
+          941,
+          942,
+          943,
+          944,
+          945,
+          946,
+          947,
+          948,
+          949,
+          950,
+          951,
+          952,
+          953,
+          954,
+          955,
+          956,
+          957,
+          958,
+          959,
+          960,
+          961,
+          962,
+          963,
+          964,
+          965,
+          966,
+          967,
+          968,
+          969,
+          970,
+          971,
+          972,
+          973,
+          974,
+          975,
+          976
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4CTH00",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SQLCA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223609Z-zm4cth00",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          46
+        ]
+      }
+    },
+    {
+      "type": "REALIZED_BY",
+      "from": [
+        "SubFunctionality",
+        [
+          "FUNCTIONALITY_ZM4CTH00",
+          "ZM4CTH00_PROCESSING"
+        ]
+      ],
+      "to": [
+        "Paragraph",
+        [
+          "ZM4CTH00",
+          "999997-DESPLIEGA-ABORTO"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223609Z-zm4cth00",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          1260
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4CTH00",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "SQLCA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223609Z-zm4cth00",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          46
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4CTH00",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZCAUSCAN"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223609Z-zm4cth00",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          60
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4CTH00",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZCAUSCAN"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223609Z-zm4cth00",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          60
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4CTH00",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZCUENTA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223609Z-zm4cth00",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          53
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4CTH00",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZCUENTA"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223609Z-zm4cth00",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          53
+        ]
+      }
+    },
+    {
+      "type": "USES_COPYBOOK",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4CTH00",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMGTCTH"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223609Z-zm4cth00",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          67
+        ]
+      }
+    },
+    {
+      "type": "IMPLEMENTED_BY",
+      "from": [
+        "Paragraph",
+        [
+          "ZM4CTH00",
+          "WORKING-STORAGE"
+        ]
+      ],
+      "to": [
+        "Copybook",
+        [
+          "ZMGTCTH"
+        ]
+      ],
+      "properties": {
+        "runId": "e2e-20260625T223609Z-zm4cth00",
+        "reviewStatus": "pending_human_review",
+        "reviewSource": "auto-ingestion",
+        "reviewRequired": true,
+        "evidenceFile": "src/ZM4CTH00.cbl",
+        "evidenceLines": [
+          67
+        ]
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "program": "ZM4CTH00",
+      "sequenceColumnsNormalized": true,
+      "performTargetCount": 16,
+      "paragraphCount": 19,
+      "missingPerformTargets": []
+    }
+  ]
+}

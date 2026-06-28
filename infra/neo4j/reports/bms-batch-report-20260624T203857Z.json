@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-06-24T20:38:57+00:00",
+  "mode": "dry-run",
+  "batchFile": "/tmp/bms-batch-test.txt",
+  "workers": 2,
+  "maxRetries": 1,
+  "summary": {
+    "total": 2,
+    "success": 2,
+    "failed": 0
+  },
+  "results": [
+    {
+      "bmsFile": "/Users/xmk9539/Documents/Software/zm_cbop/mps/ZMPG721.bms",
+      "status": "ok",
+      "startedAt": "2026-06-24T20:38:55+00:00",
+      "mapset": "ZMPG721",
+      "map": "ZMPG721",
+      "programs": [
+        "ZM2IPG72",
+        "ZM2IPG75"
+      ],
+      "fields": 41,
+      "literals": 14,
+      "functionKeys": 6,
+      "endedAt": "2026-06-24T20:38:57+00:00"
+    },
+    {
+      "bmsFile": "/Users/xmk9539/Documents/Software/zm_cbop/mps/ZMHA181.bms",
+      "status": "ok",
+      "startedAt": "2026-06-24T20:38:55+00:00",
+      "mapset": "ZMHA181",
+      "map": "ZMHA181",
+      "programs": [
+        "ZM2OHA18"
+      ],
+      "fields": 27,
+      "literals": 0,
+      "functionKeys": 0,
+      "endedAt": "2026-06-24T20:38:57+00:00"
+    }
+  ]
+}

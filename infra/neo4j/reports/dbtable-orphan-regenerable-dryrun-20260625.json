@@ -1,0 +1,960 @@
+[
+  {
+    "tableName": "MATGAPR",
+    "dclMember": "ZMATGAPR",
+    "dclPath": "dcl/ZMATGAPR.dcl",
+    "qualifiedNameEsperado": "MATGAPR",
+    "programaCandidatoPrincipal": "ZM2OGJ63",
+    "programasCandidatosSecundarios": [
+      "ZM2OH957",
+      "ZM2OHJ90"
+    ],
+    "sampleReferences": [
+      {
+        "program": "ZM2OGJ63",
+        "sourceFile": "src/ZM2OGJ63.cbl",
+        "line": 294
+      },
+      {
+        "program": "ZM2OH957",
+        "sourceFile": "src/ZM2OH957.cbl",
+        "line": 287
+      },
+      {
+        "program": "ZM2OHJ90",
+        "sourceFile": "src/ZM2OHJ90.cbl",
+        "line": 73
+      }
+    ],
+    "clasificacionAudit": "orphan_regenerable",
+    "estadoAntes": "legacy_partial_orphan",
+    "estadoDespues": "pending_dry_run",
+    "runIdReproceso": null,
+    "runCommandProgram": "ZM2OGJ63",
+    "dryRunStatus": "dry_run_valid",
+    "dryRunExitCode": 0,
+    "writepayloadPath": "infra/neo4j/reports/e2e-20260625T223519Z-zm2ogj63-writepayload.json",
+    "qualifiedNameObserved": "MATGAPR",
+    "dclMemberObserved": "ZMATGAPR",
+    "dclPathObserved": "dcl/ZMATGAPR.dcl",
+    "declaredColumnCountObserved": 8,
+    "declaredColumnsObservedCount": 8
+  },
+  {
+    "tableName": "MCAPISR",
+    "dclMember": "ZMCAPISR",
+    "dclPath": "dcl/ZMCAPISR.dcl",
+    "qualifiedNameEsperado": "MCAPISR",
+    "programaCandidatoPrincipal": "ZM4DH78E",
+    "programasCandidatosSecundarios": [
+      "ZM4DHB78",
+      "ZM4DLE16"
+    ],
+    "sampleReferences": [
+      {
+        "program": "ZM4DH78E",
+        "sourceFile": "src/ZM4DH78E.cbl",
+        "line": 204
+      },
+      {
+        "program": "ZM4DHB78",
+        "sourceFile": "src/ZM4DHB78.cbl",
+        "line": 178
+      },
+      {
+        "program": "ZM4DLE16",
+        "sourceFile": "src/ZM4DLE16.cbl",
+        "line": 320
+      }
+    ],
+    "clasificacionAudit": "orphan_regenerable",
+    "estadoAntes": "legacy_partial_orphan",
+    "estadoDespues": "pending_dry_run",
+    "runIdReproceso": null,
+    "runCommandProgram": "ZM4DH78E",
+    "dryRunStatus": "dry_run_valid",
+    "dryRunExitCode": 0,
+    "writepayloadPath": "infra/neo4j/reports/e2e-20260625T223522Z-zm4dh78e-writepayload.json",
+    "qualifiedNameObserved": "MCAPISR",
+    "dclMemberObserved": "ZMCAPISR",
+    "dclPathObserved": "dcl/ZMCAPISR.dcl",
+    "declaredColumnCountObserved": 11,
+    "declaredColumnsObservedCount": 11
+  },
+  {
+    "tableName": "MCCARAT",
+    "dclMember": "ZMCCARAT",
+    "dclPath": "dcl/ZMCCARAT.dcl",
+    "qualifiedNameEsperado": "MCCARAT",
+    "programaCandidatoPrincipal": "ZM4DGJ31",
+    "programasCandidatosSecundarios": [
+      "ZM4DL89M",
+      "ZM4MGT89"
+    ],
+    "sampleReferences": [
+      {
+        "program": "ZM4DGJ31",
+        "sourceFile": "src/ZM4DGJ31.cbl",
+        "line": 287
+      },
+      {
+        "program": "ZM4DL89M",
+        "sourceFile": "src/ZM4DL89M.cbl",
+        "line": 103
+      },
+      {
+        "program": "ZM4MGT89",
+        "sourceFile": "src/ZM4MGT89.cbl",
+        "line": 90
+      }
+    ],
+    "clasificacionAudit": "orphan_regenerable",
+    "estadoAntes": "legacy_partial_orphan",
+    "estadoDespues": "pending_dry_run",
+    "runIdReproceso": null,
+    "runCommandProgram": "ZM4DGJ31",
+    "dryRunStatus": "dry_run_valid",
+    "dryRunExitCode": 0,
+    "writepayloadPath": "infra/neo4j/reports/e2e-20260625T223525Z-zm4dgj31-writepayload.json",
+    "qualifiedNameObserved": "MCCARAT",
+    "dclMemberObserved": "ZMCCARAT",
+    "dclPathObserved": "dcl/ZMCCARAT.dcl",
+    "declaredColumnCountObserved": 17,
+    "declaredColumnsObservedCount": 17
+  },
+  {
+    "tableName": "MDDCART",
+    "dclMember": "ZMDDCART",
+    "dclPath": "dcl/ZMDDCART.dcl",
+    "qualifiedNameEsperado": "MDDCART",
+    "programaCandidatoPrincipal": "ZM2ILD29",
+    "programasCandidatosSecundarios": [
+      "ZM2OGD46",
+      "ZM2OHC90",
+      "ZM2OLC90",
+      "ZM2OLD07",
+      "ZM2OLD26"
+    ],
+    "sampleReferences": [
+      {
+        "program": "ZM2ILD29",
+        "sourceFile": "src/ZM2ILD29.cbl",
+        "line": 260
+      },
+      {
+        "program": "ZM2OGD46",
+        "sourceFile": "src/ZM2OGD46.cbl",
+        "line": 646
+      },
+      {
+        "program": "ZM2OHC90",
+        "sourceFile": "src/ZM2OHC90.cbl",
+        "line": 386
+      },
+      {
+        "program": "ZM2OLC90",
+        "sourceFile": "src/ZM2OLC90.cbl",
+        "line": 559
+      },
+      {
+        "program": "ZM2OLD07",
+        "sourceFile": "src/ZM2OLD07.cbl",
+        "line": 499
+      }
+    ],
+    "clasificacionAudit": "orphan_regenerable",
+    "estadoAntes": "legacy_partial_orphan",
+    "estadoDespues": "pending_dry_run",
+    "runIdReproceso": null,
+    "runCommandProgram": "ZM2ILD29",
+    "dryRunStatus": "dry_run_valid",
+    "dryRunExitCode": 0,
+    "writepayloadPath": "infra/neo4j/reports/e2e-20260625T223528Z-zm2ild29-writepayload.json",
+    "qualifiedNameObserved": "MDDCART",
+    "dclMemberObserved": "ZMDDCART",
+    "dclPathObserved": "dcl/ZMDDCART.dcl",
+    "declaredColumnCountObserved": 22,
+    "declaredColumnsObservedCount": 22
+  },
+  {
+    "tableName": "MDINBMV",
+    "dclMember": "ZMDINBMV",
+    "dclPath": "dcl/ZMDINBMV.dcl",
+    "qualifiedNameEsperado": "MDINBMV",
+    "programaCandidatoPrincipal": "ZM4DG003",
+    "programasCandidatosSecundarios": [],
+    "sampleReferences": [
+      {
+        "program": "ZM4DG003",
+        "sourceFile": "src/ZM4DG003.cbl",
+        "line": 48
+      }
+    ],
+    "clasificacionAudit": "orphan_regenerable",
+    "estadoAntes": "legacy_partial_orphan",
+    "estadoDespues": "pending_dry_run",
+    "runIdReproceso": null,
+    "runCommandProgram": "ZM4DG003",
+    "dryRunStatus": "dry_run_valid",
+    "dryRunExitCode": 0,
+    "writepayloadPath": "infra/neo4j/reports/e2e-20260625T223531Z-zm4dg003-writepayload.json",
+    "qualifiedNameObserved": "MDINBMV",
+    "dclMemberObserved": "ZMDINBMV",
+    "dclPathObserved": "dcl/ZMDINBMV.dcl",
+    "declaredColumnCountObserved": 12,
+    "declaredColumnsObservedCount": 12
+  },
+  {
+    "tableName": "MENSAJE",
+    "dclMember": "ZMENSAJE",
+    "dclPath": "dcl/ZMENSAJE.dcl",
+    "qualifiedNameEsperado": "MENSAJE",
+    "programaCandidatoPrincipal": "ZM2OGJ44",
+    "programasCandidatosSecundarios": [],
+    "sampleReferences": [
+      {
+        "program": "ZM2OGJ44",
+        "sourceFile": "src/ZM2OGJ44.cbl",
+        "line": 91
+      }
+    ],
+    "clasificacionAudit": "orphan_regenerable",
+    "estadoAntes": "legacy_partial_orphan",
+    "estadoDespues": "pending_dry_run",
+    "runIdReproceso": null,
+    "runCommandProgram": "ZM2OGJ44",
+    "dryRunStatus": "blocked_missing_payload",
+    "dryRunExitCode": 0,
+    "writepayloadPath": "infra/neo4j/reports/e2e-20260625T223535Z-zm2ogj44-writepayload.json",
+    "qualifiedNameObserved": null,
+    "dclMemberObserved": null,
+    "dclPathObserved": null,
+    "declaredColumnCountObserved": null,
+    "declaredColumnsObservedCount": 0
+  },
+  {
+    "tableName": "MENTEXT",
+    "dclMember": "ZMENTEXT",
+    "dclPath": "dcl/ZMENTEXT.dcl",
+    "qualifiedNameEsperado": "MENTEXT",
+    "programaCandidatoPrincipal": "ZM2OGJ44",
+    "programasCandidatosSecundarios": [],
+    "sampleReferences": [
+      {
+        "program": "ZM2OGJ44",
+        "sourceFile": "src/ZM2OGJ44.cbl",
+        "line": 95
+      }
+    ],
+    "clasificacionAudit": "orphan_regenerable",
+    "estadoAntes": "legacy_partial_orphan",
+    "estadoDespues": "pending_dry_run",
+    "runIdReproceso": null,
+    "runCommandProgram": "ZM2OGJ44",
+    "dryRunStatus": "dry_run_valid",
+    "dryRunExitCode": 0,
+    "writepayloadPath": "infra/neo4j/reports/e2e-20260625T223538Z-zm2ogj44-writepayload.json",
+    "qualifiedNameObserved": "MENTEXT",
+    "dclMemberObserved": "ZMENTEXT",
+    "dclPathObserved": "dcl/ZMENTEXT.dcl",
+    "declaredColumnCountObserved": 3,
+    "declaredColumnsObservedCount": 3
+  },
+  {
+    "tableName": "MOVFAX",
+    "dclMember": "ZMOVFAX",
+    "dclPath": "dcl/ZMOVFAX.dcl",
+    "qualifiedNameEsperado": "MOVFAX",
+    "programaCandidatoPrincipal": "ZM2OG609",
+    "programasCandidatosSecundarios": [
+      "ZM2OKMA4",
+      "ZM2OU609",
+      "ZM2OUI29",
+      "ZM2OUK04",
+      "ZM2OUK05"
+    ],
+    "sampleReferences": [
+      {
+        "program": "ZM2OG609",
+        "sourceFile": "src/ZM2OG609.cbl",
+        "line": 227
+      },
+      {
+        "program": "ZM2OKMA4",
+        "sourceFile": "src/ZM2OKMA4.cbl",
+        "line": 438
+      },
+      {
+        "program": "ZM2OU609",
+        "sourceFile": "src/ZM2OU609.cbl",
+        "line": 205
+      },
+      {
+        "program": "ZM2OUI29",
+        "sourceFile": "src/ZM2OUI29.cbl",
+        "line": 298
+      },
+      {
+        "program": "ZM2OUK04",
+        "sourceFile": "src/ZM2OUK04.cbl",
+        "line": 349
+      }
+    ],
+    "clasificacionAudit": "orphan_regenerable",
+    "estadoAntes": "legacy_partial_orphan",
+    "estadoDespues": "pending_dry_run",
+    "runIdReproceso": null,
+    "runCommandProgram": "ZM2OG609",
+    "dryRunStatus": "dry_run_valid",
+    "dryRunExitCode": 0,
+    "writepayloadPath": "infra/neo4j/reports/e2e-20260625T223541Z-zm2og609-writepayload.json",
+    "qualifiedNameObserved": "MOVFAX",
+    "dclMemberObserved": "ZMOVFAX",
+    "dclPathObserved": "dcl/ZMOVFAX.dcl",
+    "declaredColumnCountObserved": 4,
+    "declaredColumnsObservedCount": 4
+  },
+  {
+    "tableName": "MOVIND",
+    "dclMember": "ZMOVIND",
+    "dclPath": "dcl/ZMOVIND.dcl",
+    "qualifiedNameEsperado": "MOVIND",
+    "programaCandidatoPrincipal": "ZM4DGF13",
+    "programasCandidatosSecundarios": [
+      "ZM4DGF26",
+      "ZM4DGU45",
+      "ZM4DJ002",
+      "ZM4DJ351"
+    ],
+    "sampleReferences": [
+      {
+        "program": "ZM4DGF13",
+        "sourceFile": "src/ZM4DGF13.cbl",
+        "line": 432
+      },
+      {
+        "program": "ZM4DGF26",
+        "sourceFile": "src/ZM4DGF26.cbl",
+        "line": 357
+      },
+      {
+        "program": "ZM4DGU45",
+        "sourceFile": "src/ZM4DGU45.cbl",
+        "line": 172
+      },
+      {
+        "program": "ZM4DJ002",
+        "sourceFile": "src/ZM4DJ002.cbl",
+        "line": 232
+      },
+      {
+        "program": "ZM4DJ351",
+        "sourceFile": "src/ZM4DJ351.cbl",
+        "line": 522
+      }
+    ],
+    "clasificacionAudit": "orphan_regenerable",
+    "estadoAntes": "legacy_partial_orphan",
+    "estadoDespues": "pending_dry_run",
+    "runIdReproceso": null,
+    "runCommandProgram": "ZM4DGF13",
+    "dryRunStatus": "dry_run_valid",
+    "dryRunExitCode": 0,
+    "writepayloadPath": "infra/neo4j/reports/e2e-20260625T223544Z-zm4dgf13-writepayload.json",
+    "qualifiedNameObserved": "MOVIND",
+    "dclMemberObserved": "ZMOVIND",
+    "dclPathObserved": "dcl/ZMOVIND.dcl",
+    "declaredColumnCountObserved": 19,
+    "declaredColumnsObservedCount": 19
+  },
+  {
+    "tableName": "MSGERALT",
+    "dclMember": "ZMSGERAL",
+    "dclPath": "dcl/ZMSGERAL.dcl",
+    "qualifiedNameEsperado": "DESARSVP.MSGERALT",
+    "programaCandidatoPrincipal": "ZM4DJ340",
+    "programasCandidatosSecundarios": [
+      "ZM9CD345",
+      "ZM9CX345"
+    ],
+    "sampleReferences": [
+      {
+        "program": "ZM4DJ340",
+        "sourceFile": "src/ZM4DJ340.cbl",
+        "line": 214
+      },
+      {
+        "program": "ZM9CD345",
+        "sourceFile": "src/ZM9CD345.cbl",
+        "line": 54
+      },
+      {
+        "program": "ZM9CX345",
+        "sourceFile": "src/ZM9CX345.cbl",
+        "line": 50
+      }
+    ],
+    "clasificacionAudit": "orphan_regenerable",
+    "estadoAntes": "legacy_partial_orphan",
+    "estadoDespues": "pending_dry_run",
+    "runIdReproceso": null,
+    "runCommandProgram": "ZM4DJ340",
+    "dryRunStatus": "dry_run_valid",
+    "dryRunExitCode": 0,
+    "writepayloadPath": "infra/neo4j/reports/e2e-20260625T223547Z-zm4dj340-writepayload.json",
+    "qualifiedNameObserved": "DESARSVP.MSGERALT",
+    "dclMemberObserved": "ZMSGERAL",
+    "dclPathObserved": "dcl/ZMSGERAL.dcl",
+    "declaredColumnCountObserved": 18,
+    "declaredColumnsObservedCount": 18
+  },
+  {
+    "tableName": "MTZDEM",
+    "dclMember": "ZMTZDEM",
+    "dclPath": "dcl/ZMTZDEM.dcl",
+    "qualifiedNameEsperado": "MTZDEM",
+    "programaCandidatoPrincipal": "ZM2ILC68",
+    "programasCandidatosSecundarios": [
+      "ZM2ILC69",
+      "ZM2ILC70",
+      "ZM2ILC71",
+      "ZM2ILC72",
+      "ZM2ILC73"
+    ],
+    "sampleReferences": [
+      {
+        "program": "ZM2ILC68",
+        "sourceFile": "src/ZM2ILC68.cbl",
+        "line": 188
+      },
+      {
+        "program": "ZM2ILC69",
+        "sourceFile": "src/ZM2ILC69.cbl",
+        "line": 201
+      },
+      {
+        "program": "ZM2ILC70",
+        "sourceFile": "src/ZM2ILC70.cbl",
+        "line": 202
+      },
+      {
+        "program": "ZM2ILC71",
+        "sourceFile": "src/ZM2ILC71.cbl",
+        "line": 195
+      },
+      {
+        "program": "ZM2ILC72",
+        "sourceFile": "src/ZM2ILC72.cbl",
+        "line": 199
+      }
+    ],
+    "clasificacionAudit": "orphan_regenerable",
+    "estadoAntes": "legacy_partial_orphan",
+    "estadoDespues": "pending_dry_run",
+    "runIdReproceso": null,
+    "runCommandProgram": "ZM2ILC68",
+    "dryRunStatus": "dry_run_valid",
+    "dryRunExitCode": 0,
+    "writepayloadPath": "infra/neo4j/reports/e2e-20260625T223551Z-zm2ilc68-writepayload.json",
+    "qualifiedNameObserved": "MTZDEM",
+    "dclMemberObserved": "ZMTZDEM",
+    "dclPathObserved": "dcl/ZMTZDEM.dcl",
+    "declaredColumnCountObserved": 18,
+    "declaredColumnsObservedCount": 18
+  },
+  {
+    "tableName": "MTZINV",
+    "dclMember": "ZMTZINV",
+    "dclPath": "dcl/ZMTZINV.dcl",
+    "qualifiedNameEsperado": "MTZINV",
+    "programaCandidatoPrincipal": "ZM2ILC91",
+    "programasCandidatosSecundarios": [
+      "ZM2ILH23",
+      "ZM2OLD03",
+      "ZM4DLD30",
+      "ZM4MUV01",
+      "ZM4VG002"
+    ],
+    "sampleReferences": [
+      {
+        "program": "ZM2ILC91",
+        "sourceFile": "src/ZM2ILC91.cbl",
+        "line": 242
+      },
+      {
+        "program": "ZM2ILH23",
+        "sourceFile": "src/ZM2ILH23.cbl",
+        "line": 85
+      },
+      {
+        "program": "ZM2OLD03",
+        "sourceFile": "src/ZM2OLD03.cbl",
+        "line": 316
+      },
+      {
+        "program": "ZM4DLD30",
+        "sourceFile": "src/ZM4DLD30.cbl",
+        "line": 124
+      },
+      {
+        "program": "ZM4MUV01",
+        "sourceFile": "src/ZM4MUV01.cbl",
+        "line": 78
+      }
+    ],
+    "clasificacionAudit": "orphan_regenerable",
+    "estadoAntes": "legacy_partial_orphan",
+    "estadoDespues": "pending_dry_run",
+    "runIdReproceso": null,
+    "runCommandProgram": "ZM2ILC91",
+    "dryRunStatus": "dry_run_valid",
+    "dryRunExitCode": 0,
+    "writepayloadPath": "infra/neo4j/reports/e2e-20260625T223554Z-zm2ilc91-writepayload.json",
+    "qualifiedNameObserved": "MTZINV",
+    "dclMemberObserved": "ZMTZINV",
+    "dclPathObserved": "dcl/ZMTZINV.dcl",
+    "declaredColumnCountObserved": 17,
+    "declaredColumnsObservedCount": 17
+  },
+  {
+    "tableName": "ZMDTATE",
+    "dclMember": "ZMGTATE",
+    "dclPath": "dcl/ZMGTATE.dcl",
+    "qualifiedNameEsperado": "ZMDTATE",
+    "programaCandidatoPrincipal": "ZM6RY200",
+    "programasCandidatosSecundarios": [],
+    "sampleReferences": [
+      {
+        "program": "ZM6RY200",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "line": 131
+      }
+    ],
+    "clasificacionAudit": "orphan_regenerable",
+    "estadoAntes": "legacy_partial_orphan",
+    "estadoDespues": "pending_dry_run",
+    "runIdReproceso": null,
+    "runCommandProgram": "ZM6RY200",
+    "dryRunStatus": "dry_run_valid",
+    "dryRunExitCode": 0,
+    "writepayloadPath": "infra/neo4j/reports/e2e-20260625T223557Z-zm6ry200-writepayload.json",
+    "qualifiedNameObserved": "ZMDTATE",
+    "dclMemberObserved": "ZMGTATE",
+    "dclPathObserved": "dcl/ZMGTATE.dcl",
+    "declaredColumnCountObserved": 40,
+    "declaredColumnsObservedCount": 40
+  },
+  {
+    "tableName": "ZMDTCAR",
+    "dclMember": "ZMGTCAR",
+    "dclPath": "dcl/ZMGTCAR.dcl",
+    "qualifiedNameEsperado": "ZMDTCAR",
+    "programaCandidatoPrincipal": "ZM2OJAB2",
+    "programasCandidatosSecundarios": [
+      "ZM4DJ026",
+      "ZM4DJ202",
+      "ZM4DJ203",
+      "ZM4MJ145",
+      "ZM4MJ170"
+    ],
+    "sampleReferences": [
+      {
+        "program": "ZM2OJAB2",
+        "sourceFile": "src/ZM2OJAB2.cbl",
+        "line": 435
+      },
+      {
+        "program": "ZM4DJ026",
+        "sourceFile": "src/ZM4DJ026.cbl",
+        "line": 546
+      },
+      {
+        "program": "ZM4DJ202",
+        "sourceFile": "src/ZM4DJ202.cbl",
+        "line": 545
+      },
+      {
+        "program": "ZM4DJ203",
+        "sourceFile": "src/ZM4DJ203.cbl",
+        "line": 472
+      },
+      {
+        "program": "ZM4MJ145",
+        "sourceFile": "src/ZM4MJ145.cbl",
+        "line": 811
+      }
+    ],
+    "clasificacionAudit": "orphan_regenerable",
+    "estadoAntes": "legacy_partial_orphan",
+    "estadoDespues": "pending_dry_run",
+    "runIdReproceso": null,
+    "runCommandProgram": "ZM2OJAB2",
+    "dryRunStatus": "dry_run_valid",
+    "dryRunExitCode": 0,
+    "writepayloadPath": "infra/neo4j/reports/e2e-20260625T223600Z-zm2ojab2-writepayload.json",
+    "qualifiedNameObserved": "ZMDTCAR",
+    "dclMemberObserved": "ZMGTCAR",
+    "dclPathObserved": "dcl/ZMGTCAR.dcl",
+    "declaredColumnCountObserved": 28,
+    "declaredColumnsObservedCount": 28
+  },
+  {
+    "tableName": "ZMDTCAX",
+    "dclMember": "ZMGTCAX",
+    "dclPath": "dcl/ZMGTCAX.dcl",
+    "qualifiedNameEsperado": "ZMDTCAX",
+    "programaCandidatoPrincipal": "ZM2OJAB2",
+    "programasCandidatosSecundarios": [
+      "ZM4DJ202",
+      "ZM6RG370",
+      "ZM6RG371",
+      "ZM6RJ374"
+    ],
+    "sampleReferences": [
+      {
+        "program": "ZM2OJAB2",
+        "sourceFile": "src/ZM2OJAB2.cbl",
+        "line": 486
+      },
+      {
+        "program": "ZM4DJ202",
+        "sourceFile": "src/ZM4DJ202.cbl",
+        "line": 610
+      },
+      {
+        "program": "ZM6RG370",
+        "sourceFile": "src/ZM6RG370.cbl",
+        "line": 174
+      },
+      {
+        "program": "ZM6RG371",
+        "sourceFile": "src/ZM6RG371.cbl",
+        "line": 154
+      },
+      {
+        "program": "ZM6RJ374",
+        "sourceFile": "src/ZM6RJ374.cbl",
+        "line": 462
+      }
+    ],
+    "clasificacionAudit": "orphan_regenerable",
+    "estadoAntes": "legacy_partial_orphan",
+    "estadoDespues": "pending_dry_run",
+    "runIdReproceso": null,
+    "runCommandProgram": "ZM2OJAB2",
+    "dryRunStatus": "dry_run_valid",
+    "dryRunExitCode": 0,
+    "writepayloadPath": "infra/neo4j/reports/e2e-20260625T223603Z-zm2ojab2-writepayload.json",
+    "qualifiedNameObserved": "ZMDTCAX",
+    "dclMemberObserved": "ZMGTCAX",
+    "dclPathObserved": "dcl/ZMGTCAX.dcl",
+    "declaredColumnCountObserved": 21,
+    "declaredColumnsObservedCount": 21
+  },
+  {
+    "tableName": "ZMDTCTA",
+    "dclMember": "ZMGTCTA",
+    "dclPath": "dcl/ZMGTCTA.dcl",
+    "qualifiedNameEsperado": "ZMDTCTA",
+    "programaCandidatoPrincipal": "ZM2OJAB2",
+    "programasCandidatosSecundarios": [
+      "ZM4DJ026",
+      "ZM4DJ202",
+      "ZM4DJ203",
+      "ZM4MJ145",
+      "ZM4OJ204"
+    ],
+    "sampleReferences": [
+      {
+        "program": "ZM2OJAB2",
+        "sourceFile": "src/ZM2OJAB2.cbl",
+        "line": 465
+      },
+      {
+        "program": "ZM4DJ026",
+        "sourceFile": "src/ZM4DJ026.cbl",
+        "line": 464
+      },
+      {
+        "program": "ZM4DJ202",
+        "sourceFile": "src/ZM4DJ202.cbl",
+        "line": 580
+      },
+      {
+        "program": "ZM4DJ203",
+        "sourceFile": "src/ZM4DJ203.cbl",
+        "line": 511
+      },
+      {
+        "program": "ZM4MJ145",
+        "sourceFile": "src/ZM4MJ145.cbl",
+        "line": 857
+      }
+    ],
+    "clasificacionAudit": "orphan_regenerable",
+    "estadoAntes": "legacy_partial_orphan",
+    "estadoDespues": "pending_dry_run",
+    "runIdReproceso": null,
+    "runCommandProgram": "ZM2OJAB2",
+    "dryRunStatus": "blocked_missing_payload",
+    "dryRunExitCode": 0,
+    "writepayloadPath": "infra/neo4j/reports/e2e-20260625T223606Z-zm2ojab2-writepayload.json",
+    "qualifiedNameObserved": null,
+    "dclMemberObserved": null,
+    "dclPathObserved": null,
+    "declaredColumnCountObserved": null,
+    "declaredColumnsObservedCount": 0
+  },
+  {
+    "tableName": "ZMDTCTH",
+    "dclMember": "ZMGTCTH",
+    "dclPath": "dcl/ZMGTCTH.dcl",
+    "qualifiedNameEsperado": "ZMDTCTH",
+    "programaCandidatoPrincipal": "ZM4CTH00",
+    "programasCandidatosSecundarios": [
+      "ZM4CUIN2",
+      "ZM6CTH10",
+      "ZM9CTH10"
+    ],
+    "sampleReferences": [
+      {
+        "program": "ZM4CTH00",
+        "sourceFile": "src/ZM4CTH00.cbl",
+        "line": 67
+      },
+      {
+        "program": "ZM4CUIN2",
+        "sourceFile": "src/ZM4CUIN2.cbl",
+        "line": 383
+      },
+      {
+        "program": "ZM6CTH10",
+        "sourceFile": "src/ZM6CTH10.cbl",
+        "line": 118
+      },
+      {
+        "program": "ZM9CTH10",
+        "sourceFile": "src/ZM9CTH10.cbl",
+        "line": 116
+      }
+    ],
+    "clasificacionAudit": "orphan_regenerable",
+    "estadoAntes": "legacy_partial_orphan",
+    "estadoDespues": "pending_dry_run",
+    "runIdReproceso": null,
+    "runCommandProgram": "ZM4CTH00",
+    "dryRunStatus": "dry_run_valid",
+    "dryRunExitCode": 0,
+    "writepayloadPath": "infra/neo4j/reports/e2e-20260625T223609Z-zm4cth00-writepayload.json",
+    "qualifiedNameObserved": "ZMDTCTH",
+    "dclMemberObserved": "ZMGTCTH",
+    "dclPathObserved": "dcl/ZMGTCTH.dcl",
+    "declaredColumnCountObserved": 91,
+    "declaredColumnsObservedCount": 91
+  },
+  {
+    "tableName": "ZMDTCTL",
+    "dclMember": "ZMGTCTL",
+    "dclPath": "dcl/ZMGTCTL.dcl",
+    "qualifiedNameEsperado": "ZMDTCTL",
+    "programaCandidatoPrincipal": "ZM2OJ133",
+    "programasCandidatosSecundarios": [
+      "ZM4DJ202",
+      "ZM4DJ203",
+      "ZM4MJ145",
+      "ZM6RJ374"
+    ],
+    "sampleReferences": [
+      {
+        "program": "ZM2OJ133",
+        "sourceFile": "src/ZM2OJ133.cbl",
+        "line": 406
+      },
+      {
+        "program": "ZM4DJ202",
+        "sourceFile": "src/ZM4DJ202.cbl",
+        "line": 620
+      },
+      {
+        "program": "ZM4DJ203",
+        "sourceFile": "src/ZM4DJ203.cbl",
+        "line": 546
+      },
+      {
+        "program": "ZM4MJ145",
+        "sourceFile": "src/ZM4MJ145.cbl",
+        "line": 745
+      },
+      {
+        "program": "ZM6RJ374",
+        "sourceFile": "src/ZM6RJ374.cbl",
+        "line": 520
+      }
+    ],
+    "clasificacionAudit": "orphan_regenerable",
+    "estadoAntes": "legacy_partial_orphan",
+    "estadoDespues": "pending_dry_run",
+    "runIdReproceso": null,
+    "runCommandProgram": "ZM2OJ133",
+    "dryRunStatus": "blocked_missing_payload",
+    "dryRunExitCode": 0,
+    "writepayloadPath": "infra/neo4j/reports/e2e-20260625T223612Z-zm2oj133-writepayload.json",
+    "qualifiedNameObserved": null,
+    "dclMemberObserved": null,
+    "dclPathObserved": null,
+    "declaredColumnCountObserved": null,
+    "declaredColumnsObservedCount": 0
+  },
+  {
+    "tableName": "ZMDTOPE",
+    "dclMember": "ZMGTOPE",
+    "dclPath": "dcl/ZMGTOPE.dcl",
+    "qualifiedNameEsperado": "ZMDTOPE",
+    "programaCandidatoPrincipal": "ZM4MJ170",
+    "programasCandidatosSecundarios": [],
+    "sampleReferences": [
+      {
+        "program": "ZM4MJ170",
+        "sourceFile": "src/ZM4MJ170.cbl",
+        "line": 508
+      }
+    ],
+    "clasificacionAudit": "orphan_regenerable",
+    "estadoAntes": "legacy_partial_orphan",
+    "estadoDespues": "pending_dry_run",
+    "runIdReproceso": null,
+    "runCommandProgram": "ZM4MJ170",
+    "dryRunStatus": "dry_run_valid",
+    "dryRunExitCode": 0,
+    "writepayloadPath": "infra/neo4j/reports/e2e-20260625T223615Z-zm4mj170-writepayload.json",
+    "qualifiedNameObserved": "ZMDTOPE",
+    "dclMemberObserved": "ZMGTOPE",
+    "dclPathObserved": "dcl/ZMGTOPE.dcl",
+    "declaredColumnCountObserved": 32,
+    "declaredColumnsObservedCount": 32
+  },
+  {
+    "tableName": "ZMDTOPS",
+    "dclMember": "ZMGTOPS",
+    "dclPath": "dcl/ZMGTOPS.dcl",
+    "qualifiedNameEsperado": "ZMDTOPS",
+    "programaCandidatoPrincipal": "ZM2OJAB2",
+    "programasCandidatosSecundarios": [
+      "ZM4DJ026",
+      "ZM4DJ086",
+      "ZM4DJ202",
+      "ZM4DJ203",
+      "ZM4MJ170"
+    ],
+    "sampleReferences": [
+      {
+        "program": "ZM2OJAB2",
+        "sourceFile": "src/ZM2OJAB2.cbl",
+        "line": 444
+      },
+      {
+        "program": "ZM4DJ026",
+        "sourceFile": "src/ZM4DJ026.cbl",
+        "line": 517
+      },
+      {
+        "program": "ZM4DJ086",
+        "sourceFile": "src/ZM4DJ086.cbl",
+        "line": 97
+      },
+      {
+        "program": "ZM4DJ202",
+        "sourceFile": "src/ZM4DJ202.cbl",
+        "line": 555
+      },
+      {
+        "program": "ZM4DJ203",
+        "sourceFile": "src/ZM4DJ203.cbl",
+        "line": 484
+      }
+    ],
+    "clasificacionAudit": "orphan_regenerable",
+    "estadoAntes": "legacy_partial_orphan",
+    "estadoDespues": "pending_dry_run",
+    "runIdReproceso": null,
+    "runCommandProgram": "ZM2OJAB2",
+    "dryRunStatus": "dry_run_valid",
+    "dryRunExitCode": 0,
+    "writepayloadPath": "infra/neo4j/reports/e2e-20260625T223618Z-zm2ojab2-writepayload.json",
+    "qualifiedNameObserved": "ZMDTOPS",
+    "dclMemberObserved": "ZMGTOPS",
+    "dclPathObserved": "dcl/ZMGTOPS.dcl",
+    "declaredColumnCountObserved": 32,
+    "declaredColumnsObservedCount": 32
+  },
+  {
+    "tableName": "ZMDTOPT",
+    "dclMember": "ZMGTOPT",
+    "dclPath": "dcl/ZMGTOPT.dcl",
+    "qualifiedNameEsperado": "ZMDTOPT",
+    "programaCandidatoPrincipal": "ZM6RJ374",
+    "programasCandidatosSecundarios": [
+      "ZM6RY200"
+    ],
+    "sampleReferences": [
+      {
+        "program": "ZM6RJ374",
+        "sourceFile": "src/ZM6RJ374.cbl",
+        "line": 528
+      },
+      {
+        "program": "ZM6RY200",
+        "sourceFile": "src/ZM6RY200.cbl",
+        "line": 139
+      }
+    ],
+    "clasificacionAudit": "orphan_regenerable",
+    "estadoAntes": "legacy_partial_orphan",
+    "estadoDespues": "pending_dry_run",
+    "runIdReproceso": null,
+    "runCommandProgram": "ZM6RJ374",
+    "dryRunStatus": "dry_run_valid",
+    "dryRunExitCode": 0,
+    "writepayloadPath": "infra/neo4j/reports/e2e-20260625T223621Z-zm6rj374-writepayload.json",
+    "qualifiedNameObserved": "ZMDTOPT",
+    "dclMemberObserved": "ZMGTOPT",
+    "dclPathObserved": "dcl/ZMGTOPT.dcl",
+    "declaredColumnCountObserved": 37,
+    "declaredColumnsObservedCount": 37
+  },
+  {
+    "tableName": "ZMDTSEH",
+    "dclMember": "ZMGTSEH",
+    "dclPath": "dcl/ZMGTSEH.dcl",
+    "qualifiedNameEsperado": "ZMDTSEH",
+    "programaCandidatoPrincipal": "ZM4DJ202",
+    "programasCandidatosSecundarios": [
+      "ZM4DJ203"
+    ],
+    "sampleReferences": [
+      {
+        "program": "ZM4DJ202",
+        "sourceFile": "src/ZM4DJ202.cbl",
+        "line": 600
+      },
+      {
+        "program": "ZM4DJ203",
+        "sourceFile": "src/ZM4DJ203.cbl",
+        "line": 533
+      }
+    ],
+    "clasificacionAudit": "orphan_regenerable",
+    "estadoAntes": "legacy_partial_orphan",
+    "estadoDespues": "pending_dry_run",
+    "runIdReproceso": null,
+    "runCommandProgram": "ZM4DJ202",
+    "dryRunStatus": "dry_run_valid",
+    "dryRunExitCode": 0,
+    "writepayloadPath": "infra/neo4j/reports/e2e-20260625T223624Z-zm4dj202-writepayload.json",
+    "qualifiedNameObserved": "ZMDTSEH",
+    "dclMemberObserved": "ZMGTSEH",
+    "dclPathObserved": "dcl/ZMGTSEH.dcl",
+    "declaredColumnCountObserved": 9,
+    "declaredColumnsObservedCount": 9
+  }
+]

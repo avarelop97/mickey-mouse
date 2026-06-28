@@ -1,0 +1,64 @@
+{
+  "runId": "e2e-20260625T223858Z-zm4dg003-zm2ogj44-zm2og609-zm4dgf13-zm4dj340-zm2ilc68-zm2ilc91",
+  "programs": [
+    "ZM4DG003",
+    "ZM2OGJ44",
+    "ZM2OG609",
+    "ZM4DGF13",
+    "ZM4DJ340",
+    "ZM2ILC68",
+    "ZM2ILC91"
+  ],
+  "artifacts": {
+    "extraction": "infra/neo4j/reports/e2e-20260625T223858Z-zm4dg003-zm2ogj44-zm2og609-zm4dgf13-zm4dj340-zm2ilc68-zm2ilc91-extraction.json",
+    "writePayload": "infra/neo4j/reports/e2e-20260625T223858Z-zm4dg003-zm2ogj44-zm2og609-zm4dgf13-zm4dj340-zm2ilc68-zm2ilc91-writepayload.json",
+    "precheck": "infra/neo4j/reports/e2e-20260625T223858Z-zm4dg003-zm2ogj44-zm2og609-zm4dgf13-zm4dj340-zm2ilc68-zm2ilc91-precheck.json",
+    "cypher": "infra/neo4j/queries/ingest-e2e-20260625T223858Z-zm4dg003-zm2ogj44-zm2og609-zm4dgf13-zm4dj340-zm2ilc68-zm2ilc91.cypher"
+  },
+  "precheck": {
+    "findings": [],
+    "blockers": [],
+    "qualityGateResult": "pass"
+  },
+  "commitExecuted": true,
+  "inventory": {
+    "programNodes": 7,
+    "paragraphNodes": 249,
+    "copybookNodesSeenByRun": 88,
+    "dbTableNodesSeenByRun": 26,
+    "externalRoutineNodesSeenByRun": 0,
+    "includesCopybookRels": 185,
+    "hasParagraphRels": 249,
+    "callsRoutineRels": 0,
+    "usesCopybookRels": 296,
+    "implementedByRels": 296,
+    "dependsOnExternalRels": 0,
+    "readsTableRels": 28,
+    "updatesTableRels": 13
+  },
+  "postAudit": {
+    "missingMandatoryProperties": 0,
+    "invalidReviewStateMetadata": 0,
+    "invalidParagraphSummary": 0,
+    "missingCriticalRelationEvidence": 0,
+    "ontologyViolations": 0,
+    "deprecatedProgramUsesParamType": 7
+  },
+  "postAuditAfterRemediation": {
+    "missingMandatoryProperties": 0,
+    "invalidReviewStateMetadata": 0,
+    "invalidParagraphSummary": 0,
+    "missingCriticalRelationEvidence": 0,
+    "ontologyViolations": 0,
+    "deprecatedProgramUsesParamType": 7
+  },
+  "remediationApplied": [
+    "Enforced review metadata consistency for ingested scope"
+  ],
+  "integralBacklog": {
+    "invalidLabelsGlobal": 20,
+    "criticalRelWithoutEvidenceGlobal": 28,
+    "deprecatedProgramUsesParamTypeGlobal": 7
+  },
+  "decision": "BLOCKED"
+}

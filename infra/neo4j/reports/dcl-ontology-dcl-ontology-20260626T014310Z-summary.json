@@ -1,0 +1,17 @@
+{
+  "runId": "dcl-ontology-20260626T014310Z",
+  "mode": "full",
+  "totalDclFilesRequested": 30,
+  "parsedDclFiles": 30,
+  "skippedDclFiles": 0,
+  "payloadFile": "infra/neo4j/reports/dcl-ontology-dcl-ontology-20260626T014310Z-payload.json",
+  "nodes": 1414,
+  "relationships": 2706,
+  "skipped": [],
+  "equivalenceCheck": {
+    "corePaths": 30,
+    "libPaths": 30,
+    "colPaths": 647,
+    "mapPaths": 646
+  }
+}

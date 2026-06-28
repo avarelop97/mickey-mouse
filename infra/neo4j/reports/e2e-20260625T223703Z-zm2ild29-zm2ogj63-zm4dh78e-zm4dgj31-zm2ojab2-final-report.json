@@ -1,0 +1,62 @@
+{
+  "runId": "e2e-20260625T223703Z-zm2ild29-zm2ogj63-zm4dh78e-zm4dgj31-zm2ojab2",
+  "programs": [
+    "ZM2ILD29",
+    "ZM2OGJ63",
+    "ZM4DH78E",
+    "ZM4DGJ31",
+    "ZM2OJAB2"
+  ],
+  "artifacts": {
+    "extraction": "infra/neo4j/reports/e2e-20260625T223703Z-zm2ild29-zm2ogj63-zm4dh78e-zm4dgj31-zm2ojab2-extraction.json",
+    "writePayload": "infra/neo4j/reports/e2e-20260625T223703Z-zm2ild29-zm2ogj63-zm4dh78e-zm4dgj31-zm2ojab2-writepayload.json",
+    "precheck": "infra/neo4j/reports/e2e-20260625T223703Z-zm2ild29-zm2ogj63-zm4dh78e-zm4dgj31-zm2ojab2-precheck.json",
+    "cypher": "infra/neo4j/queries/ingest-e2e-20260625T223703Z-zm2ild29-zm2ogj63-zm4dh78e-zm4dgj31-zm2ojab2.cypher"
+  },
+  "precheck": {
+    "findings": [],
+    "blockers": [],
+    "qualityGateResult": "pass"
+  },
+  "commitExecuted": true,
+  "inventory": {
+    "programNodes": 5,
+    "paragraphNodes": 342,
+    "copybookNodesSeenByRun": 100,
+    "dbTableNodesSeenByRun": 27,
+    "externalRoutineNodesSeenByRun": 0,
+    "includesCopybookRels": 167,
+    "hasParagraphRels": 342,
+    "callsRoutineRels": 0,
+    "usesCopybookRels": 307,
+    "implementedByRels": 307,
+    "dependsOnExternalRels": 0,
+    "readsTableRels": 42,
+    "updatesTableRels": 10
+  },
+  "postAudit": {
+    "missingMandatoryProperties": 0,
+    "invalidReviewStateMetadata": 0,
+    "invalidParagraphSummary": 0,
+    "missingCriticalRelationEvidence": 0,
+    "ontologyViolations": 0,
+    "deprecatedProgramUsesParamType": 7
+  },
+  "postAuditAfterRemediation": {
+    "missingMandatoryProperties": 0,
+    "invalidReviewStateMetadata": 0,
+    "invalidParagraphSummary": 0,
+    "missingCriticalRelationEvidence": 0,
+    "ontologyViolations": 0,
+    "deprecatedProgramUsesParamType": 7
+  },
+  "remediationApplied": [
+    "Enforced review metadata consistency for ingested scope"
+  ],
+  "integralBacklog": {
+    "invalidLabelsGlobal": 20,
+    "criticalRelWithoutEvidenceGlobal": 28,
+    "deprecatedProgramUsesParamTypeGlobal": 7
+  },
+  "decision": "BLOCKED"
+}
