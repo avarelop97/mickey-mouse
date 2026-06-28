@@ -15,6 +15,7 @@ from datetime import datetime, timezone
 REPO_ROOT = pathlib.Path(__file__).resolve().parents[3]
 SRC_DIR = REPO_ROOT / "src"
 CPY_DIR = REPO_ROOT / "cpy"
+DCL_DIR = REPO_ROOT / "dcl"
 REPORT_DIR = REPO_ROOT / "infra" / "neo4j" / "reports"
 QUERY_DIR = REPO_ROOT / "infra" / "neo4j" / "queries"
 APPROVED_PATTERN_RULES_PATH = REPO_ROOT / "infra" / "neo4j" / "approved-perform-target-patterns.json"
@@ -25,9 +26,18 @@ NEO4J_DATABASE = os.environ.get("NEO4J_DATABASE", "neo4j")
 
 ALLOWED_LABELS = {
     "Program",
+    "Functionality",
+    "SubFunctionality",
     "Paragraph",
     "Copybook",
+    "ArtifactChange",
+    "DB2System",
+    "DB2Schema",
+    "DclgenLibrary",
     "DBTable",
+    "DclgenArtifact",
+    "TableColumn",
+    "CobolHostField",
     "ParamType",
     "ExternalRoutine",
     "OutputFile",
@@ -43,9 +53,11 @@ CRITICAL_REL_TYPES = {
     "READS_TABLE",
     "UPDATES_TABLE",
     "CALLS_ROUTINE",
-    "USES_PARAM_TYPE",
     "WRITES_FILE",
     "IMPLEMENTED_BY",
+    "IMPLEMENTS_FUNCTIONALITY",
+    "HAS_SUBFUNCTIONALITY",
+    "REALIZED_BY",
 }
 
 INVALID_SUMMARY_TOKENS = [
@@ -69,11 +81,17 @@ DATA_ITEM_DEF_RE = re.compile(r"^\s*\d{1,2}\s+([A-Z][A-Z0-9-]{1,70})\b", re.IGNO
 EXEC_SQL_START_RE = re.compile(r"\bEXEC\s+SQL\b", re.IGNORECASE)
 EXEC_SQL_END_RE = re.compile(r"\bEND-EXEC\b", re.IGNORECASE)
 SQL_INCLUDE_RE = re.compile(r"\bINCLUDE\s+([A-Z0-9-]+)\b", re.IGNORECASE)
+DCL_DECLARE_RE = re.compile(r"^\s*EXEC\s+SQL\s+DECLARE\s+([A-Z0-9_.-]+)\s+TABLE\b", re.IGNORECASE)
+DCL_HOST_STRUCTURE_RE = re.compile(r"^\s*01\s+(DCL[A-Z0-9-]+)\.\s*$", re.IGNORECASE)
+DCLGEN_TABLE_COMMENT_RE = re.compile(r"^\s*\*\s*DCLGEN\s+TABLE\(([^)]+)\)", re.IGNORECASE)
+DCL_HOST_FIELD_RE = re.compile(r"^\s*10\s+([A-Z][A-Z0-9_-]*)\s+PIC\s+(.+?)\.\s*$", re.IGNORECASE)
+DCL_HOST_GROUP_RE = re.compile(r"^\s*10\s+([A-Z][A-Z0-9_-]*)\s*\.\s*$", re.IGNORECASE)
 PARAGRAPH_EXCLUDE = {"END-IF", "END-EXEC", "END-PERFORM", "EXIT", "ELSE", "WHEN", "END-EVALUATE"}
 MAX_COPYBOOK_RECURSION_DEPTH = 12
 
 _APPROVED_PARAGRAPH_PATTERNS: list[re.Pattern[str]] | None = None
 _COPYBOOK_TRANSITIVE_PARAGRAPH_CACHE: dict[str, set[str]] = {}
+_DCL_METADATA_CACHE: dict[str, dict | None] = {}
 
 
 def load_approved_paragraph_patterns() -> list[re.Pattern[str]]:
@@ -257,6 +275,284 @@ def extract_sql_tables(sql_block: str) -> tuple[set[str], set[str]]:
         writes.add(token)
 
     return reads, writes
+
+
+def parse_dcl_artifact(member_name: str) -> dict | None:
+    normalized_name = member_name.upper().strip()
+    if normalized_name in _DCL_METADATA_CACHE:
+        return _DCL_METADATA_CACHE[normalized_name]
+
+    dcl_path = DCL_DIR / f"{normalized_name}.dcl"
+    if not dcl_path.exists():
+        _DCL_METADATA_CACHE[normalized_name] = None
+        return None
+
+    def extract_parenthesized_value(text: str, marker: str) -> str | None:
+        start = text.upper().find(marker.upper())
+        if start < 0:
+            return None
+        value_start = start + len(marker)
+        depth = 1
+        value_chars: list[str] = []
+        for char in text[value_start:]:
+            if char == '(':
+                depth += 1
+                value_chars.append(char)
+                continue
+            if char == ')':
+                depth -= 1
+                if depth == 0:
+                    return ''.join(value_chars).strip()
+                value_chars.append(char)
+                continue
+            value_chars.append(char)
+        return None
+
+    def normalize_identifier(name: str) -> str:
+        # DCL DB2 columns often use '_' while COBOL host fields use '-'.
+        return name.upper().replace("-", "_").strip()
+
+    comment_qualified_name: str | None = None
+    declare_table_token: str | None = None
+    qualified_name: str | None = None
+    table_name: str | None = None
+    schema_name: str | None = None
+    library_spec: str | None = None
+    library_dataset: str | None = None
+    library_member: str | None = None
+    host_structure_name: str | None = None
+    db2_columns: list[dict] = []
+    host_fields: list[dict] = []
+    column_names: list[str] = []
+    column_definitions: list[str] = []
+    in_declare_block = False
+
+    for raw_line in dcl_path.read_text(encoding="utf-8", errors="ignore").splitlines():
+        line = raw_line.rstrip()
+        upper_line = line.upper()
+
+        table_comment_match = DCLGEN_TABLE_COMMENT_RE.match(line)
+        if comment_qualified_name is None and "DCLGEN TABLE(" in upper_line:
+            table_value = extract_parenthesized_value(line, "DCLGEN TABLE(")
+            if table_value:
+                comment_qualified_name = table_value.upper()
+
+        if library_spec is None and "LIBRARY(" in upper_line:
+            lib_value = extract_parenthesized_value(line, "LIBRARY(")
+            if lib_value:
+                library_spec = lib_value.upper()
+            dataset_match = re.match(r"^(.+)\(([^()]+)\)$", library_spec)
+            if dataset_match:
+                library_dataset = dataset_match.group(1).strip()
+                library_member = dataset_match.group(2).strip()
+            else:
+                library_dataset = library_spec
+                library_member = normalized_name
+
+        declare_match = DCL_DECLARE_RE.match(line)
+        if declare_match:
+            declare_table_token = declare_match.group(1).upper()
+            in_declare_block = True
+            continue
+
+        if host_structure_name is None:
+            host_match = DCL_HOST_STRUCTURE_RE.match(line)
+            if host_match:
+                host_structure_name = host_match.group(1).upper()
+
+        host_field_match = DCL_HOST_FIELD_RE.match(line)
+        if host_field_match:
+            field_name = host_field_match.group(1).upper()
+            pic_clause = re.sub(r"\s+", " ", host_field_match.group(2).strip()).upper()
+            host_fields.append(
+                {
+                    "fieldName": field_name,
+                    "picClause": pic_clause,
+                    "position": len(host_fields) + 1,
+                }
+            )
+        else:
+            host_group_match = DCL_HOST_GROUP_RE.match(line)
+            if host_group_match:
+                field_name = host_group_match.group(1).upper()
+                host_fields.append(
+                    {
+                        "fieldName": field_name,
+                        "picClause": "GROUP-ITEM",
+                        "position": len(host_fields) + 1,
+                    }
+                )
+
+        if not in_declare_block:
+            continue
+
+        stripped = line.strip()
+        if not stripped or stripped.startswith("*"):
+            continue
+        if stripped.startswith("("):
+            stripped = stripped[1:].strip()
+            if not stripped:
+                continue
+        if stripped == ")" or upper_line.startswith(") END-EXEC"):
+            in_declare_block = False
+            continue
+
+        stripped = stripped.rstrip(",")
+        column_match = re.match(r"^([A-Z][A-Z0-9_]*)\s+(.+)$", stripped, re.IGNORECASE)
+        if not column_match:
+            continue
+
+        column_name = column_match.group(1).upper()
+        column_definition = re.sub(r"\s+", " ", column_match.group(2).strip()).upper()
+        is_nullable = "NOT NULL" not in column_definition
+        column_names.append(column_name)
+        column_definitions.append(f"{column_name} {column_definition}")
+        db2_columns.append(
+            {
+                "columnName": column_name,
+                "sqlDefinition": column_definition,
+                "nullable": is_nullable,
+                "position": len(db2_columns) + 1,
+            }
+        )
+
+    if declare_table_token:
+        if "." in declare_table_token:
+            qualified_name = declare_table_token
+        elif comment_qualified_name and comment_qualified_name.endswith("." + declare_table_token):
+            qualified_name = comment_qualified_name
+        else:
+            qualified_name = declare_table_token
+
+    if qualified_name:
+        table_name = qualified_name.split(".")[-1]
+        schema_name = qualified_name.rsplit(".", 1)[0] if "." in qualified_name else None
+
+    host_field_map = {normalize_identifier(field["fieldName"]): field for field in host_fields}
+    for column in db2_columns:
+        host_field = host_field_map.get(normalize_identifier(column["columnName"]))
+        if host_field:
+            column["hostFieldName"] = host_field["fieldName"]
+            column["hostPicClause"] = host_field["picClause"]
+
+    if not table_name or not qualified_name:
+        _DCL_METADATA_CACHE[normalized_name] = None
+        return None
+
+    metadata = {
+        "memberName": normalized_name,
+        "tableName": table_name,
+        "qualifiedName": qualified_name,
+        "schemaName": schema_name,
+        "librarySpec": library_spec,
+        "libraryDataset": library_dataset,
+        "libraryMember": library_member,
+        "hostStructureName": host_structure_name,
+        "declaredColumnCount": len(column_names),
+        "declaredColumns": column_names,
+        "declaredColumnDefinitions": column_definitions,
+        "db2Columns": db2_columns,
+        "cobolHostFields": host_fields,
+        "dclPath": f"dcl/{normalized_name}.dcl",
+    }
+    _DCL_METADATA_CACHE[normalized_name] = metadata
+    return metadata
+
+
+def extract_program_metadata(program: str, normalized_lines: list[tuple[int, str]]) -> dict:
+    """Extract metadata: objective, description, system from COBOL IDENTIFICATION division."""
+    objective: str | None = None
+    description: str | None = None
+    system: str | None = None
+    author: str | None = None
+
+    # Parse IDENTIFICATION DIVISION
+    in_identification = False
+    objective_lines: list[str] = []
+    installation_lines: list[str] = []
+    author_lines: list[str] = []
+
+    for line_no, logical in normalized_lines:
+        up = logical.upper()
+
+        # Detect IDENTIFICATION DIVISION
+        if "IDENTIFICATION DIVISION" in up:
+            in_identification = True
+            continue
+
+        # Exit IDENTIFICATION when we hit another DIVISION
+        if in_identification and any(div in up for div in ["ENVIRONMENT DIVISION", "DATA DIVISION", "PROCEDURE DIVISION"]):
+            in_identification = False
+            continue
+
+        if not in_identification:
+            continue
+
+        # Collect lines under OBJECTIVE / OBJETIVO
+        if "OBJECTIVE" in up or "OBJETIVO" in up:
+            # Extract everything after "OBJETIVO :" or "OBJECTIVE :"
+            for match in re.finditer(r"(?:OBJECTIVE|OBJETIVO)\s*:\s*(.*)", logical, re.IGNORECASE):
+                text = match.group(1).strip().rstrip("*").strip()
+                if text:
+                    objective_lines.append(text)
+            continue
+
+        if objective_lines and logical.startswith("*"):
+            if any(k in logical.upper() for k in ["INSTALLATION", "AUTHOR", "DATE-WRITTEN"]):
+                objective_lines.append(logical.replace("*", " ").strip())
+            else:
+                # Continuation of objective
+                text = logical[1:].strip().rstrip("*").strip()
+                if text and text != "-" and not text.startswith("-"):
+                    objective_lines.append(text)
+
+        # Detect INSTALLATION (system) - it's a keyword line followed by content
+        if re.search(r"^\s*INSTALLATION\s*\.\s*$", logical, re.IGNORECASE):
+            installation_lines = []  # Reset when we find the keyword
+            continue
+
+        # After finding INSTALLATION, capture following lines until next keyword
+        if re.search(r"^\s*[A-Z-]+\s*\.\s*$", logical, re.IGNORECASE) and not re.search(r"INSTALLATION", logical, re.IGNORECASE):
+            if installation_lines:
+                # We hit the next keyword, stop collecting INSTALLATION
+                pass
+        elif installation_lines is not None and (logical.strip() and not logical.startswith("*")):
+            text = logical.strip()
+            if text and any(k in text.upper() for k in ["AUTHOR", "DATE-WRITTEN"]):
+                pass  # Don't capture next keywords
+            elif text:
+                installation_lines.append(text)
+
+    # Build metadata - clean up captured text
+    objective_raw = " ".join(objective_lines).strip() if objective_lines else None
+    objective = None
+    if objective_raw:
+        # Clean up multiple spaces and comment artifacts
+        objective = re.sub(r'\s+', ' ', objective_raw)
+        objective = objective.replace("* ", "").replace("*", "").strip()
+        # Remove trailing dates that might have been captured
+        objective = re.sub(r'\s+\d+/[A-Z]{3}/\d{4}.*$', '', objective, flags=re.IGNORECASE)
+
+    installation_text = " ".join(installation_lines).strip() if installation_lines else None
+    system = None
+    if installation_text:
+        # Clean up the installation line (remove dates, extra spaces)
+        system = re.sub(r'\s+', ' ', installation_text).strip()
+        # Remove dates appended from DATE-WRITTEN
+        system = re.sub(r'\s+\d+/[A-Z]{3}/\d{4}.*$', '', system, flags=re.IGNORECASE).strip()
+        # Also remove standalone dates
+        system = re.sub(r'\s+\d{2}/\d{2}/\d{4}.*$', '', system, flags=re.IGNORECASE).strip()
+        
+        description = f"Programa COBOL que {objective.lower() if objective else 'ejecuta procesos'}. Pertenece a: {system}."
+    else:
+        description = f"Programa COBOL que {objective.lower() if objective else 'ejecuta procesos'}."
+
+    return {
+        "objective": objective,
+        "description": description,
+        "system": system,
+        "author": " ".join(author_lines).strip() if author_lines else None,
+    }
 
 
 def infer_summary(program: str, paragraph: str) -> str:
@@ -536,6 +832,13 @@ def parse_program(program: str) -> dict:
         for t in writes:
             update_tables[t].extend(evidence_lines)
 
+    dcl_tables: dict[str, dict] = {}
+    for copybook_name in sorted(copybooks.keys()):
+        dcl_metadata = parse_dcl_artifact(copybook_name)
+        if not dcl_metadata:
+            continue
+        dcl_tables[dcl_metadata["tableName"]] = dcl_metadata
+
     extracted_paragraphs = []
     for idx, p in enumerate(paragraphs, start=1):
         extracted_paragraphs.append(
@@ -568,13 +871,18 @@ def parse_program(program: str) -> dict:
         for copybook_name, dep_lines in sorted(copybook_map.items())
     ]
 
+    # Extract program metadata (objective, description, system)
+    metadata = extract_program_metadata(program, normalized)
+
     return {
         "program": program,
         "sourceFile": f"src/{program}.cbl",
         "procedureLine": procedure_line,
         "parseStartLine": parse_start_line,
         "parseStartReason": parse_start_reason,
+        "metadata": metadata,
         "copybooks": [{"name": k, "evidenceLines": sorted(set(v))} for k, v in sorted(copybooks.items())],
+        "dclTables": [dcl_tables[name] for name in sorted(dcl_tables.keys())],
         "calls": [{"name": k, "evidenceLines": sorted(set(v))} for k, v in sorted(calls.items())],
         "readTables": [{"name": k, "evidenceLines": sorted(set(v))} for k, v in sorted(read_tables.items())],
         "updateTables": [{"name": k, "evidenceLines": sorted(set(v))} for k, v in sorted(update_tables.items())],
@@ -864,9 +1172,291 @@ def build_payload(extractions: list[dict], run_id: str) -> dict:
             "properties": props,
         }
 
+    def build_dbtable_properties(table_name: str, evidence_lines: list[int], source_file: str, dcl_metadata: dict | None) -> dict:
+        properties = {
+            "name": table_name,
+            "ingestion": "auto",
+            "layer": "data-access",
+            "nodeType": "physical-table",
+            "viewTag": "data-access",
+            "reviewStatus": "pending_human_review",
+            "reviewRequired": True,
+            "reviewSource": "auto-ingestion",
+            "sourceFile": source_file,
+            "evidenceFile": source_file,
+            "evidenceLines": evidence_lines,
+            "runId": run_id,
+        }
+        if dcl_metadata:
+            properties.update(
+                {
+                    "qualifiedName": dcl_metadata["qualifiedName"],
+                    "schemaName": dcl_metadata["schemaName"],
+                    "dclMember": dcl_metadata["memberName"],
+                    "dclPath": dcl_metadata["dclPath"],
+                    "dclHostStructure": dcl_metadata["hostStructureName"],
+                    "declaredColumnCount": dcl_metadata["declaredColumnCount"],
+                    "declaredColumns": dcl_metadata["declaredColumns"],
+                    "declaredColumnDefinitions": dcl_metadata["declaredColumnDefinitions"],
+                }
+            )
+        return properties
+
+    def base_review_properties() -> dict:
+        return {
+            "ingestion": "auto",
+            "reviewStatus": "pending_human_review",
+            "reviewRequired": True,
+            "reviewSource": "auto-ingestion",
+            "runId": run_id,
+        }
+
     for ext in extractions:
         program = ext["program"]
         source_file = ext["sourceFile"]
+        metadata = ext.get("metadata", {})
+        functionality_name = f"FUNCTIONALITY_{program}"
+        dcl_tables = {item["tableName"]: item for item in ext.get("dclTables", [])}
+        copybook_evidence = {c["name"]: c["evidenceLines"] for c in ext["copybooks"]}
+
+        add_node(
+            "DB2System",
+            ("DB2",),
+            {
+                "name": "DB2",
+                "layer": "data-access",
+                "nodeType": "db2-system",
+                "viewTag": "db2",
+                **base_review_properties(),
+                "sourceFile": source_file,
+            },
+        )
+
+        for dcl in dcl_tables.values():
+            schema_name = dcl.get("schemaName")
+            table_name = dcl["tableName"]
+            include_lines = copybook_evidence.get(dcl["memberName"], [1])
+
+            if schema_name:
+                add_node(
+                    "DB2Schema",
+                    (schema_name,),
+                    {
+                        "name": schema_name,
+                        "layer": "data-access",
+                        "nodeType": "db2-schema",
+                        "viewTag": "db2",
+                        **base_review_properties(),
+                        "sourceFile": source_file,
+                    },
+                )
+                add_rel(
+                    "HAS_SCHEMA",
+                    ("DB2System", ("DB2",)),
+                    ("DB2Schema", (schema_name,)),
+                    {
+                        "runId": run_id,
+                        "reviewStatus": "pending_human_review",
+                        "reviewSource": "auto-ingestion",
+                        "reviewRequired": True,
+                        "evidenceFile": dcl["dclPath"],
+                        "evidenceLines": [1],
+                    },
+                )
+
+            add_node(
+                "DclgenLibrary",
+                (dcl.get("libraryDataset") or "UNSPECIFIED_DCL_LIBRARY",),
+                {
+                    "name": dcl.get("libraryDataset") or "UNSPECIFIED_DCL_LIBRARY",
+                    "librarySpec": dcl.get("librarySpec"),
+                    "layer": "data-access",
+                    "nodeType": "dclgen-library",
+                    "viewTag": "db2",
+                    **base_review_properties(),
+                    "sourceFile": source_file,
+                },
+            )
+            add_rel(
+                "HAS_LIBRARY",
+                ("DB2System", ("DB2",)),
+                ("DclgenLibrary", ((dcl.get("libraryDataset") or "UNSPECIFIED_DCL_LIBRARY"),)),
+                {
+                    "runId": run_id,
+                    "reviewStatus": "pending_human_review",
+                    "reviewSource": "auto-ingestion",
+                    "reviewRequired": True,
+                    "evidenceFile": dcl["dclPath"],
+                    "evidenceLines": [1],
+                },
+            )
+
+            add_node(
+                "DclgenArtifact",
+                (dcl["memberName"],),
+                {
+                    "name": dcl["memberName"],
+                    "qualifiedName": dcl["qualifiedName"],
+                    "schemaName": dcl.get("schemaName"),
+                    "libraryDataset": dcl.get("libraryDataset"),
+                    "libraryMember": dcl.get("libraryMember") or dcl["memberName"],
+                    "hostStructureName": dcl.get("hostStructureName"),
+                    "declaredColumnCount": dcl.get("declaredColumnCount"),
+                    "layer": "data-access",
+                    "nodeType": "dclgen-artifact",
+                    "viewTag": "db2",
+                    **base_review_properties(),
+                    "sourceFile": dcl["dclPath"],
+                    "evidenceFile": dcl["dclPath"],
+                    "evidenceLines": [1],
+                },
+            )
+
+            add_rel(
+                "CONTAINS_DCLGEN",
+                ("DclgenLibrary", ((dcl.get("libraryDataset") or "UNSPECIFIED_DCL_LIBRARY"),)),
+                ("DclgenArtifact", (dcl["memberName"],)),
+                {
+                    "runId": run_id,
+                    "reviewStatus": "pending_human_review",
+                    "reviewSource": "auto-ingestion",
+                    "reviewRequired": True,
+                    "evidenceFile": dcl["dclPath"],
+                    "evidenceLines": [1],
+                },
+            )
+
+            add_node(
+                "DBTable",
+                (table_name,),
+                build_dbtable_properties(table_name, include_lines, source_file, dcl),
+            )
+
+            add_rel(
+                "DESCRIBES_TABLE",
+                ("DclgenArtifact", (dcl["memberName"],)),
+                ("DBTable", (table_name,)),
+                {
+                    "runId": run_id,
+                    "reviewStatus": "pending_human_review",
+                    "reviewSource": "auto-ingestion",
+                    "reviewRequired": True,
+                    "evidenceFile": dcl["dclPath"],
+                    "evidenceLines": [1],
+                },
+            )
+
+            if schema_name:
+                add_rel(
+                    "HAS_TABLE",
+                    ("DB2Schema", (schema_name,)),
+                    ("DBTable", (table_name,)),
+                    {
+                        "runId": run_id,
+                        "reviewStatus": "pending_human_review",
+                        "reviewSource": "auto-ingestion",
+                        "reviewRequired": True,
+                        "evidenceFile": dcl["dclPath"],
+                        "evidenceLines": [1],
+                    },
+                )
+
+            for column in dcl.get("db2Columns", []):
+                column_node_name = f"{table_name}.{column['columnName']}"
+                add_node(
+                    "TableColumn",
+                    (column_node_name,),
+                    {
+                        "name": column_node_name,
+                        "tableName": table_name,
+                        "columnName": column["columnName"],
+                        "sqlDefinition": column["sqlDefinition"],
+                        "nullable": column["nullable"],
+                        "position": column["position"],
+                        "layer": "data-access",
+                        "nodeType": "db2-column",
+                        "viewTag": "db2",
+                        **base_review_properties(),
+                        "sourceFile": dcl["dclPath"],
+                        "evidenceFile": dcl["dclPath"],
+                        "evidenceLines": [1],
+                    },
+                )
+                add_rel(
+                    "HAS_COLUMN",
+                    ("DBTable", (table_name,)),
+                    ("TableColumn", (column_node_name,)),
+                    {
+                        "runId": run_id,
+                        "reviewStatus": "pending_human_review",
+                        "reviewSource": "auto-ingestion",
+                        "reviewRequired": True,
+                        "evidenceFile": dcl["dclPath"],
+                        "evidenceLines": [1],
+                    },
+                )
+                add_rel(
+                    "DECLARES_COLUMN",
+                    ("DclgenArtifact", (dcl["memberName"],)),
+                    ("TableColumn", (column_node_name,)),
+                    {
+                        "runId": run_id,
+                        "reviewStatus": "pending_human_review",
+                        "reviewSource": "auto-ingestion",
+                        "reviewRequired": True,
+                        "evidenceFile": dcl["dclPath"],
+                        "evidenceLines": [1],
+                    },
+                )
+
+                host_field_name = column.get("hostFieldName")
+                host_pic = column.get("hostPicClause")
+                if host_field_name and host_pic:
+                    host_node_name = f"{dcl['memberName']}.{host_field_name}"
+                    add_node(
+                        "CobolHostField",
+                        (host_node_name,),
+                        {
+                            "name": host_node_name,
+                            "memberName": dcl["memberName"],
+                            "fieldName": host_field_name,
+                            "picClause": host_pic,
+                            "hostStructureName": dcl.get("hostStructureName"),
+                            "layer": "data-access",
+                            "nodeType": "cobol-host-field",
+                            "viewTag": "db2",
+                            **base_review_properties(),
+                            "sourceFile": dcl["dclPath"],
+                            "evidenceFile": dcl["dclPath"],
+                            "evidenceLines": [1],
+                        },
+                    )
+                    add_rel(
+                        "DECLARES_HOST_FIELD",
+                        ("DclgenArtifact", (dcl["memberName"],)),
+                        ("CobolHostField", (host_node_name,)),
+                        {
+                            "runId": run_id,
+                            "reviewStatus": "pending_human_review",
+                            "reviewSource": "auto-ingestion",
+                            "reviewRequired": True,
+                            "evidenceFile": dcl["dclPath"],
+                            "evidenceLines": [1],
+                        },
+                    )
+                    add_rel(
+                        "TRANSLATED_TO",
+                        ("TableColumn", (column_node_name,)),
+                        ("CobolHostField", (host_node_name,)),
+                        {
+                            "runId": run_id,
+                            "reviewStatus": "pending_human_review",
+                            "reviewSource": "auto-ingestion",
+                            "reviewRequired": True,
+                            "evidenceFile": dcl["dclPath"],
+                            "evidenceLines": [1],
+                        },
+                    )
 
         add_node(
             "Program",
@@ -876,7 +1466,30 @@ def build_payload(extractions: list[dict], run_id: str) -> dict:
                 "ingestion": "auto",
                 "layer": "program",
                 "nodeType": "program",
-                "viewTag": "program",
+                "viewTag": "cobol-program",
+                "reviewStatus": "pending_human_review",
+                "reviewRequired": True,
+                "reviewSource": "auto-ingestion",
+                "sourceFile": source_file,
+                "objective": metadata.get("objective"),
+                "description": metadata.get("description"),
+                "system": metadata.get("system"),
+                "runId": run_id,
+            },
+        )
+
+        add_node(
+            "Functionality",
+            (functionality_name,),
+            {
+                "name": functionality_name,
+                "objective": metadata.get("objective") or f"Capacidad funcional principal de {program}.",
+                "description": metadata.get("description") or f"Nodo funcional paraguas para {program}.",
+                "businessDomain": "pending_human_review",
+                "ingestion": "auto",
+                "layer": "functional",
+                "nodeType": "business-function",
+                "viewTag": "functional",
                 "reviewStatus": "pending_human_review",
                 "reviewRequired": True,
                 "reviewSource": "auto-ingestion",
@@ -884,8 +1497,62 @@ def build_payload(extractions: list[dict], run_id: str) -> dict:
                 "runId": run_id,
             },
         )
+        add_rel(
+            "IMPLEMENTS_FUNCTIONALITY",
+            ("Program", (program,)),
+            ("Functionality", (functionality_name,)),
+            {
+                "runId": run_id,
+                "reviewStatus": "pending_human_review",
+                "reviewSource": "auto-ingestion",
+                "reviewRequired": True,
+                "evidenceFile": source_file,
+                "evidenceLines": [1],
+            },
+        )
+
+        phase_to_subfunction: dict[str, str] = {}
+        for p in ext["paragraphs"]:
+            phase = (p.get("executionPhase") or "PROCESSING").upper()
+            if phase not in phase_to_subfunction:
+                sub_name = f"{program}_{phase}"
+                phase_to_subfunction[phase] = sub_name
+                add_node(
+                    "SubFunctionality",
+                    (functionality_name, sub_name),
+                    {
+                        "functionalityName": functionality_name,
+                        "name": sub_name,
+                        "description": f"Sub-funcionalidad de {program} para fase {phase}.",
+                        "ingestion": "auto",
+                        "layer": "functional",
+                        "nodeType": "sub-business-function",
+                        "viewTag": "functional",
+                        "reviewStatus": "pending_human_review",
+                        "reviewRequired": True,
+                        "reviewSource": "auto-ingestion",
+                        "sourceFile": source_file,
+                        "runId": run_id,
+                    },
+                )
+                add_rel(
+                    "HAS_SUBFUNCTIONALITY",
+                    ("Functionality", (functionality_name,)),
+                    ("SubFunctionality", (functionality_name, sub_name)),
+                    {
+                        "runId": run_id,
+                        "reviewStatus": "pending_human_review",
+                        "reviewSource": "auto-ingestion",
+                        "reviewRequired": True,
+                        "evidenceFile": source_file,
+                        "evidenceLines": [1],
+                    },
+                )
 
         for p in ext["paragraphs"]:
+            phase = (p.get("executionPhase") or "PROCESSING").upper()
+            sub_name = phase_to_subfunction[phase]
+
             add_node(
                 "Paragraph",
                 (program, p["name"]),
@@ -992,20 +1659,7 @@ def build_payload(extractions: list[dict], run_id: str) -> dict:
             add_node(
                 "DBTable",
                 (t["name"],),
-                {
-                    "name": t["name"],
-                    "ingestion": "auto",
-                    "layer": "data-access",
-                    "nodeType": "physical-table",
-                    "viewTag": "data-access",
-                    "reviewStatus": "pending_human_review",
-                    "reviewRequired": True,
-                    "reviewSource": "auto-ingestion",
-                    "sourceFile": source_file,
-                    "evidenceFile": source_file,
-                    "evidenceLines": t["evidenceLines"],
-                    "runId": run_id,
-                },
+                build_dbtable_properties(t["name"], t["evidenceLines"], source_file, dcl_tables.get(t["name"])),
             )
             add_rel(
                 "READS_TABLE",
@@ -1025,20 +1679,7 @@ def build_payload(extractions: list[dict], run_id: str) -> dict:
             add_node(
                 "DBTable",
                 (t["name"],),
-                {
-                    "name": t["name"],
-                    "ingestion": "auto",
-                    "layer": "data-access",
-                    "nodeType": "physical-table",
-                    "viewTag": "data-access",
-                    "reviewStatus": "pending_human_review",
-                    "reviewRequired": True,
-                    "reviewSource": "auto-ingestion",
-                    "sourceFile": source_file,
-                    "evidenceFile": source_file,
-                    "evidenceLines": t["evidenceLines"],
-                    "runId": run_id,
-                },
+                build_dbtable_properties(t["name"], t["evidenceLines"], source_file, dcl_tables.get(t["name"])),
             )
             add_rel(
                 "UPDATES_TABLE",
@@ -1068,6 +1709,20 @@ def build_payload(extractions: list[dict], run_id: str) -> dict:
                     "evidenceLines": dep["evidenceLines"],
                 },
             )
+            add_rel(
+                "REALIZED_BY",
+                ("SubFunctionality", (functionality_name, sub_name)),
+                ("Paragraph", (program, p["name"])),
+                {
+                    "runId": run_id,
+                    "reviewStatus": "pending_human_review",
+                    "reviewSource": "auto-ingestion",
+                    "reviewRequired": True,
+                    "evidenceFile": source_file,
+                    "evidenceLines": p["evidenceLines"],
+                },
+            )
+
             add_rel(
                 "IMPLEMENTED_BY",
                 ("Paragraph", (program, dep["paragraph"])),
@@ -1134,6 +1789,8 @@ def key_map_for_node(node_ref: tuple) -> tuple[str, dict]:
     label, key = node_ref
     if label == "Paragraph":
         return label, {"programName": key[0], "name": key[1]}
+    if label == "SubFunctionality":
+        return label, {"functionalityName": key[0], "name": key[1]}
     return label, {"name": key[0]}
 
 
@@ -1150,6 +1807,8 @@ def build_cypher(payload: dict) -> str:
         key = node["key"]
         if label == "Paragraph":
             merge_key = {"programName": key[0], "name": key[1]}
+        elif label == "SubFunctionality":
+            merge_key = {"functionalityName": key[0], "name": key[1]}
         else:
             merge_key = {"name": key[0]}
         lines.append(f"MERGE (n:{label} {cypher_value(merge_key)})")
@@ -1205,9 +1864,9 @@ def post_audit(run_id: str, programs: list[str]) -> dict:
     missing_mandatory = count_query(
         "WITH " + program_list + " AS progs "
         "MATCH (n) "
-        "WHERE ((n:Program AND n.name IN progs) OR (n:Paragraph AND n.programName IN progs) OR (n:Copybook AND n.runId = '" + run_id + "') OR (n:DBTable AND n.runId = '" + run_id + "') OR (n:ExternalRoutine AND n.runId = '" + run_id + "')) "
+        "WHERE ((n:Program AND n.name IN progs) OR (n:Functionality AND n.runId = '" + run_id + "') OR (n:SubFunctionality AND n.runId = '" + run_id + "') OR (n:Paragraph AND n.programName IN progs) OR (n:Copybook AND n.runId = '" + run_id + "') OR (n:DBTable AND n.runId = '" + run_id + "') OR (n:ExternalRoutine AND n.runId = '" + run_id + "')) "
         "WITH n, ['ingestion','layer','nodeType','viewTag','reviewStatus','reviewRequired','reviewSource'] AS common "
-        "WITH n, common + CASE WHEN n:Program THEN ['name'] WHEN n:Paragraph THEN ['programName','name','summary'] ELSE ['name'] END AS fields "
+        "WITH n, common + CASE WHEN n:Program THEN ['name'] WHEN n:Functionality THEN ['name'] WHEN n:SubFunctionality THEN ['functionalityName','name'] WHEN n:Paragraph THEN ['programName','name','summary'] ELSE ['name'] END AS fields "
         "WITH [f IN fields WHERE n[f] IS NULL OR n[f]=[] OR trim(toString(n[f]))=''] AS miss "
         "RETURN count(CASE WHEN size(miss) > 0 THEN 1 END) AS c;"
     )
@@ -1232,17 +1891,21 @@ def post_audit(run_id: str, programs: list[str]) -> dict:
     missing_rel_evidence = count_query(
         "WITH " + program_list + " AS progs "
         "MATCH (a)-[r]->() "
-        "WHERE ((a:Program AND a.name IN progs) OR (a:Paragraph AND a.programName IN progs)) "
-        "AND type(r) IN ['INCLUDES_COPYBOOK','READS_TABLE','UPDATES_TABLE','CALLS_ROUTINE','USES_COPYBOOK','READS_DATA','UPDATES_DATA','DERIVES_FROM','DEPENDS_ON_EXTERNAL','USES_PARAM_TYPE','WRITES_FILE','IMPLEMENTED_BY'] "
+        "WHERE ((a:Program AND a.name IN progs) OR (a:Functionality AND a.runId = '" + run_id + "') OR (a:SubFunctionality AND a.runId = '" + run_id + "') OR (a:Paragraph AND a.programName IN progs)) "
+        "AND type(r) IN ['INCLUDES_COPYBOOK','READS_TABLE','UPDATES_TABLE','CALLS_ROUTINE','USES_COPYBOOK','READS_DATA','UPDATES_DATA','DERIVES_FROM','DEPENDS_ON_EXTERNAL','WRITES_FILE','IMPLEMENTED_BY','IMPLEMENTS_FUNCTIONALITY','HAS_SUBFUNCTIONALITY','REALIZED_BY'] "
         "AND (r.evidenceFile IS NULL OR trim(toString(r.evidenceFile))='' OR r.evidenceLines IS NULL OR size(r.evidenceLines)=0) "
         "RETURN count(*) AS c;"
+    )
+
+    deprecated_program_paramtype = count_query(
+        "MATCH (:Program)-[r:USES_PARAM_TYPE]->(:ParamType) RETURN count(r) AS c;"
     )
 
     ontology_violations = count_query(
         "WITH " + program_list + " AS progs "
         "MATCH (n) WHERE (n:Program AND n.name IN progs) OR (n:Paragraph AND n.programName IN progs) OR n.runId = '" + run_id + "' "
         "WITH n, labels(n) AS ls "
-        "RETURN count(CASE WHEN size([x IN ls WHERE x IN ['Program','Paragraph','Copybook','DBTable','ParamType','ExternalRoutine','OutputFile']]) = 0 THEN 1 END) AS c;"
+        "RETURN count(CASE WHEN size([x IN ls WHERE x IN ['Program','Functionality','SubFunctionality','Paragraph','Copybook','ArtifactChange','DB2System','DB2Schema','DclgenLibrary','DBTable','DclgenArtifact','TableColumn','CobolHostField','ParamType','ExternalRoutine','OutputFile']]) = 0 THEN 1 END) AS c;"
     )
 
     return {
@@ -1251,6 +1914,7 @@ def post_audit(run_id: str, programs: list[str]) -> dict:
         "invalidParagraphSummary": invalid_summary,
         "missingCriticalRelationEvidence": missing_rel_evidence,
         "ontologyViolations": ontology_violations,
+        "deprecatedProgramUsesParamType": deprecated_program_paramtype,
     }
 
 
@@ -1364,8 +2028,9 @@ def main() -> int:
     inventory = inventory_counts([p.upper() for p in args.programs], run_id) if commit_executed else {}
 
     backlog_integral = {
-        "invalidLabelsGlobal": count_query("MATCH (n) WITH labels(n) AS ls UNWIND ls AS l WITH DISTINCT l WHERE NOT l IN ['Program','Paragraph','Copybook','DBTable','ParamType','ExternalRoutine','OutputFile'] RETURN count(*) AS c;"),
-        "criticalRelWithoutEvidenceGlobal": count_query("MATCH ()-[r:USES_COPYBOOK|READS_DATA|UPDATES_DATA|DERIVES_FROM|DEPENDS_ON_EXTERNAL|INCLUDES_COPYBOOK|READS_TABLE|UPDATES_TABLE|CALLS_ROUTINE|USES_PARAM_TYPE|WRITES_FILE|IMPLEMENTED_BY]->() WHERE r.evidenceFile IS NULL OR trim(toString(r.evidenceFile))='' OR r.evidenceLines IS NULL OR size(r.evidenceLines)=0 RETURN count(*) AS c;"),
+        "invalidLabelsGlobal": count_query("MATCH (n) WITH labels(n) AS ls UNWIND ls AS l WITH DISTINCT l WHERE NOT l IN ['Program','Functionality','SubFunctionality','Paragraph','Copybook','ArtifactChange','DB2System','DB2Schema','DclgenLibrary','DBTable','DclgenArtifact','TableColumn','CobolHostField','ParamType','ExternalRoutine','OutputFile'] RETURN count(*) AS c;"),
+        "criticalRelWithoutEvidenceGlobal": count_query("MATCH ()-[r:USES_COPYBOOK|READS_DATA|UPDATES_DATA|DERIVES_FROM|DEPENDS_ON_EXTERNAL|INCLUDES_COPYBOOK|READS_TABLE|UPDATES_TABLE|CALLS_ROUTINE|WRITES_FILE|IMPLEMENTED_BY]->() WHERE r.evidenceFile IS NULL OR trim(toString(r.evidenceFile))='' OR r.evidenceLines IS NULL OR size(r.evidenceLines)=0 RETURN count(*) AS c;"),
+        "deprecatedProgramUsesParamTypeGlobal": count_query("MATCH (:Program)-[r:USES_PARAM_TYPE]->(:ParamType) RETURN count(r) AS c;"),
     }
 
     final = {
@@ -1387,6 +2052,8 @@ def main() -> int:
     }
 
     if precheck["qualityGateResult"] == "fail":
+        final["decision"] = "BLOCKED"
+    elif post2.get("deprecatedProgramUsesParamType", 0) > 0:
         final["decision"] = "BLOCKED"
     elif any(post2.get(k, 0) > 0 for k in ["ontologyViolations", "missingCriticalRelationEvidence"]):
         final["decision"] = "PASS_WITH_WARNINGS"

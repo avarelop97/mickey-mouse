@@ -258,6 +258,49 @@ Contrato minimo del archivo:
 - `reviewSource`: trazabilidad de aprobacion
 - `approvedParagraphNameRegex`: lista de regex ancladas (`^...$`)
 
+## Capa de supervision IA del grafo BMS
+
+Para validar si el grafo generado tiene sentido semantico (estructura, contexto de estado,
+uso de inputs y cobertura de destinos), se agrego un supervisor en:
+
+- `infra/neo4j/scripts/ai_supervise_bms_graph.py`
+
+Modo baseline (reglas deterministicas):
+
+```bash
+python3 infra/neo4j/scripts/ai_supervise_bms_graph.py --map-key ZMG0103::ZMG0103
+python3 infra/neo4j/scripts/ai_supervise_bms_graph.py --map-key ZMG0103::ZMG0103 --program ZM2OJ103
+```
+
+Modo IA con Copilot (opcional):
+
+```bash
+python3 infra/neo4j/scripts/ai_supervise_bms_graph.py --map-key ZMG0103::ZMG0103 --program ZM2OJ103 --use-copilot
+python3 infra/neo4j/scripts/ai_supervise_bms_graph.py --map-key ZMG0103::ZMG0103 --program ZM2OJ103 --use-copilot --copilot-response-file infra/neo4j/reports/copilot-response.json
+```
+
+Salida:
+
+- Reporte JSON en `infra/neo4j/reports/ai-supervision-<map>-<program>.json`
+- Payload para Copilot en `infra/neo4j/reports/ai-supervision-prompt-<map>-<program>.json`
+- Resumen por consola con `verdict`, `confidence` y numero de hallazgos
+
+Persistencia dentro del sistema (Neo4j):
+
+- Por defecto, cada corrida guarda un nodo `AiSupervisionRun` enlazado al `BmsMap` y, cuando aplica, al `Program`.
+- Tambien guarda `AiSupervisionFinding` y `AiSupervisionRecommendation` por corrida.
+- Para desactivar esta persistencia en una corrida puntual: `--no-persist-graph`.
+
+Veredictos posibles:
+
+- `sense`
+- `mostly_sense`
+- `partial_sense`
+- `no_sense`
+
+El supervisor no reemplaza validacion humana: prioriza riesgo, evidencia y recomendaciones
+accionables para la siguiente iteracion de ingesta.
+
 Validaciones aplicadas por el pipeline:
 
 - el archivo debe ser JSON valido
@@ -288,6 +331,16 @@ docker run -d \
   -v "$HOME/neo4j/logs:/logs" \
   neo4j:5
 ```
+
+## Inspeccion de conformidad de Procedures
+
+Para visualizar e inspeccionar en el grafo que procedimientos no replican la
+estructura desarrollada (deterministicamente, contrato + diff vs referencia),
+ver [conformance-inspection-guide.md](conformance-inspection-guide.md). Flujo
+resumido: correr `queries/annotate-procedure-conformance.cypher` (escribe `conf*`
++ etiquetas `:ConfDeficient`/`:ConfWarn`), cargar `conformance-procedure-style.grass`
+en Browser, e inspeccionar con `queries/inspect-procedure.cypher`. Revertir con
+`queries/clear-procedure-conformance.cypher`.
 
 ## Recomendaciones
 

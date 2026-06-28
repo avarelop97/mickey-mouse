@@ -40,7 +40,7 @@ UNION
 // 2) Tipos de relacion no permitidos
 MATCH ()-[r]->()
 WHERE NOT type(r) IN [
-  'HAS_PARAGRAPH','INCLUDES_COPYBOOK','READS_TABLE','UPDATES_TABLE','USES_PARAM_TYPE',
+  'HAS_PARAGRAPH','INCLUDES_COPYBOOK','READS_TABLE','UPDATES_TABLE',
   'CALLS_ROUTINE','WRITES_FILE','STORES','IMPLEMENTED_BY','USES_COPYBOOK',
   'READS_DATA','UPDATES_DATA','DERIVES_FROM','DEPENDS_ON_EXTERNAL'
 ]
@@ -69,7 +69,6 @@ WITH a, r, b,
        'Program|INCLUDES_COPYBOOK|Copybook',
        'Program|READS_TABLE|DBTable',
        'Program|UPDATES_TABLE|DBTable',
-       'Program|USES_PARAM_TYPE|ParamType',
        'Program|CALLS_ROUTINE|ExternalRoutine',
        'Program|WRITES_FILE|OutputFile',
        'DBTable|STORES|ParamType',
@@ -92,6 +91,22 @@ RETURN
   src + '|' + rel + '|' + dst AS currentValue,
   'Matriz de pares permitidos de la ontologia' AS expectedValue,
   'Migrar relacion al par permitido o eliminar si no hay evidencia.' AS recommendation
+
+UNION
+
+// 3.1) Relacion deprecada Program->ParamType
+MATCH (:Program)-[r:USES_PARAM_TYPE]->(:ParamType)
+RETURN
+  'DEPRECATED_RELATIONSHIP' AS issueType,
+  'high' AS severity,
+  'RELATIONSHIP' AS elementKind,
+  elementId(r) AS elementId,
+  type(r) AS nodeType,
+  '(rel:' + type(r) + ')' AS nodeName,
+  'type' AS propertyName,
+  type(r) AS currentValue,
+  'Program->DBTable->STORES->ParamType and Paragraph->READS_DATA/UPDATES_DATA/DERIVES_FROM->ParamType' AS expectedValue,
+  'Eliminar USES_PARAM_TYPE y conservar trazabilidad por DBTable/STORES y Paragraph.' AS recommendation
 
 UNION
 
