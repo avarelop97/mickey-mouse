@@ -1,0 +1,116 @@
+//ZMHLPZ38 PROC
+//*====================================================================
+//*                     P R E L I M I N A R
+//*   RECIBE LOS PARAMETROS ENVIADOS DE CSP Y LOS GRABA EN ARCHIVO
+//*   PROCESO PRELIINAR PAGO DE DERECHOS OPC D02
+//*====================================================================
+//*   SE CAMBIA CONDICION DE MISION DE SEPARACION PARA COTRL 'D'
+//*====================================================================
+//* EJECUCION DE PRELIMINAR DE EJERCICIO DE DERECHOS DE RENTA VARIABLE
+//* ZM2OF028 VALORES OCTUBRE 2010
+//********************************************************************
+//PJH38P2A EXEC PGM=IKJEFT01
+//ZMH986A1 DD DSN=MXCP.ZM.TMP.VAL.EMP.SUC.ZMHLPE38,DISP=SHR
+//*
+//ZMH986A2 DD DSN=&&ARCH,
+//           DISP=(NEW,CATLG,DELETE),
+//           DCB=(DSORG=PS,RECFM=FB,LRECL=80,BLKSIZE=0),
+//           UNIT=3390,
+//           SPACE=(CYL,(2,1),RLSE)
+//*
+//ZMH986S1 DD DSN=MXCP.ZM.FIX.EBCM.REP38P01,
+//           DISP=(NEW,CATLG,DELETE),
+//           DCB=(LRECL=132,RECFM=FB,BLKSIZE=0,DSORG=PS),
+//           UNIT=3390,
+//           SPACE=(CYL,(4,2),RLSE)
+//*
+//ZMH986S2 DD DSN=MXCP.ZM.FIX.EBCM.REP38P02,
+//            DISP=(NEW,CATLG,DELETE),
+//            DCB=(LRECL=132,RECFM=FB,BLKSIZE=0,DSORG=PS),
+//            UNIT=3390,
+//           SPACE=(CYL,(4,2),RLSE)
+//*
+//ZMH986S3 DD DSN=MXCP.ZM.FIX.EBCM.REP38P03,
+//           DISP=(NEW,CATLG,DELETE),
+//           DCB=(LRECL=133,RECFM=FB,BLKSIZE=0,DSORG=PS),
+//           UNIT=3390,
+//           SPACE=(CYL,(4,2),RLSE)
+//*
+//ZMH986S4 DD DSN=MXCP.ZM.FIX.EBCM.REP38P04,
+//           DISP=(NEW,CATLG,DELETE),
+//           DCB=(LRECL=133,RECFM=FB,BLKSIZE=0,DSORG=PS),
+//           UNIT=3390,
+//           SPACE=(CYL,(4,2),RLSE)
+//*
+//ZMH986S5 DD DSN=MXCP.ZM.FIX.EBCM.REP38P05,
+//           DISP=(NEW,CATLG,DELETE),
+//           DCB=(LRECL=133,RECFM=FB,BLKSIZE=0,DSORG=PS),
+//           UNIT=3390,
+//           SPACE=(CYL,(4,2),RLSE)
+//*
+//ZMH986S6 DD DSN=MXCP.ZM.FIX.EBCM.REP38P06,
+//           DISP=(NEW,CATLG,DELETE),
+//           DCB=(LRECL=133,RECFM=FB,BLKSIZE=0,DSORG=PS),
+//           UNIT=3390,
+//           SPACE=(CYL,(4,2),RLSE)
+//*
+//ZMH986S7 DD DSN=MXCP.ZM.FIX.EBCM.REP38P07,
+//           DISP=(NEW,CATLG,DELETE),
+//           DCB=(LRECL=133,RECFM=FB,BLKSIZE=0,DSORG=PS),
+//           UNIT=3390,
+//           SPACE=(CYL,(4,2),RLSE)
+//*
+//ZMH986S8 DD DSN=MXCP.ZM.FIX.EBCM.REP38P08,
+//           DISP=(NEW,CATLG,DELETE),
+//           DCB=(LRECL=133,RECFM=FB,BLKSIZE=0,DSORG=PS),
+//           UNIT=3390,
+//           SPACE=(CYL,(4,2),RLSE)
+//*
+//SYSTSPRT DD SYSOUT=*
+//SYSPRINT DD SYSOUT=*
+//SYSOUT   DD SYSOUT=*
+//SYSDBOUT DD SYSOUT=*
+//SYSABOUT DD SYSOUT=*
+//SYSUDUMP DD DUMMY
+//SYSTSIN  DD DSN=ZIVA.ZME.CONTROL(ZHL52T01),DISP=SHR
+//*
+//*********************************************************************
+//* OBJETIVO : SORTEAR ARCHIVO                                        *
+//* PROGRAMA : ICEMAN(TARJETA DE SORT ZHL30T2A)                       *
+//*********************************************************************
+//PJH38P2B EXEC PGM=ICEMAN,COND=(4,LT)
+//SYSOUT   DD SYSOUT=*
+//*
+//SORTIN   DD DSN=MXCP.ZM.FIX.EBCM.REP28P02,
+//            DISP=SHR
+//*
+//SORTOUT  DD DSN=MXCP.ZM.WKF.EBCM.REP28P03,
+//            DISP=(NEW,CATLG,DELETE),
+//            DCB=(LRECL=132,RECFM=FB,BLKSIZE=0,DSORG=PS),
+//            UNIT=3390,
+//            SPACE=(CYL,(4,2),RLSE)
+//*
+//SYSIN    DD DSN=ZIVA.ZME.CONTROL(ZHL52T2A),DISP=SHR
+//*
+//********************************************************************
+//* OBJETIVO : SEPARA LAS CUENTAS DE FIDEICOMISO DEL RESTO
+//* PROGRAMA : ZM4CFID1
+//********************************************************************
+//PJH38P02 EXEC PGM=IKJEFT01,COND=(4,LT)
+//ZMH981A3 DD DSN=MXCP.ZM.TMP.VAL.EMP.SUC.ZMHLPE30,DISP=SHR
+//*
+//ZMH981A4 DD DSN=MXCP.ZM.WKF.EBCM.REP28P03,DISP=SHR
+//*
+//ZMH981A5 DD DSN=MXCP.ZM.FIX.EBCM.REP28P01,DISP=SHR
+//*
+//ZMH981R1 DD SUBSYS=(C600,'SYSOUT=J,PREFIX=CDAMD')
+//ZMH981RX DD SUBSYS=(C600,'SYSOUT=J,PREFIX=CDAMD')
+//*
+//SYSTSPRT DD SYSOUT=*
+//SYSPRINT DD SYSOUT=*
+//SYSOUT   DD SYSOUT=*
+//SYSDBOUT DD SYSOUT=*
+//SYSABOUT DD SYSOUT=*
+//SYSUDUMP DD DUMMY
+//SYSTSIN  DD DSN=ZIVA.ZME.CONTROL(ZHL52T1A),DISP=SHR
+//*

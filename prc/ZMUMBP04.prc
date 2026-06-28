@@ -1,0 +1,20 @@
+//ZMUMBP04 PROC
+//*********************************************************************
+//*   OBJETIVO: CORRER DEPURACION DE INFORMACION PARA
+//*             MIGRACION
+//*********************************************************************
+//ZMU04002 EXEC PGM=IKJEFT01
+//*
+//ZM4CRXA1 DD DSN=MXCP.ZM.FIX.CALDAT.ZM3DU755.TITULAR1,DISP=SHR
+//ZM4CRXR5 DD SYSOUT=*
+//*
+//ZM4CRXR7 DD SYSOUT=*
+//*
+//SYSTSPRT DD SYSOUT=*
+//SYSPRINT DD SYSOUT=*
+//SYSOUT   DD SYSOUT=*
+//SYSDBOUT DD SYSOUT=*
+//SYSABOUT DD SYSOUT=*
+//SYSUDUMP DD SYSOUT=*
+//SYSTSIN  DD DSN=ZIVA.ZME.CONTROL(ZMMG4001),DISP=SHR
+//*

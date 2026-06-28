@@ -1,0 +1,40 @@
+//ZMJTPV01 PROC                                                         00010000
+//*-------------------------------------------------------------------- 00420002
+//* PGM ZM4CTRF2 QUE GENERA EL REPORTE DE INSERCION DE REGISTROS        00420003
+//*-------------------------------------------------------------------- 00420004
+//PASO02   EXEC PGM=IDCAMS
+//SYSOUT   DD  SYSOUT=*
+//SYSPRINT DD  SYSOUT=*
+//SYSIN    DD DSN=ZIVA.ZMEA.CONTROL(ZJT02T03),DISP=SHR
+//*******************************************************************
+//PASO01   EXEC PGM=IKJEFT01,COND=(4,LT)
+//*
+//ZMJA02E2  DD DSN=MXCP.TES.FIX.ECBP.SZPR.ZMDT721,DISP=SHR
+//AGPOCTA2  DD DSN=MXCP.TES.FIX.ECBP.SZPR.AGPOCTA,DISP=SHR
+//PARAM1E3  DD DSN=MXCP.TES.FIX.ECBP.SZPR.PARAM,DISP=SHR
+//*
+//ZMTASARF  DD DSN=MXCP.TES.FIX.ECBP.SZPR.REPO1,
+//             DISP=(NEW,CATLG,DELETE),
+//             DCB=(DSORG=PS,RECFM=FB,LRECL=61,BLKSIZE=0),
+//             UNIT=3390,
+//             SPACE=(CYL,(5,10),RLSE)
+//*
+//AGPOCTAF  DD DSN=MXCP.TES.FIX.ECBP.SZPR.REPO2,
+//             DISP=(NEW,CATLG,DELETE),
+//             DCB=(DSORG=PS,RECFM=FB,LRECL=61,BLKSIZE=0),
+//             UNIT=3390,
+//             SPACE=(CYL,(5,10),RLSE)
+//*
+//PARAM1RF  DD DSN=MXCP.TES.FIX.ECBP.SZPR.REPO3,
+//             DISP=(NEW,CATLG,DELETE),
+//             DCB=(DSORG=PS,RECFM=FB,LRECL=61,BLKSIZE=0),
+//             UNIT=3390,
+//             SPACE=(CYL,(5,10),RLSE)
+//*
+//SYSTSPRT  DD SYSOUT=*
+//SYSPRINT  DD SYSOUT=*
+//SYSOUT    DD SYSOUT=*
+//SYSDBOUT  DD SYSOUT=*
+//SYSABOUT  DD SYSOUT=*
+//SYSUDUMP  DD SYSOUT=*
+//SYSTSIN   DD DSN=ZIVA.ZMEA.CONTROL(ZJT01T04),DISP=SHR

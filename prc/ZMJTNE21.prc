@@ -1,0 +1,44 @@
+//ZMJTNE21 PROC
+//**********************************************************************
+//*   APLICACION : MODULO DE SIVA MULTI EMPRESA ALTAMIRIZADO           *
+//*                                                                    *
+//*   REALIZACION : ALFREDO CORTES                                     *
+//*                                                                    *
+//*   FECHA:  02/MARZO/2012                                            *
+//**********************************************************************
+//*                      LOG DE MODIFICACIONES                         *
+//**********************************************************************
+//*--------------------------------------------------------------------*
+//* MARCA        AUTOR    FECHA            DESCRIPCION                 *
+//*-----------  --------  -------  ------------------------------------*
+//*DYD-1.0.0    DYD       MZO2012  NUEVO                               *
+//**********************************************************************
+//*   RECEPCION DE PARAMETROS
+//**********************************************************************
+//PJT2102  EXEC PGM=ZM3DG001,PARM=('&EMP','&SUC','&INT1','&INT2')
+//SYSTSPRT DD SYSOUT=*
+//SYSPRINT DD SYSOUT=*
+//SYSOUT   DD SYSOUT=*
+//SYSDBOUT DD SYSOUT=*
+//SYSABOUT DD DUMMY
+//SYSUDUMP DD DUMMY
+//ZMG001A1 DD DSN=MXCP.ZM.TMP.VAL.EMP.SUC.ZMUFPM39,
+//            DISP=(NEW,CATLG,DELETE),
+//            SPACE=(CYL,(2,1),RLSE),
+//            DCB=(DSORG=PS,RECFM=FB,LRECL=96,BLKSIZE=0),
+//            UNIT=3390
+//****************************************************************
+//* SE ADICIONA CONDICION PARA CONTROL-M PARA LIBERAR PROCESOS   *
+//****************************************************************
+//PJT2101  EXEC PGM=CTMCND,PARM='ADD COND SIVAXES4_OK WDATE',
+//         COND=(4,LT)
+//STEPLIB  DD DISP=SHR,DSN=SYS3.IOAO.SYSZBBV.TGT.LOAD
+//DAPARM   DD DISP=SHR,DSN=SYS3.IOAI.SYSZBBV.TGT.PARM
+//         DD DISP=SHR,DSN=SYS3.IOAI.SYSZBBV.TGT.IOAENV
+//DALOG    DD DISP=SHR,DSN=SYS3.IOAD.SYSZBBV.DATA.LOG
+//DARESF   DD DISP=SHR,DSN=SYS3.IOAD.SYSZBBV.DATA.NRS
+//PRTDBG   DD  SYSOUT=*
+//SYSPRINT DD  DUMMY
+//SYSUDUMP DD  DUMMY
+//DAPRINT  DD  SYSOUT=*
+//*
